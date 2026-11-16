@@ -89,7 +89,7 @@ Rule: per scene max 1 accent + ink/paper. Alternate ink and signal-yellow full-b
 - **Title zone**: x 60–880, y 270–560 (headline, left-aligned).
 - **Hero zone**: x 60–880, y 560–1100 (product cut-out / diagram / number).
 - **Caption strip**: x 60–880, y 1110–1220 — 2–4 word live caption of the current phrase, Inter 52 px, current word in signal yellow.
-- Episode tag top-left of title zone: `SoW Nº001` in muted, 40 px.
+- (REMOVED 2026-11-16 by owner) episode tag "SoW Nº…" — replaced by the watermark below.
 
 ## Motion system (Remotion)
 - **One continuous canvas**: a virtual camera pans/zooms between scenes (interpolate + spring); scenes are
@@ -159,3 +159,12 @@ Every element gets an entrance, a life while on screen, and an exit. Nothing pop
   under voice with 120 ms attack / 400 ms release; a riser into THE CATCH; music drops out for 0.5 s before the verdict.
 - **QA**: scrub at 0.25× speed; no element appears/disappears without animation, no text overlaps, no jitter, every
   number matches script.md, safe areas clear, nothing static > 2.5 s.
+
+
+## Watermark (owner 2026-11-16: replaces the "SoW Nº001" tag)
+- Mini logo "s w" (w tipped 18°, wreck red #E5484D). s = ink #151312 on paper scenes, paper #FAF8F5 on ink scenes.
+- Files: Drive › Faceless Channel › brand_assets › watermark_on_light.png / watermark_on_dark.png (transparent).
+- Shorts 1080×1920: top-left, x = 60, y = 270 (just below YouTube's top overlay), height 64 px, opacity 90 %.
+  Title zone starts at y = 360 to keep clear space. Long videos 1920×1080: top-left, x = 48, y = 40, height 56 px.
+- On every frame except the end card (the full logo animation replaces it). Switches light/dark with the scene background
+  via a 150 ms crossfade. No animation otherwise — it stays still and quiet.
