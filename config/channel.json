@@ -4,7 +4,7 @@
   "audience_timezone": null,
   "publish_hour_local": 15,
   "language": "en",
-  "category_id": "27",
+  "category_id": "28",
   "voice": {"engine": "kokoro", "voice_id": null},
   "long": {"min_s": 240, "max_s": 600, "size": [1920, 1080], "days": ["Mon", "Wed", "Fri"]},
   "short": {"min_s": 30, "max_s": 90, "size": [1080, 1920], "days": ["Tue", "Thu", "Sat", "Sun"]},
