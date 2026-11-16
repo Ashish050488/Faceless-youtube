@@ -27,6 +27,17 @@ Our edge over the benchmark (they often have weak or no verdict; flops had none)
 - A **comparison** viewers can feel (vs. what it replaces, vs. its cheaper sibling).
 - Cut the reading: max **6 words on screen** at once (watermark flop needed heavy reading).
 
+## 2b. Retention devices for 90–150 s Shorts (their best length bucket: 100–150 s, median 29K)
+Use 2–3 per video, rotate them so videos don't feel templated:
+- **Price/number ladder**: reveal cheaper tiers first, end on the shocking one (Walkman).
+- **Spectrum frame**: put the product between two things viewers know (band ↔ watch) (Fitbit).
+- **"There's a catch"** at ~40 s: an honest downside (battery drops with always-on).
+- **Plot-twist reset** at ~60–70 s: tonal/visual change + the best fact held back (replaceable battery).
+- **Progress counter** ("1/5 … 5/5") for any list past 60 s.
+- **Cons list** before the verdict — builds trust.
+- Close by re-framing the opening ("the $1,899 one is the cheap one") so the loop feels intentional.
+Pace: hits ran 145–160 wpm with a cut every 2.3–3.8 s; the long flop ran 130 wpm with 11.6 s shots.
+
 ## 3. Visual rules (for the video chat)
 - Sources: official press renders/photos (credited in description) + our own motion graphics. No brand promo video clips.
 - Something moves every **1.5–2 s**; hard scene change every **3–5 s** (hits: 16–18 cuts in 74–91 s).
@@ -50,6 +61,9 @@ Our edge over the benchmark (they often have weak or no verdict; flops had none)
 - End: ask one specific question in the pinned comment ("Would you pay $X for this?").
 
 ## 6. Long videos — DEMOTED to experiment
+- Their long flop (Delete a file): 15-s abstract hook, 11.6 s average shot, 130 wpm flat voice, flat music, no CTA.
+  If we test long-form: stakes in the first 5 s ("your 'deleted' photos can be recovered in 30 seconds"),
+  a shot change every 3–5 s, 160+ wpm, chapter risers, a story frame, end-screen bridge to the next video.
 - Benchmark's long videos all flopped (median 859). Our main monetisation route = Shorts (10M views / 90 days).
 - Test 1 long video per week max, only after 20 Shorts; drop if it can't beat 5K views in 7 days.
 - Not "news recaps". 6–10 min **"how it actually works / why it failed"** explainers, each linked from 2 Shorts
