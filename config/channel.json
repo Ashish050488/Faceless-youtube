@@ -5,9 +5,40 @@
   "publish_hour_local": 15,
   "language": "en",
   "category_id": "28",
-  "voice": {"engine": "kokoro", "voice_id": null},
-  "long": {"min_s": 240, "max_s": 600, "size": [1920, 1080], "days": ["Mon", "Wed", "Fri"]},
-  "short": {"min_s": 30, "max_s": 90, "size": [1080, 1920], "days": ["Tue", "Thu", "Sat", "Sun"]},
+  "voice": {
+    "engine": "kokoro",
+    "voice_id": "af_heart",
+    "speed": 1.04,
+    "chosen": "2026-11-16",
+    "why": "compared af_heart/af_bella/am_michael: lowest Whisper error + widest natural pitch range; am_michael too slow for Shorts"
+  },
+  "long": {
+    "min_s": 240,
+    "max_s": 600,
+    "size": [
+      1920,
+      1080
+    ],
+    "days": [
+      "Mon",
+      "Wed",
+      "Fri"
+    ]
+  },
+  "short": {
+    "min_s": 30,
+    "max_s": 90,
+    "size": [
+      1080,
+      1920
+    ],
+    "days": [
+      "Tue",
+      "Thu",
+      "Sat",
+      "Sun"
+    ]
+  },
   "upload_mode": "semi_auto",
   "drive_handoff_folder_id": null
 }

@@ -31,7 +31,7 @@ function rr(ctx, x, y, w, h, r) {
 }
 
 function font(ctx, px, kind = 'head') {
-  if (kind === 'head') { ctx.font = `800 ${px}px "Inter Tight"`; ctx.letterSpacing = `${(-0.03 * px).toFixed(1)}px`; }
+  if (kind === 'head') { ctx.font = `800 ${px}px "Inter Tight", "Inter"`; ctx.letterSpacing = `${(-0.03 * px).toFixed(1)}px`; }
   else if (kind === 'bold') { ctx.font = `700 ${px}px "Inter"`; ctx.letterSpacing = '0px'; }
   else { ctx.font = `600 ${px}px "Inter"`; ctx.letterSpacing = '0px'; }
 }

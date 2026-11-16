@@ -18,6 +18,15 @@ import soundfile as sf
 
 SR = 24000
 PAUSE_SENT, PAUSE_ELLIPSIS, PAUSE_SECTION = 0.22, 0.42, 0.35
+# Pronunciation fixes (spoken audio only; script text and captions stay unchanged).
+# Kokoro/misaki inline syntax: [word](/phonemes/)
+PRON = {"Pokémon": "[Pokémon](/pˈOkimˌɑn/)"}
+
+
+def apply_pron(text):
+    for k, v in PRON.items():
+        text = text.replace(k, v)
+    return text
 
 
 def parse_script(text):
@@ -60,7 +69,7 @@ def main():
     for si, sec in enumerate(secs):
         s_start = t
         for unit in split_units(sec["text"]):
-            for r in pipe(unit, voice=a.voice, speed=a.speed):
+            for r in pipe(apply_pron(unit), voice=a.voice, speed=a.speed):
                 wav = r.audio.numpy() if hasattr(r.audio, "numpy") else np.asarray(r.audio)
                 # trim leading/trailing near-silence so our pauses are the only pauses
                 nz = np.where(np.abs(wav) > 0.01)[0]
