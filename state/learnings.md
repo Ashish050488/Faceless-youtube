@@ -1,5 +1,13 @@
 # Learnings (newest first)
 
+## 2026-11-16 — rebrand
+- Name chosen: "The Catch" (@thecatch free on check). Tagline "Every new gadget has one."
+  Signature format element: THE CATCH moment in every video (amber stamp) + WORTH IT IF / SKIP IT IF verdict.
+- API-applied: channel description, keywords, country IN, default language en. Owner must set name, @handle,
+  avatar and banner in Studio (the API can't change the name or handle).
+- Full spec: state/brand.md. Benchmark watched frame-by-frame (Bose, Logitech): only 8–11 hard cuts per ~75 s;
+  motion comes from continuous camera moves on one canvas.
+
 ## 2026-11-16 — decisions (owner: "totally up to you")
 - Niche: new physical tech products, Shorts-first, with a real verdict. Long-form = weekly experiment later.
 - Look: navy/charcoal + white + electric-cyan accent (our own, not the benchmark's cream/orange).
