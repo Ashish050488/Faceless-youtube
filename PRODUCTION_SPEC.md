@@ -132,3 +132,32 @@ Fix-and-re-render until every scene passes. Speed is never a reason to skip this
 - Transitions: camera move or shape match; add a 3–4 frame motion blur on fast moves.
 - Every scene has at least 3 animated details happening (e.g. product drift + light sweep + label reveal).
 - Sound: each detail that moves has a matching soft SFX; nothing moves silently on a beat.
+
+## 12. MATCH TECHY OR NOT'S LOOK — measured 2026-11-16 (OVERRIDES any older rule above that conflicts)
+Measured on its top Shorts (Bose 1.29M, Logitech 1.66M), 1 fps frames:
+- **Centred composition.** Content centre sits at 0.49–0.52 of the frame width with little drift (sd 0.04–0.08).
+  → Our rule: one vertical centre axis. Product centred. Headline centred, or a left-aligned block whose whole
+  box is centred. Content centre-x must measure 0.47–0.53 on every frame (the video session measures it in QA).
+- **NO sideways camera moves / no "infinite canvas" pans** (they made our last Short feel shifted left/right).
+  Allowed motion: scale in place (push-in/zoom on the centre or on the named detail), vertical slides, morphs,
+  object continuity (one object becomes the next, like his earbud wire), crossfades, 1-frame flips on the beat.
+- **FLAT SOLID BACKGROUNDS. No grain, no texture, no gradient, no vignette** (owner: textured backgrounds look bad).
+  Bose: one flat light colour for ~93 % of frames. Logitech: flat black ~45 % / flat light grey ~40 %, chosen to fit
+  the product. → Ours: paper #FAF8F5 as the main flat background; ink #151312 flat for dark products/drama beats;
+  you may switch the flat background colour to suit the product's colour. Background colour changes happen as a
+  clean hard flip on a beat or a vertical wipe — never a fade through grey.
+- **Real images dominate**: large centred cut-outs on the flat background (Bose style) and full-bleed official renders
+  (Logitech style); lifestyle/press photos as rounded cards, centred. Product occupies 40–70 % of frame width.
+- **Text**: big bold headline (1–3 words) in the upper part; small secondary line under it; no captions; no tiny labels.
+- **Content vertical span** on the benchmark: ~9 %–75 % of height. Keep text inside our safe frame (y 270–1230);
+  the product image itself may extend down to ~75 % of height (y 1440) as he does, but never text there.
+- **His animation vocabulary to copy and do better**: object continuity (wire → next scene), strike-through lists,
+  odometer price, swinging price tag, UI-card mock (modes toggling), timeline/thermometer, side-by-side comparison
+  cards, logo end card. We add: zoom-to-detail with callout ring, per-word reveals, SFX on every event.
+- **Overrides**: §2 "Texture: film grain…vignette" → REMOVED. §11 "Backgrounds: never flat…gradient or grain" →
+  REPLACED by flat solid backgrounds. brand.md "camera pans on one canvas" → REPLACED by in-place motion above.
+
+## 13. EXPORT SIZE (owner 2026-11-16: last render was 93 MB — far too big)
+- Shorts: **720×1280**, 30 fps, H.264 High, CRF 23–26 with maxrate 2.0 Mbps / bufsize 4 Mbps, AAC 128 kbps,
+  +faststart. Target **≤ 20 MB for ~90 s** (graphics-heavy max ~20 MB). Check size before upload.
+- Long videos later: 1920×1080, CRF 23, maxrate 6 Mbps.
