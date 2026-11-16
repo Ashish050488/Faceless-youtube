@@ -17,6 +17,6 @@ All five: female AI voice ~145–150 wpm, official renders/press photos + Swiss-
 | jBs8U3wRbVI Sony gold Walkman | 687,348 | 147 s | HIT | "Remember the Sony Walkman? Well... Sony never actually stopped making them." | 38 / 3.8 s | Price ladder $1.9K→$3K→$5.9K; "01/07" progress counter at 1:13; ends calling $1,899 "the cheap one" |
 | E_sC-U1GQdI Fitbit Edge | 537,750 | 134 s | HIT | "Google just made a Fitbit for people who want more than a fitness band, but don't actually want a full smartwatch." | 31 / 2.3 s | 3-tier spectrum (band / Edge / watch); "THERE'S A CATCH" at 0:38; "PLOT TWIST" dark-screen reset at 1:06; honest cons list; verdict "middle option might make sense" |
 | NQ3kl1L_R5k Delete a file (long) | 643 | 279 s | FLOP | 15-s rhetorical question, no stakes | ~24 / 11.6 s | none: static frames, 130–135 wpm flat AI voice, flat ambient music, no CTA, abstract framing |
-| 4hfJ095uMgM Noise-cancelling (long) | 1,082 | 272 s | FLOP | (analysis pending) | | |
+| 4hfJ095uMgM Noise-cancelling (long) | 1,082 | 272 s | FLOP | 25-s textbook hook ("How do noise-cancelling headphones actually work?...") | 6–10 s ASL | none: main payoff answered at 1:15, then a catalogue; calm 130–140 wpm voice; stock footage; no CTA/end screen |
 
 Note: the Walkman Short uses Sony promo VIDEO footage (0:08–0:30). We will NOT do that (reused-content risk); renders/press stills + our own motion only.
