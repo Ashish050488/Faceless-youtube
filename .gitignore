@@ -16,3 +16,7 @@ node_modules/
 __pycache__/
 *.pyc
 .venv/
+render/fonts/
+*.ttf
+*.otf
+*.srt
