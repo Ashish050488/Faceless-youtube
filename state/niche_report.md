@@ -25,3 +25,13 @@ All numbers *measured* via YouTube Data API on 2026-11-16 unless marked *inferre
 - Risk: using brands' promo VIDEO footage = reused content. Use official press images (credited) + our own animated graphics/3D/diagrams.
 - Must add a verdict/take ("worth it or not", price context, comparison) — not just reading a press release.
 - Don't copy Techy or Not's name, title formula wording, or style 1:1.
+
+## Techy or Not — visual study from YouTube auto-frames (hq1/2/3 at ~25/50/75%), 2026-11-16
+*Measured* = views; everything else *inferred* from 3 frames per video (no audio/transcript yet).
+- Hits (538K–1.66M): physical, quirky hardware with a hard number on screen ($5,899, 32 Wh, 2.4", 99.99%, $81).
+  Clean editorial look: cream or black background, big bold sans-serif, one orange accent, official product
+  cut-outs centred on a 9:16 card over a blurred copy of the same image. One idea per screen.
+- Flops (896–2,710): software/AI news (OpenAI, ChatGPT apps), lifestyle/model photos (Samsung glasses), text-heavy screens.
+- End card is their logo "TECHY OR NOT?" with tagline "New tech. No fluff."
+- Takeaways for us: pick physical products with a surprising number/price; one number per screen;
+  official press images only; our OWN look (do not copy their cream/orange palette, logo or tagline).
