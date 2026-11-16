@@ -88,7 +88,7 @@ Rule: per scene max 1 accent + ink/paper. Alternate ink and signal-yellow full-b
 - Never place anything important in: top 0–250, bottom 1230–1920, right 900–1080.
 - **Title zone**: x 60–880, y 270–560 (headline, left-aligned).
 - **Hero zone**: x 60–880, y 560–1100 (product cut-out / diagram / number).
-- **Caption strip**: x 60–880, y 1110–1220 — 2–4 word live caption of the current phrase, Inter 52 px, current word in signal yellow.
+- (REMOVED 2026-11-16 by owner) no burned-in captions in the video. The hero zone may extend to y 1220.
 - (REMOVED 2026-11-16 by owner) episode tag "SoW Nº…" — replaced by the watermark below.
 
 ## Motion system (Remotion)
@@ -154,7 +154,7 @@ Every element gets an entrance, a life while on screen, and an exit. Nothing pop
 - **THE CATCH**: 2-frame scene dim to 85 %, wreck stamp drops (scale 1.3 → 1.0, rotation −4° → 0°), 1-frame warm flash,
   camera shake 3 px for 6 frames, low thud.
 - **Verdict switch**: knob travels with overshoot (spring), track colour fills behind it, click SFX on the exact frame it lands.
-- **Captions**: 2–4 words, current word on a marigold-on-ink pill that slides word to word (not jumps).
+- **Captions**: NONE on screen (owner). Closed captions are uploaded to YouTube as an SRT file instead (viewer can toggle).
 - **Sound detail**: every visual event that moves gets a matching subtle SFX (−24 to −18 LUFS short-term), music ducks
   under voice with 120 ms attack / 400 ms release; a riser into THE CATCH; music drops out for 0.5 s before the verdict.
 - **QA**: scrub at 0.25× speed; no element appears/disappears without animation, no text overlaps, no jitter, every
@@ -165,7 +165,7 @@ Every element gets an entrance, a life while on screen, and an exit. Nothing pop
 - Mini logo "s w" (w tipped 18°, wreck red #E5484D). s = ink #151312 on paper scenes, paper #FAF8F5 on ink scenes.
 - Files: Drive › Faceless Channel › brand_assets › watermark_on_light.png / watermark_on_dark.png (transparent).
 - Shorts 1080×1920 (owner moved it to the bottom, 2026-11-16): bottom-right corner of the safe frame — right edge
-  x = 880, bottom edge y = 1220, height 64 px, opacity 90 %. Caption strip shortened to x 60–780 so they never touch.
+  x = 880, bottom edge y = 1220, height 64 px, opacity 90 %. (No caption strip — removed by owner.)
   Title zone stays at y 270–560. (Lower than y 1230 or right of x 900 is covered by YouTube's UI.) Long videos 1920×1080: top-left, x = 48, y = 40, height 56 px.
 - On every frame except the end card (the full logo animation replaces it). Switches light/dark with the scene background
   via a 150 ms crossfade. No animation otherwise — it stays still and quiet.

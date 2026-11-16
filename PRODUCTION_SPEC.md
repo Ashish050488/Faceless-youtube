@@ -100,3 +100,35 @@ overall 135–138 wpm, sentence gap 0.66–0.70 s, comma gap 0.28–0.54 s, tail
 
 ## 8. LOCKED items (owner-approved — never change without the owner)
 - Voice + timing + mix (§7). · Watermark (state/brand.md → Watermark). · Logo v5. · Palette v4.
+
+## 9. NO ON-SCREEN CAPTIONS (owner 2026-11-16)
+- Do not burn subtitles/captions into the video. On-screen text = only the designed key words/numbers (≤ 6 words).
+- Still deliver captions.srt (script-aligned) — the script session uploads it to YouTube as closed captions
+  (viewer-toggled; helps accessibility and search). It is never rendered into the picture.
+
+## 10. RENDER-CHECK LOOP — every image, every scene (owner: "check by zooming in and zooming out")
+The video session must LOOK at its own output, scene by scene, before moving on. For each scene:
+1. Render 3 stills: first frame, middle frame, last frame (plus every frame where a new element lands).
+2. Inspect each still at three zoom levels and fix anything that fails:
+   - **Zoom in (200 % crop of the product and text):** sharp edges, no pixelation/compression blocks, no cut-out
+     halos or fringes, no jagged text, shadows soft and correctly placed, no stray pixels, no clipping at frame edges.
+   - **100 % (full 1080×1920):** composition balanced, nothing touching safe-zone lines, alignment on the grid,
+     spacing consistent, only one accent colour, watermark present and clear.
+   - **Zoom out (phone size 360×640 and 180×320 thumbnail):** the key word/number readable in under 1 second,
+     the product recognisable, nothing important too small, contrast strong enough.
+3. Check motion on a 4-frame strip around each animation: easing visible (not linear), no jump/pop, no jitter.
+4. Log in qa.md per scene: "scene N — in/100/out/motion: pass | fixed: <what>". Never mark pass without looking.
+5. After the full render: contact sheet at 2 fps + re-check the 5 weakest scenes again at all zoom levels.
+Fix-and-re-render until every scene passes. Speed is never a reason to skip this.
+
+## 11. DETAIL UPGRADES — apply everywhere (owner wants "super detailed")
+- Product images: subtle rim light / edge highlight matching the scene light direction; reflection or contact shadow
+  on the "floor"; micro-rotation drift (±1–2°) while on screen; focus pull (background blur 0 → 6 px) when the product enters.
+- Close-ups: when narration names a part (slot, port, button, camera), do a smooth zoom-in to that exact area of the
+  real photo with a thin marigold callout ring that draws on; hold ≥ 1.2 s; zoom back out.
+- Numbers: digits roll individually, the unit animates in after, a soft glow pulse on landing.
+- Text: per-word reveal with 70 ms stagger, tiny overshoot (1.02 → 1.0); exits blur + slide 16 px.
+- Backgrounds: never flat — slow-moving soft gradient or grain, 1–2 % parallax against the product.
+- Transitions: camera move or shape match; add a 3–4 frame motion blur on fast moves.
+- Every scene has at least 3 animated details happening (e.g. product drift + light sweep + label reveal).
+- Sound: each detail that moves has a matching soft SFX; nothing moves silently on a beat.
