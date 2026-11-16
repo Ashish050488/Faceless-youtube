@@ -33,7 +33,7 @@ Our edge over the benchmark (they often have weak or no verdict; flops had none)
 - One idea per screen; the number on screen is the biggest thing on screen.
 - Animate the explanation: diagrams, counters rolling up, before/after morphs, split-screen comparisons.
 - Our own look — NOT cream/orange Swiss poster. Proposed: deep navy/charcoal background, white type,
-  one electric-cyan accent, rounded cards. (Owner to approve with rebrand.)
+  one electric-cyan accent, rounded cards. (Approved by operator 2026-11-16; owner delegated all choices.)
 - Safe areas: no text in top 250 px, bottom 690 px, right 180 px.
 
 ## 4. Voice & sound
@@ -41,12 +41,16 @@ Our edge over the benchmark (they often have weak or no verdict; flops had none)
 - Music: our procedural beds, ducked 8–10 dB; SFX hits on every reveal (click, whoosh, thud on price).
 
 ## 5. Packaging
+- Data (techyornot_full.md): titles with "Made" 95K median vs 14K; big brand 94K vs 14K; "$" price 65K vs 14K;
+  ending with "?" 12K vs 19K. => Brand first, a concrete number, statement not question.
 - Title: "<Brand> Just Made <paradox>" style works for them — we write our own variants
   (e.g. "<Brand>'s New <X> Has No <expected thing>", "This $<price> <X> Is Actually Just a <Y>").
   Subject first, ≤ 60 chars, no clickbait the video doesn't pay off.
 - Tags: brand, model, model variants, category, use-case phrases (their top tags pattern).
 - End: ask one specific question in the pinned comment ("Would you pay $X for this?").
 
-## 6. Long videos (to build watch hours; benchmark's long videos failed, so we differ)
+## 6. Long videos — DEMOTED to experiment
+- Benchmark's long videos all flopped (median 859). Our main monetisation route = Shorts (10M views / 90 days).
+- Test 1 long video per week max, only after 20 Shorts; drop if it can't beat 5K views in 7 days.
 - Not "news recaps". 6–10 min **"how it actually works / why it failed"** explainers, each linked from 2 Shorts
   on the same product family.

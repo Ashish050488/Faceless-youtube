@@ -1,5 +1,11 @@
 # Learnings (newest first)
 
+## 2026-11-16 — decisions (owner: "totally up to you")
+- Niche: new physical tech products, Shorts-first, with a real verdict. Long-form = weekly experiment later.
+- Look: navy/charcoal + white + electric-cyan accent (our own, not the benchmark's cream/orange).
+- Cadence target: 1 Short/day to start, 2/day once the video pipeline is stable.
+- Evidence: state/competitor_watch/techyornot_full.md, state/playbook_shorts.md.
+
 ## 2026-11-16 — old content deleted (owner approved "delete all")
 - Deleted all 160 old anime videos via API (160/160 OK). IDs/titles kept in state/deleted_old_videos.json.
 - Used ~8,000 API quota units today; niche research waits for the daily quota reset (midnight Pacific).
