@@ -68,3 +68,13 @@ new line = breath). Never read lists or spec strings.
 - Add 120–250 ms breaths/gaps between lines (real pauses), room tone under everything, light de-ess, gentle
   compression (2:1), no heavy limiting on the voice. Voice −16 LUFS before the mix.
 - Forbidden: non-commercial-licence models (e.g. XTTS/Coqui CPML, F5-TTS weights, Fish Speech weights).
+
+## 5. DETAIL SCORE — gate before upload (script session grades every render with the watch-video skill, 2 fps + every cue)
+Each line scores 0/1/2. **Ship only at ≥ 26/30 and no 0 anywhere.** Otherwise it goes back to the video chat with the
+failing timestamps listed.
+1. Real product on screen ≥ 60 % of runtime · 2. ≥ 6 distinct real images · 3. Image quality (no pixelation, no halos)
+4. Every element animates in (no pop-on) · 5. Every element animates out (no pop-off) · 6. Idle micro-motion (nothing static > 2.5 s)
+7. Word sync ±2 frames for key words/numbers · 8. Number roll-ups land with settle · 9. 3-layer depth/parallax in most scenes
+10. Shadows/light sweep on product cut-outs · 11. Typography polish (kerning, ≤ 6 words, units styled)
+12. Transitions are camera moves/thread (≤ 6 hard cuts) · 13. Colour: palette v4 only, accent ≤ 15 % of frame
+14. Sound: SFX on every visual event, riser into THE CATCH, pre-verdict drop · 15. Voice natural (no flat/robotic line), safe zones clear, loudness on spec
