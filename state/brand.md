@@ -13,7 +13,7 @@ Promise: new tech in under 2 minutes — what it is, the clever part, **the catc
   10-s static split-screen at the price (Logitech 0:59–1:09); 8-s static build (Bose 0:59–1:07); verdict is a throwaway
   line; no captions for muted viewers; ends on a logo, no loop.
 
-## LOGO (FINAL, chosen by operator 2026-11-16; owner: "just choose a good logo")
+## (SUPERSEDED by Logo v5 "Falling letter", which is LIVE on the channel) LOGO checkbox draft
 - Mark: rounded ink square (#151312, radius 22 %) with a marigold (#FFB224) check. Profile photo = mark only.
 - Wordmark: [checked box] spec   [empty box] wreck — lowercase Inter Tight 900, tracking −4 %.
 - Meaning: every video is a form we fill in; the tick lands on "spec" or "wreck". (Replaces the switch, which echoed
