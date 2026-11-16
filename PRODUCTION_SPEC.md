@@ -87,3 +87,13 @@ failing timestamps listed.
   Implementation that measured 16.1 dB: voice loudnorm −16 LUFS; bed volume −11 dB; sidechaincompress ratio 3,
   attack 120 ms, release 400 ms; master loudnorm −14 LUFS, TP −1 dBTP (benchmark master: −15.1 LUFS, peak −1.2 dBFS).
 - Verify every render: speech-vs-pause-music gap 14–18 dB (script: 50 ms RMS frames, 75th pct vs 15th pct).
+
+## 7. LOCKED VOICE + TIMING (owner approved direction 2026-11-16; copied from Techy or Not by measurement)
+Measured on the benchmark with word timestamps (faster-whisper): speaking (articulation) rate 170–178 wpm,
+overall 135–138 wpm, sentence gap 0.66–0.70 s, comma gap 0.28–0.54 s, tail after last word 2.1–3.0 s.
+- Voice: Kokoro **af_heart**, speed **0.795**. Render with `audio/narrate.py <script.md> af_heart 0.795 out.wav 0.30 0.42`
+  (renders per sentence, trims the engine's own silence at −45 dB keeping 40/80 ms pads, inserts 0.30–0.42 s which
+  measures as ~0.69 s word-to-word, 2.5 s tail).
+- Mix with `audio/mix.sh voice.wav bed.wav out` (keeps full length incl. tail; music −11 dB + sidechain → 16–16.5 dB gap; −14 LUFS; TP −1).
+- Verify with `audio/measure_timing.py file` — must land: articulation 168–180, sentence gap 0.60–0.75, tail ≥ 2.0 s,
+  last words present. Old bug fixed: amix/sidechain stopped early and cut the ending; never mix without apad+atrim.
