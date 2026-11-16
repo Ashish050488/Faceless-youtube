@@ -3,9 +3,10 @@ const { GlobalFonts, loadImage } = require('@napi-rs/canvas');
 const fs = require('fs');
 const path = require('path');
 
+// Palette v4 "Warm" (state/brand.md): marigold only on ink, ember for accent text on paper
 const C = {
-  paper: '#FAFAFA', ink: '#0E0E10', lime: '#C6FF00', grey: '#8A8A90', wreck: '#FF2E63',
-  inkSoft: '#1C1C20', paperSoft: '#ECECEE', line: '#2A2A30',
+  paper: '#FAF8F5', ink: '#151312', mari: '#FFB224', ember: '#C2410C', stone: '#8C847C', wreck: '#E5484D',
+  inkSoft: '#221F1D', inkLine: '#2E2A27', paperSoft: '#EFEBE6', paperLine: '#E4DED7',
 };
 const W = 1080, H = 1920;
 // safe frame (brand.md): x 60–880, y 270–1220
@@ -31,6 +32,7 @@ function rr(ctx, x, y, w, h, r) {
 }
 
 function font(ctx, px, kind = 'head') {
+  if (kind === 'logo') { ctx.font = `900 ${px}px "Inter Tight", "Inter"`; ctx.letterSpacing = `${(-0.04 * px).toFixed(1)}px`; return; }
   if (kind === 'head') { ctx.font = `800 ${px}px "Inter Tight", "Inter"`; ctx.letterSpacing = `${(-0.03 * px).toFixed(1)}px`; }
   else if (kind === 'bold') { ctx.font = `700 ${px}px "Inter"`; ctx.letterSpacing = '0px'; }
   else { ctx.font = `600 ${px}px "Inter"`; ctx.letterSpacing = '0px'; }
