@@ -24,6 +24,8 @@ def main():
     body = " ".join(l for l in lines if l.strip() and not l.startswith(("[", "#", "Voice", "Retention")))
     sw = [x for x in body.split() if re.search(r"\w", x)]
     words = json.loads(Path(a.words).read_text())
+    if words and "line" in words[0]:  # meta/align_words.py output already carries the script's own words
+        sw = [w["w"] for w in words]
     if len(sw) != len(words):
         raise SystemExit(f"alignment mismatch: script {len(sw)} vs tts {len(words)}")
     cues, cur = [], []
