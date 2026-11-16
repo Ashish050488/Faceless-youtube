@@ -1,0 +1,18 @@
+# never commit keys or media
+.env
+*.env
+secrets/
+out/
+work/
+*.mp4
+*.mov
+*.wav
+*.mp3
+*.m4a
+*.png
+*.jpg
+*.webm
+node_modules/
+__pycache__/
+*.pyc
+.venv/
