@@ -161,7 +161,7 @@ Every element gets an entrance, a life while on screen, and an exit. Nothing pop
   number matches script.md, safe areas clear, nothing static > 2.5 s.
 
 
-## Watermark (owner 2026-11-16: replaces the "SoW Nº001" tag)
+## Watermark — LOCKED (owner approved 2026-11-16; replaces the "SoW Nº001" tag; do not change)
 - Mini logo "s w" (w tipped 18°, wreck red #E5484D). s = ink #151312 on paper scenes, paper #FAF8F5 on ink scenes.
 - Files: Drive › Faceless Channel › brand_assets › watermark_on_light.png / watermark_on_dark.png (transparent).
 - Shorts 1080×1920 (owner moved it to the bottom, 2026-11-16): bottom-right corner of the safe frame — right edge

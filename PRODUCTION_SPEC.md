@@ -97,3 +97,6 @@ overall 135–138 wpm, sentence gap 0.66–0.70 s, comma gap 0.28–0.54 s, tail
 - Mix with `audio/mix.sh voice.wav bed.wav out` (keeps full length incl. tail; music −11 dB + sidechain → 16–16.5 dB gap; −14 LUFS; TP −1).
 - Verify with `audio/measure_timing.py file` — must land: articulation 168–180, sentence gap 0.60–0.75, tail ≥ 2.0 s,
   last words present. Old bug fixed: amix/sidechain stopped early and cut the ending; never mix without apad+atrim.
+
+## 8. LOCKED items (owner-approved — never change without the owner)
+- Voice + timing + mix (§7). · Watermark (state/brand.md → Watermark). · Logo v5. · Palette v4.
