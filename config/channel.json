@@ -27,7 +27,7 @@
  },
  "short": {
   "min_s": 30,
-  "max_s": 90,
+  "max_s": 180,
   "size": [
    1080,
    1920
@@ -37,6 +37,10 @@
    "Thu",
    "Sat",
    "Sun"
+  ],
+  "target_s": [
+   75,
+   150
   ]
  },
  "upload_mode": "semi_auto",
