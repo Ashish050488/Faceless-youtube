@@ -13,7 +13,19 @@ Promise: new tech in under 2 minutes — what it is, the clever part, **the catc
   10-s static split-screen at the price (Logitech 0:59–1:09); 8-s static build (Bose 0:59–1:07); verdict is a throwaway
   line; no captions for muted viewers; ends on a logo, no loop.
 
-## Palette v2 — "Signal" (chosen 2026-11-16 from research below; replaces navy/cyan)
+## Palette v3 — "Switch" (FINAL, owner picked 2026-11-16) — supersedes v2 below
+| Token | Hex | Use |
+|---|---|---|
+| paper | `#FAFAFA` | main background (light, easy on the eyes) |
+| ink | `#0E0E10` | text, switch body, dark scenes |
+| lime | `#C6FF00` | the ONE accent: switch knob, numbers, highlights, current caption word (on ink only — never lime text on paper) |
+| grey | `#8A8A90` | secondary text |
+| wreck | `#FF2E63` | WRECK verdict + THE CATCH only |
+Logo: lowercase "spec [switch] wreck", Inter Tight 800, tracking −4.5%; icon = ink pill switch with lime knob on the left (spec side).
+Why lime: human photopic sensitivity peaks near 555 nm (yellow-green), so lime reads brightest at equal intensity;
+used small on ink it pops without glare. Light background chosen by owner as "catchy and doesn't hurt the eyes".
+
+## (superseded) Palette v2 — "Signal" (chosen 2026-11-16 from research below; replaces navy/cyan)
 | Token | Hex | Use |
 |---|---|---|
 | signal | `#FFD60A` | brand colour: logo pill, numbers, highlights, **first frame of every Short (full-bleed)** |
@@ -77,6 +89,6 @@ Rule: per scene max 1 accent + ink/paper. Alternate ink and signal-yellow full-b
 - SFX: tick on numbers, whoosh on camera moves, thud on THE CATCH, soft pop on labels.
 - Loudness: voice −16 LUFS, master −14 LUFS, true peak ≤ −1 dBTP.
 
-## Channel art
+## Channel art (FINAL v3: files delivered 2026-11-16 — specorwreck_profile_800.png, specorwreck_banner_2560x1440.png; older lines below are superseded)
 - Avatar 800×800 (minimal): flat signal-yellow `#FFD60A` background, ink "S" + small ink pill with yellow "or" + ink "W", Space Grotesk Bold, centred in the circle.
 - Banner 2560×1440 (minimal): flat ink `#0B0B0C`; centred in safe area: white "SPEC" + signal-yellow pill with ink "or" + white "WRECK"; small muted line "New tech. Straight verdicts." Nothing else.
