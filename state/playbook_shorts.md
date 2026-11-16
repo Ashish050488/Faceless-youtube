@@ -1,0 +1,52 @@
+# Our Shorts playbook (v1, 2026-11-16)
+
+Built from: Techy or Not API data (83 videos, *measured*) + vidIQ frame-by-frame watch of 3 hits and
+2 flops (state/competitor_watch/). Everything below is *inferred* from that sample (n=5) until our own
+Analytics confirm it. Each rule gets tested and kept/dropped per state/learnings.md.
+
+## 1. Topic filter (pick only if ALL true)
+- A **physical product**, announced/launched in the last ~14 days, from a brand people know.
+- It has **one paradox or surprise** you can say in 8 words ("a PC that is just a keyboard", "wired earbuds in 2026").
+- There's a **hard number** to land late: price, battery, weight, years.
+- Skip: software/AI policy news, pure spec refreshes, lifestyle/fashion launches (both flop types).
+
+## 2. Script beats (60–80 s, ~150 wpm ≈ 150–200 words)
+| Time | Beat | Rule |
+|---|---|---|
+| 0–3 s | **Paradox hook** | Brand + "just" + the surprise. Say the surprise in the first sentence. |
+| 3–10 s | **Reveal** | Show what it actually is. Answer "what am I looking at?" fast. |
+| 10–25 s | **The twist** | The one clever/odd detail ("no battery — your phone powers it"). Signpost it: "Here's the interesting part." |
+| 25–45 s | **Why it matters to you** | 2–3 specs max, each turned into a benefit/pain-point solved. Never read a spec list. |
+| 45–60 s | **Context** | Why now / what it replaces / comparison to something viewers own. |
+| 60–70 s | **Number payoff** | Price (or the key number) held until here. Build-up: "So what does it cost?" |
+| 70–80 s | **Our verdict + loop** | One honest sentence of opinion (who it's for / who should skip). Last line flows back into the first frame. |
+
+Our edge over the benchmark (they often have weak or no verdict; flops had none):
+- A **real verdict every time**: "Worth it if…, skip it if…". This is also our main protection against the
+  inauthentic-content policy.
+- A **comparison** viewers can feel (vs. what it replaces, vs. its cheaper sibling).
+- Cut the reading: max **6 words on screen** at once (watermark flop needed heavy reading).
+
+## 3. Visual rules (for the video chat)
+- Sources: official press renders/photos (credited in description) + our own motion graphics. No brand promo video clips.
+- Something moves every **1.5–2 s**; hard scene change every **3–5 s** (hits: 16–18 cuts in 74–91 s).
+- One idea per screen; the number on screen is the biggest thing on screen.
+- Animate the explanation: diagrams, counters rolling up, before/after morphs, split-screen comparisons.
+- Our own look — NOT cream/orange Swiss poster. Proposed: deep navy/charcoal background, white type,
+  one electric-cyan accent, rounded cards. (Owner to approve with rebrand.)
+- Safe areas: no text in top 250 px, bottom 690 px, right 180 px.
+
+## 4. Voice & sound
+- One AI voice, ~150 wpm, conversational, never changes.
+- Music: our procedural beds, ducked 8–10 dB; SFX hits on every reveal (click, whoosh, thud on price).
+
+## 5. Packaging
+- Title: "<Brand> Just Made <paradox>" style works for them — we write our own variants
+  (e.g. "<Brand>'s New <X> Has No <expected thing>", "This $<price> <X> Is Actually Just a <Y>").
+  Subject first, ≤ 60 chars, no clickbait the video doesn't pay off.
+- Tags: brand, model, model variants, category, use-case phrases (their top tags pattern).
+- End: ask one specific question in the pinned comment ("Would you pay $X for this?").
+
+## 6. Long videos (to build watch hours; benchmark's long videos failed, so we differ)
+- Not "news recaps". 6–10 min **"how it actually works / why it failed"** explainers, each linked from 2 Shorts
+  on the same product family.
