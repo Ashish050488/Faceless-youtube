@@ -1,5 +1,13 @@
 # Learnings (newest first)
 
+## 2026-11-16 — renamed to "Spec or Wreck"
+- Owner: "The Catch" is used by multiple channels. Checked via API: @specorwreck free, and a channel search for
+  "Spec or Wreck" returns no channel with that name (closest: "Wreck Spec Rebuilds", cars). Also free handles:
+  @hypeorhold, @specsandsnags, @specautopsy, @gizmoverdict, @specshock.
+- Channel description + keywords updated via API. The API cannot change channel name/handle (tested: title change
+  accepted but ignored) — owner sets Name "Spec or Wreck" + handle @specorwreck in Studio.
+- "THE CATCH" stays as the in-video moment; the verdict now ends "SPEC" (cyan) or "WRECK" (amber) plus who it's for.
+
 ## 2026-11-16 — rebrand
 - Name chosen: "The Catch" (@thecatch free on check). Tagline "Every new gadget has one."
   Signature format element: THE CATCH moment in every video (amber stamp) + WORTH IT IF / SKIP IT IF verdict.

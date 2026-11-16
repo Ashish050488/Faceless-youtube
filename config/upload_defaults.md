@@ -1,4 +1,4 @@
-# Upload defaults — The Catch
+# Upload defaults — Spec or Wreck
 
 Applied automatically by our upload/optimiser code on every video. Owner also pastes them into
 YouTube Studio → Settings → Upload defaults (the API has no endpoint for these), so manual uploads match.
@@ -7,7 +7,7 @@ YouTube Studio → Settings → Upload defaults (the API has no endpoint for the
 - **Title:** (leave empty)
 - **Description:**
 ```
-Every new gadget has a catch. We find it.
+Great spec... or a wreck? We find out.
 
 SOURCES
 (added per video)
@@ -15,10 +15,10 @@ SOURCES
 Images: official press materials from the brands named above.
 Narration is AI-generated; script researched and fact-checked from the sources listed.
 
-#tech #gadgets #thecatch
+#tech #gadgets #specorwreck
 ```
 - **Visibility:** Private (we schedule each video)
-- **Tags:** `the catch, tech news, new gadgets, gadget review, is it worth it, new tech, tech shorts`
+- **Tags:** `spec or wreck, tech news, new gadgets, gadget review, is it worth it, new tech, tech shorts`
   (per-video tags are added on top, 450–495 chars total)
 
 ## Studio → Upload defaults → Advanced settings

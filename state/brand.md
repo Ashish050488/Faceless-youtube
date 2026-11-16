@@ -1,6 +1,6 @@
-# Brand + design spec — "The Catch" (v1, 2026-11-16)
+# Brand + design spec — "Spec or Wreck" (v2, 2026-11-16; renamed from "The Catch", which other channels use)
 
-Name: **The Catch** · Handle: **@thecatch** (free on 2026-11-16) · Tagline: **"Every new gadget has one."**
+Name: **Spec or Wreck** · Handle: **@specorwreck** (handle free + no channel with this name, checked via API 2026-11-16) · Tagline: **"Great spec... or a wreck?"**
 Promise: new tech in under 2 minutes — what it is, the clever part, **the catch**, the price, who should buy it.
 
 ## What we learned watching @TechyorNot frame by frame (Bose 1.29M, Logitech 1.66M)
@@ -38,7 +38,7 @@ Product colour may appear as a soft glow behind the product, never as text.
 - **Title zone**: x 60–880, y 270–560 (headline, left-aligned).
 - **Hero zone**: x 60–880, y 560–1100 (product cut-out / diagram / number).
 - **Caption strip**: x 60–880, y 1110–1220 — 2–4 word live caption of the current phrase, Inter 52 px, current word in cyan.
-- Episode tag top-left of title zone: `CATCH Nº001` in muted, 40 px.
+- Episode tag top-left of title zone: `SoW Nº001` in muted, 40 px.
 
 ## Motion system (Remotion)
 - **One continuous canvas**: a virtual camera pans/zooms between scenes (interpolate + spring); scenes are
@@ -65,5 +65,5 @@ Product colour may appear as a soft glow behind the product, never as text.
 - Loudness: voice −16 LUFS, master −14 LUFS, true peak ≤ −1 dBTP.
 
 ## Channel art
-- Avatar 800×800: navy circle, cyan "C" made of the thread line with an amber dot (the catch).
-- Banner 2560×1440 (safe area 1546×423 centre): "THE CATCH — Every new gadget has one." + thread line motif.
+- Avatar 800×800: navy circle, cyan "S" and amber "W" joined by the thread line (S = spec, W = wreck).
+- Banner 2560×1440 (safe area 1546×423 centre): "SPEC OR WRECK" (SPEC in cyan, WRECK in amber) + "New tech. Straight verdicts." + thread line motif.
