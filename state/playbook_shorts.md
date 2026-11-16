@@ -64,6 +64,11 @@ Pace: hits ran 145–160 wpm with a cut every 2.3–3.8 s; the long flop ran 130
 - Their long flop (Delete a file): 15-s abstract hook, 11.6 s average shot, 130 wpm flat voice, flat music, no CTA.
   If we test long-form: stakes in the first 5 s ("your 'deleted' photos can be recovered in 30 seconds"),
   a shot change every 3–5 s, 160+ wpm, chapter risers, a story frame, end-screen bridge to the next video.
+- From 4 watched long flops: fast cutting alone doesn't save a long video (Sigma 3 s, Duet 4.5 s still flopped).
+  A long video needs: (1) a stakes hook + a teased payoff, (2) ONE product/question only, (3) a rival comparison,
+  (4) a persona or a real scenario to follow, (5) the tension (risks/catch) in the first third, not after 4:00,
+  (6) a mid-video "still ahead" card, (7) a verdict + question + end screen to the next video.
+- Ship long videos only on a SEPARATE uploads strategy (search topics), never expecting Shorts subscribers to watch them.
 - Benchmark's long videos all flopped (median 859). Our main monetisation route = Shorts (10M views / 90 days).
 - Test 1 long video per week max, only after 20 Shorts; drop if it can't beat 5K views in 7 days.
 - Not "news recaps". 6–10 min **"how it actually works / why it failed"** explainers, each linked from 2 Shorts

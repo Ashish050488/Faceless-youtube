@@ -20,3 +20,10 @@ All five: female AI voice ~145–150 wpm, official renders/press photos + Swiss-
 | 4hfJ095uMgM Noise-cancelling (long) | 1,082 | 272 s | FLOP | 25-s textbook hook ("How do noise-cancelling headphones actually work?...") | 6–10 s ASL | none: main payoff answered at 1:15, then a catalogue; calm 130–140 wpm voice; stock footage; no CTA/end screen |
 
 Note: the Walkman Short uses Sony promo VIDEO footage (0:08–0:30). We will NOT do that (reused-content risk); renders/press stills + our own motion only.
+
+## Round 3 (vidIQ, 2026-11-16, last 50 credits) — two more long videos
+| ID | Views | Len | Hook | ASL | Why it lost viewers (vidIQ) |
+|---|---|---|---|---|---|
+| iA_cT_VfIWI Claude Duet | 1,076 | 7:31 | "Anthropic just gave Claude its own computer..." (clear but no stakes) | ~4.5 s | risks/limits held until 4:00+; 2:11–3:18 app-list "feature matrix"; flat voice + music for 7.5 min; no persona/story; all abstract 2D mockups |
+| JNJ5eNIrRac Sigma fp2 | 2,962 | 3:20 | "Sigma announced a new full-frame camera and a new 50 mm lens on the same day..." | ~3 s | press-release spec sheet; TWO products in one video (lens at 2:26); no rival comparison; Sigma promo reel footage; price static slides; no CTA |
+Their long-form median is 859 views vs ~17K for Shorts. Pacing was NOT the main problem on these two (3–4.5 s ASL): it's no stakes, no story, no comparison, no verdict, and a Shorts-trained audience.
