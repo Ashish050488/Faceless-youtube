@@ -13,7 +13,7 @@ Promise: new tech in under 2 minutes — what it is, the clever part, **the catc
   10-s static split-screen at the price (Logitech 0:59–1:09); 8-s static build (Bose 0:59–1:07); verdict is a throwaway
   line; no captions for muted viewers; ends on a logo, no loop.
 
-## LOGO (FINAL, chosen by operator 2026-11-16; owner: "just choose a good logo")
+## (SUPERSEDED by Logo v5 "Falling letter", which is LIVE on the channel) LOGO checkbox draft
 - Mark: rounded ink square (#151312, radius 22 %) with a marigold (#FFB224) check. Profile photo = mark only.
 - Wordmark: [checked box] spec   [empty box] wreck — lowercase Inter Tight 900, tracking −4 %.
 - Meaning: every video is a form we fill in; the tick lands on "spec" or "wreck". (Replaces the switch, which echoed
@@ -89,7 +89,7 @@ Rule: per scene max 1 accent + ink/paper. Alternate ink and signal-yellow full-b
 - **Title zone**: x 60–880, y 270–560 (headline, left-aligned).
 - **Hero zone**: x 60–880, y 560–1100 (product cut-out / diagram / number).
 - **Caption strip**: x 60–880, y 1110–1220 — 2–4 word live caption of the current phrase, Inter 52 px, current word in signal yellow.
-- Episode tag top-left of title zone: `SoW Nº001` in muted, 40 px.
+- (REMOVED 2026-11-16 by owner) episode tag "SoW Nº…" — replaced by the watermark below.
 
 ## Motion system (Remotion)
 - **One continuous canvas**: a virtual camera pans/zooms between scenes (interpolate + spring); scenes are
@@ -120,6 +120,24 @@ Rule: per scene max 1 accent + ink/paper. Alternate ink and signal-yellow full-b
 - Banner 2560×1440 (minimal): flat ink `#0B0B0C`; centred in safe area: white "SPEC" + signal-yellow pill with ink "or" + white "WRECK"; small muted line "New tech. Straight verdicts." Nothing else.
 
 
+
+## Logo v5 — "Falling letter" (2026-11-16, research-based; replaces the switch logo, which shared Techy or Not's word-pill-word structure)
+- Wordmark: lowercase "spec or wreck", Inter Tight 900, tracking −4%; "or" in ember #C2410C; the final **k tips over**
+  (rotated 18° from its baseline corner, dropped 4 px). Avatar: "s" upright in ink + "w" tipped 18° in wreck red #E5484D.
+- Banner tagline: "New tech. Straight verdicts." (stone #8C847C).
+- Research rules it follows:
+  1. **Descriptive** — the logo shows what the brand does (something "wrecking" = verdicts); descriptive logos improved
+     brand evaluations, purchase intent and performance, especially for unfamiliar brands (Luffarelli, Mukesh & Mahmood 2019, JMR).
+  2. **Dynamic imagery** — a static logo that implies motion (a letter mid-fall) drew longer eye-tracked attention and better
+     attitudes when it fits the brand (Cian, Krishna & Elder 2014, JMR 51(2)).
+  3. **Asymmetry ↔ excitement** — asymmetric logos fit exciting brands and maximised preference when matched
+     (Luffarelli, Stamatogiannakis & Yang 2019, JMR; Bajaj & Bond 2018).
+  4. **Moderately elaborate, natural, recognisable** — one simple twist on clean type, not decoration (Henderson & Cote 1998, JM 62(2)).
+  5. **Shape meaning** — rounded letterforms (approachable) with one angular break (hard verdict); round → soft/warm,
+     angular → hard/durable associations (Jiang, Gorn, Galli & Chattopadhyay 2016, JCR 42(5)).
+  6. **Unique** — no pill-between-words, no switch, no gauge/check-mark clichés. Readable at 40 px (tested).
+- Motion version for videos: at the verdict the k either snaps upright (SPEC) or falls further with a thud (WRECK).
+
 ## Micro-detail standard (owner: "peak level detailing — every small thing")
 Every element gets an entrance, a life while on screen, and an exit. Nothing pops in or vanishes on a hard frame.
 - **Easing**: never linear. Entrances spring (damping 14–18, mass 0.8); exits ease-in 180–240 ms; camera moves ease-in-out cubic.
@@ -141,3 +159,13 @@ Every element gets an entrance, a life while on screen, and an exit. Nothing pop
   under voice with 120 ms attack / 400 ms release; a riser into THE CATCH; music drops out for 0.5 s before the verdict.
 - **QA**: scrub at 0.25× speed; no element appears/disappears without animation, no text overlaps, no jitter, every
   number matches script.md, safe areas clear, nothing static > 2.5 s.
+
+
+## Watermark — LOCKED (owner approved 2026-11-16; replaces the "SoW Nº001" tag; do not change)
+- Mini logo "s w" (w tipped 18°, wreck red #E5484D). s = ink #151312 on paper scenes, paper #FAF8F5 on ink scenes.
+- Files: Drive › Faceless Channel › brand_assets › watermark_on_light.png / watermark_on_dark.png (transparent).
+- Shorts 1080×1920 (owner moved it to the bottom, 2026-11-16): bottom-right corner of the safe frame — right edge
+  x = 880, bottom edge y = 1220, height 64 px, opacity 90 %. Caption strip shortened to x 60–780 so they never touch.
+  Title zone stays at y 270–560. (Lower than y 1230 or right of x 900 is covered by YouTube's UI.) Long videos 1920×1080: top-left, x = 48, y = 40, height 56 px.
+- On every frame except the end card (the full logo animation replaces it). Switches light/dark with the scene background
+  via a 150 ms crossfade. No animation otherwise — it stays still and quiet.
