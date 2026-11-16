@@ -249,16 +249,18 @@ const TE = (token, nth = 0) => { let i = CUR.w0; for (let n = 0; n <= nth; n++) 
 // 0 HOOK — real hero (cartridge in slot) on ink
 scene(0, 'ink', 'cut_3q', true, (ctx, lt, d, X) => {
   const e = life(lt, -1, d + 9);
-  product(ctx, IMG.cut_3q, 470, 860, 520, { lt: lt + 2, seed: 0.3, sweepAt: 0.25, push: lt / d });
+  product(ctx, IMG.cut_3q, 470, 812, 440, { lt: lt + 2, seed: 0.3, sweepAt: 0.25, push: lt / d });
   // marigold glow at the cartridge slot (on ink)
-  const g = 0.5 + 0.5 * Math.sin(lt * 4.5); ctx.save(); ctx.globalAlpha = 0.25 + 0.2 * g; ctx.filter = 'blur(26px)'; ctx.fillStyle = C.mari; ctx.beginPath(); ctx.ellipse(440, 800, 120, 26, -0.12, 0, 7); ctx.fill(); ctx.restore();
+  const g = 0.5 + 0.5 * Math.sin(lt * 4.5); ctx.save(); ctx.globalAlpha = 0.25 + 0.2 * g; ctx.filter = 'blur(26px)'; ctx.fillStyle = C.mari; ctx.beginPath(); ctx.ellipse(445, 770, 100, 22, -0.12, 0, 7); ctx.fill(); ctx.restore();
   const hb = headline(ctx, 'PLAYS GAME BOY CARTRIDGES', lt, true, { t0: 0.15, t1: d + 9 });
   underline(ctx, hb, 'CARTRIDGES', T('cartridges'), lt, true);
 }, { head: 'PLAYS GAME BOY CARTRIDGES', sfx: () => [[0.15, 'whoosh', 0.35], [0.25, 'shimmer', 0.4], [T('cartridges'), 'swish', 0.4]] });
 // 1 Not the games... just the music — camera moves in on the cartridge
 scene(1, 'ink', 'cut_3q', true, (ctx, lt, d) => {
-  const z = easeInOut(prog(lt, 0, 1.4));
-  product(ctx, IMG.cut_3q, lerp(470, 560, z), lerp(860, 980, z), lerp(520, 820, z), { lt: lt + 6, seed: 0.3, sweepAt: -5, push: lt / d });
+  // camera pushes in on the full product, then a quick 0.25 s dissolve to the close-up crop (no long ghosting)
+  const zi = easeInOut(prog(lt, 0, 0.7)), z = easeInOut(prog(lt, 0.7, 0.95));
+  if (z < 1) product(ctx, IMG.cut_3q, 470, lerp(812, 790, zi), lerp(440, 500, zi), { lt: lt + 6, seed: 0.3, sweepAt: -5, alpha: 1 - z });
+  if (z > 0) product(ctx, IMG.cut_3q, 470, 800, lerp(640, 700, prog(lt, 0.7, d)), { lt: lt + 6, seed: 0.3, sweepAt: -5, alpha: z, crop: [0, 0, 848, 640] });
   const hb = headline(ctx, 'NOT THE GAMES', lt, true, { t0: 0.05, t1: T('just') });
   if (lt > T('just') - 0.1) { const hb2 = headline(ctx, 'JUST THE MUSIC', lt, true, { t0: T('just') - 0.05 }); underline(ctx, hb2, 'MUSIC', T('music'), lt, true); }
   const e = life(lt, T('music') - 0.05, 1e9, { dy: 30 });
@@ -266,7 +268,7 @@ scene(1, 'ink', 'cut_3q', true, (ctx, lt, d) => {
 }, { sfx: () => [[0.0, 'whoosh', 0.3], [T('just'), 'pop', 0.3], [T('music'), 'blip', 0.5]] });
 // 2 It's called the Retro Song Bird — front render, light sweep (paper)
 scene(2, 'paper', 'cut_front_cart', true, (ctx, lt, d) => {
-  product(ctx, IMG.cut_front_cart, 470, 820, 600, { lt, seed: 1.1, sweepAt: T('retro') - 0.1, push: lt / d });
+  product(ctx, IMG.cut_front_cart, 470, 822, 520, { lt, seed: 1.1, sweepAt: T('retro') - 0.1, push: lt / d });
   const hb = headline(ctx, 'RETRO SONG BIRD', lt, false, { t0: T('retro') - 0.15 });
   underline(ctx, hb, 'BIRD', T('bird'), lt, false);
 }, { sfx: () => [[T('retro') - 0.1, 'shimmer', 0.5], [T('bird'), 'swish', 0.35]] });
@@ -420,7 +422,7 @@ scene(14, 'ink', 'cut_3q', false, (ctx, lt, d) => {
   pill(ctx, 60, 690, 820, 110, C.inkSoft, { shadow: false });
   const full = 820 * 0.36 + 820 * 0.6 * p; rr(ctx, 60, 690, Math.max(110, full), 110, 55); ctx.fillStyle = C.mari; ctx.fill();
   const gx = 60 + 820 * 0.36; ctx.fillStyle = C.paper; ctx.fillRect(gx - 2, 670, 4, 150);
-  odometer(ctx, 15, prog(lt, T('fifteen') - 0.1, T('goal')), gx - 80, 880, 56, C.paper, { prefix: '$', suffix: 'K', settleT: lt - T('goal') });
+  { const g = life(lt, T('fifteen') - 0.15, 1e9, { dy: 14 }); ctx.save(); ctx.globalAlpha *= g.a; ctx.translate(0, g.y); odometer(ctx, 15, prog(lt, T('fifteen') - 0.1, T('goal')), gx - 80, 880, 56, C.paper, { prefix: '$', suffix: 'K', settleT: lt - T('goal') }); ctx.restore(); }
   ctx.restore();
   const q = life(lt, T('goal') + 0.1, 1e9, { dy: 30 });
   if (q.a > 0) { ctx.save(); ctx.globalAlpha = q.a; ctx.translate(0, q.y); odometer(ctx, 3, prog(lt, T('goal') + 0.1, T('goal') + 0.5), 880, 1060, 180, C.mari, { prefix: '~', suffix: '×', align: 'right', settleT: lt - T('goal') - 0.5 }); ctx.restore(); }
@@ -441,7 +443,7 @@ scene(15, 'ink', 'cut_front_cart', true, (ctx, lt, d) => {
 }, { sfx: () => [[0, 'whoosh', 0.3], [T('seventy') - 0.1, 'pop', 0.4], [TE('seventy') + 0.1, 'tick', 0.9]] });
 // 16 THE CATCH — hard cut: dim 85 %, stamp 1.3→1 / −4°→0, 1-frame warm flash, 3 px shake 6 frames, thud
 scene(16, 'ink', 'cut_3q', true, (ctx, lt, d) => {
-  product(ctx, IMG.cut_3q, 470, 900, 480, { lt: lt + 8, seed: 0.3, sweepAt: -5, push: 0.5 });
+  product(ctx, IMG.cut_3q, 470, 840, 420, { lt: lt + 8, seed: 0.3, sweepAt: -5, push: 0.5 });
   const dim = 0.85 * clamp(lt / (2 * FR)); ctx.fillStyle = `rgba(21,19,18,${dim})`; ctx.fillRect(0, 0, W, H);
   const ts = 0.12; stamp(ctx, 'THE CATCH', 470, 700, prog(lt, ts, ts + 0.2), C.wreck, { px: 140, rot0: -4, rot1: 0 });
   if (lt >= ts + 0.2 && lt < ts + 0.2 + FR) { ctx.fillStyle = 'rgba(255,214,150,0.55)'; ctx.fillRect(0, 0, W, H); }
@@ -450,15 +452,15 @@ scene(16, 'ink', 'cut_3q', true, (ctx, lt, d) => {
 scene(17, 'ink', 'cut_3q', false, (ctx, lt, d) => {
   chipLabel(ctx, "it's a Kickstarter", 64, 620, lt, T('kickstarter') - 0.1, 1e9, true, { px: 48 });
   const p = easeInOut(prog(lt, T('april') - 0.35, T('april') + 0.05));
-  const cal = (mon, yr, sy) => { ctx.save(); ctx.translate(470, 900 + Math.sin(lt * 1.2) * 1.5); ctx.scale(1, Math.max(0.001, sy));
+  const cal = (mon, yr, sy) => { ctx.save(); ctx.translate(470, 918 + Math.sin(lt * 1.2) * 1.5); ctx.scale(1, Math.max(0.001, sy));
     pill(ctx, -250, -180, 500, 360, C.paper, { shadow: true, hl: false }); ctx.save(); rr(ctx, -250, -180, 500, 360, 40); ctx.clip(); ctx.fillStyle = C.wreck; ctx.fillRect(-250, -180, 500, 100); ctx.restore();
     font(ctx, 150, 'head'); ctx.fillStyle = C.ink; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(mon, 0, 60);
     font(ctx, 60, 'bold'); ctx.fillStyle = C.paper; ctx.fillText(yr, 0, -130); ctx.restore(); ctx.textAlign = 'left'; };
-  const e = life(lt, T('deliveries') - 0.1, 1e9); ctx.save(); ctx.globalAlpha = e.a;
+  const e = life(lt, 0.12, 1e9, { dy: 30 }); ctx.save(); ctx.globalAlpha = e.a; ctx.translate(0, e.y);
   if (p < 0.5) cal('NOV', '2026', 1 - p * 2); else cal('APR', '2027', (p - 0.5) * 2); ctx.restore();
   const hb = headline(ctx, 'SHIPS APRIL 2027', lt, true, { t0: T('expected') - 0.2, acc: ['2027'] });
   underline(ctx, hb, '2027', T('twenty'), lt, true);
-}, { sfx: () => [[T('kickstarter') - 0.1, 'pop', 0.4], [T('deliveries') - 0.1, 'whoosh', 0.3], [T('april') - 0.35, 'flip', 0.6], [T('april') - 0.15, 'flip', 0.5], [T('twenty'), 'swish', 0.35]] });
+}, { sfx: () => [[0.12, 'pop', 0.35], [T('kickstarter') - 0.1, 'pop', 0.4], [T('april') - 0.35, 'flip', 0.6], [T('april') - 0.15, 'flip', 0.5], [T('twenty'), 'swish', 0.35]] });
 // 18 Prototype differs from the final design — REAL prototype photo vs final render
 scene(18, 'paper', 'full_proto', true, (ctx, lt, d) => {
   const a = life(lt, 0.05, 1e9, { dy: 30 }), b = life(lt, T('final') - 0.1, 1e9, { dy: 30 });
@@ -484,7 +486,7 @@ scene(19, 'ink', 'cut_3q', false, (ctx, lt, d) => {
 }, { sfx: () => [[0.3, 'whoosh', 0.3], [T('late') - 0.05, 'stamp', 0.6], [T('not') - 0.05, 'stamp', 0.7]] });
 // 20 Verdict — wordmark k snaps upright at "spec"; WORTH IT IF row; real product
 scene(20, 'paper', 'cut_3q', true, (ctx, lt, d) => {
-  product(ctx, IMG.cut_3q, 740, 760, 240, { lt: lt + 1, seed: 0.8, sweepAt: 0.1, push: lt / d });
+  product(ctx, IMG.cut_3q, 790, 690, 190, { lt: lt + 1, seed: 0.8, sweepAt: 0.1, push: lt / d });
   const tSpec = T('spec'), up = 1 - spr(lt - tSpec, 18, 0.45);
   wordmark(ctx, 330, 720, 96, tSpec > lt ? 1 : clamp(up, -0.15, 1), false, life(lt, 0.05).a);
   const e = life(lt, T('box') - 0.15, 1e9, { dy: 30 });
@@ -495,7 +497,7 @@ scene(20, 'paper', 'cut_3q', true, (ctx, lt, d) => {
 }, { sfx: () => [[T('box') - 0.15, 'pop', 0.45], [T('spec'), 'click', 1.0], [T('spec') + 0.05, 'stamp', 0.5]] });
 // 21 If you need it before spring, skip it — SKIP IT IF row
 scene(21, 'paper', 'cut_3q', true, (ctx, lt, d) => {
-  product(ctx, IMG.cut_3q, 740, 760, 240, { lt: lt + 7, seed: 0.8, sweepAt: -5, push: 1 });
+  product(ctx, IMG.cut_3q, 790, 690, 190, { lt: lt + 7, seed: 0.8, sweepAt: -5, push: 1 });
   wordmark(ctx, 330, 720, 96, 0, false);
   ctx.save(); ctx.translate(0, Math.sin(lt * 1.2) * 1.2); pill(ctx, 60, 800, 820, 150, C.ink, { shadow: true });
   font(ctx, 44, 'bold'); ctx.fillStyle = C.mari; ctx.textBaseline = 'alphabetic'; ctx.fillText('WORTH IT IF', 110, 858); font(ctx, 60, 'head'); ctx.fillStyle = C.paper; ctx.fillText('you kept your carts', 110, 924); ctx.restore();
@@ -506,8 +508,8 @@ scene(21, 'paper', 'cut_3q', true, (ctx, lt, d) => {
 }, { sfx: () => [[T('need') - 0.1, 'pop', 0.45], [T('skip'), 'swish', 0.35]] });
 // 22 LOOP line — back to the opening composition (real hero)
 scene(22, 'ink', 'cut_3q', true, (ctx, lt, d) => {
-  product(ctx, IMG.cut_3q, 470, 860, 520, { lt: lt + 2, seed: 0.3, sweepAt: 0.3, push: 1 - lt / d });
-  const g = 0.5 + 0.5 * Math.sin(lt * 4.5); ctx.save(); ctx.globalAlpha = 0.25 + 0.2 * g; ctx.filter = 'blur(26px)'; ctx.fillStyle = C.mari; ctx.beginPath(); ctx.ellipse(440, 800, 120, 26, -0.12, 0, 7); ctx.fill(); ctx.restore();
+  product(ctx, IMG.cut_3q, 470, 812, 440, { lt: lt + 2, seed: 0.3, sweepAt: 0.3, push: 1 - lt / d });
+  const g = 0.5 + 0.5 * Math.sin(lt * 4.5); ctx.save(); ctx.globalAlpha = 0.25 + 0.2 * g; ctx.filter = 'blur(26px)'; ctx.fillStyle = C.mari; ctx.beginPath(); ctx.ellipse(445, 770, 100, 22, -0.12, 0, 7); ctx.fill(); ctx.restore();
   const hb = headline(ctx, 'SOMEONE ACTUALLY BUILT IT', lt, true, { t0: 0.1, t1: d - 0.02 });
   underline(ctx, hb, 'BUILT', T('built'), lt, true, d - 0.02);
 }, { sfx: () => [[0, 'whoosh', 0.3], [T('built'), 'swish', 0.35]] });
