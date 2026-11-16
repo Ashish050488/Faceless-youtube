@@ -120,6 +120,24 @@ Rule: per scene max 1 accent + ink/paper. Alternate ink and signal-yellow full-b
 - Banner 2560×1440 (minimal): flat ink `#0B0B0C`; centred in safe area: white "SPEC" + signal-yellow pill with ink "or" + white "WRECK"; small muted line "New tech. Straight verdicts." Nothing else.
 
 
+
+## Logo v5 — "Falling letter" (2026-11-16, research-based; replaces the switch logo, which shared Techy or Not's word-pill-word structure)
+- Wordmark: lowercase "spec or wreck", Inter Tight 900, tracking −4%; "or" in ember #C2410C; the final **k tips over**
+  (rotated 18° from its baseline corner, dropped 4 px). Avatar: "s" upright in ink + "w" tipped 18° in wreck red #E5484D.
+- Banner tagline: "New tech. Straight verdicts." (stone #8C847C).
+- Research rules it follows:
+  1. **Descriptive** — the logo shows what the brand does (something "wrecking" = verdicts); descriptive logos improved
+     brand evaluations, purchase intent and performance, especially for unfamiliar brands (Luffarelli, Mukesh & Mahmood 2019, JMR).
+  2. **Dynamic imagery** — a static logo that implies motion (a letter mid-fall) drew longer eye-tracked attention and better
+     attitudes when it fits the brand (Cian, Krishna & Elder 2014, JMR 51(2)).
+  3. **Asymmetry ↔ excitement** — asymmetric logos fit exciting brands and maximised preference when matched
+     (Luffarelli, Stamatogiannakis & Yang 2019, JMR; Bajaj & Bond 2018).
+  4. **Moderately elaborate, natural, recognisable** — one simple twist on clean type, not decoration (Henderson & Cote 1998, JM 62(2)).
+  5. **Shape meaning** — rounded letterforms (approachable) with one angular break (hard verdict); round → soft/warm,
+     angular → hard/durable associations (Jiang, Gorn, Galli & Chattopadhyay 2016, JCR 42(5)).
+  6. **Unique** — no pill-between-words, no switch, no gauge/check-mark clichés. Readable at 40 px (tested).
+- Motion version for videos: at the verdict the k either snaps upright (SPEC) or falls further with a thud (WRECK).
+
 ## Micro-detail standard (owner: "peak level detailing — every small thing")
 Every element gets an entrance, a life while on screen, and an exit. Nothing pops in or vanishes on a hard frame.
 - **Easing**: never linear. Entrances spring (damping 14–18, mass 0.8); exits ease-in 180–240 ms; camera moves ease-in-out cubic.
