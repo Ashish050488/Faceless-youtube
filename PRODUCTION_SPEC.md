@@ -54,3 +54,17 @@ Apply the Micro-detail standard in state/brand.md to EVERY element, plus:
 - Every on-screen number/word matches script.md and factsheet.md.
 - Safe zones clear (Shorts: top 250, bottom 690, right 180 px). Loudness −14 LUFS, TP ≤ −1 dBTP, voice natural.
 - If any check fails, fix and re-render before uploading to Drive.
+
+## 4. VOICE — must sound like a person, not a reader (owner 2026-11-16: "should sound natural, like 'hmm, yeah'")
+Two causes of robotic narration, both fixed every time:
+**A. Script written for the ear** (script session's job): short sentences, contractions, one natural reaction per beat
+("okay", "wait", "yeah", "honestly?"), questions answered out loud, numbers said the way people say them
+("a hundred and twenty-eight", "fifteen-thousand-dollar"), punctuation as pause marks ("," short, "..." beat, "—" turn,
+new line = breath). Never read lists or spec strings.
+**B. Expressive free voice** (video session's job), commercial-use licence only:
+- Engine: the one chosen in config/channel.json → voice (owner picks by ear from comparison samples).
+- Render sentence by sentence, not the whole script at once; listen to each; re-roll any flat or wrong-stress line.
+- Vary delivery per beat: hook = playful, catch = lower and slower, verdict = confident. Small speed changes (±5 %).
+- Add 120–250 ms breaths/gaps between lines (real pauses), room tone under everything, light de-ess, gentle
+  compression (2:1), no heavy limiting on the voice. Voice −16 LUFS before the mix.
+- Forbidden: non-commercial-licence models (e.g. XTTS/Coqui CPML, F5-TTS weights, Fish Speech weights).
