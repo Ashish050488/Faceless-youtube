@@ -78,3 +78,12 @@ failing timestamps listed.
 10. Shadows/light sweep on product cut-outs · 11. Typography polish (kerning, ≤ 6 words, units styled)
 12. Transitions are camera moves/thread (≤ 6 hard cuts) · 13. Colour: palette v4 only, accent ≤ 15 % of frame
 14. Sound: SFX on every visual event, riser into THE CATCH, pre-verdict drop · 15. Voice natural (no flat/robotic line), safe zones clear, loudness on spec
+
+## 6. PACE + MIX — measured from the benchmark (Techy or Not Bose/Logitech Shorts, 2026-11-16)
+- Narration pace **135–140 wpm** (benchmark Shorts: 135 and 138 wpm; long videos 151–154). Not faster.
+- Script length for a Short: **~160–210 words** (benchmark 160–176). Average sentence ~11 words.
+- Render sentence by sentence; 0.22–0.30 s gap between sentences, +0.12–0.18 s at line ends.
+- **Music sits 15–17 dB below the voice** (benchmark measured 14.8 and 16.9 dB; our old 8–10 dB duck buried the voice).
+  Implementation that measured 16.1 dB: voice loudnorm −16 LUFS; bed volume −11 dB; sidechaincompress ratio 3,
+  attack 120 ms, release 400 ms; master loudnorm −14 LUFS, TP −1 dBTP (benchmark master: −15.1 LUFS, peak −1.2 dBFS).
+- Verify every render: speech-vs-pause-music gap 14–18 dB (script: 50 ms RMS frames, 75th pct vs 15th pct).
