@@ -13,6 +13,16 @@ Promise: new tech in under 2 minutes — what it is, the clever part, **the catc
   10-s static split-screen at the price (Logitech 0:59–1:09); 8-s static build (Bose 0:59–1:07); verdict is a throwaway
   line; no captions for muted viewers; ends on a logo, no loop.
 
+## LOGO (FINAL, chosen by operator 2026-11-16; owner: "just choose a good logo")
+- Mark: rounded ink square (#151312, radius 22 %) with a marigold (#FFB224) check. Profile photo = mark only.
+- Wordmark: [checked box] spec   [empty box] wreck — lowercase Inter Tight 900, tracking −4 %.
+- Meaning: every video is a form we fill in; the tick lands on "spec" or "wreck". (Replaces the switch, which echoed
+  the benchmark's "word + pill + word" layout.)
+- Signature animation (end of every video): two empty boxes "spec" / "wreck"; a marigold tick draws (stroke
+  animation 10–12 frames, spring settle) into the chosen box; the other box fades to stone. Click SFX on the frame the
+  stroke completes. For WRECK, the tick is replaced by a wreck-red ✕ drawn in two strokes.
+- Files: SpecOrWreck_profile_800.png, SpecOrWreck_banner_2560x1440.png (delivered to owner).
+
 ## Palette v4 — "Warm Switch" (CURRENT, owner 2026-11-16: "warm, catchy, not hurting the eyes"; lime was temporary)
 | Token | Hex | Use | Contrast |
 |---|---|---|---|
