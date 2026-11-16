@@ -13,7 +13,23 @@ Promise: new tech in under 2 minutes — what it is, the clever part, **the catc
   10-s static split-screen at the price (Logitech 0:59–1:09); 8-s static build (Bose 0:59–1:07); verdict is a throwaway
   line; no captions for muted viewers; ends on a logo, no loop.
 
-## Palette v3 — "Switch" (FINAL, owner picked 2026-11-16) — supersedes v2 below
+## Palette v4 — "Warm Switch" (CURRENT, owner 2026-11-16: "warm, catchy, not hurting the eyes"; lime was temporary)
+| Token | Hex | Use | Contrast |
+|---|---|---|---|
+| paper | `#FAF8F5` | main background (warm white, NOT cream) | — |
+| ink | `#151312` | text, switch body, dark scenes (warm black) | 17.5:1 on paper |
+| marigold | `#FFB224` | THE accent: switch knob, pills, highlights, numbers **on ink**, current caption word (on ink pill) | 10.3:1 on ink |
+| ember | `#C2410C` | accent text **on paper** (numbers, key words) | 4.9:1 on paper |
+| stone | `#8C847C` | secondary text, ≥ 44 px only | 3.5:1 on paper |
+| wreck | `#E5484D` | THE CATCH + WRECK only, ≥ 60 px | 4.7:1 on ink |
+Rules: one accent per scene; never marigold text on paper (use ember); no pure neon or fully saturated fills over large
+areas (glare); large areas = paper or ink, accent only on ≤ 15 % of the frame.
+Why (evidence + inference): warm/red hues carry "excitement" in brand-personality research (Labrecque & Milne 2012);
+warmer, more saturated frames were linked to more attention in an ad-attention study (Realeyes), though a large
+thumbnail analysis found no colour effect (Eden) — so warmth gives energy, contrast does the hooking. Softer-than-neon
+warm tones on warm white/black keep high contrast without glare (*inferred*). Different from Techy or Not (cream #F1EDE4 + red-orange).
+
+## (superseded) Palette v3 — "Switch" (lime)
 | Token | Hex | Use |
 |---|---|---|
 | paper | `#FAFAFA` | main background (light, easy on the eyes) |
@@ -92,3 +108,26 @@ Rule: per scene max 1 accent + ink/paper. Alternate ink and signal-yellow full-b
 ## Channel art (FINAL v3: files delivered 2026-11-16 — specorwreck_profile_800.png, specorwreck_banner_2560x1440.png; older lines below are superseded)
 - Avatar 800×800 (minimal): flat signal-yellow `#FFD60A` background, ink "S" + small ink pill with yellow "or" + ink "W", Space Grotesk Bold, centred in the circle.
 - Banner 2560×1440 (minimal): flat ink `#0B0B0C`; centred in safe area: white "SPEC" + signal-yellow pill with ink "or" + white "WRECK"; small muted line "New tech. Straight verdicts." Nothing else.
+
+
+## Micro-detail standard (owner: "peak level detailing — every small thing")
+Every element gets an entrance, a life while on screen, and an exit. Nothing pops in or vanishes on a hard frame.
+- **Easing**: never linear. Entrances spring (damping 14–18, mass 0.8); exits ease-in 180–240 ms; camera moves ease-in-out cubic.
+- **Stagger**: multi-part items (words, chips, list rows, ladder steps) enter 60–90 ms apart.
+- **Text**: headlines reveal per word (y +24 px → 0, opacity 0 → 1, slight blur 6 → 0 px); numbers roll digit-by-digit
+  with tabular figures; the last digit lands with a 1.06 → 1.0 scale settle + tick SFX.
+- **Product**: 2.5D tilt ±6–8° that slowly drifts (never frozen), soft contact shadow that scales with tilt, one light
+  sweep on first reveal, 1–2 % slow push-in while visible, subtle depth blur on a background copy.
+- **Idle life**: anything on screen > 1.2 s gets micro-motion (1–2 px float, 0.5 % scale breathe, or a highlight sweep).
+- **Pills/chips**: radius = height/2, 1 px inner highlight, soft shadow (0 8 24 rgba(21,19,18,.12)), press-in scale on appear.
+- **Transitions**: camera pans on one canvas; the marigold thread (4–6 px, round caps) draws on with a leading glow and
+  becomes the next element. Max 6 hard cuts per Short.
+- **Highlights**: underline draws left→right under the spoken key word, synced to the word timestamp ±2 frames.
+- **THE CATCH**: 2-frame scene dim to 85 %, wreck stamp drops (scale 1.3 → 1.0, rotation −4° → 0°), 1-frame warm flash,
+  camera shake 3 px for 6 frames, low thud.
+- **Verdict switch**: knob travels with overshoot (spring), track colour fills behind it, click SFX on the exact frame it lands.
+- **Captions**: 2–4 words, current word on a marigold-on-ink pill that slides word to word (not jumps).
+- **Sound detail**: every visual event that moves gets a matching subtle SFX (−24 to −18 LUFS short-term), music ducks
+  under voice with 120 ms attack / 400 ms release; a riser into THE CATCH; music drops out for 0.5 s before the verdict.
+- **QA**: scrub at 0.25× speed; no element appears/disappears without animation, no text overlaps, no jitter, every
+  number matches script.md, safe areas clear, nothing static > 2.5 s.
