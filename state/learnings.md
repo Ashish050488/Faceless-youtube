@@ -1,49 +1,17 @@
-# Learnings (newest first)
+# Learnings (newest first; only what still changes decisions — older notes are in git history)
 
-## 2026-11-17 — image quality by brand type (video session)
-- International brands usually have proper press kits with large official images; for the Xiaomi flashlight the only
-  reachable official images were ~600 px wide. Another reason to prefer global brands — check image availability
-  (≥ 1600 px, whole product) BEFORE picking a topic.
+## 2026-11-17
+- Tokens: long chats, images and chat-to-chat messages were the big costs → rules in CLAUDE.md (fresh chat per job,
+  numbers before images, one message per handoff, short spec).
+- International brands have proper press kits (≥ 1600 px); the Xiaomi flashlight only had ~600 px images → check image
+  availability BEFORE picking a topic.
+- Owner brand rule: mostly international brands; Chinese ≤ ~1 in 4, never two in a row.
+- Shorts copy Techy or Not's proven retention formula with more detail; long videos = our own format
+  (his long videos flop: 643–2,962 views).
+- sow001 vs benchmark: we had 1 hard cut vs 8–11, constant drift, small left layout, wrong counter values, blurred
+  backgrounds → fixed in PRODUCTION_SPEC §2/§4. Compare the last video before building the next one.
+- API can't change channel name/handle/avatar, and can't comment on private videos (post the comment after it's public).
 
-## 2026-11-17 — strategy split (owner)
-- SHORTS: copy what Techy or Not has proven for retention (format, pacing, layout, flat backgrounds) and do it with more detail.
-- LONG VIDEOS: our own approach later — his long videos flop (643–2,962 views), so we'll build our own long-form format.
-- sow001 compared frame-by-frame vs benchmark before building sow002 (state/competitor_watch/sow001_vs_techy.md):
-  ours had 1 hard cut vs 8–11, constant drift (never calm > 0.4 s vs his 2.4–4.4 s holds), small left-pinned layout,
-  wrong values flashing in counters, muddy blurred backgrounds. Fix list = PRODUCTION_SPEC §14.
-- Lesson for me: compare first, build after — never start the next video before the last one is analysed.
-
-## 2026-11-16 — renamed to "Spec or Wreck"
-- Owner: "The Catch" is used by multiple channels. Checked via API: @specorwreck free, and a channel search for
-  "Spec or Wreck" returns no channel with that name (closest: "Wreck Spec Rebuilds", cars). Also free handles:
-  @hypeorhold, @specsandsnags, @specautopsy, @gizmoverdict, @specshock.
-- Channel description + keywords updated via API. The API cannot change channel name/handle (tested: title change
-  accepted but ignored) — owner sets Name "Spec or Wreck" + handle @specorwreck in Studio.
-- "THE CATCH" stays as the in-video moment; the verdict now ends "SPEC" (cyan) or "WRECK" (amber) plus who it's for.
-
-## 2026-11-16 — rebrand
-- Name chosen: "The Catch" (@thecatch free on check). Tagline "Every new gadget has one."
-  Signature format element: THE CATCH moment in every video (amber stamp) + WORTH IT IF / SKIP IT IF verdict.
-- API-applied: channel description, keywords, country IN, default language en. Owner must set name, @handle,
-  avatar and banner in Studio (the API can't change the name or handle).
-- Full spec: state/brand.md. Benchmark watched frame-by-frame (Bose, Logitech): only 8–11 hard cuts per ~75 s;
-  motion comes from continuous camera moves on one canvas.
-
-## 2026-11-16 — decisions (owner: "totally up to you")
-- Niche: new physical tech products, Shorts-first, with a real verdict. Long-form = weekly experiment later.
-- Look: navy/charcoal + white + electric-cyan accent (our own, not the benchmark's cream/orange).
-- Cadence target: 1 Short/day to start, 2/day once the video pipeline is stable.
-- Evidence: state/competitor_watch/techyornot_full.md, state/playbook_shorts.md.
-
-## 2026-11-16 — old content deleted (owner approved "delete all")
-- Deleted all 160 old anime videos via API (160/160 OK). IDs/titles kept in state/deleted_old_videos.json.
-- Used ~8,000 API quota units today; niche research waits for the daily quota reset (midnight Pacific).
-- Next: niche research -> owner picks niche -> rebrand (description, keywords, banner via API; name + profile picture in Studio).
-
-## 2026-11-16 — login done
-- OAuth works. Logged-in channel = "Algorithmic Aura" (created 2022-09-26, IN): 136 subs, 160 videos, 175,346 views (*measured*).
-- Recent uploads: ~40 s Jujutsu Kaisen Shorts + 5 s anime meme edits, 0.5K–8.7K views each (*measured*).
-- Risk: anime clips = reused content/copyright; templated JJK Shorts = inauthentic. YPP review checks the whole channel. Owner decision needed: new channel vs keep this one.
-
-## 2026-11-16 — setup
-- Toolkit scaffolded. Blocked on: repo push access, Google Cloud keys, Pexels key, API audit.
+## 2026-11-16
+- Old channel content (160 anime videos) deleted with owner approval; channel rebranded to Spec or Wreck.
+- Niche: new physical tech from big brands, Shorts first, with a real verdict.

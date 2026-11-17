@@ -30,7 +30,7 @@ monetisation guidance regularly (state/policy_notes.md) and follow it; nothing r
      to Drive: 02_ready_to_upload/<slug>/, then messages the script session.
 3. **Script session** uploads to YouTube with the metadata (title, description, tags, category, language,
    captions, playlist, pinned question, not-made-for-kids, synthetic-media flag when needed).
-   QA with the watch-video skill before upload.
+   QA per PRODUCTION_SPEC §7 (qa.md numbers + one contact sheet) before upload.
 4. **Cleanup after a successful upload**
    - Delete the video file(s) from Drive (02_ready_to_upload/<slug>/). Keep the script folder in Drive.
    - Delete local copies of both the script and the video from this container (cache/scratchpad).
@@ -46,10 +46,10 @@ big files from Drive, so finished videos travel by git:
 - qa.md / small text can still go to Drive › 02_ready_to_upload › <slug>/ as before.
 
 ## Instagram (owner 2026-11-17)
-- The Instagram session (session_01L2u12DRCGMHdb1CMdfRUan) owns ALL Instagram posting (image posts, carousels, collages,
-  Reels) and plans its own daily mix (state/instagram_plan.md; brief in INSTAGRAM_POSTS.md).
-- Script session: right after every successful YouTube publish, send the Instagram session one message with the
-  YouTube link, title and a suggested caption (hook, "Spec or wreck? 👇", key facts, sources, image credit, 3–5
-  hashtags) — SUPERSEDED (owner 2026-11-17, "just do whatever easy"): the SCRIPT SESSION cross-posts every Short as an Instagram
-  Reel itself right after the YouTube publish (vidiq_instagram_publish_reel with the YouTube link, AI label on, no
-  per-post question). The Instagram session does image content only.
+- Script session cross-posts every Short as an Instagram Reel itself right after the YouTube publish
+  (vidiq_instagram_publish_reel with the YouTube link, AI label on, no per-post question).
+- Instagram session (session_01L2u12DRCGMHdb1CMdfRUan): still-image posts only, 1–2 a day (INSTAGRAM_POSTS.md).
+
+## Cleanup of the repo (token rule)
+- After a video is published and its first stats check is done, delete scripts/<slug>/ and its keyword JSON from the
+  repo (the script stays in Drive › 01_scripts; the record stays in state/videos.json).

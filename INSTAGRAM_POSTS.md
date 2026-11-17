@@ -7,7 +7,7 @@ all videos and the script session cross-posts them as Reels. This session posts 
 posts, carousels and photo collages.
 
 ## Volume and timing
-- 1–5 image posts per day at random times (vary 09:00–23:00 in the audience's main time zones, at least 2 h apart).
+- 1–2 image posts per day (owner 2026-11-17, to save tokens), times 09:00–23:00 in the audience's main time zones, ≥ 3 h apart.
 - Each day: prepare the NEXT day's posts as vidIQ drafts with a publishAt each, show the owner one summary
   (images + captions + times), and publish only after the owner approves ("post them"). vidIQ requires the owner's
   approval for every post; one approval can cover the whole day's batch.
@@ -27,6 +27,11 @@ posts, carousels and photo collages.
   listed at the end of the caption. Never invent prices/specs.
 - Images: official press/store images only (credit in caption). No other creators' content, no Getty, no AI-made fake
   product photos.
+
+## Template + checking (token rule, owner 2026-11-17)
+- Build ONE reusable slide template (render/ig_template.html or .py) once; each post only fills in text, image and object.
+- Check ONE tiled preview of the finished carousel (all slides side by side, small) — no screenshot per slide.
+- Fresh chat per daily batch; read only CLAUDE.md + this file.
 
 ## Caption
 - Line 1: hook (≤ 125 chars, shows before "more"). Line 2: "Spec or wreck? 👇". Then 1–2 short fact lines, sources, image
