@@ -38,3 +38,10 @@ big files from Drive, so finished videos travel by git:
 - Script session: `git fetch origin handoff/<slug>`, verify sha256, QA with watch-video, upload to YouTube, then
   delete the remote branch (`git push origin --delete handoff/<slug>`) and local copies. Script stays in Drive.
 - qa.md / small text can still go to Drive › 02_ready_to_upload › <slug>/ as before.
+
+## Instagram (owner 2026-11-17)
+- The Instagram session (session_01L2u12DRCGMHdb1CMdfRUan) owns ALL Instagram posting (image posts, carousels, collages,
+  Reels) and plans its own daily mix (state/instagram_plan.md; brief in INSTAGRAM_POSTS.md).
+- Script session: right after every successful YouTube publish, send the Instagram session one message with the
+  YouTube link, title and a suggested caption (hook, "Spec or wreck? 👇", key facts, sources, image credit, 3–5
+  hashtags) so it cross-posts the Short as a Reel. The script session never posts to Instagram itself.
