@@ -26,6 +26,8 @@ Benchmark for Shorts = Techy or Not (measured: state/competitor_watch/). Long vi
 - Frame 1: product ≥ 60 % width + ≤ 3-word huge title + one accent mark.
 - Layout = Techy or Not's default full-frame composition (owner 2026-11-17: NO platform safe-zone rules; the video also
   goes to Instagram). Rule instead: NOTHING OVERLAPS — text, product, objects and watermark never touch each other.
+  Side margin: every element stays ≥ 54 px from the left and right edges at 1080 w (5 %), so text never runs off the
+  frame (sow004 had a 1,086 px headline on a 1,080 frame). Shrink the text to fit; never let it touch an edge.
 
 ## 3. Show, don't write (Mayer: coherence, signaling, redundancy, contiguity, segmenting)
 - One idea per scene; the ONE key thing gets the callout ring/underline/colour.
