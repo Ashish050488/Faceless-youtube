@@ -1,5 +1,10 @@
 # Learnings (newest first; only what still changes decisions — older notes are in git history)
 
+## 2026-11-17 — competitors (API, state/competitor_watch/competitors.md)
+- Tags barely matter (a 72K-sub faceless channel uses none and hit 3.1M). Titles + retention + frequency do.
+- TEST NEXT (one at a time, weekly review decides): (1) shorter Shorts 45–60 s vs our 82 s; (2) one CAPS word +
+  one emoji in titles (only when the claim is true — no misleading titles).
+
 ## 2026-11-17 (video session)
 - One kit renders every Short: render/kit (cues.kit.json + plan.json per video); build steps in render/README.md.
   The kit port of sow004 matched the shipped timeline exactly, and the render matched at 55 dB PSNR.
