@@ -1,6 +1,6 @@
 # Instagram content plan — Spec or Wreck (@viral_lab0 → @specorwreck)
 
-Owner 2026-11-17 (updated): 3 still-image posts per day, NO videos/Reels (the script session cross-posts Shorts).
+Owner 2026-11-17 (updated): 5 still-image posts per day (10:00–23:59 IST), NO videos/Reels (the script session cross-posts Shorts).
 Topics = ALL hot tech news, not only gadgets: AI company updates, IPOs, CEO exits, launches, regulation, big deals.
 At each posting slot, search the hottest tech story of that hour, verify it, build the post, then publish.
 Music: the API can't attach Instagram music to image posts. Flag posts that would suit a track; the owner adds it in the app.
@@ -23,12 +23,14 @@ Brand and fact rules: INSTAGRAM_POSTS.md, state/brand.md, PRODUCTION_SPEC.md §1
 | HERO | Single hero photo: product full size on its own flat colour, one number | 1080×1350 | Striking design, one big spec |
 | VS | Two-product comparison carousel (3–5 slides) | 1080×1350 | New launch vs last year's model or main rival |
 
-## Daily slots (UTC, scheduled task fires into the Instagram session)
-| Slot | UTC | US ET | India IST |
-|---|---|---|---|
-| 1 | 12:13 | 07:13 | 17:43 |
-| 2 | 18:13 | 13:13 | 23:43 |
-| 3 | 23:13 | 18:13 | 04:43 (+1) |
+## Daily slots (IST, owner 2026-11-17; 5 scheduled tasks fire into the Instagram session)
+| Slot | IST | UTC |
+|---|---|---|
+| 1 | 10:17 | 04:47 |
+| 2 | 13:43 | 08:13 |
+| 3 | 17:11 | 11:41 |
+| 4 | 20:37 | 15:07 |
+| 5 | 23:23 | 17:53 |
 Each slot: pick ONE format (CAR / COL / NEWS / HERO / VS) that fits the story; vary it so no format runs 3 slots in a row.
 After 3 weeks, re-weight formats and slot times by saves + shares per reach (vidiq_instagram_owner_insights).
 
