@@ -1,5 +1,13 @@
 # Learnings (newest first)
 
+## 2026-11-17 — strategy split (owner)
+- SHORTS: copy what Techy or Not has proven for retention (format, pacing, layout, flat backgrounds) and do it with more detail.
+- LONG VIDEOS: our own approach later — his long videos flop (643–2,962 views), so we'll build our own long-form format.
+- sow001 compared frame-by-frame vs benchmark before building sow002 (state/competitor_watch/sow001_vs_techy.md):
+  ours had 1 hard cut vs 8–11, constant drift (never calm > 0.4 s vs his 2.4–4.4 s holds), small left-pinned layout,
+  wrong values flashing in counters, muddy blurred backgrounds. Fix list = PRODUCTION_SPEC §14.
+- Lesson for me: compare first, build after — never start the next video before the last one is analysed.
+
 ## 2026-11-16 — renamed to "Spec or Wreck"
 - Owner: "The Catch" is used by multiple channels. Checked via API: @specorwreck free, and a channel search for
   "Spec or Wreck" returns no channel with that name (closest: "Wreck Spec Rebuilds", cars). Also free handles:
