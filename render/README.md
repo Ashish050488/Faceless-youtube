@@ -29,7 +29,7 @@ Work dir: `$W = <scratchpad>/<slug>`. Delete the previous video's work dir first
    - Copy the pattern of render/kit/examples/sow004.*.json. Never write renderer code per video. If an object is
      missing, add a small component file to render/kit/components/ and one line to DRAWERS in render.js.
 4. **Code QA:** `render/kit/build.sh check <slug> $W` until PASS. It checks:
-   - overlaps between text, products, 2-D objects and the watermark;
+   - overlaps between text, products, 2-D objects and the watermark, and the 54 px side margin;
    - contrast;
    - every on-screen number against factsheet.md;
    - counter holds ≥ 1.2 s, headlines ≤ 4 s, and the number of cuts.

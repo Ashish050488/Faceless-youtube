@@ -6,7 +6,10 @@ module.exports = (K, env) => {
 const { FPS, IMG, MAP } = env, FR = 1 / FPS;
 const { spr } = K;
 function label(ctx, text, x, y, px, col, { align = 'center', a = 1, unit = null } = {}) { // big label next to its part
-  ctx.save(); ctx.globalAlpha *= a; font(ctx, px, 'head'); ctx.fillStyle = col; ctx.textBaseline = 'alphabetic'; ctx.textAlign = align; ctx.fillText(text, x, y); ctx.restore(); ctx.textAlign = 'left';
+  ctx.save(); ctx.globalAlpha *= a; font(ctx, px, 'head');
+  const room = align === 'center' ? 2 * Math.min(x - 54, 1026 - x) : align === 'right' ? x - 54 : 1026 - x; // side margin 54 px: shrink to fit
+  while (px > 24 && ctx.measureText(text).width > room) { px -= 2; font(ctx, px, 'head'); }
+  ctx.fillStyle = col; ctx.textBaseline = 'alphabetic'; ctx.textAlign = align; ctx.fillText(text, x, y); ctx.restore(); ctx.textAlign = 'left';
 }
 function headline(ctx, text, lt, dark, { t0 = 0.05, y = 300, acc = [], col = null, strike = -1, fit = true } = {}) { dark = false;
   if (!text) return null;

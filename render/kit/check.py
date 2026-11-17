@@ -3,8 +3,8 @@
     python render/kit/check.py <work_dir> <factsheet.md> [final.mp4]
 
 Reads <work_dir>/check.json (from `render.js ... --check`) and counters.json / timeline.json.
-1. issues found by render.js: OverlapCheck (text, products, 2-D objects and the watermark never touch), text off
-   frame, contrast < 3 for ≥ 60 px text, < 4.5 below. No safe-zone rules (owner 2026-11-17, full-frame layout)
+1. issues found by render.js: OverlapCheck (text, products, 2-D objects and the watermark never touch), side margin
+   (every element ≥ 54 px from the left/right edge at 1080 w; labels and headlines auto-shrink to fit), contrast < 3 for ≥ 60 px text, < 4.5 below. No safe-zone rules (owner 2026-11-17, full-frame layout)
 2. every on-screen number string-matches factsheet.md (digits compared with separators removed; "1100 NITS" ok
    for "1,100 nits"; a rounded display of a decimal factsheet value also passes: "27 h" for 27.08); years and "1 kg" scale marks need to be in the factsheet too, or they FAIL
 3. counters hold ≥ 1.2 s; headlines ≤ 4 s; hard cuts 8–12 per 75 s; real-image screen time % (info)

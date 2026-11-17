@@ -29,7 +29,8 @@ watermark included.
 - No safe-zone rules (owner 2026-11-17): full-frame layout, also for Instagram.
 
 **check.py fails on:**
-- any overlap, or text off frame;
+- any overlap, or any element closer than 54 px to the left/right edge (side margin; labels and headlines shrink to
+  fit automatically);
 - contrast below 3 (text ≥ 60 px) or below 4.5 (smaller text);
 - an on-screen number missing from factsheet.md (a rounded decimal display passes: "27 h" for 27.08);
 - a counter hold under 1.2 s, or a headline on screen over 4 s;
