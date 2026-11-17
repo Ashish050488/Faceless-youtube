@@ -1,0 +1,27 @@
+{
+ "id":"sow004-lenovo-thinkbook-14x","format":"short","export":"720x1280 H.264 CRF 24 maxrate 2M ≤20 MB (§13)",
+ "rules":"PRODUCTION_SPEC §12–§18; flat LIGHT backgrounds only (no black); whole real products; 1–3 words; 2-D objects next to the part; watermark below content (box y 1240–1340); logo v5 end card; audio LOCKED (narrate.py af_heart 0.795 0.30 0.42 + mix.sh).",
+ "palette_for_this_video":"paper #FAF8F5 main; cool-grey tint #EEF0F4 for the laptop hero scenes (matches Lenovo's grey aluminium); lavender #ECE8FB for the screen/HDR beat; blush #FBE7E2 for THE CATCH; marigold object fills; ember accent text",
+ "scenes":[
+  {"n":1,"anchor":"less than a kilo","bg":"cool grey","image":"E 3/4 hero, open, centred, 70% width","object":"minimal balance scale under it; needle settles below a '1 kg' mark; '990 g' label on the scale","text":"990 g","sfx":"tick + soft settle","note":"frame 1 must read instantly: laptop + 990 g visible"},
+  {"n":2,"anchor":"twenty-seven hours","bg":"cool grey","image":"same hero","object":"battery cell beside the laptop fills to full; clock ring sweeps to 27","text":"27 HOURS","sfx":"fill ticks"},
+  {"n":3,"anchor":"ThinkBook fourteen X","bg":"paper","image":"A open front, centred","object":"none (hero)","text":"THINKBOOK 14X","sfx":"whoosh","transition":"hard cut"},
+  {"n":4,"anchor":"going global","bg":"paper","image":"A front, smaller, above","object":"REAL world map (Natural Earth 1:110m, Robinson), pins pop in on US, Europe, India (real centroids)","text":"GLOBAL","sfx":"pop ×3"},
+  {"n":5,"anchor":"nine hundred ninety grams","bg":"cool grey","image":"B closed side profile, horizontal","object":"scale again from scene 1 (callback) with '990 g'","text":"990 g","sfx":"tick","transition":"hard cut"},
+  {"n":6,"anchor":"under sixteen millimetres","bg":"cool grey","image":"B side profile","object":"calipers clamp the thickness; '15.6 mm' label on the caliper bar (spatial contiguity)","text":"< 16 mm","sfx":"click"},
+  {"n":7,"anchor":"hundred and twenty hertz","bg":"lavender","image":"A front with screen on","object":"smooth motion lines sweep across the screen; '120 Hz' tag at the screen edge","text":"120 Hz","sfx":"swish","transition":"hard flip"},
+  {"n":8,"anchor":"eleven hundred nits","bg":"lavender","image":"A front","object":"sun icon above the screen with rays growing; number rolls 0→1,100 (0.33 s, hold ≥1.2 s)","text":"1,100 NITS","sfx":"riser + tick"},
+  {"n":9,"anchor":"twenty gigabits","bg":"paper","image":"C port side close-up (zoom to the USB-C ports on the real photo)","object":"marigold callout ring on the USB-C port; data dots stream out","text":"20 Gbps","sfx":"zip","transition":"zoom to detail"},
+  {"n":10,"anchor":"sixty-five watt-hour","bg":"paper","image":"E hero","object":"battery cell labelled '65 Wh'","text":"65 Wh","sfx":"click"},
+  {"n":11,"anchor":"video playback","bg":"paper","image":"A front, screen shows a play-icon graphic (ours)","object":"play icon on screen; clock ring to 27 h","text":"27 H VIDEO","sfx":"tick"},
+  {"n":12,"anchor":"there's a catch","bg":"blush","image":"E hero, slightly desaturated","object":"wreck-red THE CATCH stamp drop, 3 px shake","text":"THE CATCH","sfx":"thud","transition":"hard flip"},
+  {"n":13,"anchor":"low brightness","bg":"blush","image":"A front, screen dims","object":"brightness slider slides down to low","text":"LOW BRIGHTNESS","sfx":"slide"},
+  {"n":14,"anchor":"sixteen and a half hours","bg":"blush","image":"A front","object":"two bars side by side: '27 h' (video) vs '16.4 h' (work test), to scale","text":"16.5 H","sfx":"down-tick"},
+  {"n":15,"anchor":"only for HDR","bg":"blush","image":"A front","object":"sun icon shrinks; number rolls 1,100→500","text":"500 NITS","sfx":"down-sweep"},
+  {"n":16,"anchor":"nine hundred ninety-nine dollars","bg":"paper","image":"E hero","object":"price tag swings from the hinge; calendar flips to JAN 2027 beside it","text":"$999 · JAN","sfx":"tag swing + page flip","transition":"hard cut"},
+  {"n":17,"anchor":"it's a spec","bg":"paper","image":"E hero","object":"logo v5 wordmark, k snaps upright (SPEC)","text":"SPEC","sfx":"click"},
+  {"n":18,"anchor":"wait","bg":"paper","image":"hero dims","object":"hourglass flips","text":"WAIT","sfx":"soft"},
+  {"n":19,"anchor":"still a big deal","bg":"cool grey","image":"E hero exactly as frame 1","object":"scale + 990 g as frame 1 (seamless loop)","text":"990 g","sfx":"riser tail","transition":"match frame 1"}
+ ],
+ "thumbnail":"1280×720: whole laptop open, 3/4 angle, centred-right; '27 HOURS' huge (ember/ink) left; small '990 g' tag; flat cool-grey background; readable at 168×94"
+}

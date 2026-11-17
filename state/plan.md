@@ -6,3 +6,4 @@
 Topic rule: last 1–12 h, BIG brand with good official images, physical product, 2-source facts, API tags.
 | 3 | sow003-xiaomi-flashlight | Xiaomi Mijia flashlight, new Sand Gold (2026-11-16/17) | Short | scripted → video chat |
 | next | huawei-osta-o1-pro | Huawei OSTA O1 Pro wide phone — launch 20 Nov (price/specs confirmed then) | Short | planned for launch day |
+| 4 | sow004-lenovo-thinkbook-14x | Lenovo ThinkBook 14x G2 — going global (990 g, 27 h claim) | Short | scripted → video chat |

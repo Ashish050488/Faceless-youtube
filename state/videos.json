@@ -41,5 +41,14 @@
   "status": "cancelled by owner 2026-11-17 (China-only; wants international brands)",
   "scripted_at": "2026-11-17T08:30Z",
   "hypothesis": "Cheap big-brand gadget + $ + number title performs above sow002."
+ },
+ {
+  "id": null,
+  "slug": "sow004-lenovo-thinkbook-14x",
+  "title": "Lenovo Made a 990 g Laptop That Claims 27 Hours",
+  "format": "short",
+  "status": "scripted",
+  "scripted_at": "2026-11-17T08:55Z",
+  "hypothesis": "Global big brand + 'Made' + two numbers in title; honest battery catch drives comments."
  }
 ]
