@@ -38,7 +38,7 @@ monetisation guidance regularly (state/policy_notes.md) and follow it; nothing r
 
 ## Video handoff (2026-11-17): Drive caps the video session's uploads at 3 MB and the script session can't pull
 big files from Drive, so finished videos travel by git:
-- Video session: export per PRODUCTION_SPEC §13 (720×1280, ≤ 20 MB), then force-push an ORPHAN branch
+- Video session: export per PRODUCTION_SPEC §6 (1080×1920, ≤ 20 MB), then force-push an ORPHAN branch
   `handoff/<slug>` containing only: video.mp4, thumbnail.jpg (1280×720), cover.jpg (1080×1920 frame), captions.srt,
   qa.md, sha256.txt. No code on that branch. Code still goes to main only.
 - Script session: `git fetch origin handoff/<slug>`, verify sha256, upload to YouTube, then

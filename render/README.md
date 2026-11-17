@@ -36,7 +36,7 @@ Work dir: `$W = <scratchpad>/<slug>`. Delete the previous video's work dir first
 5. **Look once:** `render/kit/build.sh stills <slug> $W` makes ONE contact sheet, `$W/sheet.jpg`. Fix the cues and
    repeat steps 4–5. Only look at the scenes you changed.
 6. **Video:** `render/kit/build.sh video <slug> $W`. It produces frames, room tone, the music bed and SFX, the mix,
-   the 720×1280 export, cover, thumbnail, captions, sha256 and check.txt.
+   the native 1080×1920 export (CRF 19, §6), cover, thumbnail, captions, sha256 and check.txt.
    - Use `REUSE_FRAMES=1` to redo only the audio and export.
 7. **Handoff:** write qa.md from check.txt plus measure_timing, then push the out/ files to `handoff/<slug>`
    (WORKFLOW.md). Send one message to the script session.
