@@ -1,23 +1,13 @@
-// SoW Nº004 — Lenovo ThinkBook 14x (sow002 engine). PRODUCTION_SPEC §12–15: flat solid backgrounds, centred & big, hard cuts on beats,
-// motion on the spoken beat then calm, 1–3 words per scene, flat 2-D objects next to REAL product images, no captions.
-//   node render/sow002.js <work_dir> [--stills cues|t1,t2,...] [--fps 30]
-// work_dir: words.json (meta/align_words.py), assets/{cut_*.png,card_*.jpg}, wm_light.png, wm_dark.png
+// Spec or Wreck render kit — shared drawing + motion components (PRODUCTION_SPEC §8).
+// Generated from the tested sow002/sow004 renderers; light flat backgrounds only (all helpers draw light-mode).
 const { createCanvas } = require('@napi-rs/canvas');
-const fs = require('fs');
-const path = require('path');
-const { spawn } = require('child_process');
-const L = require('./lib');
+const L = require('../lib');
 const { C, W, H, clamp, lerp, easeOut, easeInOut, prog, rr, font } = L;
-
-const work = process.argv[2];
-const args = process.argv.slice(3);
-const FPS = args.includes('--fps') ? Number(args[args.indexOf('--fps') + 1]) : 30;
-const stillsArg = args.includes('--stills') ? args[args.indexOf('--stills') + 1] : null;
-L.registerFonts(path.join(__dirname, 'fonts'));
+module.exports = function makeKit(env) {
+const { FPS, IMG, MAP, words } = env;
 const FR = 1 / FPS;
-const words = JSON.parse(fs.readFileSync(path.join(work, 'words.json')));
-const DURATION = Number(fs.readFileSync(path.join(work, 'voice_seconds.txt'), 'utf8'));
-
+let SCR = env.SCR || [[0.1, 0.02], [0.4, 0.02], [0.53, 0.43], [0.22, 0.39]];   // screen quad (fractions of a product image)
+const COOL = '#EEF0F4';
 // ---------- motion ----------
 const spr = (t, k = 15, z = 0.62) => t <= 0 ? 0 : 1 - Math.exp(-z * k * t) * (Math.cos(k * Math.sqrt(1 - z * z) * t) + z / Math.sqrt(1 - z * z) * Math.sin(k * Math.sqrt(1 - z * z) * t));
 const easeIn = t => { t = clamp(t); return t * t * t; };
@@ -27,15 +17,15 @@ const DRAW = 12 * FR;                                        // stroke draw-on 1
 // ---------- words ----------
 const nw = s => s.toLowerCase().replace(/[^a-z0-9]/g, '');
 function wIdx(token, from) { for (let i = from; i < words.length; i++) if (nw(words[i].w).startsWith(nw(token))) return i; throw new Error('word ' + token + ' after ' + from); }
-let CUR = null;
-const T = (token, nth = 0) => { let i = CUR.w0; for (let n = 0; n <= nth; n++) i = wIdx(token, n === 0 ? i : i + 1); return words[i].start - CUR.start; };
-const TE = (token, nth = 0) => { let i = CUR.w0; for (let n = 0; n <= nth; n++) i = wIdx(token, n === 0 ? i : i + 1); return words[i].end - CUR.start; };
+
+const _T_unused = (token, nth = 0) => { let i = CUR.w0; for (let n = 0; n <= nth; n++) i = wIdx(token, n === 0 ? i : i + 1); return words[i].start - CUR.start; };
+const _TE_unused = (token, nth = 0) => { let i = CUR.w0; for (let n = 0; n <= nth; n++) i = wIdx(token, n === 0 ? i : i + 1); return words[i].end - CUR.start; };
 
 // ---------- assets ----------
-const IMG = {};
+
 const SHADOW = createCanvas(400, 90);
 { const x = SHADOW.getContext('2d'); x.filter = 'blur(16px)'; x.fillStyle = 'rgba(21,19,18,0.5)'; x.beginPath(); x.ellipse(200, 45, 160, 18, 0, 0, 7); x.fill(); }
-async function loadAssets() {
+async function _unusedLoadAssets() {
   const d = path.join(work, 'assets');
   for (const f of fs.readdirSync(d)) if (/\.(png|jpg)$/.test(f)) IMG[f.replace(/\.\w+$/, '')] = await L.loadImage(path.join(d, f));
   IMG.wm_light = await L.loadImage(path.join(work, 'wm_light.png'));
@@ -87,6 +77,7 @@ function headline(ctx, text, lt, dark, { t0 = 0.05, y = 300, acc = [], col = nul
   font(ctx, px, 'head');
   let rows = [ws];
   if (ctx.measureText(text).width > 920) { const mid = Math.ceil(ws.length / 2); rows = [ws.slice(0, mid), ws.slice(mid)]; }
+  while (px > 120 && Math.max(...rows.map(r => ctx.measureText(r.join(' ')).width)) > 940) { px -= 4; font(ctx, px, 'head'); } // every row fits
   const lh = px * 0.92; let k = 0; const boxes = [];
   rows.forEach((r, ri) => {
     const rowW = ctx.measureText(r.join(' ')).width; let x = 540 - rowW / 2;
@@ -246,16 +237,6 @@ function wordmark(ctx, cx, cy, px, tip, dark, a = 1) { dark = false; font(ctx, p
   for (const [t, col] of parts) { ctx.fillStyle = col; ctx.fillText(t, x, cy); x += ctx.measureText(t).width; }
   ctx.save(); ctx.translate(x + kW, cy + 4 * tip); ctx.rotate(18 * tip * Math.PI / 180); ctx.fillStyle = dark ? C.paper : C.ink; ctx.fillText('k', -kW, 0); ctx.restore(); ctx.restore(); }
 
-// ======================= SCENES (sow004) =======================
-const LAV = '#ECE8FB', BLUSH = '#FBE7E2', COOL = '#EEF0F4';
-const S = [];
-function scene(o) { S.push(o); }
-const MAP = JSON.parse(fs.readFileSync(path.join(work, 'assets', 'map_robinson.json')));
-const BOTTOM = 1240;                                   // all content ends here (watermark box below)
-// screen quad of cut_hero (fractions of the image) for on-screen graphics
-const SCR = [[0.098, 0.012], [0.395, 0.012], [0.527, 0.43], [0.222, 0.39]];
-function heroAt(ctx, cx, cy, w, lt, o = {}) { return product(ctx, IMG.cut_hero, cx, cy, w, { lt, t0: 0, seed: 0.4, ...o }); }
-function screenPath(ctx, r) { ctx.beginPath(); SCR.forEach(([u, v], i) => { const x = r.x0 + u * r.w, y = r.y0 + v * r.h; i ? ctx.lineTo(x, y) : ctx.moveTo(x, y); }); ctx.closePath(); }
 function label(ctx, text, x, y, px, col, { align = 'center', a = 1, unit = null } = {}) { // big label next to its part
   ctx.save(); ctx.globalAlpha *= a; font(ctx, px, 'head'); ctx.fillStyle = col; ctx.textBaseline = 'alphabetic'; ctx.textAlign = align; ctx.fillText(text, x, y); ctx.restore(); ctx.textAlign = 'left';
 }
@@ -321,190 +302,17 @@ function slider(ctx, cx, y, w, lt, t0, from, to) { const p = easeInOut(prog(lt, 
   ctx.strokeStyle = C.mari; ctx.beginPath(); ctx.moveTo(cx - w / 2, y); ctx.lineTo(cx - w / 2 + w * v, y); ctx.stroke();
   ctx.beginPath(); ctx.arc(cx - w / 2 + w * v, y, 30, 0, Math.PI * 2); ctx.fillStyle = '#fff'; ctx.fill(); ctx.strokeStyle = C.ink; ctx.lineWidth = 7; ctx.stroke();
   sun(ctx, cx - w / 2 - 70, y, 16, lt + 9, 0, 0.4); sun(ctx, cx + w / 2 + 74, y, 22, lt + 9, 0, 1); ctx.restore(); }
-function bars(ctx, cx, base, lt, t0, t1) { // to scale: 27.08 h vs 16.42 h (PSREF)
-  const H = 520, v = [[27.08, '27 h', 'video', C.mari, t0], [16.42, '16.4 h', 'work test', C.wreck, t1]];
-  v.forEach(([val, txt, sub, col, ts], i) => { const p = easeOut(prog(lt, ts, ts + 0.45)), h = H * val / 27.08 * p, x = cx - 200 + i * 240;
-    ctx.save(); rr(ctx, x, base - h, 160, Math.max(1, h), 22); ctx.fillStyle = col; ctx.fill(); ctx.strokeStyle = C.ink; ctx.lineWidth = 7; ctx.stroke();
-    if (p > 0.95) { label(ctx, txt, x + 80, base - h - 24, 64, C.ink); font(ctx, 40, 'label'); ctx.fillStyle = C.stone; ctx.textAlign = 'center'; ctx.fillText(sub, x + 80, base + 52); ctx.textAlign = 'left'; } ctx.restore(); });
+function bars(ctx, cx, base, lt, items, Hmax = 520) { // to scale: heights proportional to value (real data)
+  const vmax = Math.max(...items.map(b => b.value)), n = items.length, gap = 80, bw = 160, x0 = cx - (n * bw + (n - 1) * gap) / 2;
+  items.forEach((b, i) => { const p = easeOut(prog(lt, b.t0, b.t0 + 0.45)), h = Hmax * b.value / vmax * p, x = x0 + i * (bw + gap);
+    ctx.save(); rr(ctx, x, base - h, bw, Math.max(1, h), 22); ctx.fillStyle = b.col || C.mari; ctx.fill(); ctx.strokeStyle = C.ink; ctx.lineWidth = 7; ctx.stroke();
+    if (p > 0.95) { label(ctx, b.label, x + bw / 2, base - h - 24, 64, C.ink); if (b.sub) { font(ctx, 40, 'label'); ctx.fillStyle = C.ink; ctx.textAlign = 'center'; ctx.fillText(b.sub, x + bw / 2, base + 52); ctx.textAlign = 'left'; } } ctx.restore(); });
 }
 function calendar(ctx, cx, cy, lt, t0, mon, yr) { const p = easeInOut(prog(lt, t0, t0 + 0.4)); const draw = (m, y, sy) => { ctx.save(); ctx.translate(cx, cy); ctx.scale(1, Math.max(0.001, sy)); ctx.shadowColor = 'rgba(21,19,18,0.16)'; ctx.shadowBlur = 24; ctx.shadowOffsetY = 8; rr(ctx, -140, -120, 280, 240, 30); ctx.fillStyle = '#fff'; ctx.fill(); ctx.shadowColor = 'transparent'; ctx.save(); rr(ctx, -140, -120, 280, 240, 30); ctx.clip(); ctx.fillStyle = C.wreck; ctx.fillRect(-140, -120, 280, 64); ctx.restore(); ctx.strokeStyle = C.ink; ctx.lineWidth = 7; rr(ctx, -140, -120, 280, 240, 30); ctx.stroke(); font(ctx, 96, 'head'); ctx.fillStyle = C.ink; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(m, 0, 36); font(ctx, 36, 'bold'); ctx.fillStyle = '#fff'; ctx.fillText(y, 0, -88); ctx.restore(); ctx.textAlign = 'left'; };
   if (p < 0.5) draw('NOV', '2026', 1 - p * 2); else draw(mon, yr, (p - 0.5) * 2); }
 
-// ---- the 19 shots (cues.json) ----
-const hookComp = (ctx, lt, title = true) => { // frame 1: laptop ≥ 60 % width + "990 g" readable at once + one accent (the dial)
-  const r = heroAt(ctx, 540, 780, 760, lt + 9, { shadow: false });
-  const bottom = dialScale(ctx, 540, r.y0 + r.h + 8, 720, lt + 9, 0, 990);
-  if (title) { font(ctx, 200, 'head'); ctx.fillStyle = C.ember; ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic'; ctx.fillText('990 g', 540, 440); ctx.textAlign = 'left'; }
-};
-scene({ line: 0, bg: 'cool', real: true, img: 'cut_hero', draw: (ctx, lt) => { hookComp(ctx, lt); },
-  sfx: () => [[T('kilo') - 0.1, 'tick', 0.6]], counters: () => [] });
-scene({ line: 1, xfade: true, bg: 'cool', real: true, img: 'cut_hero', draw: (ctx, lt) => {
-  heroAt(ctx, 540, 1015, 640, lt, { push: lt / 3 });
-  ctx.save(); ctx.translate(380, 690); ctx.scale(0.75, 0.75); battery(ctx, 0, 0, lt, 7, T('twenty') - 0.2, false, { max: 7 }); ctx.restore();
-  clockRing(ctx, 790, 690, 80, lt, T('twenty') - 0.1, 27);
-  counter(ctx, 27, 0, lt, T('twenty') - 0.05, 540, 470, 230, C.ember, { comma: false, unit: 'HOURS', dark: false });
-}, counters: () => [{ name: '27 hours', t: T('twenty') + 0.28, hold: CUR.dur }], sfx: () => { const a = T('twenty') - 0.2; return [...[0, 1, 2, 3, 4, 5, 6].map(i => [a + i * 0.11, 'blip', 0.3]), [T('twenty') + 0.28, 'tick', 0.8]]; } });
-scene({ line: 2, bg: 'paper', real: true, img: 'cut_lid', draw: (ctx, lt, d) => {
-  if (lt < T('going') - 0.1) { product(ctx, IMG.cut_lid, 540, 860, 640, { lt, t0: 0, seed: 1.1, push: lt / d }); bigWord(ctx, 'THINKBOOK 14X', lt, T('thinkbook') - 0.1); return; }
-  const e = easeInOut(prog(lt, T('going') - 0.1, T('going') + 0.3));
-  product(ctx, IMG.cut_lid, 540, lerp(860, 1102, e), lerp(640, 270, e), { lt, t0: 0, seed: 1.1 });
-  worldMap(ctx, 540, 770, 900, lt, T('going') - 0.05, [T('global') - 0.05, T('global') + 0.07, T('global') + 0.19]);
-  bigWord(ctx, 'GLOBAL', lt, T('global') - 0.1, C.ember, 290);
-}, sfx: () => [[0, 'whoosh', 0.4], [T('global') - 0.05, 'pin', 0.5], [T('global') + 0.07, 'pin', 0.45], [T('global') + 0.19, 'pin', 0.45]] });
-scene({ line: 3, bg: 'cool', real: true, img: 'cut_side_r', draw: (ctx, lt) => {
-  const im = IMG.cut_side_r, w = 820, h = w * im.height / im.width;
-  product(ctx, im, 540, 760, w, { lt, t0: 0, seed: 2.2, shadow: false });
-  dialScale(ctx, 540, 760 + h / 2 + 6, 760, lt, 0.05, 990);
-  counter(ctx, 990, 0, lt, T('nine') - 0.05, 540, 470, 230, C.ember, { comma: false, unit: 'g', dark: false });
-}, counters: () => [{ name: '990 g (side)', t: T('nine') + 0.28, hold: CUR.dur }], sfx: () => [[0.05, 'pop', 0.3], [T('nine') + 0.28, 'tick', 0.8]] });
-scene({ line: 3, from: 'under', xfade: true, bg: 'cool', real: true, img: 'cut_side_l', draw: (ctx, lt) => {
-  const im = IMG.cut_side_l, w = 860, h = w * im.height / im.width, cy = 900;
-  const r = product(ctx, im, 540, cy, w, { lt, t0: 0, seed: 0.8 });
-  // calipers clamp the THICKNESS (vertical): jaws above and below the right end of the body
-  const xr = r.x0 + r.w * 0.86, top = r.y0, bot = r.y0 + r.h, p = prog(lt, 0.05, 0.05 + DRAW), c = easeOut(prog(lt, 0.05 + DRAW, 0.05 + DRAW + 0.35)), gap = lerp(90, 0, c);
-  stroked(ctx, () => { ctx.moveTo(xr + 120, top - 160); ctx.lineTo(xr + 120, bot + 160); }, 400, p, { lw: 12, col: C.ink });
-  stroked(ctx, () => { ctx.moveTo(xr + 120, top - 130 - gap); ctx.lineTo(xr - 40, top - 130 - gap); ctx.lineTo(xr - 40, top - gap); }, 300, p, { lw: 12, col: C.ink });
-  stroked(ctx, () => { ctx.moveTo(xr + 120, bot + 130 + gap); ctx.lineTo(xr - 40, bot + 130 + gap); ctx.lineTo(xr - 40, bot + gap); }, 300, p, { lw: 12, col: C.ink });
-  if (c >= 1) { label(ctx, '15.6 mm', xr - 190, top - 190, 70, C.ember, { align: 'center' }); }
-  bigWord(ctx, '< 16 mm', lt, T('sixteen') - 0.1, C.ink, 300);
-}, sfx: () => [[0.05 + DRAW, 'click', 0.6], [0.05 + DRAW + 0.35, 'clamp', 0.7]] });
-scene({ line: 4, bg: 'lav', real: true, img: 'cut_hero', draw: (ctx, lt, d) => {
-  const r = heroAt(ctx, 540, 900, 760, lt, { push: lt / d });
-  motionLines(ctx, r, lt, T('hundred') - 0.1);
-  if (lt > T('hertz') - 0.2) { const e = spr(lt - T('hertz') + 0.2, 16); ctx.save(); ctx.globalAlpha = clamp(e * 1.4); const x = r.x0 + r.w * 0.47, y = r.y0 - 10; pill2(ctx, x - 20, y - 70, 300, 104, C.ink); label(ctx, '120 Hz', x + 130, y + 2, 64, C.mari); ctx.restore(); }
-  bigWord(ctx, 'OLED', lt, T('oled') - 0.1, C.ink, 300);
-}, sfx: () => [[T('hundred') - 0.1, 'swish', 0.5], [T('hertz') - 0.2, 'pop', 0.4]] });
-scene({ line: 5, xfade: true, bg: 'lav', real: true, img: 'cut_hero', draw: (ctx, lt) => {
-  heroAt(ctx, 540, 1010, 640, lt, {});
-  const t0 = T('eleven') - 0.15; sun(ctx, 540, 680, 44, lt, 0.05, lt < t0 ? 0.3 : 0.3 + 0.7 * easeOut(prog(lt, t0, t0 + 0.35)));
-  if (lt < t0 - 0.04) headline(ctx, 'HDR', lt, false, { t0: T('hdr') - 0.12, y: 300 }); else counter(ctx, 1100, 0, lt, t0, 540, 470, 230, C.ember, { unit: 'NITS', dark: false });
-}, counters: () => [{ name: '1,100 nits', t: T('eleven') - 0.15 + 0.33, hold: CUR.dur }], sfx: () => [[T('hdr') - 0.12, 'pop', 0.3], [T('eleven') - 0.15, 'rise', 0.5], [T('eleven') + 0.18, 'tick', 0.8]] });
-scene({ line: 6, bg: 'paper', real: true, img: 'cut_side_l', draw: (ctx, lt) => {
-  const im = IMG.cut_side_l, w = 820, r = product(ctx, im, 540, 1080, w, { lt, t0: 0, seed: 1.7 });
-  // USB-C ports sit at ~10–19 % of the profile width, ~50 % height
-  const px = 0.145 * im.width, py = 0.5 * im.height, sx = r.x0 + 0.145 * r.w, sy = r.y0 + 0.5 * r.h;
-  const t0 = T('usb') - 0.1, cr = prog(lt, t0, t0 + DRAW);
-  stroked(ctx, () => ctx.arc(sx, sy, 70, -Math.PI / 2, Math.PI * 1.5 - 1e-4), 2 * Math.PI * 70, cr, { lw: 9, col: C.ember });
-  if (lt > t0 + DRAW) { const e = easeOut(prog(lt, t0 + DRAW, t0 + DRAW + 0.3)); ctx.save(); ctx.strokeStyle = C.ink; ctx.lineWidth = 6; ctx.beginPath(); ctx.moveTo(sx + 50 * 0.7, sy - 50 * 0.7); ctx.lineTo(lerp(sx + 35, 540 - 210, e), lerp(sy - 35, 720 + 200, e)); ctx.stroke(); ctx.restore(); }
-  loupe(ctx, im, px, py, im.width * 0.12, 540, 720, 210, lt, t0 + DRAW + 0.15);
-  if (lt > T('twenty') - 0.15) { for (let i = 0; i < 6; i++) { const ph = ((lt - T('twenty')) * 1.8 + i / 6) % 1; ctx.beginPath(); ctx.arc(lerp(760, 900, ph), 720 - 60 + i * 24, 9, 0, Math.PI * 2); ctx.fillStyle = C.mari; ctx.globalAlpha = 1 - ph; ctx.fill(); ctx.globalAlpha = 1; } label(ctx, '20 Gbps', 540, 1000, 92, C.ember, { a: easeOut(prog(lt, T('twenty') - 0.15, T('twenty') + 0.15)) }); }
-}, sfx: () => [[T('usb') - 0.1, 'pop', 0.4], [T('usb') + 0.35, 'whoosh', 0.3], [T('twenty') - 0.15, 'zip', 0.6]] });
-scene({ line: 7, bg: 'paper', real: true, img: 'cut_lid', draw: (ctx, lt) => {
-  product(ctx, IMG.cut_lid, 360, 980, 400, { lt, t0: 0, seed: 2.6 });
-  battery(ctx, 540, 640, lt, 7, T('sixty') - 0.2, false, { max: 7 });
-  if (lt > T('sixty') - 0.1) label(ctx, '65 Wh', 760, 1010, 110, C.ember, { a: easeOut(prog(lt, T('sixty') + 0.1, T('sixty') + 0.4)) });
-}, sfx: () => { const a = T('sixty') - 0.2; return [...[0, 1, 2, 3, 4, 5, 6].map(i => [a + i * 0.11, 'blip', 0.3]), [T('watt'), 'click', 0.5]]; } });
-scene({ line: 7, from: 'lenovo', xfade: true, bg: 'paper', real: true, img: 'cut_hero', draw: (ctx, lt) => {
-  const r = heroAt(ctx, 460, 980, 700, lt, {});
-  playIcon(ctx, r, lt, T('video') - 0.1);
-  clockRing(ctx, 820, 680, 92, lt, T('twenty') - 0.1, 27);
-  counter(ctx, 27, 0, lt, T('twenty') - 0.05, 820, 708, 92, C.ink, { comma: false, unit: 'h', dark: false });
-  bigWord(ctx, 'VIDEO', lt, T('video') - 0.1, C.ember, 300);
-}, counters: () => [{ name: '27 h video', t: T('twenty') + 0.28, hold: CUR.dur }], sfx: () => [[T('twenty') + 0.28, 'tick', 0.7], [T('video') - 0.1, 'pop', 0.4]] });
-scene({ line: 8, bg: 'blush', real: true, img: 'cut_lid', draw: (ctx, lt) => {
-  product(ctx, IMG.cut_lid, 540, 960, 520, { lt: lt + 5, t0: 0, alpha: 1 - 0.55 * clamp(lt / (2 * FR)) });
-  stamp(ctx, 'THE CATCH', 540, 600, prog(lt, 0.1, 0.32), C.wreck, 112);
-  if (lt >= 0.32 && lt < 0.32 + FR) { ctx.fillStyle = 'rgba(255,255,255,0.6)'; ctx.fillRect(0, 0, W, H); }
-}, shakeAt: 0.32, sfx: () => [[0.32, 'thud', 1.0]] });
-scene({ line: 9, bg: 'blush', real: true, img: 'cut_hero', draw: (ctx, lt) => {
-  const r = heroAt(ctx, 540, 1000, 720, lt, {});
-  const t0 = T('low') - 0.2; screenDim(ctx, r, 0.55 * easeInOut(prog(lt, t0, t0 + 0.5)));
-  slider(ctx, 540, 660, 560, lt, t0, 0.9, 0.18);
-  bigWord(ctx, 'LOW BRIGHTNESS', lt, T('low') - 0.1, C.ink, 300);
-}, sfx: () => [[T('low') - 0.2, 'down', 0.5]] });
-scene({ line: 10, bg: 'blush', real: true, img: 'cut_side_r', draw: (ctx, lt) => {
-  product(ctx, IMG.cut_side_r, 540, 1170, 600, { lt, t0: 0, seed: 0.3 });
-  bars(ctx, 540, 1100, lt, 0.1, T('sixteen') - 0.1);
-}, counters: () => [], sfx: () => [[0.1, 'blip', 0.4], [T('sixteen') - 0.1, 'down', 0.6]] });
-scene({ line: 11, xfade: true, bg: 'blush', real: true, img: 'cut_hero', draw: (ctx, lt) => {
-  const r = heroAt(ctx, 540, 1010, 640, lt, {});
-  const tn = T('normally'), tDown = T('five') - 0.45, dimP = easeInOut(prog(lt, tDown, tDown + 0.35));
-  screenDim(ctx, r, 0.45 * dimP); sun(ctx, 540, 650, 44, lt, 0.05, lt < tDown ? 1 : 1 - 0.75 * dimP);
-  if (lt < tn) headline(ctx, 'HDR ONLY', lt, false, { t0: T('hdr') - 0.15, y: 300, col: C.ink });
-  else counter(ctx, 500, 1100, lt, tDown, 540, 470, 230, C.ember, { unit: 'NITS', dark: false });
-}, counters: () => [{ name: '500 nits', t: T('five') - 0.12, hold: CUR.dur }], sfx: () => [[T('hdr') - 0.15, 'pop', 0.3], [T('five') - 0.45, 'down', 0.6], [T('five') - 0.12, 'tick', 0.7]] });
-scene({ line: 12, bg: 'paper', real: true, img: 'cut_lid', draw: (ctx, lt) => {
-  product(ctx, IMG.cut_lid, 380, 980, 460, { lt, t0: 0, seed: 1.9 });
-  priceTag(ctx, 300, 780, lt, T('nine') - 0.15, '$999', { dark: false });
-  calendar(ctx, 790, 760, lt, T('january') - 0.4, 'JAN', '2027');
-  if (lt > T('january') - 0.1) bigWord(ctx, 'US · JAN', lt, T('january') - 0.1, C.ink, 300); else bigWord(ctx, '$999', lt, T('nine') - 0.1, C.ember, 300);
-}, sfx: () => [[T('nine') - 0.15, 'thud', 0.5], [T('nine'), 'swing', 0.5], [T('january') - 0.4, 'flip', 0.6], [T('january') - 0.2, 'flip', 0.5]] });
-scene({ line: 13, bg: 'paper', real: true, img: 'cut_hero', draw: (ctx, lt) => {
-  heroAt(ctx, 540, 960, 720, lt, {});
-  const ts = T('spec'), up = lt < ts ? 1 : clamp(1 - spr(lt - ts, 18, 0.45), -0.15, 1);
-  wordmark(ctx, 540, 640, 108, up, false, 1);
-  if (lt < T('lasts') - 0.1) headline(ctx, 'LIGHT', lt, false, { t0: T('light') - 0.1, y: 300 });
-  else if (lt < ts) headline(ctx, 'ALL DAY', lt, false, { t0: T('lasts') - 0.1, y: 300 });
-  else headline(ctx, 'SPEC', lt, false, { t0: ts - 0.02, col: C.ember, y: 300 });
-}, sfx: () => [[T('light') - 0.1, 'pop', 0.3], [T('spec'), 'click', 1.0], [T('spec') + 0.04, 'stamp', 0.4]] });
-scene({ line: 14, xfade: true, bg: 'paper', real: true, img: 'cut_side_l', draw: (ctx, lt) => {
-  product(ctx, IMG.cut_side_l, 400, 1150, 560, { lt, t0: 0, seed: 2.9, alpha: lt > T('wait') - 0.15 ? 0.55 : 1 });
-  hourglass(ctx, 820, 900, lt, 0.05, T('wait') - 0.15, false);
-  if (lt < T('wait') - 0.15) headline(ctx, 'NEED IT NOW?', lt, false, { t0: T('need') - 0.15, y: 300 });
-  else headline(ctx, 'WAIT', lt, false, { t0: T('wait') - 0.12, col: C.wreck, y: 300 });
-}, sfx: () => [[0.05, 'pop', 0.3], [T('wait') - 0.15, 'flip', 0.7], [T('wait'), 'thud', 0.4]] });
-scene({ line: 15, bg: 'cool', real: true, img: 'cut_hero', draw: (ctx, lt) => {
-  if (lt < T('lasts') - 0.1) { hookComp(ctx, lt, false); headline(ctx, '< 1 KG', lt, false, { t0: T('under') - 0.1, y: 300, col: C.ember }); }
-  else { hookComp(ctx, lt, false); headline(ctx, 'BIG DEAL', lt, false, { t0: T('big') - 0.1, y: 300 }); }
-}, sfx: () => [[T('under') - 0.1, 'pop', 0.3], [T('big') - 0.1, 'shimmer', 0.4]] });
-scene({ line: -1, bg: 'paper', real: false, img: null, endcard: true, draw: (ctx, lt, d) => {
-  const tSnap = 0.7, up = lt < tSnap ? 1 : clamp(1 - spr(lt - tSnap, 18, 0.45), -0.15, 1);
-  const e = spr(lt, 13, 0.7); ctx.save(); ctx.translate(540, 860); ctx.scale(lerp(0.94, 1, e), lerp(0.94, 1, e)); ctx.translate(-540, -860); wordmark(ctx, 540, 900, 108, up, false, 1); ctx.restore();
-}, sfx: () => [[0.7, 'click', 1.0]] });
 function pill2(ctx, x, y, w, h, fill) { ctx.save(); ctx.shadowColor = 'rgba(21,19,18,0.18)'; ctx.shadowBlur = 24; ctx.shadowOffsetY = 8; rr(ctx, x, y, w, h, h / 2); ctx.fillStyle = fill; ctx.fill(); ctx.restore(); }
-
-// ---------- timeline ----------
-S.forEach((s, i) => {
-  if (s.line >= 0) { const li = words.findIndex(w => w.line === s.line); s.w0 = s.from ? wIdx(s.from, li) : li; s.start = i === 0 ? 0 : words[s.w0].start - (s.from ? 0.12 : 0.15); }
-  else { s.w0 = words.length - 1; s.start = words[words.length - 1].end + 0.3; }
-});
-S.forEach((s, i) => { s.end = i < S.length - 1 ? S[i + 1].start : DURATION; s.dur = s.end - s.start; s.i = i; });
-const LOOP_BACK = 0.35;                                  // last 0.35 s: hard cut back to the frame-1 composition
-const EV = []; S.forEach(s => { CUR = s; for (const [t, k, g] of (s.sfx ? s.sfx() : [])) EV.push({ t: +(s.start + t).toFixed(3), kind: k, gain: g }); });
-S.forEach((s, i) => { if (i) EV.push({ t: +s.start.toFixed(3), kind: s.xfade ? 'move' : 'cut', gain: 0.3 }); });
-EV.push({ t: +(DURATION - LOOP_BACK).toFixed(3), kind: 'cut', gain: 0.3 });
-const COUNTERS = []; S.forEach(s => { CUR = s; for (const c of (s.counters ? s.counters() : [])) COUNTERS.push({ name: c.name, land: +(s.start + c.t).toFixed(2), hold: +((s.start + Math.min(c.hold, s.dur)) - (s.start + c.t)).toFixed(2) }); });
-
-// ---------- compositor ----------
-function bgColour(s, lt) { return s.bg === 'lav' ? LAV : s.bg === 'blush' ? BLUSH : s.bg === 'cool' ? COOL : C.paper; }
-function isDark(s, lt) { const c = bgColour(s, lt); return c === C.ink || c === '#2A2826'; }
-function drawScene(ctx, s, t) {
-  CUR = s; const lt = t - s.start;
-  ctx.fillStyle = bgColour(s, lt); ctx.fillRect(0, 0, W, H);   // flat solid background only (§12)
-  ctx.save();
-  if (s.shakeAt !== undefined && lt >= s.shakeAt && lt < s.shakeAt + 6 * FR) { const k = Math.round((lt - s.shakeAt) / FR); ctx.translate([3, -3, 2, -2, 1, -1][k] || 0, [-2, 3, -3, 2, -1, 1][k] || 0); }
-  s.draw(ctx, lt, s.dur); ctx.restore();
-}
-function watermark(ctx, s, t) { if (s.endcard) return; const dark = isDark(s, t - s.start); const im = dark ? IMG.wm_dark : IMG.wm_light, h = 64, w = h * im.width / im.height; ctx.save(); ctx.globalAlpha = 0.9; ctx.drawImage(im, 880 - w, 1330 - h, w, h); ctx.restore(); }
-function frame(ctx, t) {
-  if (t >= DURATION - LOOP_BACK) { drawScene(ctx, S[0], 0); watermark(ctx, S[0], 0); return; }   // loop: last frames = frame 1
-  const i0 = S.findIndex(s => t >= s.start && t < s.end); const s = S[i0 < 0 ? S.length - 1 : i0], prev = S[s.i - 1], lt = t - s.start;
-  if (prev && s.xfade && lt < 0.2) { // in-place crossfade (no slide)
-    drawScene(ctx, prev, t); ctx.save(); ctx.globalAlpha = easeInOut(lt / 0.2); drawScene(ctx, s, t); ctx.restore();
-  } else drawScene(ctx, s, t);
-  watermark(ctx, s, t);
-}
-
-async function main() {
-  await loadAssets();
-  const cv = createCanvas(W, H), ctx = cv.getContext('2d');
-  fs.writeFileSync(path.join(work, 'timeline.json'), JSON.stringify(S.map(s => ({ i: s.i, line: s.line, start: +s.start.toFixed(2), end: +s.end.toFixed(2), bg: s.bg, real: s.real, img: s.img, xfade: !!s.xfade })), null, 1));
-  fs.writeFileSync(path.join(work, 'counters.json'), JSON.stringify(COUNTERS, null, 1));
-  const ver = S.find(s => s.line === 13); CUR = ver;
-  fs.writeFileSync(path.join(work, 'events.json'), JSON.stringify({ catch: S.find(s => s.line === 8).start + 0.32, verdict: ver.start, spec: ver.start + T('spec'), end: DURATION }, null, 1));
-  if (stillsArg) {
-    const ts = stillsArg === 'cues' ? S.flatMap(s => [s.start + 0.02, s.start + s.dur * 0.5, s.end - 0.05]) : stillsArg.split(',').map(Number);
-    fs.mkdirSync(path.join(work, 'stills'), { recursive: true });
-    for (const t of ts) { frame(ctx, t); fs.writeFileSync(path.join(work, 'stills', `t${t.toFixed(2).padStart(6, '0')}.png`), cv.toBuffer('image/png')); }
-    console.log('stills', ts.length); return;
-  }
-  fs.writeFileSync(path.join(work, 'sfx.json'), JSON.stringify(EV.sort((a, b) => a.t - b.t)));
-  const N = Math.round(DURATION * FPS);
-  const ff = spawn('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgba', '-s', `${W}x${H}`, '-r', String(FPS), '-i', '-',
-    '-c:v', 'libx264', '-preset', 'medium', '-crf', '14', '-pix_fmt', 'yuv420p', path.join(work, 'frames.mp4')], { stdio: ['pipe', 'inherit', 'inherit'] });
-  const t0 = Date.now();
-  for (let f = 0; f < N; f++) { frame(ctx, f / FPS); if (!ff.stdin.write(cv.data())) await new Promise(r => ff.stdin.once('drain', r)); if (f % 600 === 0) console.log(`frame ${f}/${N} ${((Date.now() - t0) / 1000).toFixed(0)}s`); }
-  ff.stdin.end(); await new Promise(r => ff.on('close', r));
-  console.log(JSON.stringify({ frames: N, duration: DURATION, seconds: (Date.now() - t0) / 1000 }));
-}
-main().catch(e => { console.error(e); process.exit(1); });
+function screenPath(ctx, r) { ctx.beginPath(); SCR.forEach(([u, v], i) => { const x = r.x0 + u * r.w, y = r.y0 + v * r.h; i ? ctx.lineTo(x, y) : ctx.moveTo(x, y); }); ctx.closePath(); }
+const setScreen = q => { SCR = q; };
+return { spr, easeIn, pop, DRAW, product, headline, counter, objShadow, stroked, sun, priceTag, calipers, scale, waterDrop, waves, pulseFlame, zoneBar, colourDots, battery, toggle, ecg, hourglass, stamp, wordmark, label, dialScale, clockRing, worldMap, motionLines, screenDim, playIcon, loupe, slider, bars, calendar, pill2, screenPath, SHADOW, setScreen, FR };
+};

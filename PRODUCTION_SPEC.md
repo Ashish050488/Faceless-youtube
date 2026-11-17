@@ -66,7 +66,7 @@ Script session: NO video QA (owner 2026-11-17: "no need to verify until I feel a
 then uploads. The video session owns quality. Re-check a video only when the owner reports a problem.
 
 ## 8. Reuse — one kit, no per-video renderer (learned 2026-11-17)
-- Build render/kit/ once: data-driven components (Headline, RollingNumber, PriceTag, ProductCutout, CalloutRing,
+- render/kit/ (built 2026-11-17, usage: render/kit/README.md): data-driven components (Headline, RollingNumber, PriceTag, ProductCutout, CalloutRing,
   Battery, Calipers, Scale, Sun, MapPin (Natural Earth), Bars, StrikeThrough, CatchStamp, EndCardLogo, Watermark,
   SafeZoneOverlay). Each new video = cues.json + assets only; the kit renders it. Never write a new 1,000-line renderer.
 - Word timestamps (faster-whisper) place cues automatically.
