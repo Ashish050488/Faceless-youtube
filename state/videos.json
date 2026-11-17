@@ -14,14 +14,16 @@
   "slug": "sow002-oppo-watch-5",
   "title": "Oppo Made a $135 Watch With a 3,000-Nit Screen",
   "format": "short",
-  "status": "uploaded",
+  "status": "live",
   "scripted_at": "2026-11-17T06:00Z",
   "hypothesis": "Big brand + 'Made' + price + number title beats benchmark median 16.8K.",
-  "privacy": "private",
+  "privacy": "public",
   "uploaded_at": "2026-11-17T07:09:41Z",
   "size_mb": 5.1,
-  "publish_at": "2026-11-17T20:00:00Z",
+  "publish_at": null,
   "url": "https://youtube.com/shorts/yNzzZfLxt30",
-  "qa": "script-session QA pass 2026-11-17: centred 0.493, flat bg, 97.5% real product, counters roll 0.33 s/hold \u22651.26 s, 5.1 MB 720p; video-session self-score 26/30"
+  "qa": "script-session QA pass 2026-11-17: centred 0.493, flat bg, 97.5% real product, counters roll 0.33 s/hold \u22651.26 s, 5.1 MB 720p; video-session self-score 26/30",
+  "published_at": "2026-11-17T07:1xZ (owner asked to publish immediately)",
+  "comment_id": "UgwDguG_LI7MbLBZC594AaABAg"
  }
 ]
