@@ -1,7 +1,9 @@
 # Instagram content plan — Spec or Wreck (@viral_lab0 → @specorwreck)
 
-Owner 2026-11-17. This session posts still-image content only (carousels, collages, single photo/news posts).
-YouTube Shorts are cross-posted as Reels by the script session. A slideshow Reel format is on hold until the owner decides.
+Owner 2026-11-17 (updated): 3 still-image posts per day, NO videos/Reels (the script session cross-posts Shorts).
+Topics = ALL hot tech news, not only gadgets: AI company updates, IPOs, CEO exits, launches, regulation, big deals.
+At each posting slot, search the hottest tech story of that hour, verify it, build the post, then publish.
+Music: the API can't attach Instagram music to image posts. Flag posts that would suit a track; the owner adds it in the app.
 Brand and fact rules: INSTAGRAM_POSTS.md, state/brand.md, PRODUCTION_SPEC.md §12–18.
 
 ## What the data says (2026 benchmarks, not tech-specific)
@@ -21,26 +23,26 @@ Brand and fact rules: INSTAGRAM_POSTS.md, state/brand.md, PRODUCTION_SPEC.md §1
 | HERO | Single hero photo: product full size on its own flat colour, one number | 1080×1350 | Striking design, one big spec |
 | VS | Two-product comparison carousel (3–5 slides) | 1080×1350 | New launch vs last year's model or main rival |
 
-## Weekly rotation (times in UTC, randomised ±45 min, at least 2 h apart; posts land 13:00–03:00 UTC = morning–night US/EU/IN)
-| Day | Posts | Mix |
-|---|---|---|
-| Mon | 2 | CAR + NEWS |
-| Tue | 3 | NEWS + HERO + CAR |
-| Wed | 2 | COL + CAR |
-| Thu | 4 (multi-post day) | NEWS + CAR + HERO + NEWS |
-| Fri | 3 | VS + CAR + COL |
-| Sat | 1 | CAR (weekend "best launch of the week") |
-| Sun | 2 | HERO + COL |
-Total ≈ 17/week. After 3 weeks, re-weight by saves + shares per reach from Instagram insights (vidiq_instagram_owner_insights).
+## Daily slots (UTC, scheduled task fires into the Instagram session)
+| Slot | UTC | US ET | India IST |
+|---|---|---|---|
+| 1 | 12:13 | 07:13 | 17:43 |
+| 2 | 18:13 | 13:13 | 23:43 |
+| 3 | 23:13 | 18:13 | 04:43 (+1) |
+Each slot: pick ONE format (CAR / COL / NEWS / HERO / VS) that fits the story; vary it so no format runs 3 slots in a row.
+After 3 weeks, re-weight formats and slot times by saves + shares per reach (vidiq_instagram_owner_insights).
 
 ## Topic rules
-- Physical tech from big brands, announced or launched in the last 24 h (phones, wearables, audio, laptops, glasses, cameras, consoles).
-- Every number confirmed by 2 independent sources (primary/newsroom first). No leaks or rumours.
-- Official press images only (newsroom media libraries, brand stores). Credit in caption.
-- Never repeat the same product within 3 days, unless there's real news (price, ship date).
+- The single hottest tech story of the last ~1–3 h (Techmeme, The Verge, CNBC Tech, Reuters Tech, company newsrooms).
+- Every number confirmed by 2 independent sources (primary source first). No leaks or rumours; say "reportedly" never.
+- Images: official press images/logos only when the company publishes them for press; otherwise our own 2-D objects only.
+  No other creators' content, no news-site photos, no AI-made photos of real people or products.
+- Money stories: add "News, not financial advice."
+- Don't repeat a story within 24 h unless there's genuinely new news.
 
-## Daily routine
-1. Pick tomorrow's topics from the last 24 h of newsroom + trade press news.
-2. Build fact sheet (2 sources each) → render with HTML + Playwright → check every slide against the brand rules.
-3. Upload to vidIQ, create drafts with publishAt, show the owner one summary, publish on "post them".
-4. Log in state/instagram_posts.json. Flag any post that would suit a trending track (owner adds it in the app).
+## Slot routine
+1. Search the hottest tech news of the hour → choose the story → fact sheet (2 sources each).
+2. Render with render/instagram/*.js (HTML + Playwright, brand rules) → visually check every slide.
+3. Upload with vidiq_upload_image → vidiq_social_post_draft_create → show the owner (push notification).
+4. vidIQ only publishes after the owner approves the draft ("post it"). Publish right after approval.
+5. Log in state/instagram_posts.json.
