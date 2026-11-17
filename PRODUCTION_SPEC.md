@@ -24,7 +24,8 @@ Benchmark for Shorts = Techy or Not (measured: state/competitor_watch/). Long vi
   new headline every spoken sentence, none on screen > 4 s, no label < 30 px at 720 w. NO captions burned in
   (captions.srt is still delivered for YouTube closed captions).
 - Frame 1: product ≥ 60 % width + ≤ 3-word huge title + one accent mark.
-- Content area ends at y 1240 (1080 scale); watermark below it (brand.md). Safe frame y 270–1240.
+- Layout = Techy or Not's default full-frame composition (owner 2026-11-17: NO platform safe-zone rules; the video also
+  goes to Instagram). Rule instead: NOTHING OVERLAPS — text, product, objects and watermark never touch each other.
 
 ## 3. Show, don't write (Mayer: coherence, signaling, redundancy, contiguity, segmenting)
 - One idea per scene; the ONE key thing gets the callout ring/underline/colour.
@@ -58,7 +59,7 @@ Benchmark for Shorts = Techy or Not (measured: state/competitor_watch/). Long vi
 
 ## 7. QA — cheap but complete (token rules, CLAUDE.md)
 Video session, before handoff (write qa.md):
-- Numbers from a script, not by eye: hard cuts, mean frame change (2.5–6), longest calm hold, headline max hold,
+- Numbers from a script, not by eye: overlap check (bounding boxes of text/product/objects/watermark never intersect), hard cuts, mean frame change (2.5–6), longest calm hold, headline max hold,
   counter final hold, centre-x range, real-image screen time %, file size, loudness, measure_timing output.
 - Look at images only as: ONE contact sheet (1 frame / 3 s, 180 px wide tiles) + ONE zoom sheet per scene group
   (200 % crop + 100 % + phone-size tiled into one image). Fix → re-render → re-check only the changed scenes.
@@ -68,8 +69,8 @@ then uploads. The video session owns quality. Re-check a video only when the own
 ## 8. Reuse — one kit, no per-video renderer (learned 2026-11-17)
 - Build render/kit/ once: data-driven components (Headline, RollingNumber, PriceTag, ProductCutout, CalloutRing,
   Battery, Calipers, Scale, Sun, MapPin (Natural Earth), Bars, StrikeThrough, CatchStamp, EndCardLogo, Watermark,
-  SafeZoneOverlay). Each new video = cues.json + assets only; the kit renders it. Never write a new 1,000-line renderer.
+  OverlapCheck). Each new video = cues.json + assets only; the kit renders it. Never write a new 1,000-line renderer.
 - Word timestamps (faster-whisper) place cues automatically.
-- Code checks before any image: text boxes inside the safe zone / above y 1240, contrast, every on-screen number
+- Code checks before any image: no overlapping boxes (text/product/objects/watermark), contrast, every on-screen number
   string-matches factsheet.md, loudness. Then one contact sheet.
 - Delete the previous video's asset folder when a new job starts.

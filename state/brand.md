@@ -28,5 +28,5 @@ Font: Inter Tight (800–900 headlines, tabular numbers).
 - Mini logo "s w" (w tipped 18°, wreck red); s = ink on light backgrounds.
   Files: Drive › Faceless Channel › brand_assets › watermark_on_light.png / watermark_on_dark.png.
 - Shorts 720×1280: right edge x 587, bottom edge y 887, height 43 px, opacity 90 %
-  (1080×1920: right x 880, bottom y 1330, 64 px). Reserved box (1080 scale) x 760–900, y 1240–1340; all content ends at y 1240.
+  (1080×1920: right x 880, bottom y 1330, 64 px). Nothing may overlap the watermark (reserved box, 1080 scale: x 760–900, y 1240–1340). No other safe-zone rules.
 - Long videos 1920×1080: top-left x 48, y 40, height 56 px. On every frame except the end card. Never animated.
