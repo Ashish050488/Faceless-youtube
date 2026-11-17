@@ -1,5 +1,6 @@
 {
  "slug": "sow004-lenovo-thinkbook-14x",
+ "plan": "sow004.plan.json",
  "thumb": {"img": "cut_hero", "bg": "cool", "big": "27", "word": "HOURS", "tag": "990 g", "w": 760},
  "screen": [[0.098, 0.012], [0.395, 0.012], [0.527, 0.43], [0.222, 0.39]],
  "scenes": [
@@ -9,13 +10,13 @@
    {"type": "label", "text": "990 g", "x": 540, "y": 440, "px": 200, "col": "ember"}]},
   {"line": 1, "xfade": true, "bg": "cool", "real": true, "layers": [
    {"type": "product", "img": "cut_hero", "x": 540, "y": 1015, "w": 640, "seed": 0.4, "push": true},
-   {"type": "battery", "x": 380, "y": 690, "scale": 0.75, "segs": 7, "at": ["twenty", 0, -0.2]},
-   {"type": "clock", "x": 790, "y": 690, "r": 80, "at": ["twenty", 0, -0.1], "hours": 27, "sfx": false},
-   {"type": "number", "value": 27, "unit": "HOURS", "comma": false, "at": ["twenty", 0, -0.05]}]},
+   {"type": "battery", "x": 380, "y": 690, "scale": 0.75, "segs": 7, "at": ["@hours", 0, -0.2]},
+   {"type": "clock", "x": 790, "y": 690, "r": 80, "at": ["@hours", 0, -0.1], "hours": 27, "sfx": false},
+   {"type": "number", "value": 27, "unit": "HOURS", "comma": false, "at": ["@hours", 0, -0.05]}]},
   {"line": 2, "bg": "paper", "real": true, "sfx": [{"at": 0, "kind": "whoosh", "gain": 0.4}], "layers": [
    {"type": "product", "img": "cut_lid", "x": 540, "y": 860, "w": 640, "seed": 1.1, "move": {"at": ["going", 0, -0.1], "dur": 0.4, "y": 1102, "w": 270}},
    {"type": "headline", "text": "THINKBOOK 14X", "at": ["thinkbook", 0, -0.1], "until": ["going", 0, -0.1]},
-   {"type": "map", "show": ["going", 0, -0.1], "at": ["going", 0, -0.05], "pins": [["global", 0, -0.05], ["global", 0, 0.07], ["global", 0, 0.19]]},
+   {"type": "map", "y": 830, "show": ["going", 0, -0.1], "at": ["going", 0, -0.05], "pins": [["global", 0, -0.05], ["global", 0, 0.07], ["global", 0, 0.19]]},
    {"type": "headline", "text": "GLOBAL", "col": "ember", "y": 290, "at": ["global", 0, -0.1]}]},
   {"line": 3, "bg": "cool", "real": true, "layers": [
    {"type": "product", "id": "side", "img": "cut_side_r", "x": 540, "y": 760, "w": 820, "seed": 2.2, "shadow": false},
@@ -26,9 +27,9 @@
    {"type": "calipersV", "of": "p", "u": 0.86, "at": 0.05, "label": "15.6 mm"},
    {"type": "headline", "text": "< 16 mm", "at": ["sixteen", 0, -0.1]}]},
   {"line": 4, "bg": "lav", "real": true, "layers": [
-   {"type": "product", "id": "hero", "img": "cut_hero", "x": 540, "y": 900, "w": 760, "seed": 0.4, "push": true},
+   {"type": "product", "id": "hero", "img": "cut_hero", "x": 540, "y": 1000, "w": 760, "seed": 0.4, "push": true},
    {"type": "motionLines", "of": "hero", "at": ["hundred", 0, -0.1]},
-   {"type": "pill", "text": "120 Hz", "x": 650, "y": 660, "w": 300, "h": 104, "at": ["hertz", 0, -0.2]},
+   {"type": "pill", "text": "120 Hz", "x": 650, "y": 690, "w": 300, "h": 104, "at": ["hertz", 0, -0.2]},
    {"type": "headline", "text": "OLED", "at": ["oled", 0, -0.1]}]},
   {"line": 5, "xfade": true, "bg": "lav", "real": true, "layers": [
    {"type": "product", "img": "cut_hero", "x": 540, "y": 1010, "w": 640, "seed": 0.4},
@@ -36,10 +37,10 @@
    {"type": "headline", "text": "HDR", "at": ["hdr", 0, -0.12], "until": ["eleven", 0, -0.19]},
    {"type": "number", "value": 1100, "unit": "NITS", "at": ["eleven", 0, -0.15]}]},
   {"line": 6, "bg": "paper", "real": true, "layers": [
-   {"type": "product", "id": "p", "img": "cut_side_l", "x": 540, "y": 1080, "w": 820, "seed": 1.7},
+   {"type": "product", "id": "p", "img": "cut_side_l", "x": 540, "y": 1140, "w": 820, "seed": 1.7},
    {"type": "callout", "of": "p", "u": 0.145, "v": 0.5, "r": 70, "at": ["usb", 0, -0.1]},
    {"type": "loupe", "of": "p", "img": "cut_side_l", "u": 0.145, "v": 0.5, "zoom": 0.12, "x": 540, "y": 720, "r": 210, "at": ["usb", 0, 0.35]},
-   {"type": "label", "text": "20 Gbps", "x": 540, "y": 1000, "px": 92, "at": ["twenty", 0, -0.15]}]},
+   {"type": "label", "text": "20 Gbps", "x": 540, "y": 1035, "px": 92, "at": ["twenty", 0, -0.15]}]},
   {"line": 7, "bg": "paper", "real": true, "layers": [
    {"type": "product", "img": "cut_lid", "x": 360, "y": 980, "w": 400, "seed": 2.6},
    {"type": "battery", "x": 540, "y": 640, "segs": 7, "at": ["sixty", 0, -0.2]},
@@ -59,7 +60,7 @@
    {"type": "slider", "y": 660, "w": 560, "from": 0.9, "to": 0.18, "at": ["low", 0, -0.2]},
    {"type": "headline", "text": "LOW BRIGHTNESS", "at": ["low", 0, -0.1]}]},
   {"line": 10, "bg": "blush", "real": true, "layers": [
-   {"type": "product", "img": "cut_side_r", "x": 540, "y": 1170, "w": 600, "seed": 0.3},
+   {"type": "product", "img": "cut_side_r", "x": 540, "y": 1240, "w": 600, "seed": 0.3},
    {"type": "bars", "base": 1100, "items": [
      {"value": 27.08, "label": "27 h", "sub": "video", "col": "mari", "at": 0.1},
      {"value": 16.42, "label": "16.4 h", "sub": "work test", "col": "wreck", "at": ["sixteen", 0, -0.1]}]}]},
@@ -70,24 +71,24 @@
    {"type": "headline", "text": "HDR ONLY", "col": "ink", "at": ["hdr", 0, -0.15], "until": "normally"},
    {"type": "number", "value": 500, "from": 1100, "unit": "NITS", "show": "normally", "at": ["five", 0, -0.45]}]},
   {"line": 12, "bg": "paper", "real": true, "layers": [
-   {"type": "product", "img": "cut_lid", "x": 380, "y": 980, "w": 460, "seed": 1.9},
-   {"type": "priceTag", "x": 300, "y": 780, "text": "$999", "at": ["nine", 0, -0.15]},
-   {"type": "calendar", "x": 790, "y": 760, "month": "JAN", "year": "2027", "at": ["january", 0, -0.4]},
-   {"type": "headline", "text": "$999", "col": "ember", "at": ["nine", 0, -0.1], "until": ["january", 0, -0.1]},
+   {"type": "product", "img": "cut_lid", "x": 330, "y": 980, "w": 460, "seed": 1.9},
+   {"type": "priceTag", "x": 780, "y": 930, "text": "$999", "at": ["@price", 0, -0.15]},
+   {"type": "calendar", "x": 790, "y": 730, "month": "JAN", "year": "2027", "at": ["january", 0, -0.4]},
+   {"type": "headline", "text": "$999", "col": "ember", "at": ["@price", 0, -0.1], "until": ["january", 0, -0.1]},
    {"type": "headline", "text": "US · JAN", "at": ["january", 0, -0.1]}]},
   {"line": 13, "bg": "paper", "real": true, "layers": [
    {"type": "product", "img": "cut_hero", "x": 540, "y": 960, "w": 720, "seed": 0.4},
-   {"type": "wordmark", "y": 640, "snapAt": "spec"},
+   {"type": "wordmark", "y": 640, "snapAt": "@verdict"},
    {"type": "headline", "text": "LIGHT", "at": ["light", 0, -0.1], "until": ["lasts", 0, -0.1]},
-   {"type": "headline", "text": "ALL DAY", "at": ["lasts", 0, -0.1], "until": "spec"},
-   {"type": "headline", "text": "SPEC", "col": "ember", "at": ["spec", 0, -0.02]}]},
+   {"type": "headline", "text": "ALL DAY", "at": ["lasts", 0, -0.1], "until": "@verdict"},
+   {"type": "headline", "text": "SPEC", "col": "ember", "at": ["@verdict", 0, -0.02]}]},
   {"line": 14, "xfade": true, "bg": "paper", "real": true, "layers": [
    {"type": "product", "img": "cut_side_l", "x": 400, "y": 1150, "w": 560, "seed": 2.9, "fade": {"at": ["wait", 0, -0.15], "to": 0.55}},
    {"type": "hourglass", "x": 820, "y": 900, "at": 0.05, "flipAt": ["wait", 0, -0.15]},
    {"type": "headline", "text": "NEED IT NOW?", "at": ["need", 0, -0.15], "until": ["wait", 0, -0.15]},
    {"type": "headline", "text": "WAIT", "col": "wreck", "at": ["wait", 0, -0.12]}]},
   {"line": 15, "bg": "cool", "real": true, "layers": [
-   {"type": "product", "id": "hero", "img": "cut_hero", "x": 540, "y": 780, "w": 760, "seed": 0.4, "ltOffset": 9, "shadow": false},
+   {"type": "product", "id": "hero", "img": "cut_hero", "x": 540, "y": 880, "w": 760, "seed": 0.4, "ltOffset": 9, "shadow": false},
    {"type": "dialScale", "under": "hero", "w": 720, "at": -9, "value": 990, "sfx": false},
    {"type": "headline", "text": "< 1 KG", "col": "ember", "at": ["under", 0, -0.1], "until": ["lasts", 0, -0.1]},
    {"type": "headline", "text": "BIG DEAL", "at": ["big", 0, -0.1]}]},

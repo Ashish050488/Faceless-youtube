@@ -1,5 +1,5 @@
 // Spec or Wreck render kit — data-driven Short renderer (PRODUCTION_SPEC §8). No per-video code.
-//   node render/kit/render.js <work_dir> <cues_kit.json> [--stills cues|t1,t2 [--overlay]] [--check] [--fps 30]
+//   node render/kit/render.js <work_dir> <cues_kit.json> [--stills cues|t1,t2] [--check] [--fps 30]
 // work_dir: words.json (meta/align_words.py), voice_seconds.txt, assets/*, wm_light.png, wm_dark.png
 // Writes: frames.mp4, sfx.json, timeline.json, events.json, counters.json; --check writes check.json (no video).
 // Schema: render/kit/README.md
@@ -10,20 +10,24 @@ const { spawn } = require('child_process');
 const L = require('../lib');
 const { C, W, H, clamp, lerp, easeOut, easeInOut, prog, rr, font } = L;
 const makeKit = require('./core');
+const { resolvePlan } = require('./plan');
 
 const [work, cuesPath] = process.argv.slice(2, 4);
 const args = process.argv.slice(4);
 const FPS = args.includes('--fps') ? Number(args[args.indexOf('--fps') + 1]) : 30, FR = 1 / FPS;
 const stillsArg = args.includes('--stills') ? args[args.indexOf('--stills') + 1] : null;
-const CHECK = args.includes('--check'), OVERLAY = args.includes('--overlay');
+const CHECK = args.includes('--check');
 L.registerFonts(path.join(__dirname, '..', 'fonts'));
 const cues = JSON.parse(fs.readFileSync(cuesPath));
 const words = JSON.parse(fs.readFileSync(path.join(work, 'words.json')));
+// plan: cues.plan (path relative to the cues file) or <work>/plan.json; events → absolute seconds (written to cues.json)
+const planPath = cues.plan ? path.resolve(path.dirname(cuesPath), cues.plan) : path.join(work, 'plan.json');
+const PLAN = fs.existsSync(planPath) ? JSON.parse(fs.readFileSync(planPath)) : [];
+const CUE = resolvePlan(words, PLAN);
 const DURATION = Number(fs.readFileSync(path.join(work, 'voice_seconds.txt'), 'utf8'));
 const BG = Object.assign({ paper: C.paper, cool: '#EEF0F4', lav: '#ECE8FB', blush: '#FBE7E2', sand: '#EFE3CC' }, cues.palette || {});
 const COLS = { ink: C.ink, ember: C.ember, mari: C.mari, wreck: C.wreck, stone: C.stone, paper: C.paper };
 const col = c => COLS[c] || c || C.ink;
-const LIMIT = { top: 270, bottom: 1240, rightX: 900, rightFromY: 600, wm: [760, 1240, 900, 1340] };
 
 // ---------- words / time refs ----------
 const nw = s => s.toLowerCase().replace(/[^a-z0-9]/g, '');
@@ -34,6 +38,7 @@ function tref(sc, at, dflt = 0) {
   if (typeof at === 'number') return at;
   let w = at, n = 0, d = 0, end = false;
   if (Array.isArray(at)) [w, n = 0, d = 0] = at; else if (typeof at === 'object') ({ w, n = 0, d = 0, end = false } = at);
+  if (typeof w === 'string' && w[0] === '@') { if (!(w.slice(1) in CUE)) throw new Error('unknown cue ' + w); return CUE[w.slice(1)] - sc.start + d; }
   let i = sc.w0; for (let k = 0; k <= n; k++) i = wIdx(w, k === 0 ? i : i + 1);
   return (end ? words[i].end : words[i].start) - sc.start + d;
 }
@@ -134,6 +139,7 @@ S.forEach((s, i) => {
   if (i) EV.push({ t: +s.start.toFixed(3), kind: s.xfade ? 'move' : 'cut', gain: 0.3 });
 });
 EV.push({ t: +(DURATION - LOOP_BACK).toFixed(3), kind: 'cut', gain: 0.3 });
+for (const e of PLAN) if (e.sfx) EV.push({ t: CUE[e.cue], kind: e.sfx, gain: e.gain ?? 0.5 });
 const COUNTERS = [];
 S.forEach(s => (s.layers || []).filter(l => l.type === 'number').forEach(l => { const land = tref(s, l.at, 0) + 0.33, end = l.until !== undefined ? tref(s, l.until) : s.dur; COUNTERS.push({ name: `${l.prefix || ''}${l.value}${l.unit ? ' ' + l.unit : ''}`, land: +(s.start + land).toFixed(2), hold: +(Math.min(end, s.dur) - land).toFixed(2) }); }));
 
@@ -178,33 +184,46 @@ function instrument(ctx) {
   };
 }
 
-function safeZoneOverlay(ctx) { // SafeZoneOverlay (stills only): safe frame y 270–1240, watermark box, Shorts UI side x 900
-  ctx.save(); ctx.lineWidth = 3; ctx.setLineDash([18, 12]); ctx.strokeStyle = 'rgba(229,72,77,0.9)'; ctx.strokeRect(20, LIMIT.top, W - 40, LIMIT.bottom - LIMIT.top);
-  ctx.strokeStyle = 'rgba(40,120,220,0.9)'; const [a, b, c, d] = LIMIT.wm; ctx.strokeRect(a, b, c - a, d - b); ctx.beginPath(); ctx.moveTo(LIMIT.rightX, LIMIT.rightFromY); ctx.lineTo(LIMIT.rightX, LIMIT.bottom); ctx.stroke(); ctx.restore();
+// ---------- OverlapCheck: text, products, 2-D objects and the watermark never touch ----------
+// Each visible layer is drawn alone at 1/4 scale; opaque cells (alpha > 128, so soft shadows/glows don't count) are
+// compared pairwise and against the watermark. Exempt: a layer and the product it is attached to (of / under), and any
+// layer marked "overlap": true (deliberate, e.g. a number inside its clock ring, the CATCH stamp over a dimmed product).
+const QS = 4, QW = W / QS, QH = H / QS;
+const qcv = createCanvas(QW, QH), qctx = qcv.getContext('2d'), dummy = createCanvas(4, 4).getContext('2d');
+function maskOf(drawFn) { qctx.setTransform(1, 0, 0, 1, 0, 0); qctx.clearRect(0, 0, QW, QH); qctx.setTransform(1 / QS, 0, 0, 1 / QS, 0, 0); drawFn(qctx); qctx.setTransform(1, 0, 0, 1, 0, 0);
+  const d = qctx.getImageData(0, 0, QW, QH).data, m = new Uint8Array(QW * QH); let n = 0; for (let i = 0; i < m.length; i++) if (d[i * 4 + 3] > 128) { m[i] = 1; n++; } return n ? m : null; }
+let WM_MASK = null;
+function overlaps(s, t) {
+  const lt = t - s.start, layers = (s.layers || []).filter(l => !(l.show !== undefined && lt < tref(s, l.show)) && !(l.hide !== undefined && lt >= tref(s, l.hide)));
+  const masks = layers.map((l, k) => { const R = {}; for (let j = 0; j < k; j++) if (layers[j].type === 'product') DRAWERS.product(dummy, layers[j], lt, s, R); return maskOf(c => DRAWERS[l.type](c, l, lt, s, R)); });
+  if (!s.endcard) { if (!WM_MASK) WM_MASK = maskOf(c => watermark(c, s)); layers.push({ type: 'watermark' }); masks.push(WM_MASK); }
+  const out = [], name = l => l.type + (l.text ? ` "${l.text}"` : l.id ? ` #${l.id}` : l.img ? ` ${l.img}` : '');
+  for (let a = 0; a < layers.length; a++) for (let b = a + 1; b < layers.length; b++) {
+    const A = layers[a], B = layers[b], ma = masks[a], mb = masks[b]; if (!ma || !mb || A.overlap || B.overlap) continue;
+    if ((A.id && (B.of === A.id || B.under === A.id)) || (B.id && (A.of === B.id || A.under === B.id))) continue;
+    let n = 0; for (let i = 0; i < ma.length; i++) if (ma[i] && mb[i]) n++;
+    if (n > 2) out.push({ t: +t.toFixed(2), scene: s.i, issue: `overlap ${name(A)} × ${name(B)}`, px: n * QS * QS });
+  }
+  return out;
 }
 async function main() {
   await loadAssets(); K = makeKit({ FPS, IMG, MAP, words, SCR: cues.screen });
   const cv = createCanvas(W, H), ctx = cv.getContext('2d'); instrument(ctx);
   fs.writeFileSync(path.join(work, 'timeline.json'), JSON.stringify(S.map(s => ({ i: s.i, line: s.line, start: +s.start.toFixed(2), end: +s.end.toFixed(2), bg: s.bg, real: !!s.real, xfade: !!s.xfade, endcard: !!s.endcard })), null, 1));
+  fs.writeFileSync(path.join(work, 'cues.json'), JSON.stringify(CUE, null, 1));
   fs.writeFileSync(path.join(work, 'counters.json'), JSON.stringify(COUNTERS, null, 1));
   const cat = S.find(s => (s.layers || []).some(l => l.type === 'stamp')), ver = S.find(s => (s.layers || []).some(l => l.type === 'wordmark' && l.snapAt !== undefined && !s.endcard));
   fs.writeFileSync(path.join(work, 'events.json'), JSON.stringify({ catch: cat ? cat.start + tref(cat, cat.layers.find(l => l.type === 'stamp').at, 0.1) + 0.22 : 0, verdict: ver ? ver.start : DURATION - 15, end: DURATION }, null, 1));
   fs.writeFileSync(path.join(work, 'sfx.json'), JSON.stringify(EV.sort((a, b) => a.t - b.t)));
-  if (CHECK) { // sample 4 fps: text boxes + contrast, pixel checks for content below y 1240 / in the watermark box / right zone
+  if (CHECK) { // sample 4 fps: OverlapCheck + text on frame + contrast + on-screen numbers
     RECORD = true; const issues = []; let n = 0;
     for (let t = 0; t < DURATION; t += 0.25) {
       CUR_T = t; const s = sceneAt(t); CUR_S = s.i; ctx.clearRect(0, 0, W, H); frame(ctx, t); n++;
-      const img = ctx.getImageData(0, 0, W, H).data, bg = hex2rgb(BG[s.bg] || C.paper); let below = 0, inBox = 0, right = 0;
-      for (let y = LIMIT.rightFromY; y < 1340; y += 2) for (let x = 0; x < W; x += 2) { const i = (y * W + x) * 4; const diff = Math.abs(img[i] - bg[0]) + Math.abs(img[i + 1] - bg[1]) + Math.abs(img[i + 2] - bg[2]); if (diff < 40) continue;
-        const inWm = x >= 776 && x <= 884 && y >= 1262 && y <= 1334; if (inWm) continue; if (y >= LIMIT.bottom) below++; if (x >= LIMIT.wm[0] && x <= LIMIT.wm[2] && y >= LIMIT.wm[1] && y <= LIMIT.wm[3]) inBox++; if (x >= LIMIT.rightX && y < LIMIT.bottom) right++; }
-      if (below > 150 && !s.endcard) issues.push({ t: +t.toFixed(2), scene: s.i, issue: 'content below y 1240', px: below * 4 });
-      if (inBox > 0 && !s.endcard) issues.push({ t: +t.toFixed(2), scene: s.i, issue: 'content in watermark box', px: inBox * 4 });
+      if (!(s.xfade && t - s.start < 0.2)) issues.push(...overlaps(s, t));
     }
     const seenN = {}; for (const tx of TEXTS) seenN[tx.scene + '|' + tx.text] = (seenN[tx.scene + '|' + tx.text] || 0) + 1; // transient = mid-roll counter / entrance overshoot
     const warnings = [];
     for (const tx of TEXTS) { const [x0, y0, x1, y1] = tx.box; if (seenN[tx.scene + '|' + tx.text] < 2) continue;
-      if (y0 < LIMIT.top - 2 || y1 > LIMIT.bottom) issues.push({ t: tx.t, scene: tx.scene, issue: 'text outside y 270–1240', text: tx.text, box: tx.box });
-      if (x1 > LIMIT.rightX && y1 > 560 && y0 > LIMIT.rightFromY) warnings.push({ t: tx.t, scene: tx.scene, issue: 'text right of x 900 (Shorts UI side)', text: tx.text, box: tx.box });
       if (x0 < 20 || x1 > W - 20) issues.push({ t: tx.t, scene: tx.scene, issue: 'text off frame', text: tx.text, box: tx.box });
       if (tx.contrast !== null && tx.contrast < (tx.px >= 60 ? 3 : 4.5)) issues.push({ t: tx.t, scene: tx.scene, issue: `low contrast ${tx.contrast}`, text: tx.text }); }
     const numbers = [...new Set([...TEXTS.filter(x => seenN[x.scene + '|' + x.text] >= 3).map(x => x.text.trim()), ...COUNTERS.map(c => c.name)].filter(x => /\d/.test(x)))];
@@ -215,7 +234,7 @@ async function main() {
   if (stillsArg) {
     const ts = stillsArg === 'cues' ? S.flatMap(s => [s.start + 0.02, s.start + s.dur * 0.5, s.end - 0.05]) : stillsArg.split(',').map(Number);
     fs.mkdirSync(path.join(work, 'stills'), { recursive: true });
-    for (const t of ts) { frame(ctx, t); if (OVERLAY) safeZoneOverlay(ctx); fs.writeFileSync(path.join(work, 'stills', `t${t.toFixed(2).padStart(6, '0')}.png`), cv.toBuffer('image/png')); }
+    for (const t of ts) { frame(ctx, t); fs.writeFileSync(path.join(work, 'stills', `t${t.toFixed(2).padStart(6, '0')}.png`), cv.toBuffer('image/png')); }
     console.log('stills', ts.length); return;
   }
   const N = Math.round(DURATION * FPS);
