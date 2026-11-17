@@ -13,6 +13,13 @@ monetisation guidance regularly (state/policy_notes.md) and follow it; nothing r
    - Check real official images exist (press kit/store, ≥ 1600 px, whole product) before choosing the topic.
    - Verify every fact with 2 independent sources (primary source when reachable). No unconfirmed leaks.
    - Pull real keywords via the YouTube API: tags of the top recent videos on the topic → title/tags/description.
+     Metadata pattern (measured on Techy or Not's top Shorts via the API, 2026-11-17):
+     - Tags: ~15–21 tags, ~300 chars. Order: brand → model → full product name → name variants/misspellings →
+       category phrases people search ("wired earbuds", "keyboard PC") → "<brand> 2026"/"new <product>" → 3–4 generic
+       (tech news, new tech, gadgets) → "Spec or Wreck" last. No channel-wide keyword list needed (benchmark has none).
+     - Description: hook line → 1–2 short paragraphs (what it is, the twist, price) → "Sources:" with names + links →
+       credits → 6–8 hashtags at the end (#Brand #Model #Category #Tech #SpecOrWreck), first 3 = most searchable.
+     - Title: brand + "Just Made/Made" + surprising number or twist (his top 12 all follow this).
    - Write factsheet.md, script.md, cues.json, metadata.json → commit to repo (scripts/<slug>/).
    - cues.json is a SHOT-BY-SHOT visual spec (owner 2026-11-17: "put in the script what to use"): for every spoken
      beat: exact anchor words, background colour, which real image (asset # + crop/scale/position), which 2-D object

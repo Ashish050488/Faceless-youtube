@@ -18,8 +18,8 @@ Narration is AI-generated; script researched and fact-checked from the sources l
 #tech #gadgets #specorwreck
 ```
 - **Visibility:** Private (we schedule each video)
-- **Tags:** `spec or wreck, tech news, new gadgets, gadget review, is it worth it, new tech, tech shorts`
-  (per-video tags are added on top, 450–495 chars total)
+- **Tags:** `tech news, new tech, new tech 2026, tech shorts, gadgets, cool tech, Spec or Wreck`
+  (measured 2026-11-17: the generic tags the benchmark uses most; per-video tags go FIRST, see WORKFLOW.md)
 
 ## Studio → Upload defaults → Advanced settings
 - **License:** Standard YouTube License
