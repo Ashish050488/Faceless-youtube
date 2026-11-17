@@ -58,3 +58,24 @@ After 3 weeks, re-weight formats and slot times by saves + shares per reach (vid
 3. Upload with vidiq_upload_image → vidiq_social_post_draft_create → show the owner (push notification).
 4. vidIQ only publishes after the owner approves the draft ("post it"). Publish right after approval.
 5. Log in state/instagram_posts.json.
+
+## How-to for a fresh chat (lessons learned 2026-11-17)
+- Account: @specorwreck (formerly @viral_lab0), vidIQ platformAccountId 29324801787184753, connectionActive true, canPublish true.
+- Render: write a spec JSON and run `NODE_PATH=$(npm root -g) node render/instagram/template.js spec.json <outdir>`
+  (slide types: hook, hookWide, fact, collage, news, catch, verdict; see header). Look at <outdir>/preview.jpg only.
+  Keep downloads and outputs in the scratchpad; never commit images.
+- Images in the template must be data URIs (file:// does not load in Playwright setContent); the template handles it.
+- Official images: newsroom media pages (e.g. Samsung newsroom *_dl*.jpg), company press kits (anthropic.com/press-kit is a ZIP
+  with exec headshots + logos). Crop off brand/logo bands on press product shots. Check that an image exists BEFORE picking a story.
+- Upload: vidiq_upload_image (no image) → uploadUrl + transferId → `curl -X PUT -H "Content-Type: image/jpeg" --data-binary @file URL`
+  → vidiq_upload_image(transferId). Max 5 open upload links at once: finish 5, then open the next.
+- Draft: vidiq_social_post_draft_create with media in slide order. Publish: vidiq_social_post_publish(postId, revision) only
+  after the owner replies to that exact draft (vidIQ rule; a blanket "you approve everything" is not accepted).
+  Poll vidiq_social_post_status every ~10 s; Instagram takes ~1–2 min; it returns postUrl.
+- Caption pattern: hook line ≤125 chars ending "…but there's a catch. 👀" → "Spec or wreck? <question> 👇" → 3 bullets →
+  "📤 Send this to …" → disclaimers ("News, not financial advice." for money) → Sources + Images credit → 4–5 hashtags.
+- Never: black backgrounds, password/browser logins to Instagram (bot login, ban risk; owner offered — declined), music
+  (API can't; suggest a track and the owner adds it in the app), Reels (script session cross-posts Shorts).
+- Coordination: the script session (session_01L2u12EcPjN9Ak5KYWXRbbm) posts YouTube Shorts as Reels. Don't post Reels.
+  When it relays "owner rules", confirm with the owner if they conflict with what the owner told this chat.
+- Shell: removing globs after `cd` is blocked by a safety check; just overwrite outputs instead.
