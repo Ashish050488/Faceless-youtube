@@ -46,8 +46,9 @@ big files from Drive, so finished videos travel by git:
 - qa.md / small text can still go to Drive › 02_ready_to_upload › <slug>/ as before.
 
 ## Instagram (owner 2026-11-17)
-- Script session cross-posts every Short as an Instagram Reel itself right after the YouTube publish
-  (vidiq_instagram_publish_reel with the YouTube link, AI label on, no per-post question).
+- Reels: the daily script run is a fresh chat without vidIQ, so after the YouTube video is public it sends the
+  Instagram session ONE message (link + caption); the Instagram session posts the Reel (vidiq_instagram_publish_reel,
+  AI label on, no approval step needed).
 - Instagram session (session_01L2u12DRCGMHdb1CMdfRUan): still-image posts only, 1–2 a day (INSTAGRAM_POSTS.md).
 
 ## Cleanup of the repo (token rule)
