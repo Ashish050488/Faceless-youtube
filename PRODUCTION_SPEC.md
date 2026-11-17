@@ -100,3 +100,64 @@ overall 135–138 wpm, sentence gap 0.66–0.70 s, comma gap 0.28–0.54 s, tail
 
 ## 8. LOCKED items (owner-approved — never change without the owner)
 - Voice + timing + mix (§7). · Watermark (state/brand.md → Watermark). · Logo v5. · Palette v4.
+
+## 9. NO ON-SCREEN CAPTIONS (owner 2026-11-16)
+- Do not burn subtitles/captions into the video. On-screen text = only the designed key words/numbers (≤ 6 words).
+- Still deliver captions.srt (script-aligned) — the script session uploads it to YouTube as closed captions
+  (viewer-toggled; helps accessibility and search). It is never rendered into the picture.
+
+## 10. RENDER-CHECK LOOP — every image, every scene (owner: "check by zooming in and zooming out")
+The video session must LOOK at its own output, scene by scene, before moving on. For each scene:
+1. Render 3 stills: first frame, middle frame, last frame (plus every frame where a new element lands).
+2. Inspect each still at three zoom levels and fix anything that fails:
+   - **Zoom in (200 % crop of the product and text):** sharp edges, no pixelation/compression blocks, no cut-out
+     halos or fringes, no jagged text, shadows soft and correctly placed, no stray pixels, no clipping at frame edges.
+   - **100 % (full 1080×1920):** composition balanced, nothing touching safe-zone lines, alignment on the grid,
+     spacing consistent, only one accent colour, watermark present and clear.
+   - **Zoom out (phone size 360×640 and 180×320 thumbnail):** the key word/number readable in under 1 second,
+     the product recognisable, nothing important too small, contrast strong enough.
+3. Check motion on a 4-frame strip around each animation: easing visible (not linear), no jump/pop, no jitter.
+4. Log in qa.md per scene: "scene N — in/100/out/motion: pass | fixed: <what>". Never mark pass without looking.
+5. After the full render: contact sheet at 2 fps + re-check the 5 weakest scenes again at all zoom levels.
+Fix-and-re-render until every scene passes. Speed is never a reason to skip this.
+
+## 11. DETAIL UPGRADES — apply everywhere (owner wants "super detailed")
+- Product images: subtle rim light / edge highlight matching the scene light direction; reflection or contact shadow
+  on the "floor"; micro-rotation drift (±1–2°) while on screen; focus pull (background blur 0 → 6 px) when the product enters.
+- Close-ups: when narration names a part (slot, port, button, camera), do a smooth zoom-in to that exact area of the
+  real photo with a thin marigold callout ring that draws on; hold ≥ 1.2 s; zoom back out.
+- Numbers: digits roll individually, the unit animates in after, a soft glow pulse on landing.
+- Text: per-word reveal with 70 ms stagger, tiny overshoot (1.02 → 1.0); exits blur + slide 16 px.
+- Backgrounds: never flat — slow-moving soft gradient or grain, 1–2 % parallax against the product.
+- Transitions: camera move or shape match; add a 3–4 frame motion blur on fast moves.
+- Every scene has at least 3 animated details happening (e.g. product drift + light sweep + label reveal).
+- Sound: each detail that moves has a matching soft SFX; nothing moves silently on a beat.
+
+## 12. MATCH TECHY OR NOT'S LOOK — measured 2026-11-16 (OVERRIDES any older rule above that conflicts)
+Measured on its top Shorts (Bose 1.29M, Logitech 1.66M), 1 fps frames:
+- **Centred composition.** Content centre sits at 0.49–0.52 of the frame width with little drift (sd 0.04–0.08).
+  → Our rule: one vertical centre axis. Product centred. Headline centred, or a left-aligned block whose whole
+  box is centred. Content centre-x must measure 0.47–0.53 on every frame (the video session measures it in QA).
+- **NO sideways camera moves / no "infinite canvas" pans** (they made our last Short feel shifted left/right).
+  Allowed motion: scale in place (push-in/zoom on the centre or on the named detail), vertical slides, morphs,
+  object continuity (one object becomes the next, like his earbud wire), crossfades, 1-frame flips on the beat.
+- **FLAT SOLID BACKGROUNDS. No grain, no texture, no gradient, no vignette** (owner: textured backgrounds look bad).
+  Bose: one flat light colour for ~93 % of frames. Logitech: flat black ~45 % / flat light grey ~40 %, chosen to fit
+  the product. → Ours: paper #FAF8F5 as the main flat background; ink #151312 flat for dark products/drama beats;
+  you may switch the flat background colour to suit the product's colour. Background colour changes happen as a
+  clean hard flip on a beat or a vertical wipe — never a fade through grey.
+- **Real images dominate**: large centred cut-outs on the flat background (Bose style) and full-bleed official renders
+  (Logitech style); lifestyle/press photos as rounded cards, centred. Product occupies 40–70 % of frame width.
+- **Text**: big bold headline (1–3 words) in the upper part; small secondary line under it; no captions; no tiny labels.
+- **Content vertical span** on the benchmark: ~9 %–75 % of height. Keep text inside our safe frame (y 270–1230);
+  the product image itself may extend down to ~75 % of height (y 1440) as he does, but never text there.
+- **His animation vocabulary to copy and do better**: object continuity (wire → next scene), strike-through lists,
+  odometer price, swinging price tag, UI-card mock (modes toggling), timeline/thermometer, side-by-side comparison
+  cards, logo end card. We add: zoom-to-detail with callout ring, per-word reveals, SFX on every event.
+- **Overrides**: §2 "Texture: film grain…vignette" → REMOVED. §11 "Backgrounds: never flat…gradient or grain" →
+  REPLACED by flat solid backgrounds. brand.md "camera pans on one canvas" → REPLACED by in-place motion above.
+
+## 13. EXPORT SIZE (owner 2026-11-16: last render was 93 MB — far too big)
+- Shorts: **720×1280**, 30 fps, H.264 High, CRF 23–26 with maxrate 2.0 Mbps / bufsize 4 Mbps, AAC 128 kbps,
+  +faststart. Target **≤ 20 MB for ~90 s** (graphics-heavy max ~20 MB). Check size before upload.
+- Long videos later: 1920×1080, CRF 23, maxrate 6 Mbps.
