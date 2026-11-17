@@ -19,7 +19,11 @@ monetisation guidance regularly (state/policy_notes.md) and follow it; nothing r
        (tech news, new tech, gadgets) → "Spec or Wreck" last. No channel-wide keyword list needed (benchmark has none).
      - Description: hook line → 1–2 short paragraphs (what it is, the twist, price) → "Sources:" with names + links →
        credits → 6–8 hashtags at the end (#Brand #Model #Category #Tech #SpecOrWreck), first 3 = most searchable.
-     - Title: brand + "Just Made/Made" + surprising number or twist (his top 12 all follow this).
+     - Title: brand + "Just Made/Made" + surprising number or twist (his top 12 all follow this). Add ONE CAPS word
+       and ONE emoji when it fits (competitor hits: "NVIDIA Built a Supercomputer With NO Wires?! 🤯"). The claim must be
+       true and shown in the video — never misleading. ≤ 60 characters.
+     - Length: Shorts 45–60 s (100–130 words). Topic priority when news allows: NVIDIA/GPUs, Apple, AI hardware/robots,
+       "world's biggest/smallest/first", price shocks — all from big brands. Competitor data: state/competitor_watch/competitors.md.
    - Write factsheet.md, script.md, cues.json, metadata.json → commit to repo (scripts/<slug>/).
    - cues.json is a SHOT-BY-SHOT visual spec (owner 2026-11-17: "put in the script what to use"): for every spoken
      beat: exact anchor words, background colour, which real image (asset # + crop/scale/position), which 2-D object

@@ -38,10 +38,7 @@
    "Sat",
    "Sun"
   ],
-  "target_s": [
-   75,
-   150
-  ]
+  "target_s": [45, 60]
  },
  "upload_mode": "semi_auto",
  "drive_handoff_folder_id": null

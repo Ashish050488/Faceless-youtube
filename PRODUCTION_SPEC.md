@@ -52,7 +52,7 @@ Benchmark for Shorts = Techy or Not (measured: state/competitor_watch/). Long vi
 - Kokoro af_heart 0.795: `audio/narrate.py <script.md> af_heart 0.795 out.wav 0.30 0.42` (applies config/pronunciations.json).
 - Mix: `audio/mix.sh voice.wav bed.wav out.mp3` (bed −11 dB + sidechain, −14 LUFS, TP −1, keeps full tail).
 - Verify: `audio/measure_timing.py file` → articulation 168–180 wpm, sentence gap 0.60–0.75 s, tail ≥ 2 s, last words present.
-- Script for the ear: short sentences, contractions, one natural reaction per beat, numbers as spoken. 160–210 words per Short.
+- Script for the ear: short sentences, contractions, one natural reaction per beat, numbers as spoken. **100–130 words per Short (45–60 s)** — owner 2026-11-17, competitor data: fastest-growing faceless channel ≈ 43 s.
 - Only change: add new words to config/pronunciations.json (print phonemes for every brand/term first).
 
 ## 6. Export
