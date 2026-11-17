@@ -1,0 +1,26 @@
+{
+ "id":"sow002-oppo-watch-5","format":"short","export":"720x1280 H.264 CRF 24, maxrate 2M (PRODUCTION_SPEC §13)",
+ "style":"PRODUCTION_SPEC §12 (Techy-matched): CENTRED composition, FLAT solid backgrounds (no grain/texture/gradient), no sideways pans, no captions; watermark bottom-right; logo v5 end card",
+ "background_plan":"paper #FAF8F5 main; ink #151312 for display/brightness + THE CATCH beats (hard flip on the beat); product colour scene for COLOURS (flat colour matching each watch)",
+ "scenes":[
+  {"anchor":"three thousand nits","screen":"3,000 NITS","visual":"ink bg; real watch cut-out centred, screen glows up; number rolls 0→3,000 above it","sfx":"riser + tick"},
+  {"anchor":"hundred and thirty-five dollars","screen":"~$135","visual":"price tag drops and swings on a string from the watch lug (his swinging-tag move, our colours)","sfx":"thud"},
+  {"anchor":"Oppo Watch 5","screen":"OPPO WATCH 5","visual":"hard flip to paper; hero official image centred, slow push-in, rim light","sfx":"whoosh"},
+  {"anchor":"one point eight five","screen":"1.85\" AMOLED","visual":"zoom into the display on the real photo; marigold callout ring draws on","sfx":"pop"},
+  {"anchor":"nine point two","screen":"9.2 mm","visual":"side-profile image; dimension calipers animate in on the edge (his HP-keyboard measuring move)","sfx":"mechanical click"},
+  {"anchor":"twenty-five grams","screen":"25 g","visual":"watch sits on a minimal scale line; digits roll to 25","sfx":"tick"},
+  {"anchor":"IP sixty-nine","screen":"IP69 · 5 ATM","visual":"water ripple rings expand from the watch (flat graphic), two chips pop","sfx":"water blip"},
+  {"anchor":"FatMax","screen":"FATMAX MODE","visual":"heart-rate zone bar fills to a highlighted band; 'grams burned' counter","sfx":"pulse"},
+  {"anchor":"five colours","screen":"5 COLOURS","visual":"five real colour images line up centred; background flips to each watch's colour as it's highlighted","sfx":"pop x5"},
+  {"anchor":"eight hundred ninety-nine yuan","screen":"¥899 · ¥999","visual":"four watches ¥899 tag; purple steps forward ¥999","sfx":"tick"},
+  {"anchor":"about a week","screen":"~7 DAYS · UP TO 10","visual":"battery bar fills across M T W T F S S","sfx":"fill clicks"},
+  {"anchor":"there's a catch","screen":"THE CATCH","visual":"hard flip to ink, wreck-red stamp drop, 3 px shake","sfx":"thud"},
+  {"anchor":"outdoor workouts","screen":"3,000 → 600 NITS","visual":"brightness number rolls DOWN 3,000→600; screen dims on the real image","sfx":"down-tick"},
+  {"anchor":"about three days","screen":"7 → 3 DAYS","visual":"always-on toggle flips; battery bar drains","sfx":"switch"},
+  {"anchor":"no ECG","screen":"NO ECG","visual":"ECG line draws then gets struck through","sfx":"strike"},
+  {"anchor":"only launching in China","screen":"CHINA ONLY (FOR NOW)","visual":"minimal globe/map outline, China highlighted, rest dims","sfx":"soft hit"},
+  {"anchor":"it's a spec","screen":"SPEC","visual":"paper; logo v5 k snaps upright; 'worth it if' line","sfx":"click"},
+  {"anchor":"or a global launch","screen":"WAIT","visual":"second line in wreck colour","sfx":"soft"},
+  {"anchor":"pretty wild","screen":"","visual":"back to frame-1 composition (ink, watch centred, glow) for a seamless loop","sfx":"riser tail"}
+ ]
+}

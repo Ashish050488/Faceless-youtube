@@ -4,9 +4,18 @@
   "slug": "sow001-retro-song-bird",
   "title": "This $79 Speaker Plays Game Boy Cartridges Like Cassettes",
   "format": "short",
-  "status": "scripted",
+  "status": "discarded (owner, 2026-11-17: not good enough vs benchmark)",
   "scripted_at": "2026-11-16T21:00Z",
   "drive_folder": "11y24N4eBHrSth19vQQl9KVteNmWxmYxs",
   "hypothesis": "Price + nostalgic paradox title beats benchmark unknown-brand median (16.8K views)."
+ },
+ {
+  "id": null,
+  "slug": "sow002-oppo-watch-5",
+  "title": "Oppo Made a $135 Watch With a 3,000-Nit Screen",
+  "format": "short",
+  "status": "scripted",
+  "scripted_at": "2026-11-17T06:00Z",
+  "hypothesis": "Big brand + 'Made' + price + number title beats benchmark median 16.8K."
  }
 ]
