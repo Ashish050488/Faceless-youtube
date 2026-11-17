@@ -16,7 +16,8 @@ ANALYTICS = "https://youtubeanalytics.googleapis.com/v2/reports"
 def _req(method, url, *, oauth=False, params=None, retries=4, **kw):
     params = dict(params or {})
     headers = kw.pop("headers", {})
-    if oauth:
+    import os
+    if oauth or not os.environ.get("YT_API_KEY"):  # no API key -> use the OAuth token (same quota)
         headers["Authorization"] = f"Bearer {access_token()}"
     else:
         params["key"] = env("YT_API_KEY")
