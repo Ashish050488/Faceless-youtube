@@ -54,7 +54,11 @@ Benchmark for Shorts = Techy or Not (measured: state/competitor_watch/). Long vi
 - Only change: add new words to config/pronunciations.json (print phonemes for every brand/term first).
 
 ## 6. Export
-- Shorts 720×1280, 30 fps, H.264 High, CRF 23–26, maxrate 2 Mbps / bufsize 4 Mbps, AAC 128 k, +faststart, ≤ 20 MB.
+- Shorts 1080×1920 (owner 2026-11-17: 720p looked blurry next to the benchmark), frames rendered natively at 1080×1920
+  (never upscaled), 30 fps, H.264 High, `-preset slow -tune animation -crf 19`, maxrate 8 Mbps / bufsize 16 Mbps,
+  AAC 160 k, +faststart, ≤ 20 MB (flat graphics compress well: expect ~5–12 MB for 80 s).
+- Why: YouTube re-encodes every upload; what viewers see depends on the uploaded RESOLUTION (a 720p upload is shown
+  at 720p max), not on the file size. Clean flat graphics stay small even at 1080p.
 - Long videos later: 1920×1080, CRF 23, maxrate 6 Mbps.
 
 ## 7. QA — cheap but complete (token rules, CLAUDE.md)
