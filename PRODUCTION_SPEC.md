@@ -66,11 +66,14 @@ Video session, before handoff (write qa.md):
 Script session: NO video QA (owner 2026-11-17: "no need to verify until I feel a problem"). It only checks sha256,
 then uploads. The video session owns quality. Re-check a video only when the owner reports a problem.
 
-## 8. Reuse — one kit, no per-video renderer (learned 2026-11-17)
-- Build render/kit/ once: data-driven components (Headline, RollingNumber, PriceTag, ProductCutout, CalloutRing,
-  Battery, Calipers, Scale, Sun, MapPin (Natural Earth), Bars, StrikeThrough, CatchStamp, EndCardLogo, Watermark,
-  OverlapCheck). Each new video = cues.json + assets only; the kit renders it. Never write a new 1,000-line renderer.
-- Word timestamps (faster-whisper) place cues automatically.
-- Code checks before any image: no overlapping boxes (text/product/objects/watermark), contrast, every on-screen number
-  string-matches factsheet.md, loudness. Then one contact sheet.
+## 8. Reuse — one kit, small per-video files (learned 2026-11-17 from a working pipeline)
+Pattern (write our own code; don't copy anyone's):
+- render/kit/: small components, 1–8 KB each (Headline, RollingNumber, PriceTag, ProductCutout, CalloutRing, Battery,
+  Calipers, Scale, Sun, MapPin (Natural Earth), Bars, StrikeThrough, CatchStamp, EndCardLogo, Watermark, Stage/Show
+  (enter/exit timing), anim helpers, dyncolor (product image → background/accent)).
+- Per video only: plan.json = named events, each tied to a spoken word (`{"cue":"price","word":"dollars","nth":1,
+  "offset":0.0,"sfx":"tick"}`) + a short composition file that places kit components per event.
+- cues script: faster-whisper word timestamps → cues.json (event → second). The SAME plan/cues drive the SFX mix,
+  so every sound lands on the frame its picture does. No hand timing.
+- QA script renders one still per cue (small) + overlap check in code. No frame-by-frame viewing.
 - Delete the previous video's asset folder when a new job starts.
