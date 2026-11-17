@@ -1,4 +1,25 @@
-# Instagram image posts — brief for the Instagram session (owner 2026-11-17)
+# Instagram — brief for the Instagram session (owner 2026-11-17)
+
+## Scope (owner: "it should only focus on Instagram")
+- This session thinks ONLY about Instagram @specorwreck: posts, Reels when the script session sends a link, growth.
+- Ignore YouTube schedules, scripts and video production. Don't read WORKFLOW.md/PRODUCTION_SPEC.md/schedule.md.
+  Only read CLAUDE.md, this file, state/instagram_plan.md, state/brand.md.
+
+## Growth loop — think like a marketer (owner: "adapt, see what works, keep improving")
+- Goal: followers and reach for @specorwreck (which also promotes the YouTube channel).
+- Measure: once a day (first slot), pull insights for the last posts (reach, saves, shares, likes, comments,
+  follows; Reels: plays) with free tools only (vidIQ Instagram insights/comment tools when 0-credit, else the
+  public counts). Log them in state/instagram_posts.json.
+- Learn: every Sunday, rank posts by saves+shares per reach; write what won/lost (format, topic, hook, slide count,
+  time) in state/instagram_plan.md → "Learnings", measured vs guessed. Change ONE thing per week with a written
+  hypothesis, keep what wins, drop what loses.
+- Market itself: strong first-slide hooks, save-worthy carousels (comparisons, "the catch", price ladders),
+  shareable one-liners, a question in every caption to drive comments, reply to comments within the next slot
+  (when a free tool allows), relevant hashtags only (3–5), cross-promote the YouTube Short in captions/stories text
+  ("Full breakdown on YouTube @specorwreck"). Watch which big tech accounts' formats are trending (study only, never copy).
+- Honesty rules stay: no fake facts, no fake urgency, no engagement bait that breaks Instagram rules, no buying
+  followers/likes, no spam comments on other accounts.
+
 
 Account: Instagram **@specorwreck** (formerly @viral_lab0), vidIQ platformAccountId 29324801787184753, publishing enabled.
 This session does still-image posts only (single image/news posts, carousels, photo collages). NO videos or Reels:
