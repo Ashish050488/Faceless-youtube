@@ -87,5 +87,28 @@
    "slot_time": "20:37",
    "caption_length": "medium"
   }
+ },
+ {
+  "date": "2026-11-17",
+  "slot": "23:23 IST",
+  "topic": "GTA 6 leads The Game Awards 2026 nominees (8, incl. GOTY) two days before launch",
+  "status": "draft, awaiting owner OK",
+  "postId": "5f53b160-a493-4e73-a16a-c2df70c7c059",
+  "revision": "8f38ab78",
+  "slides": 5,
+  "sources": [
+   "https://www.pushsquare.com/news/2026/11/the-game-awards-2026-nominees-revealed-gta-6-up-for-8-awards",
+   "https://www.gematsu.com/2026/11/the-game-awards-2026-nominees-announced"
+  ],
+  "images": "Rockstar Games official artwork (rockstargames.com/VI)",
+  "test_vars": {
+   "format": "story",
+   "cover_angle": "drama/irony",
+   "topic_type": "gaming-launch",
+   "slide_count": 5,
+   "meme": true,
+   "slot_time": "23:23",
+   "caption_length": "medium"
+  }
  }
 ]
