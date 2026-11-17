@@ -20,3 +20,6 @@ render/fonts/
 *.ttf
 *.otf
 *.srt
+
+# small brand files the renderer needs (not media)
+!render/brand/*.png

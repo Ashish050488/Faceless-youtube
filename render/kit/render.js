@@ -55,7 +55,7 @@ let K = null;
 // ---------- layer renderers (component name → draw) ----------
 // each gets (ctx, layer, lt, sc, R) where R holds rects of earlier product layers by id
 const SFX_DEFAULT = { number: [['land', 'tick', 0.8]], stamp: [['at', 'thud', 1.0]], priceTag: [['at', 'thud', 0.5], ['at+0.15', 'swing', 0.5]], callout: [['at', 'pop', 0.4]],
-  battery: [['at', 'fill', 0.3]], calipers: [['at+0.4', 'clamp', 0.7]], calipersV: [['at+0.4', 'clamp', 0.7]], map: [['pins', 'pin', 0.5]], hourglass: [['flipAt', 'flip', 0.7]],
+  battery: [['at', 'blip', 0.3]], calipers: [['at+0.4', 'clamp', 0.7]], calipersV: [['at+0.4', 'clamp', 0.7]], map: [['pins', 'pin', 0.5]], hourglass: [['flipAt', 'flip', 0.7]],
   wordmark: [['snapAt', 'click', 1.0]], loupe: [['at', 'whoosh', 0.3]], dialScale: [['at', 'tick', 0.5]], scale: [['levelAt', 'clunk', 0.6]], sun: [['at', 'shimmer', 0.35]],
   toggle: [['flipAt', 'switch', 0.7]], ecg: [['at', 'beep', 0.4]], waterDrop: [['at+0.35', 'drip', 0.7]], calendar: [['at', 'flip', 0.6]], bars: [['bars', 'blip', 0.45]], clock: [['at', 'tick', 0.5]],
   playIcon: [['at', 'pop', 0.4]], motionLines: [['at', 'swish', 0.5]], slider: [['at', 'down', 0.5]], headline: [], label: [], product: [] };
@@ -209,7 +209,7 @@ function overlaps(s, t) {
 async function main() {
   await loadAssets(); K = makeKit({ FPS, IMG, MAP, words, SCR: cues.screen });
   const cv = createCanvas(W, H), ctx = cv.getContext('2d'); instrument(ctx);
-  fs.writeFileSync(path.join(work, 'timeline.json'), JSON.stringify(S.map(s => ({ i: s.i, line: s.line, start: +s.start.toFixed(2), end: +s.end.toFixed(2), bg: s.bg, real: !!s.real, xfade: !!s.xfade, endcard: !!s.endcard })), null, 1));
+  fs.writeFileSync(path.join(work, 'timeline.json'), JSON.stringify(S.map(s => ({ i: s.i, line: s.line ?? -1, start: +s.start.toFixed(2), end: +s.end.toFixed(2), bg: s.bg, real: !!s.real, xfade: !!s.xfade, endcard: !!s.endcard })), null, 1));
   fs.writeFileSync(path.join(work, 'cues.json'), JSON.stringify(CUE, null, 1));
   fs.writeFileSync(path.join(work, 'counters.json'), JSON.stringify(COUNTERS, null, 1));
   const cat = S.find(s => (s.layers || []).some(l => l.type === 'stamp')), ver = S.find(s => (s.layers || []).some(l => l.type === 'wordmark' && l.snapAt !== undefined && !s.endcard));
@@ -228,7 +228,7 @@ async function main() {
       if (tx.contrast !== null && tx.contrast < (tx.px >= 60 ? 3 : 4.5)) issues.push({ t: tx.t, scene: tx.scene, issue: `low contrast ${tx.contrast}`, text: tx.text }); }
     const numbers = [...new Set([...TEXTS.filter(x => seenN[x.scene + '|' + x.text] >= 3).map(x => x.text.trim()), ...COUNTERS.map(c => c.name)].filter(x => /\d/.test(x)))];
     const dedup = []; const seen = new Set(); for (const i of issues) { const k = i.scene + i.issue + (i.text || ''); if (!seen.has(k)) { seen.add(k); dedup.push(i); } }
-    fs.writeFileSync(path.join(work, 'check.json'), JSON.stringify({ frames: n, issues: dedup, warnings: warnings.filter((w, i, a) => a.findIndex(v => v.scene === w.scene && v.text === w.text) === i), onscreen_numbers: numbers, counters: COUNTERS }, null, 1));
+    fs.writeFileSync(path.join(work, 'check.json'), JSON.stringify({ frames: n, issues: dedup, warnings: warnings.filter((w, i, a) => a.findIndex(v => v.scene === w.scene && v.text === w.text) === i), onscreen_numbers: numbers, counters: COUNTERS, headlines: S.flatMap(s => (s.layers || []).filter(l => l.type === 'headline').map(l => { const a = tref(s, l.at, 0.05), b = Math.min(l.until !== undefined ? tref(s, l.until) : s.dur, s.dur); return { text: l.text, hold: +(b - a).toFixed(2) }; })) }, null, 1));
     console.log(JSON.stringify({ frames: n, issues: dedup.length, numbers: numbers.length })); return;
   }
   if (stillsArg) {

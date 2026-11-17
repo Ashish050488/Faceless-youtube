@@ -11,25 +11,40 @@ If a scene needs a new object, add it once to `core.js` plus one line in the `DR
 <work>/wm_light.png wm_dark.png
 ```
 
-## Commands (in order; check runs before anyone looks at an image)
+## Commands
+Normally run through `render/kit/build.sh voice|check|stills|video <slug> <work>` (see render/README.md). Raw:
 ```
-node render/kit/render.js <work> cues.kit.json --check          # layout/contrast → check.json (+ timeline/sfx/events/counters)
-python render/kit/check.py <work> scripts/<slug>/factsheet.md   # PASS/FAIL: layout, numbers vs factsheet, holds, cuts
-node render/kit/render.js <work> cues.kit.json --stills cues --overlay   # optional; tile into ONE contact sheet
-node render/kit/render.js <work> cues.kit.json                  # frames.mp4 (1080×1920, 30 fps, silent)
-python -m audio.bed <slug> <work>/timeline.json <work>/events.json <work>/sfx.json bed.wav --sections sections.json
-audio/mix.sh voice.wav bed.wav mix.mp3 → mux + export (§13) → python render/kit/check.py <work> factsheet.md video.mp4
+node render/kit/plan.js <work>/words.json plan.json cues.json          # cues script: event → second (render.js does this too)
+node render/kit/render.js <work> cues.kit.json --check                 # OverlapCheck/contrast → check.json (+ timeline/sfx/events/counters/cues)
+python render/kit/check.py <work> scripts/<slug>/factsheet.md [video]  # PASS/FAIL summary
+node render/kit/render.js <work> cues.kit.json --stills cues           # 3 stills per scene → ONE contact sheet
+node render/kit/render.js <work> cues.kit.json                         # frames.mp4 (1080×1920, 30 fps, silent)
 node render/kit/thumb.js <work> cues.kit.json thumbnail.jpg
 ```
-`check.py` fails on: text outside y 270–1240 or off frame; content below y 1240 or in the watermark box
-(x 760–900, y 1240–1340); contrast < 3 (≥ 60 px) or < 4.5 (smaller); any on-screen number missing from
-factsheet.md (a rounded decimal display passes: "27 h" for 27.08); counter hold < 1.2 s; hard cuts outside
-8–12.5 per 75 s; with a video: loudness outside −15 ± 1.5 LUFS, true peak > −1 dBTP, size ≥ 20 MB.
-Text right of x 900 (where the Shorts UI sits) is a warning only.
+**OverlapCheck.** Every visible layer is drawn alone at ¼ scale, and the opaque cells of each pair are compared,
+watermark included.
+- Not counted: soft shadows and glows (alpha ≤ 128).
+- Exempt: a layer attached to its product with `of` / `under`, and any layer marked `"overlap": true`. Use that only
+  for deliberate stacking, e.g. a number inside its clock ring.
+- No safe-zone rules (owner 2026-11-17): full-frame layout, also for Instagram.
+
+**check.py fails on:**
+- any overlap, or text off frame;
+- contrast below 3 (text ≥ 60 px) or below 4.5 (smaller text);
+- an on-screen number missing from factsheet.md (a rounded decimal display passes: "27 h" for 27.08);
+- a counter hold under 1.2 s, or a headline on screen over 4 s;
+- hard cuts outside 8–12.5 per 75 s;
+- with a video: loudness outside −15 ± 1.5 LUFS, true peak above −1 dBTP, size ≥ 20 MB.
+
+It warns (does not fail) on mean frame change outside 2.5–6 or a calm hold over 2.5 s.
+
+**Components** live in `components/` (one file per group, 1–8 KB each): motion, product, text, objects, health,
+measure, map, screen. core.js loads them in that order.
 
 ## cues.kit.json
 ```json
-{ "slug": "...", "screen": [[u,v]x4],           // optional: screen quad of the hero cut-out (fractions)
+{ "slug": "...", "plan": "plan.json",            // events tied to words (path relative to this file)
+  "screen": [[u,v]x4],                           // optional: screen quad of the hero cut-out (fractions)
   "thumb": {"img","bg","big","word","tag","w"},
   "palette": {"name": "#hex"},                   // optional extra backgrounds
   "scenes": [ { "line": 3, "from": "under", "xfade": true, "bg": "cool", "real": true,
@@ -42,11 +57,12 @@ Text right of x 900 (where the Shorts UI sits) is a warning only.
 - `bg`: paper · cool · lav · blush · sand, or a hex value. Never black.
 - **Time refs** (`at`, `until`, `show`, `hide`, `flipAt`, `snapAt`, pins, …) are measured from the scene start
   and can be written as:
+  - `"@cue"` or `["@cue", 0, offset]`: an event from plan.json (preferred, because the same event drives its SFX);
   - a number of seconds;
   - `"word"`: the next match from the scene's first word;
   - `["word", nth, offset]`: e.g. `["twenty", 0, -0.2]`.
 - **Common layer keys:** `show` / `hide` set the window the layer is visible in. `sfx: false` mutes the layer's
-  default SFX. `id` names a product so other layers can attach to it with `of` / `under`.
+  default SFX. `overlap: true` exempts the layer from OverlapCheck. `id` names a product so other layers can attach to it with `of` / `under`.
 
 | type | keys |
 |---|---|
@@ -69,7 +85,7 @@ Text right of x 900 (where the Shorts UI sits) is a warning only.
 
 - **Watermark:** added automatically on every scene except the end card. Right edge x 880, bottom y 1330,
   64 px tall, 90 % opacity; dark or light version picked from the background.
-- **SFX:** generated automatically: one default per component, plus cuts, crossfade moves and the loop cut. Add
-  more per scene with `sfx`.
-- **Worked example:** `examples/sow004.cues.json` reproduces the delivered sow004 timeline exactly and passes
-  `check.py`.
+- **SFX:** generated automatically: one default per component, cuts, crossfade moves, the loop cut, and every
+  plan event's `sfx`. Add more per scene with `sfx`.
+- **Worked example:** `examples/sow004.cues.json` plus `examples/sow004.plan.json` is sow004 re-laid out so that
+  nothing touches. It passes `check.py`.
