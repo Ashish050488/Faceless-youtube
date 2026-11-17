@@ -38,5 +38,30 @@
     "postId": "600c3808-a8ed-4983-a65a-c53efbb392d6",
     "permalink": "https://www.instagram.com/p/Df2ABNLkSpm/",
     "status": "deleted by owner: too little info (1-3 words per slide). Replaced by story format."
+  },
+  {
+    "date": "2026-11-17",
+    "slot": "17:11 IST (redo, posted ~13:25 UTC)",
+    "type": "carousel",
+    "topic": "Jensen Huang out amid affair & spy reports; Nvidia earnings tonight without him",
+    "test_vars": {
+      "format": "story",
+      "cover_angle": "drama",
+      "topic_type": "people+money",
+      "slides": 6,
+      "meme_slide": true,
+      "caption": "long (4 paragraphs)"
+    },
+    "sources": [
+      "NVIDIA newsroom + SEC 8-K",
+      "Al Jazeera",
+      "NBC News",
+      "CNBC",
+      "NVIDIA IR",
+      "Barchart"
+    ],
+    "images": "NVIDIA newsroom",
+    "postId": "9a8d5c71-7669-43d4-adf0-5127a5b56759",
+    "permalink": "https://www.instagram.com/p/Df2B5pikXAo/"
   }
 ]
