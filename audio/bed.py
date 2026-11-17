@@ -68,6 +68,8 @@ def synth(kind, rng):
         tt = t(0.08); return (np.sin(2 * np.pi * 2200 * tt) * np.exp(-tt * 120) + rng.uniform(-1, 1, len(tt)) * np.exp(-tt * 300) * 0.5) * 0.5
     if kind == "drain":
         tt = t(0.5); return np.sign(np.sin(2 * np.pi * (700 - 500 * tt / 0.5) * tt)) * np.exp(-tt * 4) * 0.12
+    if kind == "zip":       # fast data stream
+        tt = t(0.35); return np.sign(np.sin(2 * np.pi * (900 + 2600 * tt / 0.35) * tt)) * np.exp(-tt * 6) * np.sin(np.pi * tt / 0.35) * 0.14
     if kind == "pin":
         tt = t(0.3); return (np.sin(2 * np.pi * 880 * tt) * 0.5 + np.sin(2 * np.pi * 1320 * tt) * 0.3) * np.exp(-tt * 9) * 0.4
     return base_synth(kind, rng)
