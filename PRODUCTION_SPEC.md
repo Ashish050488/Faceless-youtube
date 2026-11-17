@@ -64,3 +64,12 @@ Video session, before handoff (write qa.md):
   (200 % crop + 100 % + phone-size tiled into one image). Fix → re-render → re-check only the changed scenes.
 Script session: NO video QA (owner 2026-11-17: "no need to verify until I feel a problem"). It only checks sha256,
 then uploads. The video session owns quality. Re-check a video only when the owner reports a problem.
+
+## 8. Reuse — one kit, no per-video renderer (learned 2026-11-17)
+- Build render/kit/ once: data-driven components (Headline, RollingNumber, PriceTag, ProductCutout, CalloutRing,
+  Battery, Calipers, Scale, Sun, MapPin (Natural Earth), Bars, StrikeThrough, CatchStamp, EndCardLogo, Watermark,
+  SafeZoneOverlay). Each new video = cues.json + assets only; the kit renders it. Never write a new 1,000-line renderer.
+- Word timestamps (faster-whisper) place cues automatically.
+- Code checks before any image: text boxes inside the safe zone / above y 1240, contrast, every on-screen number
+  string-matches factsheet.md, loudness. Then one contact sheet.
+- Delete the previous video's asset folder when a new job starts.
