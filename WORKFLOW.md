@@ -8,6 +8,10 @@ monetisation guidance regularly (state/policy_notes.md) and follow it; nothing r
    - Verify every fact with 2 independent sources (primary source when reachable). No unconfirmed leaks.
    - Pull real keywords via the YouTube API: tags of the top recent videos on the topic → title/tags/description.
    - Write factsheet.md, script.md, cues.json, metadata.json → commit to repo (scripts/<slug>/).
+   - cues.json is a SHOT-BY-SHOT visual spec (owner 2026-11-17: "put in the script what to use"): for every spoken
+     beat: exact anchor words, background colour, which real image (asset # + crop/scale/position), which 2-D object
+     (shape, motion, data source), on-screen text (1–3 words), SFX, transition. The video session builds it, not invents it.
+   - Check pronunciation of every brand/term (print phonemes); extend config/pronunciations.json.
    - Upload the package to Drive: Faceless Channel/01_scripts/<slug>/ (scripts stay in Drive permanently).
    - Write shotlist.md: (A) real images/clips the script session found itself (direct URLs from page code),
      (B) a "PLEASE GET" list for the owner — anything blocked for automation (Kickstarter, logins, bot checks),

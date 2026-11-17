@@ -1,0 +1,15 @@
+{
+ "_note": "Misaki/Kokoro US phonemes (A=eɪ, O=oʊ, I=aɪ, W=aʊ, Y=ɔɪ). Applied automatically by audio/narrate.py. Add every brand/term the voice gets wrong; verify by printing phonemes.",
+ "Oppo": "ˈOpO",
+ "OPPO": "ˈOpO",
+ "AMOLED": "ˈAmOlɛd",
+ "OLED": "ˈOlɛd",
+ "Xiaomi": "ʃˈWmi",
+ "Huawei": "wˈɑwA",
+ "Nvidia": "ɛnvˈɪdiə",
+ "NVIDIA": "ɛnvˈɪdiə",
+ "Asus": "ˈAsus",
+ "ASUS": "ˈAsus",
+ "Realme": "ɹiˈælmi",
+ "FatMax": "fˈætmæks"
+}

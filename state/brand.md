@@ -164,8 +164,9 @@ Every element gets an entrance, a life while on screen, and an exit. Nothing pop
 ## Watermark — LOCKED (owner approved 2026-11-16; replaces the "SoW Nº001" tag; do not change)
 - Mini logo "s w" (w tipped 18°, wreck red #E5484D). s = ink #151312 on paper scenes, paper #FAF8F5 on ink scenes.
 - Files: Drive › Faceless Channel › brand_assets › watermark_on_light.png / watermark_on_dark.png (transparent).
-- Shorts 1080×1920 (owner moved it to the bottom, 2026-11-16): bottom-right corner of the safe frame — right edge
-  x = 880, bottom edge y = 1220, height 64 px, opacity 90 %. (No caption strip — removed by owner.)
+- Shorts 1080×1920 (owner 2026-11-17: "shift it way below, it sometimes overlaps"): BELOW the content area —
+  right edge x = 880, bottom edge y = 1330 (top ≈ 1266), height 64 px, opacity 90 % (720×1280: right x 587, bottom y 887, 43 px).
+  Reserved box: nothing else may enter x 760–900, y 1240–1340 (1080 scale). All content (product, objects, text) ends at y 1240.
   Title zone stays at y 270–560. (Lower than y 1230 or right of x 900 is covered by YouTube's UI.) Long videos 1920×1080: top-left, x = 48, y = 40, height 56 px.
 - On every frame except the end card (the full logo animation replaces it). Switches light/dark with the scene background
   via a 150 ms crossfade. No animation otherwise — it stays still and quiet.

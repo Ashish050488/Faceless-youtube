@@ -13,6 +13,14 @@ GAP_LO, GAP_HI = float(sys.argv[5]), float(sys.argv[6])
 lines = [l.strip() for l in open(src).read().split("\n")
          if l.strip() and not l.startswith(("#", "[", "v3", "Facts", "Pauses", "~"))]
 sentences = [s for l in lines for s in re.split(r"(?<=[.?!])\s+(?=[A-Z])", l)]
+# brand/term pronunciation fixes (config/pronunciations.json) -> misaki inline phoneme syntax [word](/ipa/)
+import json as _json, pathlib as _pl
+_pron = {k: v for k, v in _json.loads((_pl.Path(__file__).resolve().parent.parent / "config" / "pronunciations.json").read_text()).items() if not k.startswith("_")}
+def _fix(s):
+    for w, ipa in _pron.items():
+        s = re.sub(rf"(?<![\[\w]){re.escape(w)}(?![\w\]])", f"[{w}](/{ipa}/)", s)
+    return s
+sentences = [_fix(s) for s in sentences]
 pipe = KPipeline(lang_code="a")
 rng = np.random.default_rng(11)
 PAD = int(SR * 0.04)          # keep 40 ms around speech so consonants/breaths aren't clipped

@@ -150,7 +150,7 @@ Measured on its top Shorts (Bose 1.29M, Logitech 1.66M), 1 fps frames:
   (Logitech style); lifestyle/press photos as rounded cards, centred. Product occupies 40–70 % of frame width.
 - **Text**: big bold headline (1–3 words) in the upper part; small secondary line under it; no captions; no tiny labels.
 - **Content vertical span** on the benchmark: ~9 %–75 % of height. Keep text inside our safe frame (y 270–1230);
-  the product image itself may extend down to ~75 % of height (y 1440) as he does, but never text there.
+  all content now ends at y 1240 (watermark sits below it — owner 2026-11-17).
 - **His animation vocabulary to copy and do better**: object continuity (wire → next scene), strike-through lists,
   odometer price, swinging price tag, UI-card mock (modes toggling), timeline/thermometer, side-by-side comparison
   cards, logo end card. We add: zoom-to-detail with callout ring, per-word reveals, SFX on every event.
@@ -186,3 +186,27 @@ These are hard requirements for every Short from sow002 on:
 - Objects sit next to/around the REAL product image (which stays ≥ 60 % of runtime); they never replace it.
 - Style: flat 2-D, ink #151312 outlines 6–8 px at 1080 w (4–5 px at 720 w), fills from palette v4, round caps/joins,
   springy entrance, one SFX per object action.
+
+## 16. CLEAN VISUALS — research base (Mayer, cognitive theory of multimedia learning; owner 2026-11-17 "keep improving")
+Source: Mayer's research-based principles (summary hosted by UNH; OSU / U Toronto course pages). Evidence counts are
+from Mayer's own review.
+- **Coherence** (18 of 19 tests): remove anything that doesn't carry the point — no decorative extras, no background
+  texture, no second object competing with the main one. One idea per scene.
+- **Signaling** (26 of 28): point at what matters — callout ring, underline, arrow, colour on the ONE key thing.
+- **Redundancy** (8 of 12): narration + graphic beats narration + graphic + the same words as text → no captions,
+  1–3 words max (the number/keyword), never the full spoken sentence on screen.
+- **Spatial contiguity** (9 of 9): the label/number sits right next to the part it describes (e.g. "9.2 mm" on the
+  calipers at the case edge), not in a far headline.
+- **Temporal contiguity** (8 of 8): the visual lands on the word (±2 frames) — already in our word-sync rule.
+- **Segmenting / one thing at a time**: reveal parts in sequence, not all at once.
+
+## 17. ACCURACY OF GRAPHICS (owner 2026-11-17: "map was wrong")
+- Maps/flags/shapes must be REAL data, never a generic globe with a random pin: use Natural Earth (public domain)
+  1:110m country shapes (or the 1:50m for close-ups), equirectangular or Robinson projection; the country in question
+  filled (marigold), others stone #8C847C at 25 %, pin at the country's real centroid. Same rule for any chart:
+  bars/sizes to scale, real ratios.
+- Product facts drawn as objects (sizes, counts, colours) must match factsheet.md — 5 colours = the 5 real colours.
+
+## 18. PRONUNCIATION
+- config/pronunciations.json is applied automatically by audio/narrate.py (misaki inline phonemes). Before rendering,
+  print phonemes for every brand/model/term in the script; anything wrong → add to the JSON (script session owns it).
