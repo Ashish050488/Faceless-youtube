@@ -11,6 +11,7 @@
 //   {"type":"catch",   "icon":"question", "big":"PRICE NOT SET", "sub":"Final price can miss the range", "logo":"/abs/logo.png"},
 //   {"type":"verdict", "word":"Would you buy?", "sub":"Send this to a friend who would 📤"}
 // ]}
+// PEOPLE PHOTOS: set "portrait":true on fact slides (tall card, whole head visible). Never put a face in the wide card.
 // bg: paper | lav | blush (never black). icon: tag scale camera battery cal noscreen shares question chart.
 // cal takes "calText":"19". Every post needs at least one official image (press render, press-kit logo/headshot).
 const { chromium } = require('playwright');
@@ -50,12 +51,12 @@ const logoImg = (f, w, top) => f ? `<div class="c" style="top:${top}px"><img src
 const brand = px => `<span style="font-weight:900;font-size:${px}px;letter-spacing:-0.04em">spec <span style="color:${C.ember}">or</span> wrec<span style="display:inline-block;transform:rotate(18deg);transform-origin:0 100%">k</span></span>`;
 
 const T = {
-  hook: s => page(s.bg, `${card(s.image, 300, 70, 480, 600, s.pos || '50% 25%')}
+  hook: s => page(s.bg, `${card(s.image, 300, 70, 480, 600, s.pos || '50% 8%')}
     <div class="c h" style="top:720px;font-size:${s.bigPx || 240}px;color:${C.ember}">${s.big}</div>
     <div class="c h" style="top:960px;font-size:110px">${s.word || ''}</div>${logoImg(s.logo, 420, 1110)}`),
   hookWide: s => page(s.bg, `<div class="c h" style="top:100px;font-size:150px">${s.word || ''}</div>
     ${card(s.image, 70, 300, 940, 680, s.pos)}<div class="c h" style="top:1030px;font-size:${s.bigPx || 200}px;color:${C.ember}">${s.big}</div>`),
-  fact: s => page(s.bg, `${s.image ? card(s.image, 90, 90, 900, 580, s.pos) : ''}
+  fact: s => page(s.bg, `${s.image ? (s.portrait ? card(s.image, 280, 60, 520, 640, s.pos || '50% 8%') : card(s.image, 90, 90, 900, 580, s.pos)) : ''}
     <div class="c row" style="top:${s.image ? 720 : 420}px">${icon(s.icon, s)}<div style="text-align:left">
     <div class="h" style="font-size:${s.bigPx || 190}px;color:${C.ember}">${s.big}</div><div class="h" style="font-size:76px;margin-top:12px">${s.word || ''}</div></div></div>${s.image ? '' : logoImg(s.logo, 480, 150)}`),
   collage: s => page(s.bg, `<div class="c h" style="top:80px;font-size:150px">${s.big}</div><div class="c sub" style="top:245px">${s.sub || ''}</div>
