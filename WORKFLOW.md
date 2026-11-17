@@ -5,6 +5,9 @@ monetisation guidance regularly (state/policy_notes.md) and follow it; nothing r
 
 1. **Script session** (this one)
    - Find the hottest physical-tech news from the last 1–12 h (RSS feeds of major tech sites, then web search).
+   - BRAND RULE (owner 2026-11-17): INTERNATIONAL brands sold worldwide (Apple, Samsung, Google, Sony, HP, Dell,
+     Lenovo, Microsoft, Logitech, Bose, Amazon, Meta, Nothing, Garmin, DJI, GoPro, Razer, Anker, Sonos, Nintendo,
+     Xbox, Canon, Fujifilm…). Must be available (or officially coming) in the US/EU/India. NO China-only launches.
    - Verify every fact with 2 independent sources (primary source when reachable). No unconfirmed leaks.
    - Pull real keywords via the YouTube API: tags of the top recent videos on the topic → title/tags/description.
    - Write factsheet.md, script.md, cues.json, metadata.json → commit to repo (scripts/<slug>/).
