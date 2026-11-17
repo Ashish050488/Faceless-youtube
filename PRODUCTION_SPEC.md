@@ -175,3 +175,14 @@ These are hard requirements for every Short from sow002 on:
 8. Different real image or new crop/angle every scene; never the same framing twice in a row.
 9. Frame 1: product ≥ 60 % width + ≤ 3-word huge title + one accent mark.
 10. QA must report: hard cuts, mean frame change (target 2.5–6), longest calm hold, headline max hold, counter final-hold.
+
+## 15. SHOW, DON'T WRITE (owner 2026-11-17: "use 2-D objects instead of too many words, no captions")
+- On-screen text: max 1–3 words per scene (a number + unit counts as one). Most scenes carry ONE number or ONE word.
+- Every idea is shown with a clean 2-D object/icon drawn in our palette (flat, thick rounded strokes, no gradients), animated:
+  brightness → sun with rays that grow · battery → battery cell filling/draining · thinness → calipers/ruler ·
+  weight → balance/scale · water rating → water drop + ripple rings · heart-rate/fitness → pulse line · price → tag/coin ·
+  launch/region → map pin on a simple globe · time/date → calendar flip · "no X" → icon + strike-through ·
+  sold out → stamp · comparison → two objects on a see-saw/bars.
+- Objects sit next to/around the REAL product image (which stays ≥ 60 % of runtime); they never replace it.
+- Style: flat 2-D, ink #151312 outlines 6–8 px at 1080 w (4–5 px at 720 w), fills from palette v4, round caps/joins,
+  springy entrance, one SFX per object action.
