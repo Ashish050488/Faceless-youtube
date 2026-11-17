@@ -59,26 +59,42 @@ const big = (bg, icon, num, word, sub='') => base(1080,1350,bg,`
   <div class="center h" style="top:640px;font-size:230px;color:${C.ember}">${num}</div>
   <div class="center h" style="top:880px;font-size:96px">${word}</div>
   ${sub?`<div class="center sub" style="top:1000px">${sub}</div>`:''}`);
+const png = n => 'data:image/png;base64,' + fs.readFileSync(path.join(DIR, n + '.png')).toString('base64');
+const alogo = (w) => `<img src="${png('ant_logo')}" style="width:${w}px;display:block;margin:0 auto">`;
+const photo = (n, x, y, w, h, pos = '50% 30%') => `<div class="card" style="position:absolute;left:${x}px;top:${y}px;width:${w}px;height:${h}px"><img src="${img(n)}" style="object-position:${pos}"></div>`;
 const pages = {
-  ant_1: base(1080,1350,C.paper,`
-    <div class="center h" style="top:150px;font-size:170px">ANTHROPIC</div>
-    <div class="center h" style="top:330px;font-size:170px;color:${C.ember}">GOES PUBLIC</div>
-    <div class="center" style="top:600px">${ticker}</div>
-    <div class="center h" style="top:900px;font-size:200px">$1.4T</div>
-    <div class="center sub" style="top:1100px">valuation at top of range</div>`),
-  ant_2: big(C.lav, icons.tag.replace('width="200" height="130"','width="320" height="208"'), '$70–78', 'per share'),
-  ant_3: big(C.paper, shares, '825M', 'shares'),
-  ant_4: big(C.blush, icons.cal.replace('>10<','>19<'), 'NOV 19', 'first trade', 'Price set Nov 18'),
-  ant_5: base(1080,1350,C.blush,`
-    <div class="center" style="top:170px"><span class="h" style="display:inline-block;font-size:110px;color:${C.paper};background:${C.wreck};padding:22px 40px 14px;border-radius:22px;transform:rotate(-4deg)">THE CATCH</span></div>
-    <div class="center" style="top:440px;display:flex;justify-content:center"><svg width="300" height="300" viewBox="0 0 300 300"><circle cx="150" cy="150" r="130" ${S} fill="${C.paper}"/>
+  // 1 HOOK: real face + one shocking number + curiosity gap
+  ant_1: base(1080, 1350, C.paper, `
+    ${photo('dario', 300, 70, 480, 600, '50% 25%')}
+    <div class="center h" style="top:720px;font-size:240px;color:${C.ember}">$1.4T</div>
+    <div class="center h" style="top:960px;font-size:110px">GOES PUBLIC</div>
+    <div class="center" style="top:1110px">${alogo(420)}</div>`),
+  // 2 SECOND HOOK (Instagram re-serves slide 2)
+  ant_2: base(1080, 1350, C.lav, `
+    <div class="center" style="top:110px">${alogo(560)}</div>
+    <div class="center" style="top:260px">${ticker}</div>
+    <div class="center" style="top:600px;display:flex;justify-content:center;align-items:center;gap:30px">${icons.tag.replace('width="200" height="130"', 'width="260" height="170"')}
+      <div class="h" style="font-size:200px;color:${C.ember}">$70–78</div></div>
+    <div class="center h" style="top:850px;font-size:96px">per share</div>`),
+  ant_3: base(1080, 1350, C.paper, `
+    ${photo('dd', 90, 90, 900, 600, '50% 30%')}
+    <div class="center" style="top:740px;display:flex;justify-content:center;align-items:center;gap:50px">${shares.replace('width="300" height="260"', 'width="240" height="208"')}
+      <div style="text-align:left"><div class="h" style="font-size:200px;color:${C.ember}">825M</div><div class="h" style="font-size:80px;margin-top:10px">shares</div></div></div>`),
+  ant_4: base(1080, 1350, C.blush, `
+    ${photo('dario', 90, 90, 900, 560, '50% 22%')}
+    <div class="center" style="top:710px;display:flex;justify-content:center;align-items:center;gap:50px">${icons.cal.replace('>10<', '>19<')}
+      <div style="text-align:left"><div class="h" style="font-size:190px;color:${C.ember}">NOV 19</div><div class="h" style="font-size:80px;margin-top:10px">first trade</div></div></div>`),
+  ant_5: base(1080, 1350, C.blush, `
+    <div class="center" style="top:150px"><span class="h" style="display:inline-block;font-size:110px;color:${C.paper};background:${C.wreck};padding:22px 40px 14px;border-radius:22px;transform:rotate(-4deg)">THE CATCH</span></div>
+    <div class="center" style="top:400px;display:flex;justify-content:center"><svg width="300" height="300" viewBox="0 0 300 300"><circle cx="150" cy="150" r="130" ${S} fill="${C.paper}"/>
       <text x="150" y="205" text-anchor="middle" font-family="Inter Tight" font-weight="900" font-size="170" fill="${C.wreck}">?</text></svg></div>
-    <div class="center h" style="top:800px;font-size:150px;color:${C.wreck}">PRICE NOT SET</div>
-    <div class="center sub" style="top:960px">Final price can land outside the range</div>`),
-  ant_6: base(1080,1350,C.paper,`
-    <div class="center" style="top:430px">${logo(150)}</div>
-    <div class="center h" style="top:680px;font-size:96px">Would you buy?</div>
-    <div class="center sub" style="top:810px">Tell us in the comments 👇</div>`).replace('<div class="wm">s <span class="w">w</span></div>',''),
+    <div class="center h" style="top:760px;font-size:150px;color:${C.wreck}">PRICE NOT SET</div>
+    <div class="center sub" style="top:920px">Final price lands Nov 18 and can miss the range</div>
+    <div class="center" style="top:1100px">${alogo(380)}</div>`),
+  ant_6: base(1080, 1350, C.paper, `
+    <div class="center" style="top:380px">${logo(150)}</div>
+    <div class="center h" style="top:630px;font-size:96px">Would you buy?</div>
+    <div class="center sub" style="top:760px">Send this to a friend who would 📤</div>`).replace('<div class="wm">s <span class="w">w</span></div>', ''),
 };
 (async () => {
   const b = await chromium.launch();

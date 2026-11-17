@@ -32,11 +32,21 @@ Brand and fact rules: INSTAGRAM_POSTS.md, state/brand.md, PRODUCTION_SPEC.md §1
 Each slot: pick ONE format (CAR / COL / NEWS / HERO / VS) that fits the story; vary it so no format runs 3 slots in a row.
 After 3 weeks, re-weight formats and slot times by saves + shares per reach (vidiq_instagram_owner_insights).
 
+## Viral playbook (what Instagram ranks; Mosseri's confirmed signals = watch time, likes per reach, SENDS per reach)
+- Sends (DM shares) matter most for reaching non-followers → every post has a "send this to…" line on the last slide and in the caption.
+- Slide 1 decides distribution: a real face or product photo + ONE shocking number/word + a curiosity gap ("…but there's a catch").
+- Slide 2 is a second hook (Instagram re-serves slide 2 to people who skipped slide 1).
+- Faces were the most consistent breakout trait in vidIQ's thumbnail study → use the official headshot when the story is about people.
+- One idea per slide, 1–3 huge words, real image on most slides (Mayer coherence/signalling).
+- Caption line 1 ≤ 125 chars is the hook; ask a direct question to get comments ("Would you buy?").
+- Measure weekly: sends/reach, saves/reach, likes/reach per post → keep what works, drop what doesn't.
+
 ## Topic rules
 - The single hottest tech story of the last ~1–3 h (Techmeme, The Verge, CNBC Tech, Reuters Tech, company newsrooms).
 - Every number confirmed by 2 independent sources (primary source first). No leaks or rumours; say "reportedly" never.
-- Images: official press images/logos only when the company publishes them for press; otherwise our own 2-D objects only.
-  No other creators' content, no news-site photos, no AI-made photos of real people or products.
+- EVERY post has a real official image (owner rule, fixed): product press renders, company press-kit logos, or official
+  executive headshots from the company's press kit/newsroom. If a story has no official image, pick another story.
+  Never news-site photos, Getty, other creators' content, or AI-made images of real people or products.
 - Money stories: add "News, not financial advice."
 - Don't repeat a story within 24 h unless there's genuinely new news.
 
