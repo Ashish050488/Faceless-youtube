@@ -1,30 +1,17 @@
-# Publishing schedule (owner rule 2026-11-17: on a long-video day, NO Shorts)
+# Publishing schedule (owner 2026-11-17, from Wed 18 Nov 2026)
 
-Publish time: 15:00 New York (20:00 UTC; 19:00 UTC after US daylight saving starts in March) — the brief's
-start time; re-test monthly against our own Analytics (YouTube Studio: "When your viewers are on YouTube").
-Instagram Reel: same Short, right after the YouTube publish (script session). Instagram image posts: Instagram
-session's own plan (state/instagram_plan.md).
-
-## Phase 1 — Shorts only (now → Sun 6 Dec 2026)
-Goal: ~20 Shorts to learn what works (benchmark channels grew on Shorts; long-form only after a base).
-| Day | Content |
-|---|---|
-| Mon–Sun | 1 Short per day |
-
-## Phase 2 — from Mon 7 Dec 2026
-| Day | Content |
-|---|---|
-| **Mon** | **1 LONG video (6–10 min) — NO Short that day** |
-| Tue–Sun | 1 Short per day (2/day once the pipeline is stable and Shorts show growth) |
-Long video: "how it actually works / why it failed" format (PRODUCTION_SPEC §6 lessons), linked from 2 Shorts
-in the same week on the same product family. If it can't beat 5K views in 7 days for 4 weeks running, drop back to
-Shorts-only and log why in learnings.md.
-
-## Daily pipeline timing (UTC)
-| Time | Step | Who |
+| Day type | YouTube | Instagram |
 |---|---|---|
-| 13:30 | Find news (last 1–12 h, brand mix rule), verify facts, API tags, write shot-by-shot script, send to video chat | script session (scheduled task) |
-| 13:45–19:00 | Build, self-QA, push handoff branch | video session |
-| on handoff | QA → YouTube upload scheduled for 20:00 UTC → Instagram Reel at publish time | script session |
-| +3 h after publish | first stats check | script session |
-| Sunday 18:00 | weekly analysis (Analytics, competitors, learnings, next week's plan) | script session |
+| **Short day**: every day until Sun 6 Dec; from 7 Dec Tue–Sun | **2 Shorts**: A at 13:00 UTC (18:30 IST), B at 20:00 UTC (01:30 IST) | **2 image posts** (10:17, 13:43 IST) + **both Shorts as Reels** right after each goes public |
+| **Long-video day**: Mondays from 7 Dec 2026 | **1 long video (6–10 min)** at 20:00 UTC, **no Shorts** | **3 image posts** (10:17, 13:43, 23:23 IST), no Reel |
+
+## Automatic runs (each a fresh chat)
+| UTC | Job |
+|---|---|
+| 05:17 | Short A: script → video chat → upload for 13:00 UTC → Reel via Instagram session |
+| 13:17 | Short B: same, upload for 20:00 UTC (on long-video days this run makes the long video instead) |
+| Sun 17:41 | Weekly YouTube analysis |
+Instagram image slots + its weekly review: the Instagram session's own scheduled tasks.
+
+Long-video rule: if long videos can't beat 5K views in 7 days for 4 weeks running, drop back to Shorts-only.
+Re-test publish times monthly from our own Analytics.

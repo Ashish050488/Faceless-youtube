@@ -1,6 +1,6 @@
 # Instagram content plan — Spec or Wreck (@viral_lab0 → @specorwreck)
 
-Owner 2026-11-17 (updated): 5 still-image posts per day (10:00–23:59 IST), NO videos/Reels (the script session cross-posts Shorts).
+Owner 2026-11-17 (updated for 18 Nov on): 2 image posts + 2 Reels on Short days; 3 image posts on long-video days (INSTAGRAM_POSTS.md).
 Topics = ALL hot tech news, not only gadgets: AI company updates, IPOs, CEO exits, launches, regulation, big deals.
 At each posting slot, search the hottest tech story of that hour, verify it, build the post, then publish.
 Music: the API can't attach Instagram music to image posts. Flag posts that would suit a track; the owner adds it in the app.
