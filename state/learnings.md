@@ -1,5 +1,10 @@
 # Learnings (newest first)
 
+## 2026-11-17 — image quality by brand type (video session)
+- International brands usually have proper press kits with large official images; for the Xiaomi flashlight the only
+  reachable official images were ~600 px wide. Another reason to prefer global brands — check image availability
+  (≥ 1600 px, whole product) BEFORE picking a topic.
+
 ## 2026-11-17 — strategy split (owner)
 - SHORTS: copy what Techy or Not has proven for retention (format, pacing, layout, flat backgrounds) and do it with more detail.
 - LONG VIDEOS: our own approach later — his long videos flop (643–2,962 views), so we'll build our own long-form format.

@@ -10,6 +10,7 @@ monetisation guidance regularly (state/policy_notes.md) and follow it; nothing r
      Xbox, Canon, Fujifilm…). Must be available (or officially coming) in the US/EU/India.
      MIX (owner clarification): mostly international brands; Chinese brands (Xiaomi, Huawei, Oppo…) are fine
      sometimes — at most ~1 in 4 videos, never two in a row, and prefer ones launching globally.
+   - Check real official images exist (press kit/store, ≥ 1600 px, whole product) before choosing the topic.
    - Verify every fact with 2 independent sources (primary source when reachable). No unconfirmed leaks.
    - Pull real keywords via the YouTube API: tags of the top recent videos on the topic → title/tags/description.
    - Write factsheet.md, script.md, cues.json, metadata.json → commit to repo (scripts/<slug>/).
