@@ -30,7 +30,7 @@ monetisation guidance regularly (state/policy_notes.md) and follow it; nothing r
      to Drive: 02_ready_to_upload/<slug>/, then messages the script session.
 3. **Script session** uploads to YouTube with the metadata (title, description, tags, category, language,
    captions, playlist, pinned question, not-made-for-kids, synthetic-media flag when needed).
-   QA per PRODUCTION_SPEC §7 (qa.md numbers + one contact sheet) before upload.
+   No video QA (owner 2026-11-17): verify sha256 and upload. Only re-check if the owner reports a problem.
 4. **Cleanup after a successful upload**
    - Delete the video file(s) from Drive (02_ready_to_upload/<slug>/). Keep the script folder in Drive.
    - Delete local copies of both the script and the video from this container (cache/scratchpad).
@@ -41,7 +41,7 @@ big files from Drive, so finished videos travel by git:
 - Video session: export per PRODUCTION_SPEC §13 (720×1280, ≤ 20 MB), then force-push an ORPHAN branch
   `handoff/<slug>` containing only: video.mp4, thumbnail.jpg (1280×720), cover.jpg (1080×1920 frame), captions.srt,
   qa.md, sha256.txt. No code on that branch. Code still goes to main only.
-- Script session: `git fetch origin handoff/<slug>`, verify sha256, QA with watch-video, upload to YouTube, then
+- Script session: `git fetch origin handoff/<slug>`, verify sha256, upload to YouTube, then
   delete the remote branch (`git push origin --delete handoff/<slug>`) and local copies. Script stays in Drive.
 - qa.md / small text can still go to Drive › 02_ready_to_upload › <slug>/ as before.
 

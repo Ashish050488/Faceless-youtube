@@ -20,7 +20,9 @@
 6. Web: search only for the day's topic and its 2 sources; fetch the page section needed, not whole sites.
 7. Re-render only the scenes that failed QA, not the whole video.
 8. Routine work (building videos, IG posts) can run on Sonnet (`/model`); script writing/fact-checking on Opus.
-9. Delete what's no longer used (old scripts, raw data, superseded rules) — git history keeps it.
+9. Script session: write script + metadata (fact-checked, trending tags) and upload. Never review the video unless the
+   owner reports a problem — the video session owns quality.
+10. Delete what's no longer used (old scripts, raw data, superseded rules) — git history keeps it.
 
 ## Where things are
 WORKFLOW.md (steps, schedule link) · PRODUCTION_SPEC.md (video rules) · state/brand.md (palette, logo, watermark) ·

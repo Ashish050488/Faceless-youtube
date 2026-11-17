@@ -62,5 +62,5 @@ Video session, before handoff (write qa.md):
   counter final hold, centre-x range, real-image screen time %, file size, loudness, measure_timing output.
 - Look at images only as: ONE contact sheet (1 frame / 3 s, 180 px wide tiles) + ONE zoom sheet per scene group
   (200 % crop + 100 % + phone-size tiled into one image). Fix → re-render → re-check only the changed scenes.
-Script session, before upload: read qa.md numbers + one contact sheet + check every on-screen fact vs factsheet.md.
-Re-watch frame by frame against the benchmark only when the numbers fail or the owner asks.
+Script session: NO video QA (owner 2026-11-17: "no need to verify until I feel a problem"). It only checks sha256,
+then uploads. The video session owns quality. Re-check a video only when the owner reports a problem.
