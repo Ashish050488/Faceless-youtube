@@ -5,6 +5,12 @@ monetisation guidance regularly (state/policy_notes.md) and follow it; nothing r
 
 1. **Script session** (this one)
    - Find the hottest physical-tech news from the last 1–12 h (RSS feeds of major tech sites, then web search).
+   - BRAND RULE (owner 2026-11-17): INTERNATIONAL brands sold worldwide (Apple, Samsung, Google, Sony, HP, Dell,
+     Lenovo, Microsoft, Logitech, Bose, Amazon, Meta, Nothing, Garmin, DJI, GoPro, Razer, Anker, Sonos, Nintendo,
+     Xbox, Canon, Fujifilm…). Must be available (or officially coming) in the US/EU/India.
+     MIX (owner clarification): mostly international brands; Chinese brands (Xiaomi, Huawei, Oppo…) are fine
+     sometimes — at most ~1 in 4 videos, never two in a row, and prefer ones launching globally.
+   - Check real official images exist (press kit/store, ≥ 1600 px, whole product) before choosing the topic.
    - Verify every fact with 2 independent sources (primary source when reachable). No unconfirmed leaks.
    - Pull real keywords via the YouTube API: tags of the top recent videos on the topic → title/tags/description.
    - Write factsheet.md, script.md, cues.json, metadata.json → commit to repo (scripts/<slug>/).
@@ -24,7 +30,7 @@ monetisation guidance regularly (state/policy_notes.md) and follow it; nothing r
      to Drive: 02_ready_to_upload/<slug>/, then messages the script session.
 3. **Script session** uploads to YouTube with the metadata (title, description, tags, category, language,
    captions, playlist, pinned question, not-made-for-kids, synthetic-media flag when needed).
-   QA with the watch-video skill before upload.
+   No video QA (owner 2026-11-17): verify sha256 and upload. Only re-check if the owner reports a problem.
 4. **Cleanup after a successful upload**
    - Delete the video file(s) from Drive (02_ready_to_upload/<slug>/). Keep the script folder in Drive.
    - Delete local copies of both the script and the video from this container (cache/scratchpad).
@@ -35,15 +41,15 @@ big files from Drive, so finished videos travel by git:
 - Video session: export per PRODUCTION_SPEC §13 (720×1280, ≤ 20 MB), then force-push an ORPHAN branch
   `handoff/<slug>` containing only: video.mp4, thumbnail.jpg (1280×720), cover.jpg (1080×1920 frame), captions.srt,
   qa.md, sha256.txt. No code on that branch. Code still goes to main only.
-- Script session: `git fetch origin handoff/<slug>`, verify sha256, QA with watch-video, upload to YouTube, then
+- Script session: `git fetch origin handoff/<slug>`, verify sha256, upload to YouTube, then
   delete the remote branch (`git push origin --delete handoff/<slug>`) and local copies. Script stays in Drive.
 - qa.md / small text can still go to Drive › 02_ready_to_upload › <slug>/ as before.
 
 ## Instagram (owner 2026-11-17)
-- The Instagram session (session_01L2u12DRCGMHdb1CMdfRUan) owns ALL Instagram posting (image posts, carousels, collages,
-  Reels) and plans its own daily mix (state/instagram_plan.md; brief in INSTAGRAM_POSTS.md).
-- Script session: right after every successful YouTube publish, send the Instagram session one message with the
-  YouTube link, title and a suggested caption (hook, "Spec or wreck? 👇", key facts, sources, image credit, 3–5
-  hashtags) — SUPERSEDED (owner 2026-11-17, "just do whatever easy"): the SCRIPT SESSION cross-posts every Short as an Instagram
-  Reel itself right after the YouTube publish (vidiq_instagram_publish_reel with the YouTube link, AI label on, no
-  per-post question). The Instagram session does image content only.
+- Script session cross-posts every Short as an Instagram Reel itself right after the YouTube publish
+  (vidiq_instagram_publish_reel with the YouTube link, AI label on, no per-post question).
+- Instagram session (session_01L2u12DRCGMHdb1CMdfRUan): still-image posts only, 1–2 a day (INSTAGRAM_POSTS.md).
+
+## Cleanup of the repo (token rule)
+- After a video is published and its first stats check is done, delete scripts/<slug>/ and its keyword JSON from the
+  repo (the script stays in Drive › 01_scripts; the record stays in state/videos.json).
