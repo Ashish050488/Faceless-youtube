@@ -44,4 +44,6 @@ big files from Drive, so finished videos travel by git:
   Reels) and plans its own daily mix (state/instagram_plan.md; brief in INSTAGRAM_POSTS.md).
 - Script session: right after every successful YouTube publish, send the Instagram session one message with the
   YouTube link, title and a suggested caption (hook, "Spec or wreck? 👇", key facts, sources, image credit, 3–5
-  hashtags) so it cross-posts the Short as a Reel. The script session never posts to Instagram itself.
+  hashtags) — SUPERSEDED (owner 2026-11-17, "just do whatever easy"): the SCRIPT SESSION cross-posts every Short as an Instagram
+  Reel itself right after the YouTube publish (vidiq_instagram_publish_reel with the YouTube link, AI label on, no
+  per-post question). The Instagram session does image content only.
