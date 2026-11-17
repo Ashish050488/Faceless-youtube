@@ -94,3 +94,15 @@ Reference that works: @indiainlast24hr (5M followers) post Dfqzov4Ddj8, Jensen H
   official photo (never film stills or other creators' memes). 6 `verdict` = question + "send this to…".
 - Caption: 2–3 short paragraphs that tell the news properly (who, what, why it matters), neutral wording; "reported" for
   claims; then sources and image credit.
+
+## TESTING LOOP (owner 2026-11-17: "keep testing what works and what doesn't")
+- Every post's log entry records its test variables: format (story/old), cover angle (drama / numbers / product),
+  topic type (people, money, launch, policy), slide count, meme slide yes/no, slot time, caption length.
+- First slot of each day (10:17 IST): pull `vidiq_instagram_owner_insights` mode media (free) → write views, reach, likes,
+  comments, shares, saved per post into state/instagram_posts.json → compare per variable (shares+saves per reach first).
+  Keep what wins, change ONE variable at a time on the next posts, and write the finding in a "Findings" list below.
+- Baseline 2026-11-17 (new account): Oppo Reel reach 5 / 8 views; Anthropic numbers-style carousel reach 1. Tiny sample;
+  the account needs consistent posting before differences mean anything (judge after ~10 posts per variant).
+
+### Findings
+- 2026-11-17: 1–3 words per slide = owner rejected (no information). Story format (sentence cover + info slides + meme) is the baseline now.
