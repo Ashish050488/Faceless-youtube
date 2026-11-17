@@ -39,14 +39,29 @@ def main():
     sw = script_words(src)
     a, sr = librosa.load(wav, sr=16000)
     m = WhisperModel("small.en", device="cpu", compute_type="int8")
-    segs, _ = m.transcribe(a, language="en", word_timestamps=True, beam_size=5,
-                           initial_prompt=" ".join(x["w"] for x in sw[:60]))
+    segs, _ = m.transcribe(a, language="en", word_timestamps=True, beam_size=5)
+    raw = [(w.word.strip(), w.start, w.end) for s in segs for w in s.words]
+    # merge digit groups Whisper splits ("3" ",000" / "1" ".85") back into one token
+    merged = []
+    for t, st, en in raw:
+        if merged and re.match(r"^[,.]\d", t) and re.search(r"\d$", merged[-1][0]):
+            pt, ps, _ = merged[-1]; merged[-1] = (pt + t, ps, en)
+        else:
+            merged.append((t, st, en))
     ww = []
-    for s in segs:
-        for w in s.words:
-            t = w.word.strip()
+    for t, st, en in merged:
+            w = type("W", (), {"start": st, "end": en})
             # expand digits into the script's spelled tokens so they can align
-            exp = NUM.get(t.rstrip(".,?!"), None)
+            core = t.strip(".,?!")
+            exp = NUM.get(core)
+            if exp is None and re.search(r"\d", core):
+                try:
+                    from num2words import num2words
+                    num = core.replace("$", "").replace("¥", "").replace(",", "").rstrip("-inch").rstrip("%")
+                    exp = num2words(float(num) if "." in num else int(num)).replace(",", "")
+                    if core.startswith("$"): exp += " dollars"
+                except Exception:
+                    exp = None
             parts = re.split(r"[\s-]+", exp) if exp else [t]
             dur = (w.end - w.start) / len(parts)
             for k, p in enumerate(parts):

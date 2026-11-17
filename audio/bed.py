@@ -48,6 +48,28 @@ def synth(kind, rng):
     if kind == "wipe":
         n = int(0.42 * SR); x = rng.standard_normal(n) * np.sin(np.linspace(0, np.pi, n)) ** 2
         return (lp(x, 2600) - lp(x, 300)) * 0.4
+    if kind == "cut":       # hard cut: tiny transient so cuts feel intentional
+        tt = t(0.06); return (rng.uniform(-1, 1, len(tt)) * np.exp(-tt * 140)) * 0.35
+    if kind == "swing":     # price tag swing
+        tt = t(0.5); return np.sin(2 * np.pi * (500 - 200 * tt) * tt) * np.exp(-tt * 6) * np.sin(np.pi * tt / 0.5) * 0.25
+    if kind in ("clamp", "clunk"):
+        tt = t(0.14); return (np.sin(2 * np.pi * 180 * tt) * np.exp(-tt * 35) + rng.uniform(-1, 1, len(tt)) * np.exp(-tt * 90) * 0.4) * 0.6
+    if kind == "drip":
+        tt = t(0.18); return np.sin(2 * np.pi * (600 + 1600 * np.exp(-tt * 30)) * tt) * np.exp(-tt * 22) * 0.45
+    if kind == "splash":
+        n = int(0.5 * SR); x = rng.standard_normal(n) * np.exp(-np.arange(n) / SR * 7); return lp(x - lp(x, 800), 7000) * 0.35
+    if kind == "beep":
+        tt = t(0.12); return np.sin(2 * np.pi * 1046 * tt) * np.minimum(1, (0.12 - tt) * 40) * 0.2
+    if kind == "pulse":
+        tt = t(0.35); return (np.sin(2 * np.pi * 60 * tt) * np.exp(-tt * 18) + 0.6 * np.sin(2 * np.pi * 60 * tt) * np.exp(-np.maximum(tt - 0.18, 0) * 18) * (tt > 0.18)) * 0.7
+    if kind == "down":      # number rolling down
+        tt = t(0.4); return np.sin(2 * np.pi * (900 - 600 * tt / 0.4) * tt) * np.exp(-tt * 5) * 0.25
+    if kind == "switch":
+        tt = t(0.08); return (np.sin(2 * np.pi * 2200 * tt) * np.exp(-tt * 120) + rng.uniform(-1, 1, len(tt)) * np.exp(-tt * 300) * 0.5) * 0.5
+    if kind == "drain":
+        tt = t(0.5); return np.sign(np.sin(2 * np.pi * (700 - 500 * tt / 0.5) * tt)) * np.exp(-tt * 4) * 0.12
+    if kind == "pin":
+        tt = t(0.3); return (np.sin(2 * np.pi * 880 * tt) * 0.5 + np.sin(2 * np.pi * 1320 * tt) * 0.3) * np.exp(-tt * 9) * 0.4
     return base_synth(kind, rng)
 
 
@@ -55,11 +77,12 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("slug"); ap.add_argument("timeline"); ap.add_argument("events"); ap.add_argument("sfx"); ap.add_argument("out")
     ap.add_argument("--sfx-comp-db", type=float, default=11.0)
+    ap.add_argument("--sections", default=None, help="JSON list of {start,end,energy}; default = sow001 layout")
     a = ap.parse_args()
     tl = json.load(open(a.timeline)); ev = json.load(open(a.events))
     st = {s["line"]: s["start"] for s in tl}
     end = ev["end"]
-    sections = [
+    sections = json.load(open(a.sections)) if a.sections else [
         {"start": 0, "end": st[2], "energy": "intro"},
         {"start": st[2], "end": st[9], "energy": "main"},
         {"start": st[9], "end": st[12], "energy": "dark"},
