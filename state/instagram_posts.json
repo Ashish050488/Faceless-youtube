@@ -21,5 +21,21 @@
     "images": "Anthropic press kit (headshots, logo)",
     "permalink": "https://www.instagram.com/p/Df1eleUFpVX/",
     "postId": "034e7b7b-4a0d-4e14-95bb-c699f641f343"
+  },
+  {
+    "date": "2026-11-17",
+    "slot": "17:11 IST (ran late)",
+    "type": "carousel",
+    "topic": "Nvidia Q3 earnings tonight, first without Jensen Huang (Kress interim CEO, $108B guidance, excludes China)",
+    "slides": 6,
+    "sources": [
+      "NVIDIA newsroom 2026-11-12",
+      "NVIDIA IR Q2 FY27 release",
+      "Barchart",
+      "CME Group/MarketBeat"
+    ],
+    "images": "NVIDIA newsroom (Kress, Huang headshots; Vera rack)",
+    "postId": "600c3808-a8ed-4983-a65a-c53efbb392d6",
+    "permalink": "https://www.instagram.com/p/Df2ABNLkSpm/"
   }
 ]
