@@ -81,3 +81,16 @@ After 3 weeks, re-weight formats and slot times by saves + shares per reach (vid
 - Shell: removing globs after `cd` is blocked by a safety check; just overwrite outputs instead.
 - Photos of people: never in the wide 900×580 card (faces get cut). Use `"portrait": true` on fact slides (tall card,
   top-anchored); hook slides are already tall. Check in preview.jpg that every head is fully visible (owner 2026-11-17).
+
+## STORY FORMAT + MARKET CHECK (owner 2026-11-17: "1–2 words per slide is shit, we need to trend") — OVERRIDES the 1–3 word rule
+Reference that works: @indiainlast24hr (5M followers) post Dfqzov4Ddj8, Jensen Huang affair story, 156K likes.
+- Market check FIRST, every slot (free): Google Trends RSS `https://trends.google.com/trending/rss?geo=IN` and `geo=US`
+  → which tech names people are searching NOW (e.g. "madison huang", "tesla model y price") + the web news of the hour.
+  Pick the story with search heat AND a human/drama angle (people, money, scandal, "what this means for you").
+  vidIQ research tools cost credits (balance 0, resets monthly): don't use them.
+- Slides (template.js types): 1 `cover` = the WHOLE story as one ALL-CAPS sentence (8–16 words) with the key phrase in
+  **highlight**, a one-sentence context line, big official photo, date badge. 2–4 `text` = a heading + 3–4 full-sentence
+  lines (timeline / who's who / numbers / what to watch), with official photos in a strip. 5 `meme` = one witty line over an
+  official photo (never film stills or other creators' memes). 6 `verdict` = question + "send this to…".
+- Caption: 2–3 short paragraphs that tell the news properly (who, what, why it matters), neutral wording; "reported" for
+  claims; then sources and image credit.

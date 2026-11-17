@@ -12,6 +12,7 @@
 //   {"type":"verdict", "word":"Would you buy?", "sub":"Send this to a friend who would 📤"}
 // ]}
 // PEOPLE PHOTOS: set "portrait":true on fact slides (tall card, whole head visible). Never put a face in the wide card.
+// STORY slide types: cover (headline sentence + sub + photo + date), text (heading + lines + photo strip), meme (joke + photo).
 // bg: paper | lav | blush (never black). icon: tag scale camera battery cal noscreen shares question chart.
 // cal takes "calText":"19". Every post needs at least one official image (press render, press-kit logo/headshot).
 const { chromium } = require('playwright');
@@ -70,6 +71,27 @@ const T = {
   verdict: s => page(s.bg, `<div class="c" style="top:380px">${brand(150)}</div><div class="c h" style="top:630px;font-size:96px">${s.word || 'Spec or wreck?'}</div>
     <div class="c sub" style="top:760px">${s.sub || 'Send this to a friend 📤'}</div>`, false),
 };
+
+// ---- STORY FORMAT (owner 2026-11-17, modelled on big news pages): full sentences, real information ----
+// headline markup: **phrase** → highlighted box. Keep headlines 8–16 words, ALL CAPS, the whole story in one line.
+const hl = t => (t || '').replace(/\*\*(.+?)\*\*/g, `<span style="background:${C.ember};color:${C.paper};padding:0 12px;border-radius:10px;box-decoration-break:clone;-webkit-box-decoration-break:clone">$1</span>`);
+const strip = (imgs, top) => imgs && imgs.length ? `<div style="position:absolute;left:0;right:0;top:${top}px;bottom:0;display:flex">${imgs.map(f => `<div style="flex:1;overflow:hidden"><img src="${uri(f)}" style="width:100%;height:100%;object-fit:cover;object-position:50% 10%"></div>`).join('')}</div>` : '';
+Object.assign(T, {
+  // cover: headline sentence on paper, big photo below, date badge
+  cover: s => page(s.bg, `<div style="position:absolute;left:56px;right:56px;top:56px">
+      <div class="h" style="font-size:${s.hPx || 76}px;line-height:1.08;letter-spacing:-0.02em">${hl(s.headline)}</div>
+      <div style="font-family:Inter;font-weight:700;font-size:34px;line-height:1.3;color:#3B3632;margin-top:22px">${s.sub || ''}</div></div>
+    ${strip([s.image], s.imgTop || 560)}
+    ${s.date ? `<div style="position:absolute;left:56px;bottom:56px;background:${C.wreck};color:${C.paper};font-weight:900;text-align:center;line-height:.95;padding:14px 18px;border-radius:12px;font-size:64px">${s.date.split(' ')[0]}<div style="font-size:30px">${s.date.split(' ')[1] || ''}</div></div>` : ''}`),
+  // text: a heading + 3–5 short full-sentence lines, optional photo strip at the bottom
+  text: s => page(s.bg, `<div style="position:absolute;left:64px;right:64px;top:70px">
+      <div style="font-weight:800;font-size:${s.hPx || 64}px;line-height:1.08;letter-spacing:-0.02em">${hl(s.headline)}</div>
+      <div style="margin-top:34px;display:flex;flex-direction:column;gap:22px">${(s.lines || []).map(l => `<div style="font-family:Inter;font-weight:600;font-size:${s.lPx || 40}px;line-height:1.28">${l.replace(/^([^—:]+[—:])/, '<b style="color:' + C.ember + '">$1</b>')}</div>`).join('')}</div></div>
+    ${strip(s.images, s.imgTop || 820)}`, !s.images),
+  // meme: one-line joke on top (sentence case), official photo filling the rest
+  meme: s => page(s.bg, `<div style="position:absolute;left:56px;right:56px;top:56px;font-family:Inter;font-weight:600;font-size:${s.tPx || 48}px;line-height:1.25">${s.text}</div>
+    ${strip([s.image], s.imgTop || 330)}`, false),
+});
 
 (async () => {
   const [specPath, out] = process.argv.slice(2);
