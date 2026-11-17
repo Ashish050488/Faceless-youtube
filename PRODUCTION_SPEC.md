@@ -24,7 +24,8 @@ Benchmark for Shorts = Techy or Not (measured: state/competitor_watch/). Long vi
   new headline every spoken sentence, none on screen > 4 s, no label < 30 px at 720 w. NO captions burned in
   (captions.srt is still delivered for YouTube closed captions).
 - Frame 1: product ≥ 60 % width + ≤ 3-word huge title + one accent mark.
-- Content area ends at y 1240 (1080 scale); watermark below it (brand.md). Safe frame y 270–1240.
+- Layout = Techy or Not's default full-frame composition (owner 2026-11-17: NO platform safe-zone rules; the video also
+  goes to Instagram). Rule instead: NOTHING OVERLAPS — text, product, objects and watermark never touch each other.
 
 ## 3. Show, don't write (Mayer: coherence, signaling, redundancy, contiguity, segmenting)
 - One idea per scene; the ONE key thing gets the callout ring/underline/colour.
@@ -58,18 +59,23 @@ Benchmark for Shorts = Techy or Not (measured: state/competitor_watch/). Long vi
 
 ## 7. QA — cheap but complete (token rules, CLAUDE.md)
 Video session, before handoff (write qa.md):
-- Numbers from a script, not by eye: hard cuts, mean frame change (2.5–6), longest calm hold, headline max hold,
+- Numbers from a script, not by eye: overlap check (bounding boxes of text/product/objects/watermark never intersect), hard cuts, mean frame change (2.5–6), longest calm hold, headline max hold,
   counter final hold, centre-x range, real-image screen time %, file size, loudness, measure_timing output.
 - Look at images only as: ONE contact sheet (1 frame / 3 s, 180 px wide tiles) + ONE zoom sheet per scene group
   (200 % crop + 100 % + phone-size tiled into one image). Fix → re-render → re-check only the changed scenes.
 Script session: NO video QA (owner 2026-11-17: "no need to verify until I feel a problem"). It only checks sha256,
 then uploads. The video session owns quality. Re-check a video only when the owner reports a problem.
 
-## 8. Reuse — one kit, no per-video renderer (learned 2026-11-17)
-- render/kit/ (built 2026-11-17, usage: render/kit/README.md): data-driven components (Headline, RollingNumber, PriceTag, ProductCutout, CalloutRing,
-  Battery, Calipers, Scale, Sun, MapPin (Natural Earth), Bars, StrikeThrough, CatchStamp, EndCardLogo, Watermark,
-  SafeZoneOverlay). Each new video = cues.json + assets only; the kit renders it. Never write a new 1,000-line renderer.
-- Word timestamps (faster-whisper) place cues automatically.
-- Code checks before any image: text boxes inside the safe zone / above y 1240, contrast, every on-screen number
-  string-matches factsheet.md, loudness. Then one contact sheet.
+## 8. Reuse — one kit, small per-video files (learned 2026-11-17 from a working pipeline)
+Pattern (write our own code; don't copy anyone's):
+- render/kit/: small components, 1–8 KB each (Headline, RollingNumber, PriceTag, ProductCutout, CalloutRing, Battery,
+  Calipers, Scale, Sun, MapPin (Natural Earth), Bars, StrikeThrough, CatchStamp, EndCardLogo, Watermark, Stage/Show
+  (enter/exit timing), anim helpers, dyncolor (product image → background/accent)).
+- Per video only: plan.json = named events, each tied to a spoken word (`{"cue":"price","word":"dollars","nth":1,
+  "offset":0.0,"sfx":"tick"}`) + a short composition file that places kit components per event.
+- cues script: faster-whisper word timestamps → cues.json (event → second). The SAME plan/cues drive the SFX mix,
+  so every sound lands on the frame its picture does. No hand timing.
+- QA script renders one still per cue (small) + overlap check in code. No frame-by-frame viewing.
+- Built 2026-11-17: render/kit/README.md. cues.kit.json = plan + composition in one file (layers tied to words,
+  same refs drive SFX); `--check` + check.py = overlap/contrast/factsheet/loudness in code; `--stills cues` = per-cue stills.
 - Delete the previous video's asset folder when a new job starts.

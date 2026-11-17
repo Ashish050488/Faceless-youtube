@@ -1,19 +1,16 @@
 # Instagram image posts — brief for the Instagram session (owner 2026-11-17)
 
-Account: Instagram **@viral_lab0** (owner is renaming it to "Spec or Wreck" / @specorwreck), connected in vidIQ with
-publishing enabled. Find its platformAccountId with `vidiq_social_account_list`. This session does IMAGE posts and
-carousels only. NO videos, Reels or slideshow Reels from this session (owner 2026-11-17) — the YouTube pipeline makes
-all videos and the script session cross-posts them as Reels. This session posts still images only: single image/news
-posts, carousels and photo collages.
+Account: Instagram **@specorwreck** (formerly @viral_lab0), vidIQ platformAccountId 29324801787184753, publishing enabled.
+This session does still-image posts only (single image/news posts, carousels, photo collages). NO videos or Reels:
+the script session cross-posts YouTube Shorts as Reels. Full plan, slot routine and how-to: **state/instagram_plan.md**.
 
-## Volume and timing
-- 1–2 image posts per day (owner 2026-11-17, to save tokens), times 09:00–23:00 in the audience's main time zones, ≥ 3 h apart.
-- Each day: prepare the NEXT day's posts as vidIQ drafts with a publishAt each, show the owner one summary
-  (images + captions + times), and publish only after the owner approves ("post them"). vidIQ requires the owner's
-  approval for every post; one approval can cover the whole day's batch.
+## Volume and timing (owner 2026-11-17, confirmed twice in the Instagram chat — overrides the earlier 1–2/day)
+- **5 image posts per day, 10:00–23:59 IST**: 10:17, 13:43, 17:11, 20:37, 23:23 IST (5 scheduled tasks).
+- Each post is made FRESH at its slot: web-search the hottest tech story of that moment, never prepare in advance.
+- Topics: ALL hot tech news (AI companies, CEO exits, IPOs, launches, regulation, big deals), not only gadgets.
+- vidIQ publishes only after the owner replies to that exact draft: one notification per slot, any reply publishes.
 
 ## What to post (same brand as the YouTube channel — read state/brand.md, PRODUCTION_SPEC.md §12–§18)
-- Topics: the newest physical tech from BIG brands (last 24 h), plus carousel versions of our published Shorts.
 - Format: carousel 1080×1350 (4:5), 4–7 slides.
   1. Hook slide: the REAL product image (official press/store image, whole product, centred) + 1–3 huge words or one number.
   2–5. One fact per slide, shown with our flat 2-D objects (sun = brightness, battery, calipers, scale, water drop,
@@ -25,13 +22,13 @@ posts, carousels and photo collages.
   wreck #E5484D only for the catch. Inter Tight 800 headlines. Watermark: the "s w" mark, bottom-right, small.
 - Facts: every number confirmed by 2 independent sources (primary source when reachable); no leaks/rumours; sources
   listed at the end of the caption. Never invent prices/specs.
-- Images: official press/store images only (credit in caption). No other creators' content, no Getty, no AI-made fake
-  product photos.
+- Images: EVERY post has a real official image (press render, press-kit logo or exec headshot; credit in caption). If a story
+  has none, pick another story. No other creators' content, no Getty, no news-site photos, no AI-made images.
 
 ## Template + checking (token rule, owner 2026-11-17)
-- Build ONE reusable slide template (render/ig_template.html or .py) once; each post only fills in text, image and object.
+- The reusable template is render/instagram/template.js (fill a spec JSON; see its header). Don't write new layout code.
 - Check ONE tiled preview of the finished carousel (all slides side by side, small) — no screenshot per slide.
-- Fresh chat per daily batch; read only CLAUDE.md + this file.
+- Read only CLAUDE.md, this file and state/instagram_plan.md.
 
 ## Caption
 - Line 1: hook (≤ 125 chars, shows before "more"). Line 2: "Spec or wreck? 👇". Then 1–2 short fact lines, sources, image
