@@ -39,8 +39,8 @@ pink /= np.sqrt(np.mean(pink ** 2)); sf.write(f"{W}/voice_rt.wav", (v + pink * 1
 PYEOF
   $PY -m audio.bed "$SLUG" "$W/timeline.json" "$W/events.json" "$W/sfx.json" "$W/bed.wav" --sections "$W/sections.json" >/dev/null
   bash audio/mix.sh "$W/voice_rt.wav" "$W/bed.wav" "$W/mix.mp3"
-  ffmpeg -nostdin -y -loglevel error -i "$W/frames.mp4" -i "$W/mix.mp3" -map 0:v -map 1:a -vf scale=720:1280:flags=lanczos -af volume=-0.5dB \
-    -c:v libx264 -profile:v high -preset slow -crf 24 -maxrate 2M -bufsize 4M -pix_fmt yuv420p -r 30 -c:a aac -b:a 128k -movflags +faststart "$W/out/video.mp4"
+  ffmpeg -nostdin -y -loglevel error -i "$W/frames.mp4" -i "$W/mix.mp3" -map 0:v -map 1:a -af volume=-0.5dB \
+    -c:v libx264 -profile:v high -preset slow -tune animation -crf 19 -maxrate 8M -bufsize 16M -pix_fmt yuv420p -r 30 -c:a aac -b:a 160k -movflags +faststart "$W/out/video.mp4"
   ffmpeg -nostdin -y -loglevel error -i "$W/frames.mp4" -frames:v 1 -q:v 2 "$W/out/cover.jpg"
   node render/kit/thumb.js "$W" "$CUES" "$W/out/thumbnail.jpg" >/dev/null
   $PY -m meta.captions "$SD/script.md" "$W/words.json" "$W/out/captions.srt" --offset 0 >/dev/null
