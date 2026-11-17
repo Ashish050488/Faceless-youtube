@@ -210,3 +210,5 @@ from Mayer's own review.
 ## 18. PRONUNCIATION
 - config/pronunciations.json is applied automatically by audio/narrate.py (misaki inline phonemes). Before rendering,
   print phonemes for every brand/model/term in the script; anything wrong → add to the JSON (script session owns it).
+
+- 2026-11-17: owner — "it sounds perfect now, lock the audio": voice af_heart 0.795 + narrate.py timing + config/pronunciations.json + mix.sh are LOCKED. Only extend pronunciations.json for new words.
