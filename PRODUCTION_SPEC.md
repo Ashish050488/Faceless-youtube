@@ -161,3 +161,28 @@ Measured on its top Shorts (Bose 1.29M, Logitech 1.66M), 1 fps frames:
 - Shorts: **720×1280**, 30 fps, H.264 High, CRF 23–26 with maxrate 2.0 Mbps / bufsize 4 Mbps, AAC 128 kbps,
   +faststart. Target **≤ 20 MB for ~90 s** (graphics-heavy max ~20 MB). Check size before upload.
 - Long videos later: 1920×1080, CRF 23, maxrate 6 Mbps.
+
+## 14. FIX LIST FROM THE sow001 vs TECHY OR NOT COMPARISON (2026-11-17, measured — see state/competitor_watch/sow001_vs_techy.md)
+These are hard requirements for every Short from sow002 on:
+1. Motion on beats, then calm: frame may settle 0.8–2 s between beats; no constant drift. Hard cuts between scenes: 8–12 per 75 s.
+2. No horizontal slides/swipes; never two layouts visible half-and-half.
+3. Centred and BIG: headline cap height ≥ 7 % of frame height (≥ 90 px at 720×1280), single-word headlines ≥ 75 % width;
+   product ≥ 60 % of frame width in hero shots. Content centre-x 0.47–0.53.
+4. New headline every spoken sentence (2–4 s). No headline on screen > 4 s.
+5. Counters: roll ≤ 0.35 s; final value visible ≥ 1.2 s. Never show a wrong intermediate value for longer than the roll.
+6. Flat solid backgrounds only (no blurred product copy, no grain).
+7. No captions, no labels under 44 px (720 w: 30 px).
+8. Different real image or new crop/angle every scene; never the same framing twice in a row.
+9. Frame 1: product ≥ 60 % width + ≤ 3-word huge title + one accent mark.
+10. QA must report: hard cuts, mean frame change (target 2.5–6), longest calm hold, headline max hold, counter final-hold.
+
+## 15. SHOW, DON'T WRITE (owner 2026-11-17: "use 2-D objects instead of too many words, no captions")
+- On-screen text: max 1–3 words per scene (a number + unit counts as one). Most scenes carry ONE number or ONE word.
+- Every idea is shown with a clean 2-D object/icon drawn in our palette (flat, thick rounded strokes, no gradients), animated:
+  brightness → sun with rays that grow · battery → battery cell filling/draining · thinness → calipers/ruler ·
+  weight → balance/scale · water rating → water drop + ripple rings · heart-rate/fitness → pulse line · price → tag/coin ·
+  launch/region → map pin on a simple globe · time/date → calendar flip · "no X" → icon + strike-through ·
+  sold out → stamp · comparison → two objects on a see-saw/bars.
+- Objects sit next to/around the REAL product image (which stays ≥ 60 % of runtime); they never replace it.
+- Style: flat 2-D, ink #151312 outlines 6–8 px at 1080 w (4–5 px at 720 w), fills from palette v4, round caps/joins,
+  springy entrance, one SFX per object action.
