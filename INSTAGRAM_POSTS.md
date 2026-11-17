@@ -2,7 +2,9 @@
 
 Account: Instagram **@viral_lab0** (owner is renaming it to "Spec or Wreck" / @specorwreck), connected in vidIQ with
 publishing enabled. Find its platformAccountId with `vidiq_social_account_list`. This session does IMAGE posts and
-carousels only. Reels/videos are handled by the YouTube pipeline (script + video sessions) and cross-posted separately.
+carousels only. NO videos, Reels or slideshow Reels from this session (owner 2026-11-17) — the YouTube pipeline makes
+all videos and the script session cross-posts them as Reels. This session posts still images only: single image/news
+posts, carousels and photo collages.
 
 ## Volume and timing
 - 1–5 image posts per day at random times (vary 09:00–23:00 in the audience's main time zones, at least 2 h apart).
