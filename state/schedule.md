@@ -25,3 +25,7 @@ viewers are on YouTube") and move the day if the data says so.
 
 Long-video rule: if long videos can't beat 5K views in 7 days for 4 weeks running, drop back to Shorts-only.
 Re-test publish times monthly from our own Analytics.
+
+## Our own audience (YouTube Analytics API, 1 Aug–17 Nov 2026 — mostly views of the OLD deleted anime videos, so a weak guide)
+Views by country: US 33.2K · India 16.4K · Philippines 5.8K · UK 3.9K · Germany 3.1K · Canada 2.4K. Viewers: 84 % mobile;
+mostly male 13–34. The API has no hour-of-day data. Re-check after ~2 weeks of Spec or Wreck uploads (startDate 2026-11-17).
