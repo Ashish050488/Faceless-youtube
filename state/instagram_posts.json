@@ -192,5 +192,29 @@
    "caption_length": "medium"
   },
   "permalink": "https://www.instagram.com/p/Df3tkWelq_u/"
+ },
+ {
+  "date": "2026-11-18",
+  "slot": "13:43 IST (drafted ~14:30)",
+  "topic": "GTA 6 unlocks at midnight local (12:00 AM IST 19 Nov): pre-load up to 212 GB, physical edition is a code with no disc",
+  "status": "draft, awaiting owner OK",
+  "postId": "c753ef13-8d9b-4f1b-8f66-f982bbcaf63f",
+  "revision": "ef0a3bb0",
+  "slides": 5,
+  "sources": [
+   "https://www.forbes.com/sites/brianmazique/2026/11/12/gta-6-unlocks-at-midnight-on-november-19-but-millions-of-americans-can-start-playing-the-night-before/",
+   "https://www.ibtimes.co.uk/rockstar-games-reveals-gta-6-pre-load-details-212gb-file-size-map-leonida-download-plans-1830184",
+   "https://www.pushsquare.com/news/2026/06/gta-6-physical-edition-doesnt-come-with-discs-its-a-code-in-the-box"
+  ],
+  "images": "Rockstar Games official artwork",
+  "test_vars": {
+   "format": "story",
+   "cover_angle": "how-to/utility",
+   "topic_type": "gaming-launch",
+   "slide_count": 5,
+   "meme": true,
+   "slot_time": "13:43",
+   "caption_length": "medium"
+  }
  }
 ]
