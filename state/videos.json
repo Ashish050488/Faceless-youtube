@@ -62,18 +62,20 @@
   "slug": "sow005-apple-homeview-teardown",
   "title": "Apple Made a $299 HomeView iFixit Could BARELY Open 😬",
   "format": "short",
-  "status": "scheduled",
+  "status": "live",
   "slot": "2",
   "scripted_at": "2026-11-18T08:40Z",
   "publish_at": "2026-11-18T13:00:00Z",
   "hypothesis": "Apple (top priority) + price + CAPS word + emoji; repairability outrage drives comments.",
   "id": "UPfysee7JJw",
   "video_id": "UPfysee7JJw",
-  "privacy": "private",
+  "privacy": "public",
   "uploaded_at": "2026-11-18T09:12Z",
   "size_mb": 9.9,
   "duration_s": 60.3,
-  "comment": "posted 2026-11-18T09:20Z (while unlisted, before schedule)"
+  "comment": "posted 13:09Z (the 09:20 comment made while unlisted was wiped when set back to private)",
+  "published_at": "2026-11-18T13:00Z",
+  "reel": "sent to IG session 13:10Z"
  },
  {
   "id": "UTvRnFY_jks",

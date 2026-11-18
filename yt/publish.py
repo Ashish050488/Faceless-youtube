@@ -65,11 +65,11 @@ def main():
     snippet = {"title": meta["title"], "description": meta["description"], "tags": tags,
                "categoryId": meta.get("categoryId", "28"), "defaultLanguage": meta.get("defaultLanguage", "en"),
                "defaultAudioLanguage": meta.get("defaultAudioLanguage", "en")}
-    # Scheduled uploads (owner 2026-11-18): upload UNLISTED so the question comment can be posted now,
-    # then switch to private + publishAt (re-sent until YouTube keeps it; the first PUT can drop it).
-    status = {"privacyStatus": "unlisted" if a.publish_at else a.privacy, "selfDeclaredMadeForKids": False,
+    status = {"privacyStatus": "private" if a.publish_at else a.privacy, "selfDeclaredMadeForKids": False,
               "license": "youtube", "embeddable": True, "publicStatsViewable": True,
               "containsSyntheticMedia": bool(meta.get("containsSyntheticMedia", False))}
+    if a.publish_at:
+        status["publishAt"] = a.publish_at
     r = client.insert_video(str(video), snippet, status)
     vid = r["id"]
     print("uploaded:", vid, r["status"].get("privacyStatus"))
@@ -84,16 +84,6 @@ def main():
             fn(); print(step, "OK")
         except Exception as e:  # keep going; report at the end
             print(step, "FAILED:", str(e)[:200])
-
-    if a.publish_at:
-        sched = {k: v for k, v in status.items()} | {"privacyStatus": "private", "publishAt": a.publish_at}
-        for _ in range(3):
-            got = client.update_video(vid, snippet, sched).get("status", {})
-            if got.get("publishAt"):
-                print("scheduled", got["publishAt"]); break
-            time.sleep(5)
-        else:
-            print("SCHEDULE FAILED: video is private without publishAt; set it manually")
 
     time.sleep(30)
     st = client._req("GET", f"{client.DATA}/videos", oauth=True, params={"part": "status,processingDetails", "id": vid})["items"][0]
