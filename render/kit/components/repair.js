@@ -16,7 +16,7 @@ function connector(ctx, x, y, lt, t0, ripAt) { // socket on a board; the plug + 
   box(ctx, -110, 0, 220, 80, 10, C.mari);                          // socket
   ctx.save(); ctx.translate(sh, -r * 170); ctx.rotate(-0.25 * r);
   box(ctx, -80, -70, 160, 90, 10, C.stone);                        // plug
-  ctx.beginPath(); ctx.moveTo(0, -70); ctx.bezierCurveTo(0, -180, 120, -200, 160, -300); ctx.lineWidth = 14; ctx.strokeStyle = C.ink; ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(0, -70); ctx.bezierCurveTo(0, -150, 110, -160, 150, -220); ctx.lineWidth = 14; ctx.strokeStyle = C.ink; ctx.stroke();
   if (r > 0.6) { ctx.beginPath(); jag(ctx, -80, 20, 80, 20, 8, 12); ctx.lineWidth = 7; ctx.strokeStyle = C.wreck; ctx.stroke(); }
   ctx.restore();
   if (r > 0.6) { ctx.beginPath(); jag(ctx, -110, 4, 110, 4, 10, 10); ctx.lineWidth = 7; ctx.strokeStyle = C.wreck; ctx.stroke(); }
@@ -60,7 +60,7 @@ function usbc(ctx, x, y, lt, t0, slideAt) { // base outline; the port module sli
   ctx.save(); if (!enter(ctx, x, y, lt, t0)) { ctx.restore(); return; }
   box(ctx, -260, -150, 520, 300, 140, C.paperSoft);
   const o = easeInOut(prog(lt, slideAt, slideAt + 0.35)) - easeInOut(prog(lt, slideAt + 1.4, slideAt + 1.75));
-  ctx.save(); ctx.translate(o * 300, 0);
+  ctx.save(); ctx.translate(o * 200, 0);
   box(ctx, 120, -50, 170, 100, 14, C.mari);
   ctx.beginPath(); rr(ctx, 165, -16, 80, 32, 16); ctx.fillStyle = C.ink; ctx.fill();
   ctx.restore();

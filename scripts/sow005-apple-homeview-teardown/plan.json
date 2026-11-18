@@ -1,0 +1,9 @@
+[
+ {"cue": "price", "line": 0, "word": "two", "offset": -0.1, "sfx": "tick", "gain": 0.6},
+ {"cue": "rip", "line": 4, "word": "ripped"},
+ {"cue": "snap", "line": 4, "word": "two"},
+ {"cue": "locked", "line": 5, "word": "locked"},
+ {"cue": "port", "line": 8, "word": "modular"},
+ {"cue": "step", "line": 9, "word": "step"},
+ {"cue": "verdict", "line": 10, "word": "wreck"}
+]

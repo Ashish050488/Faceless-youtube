@@ -1,0 +1,677 @@
+{
+ "slug": "sow005-apple-homeview-teardown",
+ "plan": "plan.json",
+ "thumb": {
+  "img": "front_music",
+  "bg": "blush",
+  "big": "GLUED",
+  "word": "SHUT",
+  "tag": "$299",
+  "w": 560
+ },
+ "palette": {
+  "mint": "#E6F4EC"
+ },
+ "scenes": [
+  {
+   "line": 0,
+   "bg": "cool",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "front_music",
+     "x": 540,
+     "y": 860,
+     "w": 620,
+     "seed": 0.4,
+     "ltOffset": 9
+    },
+    {
+     "type": "headline",
+     "text": "$299",
+     "col": "ember",
+     "y": 140,
+     "at": -0.3,
+     "until": [
+      "smart",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "DISPLAY",
+     "y": 140,
+     "at": [
+      "smart",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 1,
+   "xfade": true,
+   "bg": "cool",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "front_music",
+     "x": 540,
+     "y": 860,
+     "w": 620,
+     "seed": 0.4,
+     "push": true
+    },
+    {
+     "type": "headline",
+     "text": "iFIXIT",
+     "y": 140,
+     "at": [
+      "ifixit",
+      0,
+      -0.1
+     ],
+     "until": [
+      "barely",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "BARELY",
+     "col": "ember",
+     "y": 140,
+     "at": [
+      "barely",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "lockScrews",
+     "x": 540,
+     "y": 1430,
+     "at": [
+      "inside",
+      0,
+      -0.1
+     ],
+     "s": 1.5
+    }
+   ]
+  },
+  {
+   "line": 2,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "family",
+     "x": 540,
+     "y": 900,
+     "w": 900,
+     "seed": 1.1,
+     "push": true
+    },
+    {
+     "type": "headline",
+     "text": "HOMEVIEW",
+     "y": 140,
+     "at": [
+      "homeview",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 2,
+   "from": "seven",
+   "xfade": true,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "front_home",
+     "x": 540,
+     "y": 900,
+     "w": 640,
+     "seed": 0.8,
+     "push": true
+    },
+    {
+     "type": "headline",
+     "text": "7 INCH",
+     "y": 140,
+     "at": [
+      "seven",
+      0,
+      -0.1
+     ],
+     "until": [
+      "eighteen",
+      0,
+      -0.15
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "A18",
+     "col": "ember",
+     "y": 140,
+     "at": [
+      "eighteen",
+      0,
+      -0.15
+     ]
+    }
+   ]
+  },
+  {
+   "line": 3,
+   "xfade": true,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "id": "p",
+     "img": "front_music",
+     "x": 540,
+     "y": 900,
+     "w": 560,
+     "seed": 1.6,
+     "push": true
+    },
+    {
+     "type": "callout",
+     "of": "p",
+     "u": 0.07,
+     "v": 0.06,
+     "r": 80,
+     "at": [
+      "glue",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "GLUE",
+     "col": "ember",
+     "y": 140,
+     "at": [
+      "glue",
+      0,
+      -0.1
+     ],
+     "until": [
+      "harder",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "HARDER",
+     "y": 140,
+     "at": [
+      "harder",
+      0,
+      -0.1
+     ],
+     "until": [
+      "apple",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "vs APPLE",
+     "col": "ember",
+     "y": 140,
+     "at": [
+      "apple",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 4,
+   "bg": "blush",
+   "layers": [
+    {
+     "type": "connector",
+     "y": 1000,
+     "at": 0.05,
+     "flipAt": [
+      "@rip",
+      0,
+      0
+     ],
+     "s": 1.4
+    },
+    {
+     "type": "headline",
+     "text": "RIPPED",
+     "col": "wreck",
+     "y": 140,
+     "at": [
+      "@rip",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 4,
+   "from": "snapped",
+   "xfade": true,
+   "bg": "blush",
+   "layers": [
+    {
+     "type": "speaker",
+     "y": 900,
+     "at": 0.05,
+     "flipAt": [
+      "@snap",
+      0,
+      -0.05
+     ],
+     "s": 1.6
+    },
+    {
+     "type": "headline",
+     "text": "SNAPPED",
+     "col": "wreck",
+     "y": 140,
+     "at": [
+      "snapped",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 5,
+   "bg": "blush",
+   "layers": [
+    {
+     "type": "cable",
+     "y": 860,
+     "at": 0.05,
+     "mode": "hinge",
+     "s": 1.3
+    },
+    {
+     "type": "lockScrews",
+     "x": 540,
+     "y": 1420,
+     "at": [
+      "@locked",
+      0,
+      -0.1
+     ],
+     "s": 1.5
+    },
+    {
+     "type": "headline",
+     "text": "HINGE",
+     "y": 140,
+     "at": [
+      "hinge",
+      0,
+      -0.1
+     ],
+     "until": [
+      "@locked",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "LOCKED",
+     "col": "wreck",
+     "y": 140,
+     "at": [
+      "@locked",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 6,
+   "xfade": true,
+   "bg": "blush",
+   "real": true,
+   "shake": [
+    "apart",
+    0,
+    0
+   ],
+   "layers": [
+    {
+     "type": "product",
+     "img": "family",
+     "x": 540,
+     "y": 900,
+     "w": 820,
+     "seed": 0.3,
+     "push": true
+    },
+    {
+     "type": "headline",
+     "text": "NO SPLIT",
+     "col": "wreck",
+     "y": 140,
+     "at": [
+      "apart",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 7,
+   "bg": "blush",
+   "layers": [
+    {
+     "type": "cable",
+     "y": 840,
+     "at": 0.05,
+     "mode": "short",
+     "s": 1.4
+    },
+    {
+     "type": "headline",
+     "text": "WOOFER",
+     "y": 140,
+     "at": [
+      "woofer",
+      0,
+      -0.1
+     ],
+     "until": [
+      "short",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "TOO SHORT",
+     "col": "wreck",
+     "y": 140,
+     "at": [
+      "short",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 8,
+   "bg": "mint",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "front_music",
+     "x": 540,
+     "y": 880,
+     "w": 560,
+     "seed": 2.0,
+     "push": true
+    },
+    {
+     "type": "headline",
+     "text": "GOOD NEWS",
+     "y": 140,
+     "at": [
+      "good",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 8,
+   "from": "usb",
+   "xfade": true,
+   "bg": "mint",
+   "layers": [
+    {
+     "type": "usbc",
+     "x": 400,
+     "y": 880,
+     "at": 0.05,
+     "flipAt": [
+      "@port",
+      0,
+      -0.1
+     ],
+     "s": 1.2
+    },
+    {
+     "type": "headline",
+     "text": "USB-C",
+     "y": 140,
+     "at": 0,
+     "until": [
+      "@port",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "MODULAR",
+     "col": "ember",
+     "y": 140,
+     "at": [
+      "@port",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 9,
+   "bg": "paper",
+   "real": true,
+   "shake": [
+    "@step",
+    0,
+    0.1
+   ],
+   "layers": [
+    {
+     "type": "product",
+     "img": "front_home",
+     "x": 540,
+     "y": 1000,
+     "w": 520,
+     "ltOffset": 5,
+     "fade": {
+      "at": 0,
+      "to": 0.45
+     }
+    },
+    {
+     "type": "stamp",
+     "text": "STEP BACK",
+     "y": 560,
+     "at": [
+      "@step",
+      0,
+      -0.12
+     ],
+     "sfx": false
+    }
+   ]
+  },
+  {
+   "line": 9,
+   "from": "apple's",
+   "xfade": true,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "front_home",
+     "x": 540,
+     "y": 900,
+     "w": 600,
+     "seed": 0.9,
+     "push": true
+    },
+    {
+     "type": "headline",
+     "text": "iPADS",
+     "y": 140,
+     "at": [
+      "ipads",
+      0,
+      -0.1
+     ],
+     "until": [
+      "easier",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "EASIER",
+     "col": "ember",
+     "y": 140,
+     "at": [
+      "easier",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 10,
+   "bg": "cool",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "family",
+     "x": 540,
+     "y": 950,
+     "w": 820,
+     "seed": 0.4
+    },
+    {
+     "type": "wordmark",
+     "y": 560,
+     "snapAt": 99
+    },
+    {
+     "type": "headline",
+     "text": "REPAIR?",
+     "y": 140,
+     "at": [
+      "repair",
+      0,
+      -0.1
+     ],
+     "until": [
+      "@verdict",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "WRECK",
+     "col": "wreck",
+     "y": 140,
+     "at": [
+      "@verdict",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 11,
+   "bg": "cool",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "front_music",
+     "x": 540,
+     "y": 860,
+     "w": 620,
+     "seed": 0.4,
+     "ltOffset": 9
+    },
+    {
+     "type": "headline",
+     "text": "BUY IT?",
+     "y": 140,
+     "at": [
+      "buy",
+      0,
+      -0.1
+     ],
+     "until": [
+      "spec",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "$299",
+     "col": "ember",
+     "y": 140,
+     "at": [
+      "spec",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "endcard": true,
+   "bg": "paper",
+   "layers": [
+    {
+     "type": "wordmark",
+     "y": 900,
+     "snapAt": 0.7
+    }
+   ]
+  }
+ ]
+}

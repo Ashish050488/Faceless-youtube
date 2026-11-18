@@ -111,13 +111,14 @@ const DRAWERS = {
   motionLines(ctx, l, lt, sc, R) { if (l.screen) K.setScreen(l.screen); K.motionLines(ctx, R[l.of], lt, tref(sc, l.at)); },
   screenDim(ctx, l, lt, sc, R) { if (l.screen) K.setScreen(l.screen); const t0 = tref(sc, l.at); K.screenDim(ctx, R[l.of], (l.to ?? 0.5) * easeInOut(prog(lt, t0, t0 + 0.5))); },
   playIcon(ctx, l, lt, sc, R) { if (l.screen) K.setScreen(l.screen); K.playIcon(ctx, R[l.of], lt, tref(sc, l.at)); },
-  connector(ctx, l, lt, sc) { K.connector(ctx, l.x ?? 540, l.y, lt, tref(sc, l.at, 0.05), tref(sc, l.flipAt)); },
-  speaker(ctx, l, lt, sc) { K.speaker(ctx, l.x ?? 540, l.y, lt, tref(sc, l.at, 0.05), tref(sc, l.flipAt)); },
-  cable(ctx, l, lt, sc) { K.cable(ctx, l.x ?? 540, l.y, lt, tref(sc, l.at, 0.05), l.mode || 'hinge'); },
-  usbc(ctx, l, lt, sc) { K.usbc(ctx, l.x ?? 540, l.y, lt, tref(sc, l.at, 0.05), tref(sc, l.flipAt)); },
-  lockScrews(ctx, l, lt, sc) { K.lockScrews(ctx, l.x, l.y, lt, tref(sc, l.at, 0.05)); },
+  connector(ctx, l, lt, sc) { sc_(ctx, l, () => K.connector(ctx, 0, 0, lt, tref(sc, l.at, 0.05), tref(sc, l.flipAt))); },
+  speaker(ctx, l, lt, sc) { sc_(ctx, l, () => K.speaker(ctx, 0, 0, lt, tref(sc, l.at, 0.05), tref(sc, l.flipAt))); },
+  cable(ctx, l, lt, sc) { sc_(ctx, l, () => K.cable(ctx, 0, 0, lt, tref(sc, l.at, 0.05), l.mode || 'hinge')); },
+  usbc(ctx, l, lt, sc) { sc_(ctx, l, () => K.usbc(ctx, 0, 0, lt, tref(sc, l.at, 0.05), tref(sc, l.flipAt))); },
+  lockScrews(ctx, l, lt, sc) { sc_(ctx, l, () => K.lockScrews(ctx, 0, 0, lt, tref(sc, l.at, 0.05))); },
   pill(ctx, l, lt, sc) { const t0 = tref(sc, l.at, 0); if (lt < t0) return; const e = K.spr(lt - t0, 16); ctx.save(); ctx.globalAlpha = clamp(e * 1.4); K.pill2(ctx, l.x - l.w / 2, l.y - l.h / 2, l.w, l.h, col(l.fill || 'ink')); K.label(ctx, l.text, l.x, l.y + (l.px || 64) * 0.35, l.px || 64, col(l.col || 'mari')); ctx.restore(); },
 };
+function sc_(ctx, l, fn) { ctx.save(); ctx.translate(l.x ?? 540, l.y); ctx.scale(l.s || 1, l.s || 1); fn(); ctx.restore(); } // repair.js diagrams: x, y, s (scale)
 function anchorXY(l, R) { if (l.of) { const r = R[l.of]; return [r.x0 + r.w * l.u, r.y0 + r.h * l.v]; } return [l.x, l.y]; }
 
 // ---------- timeline ----------
