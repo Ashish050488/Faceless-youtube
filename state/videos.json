@@ -69,14 +69,20 @@
   "hypothesis": "Apple (top priority) + price + CAPS word + emoji; repairability outrage drives comments."
  },
  {
-  "id": null,
+  "id": "UTvRnFY_jks",
   "slug": "sow006-iphone-duo-999-screen",
   "title": "Apple Wants $999 for a NEW iPhone Duo Screen 😳",
   "format": "short",
-  "status": "scripted",
+  "status": "scheduled",
   "slot": "1",
   "scripted_at": "2026-11-18T08:50Z",
   "publish_at": "2026-11-18T12:30:00Z",
-  "hypothesis": "Apple + price shock + CAPS/emoji title on the hottest foldable beats sow002/sow004."
+  "hypothesis": "Apple + price shock + CAPS/emoji title on the hottest foldable beats sow002/sow004.",
+  "privacy": "private",
+  "uploaded_at": "2026-11-18T09:07Z",
+  "size_mb": 6.3,
+  "duration_s": 61.2,
+  "url": "https://youtube.com/shorts/UTvRnFY_jks",
+  "comment": "pending (needs public video)"
  }
 ]
