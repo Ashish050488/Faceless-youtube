@@ -7,8 +7,13 @@ Benchmark for Shorts = Techy or Not (measured: state/competitor_watch/). Long vi
 - Real product on screen ≥ 60 % of runtime; ≥ 6 distinct real images per Short (12 per long video).
 - Sources in order: official product page / newsroom / press kit → press articles embedding the brand's press images
   (full-size file) → brand's own social posts (stills) → store page screenshots for price/date facts.
-- NOT allowed: any video clip from YouTube/TikTok/Instagram or brand promo videos; Getty/stock with watermarks;
-  other creators' thumbnails; AI-generated product photos.
+- Official product CLIPS (owner 2026-11-18): short muted loops from the brand's OWN product/landing page (e.g. the
+  video loops on apple.com product pages; take the file from the page code). Limits, because clips carry more
+  copyright/reused-content risk than stills: each clip ≤ 3 s, all clips together ≤ 20 % of runtime, always muted,
+  always with our own graphic/number on top (never a bare clip), credited in the description, logged in assets.md.
+  Real images still ≥ 60 % of runtime counting stills + clips.
+- NOT allowed: clips from YouTube/TikTok/Instagram/X or any other creator; full brand ads/keynote footage; Getty/stock
+  with watermarks; other creators' thumbnails; AI-generated product photos.
 - Originals ≥ 1600 px long edge; no visible pixelation. Cut-outs: rembg isnet-general-use, 1 px feather, no halos,
   soft contact shadow. Colour-match all images. Log each in assets.md (file, URL, credit, resolution).
 - Our 2-D objects explain; they sit next to the real image, never replace it.
@@ -20,7 +25,8 @@ Benchmark for Shorts = Techy or Not (measured: state/competitor_watch/). Long vi
 - Motion: scale in place, vertical slides, morphs, object continuity, crossfades. NO sideways pans / infinite canvas;
   never two layouts half-and-half.
 - Rhythm: 8–12 hard cuts per 75 s; motion on beats, then calm holds 0.8–2 s; nothing static > 2.5 s.
-- Text: 1–3 words per scene (number + unit = one), headline cap height ≥ 7 % of frame height (≥ 90 px at 720×1280),
+- Text: 1–3 words per scene (number + unit = one), headline SMALLER (owner 2026-11-18): cap height 4–5 % of frame
+  height (77–96 px at 1080×1920), numbers may go to 6 %; never wider than 80 % of the frame.
   new headline every spoken sentence, none on screen > 4 s, no label < 30 px at 720 w. NO captions burned in
   (captions.srt is still delivered for YouTube closed captions).
 - Frame 1: product ≥ 60 % width + ≤ 3-word huge title + one accent mark.
@@ -28,13 +34,21 @@ Benchmark for Shorts = Techy or Not (measured: state/competitor_watch/). Long vi
   goes to Instagram). Rule instead: NOTHING OVERLAPS — text, product, objects and watermark never touch each other.
   Side margin: every element stays ≥ 54 px from the left and right edges at 1080 w (5 %), so text never runs off the
   frame (sow004 had a 1,086 px headline on a 1,080 frame). Shrink the text to fit; never let it touch an edge.
+  Top margin (owner 2026-11-18): nothing above y 170 at 1080×1920 (≈ 9 %), so phone notches / Dynamic Island /
+  punch-hole cameras never touch text or product. check.py fails anything inside it.
 
 ## 3. Show, don't write (Mayer: coherence, signaling, redundancy, contiguity, segmenting)
 - One idea per scene; the ONE key thing gets the callout ring/underline/colour.
+- MORE objects, MORE numbers, MORE detail (owner 2026-11-18): every scene has at least one 2-D object; every number in
+  the script is shown as a number + object (aim ≥ 5 numbers per Short); objects are detailed, not icons — e.g. a
+  battery with cells, terminal and % ticks; calipers with a scale and a jaw that slides; a price tag with string and
+  a hole; a screen with bezel and pixels; a chip with pins. Each object animates its meaning (fills, slides, counts).
 - Ideas as flat 2-D objects (ink outlines 4–5 px at 720 w, palette fills, round caps, springy entrance, one SFX each):
   brightness → sun · battery → cell filling · thinness → calipers · weight → scale · water → drop + ripples ·
   fitness → pulse line · price → tag/coin · region → map pin · date → calendar flip · "no X" → strike-through ·
-  sold out → stamp · comparison → bars/see-saw.
+  sold out → stamp · comparison → bars/see-saw · speed → speedometer needle · storage → stacked drives/bars ·
+  camera → lens with aperture blades · charging → plug + bolt filling · temperature → thermometer · sound → wave bars ·
+  repairability → screwdriver + screw count · size → ruler against a known object (credit card, coin, phone).
 - Label sits next to the part it describes; visuals land on the spoken word ±2 frames; reveal parts in sequence.
 - Maps = Natural Earth 1:110m (1:50m close-ups), country filled marigold, others stone 25 %, pin at real centroid.
   Charts to scale. Every drawn fact matches factsheet.md.
