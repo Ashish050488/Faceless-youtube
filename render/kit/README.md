@@ -31,6 +31,8 @@ watermark included.
 **check.py fails on:**
 - any overlap, or any element closer than 54 px to the left/right edge (side margin; labels and headlines shrink to
   fit automatically);
+- anything above y 170 (top margin for phone notches / Dynamic Island, owner 2026-11-18). Headlines default to
+  y 300; keep `y` ≥ 170;
 - contrast below 3 (text ≥ 60 px) or below 4.5 (smaller text);
 - an on-screen number missing from factsheet.md (a rounded decimal display passes: "27 h" for 27.08);
 - a counter hold under 1.2 s, or a headline on screen over 4 s;
@@ -68,7 +70,7 @@ measure, map, screen. core.js loads them in that order.
 | type | keys |
 |---|---|
 | product | img, x, y (centre), w, seed, push, shadow, ltOffset, alpha, fade{at,to}, dim{at,to}, move{at,dur,x,y,w}, id |
-| headline | text, at, until, y=300, col, acc[], strike (StrikeThrough at time) |
+| headline | text, at, until, y=300 (≥ 170); px auto: cap height 4–5 % (px 106–132), numbers px 158, ≤ 864 px wide, col, acc[], strike (StrikeThrough at time) |
 | number | value, from=0, at, until, unit, prefix, comma, dec, x, y, px, col (RollingNumber ≤ 0.35 s) |
 | label | text, x, y, px, col=ember, at, align |
 | priceTag | x, y, text, at |

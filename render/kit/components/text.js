@@ -15,14 +15,13 @@ function headline(ctx, text, lt, dark, { t0 = 0.05, y = 300, acc = [], col = nul
   if (!text) return null;
   const ws = text.split(' ');
   let px;
-  if (ws.length === 1 || text.length <= 6) { // one word / number: ≥ 75 % width
-    for (px = 340; px > 150; px -= 4) { font(ctx, px, 'head'); if (ctx.measureText(text).width <= 900) break; }
-    font(ctx, px, 'head'); if (ctx.measureText(text).width < 810) { px = Math.min(380, px * 810 / ctx.measureText(text).width); }
-  } else { for (px = 220; px >= 186; px -= 2) { font(ctx, px, 'head'); if (ctx.measureText(text).width <= 920) break; } }
+  // owner 2026-11-18 (PRODUCTION_SPEC §2): cap height 4–5 % of 1920 (px 106–132), numbers up to 6 % (px 158), ≤ 80 % width
+  const MAXW = 864, big = /\d/.test(text) ? 158 : 132;
+  for (px = big; px > 106; px -= 2) { font(ctx, px, 'head'); if (ctx.measureText(text).width <= MAXW) break; }
   font(ctx, px, 'head');
   let rows = [ws];
-  if (ctx.measureText(text).width > 920) { const mid = Math.ceil(ws.length / 2); rows = [ws.slice(0, mid), ws.slice(mid)]; }
-  while (px > 120 && Math.max(...rows.map(r => ctx.measureText(r.join(' ')).width)) > 940) { px -= 4; font(ctx, px, 'head'); } // every row fits
+  if (ctx.measureText(text).width > MAXW) { const mid = Math.ceil(ws.length / 2); rows = [ws.slice(0, mid), ws.slice(mid)]; }
+  while (px > 90 && Math.max(...rows.map(r => ctx.measureText(r.join(' ')).width)) > MAXW) { px -= 4; font(ctx, px, 'head'); } // every row fits
   const lh = px * 0.92; let k = 0; const boxes = [];
   rows.forEach((r, ri) => {
     const rowW = ctx.measureText(r.join(' ')).width; let x = 540 - rowW / 2;

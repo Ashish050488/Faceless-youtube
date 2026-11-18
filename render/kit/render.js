@@ -76,7 +76,7 @@ const DRAWERS = {
   label(ctx, l, lt, sc) { const t0 = tref(sc, l.at, 0); if (lt < t0) return; K.label(ctx, l.text, l.x, l.y, l.px || 72, col(l.col || 'ember'), { a: easeOut(prog(lt, t0, t0 + 0.25)), align: l.align || 'center' }); },
   number(ctx, l, lt, sc) {
     if (l.until !== undefined && lt >= tref(sc, l.until)) return;
-    K.counter(ctx, l.value, l.from || 0, lt, tref(sc, l.at, 0), l.x ?? 540, l.y ?? 470, l.px || 230, col(l.col || 'ember'), { prefix: l.prefix || '', unit: l.unit || '', comma: l.comma !== false, dec: l.dec || 0, dark: false });
+    K.counter(ctx, l.value, l.from || 0, lt, tref(sc, l.at, 0), l.x ?? 540, l.y ?? 470, l.px || 158, col(l.col || 'ember'), { prefix: l.prefix || '', unit: l.unit || '', comma: l.comma !== false, dec: l.dec || 0, dark: false });
   },
   priceTag(ctx, l, lt, sc) { K.priceTag(ctx, l.x, l.y, lt, tref(sc, l.at), l.text, { dark: false }); },
   callout(ctx, l, lt, sc, R) { const t0 = tref(sc, l.at); const [x, y] = anchorXY(l, R); K.stroked(ctx, () => ctx.arc(x, y, l.r || 70, -Math.PI / 2, Math.PI * 1.5 - 1e-4), 2 * Math.PI * (l.r || 70), prog(lt, t0, t0 + K.DRAW), { lw: 9, col: col(l.col || 'ember') }); },
@@ -194,7 +194,7 @@ function instrument(ctx) {
 // Each visible layer is drawn alone at 1/4 scale; opaque cells (alpha > 128, so soft shadows/glows don't count) are
 // compared pairwise and against the watermark. Exempt: a layer and the product it is attached to (of / under), and any
 // layer marked "overlap": true (deliberate, e.g. a number inside its clock ring, the CATCH stamp over a dimmed product).
-const QS = 4, QW = W / QS, QH = H / QS, MARGIN = 54; // side margin at 1080 w (PRODUCTION_SPEC §2)
+const QS = 4, QW = W / QS, QH = H / QS, MARGIN = 54, TOP = 170; // side margin at 1080 w; top margin for notch / Dynamic Island (PRODUCTION_SPEC §2)
 const qcv = createCanvas(QW, QH), qctx = qcv.getContext('2d'), dummy = createCanvas(4, 4).getContext('2d');
 function maskOf(drawFn) { qctx.setTransform(1, 0, 0, 1, 0, 0); qctx.clearRect(0, 0, QW, QH); qctx.setTransform(1 / QS, 0, 0, 1 / QS, 0, 0); drawFn(qctx); qctx.setTransform(1, 0, 0, 1, 0, 0);
   const d = qctx.getImageData(0, 0, QW, QH).data, m = new Uint8Array(QW * QH); let n = 0; for (let i = 0; i < m.length; i++) if (d[i * 4 + 3] > 128) { m[i] = 1; n++; } return n ? m : null; }
@@ -207,7 +207,9 @@ function overlaps(s, t) {
   const ML = Math.floor(MARGIN / QS) - 1, MR = Math.ceil((W - MARGIN) / QS); // cells fully inside the side margins
   layers.forEach((l, k) => { const m = masks[k]; if (!m || l.type === 'watermark') return; let n = 0;
     for (let y = 0; y < QH; y++) for (let x = 0; x < QW; x++) if ((x <= ML || x >= MR) && m[y * QW + x]) n++;
-    if (n > 2) out.push({ t: +t.toFixed(2), scene: s.i, issue: `side margin < ${MARGIN} px: ${name(l)}`, px: n * QS * QS }); });
+    if (n > 2) out.push({ t: +t.toFixed(2), scene: s.i, issue: `side margin < ${MARGIN} px: ${name(l)}`, px: n * QS * QS });
+    let nt = 0; for (let y = 0; y < Math.floor(TOP / QS) - 1; y++) for (let x = 0; x < QW; x++) if (m[y * QW + x]) nt++;
+    if (nt > 2) out.push({ t: +t.toFixed(2), scene: s.i, issue: `top margin < ${TOP} px: ${name(l)}`, px: nt * QS * QS }); });
   for (let a = 0; a < layers.length; a++) for (let b = a + 1; b < layers.length; b++) {
     const A = layers[a], B = layers[b], ma = masks[a], mb = masks[b]; if (!ma || !mb || A.overlap || B.overlap) continue;
     if ((A.id && (B.of === A.id || B.under === A.id)) || (B.id && (A.of === B.id || A.under === B.id))) continue;
@@ -234,6 +236,7 @@ async function main() {
     const seenN = {}; for (const tx of TEXTS) seenN[tx.scene + '|' + tx.text] = (seenN[tx.scene + '|' + tx.text] || 0) + 1; // transient = mid-roll counter / entrance overshoot
     const warnings = [];
     for (const tx of TEXTS) { const [x0, y0, x1, y1] = tx.box; if (seenN[tx.scene + '|' + tx.text] < 2) continue;
+      if (y0 < TOP - 1) issues.push({ t: tx.t, scene: tx.scene, issue: `text above y ${TOP} (top margin)`, text: tx.text, box: tx.box });
       if (x0 < MARGIN - 1 || x1 > W - MARGIN + 1) issues.push({ t: tx.t, scene: tx.scene, issue: `text inside ${MARGIN} px side margin`, text: tx.text, box: tx.box });
       if (tx.contrast !== null && tx.contrast < (tx.px >= 60 ? 3 : 4.5)) issues.push({ t: tx.t, scene: tx.scene, issue: `low contrast ${tx.contrast}`, text: tx.text }); }
     const numbers = [...new Set([...TEXTS.filter(x => seenN[x.scene + '|' + x.text] >= 3).map(x => x.text.trim()), ...COUNTERS.map(c => c.name)].filter(x => /\d/.test(x)))];
