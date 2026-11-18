@@ -167,5 +167,29 @@
    "shares": 0,
    "saved": 0
   }
+ },
+ {
+  "date": "2026-11-18",
+  "slot": "10:17 IST",
+  "topic": "Nvidia Q3 FY27: $115.8B revenue in first results without Huang; board won't reinstate him",
+  "status": "draft, awaiting owner OK",
+  "postId": "a83df320-0aa7-4271-9f34-1444e632b849",
+  "revision": "1c037118",
+  "slides": 5,
+  "sources": [
+   "https://www.cbsnews.com/news/nvidia-earnings-jensen-huang-colette-kress/",
+   "https://www.investing.com/news/earnings/nvidia-quarterly-results-beat-estimates-5033943",
+   "https://www.cnbc.com/2026/11/17/nvidia-nvda-earnings-report-q3-2027.html"
+  ],
+  "images": "NVIDIA newsroom",
+  "test_vars": {
+   "format": "story",
+   "cover_angle": "numbers+people",
+   "topic_type": "money",
+   "slide_count": 5,
+   "meme": true,
+   "slot_time": "10:17",
+   "caption_length": "medium"
+  }
  }
 ]
