@@ -7,7 +7,15 @@
   "ai_label": true,
   "permalink": "https://www.instagram.com/reel/Df1bqC6kRCy/",
   "mediaId": "18034271948916105",
-  "note": "Duplicate: script session also posted https://www.instagram.com/reel/Df1bk_mjO-0/ ; owner to delete one in the app."
+  "note": "Duplicate: script session also posted https://www.instagram.com/reel/Df1bk_mjO-0/ ; owner to delete one in the app.",
+  "stats_2026-11-18": {
+   "views": 14,
+   "reach": 11,
+   "likes": 0,
+   "comments": 0,
+   "shares": 0,
+   "saved": 0
+  }
  },
  {
   "date": "2026-11-17",
@@ -20,7 +28,15 @@
   ],
   "images": "Anthropic press kit (headshots, logo)",
   "permalink": "https://www.instagram.com/p/Df1eleUFpVX/",
-  "postId": "034e7b7b-4a0d-4e14-95bb-c699f641f343"
+  "postId": "034e7b7b-4a0d-4e14-95bb-c699f641f343",
+  "stats_2026-11-18": {
+   "views": 1,
+   "reach": 1,
+   "likes": 0,
+   "comments": 0,
+   "shares": 0,
+   "saved": 0
+  }
  },
  {
   "date": "2026-11-17",
@@ -62,7 +78,15 @@
   ],
   "images": "NVIDIA newsroom",
   "postId": "9a8d5c71-7669-43d4-adf0-5127a5b56759",
-  "permalink": "https://www.instagram.com/p/Df2B5pikXAo/"
+  "permalink": "https://www.instagram.com/p/Df2B5pikXAo/",
+  "stats_2026-11-18": {
+   "views": 4,
+   "reach": 1,
+   "likes": 0,
+   "comments": 0,
+   "shares": 0,
+   "saved": 0
+  }
  },
  {
   "date": "2026-11-17",
@@ -87,7 +111,15 @@
    "slot_time": "20:37",
    "caption_length": "medium"
   },
-  "permalink": "https://www.instagram.com/p/Df2nrTxFJjC/"
+  "permalink": "https://www.instagram.com/p/Df2nrTxFJjC/",
+  "stats_2026-11-18": {
+   "views": 2,
+   "reach": 1,
+   "likes": 0,
+   "comments": 0,
+   "shares": 0,
+   "saved": 0
+  }
  },
  {
   "date": "2026-11-17",
@@ -111,6 +143,29 @@
    "slot_time": "23:23",
    "caption_length": "medium"
   },
-  "permalink": "https://www.instagram.com/p/Df2nrglieLr/"
+  "permalink": "https://www.instagram.com/p/Df2nrglieLr/",
+  "stats_2026-11-18": {
+   "views": 5,
+   "reach": 1,
+   "likes": 0,
+   "comments": 0,
+   "shares": 0,
+   "saved": 0
+  }
+ },
+ {
+  "date": "2026-11-17",
+  "type": "reel_crosspost",
+  "topic": "Lenovo 990 g laptop (YouTube Short)",
+  "posted_by": "script session",
+  "permalink": "https://www.instagram.com/reel/Df2BZ9yj0YV/",
+  "stats_2026-11-18": {
+   "views": 118,
+   "reach": 102,
+   "likes": 2,
+   "comments": 0,
+   "shares": 0,
+   "saved": 0
+  }
  }
 ]

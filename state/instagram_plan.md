@@ -105,4 +105,5 @@ Reference that works: @indiainlast24hr (5M followers) post Dfqzov4Ddj8, Jensen H
   the account needs consistent posting before differences mean anything (judge after ~10 posts per variant).
 
 ### Findings
+- 2026-11-18 (insights): Reels reach far more than carousels on this new account: Lenovo Reel reach 102 / 118 views / 2 likes; Oppo Reel reach 11; all 4 carousels reach 1 (views 1–5), 0 shares/saves anywhere. Measured, tiny sample. Carousels get almost no distribution yet; keep the story format but test stronger cover hooks, and lean on Reels for reach.
 - 2026-11-17: 1–3 words per slide = owner rejected (no information). Story format (sentence cover + info slides + meme) is the baseline now.
