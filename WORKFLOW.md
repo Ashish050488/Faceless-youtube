@@ -56,6 +56,11 @@ big files from Drive, so finished videos travel by git:
   delete the remote branch (`git push origin --delete handoff/<slug>`) and local copies. Script stays in Drive.
 - qa.md / small text can still go to Drive › 02_ready_to_upload › <slug>/ as before.
 
+## Voice on GitHub Actions (owner 2026-11-18)
+- Every push of scripts/<slug>/script.md to main runs .github/workflows/voice.yml (free on public repos, Python 3.11,
+  cached models) → branch handoff/<slug>-voice. The video session fetches it instead of running Kokoro itself.
+- After the video is published, delete handoff/<slug>-voice too (owner deletes branches on GitHub).
+
 ## Instagram (owner 2026-11-17)
 - Reels: the daily script run is a fresh chat without vidIQ, so after the YouTube video is public it sends the
   Instagram session ONE message (link + caption); the Instagram session posts the Reel (vidiq_instagram_publish_reel,

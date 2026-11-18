@@ -1,0 +1,59 @@
+# Narration on GitHub Actions (owner 2026-11-18: "move just audio for now").
+# Trigger: a push to main that adds/changes scripts/<slug>/script.md, or a manual run with a slug.
+# Output: orphan branch handoff/<slug>-voice with voice.wav, words.json, voice_seconds.txt, timing.txt.
+# Locked settings (PRODUCTION_SPEC §5): Kokoro af_heart 0.795, gaps 0.30/0.42, config/pronunciations.json.
+name: voice
+on:
+  push:
+    branches: [main]
+    paths: ["scripts/*/script.md"]
+  workflow_dispatch:
+    inputs:
+      slug: {description: "scripts/<slug>", required: true}
+permissions:
+  contents: write
+concurrency: {group: voice, cancel-in-progress: false}
+jobs:
+  voice:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 2}
+      - name: Which scripts changed
+        id: slugs
+        run: |
+          if [ -n "${{ github.event.inputs.slug }}" ]; then S="${{ github.event.inputs.slug }}"
+          else S=$(git diff --name-only HEAD~1 HEAD -- 'scripts/*/script.md' | cut -d/ -f2 | sort -u | tr '\n' ' '); fi
+          echo "list=$S" >> "$GITHUB_OUTPUT"; echo "slugs: $S"
+      - uses: actions/setup-python@v5
+        if: steps.slugs.outputs.list != ''
+        with: {python-version: "3.11", cache: pip, cache-dependency-path: .github/workflows/voice.yml}
+      - name: Cache models (Kokoro, spaCy, Whisper)
+        if: steps.slugs.outputs.list != ''
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: models-v1
+      - name: Install
+        if: steps.slugs.outputs.list != ''
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq espeak-ng ffmpeg >/dev/null
+          pip install -q --extra-index-url https://download.pytorch.org/whl/cpu torch
+          pip install -q kokoro "misaki[en]" soundfile librosa faster-whisper num2words scipy numpy
+      - name: Narrate and push
+        if: steps.slugs.outputs.list != ''
+        run: |
+          git config user.name "voice-bot"; git config user.email "voice-bot@users.noreply.github.com"
+          for SLUG in ${{ steps.slugs.outputs.list }}; do
+            O=$RUNNER_TEMP/$SLUG; mkdir -p "$O"
+            python audio/narrate.py "scripts/$SLUG/script.md" af_heart 0.795 "$O/voice.wav" 0.30 0.42 2>&1 | grep -vi warn | tail -2
+            python -m meta.align_words "scripts/$SLUG/script.md" "$O/voice.wav" "$O/words.json" 2>&1 | grep -vi warn | tail -1
+            ffprobe -v error -show_entries format=duration -of csv=p=0 "$O/voice.wav" > "$O/voice_seconds.txt"
+            python audio/measure_timing.py "$O/voice.wav" > "$O/timing.txt" 2>/dev/null || true
+            cat "$O/voice_seconds.txt" "$O/timing.txt"
+            (cd "$O" && sha256sum voice.wav words.json > sha256.txt && git init -q -b "handoff/$SLUG-voice" \
+              && git add -f . && git -c user.name=voice-bot -c user.email=voice-bot@users.noreply.github.com commit -qm "voice for $SLUG" \
+              && git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" "HEAD:refs/heads/handoff/$SLUG-voice")
+            echo "pushed handoff/$SLUG-voice"
+          done

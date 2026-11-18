@@ -18,7 +18,11 @@ export PY=$(realpath ../sow-venv)/bin/python
 
 ## 1. Build order (one job per chat)
 Work dir: `$W = <scratchpad>/<slug>`. Delete the previous video's work dir first (§8).
-1. **Voice:** `render/kit/build.sh voice <slug> $W`.
+1. **Voice (GitHub Actions, owner 2026-11-18):** pushing scripts/<slug>/script.md to main starts `.github/workflows/voice.yml`,
+   which pushes `handoff/<slug>-voice` (voice.wav, words.json, voice_seconds.txt, timing.txt, sha256.txt) in ~2–10 min.
+   Get it: `git fetch origin handoff/<slug>-voice && git archive FETCH_HEAD | tar -x -C $W`, then copy the watermarks
+   (`cp render/brand/watermark_on_*.png $W/` as wm_light.png / wm_dark.png). Fallback only if the workflow fails:
+   `render/kit/build.sh voice <slug> $W`.
    - Locked settings: Kokoro af_heart 0.795, gaps 0.30/0.42, pronunciations from config/.
    - Writes words.json, voice_seconds.txt and the watermarks.
 2. **Assets:** put whole-product cut-outs in `$W/assets/` (see §2).
