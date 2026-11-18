@@ -29,6 +29,7 @@ the script session cross-posts YouTube Shorts as Reels. Full plan, slot routine 
 - From 18 Nov 2026 (owner): **Short days** (every day before Sat 5 Dec; from then Sun–Fri) = **2 image posts**
   (10:17, 13:43 IST) + **2 Reels** (the day's 2 YouTube Shorts, when the script session sends the links).
   **Long-video days** (Saturdays from 5 Dec 2026) = **3 image posts** (10:17, 13:43, 16:43 IST), no Reel.
+- Format mix (owner 2026-11-18): first image slot of the day = 1 carousel (hottest story); other image slots = single-image posts. Details: state/instagram_plan.md → FORMAT MIX.
 - Each post is made FRESH at its slot: web-search the hottest tech story of that moment, never prepare in advance.
 - Topics: ALL hot tech news (AI companies, CEO exits, IPOs, launches, regulation, big deals), not only gadgets.
 - vidIQ publishes only after the owner replies to that exact draft: one notification per slot, any reply publishes.

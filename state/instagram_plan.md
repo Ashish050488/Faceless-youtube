@@ -95,6 +95,26 @@ Reference that works: @indiainlast24hr (5M followers) post Dfqzov4Ddj8, Jensen H
 - Caption: 2–3 short paragraphs that tell the news properly (who, what, why it matters), neutral wording; "reported" for
   claims; then sources and image credit.
 
+## FORMAT MIX (owner 2026-11-18: "one carousel with the hottest news, the rest single posts") — OVERRIDES "carousel every slot"
+- Each day: the FIRST image slot (10:17 IST) = ONE carousel on the day's hottest story. Every other image slot
+  (13:43, and 16:43 on Saturdays) = a SINGLE-image post. Reels come from the script session (2/day).
+- Why (research 2026-11-18): for accounts under 10K followers, median reach per follower is Reels 4.9 %, single
+  images 3.5 %, carousels 2.6 % (Fanpage Karma); Reels reach ~3x more non-followers than carousels. Carousels win on
+  engagement per reach (Buffer: 6.9 % vs 4.4 % single image, 52M posts), so keep one a day for saves/shares.
+  Our own data agrees so far: Reels reached 11–102 people, carousels 1 each (18 Nov insights).
+- SINGLE-image post = template `cover` slide alone (headline sentence 8–16 words with the key phrase highlighted +
+  one-line context + big official photo + date badge). The caption does the explaining (2–3 short paragraphs,
+  like Indian news pages such as Newsworthy: punchy headline on the image, full story in the caption).
+  Best for: one shocking number, a quote, a price, a CEO move, a launch date.
+- CAROUSEL rules (vendor studies disagree on count; most land at 6–10): 6–8 slides.
+  1 cover = hook with a curiosity gap + face/product photo + "swipe →" cue · 2 = second hook (Instagram re-shows
+  slide 2 to people who skipped) with the strongest fact · 3–5 = one idea per slide, real numbers, photos ·
+  6 = the catch / what it means for you · 7 = meme (optional) · last = question + "send this to…".
+  Save-worthy angles: comparisons, timelines, "what you need to know", price ladders, checklists.
+- Improvements to test (one at a time, judge after ~10 posts each): stronger cover hooks (number + face),
+  "swipe →" cue on slide 1, faces over logos, reply to every comment within the hour, pin the best Reel,
+  caption line "Follow for a tech verdict every day". Later test: a Reel version of the daily carousel.
+
 ## TESTING LOOP (owner 2026-11-17: "keep testing what works and what doesn't")
 - Every post's log entry records its test variables: format (story/old), cover angle (drama / numbers / product),
   topic type (people, money, launch, policy), slide count, meme slide yes/no, slot time, caption length.
