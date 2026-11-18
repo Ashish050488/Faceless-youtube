@@ -28,6 +28,9 @@ monetisation guidance regularly (state/policy_notes.md) and follow it; nothing r
    - cues.json is a SHOT-BY-SHOT visual spec (owner 2026-11-17: "put in the script what to use"): for every spoken
      beat: exact anchor words, background colour, which real image (asset # + crop/scale/position), which 2-D object
      (shape, motion, data source), on-screen text (1–3 words), SFX, transition. The video session builds it, not invents it.
+     Per PRODUCTION_SPEC §1/§3 (owner 2026-11-18): a detailed 2-D object in every shot, every number shown (≥ 5 per Short),
+     and official product-page clips (≤ 3 s each, ≤ 20 % total, muted) listed with their exact page/file URL when the
+     brand's page has them.
    - Check pronunciation of every brand/term (print phonemes); extend config/pronunciations.json.
    - Upload the package to Drive: Faceless Channel/01_scripts/<slug>/ (scripts stay in Drive permanently).
    - Write shotlist.md: (A) real images/clips the script session found itself (direct URLs from page code),
