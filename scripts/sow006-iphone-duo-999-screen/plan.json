@@ -1,0 +1,14 @@
+[
+ {"cue": "price", "line": 0, "word": "nine", "offset": -0.1, "sfx": "tick", "gain": 0.6},
+ {"cue": "inner", "line": 2, "word": "nine", "offset": -0.05, "sfx": "tick", "gain": 0.5},
+ {"cue": "half", "line": 3, "word": "half"},
+ {"cue": "phone", "line": 3, "word": "nineteen"},
+ {"cue": "panel", "line": 4, "word": "four", "sfx": "tick", "gain": 0.5},
+ {"cue": "outer", "line": 5, "word": "three", "sfx": "tick", "gain": 0.5},
+ {"cue": "tools", "line": 6, "word": "forty", "sfx": "tick", "gain": 0.5},
+ {"cue": "days", "line": 6, "word": "seven"},
+ {"cue": "same", "line": 8, "word": "also"},
+ {"cue": "cheaper", "line": 9, "word": "cheaper", "sfx": "tick", "gain": 0.5},
+ {"cue": "verdict", "line": 11, "word": "spec"},
+ {"cue": "wreck", "line": 11, "word": "wreck"}
+]

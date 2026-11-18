@@ -54,7 +54,7 @@ let K = null;
 
 // ---------- layer renderers (component name → draw) ----------
 // each gets (ctx, layer, lt, sc, R) where R holds rects of earlier product layers by id
-const SFX_DEFAULT = { number: [['land', 'tick', 0.8]], stamp: [['at', 'thud', 1.0]], priceTag: [['at', 'thud', 0.5], ['at+0.15', 'swing', 0.5]], callout: [['at', 'pop', 0.4]],
+const SFX_DEFAULT = { connector: [['at', 'pop', 0.4], ['flipAt', 'thud', 0.8]], speaker: [['at', 'pop', 0.4], ['flipAt', 'thud', 0.9]], cable: [['at', 'pop', 0.4]], usbc: [['at', 'pop', 0.4], ['flipAt', 'whoosh', 0.4]], lockScrews: [['at', 'clunk', 0.6]], number: [['land', 'tick', 0.8]], stamp: [['at', 'thud', 1.0]], priceTag: [['at', 'thud', 0.5], ['at+0.15', 'swing', 0.5]], callout: [['at', 'pop', 0.4]],
   battery: [['at', 'blip', 0.3]], calipers: [['at+0.4', 'clamp', 0.7]], calipersV: [['at+0.4', 'clamp', 0.7]], map: [['pins', 'pin', 0.5]], hourglass: [['flipAt', 'flip', 0.7]],
   wordmark: [['snapAt', 'click', 1.0]], loupe: [['at', 'whoosh', 0.3]], dialScale: [['at', 'tick', 0.5]], scale: [['levelAt', 'clunk', 0.6]], sun: [['at', 'shimmer', 0.35]],
   toggle: [['flipAt', 'switch', 0.7]], ecg: [['at', 'beep', 0.4]], waterDrop: [['at+0.35', 'drip', 0.7]], calendar: [['at', 'flip', 0.6]], bars: [['bars', 'blip', 0.45]], clock: [['at', 'tick', 0.5]],
@@ -111,6 +111,11 @@ const DRAWERS = {
   motionLines(ctx, l, lt, sc, R) { if (l.screen) K.setScreen(l.screen); K.motionLines(ctx, R[l.of], lt, tref(sc, l.at)); },
   screenDim(ctx, l, lt, sc, R) { if (l.screen) K.setScreen(l.screen); const t0 = tref(sc, l.at); K.screenDim(ctx, R[l.of], (l.to ?? 0.5) * easeInOut(prog(lt, t0, t0 + 0.5))); },
   playIcon(ctx, l, lt, sc, R) { if (l.screen) K.setScreen(l.screen); K.playIcon(ctx, R[l.of], lt, tref(sc, l.at)); },
+  connector(ctx, l, lt, sc) { K.connector(ctx, l.x ?? 540, l.y, lt, tref(sc, l.at, 0.05), tref(sc, l.flipAt)); },
+  speaker(ctx, l, lt, sc) { K.speaker(ctx, l.x ?? 540, l.y, lt, tref(sc, l.at, 0.05), tref(sc, l.flipAt)); },
+  cable(ctx, l, lt, sc) { K.cable(ctx, l.x ?? 540, l.y, lt, tref(sc, l.at, 0.05), l.mode || 'hinge'); },
+  usbc(ctx, l, lt, sc) { K.usbc(ctx, l.x ?? 540, l.y, lt, tref(sc, l.at, 0.05), tref(sc, l.flipAt)); },
+  lockScrews(ctx, l, lt, sc) { K.lockScrews(ctx, l.x, l.y, lt, tref(sc, l.at, 0.05)); },
   pill(ctx, l, lt, sc) { const t0 = tref(sc, l.at, 0); if (lt < t0) return; const e = K.spr(lt - t0, 16); ctx.save(); ctx.globalAlpha = clamp(e * 1.4); K.pill2(ctx, l.x - l.w / 2, l.y - l.h / 2, l.w, l.h, col(l.fill || 'ink')); K.label(ctx, l.text, l.x, l.y + (l.px || 64) * 0.35, l.px || 64, col(l.col || 'mari')); ctx.restore(); },
 };
 function anchorXY(l, R) { if (l.of) { const r = R[l.of]; return [r.x0 + r.w * l.u, r.y0 + r.h * l.v]; } return [l.x, l.y]; }

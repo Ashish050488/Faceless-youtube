@@ -1,0 +1,700 @@
+{
+ "slug": "sow006-iphone-duo-999-screen",
+ "plan": "plan.json",
+ "thumb": {
+  "img": "duo_white",
+  "bg": "paper",
+  "big": "$999",
+  "word": "SCREEN",
+  "tag": "iPhone Duo",
+  "w": 600
+ },
+ "scenes": [
+  {
+   "line": 0,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "id": "hero",
+     "img": "duo_white",
+     "x": 540,
+     "y": 830,
+     "w": 680,
+     "seed": 0.4,
+     "ltOffset": 9,
+     "push": true
+    },
+    {
+     "type": "headline",
+     "text": "$999",
+     "col": "ember",
+     "at": -0.3,
+     "until": [
+      "new",
+      0,
+      -0.1
+     ],
+     "y": 140
+    },
+    {
+     "type": "headline",
+     "text": "SCREEN",
+     "at": [
+      "new",
+      0,
+      -0.1
+     ],
+     "y": 140
+    },
+    {
+     "type": "callout",
+     "of": "hero",
+     "u": 0.78,
+     "v": 0.5,
+     "r": 95,
+     "at": [
+      "screen",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 1,
+   "bg": "lav",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "duo_navy",
+     "x": 540,
+     "y": 820,
+     "w": 640,
+     "seed": 1.2,
+     "push": true
+    },
+    {
+     "type": "headline",
+     "text": "ON SALE",
+     "at": [
+      "selling",
+      0,
+      -0.1
+     ],
+     "y": 140,
+     "until": [
+      "parts",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "PARTS",
+     "col": "ember",
+     "y": 140,
+     "at": [
+      "parts",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 1,
+   "from": "fix",
+   "xfade": true,
+   "bg": "lav",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "sand_open",
+     "x": 540,
+     "y": 840,
+     "w": 420,
+     "seed": 2.1,
+     "push": true
+    },
+    {
+     "type": "headline",
+     "text": "DIY",
+     "col": "ember",
+     "at": [
+      "fix",
+      0,
+      -0.1
+     ],
+     "y": 140,
+     "until": [
+      "folding",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "FOLDABLE",
+     "y": 140,
+     "at": [
+      "folding",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 2,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "duo_land",
+     "x": 540,
+     "y": 950,
+     "w": 860,
+     "seed": 0.7,
+     "push": true
+    },
+    {
+     "type": "headline",
+     "text": "INNER",
+     "at": [
+      "inner",
+      0,
+      -0.1
+     ],
+     "until": [
+      "@inner",
+      0,
+      -0.1
+     ],
+     "y": 140
+    },
+    {
+     "type": "number",
+     "value": 999,
+     "prefix": "$",
+     "comma": false,
+     "at": [
+      "@inner",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 3,
+   "xfade": true,
+   "bg": "paper",
+   "layers": [
+    {
+     "type": "bars",
+     "base": 1200,
+     "h": 520,
+     "items": [
+      {
+       "value": 999,
+       "label": "$999",
+       "sub": "screen",
+       "col": "ember",
+       "at": [
+        "@half",
+        0,
+        -0.1
+       ]
+      },
+      {
+       "value": 1999,
+       "label": "$1,999",
+       "sub": "phone",
+       "col": "mari",
+       "at": [
+        "@phone",
+        0,
+        -0.1
+       ]
+      }
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "HALF",
+     "col": "ember",
+     "at": [
+      "@half",
+      0,
+      -0.1
+     ],
+     "until": [
+      "@phone",
+      0,
+      -0.1
+     ],
+     "y": 140
+    },
+    {
+     "type": "headline",
+     "text": "PHONE",
+     "at": [
+      "@phone",
+      0,
+      -0.1
+     ],
+     "y": 140
+    }
+   ]
+  },
+  {
+   "line": 4,
+   "xfade": true,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "duo_land",
+     "x": 540,
+     "y": 990,
+     "w": 700,
+     "seed": 1.4,
+     "push": true
+    },
+    {
+     "type": "headline",
+     "text": "PANEL",
+     "at": [
+      "panel",
+      0,
+      -0.1
+     ],
+     "until": [
+      "@panel",
+      0,
+      -0.1
+     ],
+     "y": 140
+    },
+    {
+     "type": "headline",
+     "text": "$499",
+     "col": "ember",
+     "at": [
+      "@panel",
+      0,
+      -0.1
+     ],
+     "y": 140
+    }
+   ]
+  },
+  {
+   "line": 5,
+   "bg": "lav",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "id": "cl",
+     "img": "duo_closed",
+     "x": 540,
+     "y": 850,
+     "w": 500,
+     "seed": 0.9,
+     "push": true
+    },
+    {
+     "type": "headline",
+     "text": "OUTER",
+     "at": [
+      "outer",
+      0,
+      -0.1
+     ],
+     "until": [
+      "@outer",
+      0,
+      -0.1
+     ],
+     "y": 140
+    },
+    {
+     "type": "headline",
+     "text": "$379",
+     "col": "ember",
+     "at": [
+      "@outer",
+      0,
+      -0.1
+     ],
+     "y": 140
+    },
+    {
+     "type": "callout",
+     "of": "cl",
+     "u": 0.5,
+     "v": 0.45,
+     "r": 150,
+     "at": [
+      "screen",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 6,
+   "xfade": true,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "sand_back",
+     "x": 320,
+     "y": 900,
+     "w": 340,
+     "seed": 1.8
+    },
+    {
+     "type": "number",
+     "value": 49,
+     "prefix": "$",
+     "comma": false,
+     "x": 760,
+     "y": 700,
+     "px": 190,
+     "at": [
+      "@tools",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "hourglass",
+     "x": 760,
+     "y": 1000,
+     "at": 0.05,
+     "flipAt": "@days"
+    },
+    {
+     "type": "headline",
+     "text": "TOOLS",
+     "at": [
+      "tool",
+      0,
+      -0.1
+     ],
+     "until": [
+      "@days",
+      0,
+      -0.1
+     ],
+     "y": 140
+    },
+    {
+     "type": "headline",
+     "text": "7 DAYS",
+     "at": [
+      "@days",
+      0,
+      -0.1
+     ],
+     "y": 140
+    }
+   ]
+  },
+  {
+   "line": 7,
+   "bg": "blush",
+   "real": true,
+   "shake": 0.32,
+   "layers": [
+    {
+     "type": "product",
+     "img": "duo_white",
+     "x": 540,
+     "y": 1000,
+     "w": 560,
+     "ltOffset": 5,
+     "fade": {
+      "at": 0,
+      "to": 0.45
+     },
+     "push": true
+    },
+    {
+     "type": "stamp",
+     "text": "THE CATCH",
+     "y": 560,
+     "at": 0.1,
+     "sfx": false
+    }
+   ]
+  },
+  {
+   "line": 8,
+   "bg": "blush",
+   "layers": [
+    {
+     "type": "bars",
+     "base": 1200,
+     "h": 520,
+     "items": [
+      {
+       "value": 999,
+       "label": "$999",
+       "sub": "Apple",
+       "col": "wreck",
+       "at": 0.1
+      },
+      {
+       "value": 999,
+       "label": "$999",
+       "sub": "DIY",
+       "col": "mari",
+       "at": [
+        "@same",
+        0,
+        -0.1
+       ]
+      }
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "APPLE",
+     "at": [
+      "apple",
+      0,
+      -0.1
+     ],
+     "until": [
+      "@same",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "SAME",
+     "at": [
+      "@same",
+      0,
+      -0.1
+     ],
+     "y": 140
+    }
+   ]
+  },
+  {
+   "line": 9,
+   "xfade": true,
+   "bg": "blush",
+   "layers": [
+    {
+     "type": "bars",
+     "base": 1200,
+     "h": 520,
+     "items": [
+      {
+       "value": 999,
+       "label": "$999",
+       "sub": "Apple",
+       "col": "wreck",
+       "at": -9
+      },
+      {
+       "value": 888.16,
+       "label": "$888",
+       "sub": "DIY",
+       "col": "mari",
+       "at": [
+        "works",
+        0,
+        -0.1
+       ]
+      }
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "TRADE IN",
+     "at": [
+      "send",
+      0,
+      -0.1
+     ],
+     "until": [
+      "works",
+      0,
+      -0.1
+     ],
+     "y": 140
+    },
+    {
+     "type": "headline",
+     "text": "DIY",
+     "col": "ember",
+     "at": [
+      "works",
+      0,
+      -0.1
+     ],
+     "until": [
+      "@cheaper",
+      0,
+      -0.1
+     ],
+     "y": 140
+    },
+    {
+     "type": "headline",
+     "text": "CHEAPER",
+     "col": "ink",
+     "at": [
+      "@cheaper",
+      0,
+      -0.1
+     ],
+     "y": 140
+    }
+   ]
+  },
+  {
+   "line": 10,
+   "bg": "blush",
+   "real": true,
+   "shake": 0.25,
+   "layers": [
+    {
+     "type": "product",
+     "img": "sand_open",
+     "x": 540,
+     "y": 840,
+     "w": 420,
+     "seed": 0.6,
+     "push": true
+    },
+    {
+     "type": "headline",
+     "text": "CAREFUL",
+     "col": "wreck",
+     "at": [
+      "break",
+      0,
+      -0.1
+     ],
+     "y": 140
+    }
+   ]
+  },
+  {
+   "line": 11,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "duo_white",
+     "x": 540,
+     "y": 970,
+     "w": 520,
+     "seed": 0.4,
+     "push": true
+    },
+    {
+     "type": "wordmark",
+     "y": 560,
+     "snapAt": "@verdict"
+    },
+    {
+     "type": "headline",
+     "text": "SPEC",
+     "col": "ember",
+     "at": [
+      "@verdict",
+      0,
+      -0.02
+     ],
+     "until": [
+      "@wreck",
+      0,
+      -0.1
+     ],
+     "y": 140
+    },
+    {
+     "type": "headline",
+     "text": "WRECK",
+     "col": "wreck",
+     "at": [
+      "@wreck",
+      0,
+      -0.1
+     ],
+     "y": 140
+    }
+   ]
+  },
+  {
+   "line": 12,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "id": "hero",
+     "img": "duo_white",
+     "x": 540,
+     "y": 830,
+     "w": 680,
+     "seed": 0.4,
+     "ltOffset": 9,
+     "push": true
+    },
+    {
+     "type": "headline",
+     "text": "$999",
+     "col": "ember",
+     "at": -0.3,
+     "until": [
+      "yourself",
+      0,
+      -0.1
+     ],
+     "y": 140
+    },
+    {
+     "type": "headline",
+     "text": "DIY?",
+     "at": [
+      "yourself",
+      0,
+      -0.1
+     ],
+     "y": 140
+    }
+   ]
+  },
+  {
+   "endcard": true,
+   "bg": "paper",
+   "layers": [
+    {
+     "type": "wordmark",
+     "y": 900,
+     "snapAt": 0.7
+    }
+   ]
+  }
+ ]
+}

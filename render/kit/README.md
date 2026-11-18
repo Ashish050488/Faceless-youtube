@@ -82,6 +82,7 @@ measure, map, screen. core.js loads them in that order.
 | stamp | text="THE CATCH", y, at, col=wreck, px (CatchStamp + flash) |
 | wordmark | y, px, snapAt (EndCardLogo; the k snaps upright for SPEC) |
 | clock, hourglass, toggle, ecg, waterDrop, waves, pulseFlame, zoneBar, calendar, slider, pill | see `DRAWERS` in render.js |
+| connector, speaker, usbc (x, y, at, flipAt = break/slide time) · cable (x, y, at, mode hinge or short) · lockScrews (x, y, at) | repair.js: own 2-D teardown diagrams |
 | loupe, motionLines, screenDim, playIcon | of (a product id); the screen layers use `screen` |
 
 - **Watermark:** added automatically on every scene except the end card. Right edge x 880, bottom y 1330,
