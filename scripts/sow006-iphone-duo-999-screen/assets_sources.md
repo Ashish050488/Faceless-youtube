@@ -1,4 +1,4 @@
-# Real image sources — sow005 iPhone Duo (credit: "Apple Newsroom official images")
+# Real image sources — sow006 iPhone Duo (credit: "Apple Newsroom official images")
 All 1960 px wide (verified 18 Nov 08:45 UTC). Use suffix _big.jpg.large_2x.jpg. Whole product only; no in-image text.
 | # | URL | Shows |
 |---|---|---|
