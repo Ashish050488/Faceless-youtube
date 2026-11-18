@@ -57,5 +57,15 @@
   "publish_at": null,
   "published_at": "2026-11-17T13:1xZ (owner asked to publish immediately)",
   "comment": "posted"
+ },
+ {
+  "slug": "sow005-apple-homeview-teardown",
+  "title": "Apple Made a $299 HomeView iFixit Could BARELY Open 😬",
+  "format": "short",
+  "status": "scripted",
+  "slot": "2",
+  "scripted_at": "2026-11-18T08:40Z",
+  "publish_at": "2026-11-18T13:00:00Z",
+  "hypothesis": "Apple (top priority) + price + CAPS word + emoji; repairability outrage drives comments."
  }
 ]

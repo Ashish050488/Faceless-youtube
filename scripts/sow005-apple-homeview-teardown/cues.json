@@ -1,0 +1,175 @@
+{
+ "id": "sow005-apple-homeview-teardown",
+ "format": "short",
+ "export": "per PRODUCTION_SPEC §6/§13 (≤20 MB), 45–60 s",
+ "rules": "PRODUCTION_SPEC §12–§18; flat LIGHT backgrounds; whole real products (Apple Newsroom images ONLY); 1–3 words on screen; 2-D objects next to the part; watermark per state/brand.md; logo end card; audio LOCKED settings as last video. NEVER use iFixit photos, video or CT scans — draw our own simple 2-D diagrams instead.",
+ "palette_for_this_video": "paper #FAF8F5 main; cool-grey #EEF0F4 for hero shots (silver aluminium); blush #FBE7E2 for damage/hinge/woofer beats; mint tint #E6F4EC for GOOD NEWS; marigold object fills; ember accent text",
+ "assets": {
+  "A": "https://www.apple.com/newsroom/images/2026/11/apple-homeview-available-today/article/Apple-HomeView-available-color-family_big.jpg.large_2x.jpg  (4 colours, side profile, 1960x1307)",
+  "B": "https://www.apple.com/newsroom/images/2026/11/apple-homeview-available-today/article/Apple-HomeView-available-home-screen_big.jpg.large_2x.jpg  (front, Home screen '68', 1960x1307)",
+  "C": "https://www.apple.com/newsroom/images/2026/11/apple-homeview-available-today/article/Apple-HomeView-available-Apple-Music_big.jpg.large_2x.jpg  (front + speaker base, 1960x1568)",
+  "D": "https://www.apple.com/newsroom/images/2026/11/apple-homeview-available-today/article/Apple-HomeView-available-FaceTime-Center-Stage_big.jpg.large_2x.jpg  (front + base, 1960x1568)",
+  "E": "https://www.apple.com/newsroom/images/2026/11/apple-homeview-available-today/article/Apple-HomeView-available-3up_big.jpg.large_2x.jpg  (three units, 1960x1103)"
+ },
+ "scenes": [
+  {
+   "n": 1,
+   "anchor": "two hundred ninety-nine dollar smart display",
+   "bg": "cool grey",
+   "image": "C front, centred, 65% width",
+   "object": "price tag swings in from the right on a string, tied to the speaker base",
+   "text": "$299",
+   "sfx": "tick + swing",
+   "note": "frame 1 must read instantly: HomeView + $299"
+  },
+  {
+   "n": 2,
+   "anchor": "barely get inside it",
+   "bg": "cool grey",
+   "image": "C same, slight push-in",
+   "object": "2-D screwdriver icon approaches the screen edge, bounces off; small 'locked' padlock pops on the bezel",
+   "text": "BARELY",
+   "sfx": "clunk"
+  },
+  {
+   "n": 3,
+   "anchor": "the new HomeView",
+   "bg": "paper",
+   "image": "A four colours, centred, 85% width",
+   "object": "none (hero)",
+   "text": "HOMEVIEW",
+   "sfx": "whoosh",
+   "transition": "hard cut"
+  },
+  {
+   "n": 4,
+   "anchor": "seven-inch screen and an A eighteen chip",
+   "bg": "paper",
+   "image": "B front, left 55%",
+   "object": "right side: diagonal measure line across the screen labelled '7\"', then a simple chip square labelled 'A18' pops below",
+   "text": "7\" · A18",
+   "sfx": "pop ×2"
+  },
+  {
+   "n": 5,
+   "anchor": "screen glue held on harder",
+   "bg": "paper",
+   "image": "D front, centred, 60%",
+   "object": "thick marigold glue bead traced around the screen edge (stroke animates around the rectangle); small 'stretch' strands when a 2-D pry tool tugs the corner",
+   "text": "GLUE",
+   "sfx": "squelch (soft)"
+  },
+  {
+   "n": 6,
+   "anchor": "than on any Apple product they've opened recently",
+   "bg": "paper",
+   "image": "D smaller, top",
+   "object": "horizontal bar meter 'adhesive strength' — HomeView bar fills past a dashed line marked 'recent Apple'. No numbers (none published).",
+   "text": "HARDEST YET",
+   "sfx": "rising tick"
+  },
+  {
+   "n": 7,
+   "anchor": "ripped a connector",
+   "bg": "blush",
+   "image": "none — our own flat 2-D diagram",
+   "object": "simple connector plug + socket; wire pulls and tears out of the plastic housing (jagged break line)",
+   "text": "RIPPED",
+   "sfx": "snap (small)",
+   "transition": "hard cut"
+  },
+  {
+   "n": 8,
+   "anchor": "snapped a speaker in two",
+   "bg": "blush",
+   "image": "none — own 2-D",
+   "object": "flat rectangular speaker icon cracks down the middle; halves tilt apart",
+   "text": "SNAPPED",
+   "sfx": "crack"
+  },
+  {
+   "n": 9,
+   "anchor": "cables run through the hinge",
+   "bg": "blush",
+   "image": "A one unit (silver, far left) cropped, side profile, centred 70%",
+   "object": "ember dashed line traced from screen down THROUGH the pivot into the base; two small screw icons appear on the pivot with a lock badge",
+   "text": "THROUGH HINGE",
+   "sfx": "trace whoosh"
+  },
+  {
+   "n": 10,
+   "anchor": "can't come apart without special tools",
+   "bg": "blush",
+   "image": "same side profile",
+   "object": "screen and base try to slide apart, stop, shake; red ✕ over a generic screwdriver, then a 'special tool' icon (odd-shaped bit) appears",
+   "text": "SPECIAL TOOLS",
+   "sfx": "buzz"
+  },
+  {
+   "n": 11,
+   "anchor": "woofer cable is so short",
+   "bg": "blush",
+   "image": "none — own 2-D",
+   "object": "woofer circle at bottom, board rectangle above; cable between them stretched taut, only a few px slack; plug strains to reach",
+   "text": "TOO SHORT",
+   "sfx": "stretch creak"
+  },
+  {
+   "n": 12,
+   "anchor": "USB-C port is modular",
+   "bg": "mint",
+   "image": "C base close crop (bottom 45% of image, speaker base), centred",
+   "object": "small USB-C port module slides out of the base outline and back in; green check",
+   "text": "MODULAR USB-C",
+   "sfx": "click ✓",
+   "transition": "hard cut"
+  },
+  {
+   "n": 13,
+   "anchor": "step backward",
+   "bg": "paper",
+   "image": "B front small, right",
+   "object": "arrow walks backward on a simple timeline: iPad icon ▸ HomePod icon ▸ (moving forward = easier) then HomeView marker drops back",
+   "text": "STEP BACK",
+   "sfx": "rewind blip"
+  },
+  {
+   "n": 14,
+   "anchor": "iPads and HomePods got easier to fix",
+   "bg": "paper",
+   "image": "B same",
+   "object": "generic wrench icons with green checks above the iPad and HomePod icons (simple line icons, our own)",
+   "text": "EASIER",
+   "sfx": "tick ×2"
+  },
+  {
+   "n": 15,
+   "anchor": "to repair? Wreck.",
+   "bg": "cool grey",
+   "image": "E three units, centred",
+   "object": "big verdict stamp 'WRECK' (ember) slams on, slight shake",
+   "text": "WRECK",
+   "sfx": "stamp",
+   "transition": "hard cut"
+  },
+  {
+   "n": 16,
+   "anchor": "Would you buy a gadget you can't fix?",
+   "bg": "paper",
+   "image": "C front centred (loops to scene 1 image)",
+   "object": "two buttons SPEC / WRECK; question mark pulses",
+   "text": "SPEC OR WRECK?",
+   "sfx": "soft pop",
+   "note": "loop: last frame matches frame 1 composition"
+  },
+  {
+   "n": 17,
+   "anchor": "end",
+   "bg": "paper",
+   "image": "none",
+   "object": "logo end card",
+   "text": "",
+   "sfx": "logo sting"
+  }
+ ]
+}
