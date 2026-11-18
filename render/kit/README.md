@@ -82,7 +82,7 @@ measure, map, screen. core.js loads them in that order.
 | map | x, y, w, at, pins[] (MapPin, real Natural Earth data) |
 | bars | base, h, items[{value, label, sub, col, at}] (heights to scale) |
 | stamp | text="THE CATCH", y, at, col=wreck, px (CatchStamp + flash) |
-| wordmark | y, px, snapAt (EndCardLogo; the k snaps upright for SPEC) |
+| wordmark | y, px, snapAt (EndCardLogo; the k snaps upright for SPEC), score (VERDICT.md 0–100: ≥ 55 SPEC k snaps up, < 55 WRECK k falls; shows "SPEC SCORE n" under the logo, n must be in factsheet.md), scoreAt (default snapAt − 0.35) |
 | clock, hourglass, toggle, ecg, waterDrop, waves, pulseFlame, zoneBar, calendar, slider, pill | see `DRAWERS` in render.js |
 | connector, speaker, usbc (x, y, at, flipAt = break/slide time) · cable (x, y, at, mode hinge or short) · lockScrews (x, y, at) | repair.js: own 2-D teardown diagrams |
 | loupe, motionLines, screenDim, playIcon | of (a product id); the screen layers use `screen` |

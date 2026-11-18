@@ -106,7 +106,14 @@ const DRAWERS = {
   zoneBar(ctx, l, lt, sc) { K.zoneBar(ctx, l.x, l.y, lt, tref(sc, l.at), false); },
   calendar(ctx, l, lt, sc) { K.calendar(ctx, l.x, l.y, lt, tref(sc, l.at), l.month, l.year); },
   slider(ctx, l, lt, sc) { K.slider(ctx, l.x ?? 540, l.y, l.w || 560, lt, tref(sc, l.at), l.from ?? 0.9, l.to ?? 0.2); },
-  wordmark(ctx, l, lt, sc) { const ts = l.snapAt !== undefined ? tref(sc, l.snapAt) : 1e9; const up = lt < ts ? 1 : clamp(1 - K.spr(lt - ts, 18, 0.45), -0.15, 1); K.wordmark(ctx, l.x ?? 540, l.y ?? 640, l.px || 108, up, false, 1); },
+  wordmark(ctx, l, lt, sc) { // k snaps upright at snapAt (SPEC); with `score` (VERDICT.md, 0–100): < 55 = WRECK, the k falls instead, and "SPEC SCORE n" rolls in under the logo
+    const ts = l.snapAt !== undefined ? tref(sc, l.snapAt) : 1e9, wreck = l.score !== undefined && l.score < 55, y = l.y ?? 640, px = l.px || 108;
+    const up = lt < ts ? 1 : wreck ? 1 + 2.2 * easeOut(prog(lt, ts, ts + 0.35)) : clamp(1 - K.spr(lt - ts, 18, 0.45), -0.15, 1);
+    K.wordmark(ctx, l.x ?? 540, y, px, up, false, 1);
+    if (l.score === undefined) return; const t0 = l.scoreAt !== undefined ? tref(sc, l.scoreAt) : ts - 0.35; if (lt < t0 - 0.05) return;
+    K.label(ctx, 'SPEC SCORE', l.x ?? 540, y + px * 1.05, Math.round(px * 0.5), C.ink, { a: easeOut(prog(lt, t0, t0 + 0.25)), align: 'center' });
+    K.counter(ctx, l.score, 0, lt, t0, l.x ?? 540, y + px * 2.45, Math.round(px * 1.35), wreck ? C.wreck : C.ember, { comma: false, dark: false });
+  },
   loupe(ctx, l, lt, sc, R) { const r = R[l.of], im = IMG[l.img]; K.loupe(ctx, im, l.u * im.width, l.v * im.height, (l.zoom || 0.12) * im.width, l.x ?? 540, l.y ?? 720, l.r || 210, lt, tref(sc, l.at)); },
   motionLines(ctx, l, lt, sc, R) { if (l.screen) K.setScreen(l.screen); K.motionLines(ctx, R[l.of], lt, tref(sc, l.at)); },
   screenDim(ctx, l, lt, sc, R) { if (l.screen) K.setScreen(l.screen); const t0 = tref(sc, l.at); K.screenDim(ctx, R[l.of], (l.to ?? 0.5) * easeInOut(prog(lt, t0, t0 + 0.5))); },
