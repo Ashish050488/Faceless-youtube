@@ -12,6 +12,8 @@ monetisation guidance regularly (state/policy_notes.md) and follow it; nothing r
      sometimes — at most ~1 in 4 videos, never two in a row, and prefer ones launching globally.
    - Check real official images exist (press kit/store, ≥ 1600 px, whole product) before choosing the topic.
    - Verify every fact with 2 independent sources (primary source when reachable). No unconfirmed leaks.
+   - VERDICT: score the product with VERDICT.md (6 criteria, 100 points, ≥ 55 = SPEC); put the table in factsheet.md;
+     the script gives the reason and the end card shows the score. Sensitive topics: follow VERDICT.md (skip / no verdict).
    - Pull real keywords via the YouTube API: tags of the top recent videos on the topic → title/tags/description.
      Metadata pattern (measured on Techy or Not's top Shorts via the API, 2026-11-17):
      - Tags: ~15–21 tags, ~300 chars. Order: brand → model → full product name → name variants/misspellings →
