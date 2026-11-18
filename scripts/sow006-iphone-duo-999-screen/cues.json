@@ -1,0 +1,168 @@
+{
+ "id": "sow006-iphone-duo-999-screen",
+ "format": "short",
+ "export": "720x1280 H.264 CRF 24 maxrate 2M ≤20 MB (§13)",
+ "rules": "PRODUCTION_SPEC §12–§18; flat LIGHT backgrounds only (no black); whole real products; 1–3 words; 2-D objects next to the part; watermark below content; logo v5 end card; audio LOCKED (narrate.py + mix.sh). Length 50–58 s.",
+ "palette_for_this_video": "paper #FAF8F5 main; lavender #ECE8FB for the parts/DIY beats; blush #FBE7E2 for THE CATCH; marigold object fills; ember accent text and price figures",
+ "scenes": [
+  {
+   "n": 1,
+   "anchor": "nine hundred ninety-nine dollars",
+   "bg": "paper",
+   "image": "A hero, centred, 75% width",
+   "object": "price tag swings in on a string, hangs off the open phone's inner screen",
+   "text": "$999",
+   "sfx": "tick + tag swing",
+   "note": "frame 1 must read instantly: phone + $999"
+  },
+  {
+   "n": 2,
+   "anchor": "new iPhone Duo screen",
+   "bg": "paper",
+   "image": "A hero",
+   "object": "thin ember outline traces the inner screen edge",
+   "text": "NEW SCREEN",
+   "sfx": "soft swipe"
+  },
+  {
+   "n": 3,
+   "anchor": "selling iPhone Duo parts",
+   "bg": "lavender",
+   "image": "B (closed vs open in hands), centred",
+   "object": "flat shop-bag icon drops beside the phone, 3 part icons pop out (screen, battery, camera)",
+   "text": "PARTS ON SALE",
+   "sfx": "pop x3",
+   "transition": "hard cut"
+  },
+  {
+   "n": 4,
+   "anchor": "fix your own folding iPhone",
+   "bg": "lavender",
+   "image": "B",
+   "object": "flat screwdriver icon rotates once next to the hinge",
+   "text": "DIY",
+   "sfx": "ratchet click"
+  },
+  {
+   "n": 5,
+   "anchor": "inner screen assembly costs nine ninety-nine",
+   "bg": "paper",
+   "image": "C open landscape, centred",
+   "object": "counter rolls 0→$999 under the phone (0.33 s roll, hold ≥1.2 s)",
+   "text": "$999",
+   "sfx": "counter ticks"
+  },
+  {
+   "n": 6,
+   "anchor": "half the price of the phone",
+   "bg": "paper",
+   "image": "A smaller, top half",
+   "object": "horizontal bar $1,999 full width; ember half-fill labelled $999",
+   "text": "HALF",
+   "sfx": "fill"
+  },
+  {
+   "n": 7,
+   "anchor": "starts at nineteen ninety-nine",
+   "bg": "paper",
+   "image": "A",
+   "object": "bar label '$1,999 phone' highlights",
+   "text": "$1,999",
+   "sfx": "tick"
+  },
+  {
+   "n": 8,
+   "anchor": "panel on its own is four ninety-nine",
+   "bg": "paper",
+   "image": "C",
+   "object": "3-row price list builds: Inner panel $499",
+   "text": "$499",
+   "sfx": "tick"
+  },
+  {
+   "n": 9,
+   "anchor": "outer screen? Three seventy-nine",
+   "bg": "paper",
+   "image": "D closed, outer screen lit",
+   "object": "price list row 2: Outer screen $379",
+   "text": "$379",
+   "sfx": "tick"
+  },
+  {
+   "n": 10,
+   "anchor": "forty-nine dollar rental, for seven days",
+   "bg": "paper",
+   "image": "D smaller, left",
+   "object": "flat toolbox icon + 7-day calendar strip, days tick off",
+   "text": "$49 / 7 DAYS",
+   "sfx": "calendar flips"
+  },
+  {
+   "n": 11,
+   "anchor": "Here's the catch",
+   "bg": "blush",
+   "image": "A hero dims 30%",
+   "object": "none",
+   "text": "THE CATCH",
+   "sfx": "low hit",
+   "transition": "hard cut"
+  },
+  {
+   "n": 12,
+   "anchor": "Apple's own repair",
+   "bg": "blush",
+   "image": "A",
+   "object": "two columns: 'Apple repair $999' vs 'DIY part $999'",
+   "text": "SAME $999",
+   "sfx": "tick tick"
+  },
+  {
+   "n": 13,
+   "anchor": "Send your old part back",
+   "bg": "blush",
+   "image": "A",
+   "object": "DIY column: −$159.84 credit, +$49 tools → $888 (show the maths, small)",
+   "text": "≈ $110 LESS",
+   "sfx": "coin"
+  },
+  {
+   "n": 14,
+   "anchor": "If you don't break anything else",
+   "bg": "blush",
+   "image": "F hinge close-up",
+   "object": "small crack line draws across a flat screen icon",
+   "text": "CAREFUL",
+   "sfx": "glass tink (soft)"
+  },
+  {
+   "n": 15,
+   "anchor": "spec for the brave",
+   "bg": "paper",
+   "image": "A hero",
+   "object": "logo v5 wordmark, k snaps upright (SPEC)",
+   "text": "SPEC?",
+   "sfx": "click"
+  },
+  {
+   "n": 16,
+   "anchor": "Wreck for everyone else",
+   "bg": "paper",
+   "image": "A hero",
+   "object": "wordmark tilts to WRECK",
+   "text": "WRECK",
+   "sfx": "thud"
+  },
+  {
+   "n": 17,
+   "anchor": "nine hundred ninety-nine dollar screen yourself",
+   "bg": "paper",
+   "image": "A hero exactly as frame 1",
+   "object": "price tag as frame 1 (seamless loop)",
+   "text": "$999",
+   "sfx": "riser tail",
+   "transition": "match frame 1"
+  }
+ ],
+ "thumbnail": "1280×720: image A (two open Duos) centred-right; '$999' huge (ember) left with small 'NEW SCREEN' under it; flat paper background; readable at 168×94",
+ "credits": "Product images: Apple Newsroom official images. Not affiliated with or endorsed by Apple."
+}
