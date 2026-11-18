@@ -80,16 +80,19 @@
   "slug": "sow006-iphone-duo-999-screen",
   "title": "Apple Wants $999 for a NEW iPhone Duo Screen 😳",
   "format": "short",
-  "status": "scheduled",
+  "status": "live",
   "slot": "1",
   "scripted_at": "2026-11-18T08:50Z",
-  "publish_at": "2026-11-18T12:30:00Z",
+  "publish_at": null,
   "hypothesis": "Apple + price shock + CAPS/emoji title on the hottest foldable beats sow002/sow004.",
-  "privacy": "private",
+  "privacy": "public",
   "uploaded_at": "2026-11-18T09:07Z",
   "size_mb": 6.3,
   "duration_s": 61.2,
   "url": "https://youtube.com/shorts/UTvRnFY_jks",
-  "comment": "pending (needs public video)"
+  "comment": "posted",
+  "published_at": "2026-11-18T09:11Z (owner asked to publish immediately)",
+  "comment_id": "UgzVfGKpoLJf5W-Ndgt4AaABAg",
+  "instagram": "Reel requested from Instagram session 09:11Z"
  }
 ]
