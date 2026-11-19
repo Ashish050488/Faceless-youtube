@@ -2,7 +2,26 @@
   "permissions": {
     "allow": [
       "mcp__claude-code-remote__create_session",
-      "mcp__claude-code-remote__update_trigger"
+      "mcp__claude-code-remote__update_trigger",
+      "mcp__claude-code-remote__send_message",
+      "mcp__claude-code-remote__send_later",
+      "mcp__claude-code-remote__get_session",
+      "mcp__claude-code-remote__list_sessions",
+      "mcp__claude-code-remote__list_events",
+      "mcp__claude-code-remote__interrupt_session",
+      "mcp__claude-code-remote__archive_session",
+      "mcp__claude-code-remote__list_triggers",
+      "mcp__claude-code-remote__get_trigger",
+      "mcp__claude-code-remote__fire_trigger",
+      "mcp__vidIQ__vidiq_instagram_publish_reel",
+      "mcp__vidIQ__vidiq_job_poll",
+      "mcp__vidIQ__vidiq_upload_image",
+      "mcp__vidIQ__vidiq_social_post_draft_create",
+      "mcp__vidIQ__vidiq_instagram_owner_insights",
+      "mcp__vidIQ__vidiq_social_account_list",
+      "Bash",
+      "WebSearch",
+      "WebFetch"
     ]
   }
 }
