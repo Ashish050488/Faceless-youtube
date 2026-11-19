@@ -1,0 +1,17 @@
+[
+ {"cue": "years", "line": 0, "word": "thirteen"},
+ {"cue": "midnight", "line": 0, "word": "midnight"},
+ {"cue": "nz", "line": 1, "word": "zealand"},
+ {"cue": "p79", "line": 3, "word": "seventy", "offset": -0.05},
+ {"cue": "p99", "line": 3, "word": "ninety", "nth": 1, "offset": -0.05},
+ {"cue": "inr", "line": 4, "word": "six", "offset": -0.05},
+ {"cue": "gb", "line": 5, "word": "two", "offset": -0.05},
+ {"cue": "dvd", "line": 5, "word": "forty", "offset": -0.05},
+ {"cue": "catch", "line": 6, "word": "catch"},
+ {"cue": "nodisc", "line": 7, "word": "no"},
+ {"cue": "code", "line": 7, "word": "code"},
+ {"cue": "ten", "line": 9, "word": "ten"},
+ {"cue": "score", "line": 10, "word": "sixty"},
+ {"cue": "verdict", "line": 10, "word": "spec"},
+ {"cue": "loop", "line": 11, "word": "deleting"}
+]

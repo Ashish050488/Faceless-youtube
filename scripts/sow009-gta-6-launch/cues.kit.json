@@ -1,0 +1,78 @@
+{"slug": "sow009-gta-6-launch", "plan": "plan.json",
+ "thumb": {"img": "art_logo", "bg": "paper", "big": "NO DISC?!", "word": "GTA VI", "tag": "212 GB", "w": 640},
+ "scenes": [
+  {"line": 0, "bg": "paper", "real": true, "layers": [
+    {"type": "product", "img": "art_logo", "card": true, "x": 540, "y": 720, "w": 760, "seed": 0.4, "ltOffset": 9},
+    {"type": "calendar", "x": 540, "y": 1130, "month": "NOV", "year": "2026", "at": ["later", 0, -0.1]},
+    {"type": "headline", "text": "13 YEARS", "col": "ember", "at": -0.5}]},
+  {"line": 0, "from": "and", "bg": "lav", "real": true, "layers": [
+    {"type": "product", "img": "logo_vi", "x": 540, "y": 640, "w": 500, "seed": 1.0, "shadow": false},
+    {"type": "clock", "x": 540, "y": 1040, "r": 110, "at": ["@midnight", 0, -0.3], "hours": 12},
+    {"type": "headline", "text": "YOUR MIDNIGHT", "at": ["@midnight", 0, -0.1]}]},
+  {"line": 1, "bg": "paper", "real": true, "layers": [
+    {"type": "product", "img": "skyline", "card": true, "x": 540, "y": 1000, "w": 860, "seed": 2.0, "radius": 36},
+    {"type": "map", "x": 540, "y": 560, "w": 760, "at": 0.05, "pins": ["@nz"]},
+    {"type": "headline", "text": "LOCAL TIME", "at": ["midnight", 0, -0.1], "until": ["new", 0, -0.1]},
+    {"type": "headline", "text": "NZ FIRST", "col": "ember", "at": ["new", 0, -0.1]}]},
+  {"line": 2, "bg": "sand", "real": true, "layers": [
+    {"type": "consoleTower", "x": 330, "y": 560, "s": 0.6, "at": ["ps5", 0, -0.15]},
+    {"type": "consoleTower", "x": 750, "y": 560, "s": 0.6, "dark": true, "at": ["xbox", 0, -0.15]},
+    {"type": "label", "text": "PS5", "x": 330, "y": 740, "px": 56, "col": "ink", "at": ["ps5", 0, -0.1]},
+    {"type": "label", "text": "XBOX SERIES", "x": 750, "y": 740, "px": 56, "col": "ink", "at": ["xbox", 0, -0.1]},
+    {"type": "product", "img": "art_heli", "card": true, "x": 540, "y": 1020, "w": 380, "seed": 1.4},
+    {"type": "headline", "text": "CONSOLES ONLY", "at": ["it's", 0, -0.1]}]},
+  {"line": 3, "bg": "paper", "real": true, "layers": [
+    {"type": "product", "img": "cover", "card": true, "radius": 24, "x": 320, "y": 860, "w": 420, "seed": 0.6},
+    {"type": "priceTag", "x": 760, "y": 640, "text": "$79.99", "at": ["@p79", 0, 0.2]},
+    {"type": "priceTag", "x": 760, "y": 980, "text": "$99.99", "at": ["@p99", 0, 0.2]},
+    {"type": "headline", "text": "THE PRICE?", "at": ["price", 0, -0.1], "until": "@p79"},
+    {"type": "number", "value": 79.99, "dec": 2, "prefix": "$", "y": 380, "show": "@p79", "until": ["ultimate", 0, -0.1], "at": "@p79"},
+    {"type": "headline", "text": "ULTIMATE $99.99", "col": "ember", "at": ["ultimate", 0, -0.1]}]},
+  {"line": 4, "xfade": true, "bg": "paper", "real": true, "layers": [
+    {"type": "product", "img": "cover", "card": true, "radius": 24, "x": 320, "y": 860, "w": 420, "seed": 0.6},
+    {"type": "pill", "text": "INDIA", "x": 760, "y": 640, "w": 260, "h": 100, "at": ["india", 0, -0.1]},
+    {"type": "priceTag", "x": 760, "y": 880, "text": "₹5,999", "at": "@inr"},
+    {"type": "headline", "text": "₹5,999", "col": "ember", "at": "@inr"}]},
+  {"line": 5, "bg": "lav", "real": true, "layers": [
+    {"type": "product", "img": "logo_vi", "x": 540, "y": 560, "w": 360, "seed": 1.0, "shadow": false},
+    {"type": "downloadBar", "x": 540, "y": 900, "w": 860, "at": 0.05, "fillAt": "@gb"},
+    {"type": "headline", "text": "GET THIS", "at": 0.05, "until": "@gb"},
+    {"type": "number", "value": 212, "unit": "GB", "comma": false, "y": 330, "px": 130, "col": "ink", "show": "@gb", "at": "@gb"}]},
+  {"line": 5, "from": "that's", "xfade": true, "bg": "lav", "real": true, "layers": [
+    {"type": "downloadBar", "x": 540, "y": 520, "w": 860, "at": -9, "fillAt": -9, "sfx": false},
+    {"type": "dvdStack", "x": 330, "y": 1180, "n": 45, "at": ["@dvd", 0, -0.3]},
+    {"type": "product", "img": "art_boat", "card": true, "x": 770, "y": 910, "w": 320, "seed": 2.4},
+    {"type": "number", "value": 45, "unit": "DVDs", "comma": false, "y": 330, "px": 130, "col": "ink", "show": "@dvd", "at": "@dvd"}]},
+  {"line": 6, "bg": "blush", "real": true, "shake": 0.32, "layers": [
+    {"type": "product", "img": "cover", "card": true, "radius": 24, "x": 540, "y": 980, "w": 440, "ltOffset": 5, "fade": {"at": 0, "to": 0.45}},
+    {"type": "stamp", "text": "THE CATCH", "y": 600, "at": ["@catch", 0, -0.2], "sfx": false}]},
+  {"line": 7, "bg": "blush", "real": true, "layers": [
+    {"type": "gameCase", "x": 540, "y": 760, "cover": "cover", "at": 0.05, "openAt": ["@nodisc", 0, -0.1]},
+    {"type": "disc", "x": 540, "y": 1110, "r": 100, "at": "@nodisc"},
+    {"type": "slash", "x": 540, "y": 1110, "len": 260, "at": ["@nodisc", 0, 0.25], "overlap": true},
+    {"type": "headline", "text": "PHYSICAL?", "at": ["physical", 0, -0.1], "until": "@nodisc"},
+    {"type": "headline", "text": "NO DISC", "col": "wreck", "at": "@nodisc", "until": ["just", 0, -0.1]},
+    {"type": "headline", "text": "JUST A CODE", "at": ["just", 0, -0.1]}]},
+  {"line": 8, "xfade": true, "bg": "blush", "real": false, "layers": [
+    {"type": "miniPc", "x": 540, "y": 640, "s": 0.8, "at": ["pc", 0, -0.1]},
+    {"type": "hourglass", "x": 540, "y": 980, "at": ["no", 0, -0.1], "flipAt": ["date", 0, -0.1]},
+    {"type": "headline", "text": "PC: NO DATE", "at": ["pc", 0, -0.1]}]},
+  {"line": 9, "bg": "paper", "real": true, "layers": [
+    {"type": "product", "img": "logo_vi", "x": 540, "y": 520, "w": 300, "seed": 1.0, "shadow": false},
+    {"type": "bars", "base": 1160, "h": 420, "items": [
+      {"value": 69.99, "label": "$69.99", "sub": "BATTLEFIELD 6", "col": "stone", "at": ["seventy", 0, -0.1]},
+      {"value": 79.99, "label": "$79.99", "sub": "GTA VI", "col": "mari", "at": ["@ten", 0, -0.2]}]},
+    {"type": "headline", "text": "RIVALS: $70", "at": ["rivals", 0, -0.1], "until": "@ten"},
+    {"type": "headline", "text": "+$10", "col": "ember", "at": "@ten"}]},
+  {"line": 10, "bg": "paper", "real": true, "layers": [
+    {"type": "product", "img": "art_logo", "card": true, "x": 540, "y": 1020, "w": 600, "seed": 0.4},
+    {"type": "wordmark", "y": 560, "score": 61, "scoreAt": ["@score", 0, -0.1], "snapAt": "@verdict"},
+    {"type": "headline", "text": "SPEC", "col": "ember", "at": "@verdict", "until": ["console", 0, -0.1]},
+    {"type": "headline", "text": "CONSOLE + SPACE", "at": ["console", 0, -0.1]}]},
+  {"line": 11, "bg": "paper", "real": true, "layers": [
+    {"type": "product", "img": "art_logo", "card": true, "x": 540, "y": 720, "w": 760, "seed": 0.4, "ltOffset": 9, "move": {"at": ["@loop", 0, -0.1], "dur": 0.5, "w": 720}},
+    {"type": "downloadBar", "x": 540, "y": 1130, "w": 760, "at": 0.1, "fillAt": 0.2},
+    {"type": "headline", "text": "BE HONEST", "at": 0.05, "until": ["@loop", 0, -0.1]},
+    {"type": "headline", "text": "DELETING WHAT?", "col": "ember", "at": ["@loop", 0, -0.1]}]},
+  {"endcard": true, "bg": "paper", "layers": [{"type": "wordmark", "y": 900, "snapAt": 0.7}]}
+ ]}

@@ -24,6 +24,7 @@ Every object is drawn once, saved here, and reused by every future video. Before
 | `text.js` | label, headline, counter, bigWord, stamp, wordmark, pill |
 | `motion.js` | easing/spring helpers (not objects) |
 | `compute.js` (add) | chips and PC parts: chipDie, ramStick, fan, ssd, gpuCard |
+| `media.js` | discs, game cases, downloads: disc, gameCase, dvdStack, downloadBar |
 | `ports.js` (add) | usbPort (A/C), audioJack, ethernetPort, hdmiPort |
 
 ## Index (one row per object — keep it updated)
@@ -59,3 +60,8 @@ Every object is drawn once, saved here, and reused by every future video. Before
 | thermometer | measure.js | bulb + tube | liquid settles at `level` 0–1 | temperature, runs cool/hot |
 | reviewCard | objects.js | review page with lines | tick draws on at `tickAt` | "reviews say", tests |
 | slash | objects.js | red strike line | draws on | price cut, old value |
+| consoleTower | compute.js | generic unbranded games console (tower + stand), `dark` variant | pops in, power light turns on | consoles, platforms |
+| disc | media.js | optical disc with sheen + hub | pops in, sheen turns | discs, physical media |
+| gameCase | media.js | game case with `cover` image (asset name) | opens at `openAt` → blank code slip + EMPTY hub | "no disc in the box", physical vs digital |
+| dvdStack | media.js | side-view stack of `n` discs | discs drop and stack | storage size as DVDs (4.7 GB each) |
+| downloadBar | media.js | arrow badge + progress track, 10 % ticks | fills to `to` (0–1) from `fillAt` | download size, install, progress |

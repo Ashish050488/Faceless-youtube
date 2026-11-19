@@ -60,7 +60,8 @@ const SFX_DEFAULT = { connector: [['at', 'pop', 0.4], ['flipAt', 'thud', 0.8]], 
   toggle: [['flipAt', 'switch', 0.7]], ecg: [['at', 'beep', 0.4]], waterDrop: [['at+0.35', 'drip', 0.7]], calendar: [['at', 'flip', 0.6]], bars: [['bars', 'blip', 0.45]], clock: [['at', 'tick', 0.5]],
   playIcon: [['at', 'pop', 0.4]], motionLines: [['at', 'swish', 0.5]], slider: [['at', 'down', 0.5]], headline: [], label: [], product: [],
   chipDie: [['fillAt', 'blip', 0.45]], ramStick: [['at', 'clunk', 0.5]], fan: [['at', 'whoosh', 0.35]], gauge: [['at', 'tick', 0.5]], usbPort: [['at', 'pop', 0.4], ['crossAt', 'scratch', 0.6]], audioJack: [['at', 'pop', 0.4], ['crossAt', 'scratch', 0.6]],
-  ruler: [['at', 'swish', 0.4]], reviewCard: [['at', 'pop', 0.35], ['tickAt', 'tick', 0.6]], thermometer: [['at', 'blip', 0.35]], miniPc: [['at', 'pop', 0.4]], slash: [['at', 'swish', 0.6]] };
+  ruler: [['at', 'swish', 0.4]], reviewCard: [['at', 'pop', 0.35], ['tickAt', 'tick', 0.6]], thermometer: [['at', 'blip', 0.35]], miniPc: [['at', 'pop', 0.4]], slash: [['at', 'swish', 0.6]],
+  consoleTower: [['at', 'pop', 0.4]], disc: [['at', 'pop', 0.35]], gameCase: [['at', 'thud', 0.5], ['openAt', 'click', 0.7]], dvdStack: [['at', 'zip', 0.5]], downloadBar: [['fillAt', 'zip', 0.5]] };
 const DRAWERS = {
   product(ctx, l, lt, sc, R) {
     const im = IMG[l.img]; if (!im) throw new Error('missing asset ' + l.img);
@@ -68,7 +69,7 @@ const DRAWERS = {
     const x = l.move ? lerp(l.x, l.move.x ?? l.x, t) : l.x, y = l.move ? lerp(l.y, l.move.y ?? l.y, t) : l.y, w = l.move ? lerp(l.w, l.move.w ?? l.w, t) : l.w;
     const dim = l.dim ? (l.dim.to ?? 0.5) * easeInOut(prog(lt, tref(sc, l.dim.at), tref(sc, l.dim.at) + 0.4)) : 0;
     const alpha = l.fade ? 1 - (1 - (l.fade.to ?? 0.4)) * clamp((lt - tref(sc, l.fade.at, 0)) / (2 * FR)) : (l.alpha ?? 1);
-    const r = K.product(ctx, im, x, y, w, { lt: lt + (l.ltOffset || 0), t0: 0, seed: l.seed ?? 0.5, push: l.push ? lt / sc.dur : 0, dim, alpha, shadow: l.shadow !== false });
+    const r = K.product(ctx, im, x, y, w, { lt: lt + (l.ltOffset || 0), t0: 0, seed: l.seed ?? 0.5, push: l.push ? lt / sc.dur : 0, dim, alpha, shadow: l.shadow !== false, card: !!l.card, radius: l.radius ?? 44 });
     if (l.id) R[l.id] = r; return r;
   },
   headline(ctx, l, lt, sc) {
@@ -136,6 +137,11 @@ const DRAWERS = {
   thermometer(ctx, l, lt, sc) { sc_(ctx, l, () => K.thermometer(ctx, lt, tref(sc, l.at, 0.05), l.level ?? 0.3)); },
   miniPc(ctx, l, lt, sc) { sc_(ctx, l, () => K.miniPc(ctx, lt, tref(sc, l.at, 0.05))); },
   slash(ctx, l, lt, sc) { sc_(ctx, l, () => K.slash(ctx, lt, tref(sc, l.at), l.len || 300)); },
+  consoleTower(ctx, l, lt, sc) { sc_(ctx, l, () => K.consoleTower(ctx, lt, tref(sc, l.at, 0.05), !!l.dark)); },
+  disc(ctx, l, lt, sc) { sc_(ctx, l, () => K.disc(ctx, lt, tref(sc, l.at, 0.05), l.r || 130)); },
+  gameCase(ctx, l, lt, sc) { sc_(ctx, l, () => K.gameCase(ctx, lt, tref(sc, l.at, 0.05), l.openAt !== undefined ? tref(sc, l.openAt) : 1e9, l.cover ? IMG[l.cover] : null)); },
+  dvdStack(ctx, l, lt, sc) { sc_(ctx, l, () => K.dvdStack(ctx, lt, tref(sc, l.at, 0.05), l.n || 45)); },
+  downloadBar(ctx, l, lt, sc) { sc_(ctx, l, () => K.downloadBar(ctx, lt, tref(sc, l.at, 0.05), tref(sc, l.fillAt ?? l.at, 0.2), l.to ?? 1, l.w || 760)); },
   pill(ctx, l, lt, sc) { const t0 = tref(sc, l.at, 0); if (lt < t0) return; const e = K.spr(lt - t0, 16); ctx.save(); ctx.globalAlpha = clamp(e * 1.4); K.pill2(ctx, l.x - l.w / 2, l.y - l.h / 2, l.w, l.h, col(l.fill || 'ink')); K.label(ctx, l.text, l.x, l.y + (l.px || 64) * 0.35, l.px || 64, col(l.col || 'mari')); ctx.restore(); },
 };
 function sc_(ctx, l, fn) { ctx.save(); ctx.translate(l.x ?? 540, l.y); ctx.scale(l.s || 1, l.s || 1); fn(); ctx.restore(); } // repair.js diagrams: x, y, s (scale)

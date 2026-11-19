@@ -1,6 +1,7 @@
 // kit component group 'compute': flat 2-D PC parts (our own drawings), drawn around (0,0); render.js places them
 // with x, y, s. chipDie (package + pins, die cells fill one by one; mode 'gpu' = dense green core field), ramStick
-// (sticks drop in and stack), fan (blades spin up), miniPc (generic unbranded mini PC box).
+// (sticks drop in and stack), fan (blades spin up), miniPc (generic unbranded mini PC box), consoleTower (generic
+// unbranded games console; `dark` variant).
 const L = require('../../lib');
 const { C, clamp, lerp, easeOut, easeInOut, prog, rr, font } = L;
 module.exports = (K) => {
@@ -58,5 +59,15 @@ function miniPc(ctx, lt, t0) { // generic unbranded mini PC: flat box, top face,
   ctx.beginPath(); ctx.arc(160, 10, 16, 0, 2 * Math.PI - 1e-4); ctx.fillStyle = C.paper; ctx.fill(); ctx.lineWidth = 5; ctx.stroke();
   ctx.restore();
 }
-Object.assign(K, { chipDie, ramStick, fan, miniPc });
+function consoleTower(ctx, lt, t0, dark) { // generic unbranded games console: tall body, vent slots, power light, stand
+  ctx.save(); if (!enter(ctx, lt, t0)) { ctx.restore(); return; }
+  const body = dark ? C.inkSoft : C.paperSoft, line = dark ? C.stone : C.paperLine;
+  box(ctx, -90, -220, 180, 400, 26, body, 9);
+  ctx.strokeStyle = line; ctx.lineWidth = 5; for (let i = 0; i < 9; i++) { ctx.beginPath(); ctx.moveTo(-60 + i * 15, -180); ctx.lineTo(-60 + i * 15, -110); ctx.stroke(); }
+  box(ctx, -60, -60, 120, 14, 7, dark ? C.stone : C.paperLine, 0);
+  ctx.beginPath(); ctx.arc(0, 140, 12, 0, 2 * Math.PI - 1e-4); ctx.fillStyle = lt > t0 + 0.3 ? C.mari : C.stone; ctx.fill();
+  box(ctx, -110, 186, 220, 30, 12, C.stone, 7);
+  ctx.restore();
+}
+Object.assign(K, { chipDie, ramStick, fan, miniPc, consoleTower });
 };
