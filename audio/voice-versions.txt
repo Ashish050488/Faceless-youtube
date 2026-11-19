@@ -1,0 +1,7 @@
+# Working voice stack (video session, 2026-11-19). Python 3.12 (3.13 fails: misaki[en] -> spacy -> thinc/blis).
+kokoro==0.9.4
+misaki==0.9.4
+spacy==3.8.18
+faster-whisper==1.2.1
+numpy==2.5.5
+# torch 2.15.0+cpu from https://download.pytorch.org/whl/cpu
