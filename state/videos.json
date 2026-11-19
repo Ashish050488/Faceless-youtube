@@ -108,5 +108,16 @@
   "publish_at": null,
   "publish_rule": "public as soon as ready, latest 11:30Z; never after 13:30Z (else 2026-11-20T05:00Z)",
   "hypothesis": "NVIDIA (top priority) + price + CAPS/emoji + size twist; first non-Apple big-brand price shock."
+ },
+ {
+  "slug": "sow008-razer-carbon-fiber-mice",
+  "title": "Razer Wants $90 MORE to Save 2 Grams 😳",
+  "format": "short",
+  "status": "scripted",
+  "slot": "2",
+  "scripted_at": "2026-11-19T08:40Z",
+  "publish_at": "2026-11-19T13:00:00Z",
+  "verdict": "WRECK 45",
+  "hypothesis": "Price-shock '$X for Y grams' title on a big gaming brand pulls gamer audience vs the Asus GR1X pro audience in Short 1."
  }
 ]

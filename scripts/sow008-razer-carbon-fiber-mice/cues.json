@@ -1,0 +1,187 @@
+{
+ "id": "sow008-razer-carbon-fiber-mice",
+ "format": "short",
+ "export": "720x1280 H.264 CRF 24 maxrate 2M ≤20 MB (§13)",
+ "rules": "PRODUCTION_SPEC §12–§18; flat LIGHT backgrounds only (no black) — Razer photos have dark studio backgrounds: cut the mice out (or place as rounded framed cards) on the flat colour; whole real products; 1–3 words; 2-D objects next to the product; watermark below content; logo v5 end card; audio LOCKED (narrate.py + mix.sh). Length 50–58 s.",
+ "numbers_shown": [
+  "$90",
+  "2 g",
+  "$249.99",
+  "47 g",
+  "49 g",
+  "$159.99",
+  "56 g",
+  "7 g",
+  "$80",
+  "53%",
+  "180 h",
+  "1,000 Hz",
+  "8,000 Hz",
+  "45 h",
+  "45/100"
+ ],
+ "official_clips": "none — Razer product pages expose no downloadable video file; no YouTube/promo clips (reused-content rule)",
+ "palette_for_this_video": "paper #FAF8F5 main; lavender #ECE8FB for the weight/name beats; blush #FBE7E2 for THE CATCH; marigold object fills; ember accent text and price figures",
+ "assets": "assets_sources.md (A–F)",
+ "scenes": [
+  {
+   "n": 1,
+   "anchor": "ninety dollars more",
+   "bg": "paper",
+   "image": "A hero (two carbon mice), cut out, centred 80% width",
+   "object": "two-pan balance scale: left pan '$90' coin stack drops, right pan a tiny '2 g' weight — beam barely moves",
+   "text": "$90 → 2 g",
+   "sfx": "coin clink + creak",
+   "note": "frame 1 must read instantly: mice + $90 + 2 g"
+  },
+  {
+   "n": 2,
+   "anchor": "to save you two grams",
+   "bg": "paper",
+   "image": "A hero",
+   "object": "'2 g' weight tile pulses; magnifying glass hovers over it",
+   "text": "2 GRAMS",
+   "sfx": "whoosh"
+  },
+  {
+   "n": 3,
+   "anchor": "Carbon Fiber Viper V4 Pro and DeathAdder V4 Pro",
+   "bg": "lavender",
+   "image": "B (top-down pair), centred",
+   "object": "two name labels slide in on leader lines: VIPER (left), DEATHADDER (right)",
+   "text": "CARBON FIBER",
+   "sfx": "swipe x2",
+   "transition": "hard cut"
+  },
+  {
+   "n": 4,
+   "anchor": "Real woven carbon shells",
+   "bg": "lavender",
+   "image": "E (Viper top view banner), crop to mouse, scale 70%",
+   "object": "flat woven-weave pattern tile wipes across a shell silhouette next to the mouse",
+   "text": "WOVEN CARBON",
+   "sfx": "fabric swish"
+  },
+  {
+   "n": 5,
+   "anchor": "two forty-nine ninety-nine each",
+   "bg": "paper",
+   "image": "C (pair with shadows)",
+   "object": "price tag on a string swings in, hangs off the Viper",
+   "text": "$249.99",
+   "sfx": "tag swing + tick"
+  },
+  {
+   "n": 6,
+   "anchor": "carbon Viper weighs forty-seven grams",
+   "bg": "paper",
+   "image": "F (angled Viper), left half",
+   "object": "digital kitchen scale under the mouse, display counts 0→47 g (0.33 s roll, hold ≥1.2 s)",
+   "text": "47 g",
+   "sfx": "scale beep"
+  },
+  {
+   "n": 7,
+   "anchor": "Forty-nine, for one fifty-nine ninety-nine",
+   "bg": "paper",
+   "image": "F small top-left",
+   "object": "second scale beside first: '49 g' + tag '$159.99' (label 'normal Viper'); bracket between scales shows '−2 g / +$90'",
+   "text": "49 g · $159.99",
+   "sfx": "beep + tick"
+  },
+  {
+   "n": 8,
+   "anchor": "drops from fifty-six grams to forty-nine",
+   "bg": "lavender",
+   "image": "B, right mouse highlighted (DeathAdder)",
+   "object": "bar chart 2 bars: 56 g (grey) shrinks to 49 g (ember); delta label '−7 g'",
+   "text": "56 → 49 g",
+   "sfx": "descending blip"
+  },
+  {
+   "n": 9,
+   "anchor": "Seven grams, for eighty dollars",
+   "bg": "lavender",
+   "image": "B",
+   "object": "delta label flips to price: '+$80' (249.99 − 169.99 shown small under it)",
+   "text": "7 g = $80",
+   "sfx": "coin clink"
+  },
+  {
+   "n": 10,
+   "anchor": "fifty-three percent stronger than plastic",
+   "bg": "paper",
+   "image": "D (display case), centred",
+   "object": "two horizontal bars: ABS plastic 100 % (grey) vs carbon 153 % (marigold); small footnote 'Razer internal test'",
+   "text": "+53%",
+   "sfx": "stretch/creak"
+  },
+  {
+   "n": 11,
+   "anchor": "Here's the catch",
+   "bg": "blush",
+   "image": "A small, top third",
+   "object": "warning tag flips down from top edge",
+   "text": "THE CATCH",
+   "sfx": "record scratch (soft)",
+   "transition": "hard cut"
+  },
+  {
+   "n": 12,
+   "anchor": "hundred and eighty hour battery is at one thousand hertz",
+   "bg": "blush",
+   "image": "A small",
+   "object": "battery icon full, label '180 h' with dial set to '1,000 Hz'",
+   "text": "180 h @ 1,000 Hz",
+   "sfx": "charge chime"
+  },
+  {
+   "n": 13,
+   "anchor": "At eight thousand, it's forty-five hours",
+   "bg": "blush",
+   "image": "A small",
+   "object": "dial turns to '8,000 Hz'; battery drains to a quarter, label '45 h'",
+   "text": "45 h @ 8,000 Hz",
+   "sfx": "drain wobble"
+  },
+  {
+   "n": 14,
+   "anchor": "forty-five out of a hundred",
+   "bg": "paper",
+   "image": "A hero",
+   "object": "score ring fills 0→45 (ember), '/100' small",
+   "text": "SPEC SCORE 45",
+   "sfx": "counter ticks"
+  },
+  {
+   "n": 15,
+   "anchor": "Wreck",
+   "bg": "paper",
+   "image": "A hero",
+   "object": "logo v5 wordmark, k falls (WRECK)",
+   "text": "WRECK",
+   "sfx": "thud"
+  },
+  {
+   "n": 16,
+   "anchor": "just want carbon in your hand",
+   "bg": "paper",
+   "image": "C",
+   "object": "hand-cursor icon taps the Viper; small 'for carbon fans only' sticker",
+   "text": "CARBON FANS ONLY",
+   "sfx": "pop"
+  },
+  {
+   "n": 17,
+   "anchor": "pay ninety dollars to save two grams",
+   "bg": "paper",
+   "image": "A hero exactly as frame 1",
+   "object": "balance scale exactly as frame 1 (seamless loop)",
+   "text": "$90 → 2 g",
+   "sfx": "riser tail",
+   "transition": "match frame 1"
+  }
+ ],
+ "thumbnail": "1280×720: image A mice cut out, centred-right; '$90 for 2g?' huge (ember) left; flat paper background; readable at 168×94",
+ "credits": "Product images: Razer official press/product images. Not affiliated with or endorsed by Razer."
+}
