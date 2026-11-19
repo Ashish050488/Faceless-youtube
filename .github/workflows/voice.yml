@@ -35,13 +35,34 @@ jobs:
         with:
           path: ~/.cache/huggingface
           key: models-v1
-      - name: Install
+      # apt on ubuntu-24.04 runners can stall 20+ min retrying azure.archive.ubuntu.com (actions/runner-images#14594)
+      # or hang after a mid-download abort (Nov 2026). Bounded timeouts + retries, fallback to archive.ubuntu.com.
+      - name: Install system tools (espeak-ng, ffmpeg)
         if: steps.slugs.outputs.list != ''
+        timeout-minutes: 8
+        env: {DEBIAN_FRONTEND: noninteractive}
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq espeak-ng ffmpeg >/dev/null
-          pip install -q --extra-index-url https://download.pytorch.org/whl/cpu "torch==2.15.0"
-          pip install -q "kokoro==0.9.4" "misaki[en]==0.9.4" "spacy==3.8.18" "faster-whisper==1.2.1" "numpy==2.5.5" soundfile librosa num2words scipy
+          if command -v espeak-ng >/dev/null && command -v ffmpeg >/dev/null && command -v ffprobe >/dev/null; then
+            echo "espeak-ng + ffmpeg already on the image"; exit 0; fi
+          A="-o Acquire::Retries=3 -o Acquire::http::Timeout=20 -o Acquire::https::Timeout=20 -o DPkg::Lock::Timeout=60"
+          try() { sudo timeout 150 apt-get $A update -q && sudo timeout 240 apt-get $A install -y -q --no-install-recommends espeak-ng ffmpeg; }
+          if ! try; then
+            echo "::warning::apt stalled on the runner mirror; switching to archive.ubuntu.com"
+            sudo rm -rf /var/lib/apt/lists/partial/*
+            echo "http://archive.ubuntu.com/ubuntu/" | sudo tee /etc/apt/apt-mirrors.txt >/dev/null
+            try
+          fi
+          espeak-ng --version; ffprobe -version | head -1
+      - name: Install Python packages
+        if: steps.slugs.outputs.list != ''
+        timeout-minutes: 15
+        run: |
+          P="--timeout 60 --retries 5 --progress-bar off --disable-pip-version-check"
+          pip install $P --extra-index-url https://download.pytorch.org/whl/cpu "torch==2.15.0" | grep -E "Successfully|ERROR" || true
+          pip install $P "kokoro==0.9.4" "misaki[en]==0.9.4" "spacy==3.8.18" "faster-whisper==1.2.1" "numpy==2.5.5" soundfile librosa num2words scipy | grep -E "Successfully|ERROR" || true
+          python -c "import torch, kokoro, misaki, faster_whisper; print('python stack OK, torch', torch.__version__)"
       - name: Narrate and push
+        timeout-minutes: 15
         if: steps.slugs.outputs.list != ''
         run: |
           git config user.name "voice-bot"; git config user.email "voice-bot@users.noreply.github.com"
