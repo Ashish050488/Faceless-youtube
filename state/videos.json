@@ -144,7 +144,7 @@
   "status": "live",
   "slot": "extra",
   "date": "2026-11-19",
-  "scripted_at": "2026-11-19T10:45Z",
+  "scripted_at": "2026-11-19T10:12Z",
   "publish_at": null,
   "publish_rule": "owner rush: public as soon as built",
   "verdict": "SPEC 61",
@@ -157,6 +157,6 @@
   "duration_s": 62.4,
   "url": "https://youtube.com/shorts/YTg5MWCRWcM",
   "comment": "posted",
-  "reel": "NOT requested: message to IG session blocked by permission check 2026-11-19 ~10:45Z; owner to send or allow"
+  "reel": "requested from IG session 10:47Z (owner asked)"
  }
 ]
