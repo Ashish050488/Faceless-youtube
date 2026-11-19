@@ -292,5 +292,30 @@
   "ai_label": true,
   "permalink": "https://www.instagram.com/reel/Df6jMh0mT18/",
   "mediaId": "17996212356100156"
+ },
+ {
+  "date": "2026-11-19",
+  "slot": "13:43 IST",
+  "type": "single",
+  "topic": "7 big US outages in 5 days (FAA, Microsoft, Chase, United, Apple, Marriott, NSA); officials say not hackers",
+  "status": "draft, awaiting owner OK",
+  "postId": "b0a5348b-7dbe-4262-a19c-8ad9ab57aeef",
+  "revision": "70a2ed9a",
+  "slides": 1,
+  "sources": [
+   "https://www.wsls.com/business/2026/11/19/tech-outages-are-piling-up-and-ai-is-raising-the-stakes-could-this-be-the-new-normal/",
+   "https://en.wikipedia.org/wiki/November_2026_technology_outages",
+   "https://www.axios.com/2026/11/17/tech-outages-ai-fears-internet-breaking"
+  ],
+  "images": "Company logos via Wikimedia Commons",
+  "test_vars": {
+   "format": "single (format mix)",
+   "cover_angle": "drama/number",
+   "topic_type": "policy+outage",
+   "slide_count": 1,
+   "meme": false,
+   "slot_time": "13:43",
+   "caption_length": "long"
+  }
  }
 ]
