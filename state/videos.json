@@ -101,13 +101,19 @@
   "slug": "sow007-asus-proart-gr1x",
   "title": "Asus Put NVIDIA's RTX Spark in a $4,499 Box This TINY 😳",
   "format": "short",
-  "status": "scripted",
+  "status": "uploaded",
   "slot": "1",
   "date": "2026-11-19",
-  "scripted_at": "2026-11-19T07:35Z",
+  "scripted_at": "2026-11-19T07:05Z",
   "publish_at": null,
   "publish_rule": "public as soon as ready, latest 11:30Z; never after 13:30Z (else 2026-11-20T05:00Z)",
-  "hypothesis": "NVIDIA (top priority) + price + CAPS/emoji + size twist; first non-Apple big-brand price shock."
+  "hypothesis": "NVIDIA (top priority) + price + CAPS/emoji + size twist; first non-Apple big-brand price shock.",
+  "id": "oOFLfMecACE",
+  "privacy": "public",
+  "uploaded_at": "2026-11-19T07:23:14Z",
+  "size_mb": 9.0,
+  "published_at": "2026-11-19T07:23Z",
+  "duration_s": 64.3
  },
  {
   "slug": "sow008-razer-carbon-fiber-mice",
