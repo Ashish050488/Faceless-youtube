@@ -22,7 +22,9 @@
 8. Model: keep Opus for everything, including building videos (owner 2026-11-17: Sonnet videos were worse).
 9. Script session: write script + metadata (fact-checked, trending tags) and upload. Never review the video unless the
    owner reports a problem — the video session owns quality.
-10. Delete what's no longer used (old scripts, raw data, superseded rules) — git history keeps it.
+10. Reuse objects: check render/kit/OBJECTS.md before drawing any 2-D object; every new object goes into the library
+    (naming + index rules there) so no chat draws it twice. Repo map: README.md.
+11. Delete what's no longer used (old scripts, raw data, superseded rules) — git history keeps it.
 
 ## Where things are
 WORKFLOW.md (steps, schedule link) · PRODUCTION_SPEC.md (video rules) · state/brand.md (palette, logo, watermark) ·
