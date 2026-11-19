@@ -96,5 +96,17 @@
   "published_at": "2026-11-18T09:11Z (owner asked to publish immediately)",
   "comment_id": "UgzVfGKpoLJf5W-Ndgt4AaABAg",
   "instagram": "Reel requested from Instagram session 09:11Z"
+ },
+ {
+  "slug": "sow007-asus-proart-gr1x",
+  "title": "Asus Put NVIDIA's RTX Spark in a $4,499 Box This TINY 😳",
+  "format": "short",
+  "status": "scripted",
+  "slot": "1",
+  "date": "2026-11-19",
+  "scripted_at": "2026-11-19T07:35Z",
+  "publish_at": null,
+  "publish_rule": "public as soon as ready, latest 11:30Z; never after 13:30Z (else 2026-11-20T05:00Z)",
+  "hypothesis": "NVIDIA (top priority) + price + CAPS/emoji + size twist; first non-Apple big-brand price shock."
  }
 ]
