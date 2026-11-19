@@ -8,6 +8,7 @@ the one file for your job. Code and text only: no videos, audio or images are co
 | `CLAUDE.md` | Hard rules + token rules (auto-loaded) | every chat |
 | `WORKFLOW.md` | Step-by-step pipeline, handoffs, voice on GitHub Actions | script + video chats |
 | `PRODUCTION_SPEC.md` | How a video must look and sound (layout, text sizes, margins, objects, clips, export) | video chat |
+| `SCRIPT_STYLE.md` | How scripts must sound: conversational, emotional, TTS-friendly (research-based) | script chats |
 | `VERDICT.md` | The 100-point SPEC/WRECK score + sensitive-topic rules | script chats |
 | `INSTAGRAM_POSTS.md` | Instagram brief (posts, Reels, growth loop) | Instagram chat |
 | `scripts/<slug>/` | One folder per video: factsheet, script, shot-by-shot cues, metadata, plan/cues.kit | script → video |

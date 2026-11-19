@@ -7,6 +7,8 @@ REQUIRED = ["factsheet.md", "script.md", "cues.json", "metadata.json"]
 META_KEYS = ["title", "description", "tags", "categoryId", "defaultLanguage", "madeForKids",
              "containsSyntheticMedia", "pinned_comment", "playlist", "format"]
 
+warn = []
+
 def check(slug):
     d, bad = Path("scripts") / slug, []
     if not re.fullmatch(r"sow\d{3}-[a-z0-9-]+", slug): bad.append("slug must look like sow012-brand-product")
@@ -26,6 +28,15 @@ def check(slug):
         words = len(re.findall(r"[A-Za-z0-9$']+", "\n".join(l for l in (d / "script.md").read_text().splitlines()
                                                              if l.strip() and not l.startswith(("#", "[")))))
         if not 90 <= words <= 150: bad.append(f"script {words} words (Shorts: 100–130)")
+        txt = "\n".join(l for l in (d / "script.md").read_text().splitlines() if l.strip() and not l.startswith(("#", "[")))
+        sents = [x for x in re.split(r"(?<=[.?!…])\s+", txt) if x.strip()]
+        you = len(re.findall(r"\b(you|your|you'd|you're|you'll)\b", txt, re.I))
+        contr = len(re.findall(r"\b\w+'(s|re|d|ll|ve|t)\b", txt, re.I))
+        long_ = [x for x in sents if len(x.split()) > 14]
+        if you < 3: warn.append(f"style: only {you} 'you/your' (want ≥ 3, SCRIPT_STYLE.md #1)")
+        if contr < 3: warn.append(f"style: only {contr} contractions (want ≥ 3, #2)")
+        if txt.count("?") < 2: warn.append("style: fewer than 2 questions to the viewer (#1/#4)")
+        if long_: warn.append(f"style: {len(long_)} sentence(s) over 14 words (#3): " + long_[0][:60])
     f = (d / "factsheet.md").read_text()
     if not re.search(r"VERDICT.*?\b\d{1,3}(\.\d)?\b.*?(SPEC|WRECK)", f, re.S | re.I):
         bad.append("factsheet.md needs a '## VERDICT' section with the score and SPEC/WRECK (VERDICT.md)")
@@ -36,4 +47,5 @@ def check(slug):
 if __name__ == "__main__":
     probs = check(sys.argv[1])
     print("PASS" if not probs else "FAIL\n- " + "\n- ".join(probs))
+    if warn: print("WARN (fix before pushing)\n- " + "\n- ".join(warn))
     sys.exit(1 if probs else 0)

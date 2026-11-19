@@ -28,4 +28,4 @@
 
 ## Where things are
 WORKFLOW.md (steps, schedule link) · PRODUCTION_SPEC.md (video rules) · state/brand.md (palette, logo, watermark) ·
-INSTAGRAM_POSTS.md (IG images) · VERDICT.md (spec/wreck score) · state/schedule.md · state/videos.json · state/learnings.md · config/ (voice, pronunciations).
+INSTAGRAM_POSTS.md (IG images) · VERDICT.md (spec/wreck score) · SCRIPT_STYLE.md (how scripts sound) · state/schedule.md · state/videos.json · state/learnings.md · config/ (voice, pronunciations).
