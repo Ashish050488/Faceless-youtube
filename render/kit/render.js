@@ -92,7 +92,7 @@ const DRAWERS = {
     K.stroked(ctx, () => { ctx.moveTo(xr + 120, bot + 130 + gap); ctx.lineTo(xr - 40, bot + 130 + gap); ctx.lineTo(xr - 40, bot + gap); }, 300, p, { lw: 12, col: C.ink });
     if (c >= 1 && l.label) K.label(ctx, l.label, xr - 190, top - 190, 70, C.ember);
   },
-  scale(ctx, l, lt, sc) { K.scale(ctx, l.x, l.y, lt, tref(sc, l.at, 0.05), tref(sc, l.levelAt, 0.4), false); },
+  scale(ctx, l, lt, sc) { K.scale(ctx, l.x, l.y, lt, tref(sc, l.at, 0.05), tref(sc, l.levelAt, 0.4), false, { weight: l.weight ?? '25' }); },
   dialScale(ctx, l, lt, sc, R) { const top = l.under ? R[l.under].y0 + R[l.under].h + (l.gap ?? 8) : l.top; K.dialScale(ctx, l.x ?? 540, top, l.w || 720, lt, tref(sc, l.at, 0), l.value, { kg: l.kg || 1000 }); },
   sun(ctx, l, lt, sc) { const t0 = tref(sc, l.at, 0.05); let g = l.grow ?? 1; if (l.growAt) { const ta = tref(sc, l.growAt.at); g = lt < ta ? (l.growAt.from ?? 0.3) : lerp(l.growAt.from ?? 0.3, l.growAt.to ?? 1, easeOut(prog(lt, ta, ta + 0.35))); } K.sun(ctx, l.x, l.y, l.r || 44, lt, t0, g); },
   map(ctx, l, lt, sc) { if (!MAP) throw new Error('map layer needs assets/map*.json (kit/make_map.py)'); K.worldMap(ctx, l.x ?? 540, l.y ?? 770, l.w || 900, lt, tref(sc, l.at, 0), (l.pins || []).map(p => tref(sc, p))); },

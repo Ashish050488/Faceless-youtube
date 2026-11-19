@@ -1,0 +1,17 @@
+[
+ {"cue": "grams", "line": 0, "word": "grams"},
+ {"cue": "price", "line": 2, "word": "two", "offset": -0.05},
+ {"cue": "w47", "line": 3, "word": "forty"},
+ {"cue": "w49", "line": 4, "word": "forty"},
+ {"cue": "p159", "line": 4, "word": "one", "nth": 1},
+ {"cue": "da49", "line": 5, "word": "forty"},
+ {"cue": "eighty", "line": 5, "word": "eighty"},
+ {"cue": "pct", "line": 6, "word": "fifty"},
+ {"cue": "catch", "line": 7, "word": "catch"},
+ {"cue": "h180", "line": 8, "word": "hundred"},
+ {"cue": "hz8k", "line": 9, "word": "eight"},
+ {"cue": "h45", "line": 9, "word": "forty"},
+ {"cue": "score", "line": 10, "word": "forty"},
+ {"cue": "verdict", "line": 10, "word": "wreck"},
+ {"cue": "loop", "line": 11, "word": "ninety"}
+]

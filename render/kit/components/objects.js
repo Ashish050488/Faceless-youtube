@@ -37,7 +37,7 @@ function calipers(ctx, xL, xR, y, lt, t0, dark) { dark = false; // jaws slide in
   stroked(ctx, () => { ctx.moveTo(xR + 60 + gap, y - 260); ctx.lineTo(xR + 60 + gap, y - 40); ctx.lineTo(xR + gap, y); }, 300, p, { lw: 12, col });
   if (c >= 1) { ctx.save(); ctx.fillStyle = C.mari; ctx.globalAlpha = 0.9; rr(ctx, xL - 90, y - 300, xR - xL + 180, 22, 11); ctx.fill(); ctx.restore(); }
 }
-function scale(ctx, cx, cy, lt, t0, tLevel, dark) { dark = false; // balance tips, then levels on the word
+function scale(ctx, cx, cy, lt, t0, tLevel, dark, { weight = '25' } = {}) { dark = false; // balance tips, then levels on the word
   const p = prog(lt, t0, t0 + DRAW), f = pop(lt, t0 + DRAW) || 1;
   const tilt = lt < tLevel ? 0.22 : 0.22 * Math.exp(-(lt - tLevel) * 5) * Math.cos((lt - tLevel) * 9);
   const col = dark ? C.paper : C.ink;
@@ -46,7 +46,7 @@ function scale(ctx, cx, cy, lt, t0, tLevel, dark) { dark = false; // balance tip
   ctx.save(); ctx.rotate(tilt); stroked(ctx, () => { ctx.moveTo(-330, -40); ctx.lineTo(330, -40); }, 660, p, { lw: 12, col });
   for (const s of [-1, 1]) { ctx.save(); ctx.translate(s * 330, -40); ctx.rotate(-tilt);
     stroked(ctx, () => { ctx.moveTo(0, 0); ctx.lineTo(-90, 120); ctx.moveTo(0, 0); ctx.lineTo(90, 120); ctx.moveTo(-120, 120); ctx.quadraticCurveTo(0, 190, 120, 120); }, 520, p, { lw: 9, col });
-    if (s === 1 && lt >= t0 + DRAW) { ctx.save(); ctx.translate(0, 112); const ff = pop(lt, t0 + DRAW); ctx.scale(ff, ff); ctx.beginPath(); ctx.arc(0, -24, 34, 0, 7); ctx.fillStyle = C.mari; ctx.fill(); ctx.strokeStyle = C.ink; ctx.lineWidth = 7; ctx.stroke(); font(ctx, 30, 'head'); ctx.fillStyle = C.ink; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText('25', 0, -22); ctx.textAlign = 'left'; ctx.restore(); }
+    if (s === 1 && lt >= t0 + DRAW) { ctx.save(); ctx.translate(0, 112); const ff = pop(lt, t0 + DRAW); ctx.scale(ff, ff); ctx.beginPath(); ctx.arc(0, -24, 34, 0, 7); ctx.fillStyle = C.mari; ctx.fill(); ctx.strokeStyle = C.ink; ctx.lineWidth = 7; ctx.stroke(); font(ctx, 30, 'head'); ctx.fillStyle = C.ink; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(weight, 0, -22); ctx.textAlign = 'left'; ctx.restore(); }
     ctx.restore(); }
   ctx.restore(); ctx.restore();
   return tilt;
