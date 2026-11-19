@@ -35,7 +35,7 @@
      "sfx": false
     },
     {
-     "type": "chip",
+     "type": "chipDie",
      "x": 540,
      "y": 1180,
      "s": 0.4,
@@ -296,7 +296,7 @@
      "seed": 0.7
     },
     {
-     "type": "chip",
+     "type": "chipDie",
      "x": 540,
      "y": 650,
      "s": 0.7,
@@ -339,7 +339,7 @@
      }
     },
     {
-     "type": "chip",
+     "type": "chipDie",
      "x": 540,
      "y": 680,
      "s": 0.7,
@@ -374,7 +374,7 @@
      "seed": 1.4
     },
     {
-     "type": "ram",
+     "type": "ramStick",
      "x": 540,
      "y": 660,
      "s": 0.85,
@@ -545,11 +545,10 @@
      "seed": 2.1
     },
     {
-     "type": "port",
+     "type": "usbPort",
      "x": 320,
      "y": 640,
      "s": 0.8,
-     "kind": "usba",
      "at": 0.05,
      "crossAt": [
       "port",
@@ -558,11 +557,10 @@
      ]
     },
     {
-     "type": "port",
+     "type": "audioJack",
      "x": 760,
      "y": 640,
      "s": 0.8,
-     "kind": "jack",
      "at": [
       "no",
       1,
@@ -611,7 +609,7 @@
      "seed": 0.4
     },
     {
-     "type": "miniBox",
+     "type": "miniPc",
      "x": 770,
      "y": 1000,
      "s": 0.55,
@@ -781,7 +779,7 @@
      "at": 0.05
     },
     {
-     "type": "chip",
+     "type": "chipDie",
      "x": 540,
      "y": 1180,
      "s": 0.4,

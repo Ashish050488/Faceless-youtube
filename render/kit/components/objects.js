@@ -61,5 +61,17 @@ function waves(ctx, cx, cy, lt, t0, dark) { dark = false; // swim waves icon
   const p = prog(lt, t0, t0 + DRAW);
   for (let r = 0; r < 2; r++) stroked(ctx, () => { for (let i = 0; i <= 40; i++) { const x = cx - 180 + i * 9, y = cy + r * 44 + Math.sin(i * 0.6 + lt * 3) * 12; i ? ctx.lineTo(x, y) : ctx.moveTo(x, y); } }, 420, p - r * 0.15, { lw: 9, col: '#3A8FB7' });
 }
-Object.assign(K, { sun, priceTag, calipers, scale, waterDrop, waves });
+const box_ = (ctx, x, y, w, h, r, fill, lw = 9) => { ctx.beginPath(); rr(ctx, x, y, w, h, r); ctx.fillStyle = fill; ctx.fill(); ctx.lineWidth = lw; ctx.strokeStyle = C.ink; ctx.stroke(); };
+const enter_ = (ctx, lt, t0) => { const f = K.pop(lt, t0); ctx.scale(f || 0.001, f || 0.001); return f > 0; };
+function reviewCard(ctx, lt, t0, tickAt) { // paper card with headline bar + text lines; green-free tick in a circle
+  ctx.save(); if (!enter_(ctx, lt, t0)) { ctx.restore(); return; }
+  box_(ctx, -130, -160, 260, 320, 22, C.paper);
+  box_(ctx, -96, -124, 192, 30, 8, C.ink, 0);
+  for (let i = 0; i < 5; i++) { ctx.fillStyle = C.paperLine; ctx.fillRect(-96, -70 + i * 28, i === 4 ? 120 : 192, 12); }
+  if (lt >= tickAt) { ctx.beginPath(); ctx.arc(70, 110, 54, 0, 2 * Math.PI - 1e-4); ctx.fillStyle = C.mari; ctx.fill(); ctx.lineWidth = 7; ctx.strokeStyle = C.ink; ctx.stroke();
+    stroked(ctx, () => { ctx.moveTo(44, 110); ctx.lineTo(64, 132); ctx.lineTo(98, 88); }, 90, prog(lt, tickAt, tickAt + DRAW), { lw: 12, col: C.ink }); }
+  ctx.restore();
+}
+function slash(ctx, lt, at, len) { if (lt < at) return; stroked(ctx, () => { ctx.moveTo(-len / 2, len * 0.18); ctx.lineTo(len / 2, -len * 0.18); }, len * 1.1, prog(lt, at, at + DRAW), { lw: 14, col: C.wreck }); }
+Object.assign(K, { sun, priceTag, calipers, scale, waterDrop, waves , reviewCard, slash });
 };

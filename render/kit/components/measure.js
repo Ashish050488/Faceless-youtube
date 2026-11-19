@@ -45,5 +45,36 @@ function slider(ctx, cx, y, w, lt, t0, from, to) { const p = easeInOut(prog(lt, 
   ctx.strokeStyle = C.mari; ctx.beginPath(); ctx.moveTo(cx - w / 2, y); ctx.lineTo(cx - w / 2 + w * v, y); ctx.stroke();
   ctx.beginPath(); ctx.arc(cx - w / 2 + w * v, y, 30, 0, Math.PI * 2); ctx.fillStyle = '#fff'; ctx.fill(); ctx.strokeStyle = C.ink; ctx.lineWidth = 7; ctx.stroke();
   sun(ctx, cx - w / 2 - 70, y, 16, lt + 9, 0, 0.4); sun(ctx, cx + w / 2 + 74, y, 22, lt + 9, 0, 1); ctx.restore(); }
-Object.assign(K, { dialScale, clockRing, bars, calendar, slider });
+const box_ = (ctx, x, y, w, h, r, fill, lw = 9) => { ctx.beginPath(); rr(ctx, x, y, w, h, r); ctx.fillStyle = fill; ctx.fill(); ctx.lineWidth = lw; ctx.strokeStyle = C.ink; ctx.stroke(); };
+const enter_ = (ctx, lt, t0) => { const f = K.pop(lt, t0); ctx.scale(f || 0.001, f || 0.001); return f > 0; };
+function ruler(ctx, lt, t0, w, n) { // ruler body slides up; n cm ticks across w px, major every 5
+  if (lt < t0) return; const e = easeOut(prog(lt, t0, t0 + 0.3));
+  ctx.save(); ctx.globalAlpha = clamp(e * 2); ctx.translate(0, lerp(60, 0, e));
+  box_(ctx, -w / 2 - 30, -45, w + 60, 90, 12, C.mari, 7);
+  for (let i = 0; i <= n; i++) { const x = -w / 2 + i * w / n, l = i % 5 ? 22 : 44; ctx.beginPath(); ctx.moveTo(x, -45); ctx.lineTo(x, -45 + l); ctx.lineWidth = i % 5 ? 4 : 6; ctx.strokeStyle = C.ink; ctx.stroke();
+    if (i < n) { ctx.beginPath(); ctx.moveTo(x + w / n / 2, -45); ctx.lineTo(x + w / n / 2, -33); ctx.lineWidth = 3; ctx.stroke(); } }
+  ctx.restore();
+}
+function gauge(ctx, lt, t0, frac, markFrac, col) { // semicircle dial r 200, 21 ticks, needle sweeps 0 → frac; optional mark line
+  ctx.save(); if (!enter_(ctx, lt, t0)) { ctx.restore(); return; }
+  const r = 200, a0 = Math.PI, A = a => a0 + Math.PI * a;
+  ctx.beginPath(); ctx.arc(0, 0, r, Math.PI, 2 * Math.PI); ctx.lineTo(r, 24); ctx.lineTo(-r, 24); ctx.closePath(); ctx.fillStyle = C.paperSoft; ctx.fill(); ctx.lineWidth = 9; ctx.strokeStyle = C.ink; ctx.stroke();
+  const p = easeOut(prog(lt, t0 + 0.1, t0 + 0.45)) * frac;
+  ctx.beginPath(); ctx.arc(0, 0, r - 34, Math.PI, A(Math.max(p, 0.001))); ctx.lineWidth = 26; ctx.strokeStyle = col || C.mari; ctx.lineCap = 'butt'; ctx.stroke();
+  for (let i = 0; i <= 20; i++) { const a = A(i / 20), l = i % 5 ? 16 : 30; ctx.beginPath(); ctx.moveTo(Math.cos(a) * (r - 10), Math.sin(a) * (r - 10)); ctx.lineTo(Math.cos(a) * (r - 10 - l), Math.sin(a) * (r - 10 - l)); ctx.lineWidth = i % 5 ? 4 : 7; ctx.strokeStyle = C.ink; ctx.stroke(); }
+  if (markFrac !== undefined) { const a = A(markFrac); ctx.beginPath(); ctx.moveTo(Math.cos(a) * (r + 14), Math.sin(a) * (r + 14)); ctx.lineTo(Math.cos(a) * (r - 70), Math.sin(a) * (r - 70)); ctx.lineWidth = 8; ctx.strokeStyle = C.wreck; ctx.lineCap = 'round'; ctx.stroke(); }
+  const na = A(p); ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(Math.cos(na) * (r - 50), Math.sin(na) * (r - 50)); ctx.lineWidth = 12; ctx.strokeStyle = C.ink; ctx.lineCap = 'round'; ctx.stroke();
+  ctx.beginPath(); ctx.arc(0, 0, 22, 0, 2 * Math.PI - 1e-4); ctx.fillStyle = C.ink; ctx.fill();
+  ctx.restore();
+}
+function thermometer(ctx, lt, t0, level) { // bulb + tube; liquid rises then settles at `level` (0..1)
+  ctx.save(); if (!enter_(ctx, lt, t0)) { ctx.restore(); return; }
+  const lv = lerp(0, 0.75, easeOut(prog(lt, t0, t0 + 0.35))) + (level - 0.75) * easeInOut(prog(lt, t0 + 0.35, t0 + 0.9));
+  box_(ctx, -38, -200, 76, 300, 38, C.paper);
+  ctx.beginPath(); ctx.arc(0, 130, 62, 0, 2 * Math.PI - 1e-4); ctx.fillStyle = '#5B8DEF'; ctx.fill(); ctx.lineWidth = 9; ctx.strokeStyle = C.ink; ctx.stroke();
+  const top = lerp(90, -176, clamp(lv)); ctx.fillStyle = '#5B8DEF'; ctx.fillRect(-16, top, 32, 110 - top);
+  for (let i = 0; i < 6; i++) { ctx.beginPath(); ctx.moveTo(38, -160 + i * 44); ctx.lineTo(62, -160 + i * 44); ctx.lineWidth = 5; ctx.strokeStyle = C.ink; ctx.stroke(); }
+  ctx.restore();
+}
+Object.assign(K, { dialScale, clockRing, bars, calendar, slider , ruler, gauge, thermometer });
 };

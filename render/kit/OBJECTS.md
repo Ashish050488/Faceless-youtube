@@ -49,3 +49,13 @@ Every object is drawn once, saved here, and reused by every future video. Before
 | screenPath / motionLines / screenDim / playIcon / loupe | screen.js | screen parts | — | displays, zoom |
 | worldMap | map.js | real map, country filled, pin | pin drops | launch regions |
 | counter / headline / bigWord / stamp / pill / label / wordmark | text.js | text elements | roll / reveal | numbers, words |
+| chipDie | compute.js | CPU package with pins, die cells | cells fill one by one (`fillAt`); `mode: "gpu"` = dense core field | cores, chips, NPU |
+| ramStick | compute.js | RAM sticks (PCB, chips, gold contacts) | `n` sticks drop in and stack | memory, GB |
+| fan | compute.js | square fan, 7 blades | spins up | cooling, watts, noise |
+| miniPc | compute.js | generic unbranded mini PC box | pops in | rival product without its image |
+| usbPort / audioJack | ports.js | USB-A socket / 3.5 mm jack on a panel | red cross draws on at `crossAt` | missing ports |
+| ruler | measure.js | ruler with cm ticks (`n`, major every 5) | slides up | size, cm |
+| gauge | measure.js | semicircle dial, 21 ticks | needle sweeps to `value`/`max`; optional red `mark` | watts, scores, % |
+| thermometer | measure.js | bulb + tube | liquid settles at `level` 0–1 | temperature, runs cool/hot |
+| reviewCard | objects.js | review page with lines | tick draws on at `tickAt` | "reviews say", tests |
+| slash | objects.js | red strike line | draws on | price cut, old value |
