@@ -1,0 +1,32 @@
+# Owner-approved (2026-11-19, "allow auto-cleanup"): deletes branches nobody needs any more.
+# Chat sessions can't delete branches; GitHub Actions can.
+# - handoff/<slug> and handoff/<slug>-voice once state/videos.json says that video is live / cancelled / discarded
+# - handoff/_pushtest, handoff/sow001-review and the two old chat branches (already merged into main)
+name: cleanup
+on:
+  schedule: [{cron: "40 14 * * *"}]   # daily 8:10 PM IST, after both Shorts are out
+  push: {branches: [main], paths: ["state/videos.json", ".github/workflows/cleanup.yml"]}
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  cleanup:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Delete finished branches
+        run: |
+          python3 - > done.txt <<'PY'
+          import json
+          d = json.load(open("state/videos.json")); L = d if isinstance(d, list) else d["videos"]
+          for v in L:
+              if str(v.get("status", "")).lower().startswith(("live", "cancel", "discard")):
+                  print(v["slug"])
+          PY
+          git ls-remote --heads origin | awk '{print $2}' | sed 's#refs/heads/##' > branches.txt
+          while read -r b; do
+            del=0
+            case "$b" in handoff/_pushtest|handoff/sow001-review|claude/chat-session-toey4f|claude/nice-turing-0es0hr) del=1;; esac
+            case "$b" in handoff/*) slug=${b#handoff/}; slug=${slug%-voice}; grep -qx "$slug" done.txt && del=1;; esac
+            if [ $del = 1 ]; then git push -q origin --delete "$b" && echo "deleted $b"; fi
+          done < branches.txt
