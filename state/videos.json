@@ -101,7 +101,7 @@
   "slug": "sow007-asus-proart-gr1x",
   "title": "Asus Put NVIDIA's RTX Spark in a $4,499 Box This TINY 😳",
   "format": "short",
-  "status": "uploaded",
+  "status": "live",
   "slot": "1",
   "date": "2026-11-19",
   "scripted_at": "2026-11-19T07:05Z",
@@ -113,7 +113,11 @@
   "uploaded_at": "2026-11-19T07:23:14Z",
   "size_mb": 9.0,
   "published_at": "2026-11-19T07:23Z",
-  "duration_s": 64.3
+  "duration_s": 64.3,
+  "url": "https://youtube.com/shorts/oOFLfMecACE",
+  "comment": "posted",
+  "comment_id": "UgzFhaUVr6IcsOHj57l4AaABAg",
+  "reel": "requested from IG session 07:30Z"
  },
  {
   "slug": "sow008-razer-carbon-fiber-mice",

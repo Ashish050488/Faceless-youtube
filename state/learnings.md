@@ -35,3 +35,5 @@
 ## 2026-11-16
 - Old channel content (160 anime videos) deleted with owner approval; channel rebranded to Spec or Wreck.
 - Niche: new physical tech from big brands, Shorts first, with a real verdict.
+
+- 2026-11-19 sow007: 126-word script (≈142 spoken incl. numbers-as-words) → 64.3 s at 139 wpm (over 60 s). Keep scripts ≤ 110 written words when numbers are spelled out; video session says aim 100–130 words.
