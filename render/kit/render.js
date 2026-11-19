@@ -98,7 +98,7 @@ const DRAWERS = {
   sun(ctx, l, lt, sc) { const t0 = tref(sc, l.at, 0.05); let g = l.grow ?? 1; if (l.growAt) { const ta = tref(sc, l.growAt.at); g = lt < ta ? (l.growAt.from ?? 0.3) : lerp(l.growAt.from ?? 0.3, l.growAt.to ?? 1, easeOut(prog(lt, ta, ta + 0.35))); } K.sun(ctx, l.x, l.y, l.r || 44, lt, t0, g); },
   map(ctx, l, lt, sc) { if (!MAP) throw new Error('map layer needs assets/map*.json (kit/make_map.py)'); K.worldMap(ctx, l.x ?? 540, l.y ?? 770, l.w || 900, lt, tref(sc, l.at, 0), (l.pins || []).map(p => tref(sc, p))); },
   bars(ctx, l, lt, sc) { K.bars(ctx, l.x ?? 540, l.base, lt, l.items.map(b => ({ ...b, col: col(b.col || 'mari'), t0: tref(sc, b.at, 0.1) })), l.h || 520); },
-  stamp(ctx, l, lt, sc) { const t0 = tref(sc, l.at, 0.1); K.stamp(ctx, l.text, l.x ?? 540, l.y ?? 600, prog(lt, t0, t0 + 0.22), col(l.col || 'wreck'), l.px || 112); if (l.flash !== false && lt >= t0 + 0.22 && lt < t0 + 0.22 + FR) { ctx.fillStyle = 'rgba(255,255,255,0.6)'; ctx.fillRect(0, 0, W, H); } },
+  stamp(ctx, l, lt, sc) { const t0 = tref(sc, l.at, 0.1); K.stamp(ctx, l.text, l.x ?? 540, l.y ?? 600, prog(lt, t0, t0 + 0.22), col(l.col || 'wreck'), l.px || 112); if (l.flash !== false && !CHECK && lt >= t0 + 0.22 && lt < t0 + 0.22 + FR) { ctx.fillStyle = 'rgba(255,255,255,0.6)'; ctx.fillRect(0, 0, W, H); } },
   clock(ctx, l, lt, sc) { K.clockRing(ctx, l.x, l.y, l.r || 86, lt, tref(sc, l.at, 0), l.hours); },
   hourglass(ctx, l, lt, sc) { K.hourglass(ctx, l.x, l.y, lt, tref(sc, l.at, 0.05), tref(sc, l.flipAt), false); },
   toggle(ctx, l, lt, sc) { K.toggle(ctx, l.x, l.y, lt, tref(sc, l.flipAt), false); },
