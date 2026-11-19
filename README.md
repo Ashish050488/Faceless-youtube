@@ -24,7 +24,15 @@ the one file for your job. Code and text only: no videos, audio or images are co
 | `yt/` | YouTube API: login, upload/publish, stats | script chats |
 | `config/` | Channel settings, pronunciations, upload defaults | all |
 | `state/` | Live state: `videos.json`, `schedule.md`, `sessions.md` (which chat is which), learnings, analytics, brand, competitors, Instagram log | all |
-| `research/` | Niche research script (one-off) | — |
 | `.claude/settings.json` | Tool permissions so chats run without prompts | all |
 
 Branches: `main` (code + text only) · `handoff/<slug>` (finished video) · `handoff/<slug>-voice` (voice from Actions).
+
+## Common commands
+| Task | Command |
+|---|---|
+| Check a script package | `python -m meta.check_package <slug>` |
+| Voice (normally automatic on push) | GitHub Actions `voice` workflow → `handoff/<slug>-voice` |
+| Build a video | `render/kit/build.sh check|stills|video <slug> <work>` (render/README.md) |
+| Publish | `python -m yt.publish <slug> <dir> --publish-at <UTC>` (yt/README.md) |
+| Install video tools | `bash render/tools/setup.sh` |

@@ -26,7 +26,8 @@ monetisation guidance regularly (state/policy_notes.md) and follow it; nothing r
        true and shown in the video — never misleading. ≤ 60 characters.
      - Length: Shorts 45–60 s (100–130 words). Topic priority when news allows: NVIDIA/GPUs, Apple, AI hardware/robots,
        "world's biggest/smallest/first", price shocks — all from big brands. Competitor data: state/competitor_watch/competitors.md.
-   - Write factsheet.md, script.md, cues.json, metadata.json → commit to repo (scripts/<slug>/).
+   - Write factsheet.md, script.md, cues.json, metadata.json → `python -m meta.check_package <slug>` must PASS →
+     commit to repo (scripts/<slug>/). Package contract: scripts/README.md.
    - cues.json is a SHOT-BY-SHOT visual spec (owner 2026-11-17: "put in the script what to use"): for every spoken
      beat: exact anchor words, background colour, which real image (asset # + crop/scale/position), which 2-D object
      (shape, motion, data source), on-screen text (1–3 words), SFX, transition. The video session builds it, not invents it.
