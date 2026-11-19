@@ -22,7 +22,7 @@
   "size_mb": 5.1,
   "publish_at": null,
   "url": "https://youtube.com/shorts/yNzzZfLxt30",
-  "qa": "script-session QA pass 2026-11-17: centred 0.493, flat bg, 97.5% real product, counters roll 0.33 s/hold ≥1.26 s, 5.1 MB 720p; video-session self-score 26/30",
+  "qa": "script-session QA pass 2026-11-17: centred 0.493, flat bg, 97.5% real product, counters roll 0.33 s/hold \u22651.26 s, 5.1 MB 720p; video-session self-score 26/30",
   "published_at": "2026-11-17T07:1xZ (owner asked to publish immediately)",
   "comment_id": "UgwDguG_LI7MbLBZC594AaABAg",
   "instagram": {
@@ -60,7 +60,7 @@
  },
  {
   "slug": "sow005-apple-homeview-teardown",
-  "title": "Apple Made a $299 HomeView iFixit Could BARELY Open 😬",
+  "title": "Apple Made a $299 HomeView iFixit Could BARELY Open \ud83d\ude2c",
   "format": "short",
   "status": "live",
   "slot": "2",
@@ -80,7 +80,7 @@
  {
   "id": "UTvRnFY_jks",
   "slug": "sow006-iphone-duo-999-screen",
-  "title": "Apple Wants $999 for a NEW iPhone Duo Screen 😳",
+  "title": "Apple Wants $999 for a NEW iPhone Duo Screen \ud83d\ude33",
   "format": "short",
   "status": "live",
   "slot": "1",
@@ -99,7 +99,7 @@
  },
  {
   "slug": "sow007-asus-proart-gr1x",
-  "title": "Asus Put NVIDIA's RTX Spark in a $4,499 Box This TINY 😳",
+  "title": "Asus Put NVIDIA's RTX Spark in a $4,499 Box This TINY \ud83d\ude33",
   "format": "short",
   "status": "live",
   "slot": "1",
@@ -121,7 +121,7 @@
  },
  {
   "slug": "sow008-razer-carbon-fiber-mice",
-  "title": "Razer Wants $90 MORE to Save 2 Grams 😳",
+  "title": "Razer Wants $90 MORE to Save 2 Grams \ud83d\ude33",
   "format": "short",
   "status": "uploaded",
   "slot": "2",
@@ -136,5 +136,18 @@
   "url": "https://youtube.com/shorts/MWwcVnpGqyM",
   "duration_s": 61.7,
   "comment": "pending (private until 13:00Z; post after public)"
+ },
+ {
+  "slug": "sow009-gta-6-launch",
+  "title": "GTA 6 Is OUT: $80, 212 GB and NO Disc \ud83d\ude33",
+  "format": "short",
+  "status": "scripted",
+  "slot": "extra",
+  "date": "2026-11-19",
+  "scripted_at": "2026-11-19T10:45Z",
+  "publish_at": null,
+  "publish_rule": "owner rush: public as soon as built",
+  "verdict": "SPEC 61",
+  "hypothesis": "Biggest launch of the year + fun tone + 'no disc' twist pulls a gaming audience beyond gadgets."
  }
 ]

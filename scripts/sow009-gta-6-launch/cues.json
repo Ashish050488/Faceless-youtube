@@ -1,0 +1,199 @@
+{
+ "id": "sow009-gta-6-launch",
+ "format": "short",
+ "export": "720x1280 H.264 CRF 24 maxrate 2M ≤20 MB (§13)",
+ "rules": "RUSH. PRODUCTION_SPEC §12–§18; flat LIGHT backgrounds only; Rockstar official images only (shotlist.md A–F) as framed rounded cards — NO trailer/gameplay footage, no clips at all, no Rockstar music, no fan art; crops avoid weapons; 1–3 words on screen; a detailed 2-D object in every shot; watermark below content; logo v5 end card; audio LOCKED (narrate.py + mix.sh). Length 50–58 s. Tone: FUN — playful timing on 'your midnight', 'forty-five DVDs', 'just a code, in a box'.",
+ "numbers_shown": [
+  "13 years",
+  "12:00",
+  "$79.99",
+  "$99.99",
+  "₹5,999",
+  "212 GB",
+  "45 DVDs",
+  "$69.99",
+  "+$10",
+  "61/100"
+ ],
+ "official_clips": "none — owner: no trailer/gameplay footage",
+ "palette_for_this_video": "paper #FAF8F5 main; lavender #ECE8FB for time/size beats; blush #FBE7E2 for THE CATCH; marigold object fills (GTA VI bar highlight); ember price figures; wreck red only for the slash/stamp",
+ "new_objects": "downloadBar (screen.js), dvdStack (objects.js), gameCase + disc (objects.js), consoleTower (hardware.js, generic unbranded) — add all to render/kit/OBJECTS.md index",
+ "assets": "shotlist.md (A–F)",
+ "scenes": [
+  {
+   "n": 1,
+   "anchor": "Thirteen years later",
+   "bg": "paper",
+   "image": "A key art (crop: logo + Lucia/Jason panels, no weapons), framed card 80% width",
+   "object": "calendar (measure.js) flips fast 2013 → 2026, then counter '13 YEARS'",
+   "text": "13 YEARS",
+   "sfx": "page-flip burst",
+   "note": "frame 1 must read instantly: GTA VI art + 13 YEARS"
+  },
+  {
+   "n": 2,
+   "anchor": "unlocked at your midnight",
+   "bg": "lavender",
+   "image": "F VI logo, centred top",
+   "object": "clockRing (measure.js) hands sweep to 12:00, ring fills; small padlock icon pops open at 12",
+   "text": "MIDNIGHT 🔓",
+   "sfx": "clock tick ×3 + unlock click"
+  },
+  {
+   "n": 3,
+   "anchor": "rolled out midnight by midnight",
+   "bg": "paper",
+   "image": "C Vice City skyline, rounded card",
+   "object": "worldMap (map.js): night band sweeps east→west, New Zealand filled first with pin",
+   "text": "LOCAL TIME",
+   "sfx": "whoosh"
+  },
+  {
+   "n": 4,
+   "anchor": "New Zealand got it first",
+   "bg": "paper",
+   "image": "C",
+   "object": "worldMap pin on New Zealand pulses, label '1st'; tiny clock tag '11:00 UTC'",
+   "text": "NZ FIRST",
+   "sfx": "pop"
+  },
+  {
+   "n": 5,
+   "anchor": "PS5 and Xbox Series X and S",
+   "bg": "lavender",
+   "image": "E square key art, centred",
+   "object": "two generic unbranded console silhouettes (draw: consoleTower, new object → hardware.js) slide in with labels PS5 / XBOX SERIES X|S; generic monitor with red slash label 'PC: no date' fades in small (sets up the catch)",
+   "text": "PS5 · XBOX",
+   "sfx": "swipe ×2"
+  },
+  {
+   "n": 6,
+   "anchor": "Seventy-nine ninety-nine",
+   "bg": "paper",
+   "image": "A key art, card left 45%",
+   "object": "priceTag (objects.js) swings in, value rolls to $79.99",
+   "text": "$79.99",
+   "sfx": "tag swing + tick"
+  },
+  {
+   "n": 7,
+   "anchor": "Ultimate's ninety-nine ninety-nine",
+   "bg": "paper",
+   "image": "B Ultimate Edition art, card right 45%",
+   "object": "second priceTag $99.99 hangs off Ultimate art",
+   "text": "$99.99",
+   "sfx": "tick"
+  },
+  {
+   "n": 8,
+   "anchor": "almost six thousand rupees",
+   "bg": "paper",
+   "image": "A",
+   "object": "priceTag flips to ₹5,999 with small 'India' pill",
+   "text": "₹5,999",
+   "sfx": "coin clink"
+  },
+  {
+   "n": 9,
+   "anchor": "two hundred twelve gigs",
+   "bg": "lavender",
+   "image": "F VI logo small top-left",
+   "object": "downloadBar (NEW object → screen.js): wide progress bar with GB counter fills 0 → 212 GB, percent ticks, little download arrow bouncing",
+   "text": "212 GB",
+   "sfx": "rising blips"
+  },
+  {
+   "n": 10,
+   "anchor": "about forty-five DVDs",
+   "bg": "lavender",
+   "image": "none",
+   "object": "dvdStack (NEW object → objects.js): 45 shiny DVDs drop and stack into a tower next to the full bar; counter rolls to 45",
+   "text": "= 45 DVDs",
+   "sfx": "stack clatter"
+  },
+  {
+   "n": 11,
+   "anchor": "Here's the catch",
+   "bg": "blush",
+   "image": "A",
+   "object": "stamp 'THE CATCH' (text.js) in wreck red",
+   "text": "THE CATCH",
+   "sfx": "stamp thud"
+  },
+  {
+   "n": 12,
+   "anchor": "There's no disc",
+   "bg": "blush",
+   "image": "A as a game-case cover",
+   "object": "gameCase (NEW object → objects.js): case opens, empty disc hub; a disc (NEW object 'disc') fades in over the hub and slash (objects.js) strikes through it",
+   "text": "NO DISC",
+   "sfx": "record scratch"
+  },
+  {
+   "n": 13,
+   "anchor": "Just a code, in a box",
+   "bg": "blush",
+   "image": "A",
+   "object": "small code card (pill-shaped card with 'XXXX-XXXX' placeholder, NOT a real code) slides out of the case",
+   "text": "JUST A CODE",
+   "sfx": "paper slide"
+  },
+  {
+   "n": 14,
+   "anchor": "And PC? No date yet",
+   "bg": "blush",
+   "image": "none",
+   "object": "generic monitor (reuse from scene 5) + calendar with '?' on the page",
+   "text": "PC: NO DATE",
+   "sfx": "soft buzz"
+  },
+  {
+   "n": 15,
+   "anchor": "Battlefield Six cost seventy",
+   "bg": "paper",
+   "image": "A",
+   "object": "bars (measure.js) to scale: 'Battlefield 6' $69.99, 'Ghost of Yōtei' $69.99, 'GTA VI' $79.99 (marigold); no rival images, text labels only",
+   "text": "+$10",
+   "sfx": "bars rise"
+  },
+  {
+   "n": 16,
+   "anchor": "sixty-one",
+   "bg": "paper",
+   "image": "A",
+   "object": "gauge (measure.js) needle sweeps to 61/100, mark at 55",
+   "text": "SPEC SCORE 61",
+   "sfx": "needle whoosh"
+  },
+  {
+   "n": 17,
+   "anchor": "Spec",
+   "bg": "paper",
+   "image": "A",
+   "object": "logo v5 wordmark, k snaps upright (SPEC)",
+   "text": "SPEC",
+   "sfx": "snap"
+  },
+  {
+   "n": 18,
+   "anchor": "the console, and the space",
+   "bg": "paper",
+   "image": "E",
+   "object": "two pills: 'CONSOLE ✓' and '212 GB FREE ✓'",
+   "text": "IF YOU'VE GOT SPACE",
+   "sfx": "pop pop"
+  },
+  {
+   "n": 19,
+   "anchor": "What are you deleting first?",
+   "bg": "lavender",
+   "image": "A key art exactly as frame 1",
+   "object": "downloadBar at 212 GB with a trash-can icon wiggling next to it; end on match of frame 1 for loop",
+   "text": "DELETING WHAT? 🗑️",
+   "sfx": "riser tail",
+   "transition": "match frame 1"
+  }
+ ],
+ "thumbnail": "1280×720: A key art card left; right: downloadBar at 212 GB + disc with red slash; text 'NO DISC?!' ink on paper, 'GTA VI' small",
+ "credits": "Images: Rockstar Games press materials. Not affiliated with or endorsed by Rockstar Games or Take-Two."
+}
