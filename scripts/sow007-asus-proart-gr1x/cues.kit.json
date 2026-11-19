@@ -1,0 +1,829 @@
+{
+ "slug": "sow007-asus-proart-gr1x",
+ "plan": "plan.json",
+ "thumb": {
+  "img": "pair_front",
+  "bg": "paper",
+  "big": "$4,499",
+  "word": "THIS TINY",
+  "tag": "15 cm",
+  "w": 760
+ },
+ "scenes": [
+  {
+   "line": 0,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "id": "hero",
+     "img": "silver_front",
+     "x": 540,
+     "y": 760,
+     "w": 720,
+     "seed": 0.4,
+     "ltOffset": 9
+    },
+    {
+     "type": "ruler",
+     "x": 540,
+     "y": 1020,
+     "w": 640,
+     "n": 15,
+     "at": -9,
+     "sfx": false
+    },
+    {
+     "type": "chip",
+     "x": 540,
+     "y": 1180,
+     "s": 0.4,
+     "at": -9,
+     "fillAt": [
+      "rtx",
+      0,
+      0
+     ],
+     "sfx": false
+    },
+    {
+     "type": "headline",
+     "text": "THIS TINY",
+     "at": -0.5,
+     "until": [
+      "rtx",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "RTX SPARK",
+     "col": "ember",
+     "at": [
+      "rtx",
+      0,
+      -0.1
+     ],
+     "until": [
+      "box",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "THIS TINY",
+     "at": [
+      "box",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 0,
+   "from": "and",
+   "xfade": true,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "silver_front",
+     "x": 540,
+     "y": 860,
+     "w": 680,
+     "seed": 0.4,
+     "push": true
+    },
+    {
+     "type": "priceTag",
+     "x": 600,
+     "y": 1090,
+     "text": "$4,499",
+     "at": [
+      "@price",
+      0,
+      0.2
+     ]
+    },
+    {
+     "type": "number",
+     "value": 4499,
+     "prefix": "$",
+     "y": 420,
+     "at": "@price"
+    }
+   ]
+  },
+  {
+   "line": 1,
+   "bg": "lav",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "pair_34",
+     "x": 540,
+     "y": 980,
+     "w": 780,
+     "seed": 1.2
+    },
+    {
+     "type": "headline",
+     "text": "PROART GR1X",
+     "at": [
+      "proart",
+      0,
+      -0.1
+     ],
+     "until": "@sale"
+    },
+    {
+     "type": "headline",
+     "text": "ON SALE",
+     "col": "ember",
+     "at": "@sale"
+    },
+    {
+     "type": "calendar",
+     "x": 360,
+     "y": 560,
+     "month": "NOV",
+     "year": "2026",
+     "at": [
+      "@sale",
+      0,
+      0.1
+     ]
+    },
+    {
+     "type": "pill",
+     "text": "US",
+     "x": 730,
+     "y": 560,
+     "w": 220,
+     "h": 110,
+     "at": [
+      "u",
+      0,
+      -0.05
+     ]
+    }
+   ]
+  },
+  {
+   "line": 2,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "id": "p",
+     "img": "black_front",
+     "x": 540,
+     "y": 790,
+     "w": 620,
+     "seed": 2.1
+    },
+    {
+     "type": "ruler",
+     "x": 540,
+     "y": 1160,
+     "w": 620,
+     "n": 15,
+     "at": -9,
+     "sfx": false,
+     "hide": [
+      "five",
+      0,
+      -0.25
+     ]
+    },
+    {
+     "type": "label",
+     "text": "15 cm",
+     "x": 540,
+     "y": 1040,
+     "px": 64,
+     "col": "ink",
+     "at": [
+      "centimetres",
+      0,
+      -0.1
+     ],
+     "hide": [
+      "five",
+      0,
+      -0.25
+     ]
+    },
+    {
+     "type": "calipersV",
+     "of": "p",
+     "u": 0.8,
+     "at": [
+      "five",
+      0,
+      -0.2
+     ],
+     "show": [
+      "five",
+      0,
+      -0.2
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "15 \u00d7 5 cm",
+     "at": [
+      "fifteen",
+      0,
+      -0.05
+     ]
+    }
+   ]
+  },
+  {
+   "line": 2,
+   "from": "one",
+   "xfade": true,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "id": "p",
+     "img": "black_front",
+     "x": 540,
+     "y": 760,
+     "w": 660,
+     "seed": 2.1
+    },
+    {
+     "type": "dialScale",
+     "under": "p",
+     "w": 640,
+     "at": -0.05,
+     "value": 1480,
+     "kg": 2000
+    },
+    {
+     "type": "number",
+     "value": 1.48,
+     "dec": 2,
+     "unit": "kg",
+     "comma": false,
+     "y": 420,
+     "at": "@kilo"
+    }
+   ]
+  },
+  {
+   "line": 3,
+   "bg": "lav",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "black_float",
+     "x": 540,
+     "y": 1050,
+     "w": 540,
+     "seed": 0.7
+    },
+    {
+     "type": "chip",
+     "x": 540,
+     "y": 650,
+     "s": 0.7,
+     "at": 0.05,
+     "fillAt": "@cpu"
+    },
+    {
+     "type": "headline",
+     "text": "20 CPU CORES",
+     "at": [
+      "@cpu",
+      0,
+      -0.05
+     ]
+    }
+   ]
+  },
+  {
+   "line": 3,
+   "from": "six",
+   "xfade": true,
+   "bg": "lav",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "black_float",
+     "x": 540,
+     "y": 1050,
+     "w": 540,
+     "seed": 0.7,
+     "move": {
+      "at": [
+       "cores",
+       0,
+       0
+      ],
+      "dur": 0.6,
+      "w": 580
+     }
+    },
+    {
+     "type": "chip",
+     "x": 540,
+     "y": 680,
+     "s": 0.7,
+     "mode": "gpu",
+     "at": -1,
+     "fillAt": "@gpu",
+     "sfx": false
+    },
+    {
+     "type": "number",
+     "value": 6144,
+     "unit": "GPU",
+     "y": 360,
+     "px": 120,
+     "at": "@gpu",
+     "col": "ink"
+    }
+   ]
+  },
+  {
+   "line": 3,
+   "from": "up",
+   "bg": "lav",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "silver_float",
+     "x": 540,
+     "y": 1040,
+     "w": 580,
+     "seed": 1.4
+    },
+    {
+     "type": "ram",
+     "x": 540,
+     "y": 660,
+     "s": 0.85,
+     "at": [
+      "@mem",
+      0,
+      -0.25
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "128 GB",
+     "col": "ember",
+     "at": "@mem"
+    }
+   ],
+   "xfade": true
+  },
+  {
+   "line": 4,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "silver_float",
+     "x": 540,
+     "y": 1030,
+     "w": 600,
+     "seed": 1.4
+    },
+    {
+     "type": "fan",
+     "x": 310,
+     "y": 620,
+     "s": 0.62,
+     "at": 0.05
+    },
+    {
+     "type": "gauge",
+     "x": 770,
+     "y": 680,
+     "s": 0.6,
+     "value": 140,
+     "max": 200,
+     "at": [
+      "@watts",
+      0,
+      -0.15
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "COOLER",
+     "at": [
+      "cooler",
+      0,
+      -0.1
+     ],
+     "until": "@watts"
+    },
+    {
+     "type": "number",
+     "value": 140,
+     "unit": "W",
+     "comma": false,
+     "y": 330,
+     "px": 130,
+     "at": "@watts"
+    }
+   ]
+  },
+  {
+   "line": 4,
+   "from": "two",
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "pair_34",
+     "x": 540,
+     "y": 1030,
+     "w": 700,
+     "seed": 1.2
+    },
+    {
+     "type": "reviewCard",
+     "x": 330,
+     "y": 620,
+     "s": 0.75,
+     "at": 0.05,
+     "tickAt": [
+      "@cool",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "reviewCard",
+     "x": 750,
+     "y": 620,
+     "s": 0.75,
+     "at": 0.15,
+     "tickAt": [
+      "@cool",
+      0,
+      0.05
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "2 REVIEWS",
+     "at": 0.05,
+     "until": "@cool"
+    },
+    {
+     "type": "headline",
+     "text": "COOL + QUIET",
+     "col": "ember",
+     "at": "@cool"
+    }
+   ],
+   "xfade": true
+  },
+  {
+   "line": 5,
+   "bg": "blush",
+   "real": true,
+   "shake": 0.32,
+   "layers": [
+    {
+     "type": "product",
+     "img": "black_front",
+     "x": 540,
+     "y": 980,
+     "w": 620,
+     "ltOffset": 5,
+     "fade": {
+      "at": 0,
+      "to": 0.45
+     }
+    },
+    {
+     "type": "stamp",
+     "text": "THE CATCH",
+     "y": 600,
+     "at": [
+      "@catch",
+      0,
+      -0.2
+     ],
+     "sfx": false
+    }
+   ]
+  },
+  {
+   "line": 6,
+   "bg": "blush",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "black_front",
+     "x": 540,
+     "y": 1010,
+     "w": 660,
+     "seed": 2.1
+    },
+    {
+     "type": "port",
+     "x": 320,
+     "y": 640,
+     "s": 0.8,
+     "kind": "usba",
+     "at": 0.05,
+     "crossAt": [
+      "port",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "port",
+     "x": 760,
+     "y": 640,
+     "s": 0.8,
+     "kind": "jack",
+     "at": [
+      "no",
+      1,
+      -0.1
+     ],
+     "crossAt": [
+      "headphone",
+      0,
+      0.05
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "NO USB-A",
+     "at": 0.05,
+     "until": [
+      "no",
+      1,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "NO JACK",
+     "col": "wreck",
+     "at": [
+      "no",
+      1,
+      -0.1
+     ]
+    }
+   ],
+   "xfade": true
+  },
+  {
+   "line": 7,
+   "bg": "blush",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "silver_front",
+     "x": 300,
+     "y": 1000,
+     "w": 450,
+     "seed": 0.4
+    },
+    {
+     "type": "miniBox",
+     "x": 770,
+     "y": 1000,
+     "s": 0.55,
+     "at": [
+      "msi",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "label",
+     "text": "MSI",
+     "x": 770,
+     "y": 1150,
+     "px": 64,
+     "col": "ink",
+     "at": [
+      "msi",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "label",
+     "text": "$4,699",
+     "x": 770,
+     "y": 720,
+     "px": 96,
+     "col": "ink",
+     "at": [
+      "rival",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "slash",
+     "x": 770,
+     "y": 690,
+     "len": 340,
+     "at": "@cut",
+     "overlap": true
+    },
+    {
+     "type": "headline",
+     "text": "SAME CHIP",
+     "at": [
+      "same",
+      0,
+      -0.1
+     ],
+     "until": "@cut"
+    },
+    {
+     "type": "headline",
+     "text": "$300 CUT",
+     "col": "wreck",
+     "at": "@cut"
+    }
+   ]
+  },
+  {
+   "line": 7,
+   "from": "to",
+   "xfade": true,
+   "bg": "blush",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "silver_front",
+     "x": 540,
+     "y": 1130,
+     "w": 500,
+     "seed": 0.4
+    },
+    {
+     "type": "bars",
+     "base": 960,
+     "h": 420,
+     "items": [
+      {
+       "value": 4499,
+       "label": "$4,499",
+       "sub": "ASUS",
+       "col": "mari",
+       "at": 0.05
+      },
+      {
+       "value": 4399,
+       "label": "$4,399",
+       "sub": "MSI",
+       "col": "wreck",
+       "at": "@msi"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "line": 8,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "pair_34",
+     "x": 540,
+     "y": 1080,
+     "w": 600,
+     "seed": 1.2
+    },
+    {
+     "type": "wordmark",
+     "y": 560,
+     "score": 69,
+     "scoreAt": [
+      "sixty",
+      0,
+      -0.1
+     ],
+     "snapAt": "@verdict"
+    },
+    {
+     "type": "headline",
+     "text": "FOR AI",
+     "col": "ember",
+     "y": 300,
+     "at": [
+      "ai",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 9,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "silver_front",
+     "x": 540,
+     "y": 760,
+     "w": 720,
+     "seed": 0.4,
+     "ltOffset": 9,
+     "move": {
+      "at": [
+       "box",
+       0,
+       -0.1
+      ],
+      "dur": 0.5,
+      "w": 760
+     },
+     "id": "hero"
+    },
+    {
+     "type": "ruler",
+     "x": 540,
+     "y": 1020,
+     "w": 640,
+     "n": 15,
+     "at": 0.05
+    },
+    {
+     "type": "chip",
+     "x": 540,
+     "y": 1180,
+     "s": 0.4,
+     "at": 0.15,
+     "fillAt": 0.2,
+     "sfx": false
+    },
+    {
+     "type": "callout",
+     "of": "hero",
+     "u": 0.5,
+     "v": 0.5,
+     "r": 120,
+     "at": [
+      "tiny",
+      0,
+      -0.1
+     ],
+     "overlap": true
+    },
+    {
+     "type": "headline",
+     "text": "$4,499?",
+     "col": "ember",
+     "at": [
+      "@loop",
+      0,
+      -0.05
+     ]
+    }
+   ]
+  },
+  {
+   "endcard": true,
+   "bg": "paper",
+   "layers": [
+    {
+     "type": "wordmark",
+     "y": 900,
+     "snapAt": 0.7
+    }
+   ]
+  }
+ ]
+}

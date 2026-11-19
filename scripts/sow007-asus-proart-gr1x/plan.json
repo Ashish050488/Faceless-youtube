@@ -1,0 +1,74 @@
+[
+ {
+  "cue": "price",
+  "line": 0,
+  "word": "four",
+  "offset": -0.05
+ },
+ {
+  "cue": "sale",
+  "line": 1,
+  "word": "sale",
+  "sfx": "pop",
+  "gain": 0.4
+ },
+ {
+  "cue": "kilo",
+  "line": 2,
+  "word": "one"
+ },
+ {
+  "cue": "cpu",
+  "line": 3,
+  "word": "twenty"
+ },
+ {
+  "cue": "gpu",
+  "line": 3,
+  "word": "six",
+  "sfx": "shimmer",
+  "gain": 0.4
+ },
+ {
+  "cue": "mem",
+  "line": 3,
+  "word": "twenty",
+  "nth": 1
+ },
+ {
+  "cue": "watts",
+  "line": 4,
+  "word": "hundred"
+ },
+ {
+  "cue": "cool",
+  "line": 4,
+  "word": "cool",
+  "nth": 1
+ },
+ {
+  "cue": "catch",
+  "line": 5,
+  "word": "catch"
+ },
+ {
+  "cue": "cut",
+  "line": 7,
+  "word": "three"
+ },
+ {
+  "cue": "msi",
+  "line": 7,
+  "word": "forty"
+ },
+ {
+  "cue": "verdict",
+  "line": 8,
+  "word": "spec"
+ },
+ {
+  "cue": "loop",
+  "line": 9,
+  "word": "forty"
+ }
+]

@@ -58,7 +58,9 @@ const SFX_DEFAULT = { connector: [['at', 'pop', 0.4], ['flipAt', 'thud', 0.8]], 
   battery: [['at', 'blip', 0.3]], calipers: [['at+0.4', 'clamp', 0.7]], calipersV: [['at+0.4', 'clamp', 0.7]], map: [['pins', 'pin', 0.5]], hourglass: [['flipAt', 'flip', 0.7]],
   wordmark: [['snapAt', 'click', 1.0]], loupe: [['at', 'whoosh', 0.3]], dialScale: [['at', 'tick', 0.5]], scale: [['levelAt', 'clunk', 0.6]], sun: [['at', 'shimmer', 0.35]],
   toggle: [['flipAt', 'switch', 0.7]], ecg: [['at', 'beep', 0.4]], waterDrop: [['at+0.35', 'drip', 0.7]], calendar: [['at', 'flip', 0.6]], bars: [['bars', 'blip', 0.45]], clock: [['at', 'tick', 0.5]],
-  playIcon: [['at', 'pop', 0.4]], motionLines: [['at', 'swish', 0.5]], slider: [['at', 'down', 0.5]], headline: [], label: [], product: [] };
+  playIcon: [['at', 'pop', 0.4]], motionLines: [['at', 'swish', 0.5]], slider: [['at', 'down', 0.5]], headline: [], label: [], product: [],
+  chip: [['fillAt', 'blip', 0.45]], ram: [['at', 'clunk', 0.5]], fan: [['at', 'whoosh', 0.35]], gauge: [['at', 'tick', 0.5]], port: [['at', 'pop', 0.4], ['crossAt', 'scratch', 0.6]],
+  ruler: [['at', 'swish', 0.4]], reviewCard: [['at', 'pop', 0.35], ['tickAt', 'tick', 0.6]], thermo: [['at', 'blip', 0.35]], miniBox: [['at', 'pop', 0.4]], slash: [['at', 'swish', 0.6]] };
 const DRAWERS = {
   product(ctx, l, lt, sc, R) {
     const im = IMG[l.img]; if (!im) throw new Error('missing asset ' + l.img);
@@ -123,6 +125,16 @@ const DRAWERS = {
   cable(ctx, l, lt, sc) { sc_(ctx, l, () => K.cable(ctx, 0, 0, lt, tref(sc, l.at, 0.05), l.mode || 'hinge')); },
   usbc(ctx, l, lt, sc) { sc_(ctx, l, () => K.usbc(ctx, 0, 0, lt, tref(sc, l.at, 0.05), tref(sc, l.flipAt))); },
   lockScrews(ctx, l, lt, sc) { sc_(ctx, l, () => K.lockScrews(ctx, 0, 0, lt, tref(sc, l.at, 0.05))); },
+  chip(ctx, l, lt, sc) { sc_(ctx, l, () => K.chip(ctx, lt, tref(sc, l.at, 0.05), tref(sc, l.fillAt ?? l.at, 0.2), { n: l.n, cols: l.cols, mode: l.mode })); },
+  ram(ctx, l, lt, sc) { sc_(ctx, l, () => K.ram(ctx, lt, tref(sc, l.at, 0.05), l.n || 4)); },
+  fan(ctx, l, lt, sc) { sc_(ctx, l, () => K.fan(ctx, lt, tref(sc, l.at, 0.05))); },
+  gauge(ctx, l, lt, sc) { sc_(ctx, l, () => K.gauge(ctx, lt, tref(sc, l.at, 0.05), l.value / l.max, l.mark !== undefined ? l.mark / l.max : undefined, l.col ? col(l.col) : null)); },
+  port(ctx, l, lt, sc) { sc_(ctx, l, () => K.port(ctx, lt, tref(sc, l.at, 0.05), l.kind || 'usba', tref(sc, l.crossAt))); },
+  ruler(ctx, l, lt, sc) { sc_(ctx, l, () => K.ruler(ctx, lt, tref(sc, l.at, 0.05), l.w || 600, l.n || 15)); },
+  reviewCard(ctx, l, lt, sc) { sc_(ctx, l, () => K.reviewCard(ctx, lt, tref(sc, l.at, 0.05), tref(sc, l.tickAt ?? l.at, 0.4))); },
+  thermo(ctx, l, lt, sc) { sc_(ctx, l, () => K.thermo(ctx, lt, tref(sc, l.at, 0.05), l.level ?? 0.3)); },
+  miniBox(ctx, l, lt, sc) { sc_(ctx, l, () => K.miniBox(ctx, lt, tref(sc, l.at, 0.05))); },
+  slash(ctx, l, lt, sc) { sc_(ctx, l, () => K.slash(ctx, lt, tref(sc, l.at), l.len || 300)); },
   pill(ctx, l, lt, sc) { const t0 = tref(sc, l.at, 0); if (lt < t0) return; const e = K.spr(lt - t0, 16); ctx.save(); ctx.globalAlpha = clamp(e * 1.4); K.pill2(ctx, l.x - l.w / 2, l.y - l.h / 2, l.w, l.h, col(l.fill || 'ink')); K.label(ctx, l.text, l.x, l.y + (l.px || 64) * 0.35, l.px || 64, col(l.col || 'mari')); ctx.restore(); },
 };
 function sc_(ctx, l, fn) { ctx.save(); ctx.translate(l.x ?? 540, l.y); ctx.scale(l.s || 1, l.s || 1); fn(); ctx.restore(); } // repair.js diagrams: x, y, s (scale)
