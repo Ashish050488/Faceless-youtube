@@ -23,7 +23,7 @@ Every object is drawn once, saved here, and reused by every future video. Before
 | `product.js` | product cut-out + shadows |
 | `text.js` | label, headline, counter, bigWord, stamp, wordmark, pill |
 | `motion.js` | easing/spring helpers (not objects) |
-| `compute.js` (add) | chips and PC parts: chipDie, ramStick, fan, ssd, gpuCard |
+| `compute.js` | chips and PC parts: chipDie, ramStick, fan, ssd, miniPc, consoleTower (gpuCard: not drawn yet) |
 | `media.js` | discs, game cases, downloads: disc, gameCase, dvdStack, downloadBar |
 | `ports.js` (add) | usbPort (A/C), audioJack, ethernetPort, hdmiPort |
 
@@ -65,3 +65,4 @@ Every object is drawn once, saved here, and reused by every future video. Before
 | gameCase | media.js | game case with `cover` image (asset name) | opens at `openAt` → blank code slip + EMPTY hub | "no disc in the box", physical vs digital |
 | dvdStack | media.js | side-view stack of `n` discs | discs drop and stack | storage size as DVDs (4.7 GB each) |
 | downloadBar | media.js | arrow badge + progress track, 10 % ticks | fills to `to` (0–1) from `fillAt` | download size, install, progress |
+| ssd | compute.js | M.2 2280 SSD (PCB, controller + flash chips, gold pins, notch) | slides in from the right | storage, TB/GB models |

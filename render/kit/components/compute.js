@@ -69,5 +69,14 @@ function consoleTower(ctx, lt, t0, dark) { // generic unbranded games console: t
   box(ctx, -110, 186, 220, 30, 12, C.stone, 7);
   ctx.restore();
 }
-Object.assign(K, { chipDie, ramStick, fan, miniPc, consoleTower });
+function ssd(ctx, lt, t0) { // M.2 2280 SSD: green PCB, controller + 2 flash chips, gold edge pins with key notch, screw half-moon; slides in
+  if (lt < t0) return; const e = easeOut(prog(lt, t0, t0 + 0.3));
+  ctx.save(); ctx.globalAlpha = clamp(e * 2); ctx.translate(lerp(120, 0, e), 0);
+  box(ctx, -300, -60, 600, 120, 12, '#3F8F6B', 7);
+  box(ctx, -220, -38, 110, 76, 6, C.inkSoft, 4); box(ctx, -80, -38, 150, 76, 6, C.inkSoft, 4); box(ctx, 100, -38, 150, 76, 6, C.inkSoft, 4);
+  ctx.fillStyle = C.mari; for (let i = 0; i < 14; i++) if (i !== 4) ctx.fillRect(-296, -52 + i * 7.6, 22, 4.5);
+  ctx.beginPath(); ctx.arc(300, 0, 22, Math.PI / 2, Math.PI * 1.5); ctx.fillStyle = C.paper; ctx.fill(); ctx.lineWidth = 5; ctx.strokeStyle = C.ink; ctx.stroke();
+  ctx.restore();
+}
+Object.assign(K, { chipDie, ramStick, fan, miniPc, consoleTower, ssd });
 };

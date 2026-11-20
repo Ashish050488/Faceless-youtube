@@ -1,0 +1,17 @@
+[
+ {"cue": "p1349", "line": 0, "word": "thirteen", "offset": -0.05},
+ {"cue": "tb", "line": 1, "word": "two"},
+ {"cue": "oos", "line": 1, "word": "out"},
+ {"cue": "gb512", "line": 2, "word": "five", "offset": -0.05},
+ {"cue": "buy", "line": 2, "word": "buy", "sfx": "click", "gain": 0.6},
+ {"cue": "p1049", "line": 2, "word": "ten", "offset": -0.05},
+ {"cue": "days", "line": 2, "word": "three"},
+ {"cue": "six", "line": 3, "word": "six"},
+ {"cue": "ram", "line": 3, "word": "sixteen", "offset": -0.05},
+ {"cue": "vram", "line": 3, "word": "eight", "offset": -0.05},
+ {"cue": "x6", "line": 3, "word": "six", "nth": 1},
+ {"cue": "catch", "line": 4, "word": "catch"},
+ {"cue": "score", "line": 5, "word": "forty"},
+ {"cue": "verdict", "line": 5, "word": "wreck"},
+ {"cue": "loop", "line": 6, "word": "thousand"}
+]
