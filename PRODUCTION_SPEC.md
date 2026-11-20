@@ -99,3 +99,25 @@ Pattern (write our own code; don't copy anyone's):
 - Built 2026-11-17: render/kit/README.md. cues.kit.json = plan + composition in one file (layers tied to words,
   same refs drive SFX); `--check` + check.py = overlap/contrast/factsheet/loudness in code; `--stills cues` = per-cue stills.
 - Delete the previous video's asset folder when a new job starts.
+
+## 9. Thumbnail + cover — must be catchy (owner 2026-11-20)
+Where they show: in the Shorts feed the video itself plays, so **frame 1 is the real thumbnail**. The custom
+thumbnail/cover shows on the channel page, search, subscriptions, suggested, and as the Instagram Reel grid cover.
+So make three things look like one poster: frame 1, `cover.jpg` (1080×1920) and `thumbnail.jpg` (1280×720).
+- **One hero:** the real product (official image) huge — ≥ 60 % of the frame height on the cover, ≥ 55 % width on
+  the 16:9 thumbnail — slightly tilted or cropped close so it feels dramatic, with a strong drop shadow.
+- **1–3 words, HUGE:** cap height ≥ 12 % of the cover height (≥ 18 % on the 16:9 thumbnail), Inter Tight 900,
+  ink on light or white on the accent block. The words COMPLEMENT the title, never repeat it
+  (title "Razer Wants $90 MORE to Save 2 Grams 😳" → thumbnail "$90 FOR 2g?").
+- **One number or price in the accent colour** (ember/marigold), the biggest thing after the product.
+- **One emotion object** that tells the story at a glance: a red ✕ / strike-through, a "?" stamp, an arrow pointing
+  at the catch, a price tag, a WRECK/SPEC stamp. Never more than one.
+- **Curiosity gap:** show the twist, not the answer (show "$90 for 2g?", don't show the verdict).
+- **Contrast:** flat bright warm background that contrasts with the product colour (dark product → paper/blush;
+  light product → marigold/ember block). Text contrast ≥ 4.5:1. No clutter, no small text, no logos except our tiny mark.
+- **Phone test (in code):** downscale the cover to 180×320 and the thumbnail to 168×94 → the words must still be
+  readable (text height ≥ 14 px at that size) and the product recognisable. check.py fails it otherwise.
+- **Honest:** everything on it is in the video and true (no fake reactions, no edited product, no price not said).
+- Make 2 versions (A: price/number-led, B: object/twist-led), upload A; log B in qa.md for later A/B (Studio
+  "Test & compare" when it's available for the format).
+- Script chat writes the thumbnail words + emotion object in cues.json → "thumbnail"; the video chat builds it.
