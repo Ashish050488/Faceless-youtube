@@ -95,6 +95,19 @@ Reference that works: @indiainlast24hr (5M followers) post Dfqzov4Ddj8, Jensen H
 - Caption: 2–3 short paragraphs that tell the news properly (who, what, why it matters), neutral wording; "reported" for
   claims; then sources and image credit.
 
+## TOPIC VARIETY (owner 2026-11-20: "why are you stuck on few news only, make your list vast") — OVERRIDES "hottest story"
+- Each slot: build a list of 8–10 candidate stories from MANY sources, then pick. Sources to scan (latest first):
+  Techmeme, The Verge, Engadget, TechCrunch, Ars Technica, Android Authority, GSMArena, 9to5Mac, 9to5Google,
+  Gadgets 360, 91mobiles, Digit, Beebom (India), Electrek / InsideEVs (EVs), Space.com (space), Tom's Hardware
+  (chips/PC), Rest of World (global), Google Trends IN + US.
+- Rotate categories; never the same category two image posts in a row: phones · laptops/PC · AI apps & models ·
+  chips · gaming · EVs & cars · space · social apps & creators · India tech (Jio, UPI, launches, startups) ·
+  security & outages · wearables & audio · weird/fun gadgets · deals & prices.
+- Never the same company or story within 3 days (all formats, Reels included), unless it is a NEW big event and the
+  owner asks. Check state/instagram_posts.json before picking.
+- Prefer stories other accounts are NOT all posting (GTA 6 launch Reel got 128 plays: crowded topic). Best so far:
+  a surprising price / tiny-benefit or conflict angle on a less-covered product (Razer 1,573 plays, HomeView 1,045).
+
 ## FORMAT MIX (owner 2026-11-18: "one carousel with the hottest news, the rest single posts") — OVERRIDES "carousel every slot"
 - Each day: the FIRST image slot (10:17 IST) = ONE carousel on the day's hottest story. Every other image slot
   (13:43, and 16:43 on Saturdays) = a SINGLE-image post. Reels come from the script session (2/day).
