@@ -16,3 +16,9 @@ measure_timing:
 - WARN mean frame change 1.25 (light flat backgrounds); longest calm hold 2.6 s.
 - Voice from handoff/…-voice: 60.4 s, 173 wpm (in spec).
 - Description must credit: "Product images and clips: Valve (store.steampowered.com)".
+
+## Poster (PRODUCTION_SPEC §9, 2026-11-20 06:30Z)
+- A (upload): TOO LATE? + $1,349 + red X
+- B (log only, later A/B): OR THIS ONE? + $1,049 + arrow
+- Files: thumbnail.jpg + cover.jpg = A; thumbnail_b.jpg + cover_b.jpg = B.
+- Phone test: all text >= 14 px at 180x320 / 168x94. Frame 1 of video.mp4 unchanged (video already uploaded).
