@@ -52,7 +52,7 @@ async function loadAssets() {
   if (fs.existsSync(cd)) for (const n of fs.readdirSync(cd)) { CLIPS[n] = []; for (const f of fs.readdirSync(path.join(cd, n)).sort()) if (/\.(jpg|png)$/.test(f)) CLIPS[n].push(await L.loadImage(path.join(cd, n, f))); }
   IMG.wm_light = await L.loadImage(path.join(work, 'wm_light.png')); IMG.wm_dark = await L.loadImage(path.join(work, 'wm_dark.png'));
 }
-let K = null;
+let K = null; const POSTER = require('./poster');
 
 // ---------- layer renderers (component name → draw) ----------
 // each gets (ctx, layer, lt, sc, R) where R holds rects of earlier product layers by id
@@ -63,7 +63,7 @@ const SFX_DEFAULT = { connector: [['at', 'pop', 0.4], ['flipAt', 'thud', 0.8]], 
   playIcon: [['at', 'pop', 0.4]], motionLines: [['at', 'swish', 0.5]], slider: [['at', 'down', 0.5]], headline: [], label: [], product: [], clip: [],
   chipDie: [['fillAt', 'blip', 0.45]], ramStick: [['at', 'clunk', 0.5]], fan: [['at', 'whoosh', 0.35]], gauge: [['at', 'tick', 0.5]], usbPort: [['at', 'pop', 0.4], ['crossAt', 'scratch', 0.6]], audioJack: [['at', 'pop', 0.4], ['crossAt', 'scratch', 0.6]],
   ruler: [['at', 'swish', 0.4]], reviewCard: [['at', 'pop', 0.35], ['tickAt', 'tick', 0.6]], thermometer: [['at', 'blip', 0.35]], miniPc: [['at', 'pop', 0.4]], slash: [['at', 'swish', 0.6]],
-  consoleTower: [['at', 'pop', 0.4]], ssd: [['at', 'swish', 0.45]], disc: [['at', 'pop', 0.35]], gameCase: [['at', 'thud', 0.5], ['openAt', 'click', 0.7]], dvdStack: [['at', 'zip', 0.5]], downloadBar: [['fillAt', 'zip', 0.5]] };
+  consoleTower: [['at', 'pop', 0.4]], ssd: [['at', 'swish', 0.45]], crossMark: [['at', 'thud', 0.7]], questionStamp: [['at', 'thud', 0.7]], arrowPointer: [['at', 'swish', 0.5]], poster: [], disc: [['at', 'pop', 0.35]], gameCase: [['at', 'thud', 0.5], ['openAt', 'click', 0.7]], dvdStack: [['at', 'zip', 0.5]], downloadBar: [['fillAt', 'zip', 0.5]] };
 const DRAWERS = {
   product(ctx, l, lt, sc, R) {
     const im = IMG[l.img]; if (!im) throw new Error('missing asset ' + l.img);
@@ -152,6 +152,10 @@ const DRAWERS = {
     ctx.save(); ctx.translate(x, y); ctx.scale(s, s); ctx.shadowColor = 'rgba(21,19,18,0.16)'; ctx.shadowBlur = 40; ctx.shadowOffsetY = 18;
     L.rr(ctx, -w / 2, -h / 2, w, h, r); ctx.fillStyle = '#ddd'; ctx.fill(); ctx.shadowColor = 'transparent'; ctx.clip(); ctx.drawImage(im, -w / 2, -h / 2, w, h); ctx.restore();
   },
+  crossMark(ctx, l, lt, sc) { sc_(ctx, l, () => K.crossMark(ctx, lt, tref(sc, l.at, 0.05))); },
+  questionStamp(ctx, l, lt, sc) { sc_(ctx, l, () => K.questionStamp(ctx, lt, tref(sc, l.at, 0.05))); },
+  arrowPointer(ctx, l, lt, sc) { sc_(ctx, l, () => K.arrowPointer(ctx, lt, tref(sc, l.at, 0.05), l.angle || 0)); },
+  poster(ctx, l, lt, sc) { if (l.until !== undefined && lt >= tref(sc, l.until)) return; POSTER.draw(ctx, 'cover', cues.thumb, l.variant || 'a', IMG, K, { lt: lt + 9, bg: false }); }, // frame 1 = cover (§9)
   pill(ctx, l, lt, sc) { const t0 = tref(sc, l.at, 0); if (lt < t0) return; const e = K.spr(lt - t0, 16); ctx.save(); ctx.globalAlpha = clamp(e * 1.4); K.pill2(ctx, l.x - l.w / 2, l.y - l.h / 2, l.w, l.h, col(l.fill || 'ink')); K.label(ctx, l.text, l.x, l.y + (l.px || 64) * 0.35, l.px || 64, col(l.col || 'mari')); ctx.restore(); },
 };
 function sc_(ctx, l, fn) { ctx.save(); ctx.translate(l.x ?? 540, l.y); ctx.scale(l.s || 1, l.s || 1); fn(); ctx.restore(); } // repair.js diagrams: x, y, s (scale)

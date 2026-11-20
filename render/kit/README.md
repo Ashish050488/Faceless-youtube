@@ -19,7 +19,7 @@ node render/kit/render.js <work> cues.kit.json --check                 # Overlap
 python render/kit/check.py <work> scripts/<slug>/factsheet.md [video]  # PASS/FAIL summary
 node render/kit/render.js <work> cues.kit.json --stills cues           # 3 stills per scene → ONE contact sheet
 node render/kit/render.js <work> cues.kit.json                         # frames.mp4 (1080×1920, 30 fps, silent)
-node render/kit/thumb.js <work> cues.kit.json thumbnail.jpg
+node render/kit/poster.js <work> cues.kit.json <work>/out             # §9 poster: cover.jpg + thumbnail.jpg (A) and *_b.jpg (B) + poster.json
 ```
 **OverlapCheck.** Every visible layer is drawn alone at ¼ scale, and the opaque cells of each pair are compared,
 watermark included.
@@ -48,7 +48,7 @@ measure, map, screen. core.js loads them in that order.
 ```json
 { "slug": "...", "plan": "plan.json",            // events tied to words (path relative to this file)
   "screen": [[u,v]x4],                           // optional: screen quad of the hero cut-out (fractions)
-  "thumb": {"img","bg","big","word","tag","w"},
+  "thumb": {"img", "thumbImg"?, "bg", "tilt", "a": {"words","num","emotion"}, "b": {…}},  // §9 poster, see poster.js header
   "palette": {"name": "#hex"},                   // optional extra backgrounds
   "scenes": [ { "line": 3, "from": "under", "xfade": true, "bg": "cool", "real": true,
                 "shake": 0.32, "sfx": [{"at": t, "kind": "whoosh", "gain": 0.4}], "layers": [ ... ] },
@@ -93,3 +93,14 @@ measure, map, screen. core.js loads them in that order.
   plan event's `sfx`. Add more per scene with `sfx`.
 - **Worked example:** `examples/sow004.cues.json` plus `examples/sow004.plan.json` is sow004 re-laid out so that
   nothing touches. It passes `check.py`.
+
+## Poster = frame 1 = cover = thumbnail (PRODUCTION_SPEC §9)
+- `cues.thumb` drives all three. A = number-led (uploaded), B = object/twist-led (logged in qa.md).
+  emotion: `x` crossMark · `q` questionStamp · `arrow` arrowPointer · `tag` priceTag holding the number.
+  Keep `num` short (one number/price, e.g. "$1,349"), words 1–3 and short enough to stay ≥ 14 px at phone size.
+  Tall product → set `thumbImg` to a wider official cut-out so the 16:9 product reaches 55 % width.
+- Frame 1: put `{"type": "poster", "until": "@firstcue", "overlap": true}` first in scene 0, give the scene the same
+  `bg` as `thumb.bg`, and `show` the scene's other layers from that cue. Then frame 1 is exactly the cover.
+- `build.sh check` renders the posters and check.py runs the phone test (cover at 180×320, thumbnail at 168×94: text
+  ≥ 14 px or FAIL; product size WARN). `build.sh video` writes cover/thumbnail A + B and includes them in sha256.txt.
+

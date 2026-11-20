@@ -16,13 +16,14 @@ voice)
   cp render/brand/watermark_on_light.png "$W/wm_light.png"; cp render/brand/watermark_on_dark.png "$W/wm_dark.png"
   $PY audio/measure_timing.py "$W/voice.wav" 2>&1 | grep -vi warn | tail -2 ;;
 check)
+  node render/kit/poster.js "$W" "$CUES" "$W/out" >/dev/null
   node render/kit/render.js "$W" "$CUES" --check
   $PY render/kit/check.py "$W" "$SD/factsheet.md" ;;
 stills)
   rm -rf "$W/stills"; node render/kit/render.js "$W" "$CUES" --stills cues
   ffmpeg -nostdin -v error -y -pattern_type glob -i "$W/stills/*.png" -vf "scale=180:-1,tile=9x$(( ($(ls "$W/stills" | wc -l) + 8) / 9 ))" "$W/sheet.jpg"; echo "$W/sheet.jpg" ;;
 video)
-  node render/kit/render.js "$W" "$CUES" --check >/dev/null && $PY render/kit/check.py "$W" "$SD/factsheet.md" >/dev/null || { echo "check FAILED — run: build.sh check"; exit 1; }
+  node render/kit/poster.js "$W" "$CUES" "$W/out" >/dev/null && node render/kit/render.js "$W" "$CUES" --check >/dev/null && $PY render/kit/check.py "$W" "$SD/factsheet.md" >/dev/null || { echo "check FAILED — run: build.sh check"; exit 1; }
   [ -f "$W/frames.mp4" ] && [ "${REUSE_FRAMES:-0}" = 1 ] || node render/kit/render.js "$W" "$CUES"
   $PY - "$W" <<'PYEOF'
 import json, sys, numpy as np, soundfile as sf
@@ -41,10 +42,9 @@ PYEOF
   bash audio/mix.sh "$W/voice_rt.wav" "$W/bed.wav" "$W/mix.mp3"
   ffmpeg -nostdin -y -loglevel error -i "$W/frames.mp4" -i "$W/mix.mp3" -map 0:v -map 1:a -af volume=-0.5dB \
     -c:v libx264 -profile:v high -preset slow -tune animation -crf 19 -maxrate 8M -bufsize 16M -pix_fmt yuv420p -r 30 -c:a aac -b:a 160k -movflags +faststart "$W/out/video.mp4"
-  ffmpeg -nostdin -y -loglevel error -i "$W/frames.mp4" -frames:v 1 -q:v 2 "$W/out/cover.jpg"
-  node render/kit/thumb.js "$W" "$CUES" "$W/out/thumbnail.jpg" >/dev/null
+  node render/kit/poster.js "$W" "$CUES" "$W/out" >/dev/null   # cover.jpg + thumbnail.jpg (A, upload) and *_b.jpg (B, logged) — §9
   $PY -m meta.captions "$SD/script.md" "$W/words.json" "$W/out/captions.srt" --offset 0 >/dev/null
   $PY render/kit/check.py "$W" "$SD/factsheet.md" "$W/out/video.mp4" | tee "$W/out/check.txt" || true
-  (cd "$W/out" && sha256sum video.mp4 thumbnail.jpg cover.jpg captions.srt > sha256.txt) ;;
+  (cd "$W/out" && sha256sum video.mp4 thumbnail.jpg cover.jpg captions.srt $(ls thumbnail_b.jpg cover_b.jpg 2>/dev/null) > sha256.txt) ;;
 *) echo "unknown step $STEP"; exit 1 ;;
 esac

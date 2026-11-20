@@ -10,6 +10,8 @@ Reads <work_dir>/check.json (from `render.js ... --check`) and counters.json / t
 3. counters hold ≥ 1.2 s; headlines ≤ 4 s; hard cuts 8–12 per 75 s; real-image screen time % (info)
 4. (with final.mp4) loudness −15 ± 1.5 LUFS integrated, true peak ≤ −1 dBTP, size < 20 MB, mean frame change 2.5–6,
    longest calm hold ≤ 2.5 s (these two warn only), content centre-x range (info). Paste the printed lines into qa.md.
+5. poster phone test (PRODUCTION_SPEC §9, from <work>/poster.json): words and number ≥ 14 px tall with the cover at
+   180×320 and the thumbnail at 168×94 (FAIL); product ≥ 60 % cover height / ≥ 55 % thumbnail width (WARN).
 """
 import json
 import os
@@ -88,6 +90,18 @@ def main():
         # warnings, not fails: light flat backgrounds read low on this metric (sow004 shipped at 1.21 / 4.0 s)
         if not 2.5 <= mfc <= 6: notes.append(f"WARN mean frame change {mfc:.2f} outside 2.5–6: add motion on beats if a scene feels static")
         if calm / fps > 2.5: notes.append(f"WARN longest calm hold {calm / fps:.2f} s > 2.5")
+    pj = os.path.join(work, "poster.json")  # PRODUCTION_SPEC §9 phone test: cover at 180×320, thumbnail at 168×94
+    if os.path.exists(pj):
+        for m in json.load(open(pj)):
+            k = 320 / 1920 if m["fmt"] == "cover" else 94 / 720
+            for key in ("wordsCap", "numCap"):
+                if m.get(key) is not None and m[key] * k < 14:
+                    fails.append(f"phone test {m['variant'].upper()} {m['fmt']}: {key[:-3]} '{m['words'] if key == 'wordsCap' else m['num']}' is {m[key] * k:.1f} px tall at phone size (< 14)")
+            frac, need = (m["productH"], 0.6) if m["fmt"] == "cover" else (m["productW"], 0.55)
+            if frac < need: notes.append(f"WARN poster {m['variant'].upper()} {m['fmt']}: product {frac:.0%} < {need:.0%} (tall/wide asset — set thumb.thumbImg)")
+        notes.append("poster " + ", ".join(f"{m['variant'].upper()}/{m['fmt']} words {m['wordsCap'] * (320 / 1920 if m['fmt'] == 'cover' else 94 / 720):.0f} px @phone" for m in json.load(open(pj))))
+    else:
+        notes.append("WARN no poster.json — run render/kit/poster.js (PRODUCTION_SPEC §9)")
     print(("FAIL" if fails else "PASS") + f" — {len(fails)} fail, {ck['frames']} frames sampled")
     for f in fails + notes:
         print(" -", f)

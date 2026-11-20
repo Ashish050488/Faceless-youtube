@@ -24,6 +24,7 @@ Every object is drawn once, saved here, and reused by every future video. Before
 | `text.js` | label, headline, counter, bigWord, stamp, wordmark, pill |
 | `motion.js` | easing/spring helpers (not objects) |
 | `compute.js` | chips and PC parts: chipDie, ramStick, fan, ssd, miniPc, consoleTower (gpuCard: not drawn yet) |
+| `emotion.js` | poster/scene emotion objects: crossMark, questionStamp, arrowPointer |
 | `media.js` | discs, game cases, downloads: disc, gameCase, dvdStack, downloadBar |
 | `ports.js` (add) | usbPort (A/C), audioJack, ethernetPort, hdmiPort |
 
@@ -66,3 +67,8 @@ Every object is drawn once, saved here, and reused by every future video. Before
 | dvdStack | media.js | side-view stack of `n` discs | discs drop and stack | storage size as DVDs (4.7 GB each) |
 | downloadBar | media.js | arrow badge + progress track, 10 % ticks | fills to `to` (0–1) from `fillAt` | download size, install, progress |
 | ssd | compute.js | M.2 2280 SSD (PCB, controller + flash chips, gold pins, notch) | slides in from the right | storage, TB/GB models |
+| crossMark | emotion.js | thick red ✕ with ink outline | slams in at `at` | "no X", missing feature (poster emotion `x`) |
+| questionStamp | emotion.js | round marigold "?" stamp | slams + tilt | open question, curiosity gap (poster emotion `q`) |
+| arrowPointer | emotion.js | fat curved red arrow, `angle` = direction | slides in | point at the catch (poster emotion `arrow`) |
+| poster | ../poster.js | §9 poster: huge product + 1–3 huge words + accent number + one emotion object | gentle tilt float | frame 1 (layer `poster`), cover.jpg, thumbnail.jpg (A/B) |
+
