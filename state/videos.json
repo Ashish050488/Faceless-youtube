@@ -185,7 +185,7 @@
   "slug": "sow011-honor-watch-6-pro",
   "title": "Honor Just Made a 5,500-Nit Watch… With NO ECG 😳",
   "format": "short",
-  "status": "scheduled",
+  "status": "live",
   "slot": "2",
   "date": "2026-11-20",
   "scripted_at": "2026-11-20T05:30Z",
@@ -193,9 +193,15 @@
   "verdict": "SPEC 60",
   "hypothesis": "Brightness-number + missing-feature twist ('NO ECG') on a wearable; tests a non-gaming wearable after three gaming Shorts.",
   "id": "wKX8fpAYt-o",
-  "privacy": "private",
+  "privacy": "public",
   "uploaded_at": "2026-11-20T05:39:59Z",
   "size_mb": 13.6,
-  "comment": "pending (post after public)"
+  "comment": "posted",
+  "published_at": "2026-11-20T13:00Z (scheduled)",
+  "url": "https://youtube.com/shorts/wKX8fpAYt-o",
+  "duration_s": 61.9,
+  "comment_id": "Ugw_hF8RdHEm5oM51N94AaABAg",
+  "thumbnail": "poster A (HEART CHECK?), set 06:31Z",
+  "reel": "requested from IG session 13:09Z"
  }
 ]
