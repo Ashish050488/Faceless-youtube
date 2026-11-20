@@ -372,7 +372,7 @@
   "slot": "10:17 IST",
   "type": "carousel",
   "topic": "Anthropic ANT day one: opened $111.50 (+34%), closed $97.17 (+17%) vs $83 IPO price",
-  "status": "draft, awaiting owner OK",
+  "status": "published 2026-11-20",
   "postId": "ce56d48b-7289-48bb-a0d0-c178c3a0aaba",
   "revision": "0f98d17f",
   "slides": 6,
@@ -390,14 +390,15 @@
    "meme": true,
    "slot_time": "10:17",
    "caption_length": "medium"
-  }
+  },
+  "permalink": "https://www.instagram.com/p/Df9a7eWFsa8/"
  },
  {
   "date": "2026-11-20",
   "slot": "13:43 IST",
   "type": "single",
   "topic": "Tesla pulls $41,990 Model Y AWD; cheapest AWD now $49,990 (+$8,000, +19%)",
-  "status": "draft, awaiting owner OK",
+  "status": "published 2026-11-20",
   "postId": "72d0bddb-1e57-4b4c-b675-b1da0855c2e7",
   "revision": "6e148875",
   "slides": 1,
@@ -416,6 +417,7 @@
    "meme": false,
    "slot_time": "13:43",
    "caption_length": "medium"
-  }
+  },
+  "permalink": "https://www.instagram.com/p/Df9a36doAZa/"
  }
 ]
