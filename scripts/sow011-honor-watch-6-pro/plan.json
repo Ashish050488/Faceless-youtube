@@ -1,0 +1,13 @@
+[
+ {"cue": "nits", "line": 0, "word": "fifty", "offset": -0.05},
+ {"cue": "uk", "line": 1, "word": "uk"},
+ {"cue": "sun", "line": 2, "word": "sun"},
+ {"cue": "days", "line": 2, "word": "eighteen", "offset": -0.05},
+ {"cue": "p329", "line": 3, "word": "three", "offset": -0.05},
+ {"cue": "p379", "line": 3, "word": "three", "nth": 1, "offset": -0.05},
+ {"cue": "catch", "line": 4, "word": "catch"},
+ {"cue": "ecg", "line": 4, "word": "ecg"},
+ {"cue": "score", "line": 5, "word": "sixty"},
+ {"cue": "verdict", "line": 5, "word": "spec"},
+ {"cue": "loop", "line": 6, "word": "trade"}
+]

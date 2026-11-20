@@ -1,0 +1,702 @@
+{
+ "slug": "sow011-honor-watch-6-pro",
+ "plan": "plan.json",
+ "thumb": {
+  "img": "pair_hero",
+  "bg": "paper",
+  "big": "5,500",
+  "word": "NITS",
+  "tag": "NO ECG IN EU",
+  "w": 500
+ },
+ "scenes": [
+  {
+   "line": 0,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "pair_hero",
+     "x": 540,
+     "y": 760,
+     "w": 700,
+     "seed": 0.4,
+     "ltOffset": 9
+    },
+    {
+     "type": "sun",
+     "x": 540,
+     "y": 1195,
+     "r": 70,
+     "at": -9,
+     "growAt": {
+      "at": "@nits",
+      "from": 0.4,
+      "to": 0.8
+     },
+     "sfx": false
+    },
+    {
+     "type": "headline",
+     "text": "THIS WATCH",
+     "at": -0.5,
+     "until": "@nits"
+    },
+    {
+     "type": "number",
+     "value": 5500,
+     "unit": "NITS",
+     "y": 330,
+     "px": 130,
+     "show": "@nits",
+     "until": [
+      "wait",
+      0,
+      -0.1
+     ],
+     "at": "@nits"
+    },
+    {
+     "type": "headline",
+     "text": "ON A WRIST?",
+     "col": "ember",
+     "at": [
+      "wait",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 1,
+   "bg": "lav",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "black_woven",
+     "x": 540,
+     "y": 880,
+     "w": 560,
+     "seed": 1.3,
+     "id": "p"
+    },
+    {
+     "type": "callout",
+     "of": "p",
+     "u": 0.36,
+     "v": 0.45,
+     "r": 170,
+     "at": [
+      "six",
+      0,
+      -0.1
+     ],
+     "overlap": true,
+     "show": [
+      "six",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "WATCH 6 PRO",
+     "at": [
+      "honor",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 1,
+   "from": "pre-orders",
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "ice_card",
+     "card": true,
+     "x": 540,
+     "y": 1000,
+     "w": 600,
+     "seed": 2.0
+    },
+    {
+     "type": "map",
+     "x": 540,
+     "y": 610,
+     "w": 700,
+     "at": 0.05,
+     "pins": [
+      [
+       "@uk",
+       0,
+       0
+      ],
+      [
+       "europe",
+       0,
+       0
+      ]
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "PRE-ORDERS",
+     "at": 0.05,
+     "until": [
+      "@uk",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "UK + EUROPE",
+     "col": "ember",
+     "at": [
+      "@uk",
+      0,
+      -0.1
+     ]
+    }
+   ],
+   "xfade": true
+  },
+  {
+   "line": 2,
+   "bg": "lav",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "silver_center",
+     "x": 540,
+     "y": 960,
+     "w": 380,
+     "seed": 0.9
+    },
+    {
+     "type": "sun",
+     "x": 540,
+     "y": 510,
+     "r": 50,
+     "at": [
+      "two-layer",
+      0,
+      -0.1
+     ],
+     "growAt": {
+      "at": "@sun",
+      "from": 0.4,
+      "to": 1
+     },
+     "show": [
+      "two-layer",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "WILD PART",
+     "at": [
+      "wild",
+      0,
+      -0.1
+     ],
+     "until": [
+      "two-layer",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "2-LAYER OLED",
+     "col": "ember",
+     "at": [
+      "two-layer",
+      0,
+      -0.1
+     ],
+     "until": [
+      "@sun",
+      0,
+      -0.3
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "DIRECT SUN",
+     "at": [
+      "@sun",
+      0,
+      -0.3
+     ]
+    }
+   ]
+  },
+  {
+   "line": 2,
+   "from": "up",
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "black_strap",
+     "x": 540,
+     "y": 960,
+     "w": 420,
+     "seed": 1.6
+    },
+    {
+     "type": "battery",
+     "x": 540,
+     "y": 520,
+     "scale": 0.8,
+     "segs": 7,
+     "at": [
+      "@days",
+      0,
+      -0.2
+     ]
+    },
+    {
+     "type": "number",
+     "value": 18,
+     "unit": "DAYS",
+     "comma": false,
+     "y": 330,
+     "px": 130,
+     "col": "ink",
+     "show": "@days",
+     "at": "@days"
+    }
+   ],
+   "xfade": true
+  },
+  {
+   "line": 2,
+   "from": "ceramic",
+   "bg": "lav",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "id": "p",
+     "img": "silver_center",
+     "x": 540,
+     "y": 880,
+     "w": 440,
+     "seed": 0.9
+    },
+    {
+     "type": "callout",
+     "of": "p",
+     "u": 0.5,
+     "v": 0.43,
+     "r": 200,
+     "at": 0.05,
+     "overlap": true
+    },
+    {
+     "type": "headline",
+     "text": "CERAMIC",
+     "col": "ember",
+     "at": 0.05,
+     "until": [
+      "dual-band",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "DUAL-BAND GPS",
+     "at": [
+      "dual-band",
+      0,
+      -0.1
+     ],
+     "until": [
+      "works",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "iPHONE OK",
+     "at": [
+      "works",
+      0,
+      -0.1
+     ]
+    }
+   ],
+   "xfade": true
+  },
+  {
+   "line": 3,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "pair_hero",
+     "x": 330,
+     "y": 1000,
+     "w": 520,
+     "seed": 0.4
+    },
+    {
+     "type": "priceTag",
+     "x": 790,
+     "y": 560,
+     "text": "\u00a3329",
+     "at": [
+      "@p329",
+      0,
+      0.15
+     ],
+     "hide": [
+      "@p379",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "priceTag",
+     "x": 790,
+     "y": 560,
+     "text": "\u20ac379",
+     "at": [
+      "@p379",
+      0,
+      0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "THE PRICE?",
+     "at": [
+      "price",
+      0,
+      -0.1
+     ],
+     "until": "@p329"
+    },
+    {
+     "type": "headline",
+     "text": "\u00a3329",
+     "col": "ember",
+     "at": "@p329",
+     "until": "@p379"
+    },
+    {
+     "type": "headline",
+     "text": "\u20ac379",
+     "col": "ember",
+     "at": "@p379"
+    }
+   ]
+  },
+  {
+   "line": 4,
+   "bg": "blush",
+   "real": true,
+   "shake": 0.32,
+   "layers": [
+    {
+     "type": "product",
+     "img": "black_woven",
+     "x": 540,
+     "y": 980,
+     "w": 520,
+     "ltOffset": 5,
+     "fade": {
+      "at": 0,
+      "to": 0.45
+     }
+    },
+    {
+     "type": "stamp",
+     "text": "THE CATCH",
+     "y": 600,
+     "px": 100,
+     "at": [
+      "@catch",
+      0,
+      -0.2
+     ],
+     "sfx": false
+    }
+   ]
+  },
+  {
+   "line": 4,
+   "from": "in",
+   "bg": "blush",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "black_strap",
+     "x": 540,
+     "y": 990,
+     "w": 380,
+     "seed": 1.6
+    },
+    {
+     "type": "ecg",
+     "x": 540,
+     "y": 600,
+     "at": 0.05
+    },
+    {
+     "type": "slash",
+     "x": 540,
+     "y": 600,
+     "len": 520,
+     "at": [
+      "@ecg",
+      0,
+      0.1
+     ],
+     "overlap": true
+    },
+    {
+     "type": "headline",
+     "text": "IN EUROPE",
+     "at": 0.05,
+     "until": [
+      "@ecg",
+      0,
+      -0.2
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "NO ECG",
+     "col": "wreck",
+     "at": [
+      "@ecg",
+      0,
+      -0.2
+     ]
+    }
+   ]
+  },
+  {
+   "line": 4,
+   "from": "blood",
+   "xfade": true,
+   "bg": "blush",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "silver_center",
+     "x": 540,
+     "y": 980,
+     "w": 340,
+     "seed": 0.9
+    },
+    {
+     "type": "toggle",
+     "x": 330,
+     "y": 540,
+     "flipAt": [
+      "blood",
+      0,
+      0.1
+     ]
+    },
+    {
+     "type": "toggle",
+     "x": 750,
+     "y": 540,
+     "flipAt": [
+      "cardiac",
+      0,
+      0.0
+     ]
+    },
+    {
+     "type": "label",
+     "text": "BP TRENDS",
+     "x": 330,
+     "y": 650,
+     "px": 44,
+     "col": "ink",
+     "at": 0.05
+    },
+    {
+     "type": "label",
+     "text": "CARDIAC ALERT",
+     "x": 750,
+     "y": 650,
+     "px": 44,
+     "col": "ink",
+     "at": [
+      "cardiac",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "OFF HERE TOO",
+     "at": 0.05,
+     "until": [
+      "either",
+      0,
+      0.2
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "UNANNOUNCED",
+     "col": "wreck",
+     "at": [
+      "honor",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 5,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "black_woven",
+     "x": 540,
+     "y": 1060,
+     "w": 390,
+     "seed": 1.3
+    },
+    {
+     "type": "wordmark",
+     "y": 500,
+     "score": 60,
+     "scoreAt": [
+      "@score",
+      0,
+      -0.1
+     ],
+     "snapAt": "@verdict"
+    },
+    {
+     "type": "headline",
+     "text": "SPEC",
+     "col": "ember",
+     "at": "@verdict",
+     "until": [
+      "if",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "BRIGHT + LASTS",
+     "at": [
+      "if",
+      0,
+      -0.1
+     ],
+     "until": [
+      "not",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "NO ECG HERE",
+     "col": "wreck",
+     "at": [
+      "not",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 6,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "pair_hero",
+     "x": 540,
+     "y": 760,
+     "w": 700,
+     "seed": 0.4,
+     "ltOffset": 9
+    },
+    {
+     "type": "sun",
+     "x": 540,
+     "y": 1195,
+     "r": 70,
+     "at": 0.05,
+     "growAt": {
+      "at": [
+       "eighteen",
+       0,
+       -0.1
+      ],
+      "from": 0.4,
+      "to": 0.8
+     }
+    },
+    {
+     "type": "headline",
+     "text": "BE HONEST",
+     "at": 0.05,
+     "until": [
+      "@loop",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "ECG OR 18 DAYS?",
+     "col": "ember",
+     "at": [
+      "@loop",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "endcard": true,
+   "bg": "paper",
+   "layers": [
+    {
+     "type": "wordmark",
+     "y": 900,
+     "snapAt": 0.7
+    }
+   ]
+  }
+ ]
+}
