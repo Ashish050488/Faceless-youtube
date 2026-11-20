@@ -180,5 +180,17 @@
   "duration_s": 60.4,
   "url": "https://youtube.com/shorts/5LGZJk7EOck",
   "comment": "pending (post after public)"
+ },
+ {
+  "slug": "sow011-honor-watch-6-pro",
+  "title": "Honor Just Made a 5,500-Nit Watch… With NO ECG 😳",
+  "format": "short",
+  "status": "scripted",
+  "slot": "2",
+  "date": "2026-11-20",
+  "scripted_at": "2026-11-20T06:10Z",
+  "publish_at": "2026-11-20T13:00:00Z",
+  "verdict": "SPEC 60",
+  "hypothesis": "Brightness-number + missing-feature twist ('NO ECG') on a wearable; tests a non-gaming wearable after three gaming Shorts."
  }
 ]

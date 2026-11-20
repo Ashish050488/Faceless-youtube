@@ -1,0 +1,204 @@
+{
+ "id": "sow011-honor-watch-6-pro",
+ "format": "short",
+ "export": "720x1280 H.264 CRF 24 maxrate 2M ≤20 MB (§13)",
+ "rules": "PRODUCTION_SPEC §12–§18; flat LIGHT backgrounds only (no black) — Honor pc-* frames have dark backgrounds: cut the watch out (rembg) onto paper/lavender/blush, never show the dark frame full-bleed; pc-1 is already on white. Whole real product; 1–3 words; 2-D objects next to the product; watermark below content; logo v5 end card; audio LOCKED (narrate.py + mix.sh). Length 50–58 s. No medical claims on screen; no Apple logo.",
+ "numbers_shown": [
+  "5,500 nits",
+  "4,500",
+  "Nov 19",
+  "2 layers",
+  "18 days",
+  "7 / 10 days",
+  "46.3 mm",
+  "50.9 g",
+  "£329",
+  "€379",
+  "60/100"
+ ],
+ "official_clips": "none — Honor UK page has no video loops (checked page code 20 Nov)",
+ "palette_for_this_video": "paper #FAF8F5 main; lavender #ECE8FB reveal/battery beats; blush #FBE7E2 price + THE CATCH; marigold sun/battery fills; ember accent for numbers",
+ "assets": "assets_sources.md (A–H, Honor UK official page, 1920 px wide)",
+ "scenes": [
+  {
+   "anchor": "Honor just made a watch that hits fifty-five hundred nits",
+   "bg": "paper",
+   "image": "A pc-1 hero (cut out the black+silver pair, drop the right-hand text), centred 75% width",
+   "object": "sun with rays pulsing behind the watch face; counter rolls 0 → 5,500",
+   "text": "5,500 NITS",
+   "sfx": "whoosh-up",
+   "n": 1,
+   "note": "frame 1 must read instantly: watch + 5,500 NITS"
+  },
+  {
+   "anchor": "Wait, on your wrist?",
+   "bg": "paper",
+   "image": "A pc-1 hero, scale 60%",
+   "object": "question-mark pill pops beside the dial; tiny wrist outline under the watch",
+   "text": "ON A WRIST?",
+   "sfx": "pop",
+   "n": 2
+  },
+  {
+   "anchor": "Meet the Honor Watch 6 Pro",
+   "bg": "lavender",
+   "image": "C pc-3 trio (crop the 'Premium Aesthetics' title), centred",
+   "object": "none — name label slides up under the trio",
+   "text": "WATCH 6 PRO",
+   "sfx": "swipe",
+   "n": 3,
+   "transition": "hard cut"
+  },
+  {
+   "anchor": "Pre-orders opened yesterday, in the UK and Europe",
+   "bg": "lavender",
+   "image": "A pc-1 hero 50%, top",
+   "object": "calendar flips to 'NOV 19'; globe turns to UK/EU with two pins",
+   "text": "NOV 19",
+   "sfx": "page flip",
+   "n": 4
+  },
+  {
+   "anchor": "Here's the wild part. It's a two-layer OLED",
+   "bg": "paper",
+   "image": "E pc-10 (watch face only, crop the '5500nits' graphic and text), centred",
+   "object": "two thin stacked layers slide apart under the screen like a sandwich, then snap together",
+   "text": "2 LAYERS",
+   "sfx": "snap",
+   "n": 5,
+   "transition": "hard cut"
+  },
+  {
+   "anchor": "made for direct sun",
+   "bg": "paper",
+   "image": "E pc-10 watch, scale 65%",
+   "object": "sun object bright; gauge needle to 5,500 with small grey mark at 4,500 labelled 'whole screen'",
+   "text": "4,500–5,500",
+   "sfx": "needle sweep",
+   "n": 6,
+   "note": "show the 4,500 whole-panel figure small (honest fine print)"
+  },
+  {
+   "anchor": "Up to eighteen days of battery",
+   "bg": "lavender",
+   "image": "H pc-19 (crop the '18 Days' tile watch) OR A hero 55%",
+   "object": "battery fills; label flips 7 → 10 → 18 DAYS",
+   "text": "18 DAYS",
+   "sfx": "charge rise",
+   "n": 7
+  },
+  {
+   "anchor": "A ceramic bezel",
+   "bg": "paper",
+   "image": "D pc-4 bezel close-up (crop text), centred",
+   "object": "dialScale ring traces the bezel with a glint",
+   "text": "CERAMIC",
+   "sfx": "glint",
+   "n": 8
+  },
+  {
+   "anchor": "dual-band GPS",
+   "bg": "paper",
+   "image": "G pc-13 (watch only, crop left text)",
+   "object": "globe with two orbit rings = 2 frequencies; dot pins your position",
+   "text": "DUAL-BAND GPS",
+   "sfx": "ping",
+   "n": 9
+  },
+  {
+   "anchor": "and yeah, it works with your iPhone",
+   "bg": "paper",
+   "image": "A pc-1 hero 55%, left-centre",
+   "object": "simple phone outline next to it with a link line between them (no Apple logo)",
+   "text": "iPHONE OK",
+   "sfx": "click",
+   "n": 10
+  },
+  {
+   "anchor": "The price? Three twenty-nine pounds",
+   "bg": "blush",
+   "image": "B pc-6 black on strap (crop text), centred",
+   "object": "priceTag swings in: £329",
+   "text": "£329",
+   "sfx": "cash ding",
+   "n": 11
+  },
+  {
+   "anchor": "That's three seventy-nine in euros",
+   "bg": "blush",
+   "image": "B pc-6",
+   "object": "priceTag flips to €379; small ruler shows 46.3 mm and scale shows 50.9 g under the watch",
+   "text": "€379",
+   "sfx": "flip",
+   "n": 12
+  },
+  {
+   "anchor": "Here's the catch. In Europe, there's no ECG",
+   "bg": "blush",
+   "image": "A pc-1 hero 50%",
+   "object": "ecg line draws across, then a red slash cuts it; tiny EU/UK pin",
+   "text": "NO ECG",
+   "sfx": "record scratch",
+   "n": 13,
+   "note": "THE CATCH beat; hard cut in",
+   "transition": "hard cut"
+  },
+  {
+   "anchor": "No blood pressure trends, no cardiac warning either",
+   "bg": "blush",
+   "image": "A pc-1 hero 50%",
+   "object": "two toggles flip OFF one after another: 'BP TRENDS', 'CARDIAC ALERT'",
+   "text": "2 MORE OFF",
+   "sfx": "switch click",
+   "n": 14
+  },
+  {
+   "anchor": "Honor hasn't announced them here",
+   "bg": "blush",
+   "image": "A pc-1 hero 50%",
+   "object": "calendar with blank '?' page",
+   "text": "NOT ANNOUNCED",
+   "sfx": "tick",
+   "n": 15
+  },
+  {
+   "anchor": "By our score? Sixty out of a hundred",
+   "bg": "paper",
+   "image": "A pc-1 hero",
+   "object": "gauge needle sweeps to 60/100, mark at 55",
+   "text": "60/100",
+   "sfx": "needle sweep",
+   "n": 16
+  },
+  {
+   "anchor": "Spec!",
+   "bg": "paper",
+   "image": "A pc-1 hero",
+   "object": "logo v5 wordmark, k snaps upright (SPEC)",
+   "text": "SPEC",
+   "sfx": "snap",
+   "n": 17
+  },
+  {
+   "anchor": "If you want a bright watch that lasts. Not if you need heart checks.",
+   "bg": "paper",
+   "image": "F pc-9 silver (crop text)",
+   "object": "two stickers: sun+battery '✓ BRIGHT + LASTS', ecg '✗ HEART CHECKS'",
+   "text": "FOR / NOT FOR",
+   "sfx": "pop",
+   "n": 18
+  },
+  {
+   "anchor": "Be honest. Would you trade ECG for eighteen days of battery?",
+   "bg": "paper",
+   "image": "A pc-1 hero exactly as frame 1",
+   "object": "scale tips: ecg icon vs battery '18 DAYS' (seamless back to frame 1 sun)",
+   "text": "ECG or 18 DAYS?",
+   "sfx": "riser tail",
+   "n": 19,
+   "note": "match frame 1"
+  }
+ ],
+ "thumbnail": "1280×720: pc-1 watch pair cut out right; '5,500 NITS' huge (ember) left, small 'NO ECG?' blush pill under it; flat paper background; readable at 168×94",
+ "credits": "Product images: HONOR UK official Watch 6 Pro page. Not affiliated with or endorsed by HONOR."
+}
