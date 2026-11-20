@@ -2,12 +2,20 @@
  "slug": "sow011-honor-watch-6-pro",
  "plan": "plan.json",
  "thumb": {
-  "img": "pair_hero",
-  "bg": "paper",
-  "big": "5,500",
-  "word": "NITS",
-  "tag": "NO ECG IN EU",
-  "w": 500
+  "img": "silver_center",
+  "thumbImg": "pair_hero",
+  "bg": "mari",
+  "tilt": -5,
+  "a": {
+   "words": "HEART CHECK?",
+   "num": "\u00a3329",
+   "emotion": "x"
+  },
+  "b": {
+   "words": "WORTH IT?",
+   "num": "18 DAYS",
+   "emotion": "arrow"
+  }
  },
  "scenes": [
   {

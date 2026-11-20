@@ -3,11 +3,18 @@
  "plan": "plan.json",
  "thumb": {
   "img": "cube_34",
-  "bg": "paper",
-  "big": "SOLD OUT",
-  "word": "$1,349",
-  "tag": "$1,049 IN STOCK",
-  "w": 500
+  "bg": "blush",
+  "tilt": -5,
+  "a": {
+   "words": "TOO LATE?",
+   "num": "$1,349",
+   "emotion": "x"
+  },
+  "b": {
+   "words": "OR THIS ONE?",
+   "num": "$1,049",
+   "emotion": "arrow"
+  }
  },
  "scenes": [
   {
