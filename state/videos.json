@@ -161,5 +161,17 @@
   "url": "https://youtube.com/shorts/YTg5MWCRWcM",
   "comment": "posted",
   "reel": "requested from IG session 10:47Z (owner asked)"
+ },
+ {
+  "slug": "sow010-valve-steam-machine-out-of-stock",
+  "title": "Valve Just Ran OUT of Its $1,349 Steam Machine 😳",
+  "format": "short",
+  "status": "scripted",
+  "slot": "1",
+  "date": "2026-11-20",
+  "scripted_at": "2026-11-20T00:55Z",
+  "publish_at": "2026-11-20T07:30:00Z",
+  "verdict": "WRECK 47",
+  "hypothesis": "Scarcity/'ran out' title on a big gaming-hardware brand; tests 'out of stock' vs price-shock framing."
  }
 ]

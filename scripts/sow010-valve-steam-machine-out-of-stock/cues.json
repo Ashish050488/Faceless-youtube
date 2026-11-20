@@ -1,0 +1,213 @@
+{
+ "id": "sow010-valve-steam-machine-out-of-stock",
+ "format": "short",
+ "export": "720x1280 H.264 CRF 24 maxrate 2M ≤20 MB (§13)",
+ "rules": "PRODUCTION_SPEC §12–§18; flat LIGHT backgrounds only (no black) — Valve frames: cube on beige works as-is (crop the 'STEAM MACHINE' label), dark frames (D, E) as rounded framed cards; whole real product; 1–3 words; 2-D objects next to the product; watermark below content; logo v5 end card; audio LOCKED (narrate.py + mix.sh). Length 50–58 s. No game key art/footage on screen.",
+ "numbers_shown": [
+  "$1,349",
+  "2 TB",
+  "Nov 19",
+  "512 GB",
+  "$1,049",
+  "3–5 days",
+  "6-inch",
+  "16 GB",
+  "8 GB",
+  "6×",
+  "47/100"
+ ],
+ "official_clips": "2 clips from Valve's Steam Machine page (A 1c680883….mp4 0–2.5 s, E 01c98c52….mp4 0–2.5 s), muted, 5 s total ≈ 9 % — URLs in assets_sources.md",
+ "palette_for_this_video": "paper #FAF8F5 main; lavender #ECE8FB for 2TB/specs beats; blush #FBE7E2 for OUT OF STOCK + THE CATCH; marigold object fills; ember accent text and price figures",
+ "assets": "assets_sources.md (A–E)",
+ "scenes": [
+  {
+   "anchor": "Valve just ran out",
+   "bg": "paper",
+   "image": "A hero cube, crop out the 'STEAM MACHINE' label, centred 75% width",
+   "object": "stamp 'OUT OF STOCK' slams diagonally across a priceTag hanging off the cube",
+   "text": "$1,349",
+   "sfx": "stamp thud",
+   "note": "frame 1 must read instantly: cube + $1,349 + OUT OF STOCK",
+   "n": 1
+  },
+  {
+   "anchor": "Wait, sold out?",
+   "bg": "paper",
+   "image": "A hero",
+   "object": "priceTag swings; question-mark pill pops beside it",
+   "text": "SOLD OUT?",
+   "sfx": "whoosh",
+   "n": 2
+  },
+  {
+   "anchor": "closed the waitlist for the two-terabyte model",
+   "bg": "lavender",
+   "image": "A hero, scale 55%, left",
+   "object": "ssd labelled '2 TB' slides in right; calendar shows 'NOV 19'",
+   "text": "2 TB",
+   "sfx": "swipe",
+   "transition": "hard cut",
+   "n": 3
+  },
+  {
+   "anchor": "More people are in line than it can build",
+   "bg": "lavender",
+   "image": "none (full object)",
+   "object": "queue of simple person dots (24) walking toward a short stack of 6 boxes (miniPc, small); dots keep coming, boxes don't",
+   "text": "LINE > UNITS",
+   "sfx": "footsteps tick",
+   "n": 4
+  },
+  {
+   "anchor": "So now? Out of stock.",
+   "bg": "blush",
+   "image": "A hero, greyed 60%",
+   "object": "toggle flips to OFF; stamp 'OUT OF STOCK'",
+   "text": "OUT OF STOCK",
+   "sfx": "switch click",
+   "n": 5
+  },
+  {
+   "anchor": "The five-twelve gig model",
+   "bg": "paper",
+   "image": "OFFICIAL CLIP A (1c680883…mp4) 0.0–2.5 s, muted, crop to cube",
+   "object": "ssd labelled '512 GB' pops in next to the cube",
+   "text": "512 GB",
+   "sfx": "pop",
+   "transition": "hard cut",
+   "n": 6
+  },
+  {
+   "anchor": "you can buy right now",
+   "bg": "paper",
+   "image": "A hero",
+   "object": "pill button 'BUY NOW' presses in (hand-cursor tap)",
+   "text": "BUY NOW",
+   "sfx": "click",
+   "n": 7
+  },
+  {
+   "anchor": "Ten forty-nine",
+   "bg": "paper",
+   "image": "A hero",
+   "object": "priceTag value rolls to $1,049",
+   "text": "$1,049",
+   "sfx": "tag swing + tick",
+   "n": 8
+  },
+  {
+   "anchor": "three to five business days",
+   "bg": "paper",
+   "image": "A hero, scale 50%, right",
+   "object": "calendar flips 3 → 5 pages; small delivery box slides in",
+   "text": "3–5 DAYS",
+   "sfx": "page flips",
+   "n": 9
+  },
+  {
+   "anchor": "And it's tiny! A six-inch cube",
+   "bg": "lavender",
+   "image": "B (cube on bookshelf), crop to cube + shelf, centred",
+   "object": "ruler slides up beside the cube, marks at 15 cm; label '~6 in'",
+   "text": "6-INCH CUBE",
+   "sfx": "ruler slide",
+   "transition": "hard cut",
+   "n": 10
+  },
+  {
+   "anchor": "sixteen gigs of RAM",
+   "bg": "lavender",
+   "image": "D (front LED close-up) as top band",
+   "object": "ramStick n=2 drop in and stack, counter '16 GB'",
+   "text": "16 GB RAM",
+   "sfx": "click x2",
+   "n": 11
+  },
+  {
+   "anchor": "plus eight for graphics",
+   "bg": "lavender",
+   "image": "D",
+   "object": "chipDie mode gpu, cells fill; counter '+8 GB'",
+   "text": "+8 GB VRAM",
+   "sfx": "tick",
+   "n": 12
+  },
+  {
+   "anchor": "six times the power of a Steam Deck",
+   "bg": "paper",
+   "image": "OFFICIAL CLIP E (01c98c52…mp4) 0.0–2.5 s, muted (LED strip lights up)",
+   "object": "bars: 1 short bar 'DECK' vs bar 6× taller 'MACHINE'; small 'VALVE CLAIM' pill",
+   "text": "6× (VALVE)",
+   "sfx": "riser",
+   "transition": "hard cut",
+   "n": 13
+  },
+  {
+   "anchor": "Here's the catch.",
+   "bg": "blush",
+   "image": "A hero, scale 45%",
+   "object": "headline 'HERE'S THE CATCH' (brand line)",
+   "text": "THE CATCH",
+   "sfx": "record scratch",
+   "transition": "hard cut",
+   "n": 14
+  },
+  {
+   "anchor": "Memory prices keep climbing",
+   "bg": "blush",
+   "image": "none",
+   "object": "ramStick with an arrow chart line climbing steeply behind it (bars rising)",
+   "text": "RAM PRICES ↑",
+   "sfx": "rising tone",
+   "n": 15
+  },
+  {
+   "anchor": "how many it can make, or at what price",
+   "bg": "blush",
+   "image": "A hero",
+   "object": "priceTag shows '$?' rolling numbers that won't settle; small counter 'UNITS ?'",
+   "text": "PRICE ?",
+   "sfx": "slot-machine tick",
+   "n": 16
+  },
+  {
+   "anchor": "forty-seven out of a hundred",
+   "bg": "paper",
+   "image": "A hero",
+   "object": "gauge needle sweeps to 47/100, red mark at 55",
+   "text": "47/100",
+   "sfx": "needle sweep",
+   "n": 17
+  },
+  {
+   "anchor": "Wreck.",
+   "bg": "paper",
+   "image": "A hero",
+   "object": "logo v5 wordmark, k falls (WRECK)",
+   "text": "WRECK",
+   "sfx": "thud",
+   "n": 18
+  },
+  {
+   "anchor": "Steam library on a tiny box, today",
+   "bg": "paper",
+   "image": "C (cube + library grid) — crop/blur the game grid, keep cube",
+   "object": "label 'IF YOU WANT IT NOW' sticker",
+   "text": "WANT IT NOW?",
+   "sfx": "pop",
+   "n": 19
+  },
+  {
+   "anchor": "Would you pay over a thousand dollars for one?",
+   "bg": "paper",
+   "image": "A hero exactly as frame 1",
+   "object": "priceTag exactly as frame 1 (seamless loop), value '$1,049?'",
+   "text": "$1,000+?",
+   "sfx": "riser tail",
+   "transition": "match frame 1",
+   "n": 20
+  }
+ ],
+ "thumbnail": "1280×720: cube (A) cut out, centred-right; '$1,349 SOLD OUT?' huge (ember) left; flat paper background; readable at 168×94",
+ "credits": "Product images/clips: Valve official Steam Machine page. Not affiliated with or endorsed by Valve."
+}
