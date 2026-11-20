@@ -1,5 +1,9 @@
 # Learnings (newest first; only what still changes decisions — older notes are in git history)
 
+## 2026-11-20
+- A scheduled (publishAt) Short went public but its script chat never ran the 'comment + Reel' follow-up. Added a
+  safety-net task in the Instagram chat at 1:45 PM and 6:45 PM IST that cross-posts any public Short missing on Instagram.
+
 ## 2026-11-17 — competitors (API, state/competitor_watch/competitors.md)
 - Tags barely matter (a 72K-sub faceless channel uses none and hit 3.1M). Titles + retention + frequency do.
 - TEST NEXT (one at a time, weekly review decides): (1) shorter Shorts 45–60 s vs our 82 s; (2) one CAPS word +
