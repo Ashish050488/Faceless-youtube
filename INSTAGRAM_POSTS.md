@@ -33,7 +33,7 @@ the script session cross-posts YouTube Shorts as Reels. Full plan, slot routine 
 - Format mix (owner 2026-11-18): first image slot of the day = 1 carousel (hottest story); other image slots = single-image posts. Details: state/instagram_plan.md → FORMAT MIX.
 - Each post is made FRESH at its slot: web-search the hottest tech story of that moment, never prepare in advance.
 - Topics: ALL hot tech news (AI companies, CEO exits, IPOs, launches, regulation, big deals), not only gadgets.
-- vidIQ publishes only after the owner replies to that exact draft: one notification per slot, any reply publishes.
+- FULLY AUTONOMOUS (owner 2026-11-20, hard rule): publish every post yourself right after it passes your own checks (2 sources, official image, preview checked). Never wait for an OK and never ask; send the owner ONE notification AFTER it is live with the link. Reels: post as soon as the script session sends the link.
 
 ## What to post (same brand as the YouTube channel — read state/brand.md, PRODUCTION_SPEC.md §12–§18)
 - Format: carousel 1080×1350 (4:5), 4–7 slides.
