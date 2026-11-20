@@ -1,0 +1,919 @@
+[
+{
+"w": "Valve",
+"start": 0.0,
+"end": 0.62,
+"line": 0,
+"brk": false
+},
+{
+"w": "just",
+"start": 0.62,
+"end": 0.86,
+"line": 0,
+"brk": false
+},
+{
+"w": "ran",
+"start": 0.86,
+"end": 1.2,
+"line": 0,
+"brk": false
+},
+{
+"w": "out",
+"start": 1.2,
+"end": 1.46,
+"line": 0,
+"brk": false
+},
+{
+"w": "of",
+"start": 1.46,
+"end": 1.58,
+"line": 0,
+"brk": false
+},
+{
+"w": "its",
+"start": 1.58,
+"end": 1.72,
+"line": 0,
+"brk": false
+},
+{
+"w": "thirteen",
+"start": 2.191,
+"end": 2.663,
+"line": 0,
+"brk": false
+},
+{
+"w": "forty-nine",
+"start": 2.663,
+"end": 3.04,
+"line": 0,
+"brk": false
+},
+{
+"w": "Steam",
+"start": 3.04,
+"end": 3.46,
+"line": 0,
+"brk": false
+},
+{
+"w": "Machine.",
+"start": 3.46,
+"end": 4.06,
+"line": 0,
+"brk": true
+},
+{
+"w": "Wait,",
+"start": 4.46,
+"end": 4.86,
+"line": 0,
+"brk": true
+},
+{
+"w": "sold",
+"start": 4.86,
+"end": 5.2,
+"line": 0,
+"brk": false
+},
+{
+"w": "out?",
+"start": 5.2,
+"end": 5.66,
+"line": 0,
+"brk": true
+},
+{
+"w": "Yesterday,",
+"start": 6.34,
+"end": 6.92,
+"line": 1,
+"brk": true
+},
+{
+"w": "Valve",
+"start": 7.74,
+"end": 7.74,
+"line": 1,
+"brk": false
+},
+{
+"w": "closed",
+"start": 7.74,
+"end": 8.22,
+"line": 1,
+"brk": false
+},
+{
+"w": "the",
+"start": 8.22,
+"end": 8.44,
+"line": 1,
+"brk": false
+},
+{
+"w": "waitlist",
+"start": 8.44,
+"end": 8.9,
+"line": 1,
+"brk": false
+},
+{
+"w": "for",
+"start": 8.9,
+"end": 9.18,
+"line": 1,
+"brk": false
+},
+{
+"w": "the",
+"start": 9.18,
+"end": 9.3,
+"line": 1,
+"brk": false
+},
+{
+"w": "two-terabyte",
+"start": 9.54,
+"end": 10.02,
+"line": 1,
+"brk": false
+},
+{
+"w": "model.",
+"start": 10.02,
+"end": 10.56,
+"line": 1,
+"brk": true
+},
+{
+"w": "More",
+"start": 11.2,
+"end": 11.46,
+"line": 1,
+"brk": false
+},
+{
+"w": "people",
+"start": 11.46,
+"end": 11.86,
+"line": 1,
+"brk": false
+},
+{
+"w": "are",
+"start": 11.86,
+"end": 12.14,
+"line": 1,
+"brk": false
+},
+{
+"w": "in",
+"start": 12.14,
+"end": 12.32,
+"line": 1,
+"brk": false
+},
+{
+"w": "line",
+"start": 12.32,
+"end": 12.66,
+"line": 1,
+"brk": false
+},
+{
+"w": "than",
+"start": 12.66,
+"end": 13.06,
+"line": 1,
+"brk": false
+},
+{
+"w": "it",
+"start": 13.06,
+"end": 13.16,
+"line": 1,
+"brk": false
+},
+{
+"w": "can",
+"start": 13.16,
+"end": 13.34,
+"line": 1,
+"brk": false
+},
+{
+"w": "build.",
+"start": 13.34,
+"end": 13.76,
+"line": 1,
+"brk": true
+},
+{
+"w": "So",
+"start": 14.3,
+"end": 14.58,
+"line": 1,
+"brk": false
+},
+{
+"w": "now?",
+"start": 14.58,
+"end": 14.94,
+"line": 1,
+"brk": true
+},
+{
+"w": "Out",
+"start": 15.46,
+"end": 15.72,
+"line": 1,
+"brk": false
+},
+{
+"w": "of",
+"start": 15.72,
+"end": 15.9,
+"line": 1,
+"brk": false
+},
+{
+"w": "stock.",
+"start": 15.9,
+"end": 16.34,
+"line": 1,
+"brk": true
+},
+{
+"w": "Good",
+"start": 17.02,
+"end": 17.3,
+"line": 2,
+"brk": false
+},
+{
+"w": "news?",
+"start": 17.3,
+"end": 17.66,
+"line": 2,
+"brk": true
+},
+{
+"w": "The",
+"start": 18.38,
+"end": 18.56,
+"line": 2,
+"brk": false
+},
+{
+"w": "five-twelve",
+"start": 18.795,
+"end": 19.265,
+"line": 2,
+"brk": false
+},
+{
+"w": "gig",
+"start": 19.265,
+"end": 19.5,
+"line": 2,
+"brk": false
+},
+{
+"w": "model,",
+"start": 19.5,
+"end": 19.96,
+"line": 2,
+"brk": true
+},
+{
+"w": "you",
+"start": 19.96,
+"end": 20.52,
+"line": 2,
+"brk": false
+},
+{
+"w": "can",
+"start": 20.52,
+"end": 20.7,
+"line": 2,
+"brk": false
+},
+{
+"w": "buy",
+"start": 20.7,
+"end": 20.92,
+"line": 2,
+"brk": false
+},
+{
+"w": "right",
+"start": 20.92,
+"end": 21.18,
+"line": 2,
+"brk": false
+},
+{
+"w": "now.",
+"start": 21.18,
+"end": 21.68,
+"line": 2,
+"brk": true
+},
+{
+"w": "Ten",
+"start": 22.176,
+"end": 22.672,
+"line": 2,
+"brk": false
+},
+{
+"w": "forty-nine,",
+"start": 22.672,
+"end": 22.96,
+"line": 2,
+"brk": true
+},
+{
+"w": "at",
+"start": 22.96,
+"end": 23.74,
+"line": 2,
+"brk": false
+},
+{
+"w": "your",
+"start": 23.74,
+"end": 23.94,
+"line": 2,
+"brk": false
+},
+{
+"w": "door",
+"start": 23.94,
+"end": 24.18,
+"line": 2,
+"brk": false
+},
+{
+"w": "in",
+"start": 24.18,
+"end": 24.44,
+"line": 2,
+"brk": false
+},
+{
+"w": "three",
+"start": 24.44,
+"end": 24.76,
+"line": 2,
+"brk": false
+},
+{
+"w": "to",
+"start": 24.89,
+"end": 25.02,
+"line": 2,
+"brk": false
+},
+{
+"w": "five",
+"start": 25.02,
+"end": 25.28,
+"line": 2,
+"brk": false
+},
+{
+"w": "business",
+"start": 25.28,
+"end": 25.68,
+"line": 2,
+"brk": false
+},
+{
+"w": "days.",
+"start": 25.68,
+"end": 26.24,
+"line": 2,
+"brk": true
+},
+{
+"w": "And",
+"start": 26.88,
+"end": 27.24,
+"line": 3,
+"brk": false
+},
+{
+"w": "it's",
+"start": 27.24,
+"end": 27.5,
+"line": 3,
+"brk": false
+},
+{
+"w": "tiny!",
+"start": 27.5,
+"end": 27.78,
+"line": 3,
+"brk": true
+},
+{
+"w": "A",
+"start": 28.38,
+"end": 28.7,
+"line": 3,
+"brk": false
+},
+{
+"w": "six-inch",
+"start": 28.7,
+"end": 29.26,
+"line": 3,
+"brk": false
+},
+{
+"w": "cube,",
+"start": 29.26,
+"end": 29.78,
+"line": 3,
+"brk": true
+},
+{
+"w": "sixteen",
+"start": 30.34,
+"end": 30.8,
+"line": 3,
+"brk": false
+},
+{
+"w": "gigs",
+"start": 30.8,
+"end": 31.08,
+"line": 3,
+"brk": false
+},
+{
+"w": "of",
+"start": 31.08,
+"end": 31.34,
+"line": 3,
+"brk": false
+},
+{
+"w": "RAM,",
+"start": 31.34,
+"end": 31.64,
+"line": 3,
+"brk": true
+},
+{
+"w": "plus",
+"start": 31.64,
+"end": 32.14,
+"line": 3,
+"brk": false
+},
+{
+"w": "eight",
+"start": 32.14,
+"end": 32.42,
+"line": 3,
+"brk": false
+},
+{
+"w": "for",
+"start": 32.42,
+"end": 32.64,
+"line": 3,
+"brk": false
+},
+{
+"w": "graphics.",
+"start": 32.64,
+"end": 33.1,
+"line": 3,
+"brk": true
+},
+{
+"w": "Valve",
+"start": 34.22,
+"end": 34.22,
+"line": 3,
+"brk": false
+},
+{
+"w": "says",
+"start": 34.22,
+"end": 34.52,
+"line": 3,
+"brk": false
+},
+{
+"w": "that's",
+"start": 34.52,
+"end": 34.98,
+"line": 3,
+"brk": false
+},
+{
+"w": "six",
+"start": 34.98,
+"end": 35.2,
+"line": 3,
+"brk": false
+},
+{
+"w": "times",
+"start": 35.2,
+"end": 35.6,
+"line": 3,
+"brk": false
+},
+{
+"w": "the",
+"start": 35.6,
+"end": 35.88,
+"line": 3,
+"brk": false
+},
+{
+"w": "power",
+"start": 35.88,
+"end": 36.18,
+"line": 3,
+"brk": false
+},
+{
+"w": "of",
+"start": 36.18,
+"end": 36.5,
+"line": 3,
+"brk": false
+},
+{
+"w": "a",
+"start": 36.5,
+"end": 36.62,
+"line": 3,
+"brk": false
+},
+{
+"w": "Steam",
+"start": 36.62,
+"end": 36.88,
+"line": 3,
+"brk": false
+},
+{
+"w": "Deck.",
+"start": 36.88,
+"end": 37.28,
+"line": 3,
+"brk": true
+},
+{
+"w": "Here's",
+"start": 38.06,
+"end": 38.34,
+"line": 4,
+"brk": false
+},
+{
+"w": "the",
+"start": 38.34,
+"end": 38.52,
+"line": 4,
+"brk": false
+},
+{
+"w": "catch.",
+"start": 38.52,
+"end": 38.86,
+"line": 4,
+"brk": true
+},
+{
+"w": "Memory",
+"start": 39.96,
+"end": 39.96,
+"line": 4,
+"brk": false
+},
+{
+"w": "prices",
+"start": 39.96,
+"end": 40.52,
+"line": 4,
+"brk": false
+},
+{
+"w": "keep",
+"start": 40.52,
+"end": 40.88,
+"line": 4,
+"brk": false
+},
+{
+"w": "climbing.",
+"start": 40.88,
+"end": 41.4,
+"line": 4,
+"brk": true
+},
+{
+"w": "Valve",
+"start": 42.24,
+"end": 42.5,
+"line": 4,
+"brk": false
+},
+{
+"w": "doesn't",
+"start": 42.5,
+"end": 42.84,
+"line": 4,
+"brk": false
+},
+{
+"w": "know",
+"start": 42.84,
+"end": 43.02,
+"line": 4,
+"brk": false
+},
+{
+"w": "how",
+"start": 43.02,
+"end": 43.26,
+"line": 4,
+"brk": false
+},
+{
+"w": "many",
+"start": 43.26,
+"end": 43.52,
+"line": 4,
+"brk": false
+},
+{
+"w": "it",
+"start": 43.52,
+"end": 43.72,
+"line": 4,
+"brk": false
+},
+{
+"w": "can",
+"start": 43.72,
+"end": 43.88,
+"line": 4,
+"brk": false
+},
+{
+"w": "make,",
+"start": 43.88,
+"end": 44.2,
+"line": 4,
+"brk": true
+},
+{
+"w": "or",
+"start": 44.2,
+"end": 44.7,
+"line": 4,
+"brk": false
+},
+{
+"w": "at",
+"start": 44.7,
+"end": 44.9,
+"line": 4,
+"brk": false
+},
+{
+"w": "what",
+"start": 44.9,
+"end": 45.1,
+"line": 4,
+"brk": false
+},
+{
+"w": "price.",
+"start": 45.1,
+"end": 45.52,
+"line": 4,
+"brk": true
+},
+{
+"w": "By",
+"start": 45.873,
+"end": 46.227,
+"line": 5,
+"brk": false
+},
+{
+"w": "our",
+"start": 46.227,
+"end": 46.58,
+"line": 5,
+"brk": false
+},
+{
+"w": "score,",
+"start": 46.58,
+"end": 46.94,
+"line": 5,
+"brk": true
+},
+{
+"w": "forty-seven",
+"start": 46.94,
+"end": 47.94,
+"line": 5,
+"brk": false
+},
+{
+"w": "out",
+"start": 47.94,
+"end": 48.32,
+"line": 5,
+"brk": false
+},
+{
+"w": "of",
+"start": 48.32,
+"end": 48.44,
+"line": 5,
+"brk": false
+},
+{
+"w": "a",
+"start": 48.55,
+"end": 48.66,
+"line": 5,
+"brk": false
+},
+{
+"w": "hundred.",
+"start": 48.66,
+"end": 48.88,
+"line": 5,
+"brk": true
+},
+{
+"w": "Wreck.",
+"start": 49.8,
+"end": 50.72,
+"line": 5,
+"brk": true
+},
+{
+"w": "Unless",
+"start": 50.72,
+"end": 51.02,
+"line": 5,
+"brk": false
+},
+{
+"w": "you",
+"start": 51.02,
+"end": 51.32,
+"line": 5,
+"brk": false
+},
+{
+"w": "want",
+"start": 51.32,
+"end": 51.5,
+"line": 5,
+"brk": false
+},
+{
+"w": "your",
+"start": 51.5,
+"end": 51.66,
+"line": 5,
+"brk": false
+},
+{
+"w": "Steam",
+"start": 51.66,
+"end": 52.0,
+"line": 5,
+"brk": false
+},
+{
+"w": "library",
+"start": 52.0,
+"end": 52.38,
+"line": 5,
+"brk": false
+},
+{
+"w": "on",
+"start": 52.38,
+"end": 52.76,
+"line": 5,
+"brk": false
+},
+{
+"w": "a",
+"start": 52.76,
+"end": 52.92,
+"line": 5,
+"brk": false
+},
+{
+"w": "tiny",
+"start": 52.92,
+"end": 53.2,
+"line": 5,
+"brk": false
+},
+{
+"w": "box,",
+"start": 53.2,
+"end": 53.7,
+"line": 5,
+"brk": true
+},
+{
+"w": "today.",
+"start": 53.7,
+"end": 54.34,
+"line": 5,
+"brk": true
+},
+{
+"w": "Would",
+"start": 54.34,
+"end": 55.12,
+"line": 6,
+"brk": false
+},
+{
+"w": "you",
+"start": 55.12,
+"end": 55.28,
+"line": 6,
+"brk": false
+},
+{
+"w": "pay",
+"start": 55.28,
+"end": 55.56,
+"line": 6,
+"brk": false
+},
+{
+"w": "over",
+"start": 55.56,
+"end": 55.92,
+"line": 6,
+"brk": false
+},
+{
+"w": "a",
+"start": 56.05,
+"end": 56.18,
+"line": 6,
+"brk": false
+},
+{
+"w": "thousand",
+"start": 56.18,
+"end": 56.44,
+"line": 6,
+"brk": false
+},
+{
+"w": "dollars",
+"start": 56.44,
+"end": 56.7,
+"line": 6,
+"brk": false
+},
+{
+"w": "for",
+"start": 56.7,
+"end": 57.4,
+"line": 6,
+"brk": false
+},
+{
+"w": "one?",
+"start": 57.4,
+"end": 57.7,
+"line": 6,
+"brk": true
+}
+]
