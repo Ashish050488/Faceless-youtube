@@ -1,75 +1,715 @@
-{"slug": "sow010-valve-steam-machine-out-of-stock", "plan": "plan.json",
- "thumb": {"img": "cube_34", "bg": "paper", "big": "SOLD OUT", "word": "$1,349", "tag": "$1,049 IN STOCK", "w": 620},
+{
+ "slug": "sow010-valve-steam-machine-out-of-stock",
+ "plan": "plan.json",
+ "thumb": {
+  "img": "cube_34",
+  "bg": "paper",
+  "big": "SOLD OUT",
+  "word": "$1,349",
+  "tag": "$1,049 IN STOCK",
+  "w": 500
+ },
  "scenes": [
-  {"line": 0, "bg": "paper", "real": true, "layers": [
-    {"type": "clip", "name": "hero", "x": 540, "y": 760, "w": 900, "at": 0},
-    {"type": "priceTag", "x": 560, "y": 1040, "text": "$1,349", "at": ["@p1349", 0, 0.2]},
-    {"type": "headline", "text": "RAN OUT", "col": "wreck", "at": -0.5, "until": "@p1349"},
-    {"type": "headline", "text": "$1,349", "col": "ember", "at": "@p1349", "until": ["wait", 0, -0.1]},
-    {"type": "headline", "text": "SOLD OUT?", "at": ["wait", 0, -0.1]}]},
-  {"line": 1, "bg": "lav", "real": true, "layers": [
-    {"type": "product", "img": "cube_front", "x": 540, "y": 900, "w": 600, "seed": 0.6},
-    {"type": "ssd", "x": 540, "y": 520, "s": 0.8, "at": ["@tb", 0, -0.2]},
-    {"type": "headline", "text": "WAITLIST", "at": ["waitlist", 0, -0.1], "until": "@tb"},
-    {"type": "headline", "text": "2 TB", "col": "ember", "at": "@tb"}]},
-  {"line": 1, "from": "more", "xfade": true, "bg": "lav", "real": true, "layers": [
-    {"type": "product", "img": "cube_front", "x": 540, "y": 900, "w": 600, "seed": 0.6},
-    {"type": "hourglass", "x": 330, "y": 520, "at": 0.05, "flipAt": ["line", 0, -0.1]},
-    {"type": "toggle", "x": 750, "y": 520, "flipAt": ["@oos", 0, -0.05]},
-    {"type": "headline", "text": "LINE > UNITS", "at": ["more", 0, -0.1], "until": ["@oos", 0, -0.1]},
-    {"type": "headline", "text": "OUT OF STOCK", "col": "wreck", "at": ["@oos", 0, -0.1]}]},
-  {"line": 2, "bg": "paper", "real": true, "layers": [
-    {"type": "product", "img": "cube_34", "x": 540, "y": 900, "w": 620, "seed": 1.1},
-    {"type": "ssd", "x": 540, "y": 520, "s": 0.8, "at": ["@gb512", 0, -0.2]},
-    {"type": "headline", "text": "GOOD NEWS", "at": ["good", 0, -0.1], "until": "@gb512"},
-    {"type": "headline", "text": "512 GB", "col": "ember", "at": "@gb512", "until": ["@buy", 0, -0.1]},
-    {"type": "headline", "text": "BUY NOW", "col": "ink", "at": ["@buy", 0, -0.1]}]},
-  {"line": 2, "from": "ten", "xfade": true, "bg": "paper", "real": true, "layers": [
-    {"type": "product", "img": "cube_34", "x": 400, "y": 960, "w": 520, "seed": 1.1},
-    {"type": "priceTag", "x": 820, "y": 760, "text": "$1,049", "at": ["@p1049", 0, 0.2]},
-    {"type": "number", "value": 1049, "prefix": "$", "y": 380, "show": "@p1049", "at": "@p1049"},
-    {"type": "pill", "text": "3–5 DAYS", "x": 540, "y": 560, "w": 380, "h": 100, "at": ["@days", 0, -0.1]}]},
-  {"line": 3, "bg": "sand", "real": true, "layers": [
-    {"type": "product", "img": "cube_front", "x": 540, "y": 840, "w": 560, "seed": 0.6},
-    {"type": "ruler", "x": 540, "y": 1180, "w": 560, "n": 6, "at": ["@six", 0, -0.2]},
-    {"type": "headline", "text": "TINY", "at": ["tiny", 0, -0.1], "until": "@six"},
-    {"type": "headline", "text": "6-INCH CUBE", "col": "ember", "at": "@six"}]},
-  {"line": 3, "from": "sixteen", "xfade": true, "bg": "lav", "real": true, "layers": [
-    {"type": "product", "img": "cube_tv", "x": 540, "y": 990, "w": 500, "seed": 2.0},
-    {"type": "ramStick", "x": 540, "y": 560, "s": 0.6, "n": 2, "at": ["@ram", 0, -0.15]},
-    {"type": "number", "value": 16, "unit": "GB RAM", "comma": false, "y": 330, "px": 120, "col": "ink", "show": "@ram", "at": "@ram"}]},
-  {"line": 3, "from": "plus", "xfade": true, "bg": "lav", "real": true, "layers": [
-    {"type": "product", "img": "cube_tv", "x": 540, "y": 990, "w": 500, "seed": 2.0},
-    {"type": "chipDie", "x": 540, "y": 560, "s": 0.6, "mode": "gpu", "at": 0.05, "fillAt": "@vram"},
-    {"type": "headline", "text": "+8 GB VRAM", "col": "ember", "at": "@vram"}]},
-  {"line": 3, "from": "valve", "bg": "paper", "real": true, "layers": [
-    {"type": "clip", "name": "led", "x": 540, "y": 1040, "w": 960, "at": 0.1},
-    {"type": "bars", "base": 760, "h": 300, "items": [
-      {"value": 1, "label": "DECK", "sub": "", "col": "stone", "at": 0.3},
-      {"value": 6, "label": "6×", "sub": "MACHINE", "col": "mari", "at": "@x6"}]},
-    {"type": "headline", "text": "VALVE SAYS", "at": 0.05, "until": "@x6"},
-    {"type": "headline", "text": "6× POWER", "col": "ember", "at": "@x6"}]},
-  {"line": 4, "bg": "blush", "real": true, "shake": 0.32, "layers": [
-    {"type": "product", "img": "cube_34", "x": 540, "y": 980, "w": 560, "ltOffset": 5, "fade": {"at": 0, "to": 0.45}},
-    {"type": "stamp", "text": "THE CATCH", "y": 600, "px": 100, "at": ["@catch", 0, -0.2], "sfx": false}]},
-  {"line": 4, "from": "memory", "bg": "blush", "real": true, "layers": [
-    {"type": "product", "img": "cube_front", "x": 540, "y": 1000, "w": 500, "seed": 0.6},
-    {"type": "ramStick", "x": 540, "y": 560, "s": 0.7, "n": 3, "at": 0.05},
-    {"type": "headline", "text": "RAM PRICES UP", "col": "wreck", "at": ["prices", 0, -0.2]}]},
-  {"line": 4, "from": "valve", "xfade": true, "bg": "blush", "real": true, "layers": [
-    {"type": "product", "img": "cube_front", "x": 540, "y": 1000, "w": 500, "seed": 0.6},
-    {"type": "hourglass", "x": 330, "y": 560, "at": 0.05, "flipAt": ["many", 0, -0.1]},
-    {"type": "priceTag", "x": 760, "y": 470, "text": "$?", "at": ["price", 0, -0.2]},
-    {"type": "headline", "text": "HOW MANY?", "at": ["how", 0, -0.1], "until": ["price", 0, -0.2]},
-    {"type": "headline", "text": "WHAT PRICE?", "col": "wreck", "at": ["price", 0, -0.2]}]},
-  {"line": 5, "bg": "paper", "real": true, "layers": [
-    {"type": "product", "img": "cube_pingpong", "x": 540, "y": 1050, "w": 400, "seed": 1.7},
-    {"type": "wordmark", "y": 520, "score": 47, "scoreAt": ["@score", 0, -0.1], "snapAt": "@verdict"},
-    {"type": "headline", "text": "WRECK", "col": "wreck", "at": "@verdict", "until": ["unless", 0, -0.1]},
-    {"type": "headline", "text": "WANT IT NOW?", "at": ["unless", 0, -0.1]}]},
-  {"line": 6, "bg": "paper", "real": true, "layers": [
-    {"type": "clip", "name": "hero", "x": 540, "y": 760, "w": 900, "at": 0},
-    {"type": "priceTag", "x": 560, "y": 1040, "text": "$1,049", "at": 0.1},
-    {"type": "headline", "text": "$1,049?", "col": "ember", "at": ["@loop", 0, -0.1]}]},
-  {"endcard": true, "bg": "paper", "layers": [{"type": "wordmark", "y": 900, "snapAt": 0.7}]}
- ]}
+  {
+   "line": 0,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "clip",
+     "name": "hero",
+     "x": 540,
+     "y": 760,
+     "w": 720,
+     "at": 0
+    },
+    {
+     "type": "priceTag",
+     "x": 560,
+     "y": 1110,
+     "text": "$1,349",
+     "at": [
+      "@p1349",
+      0,
+      0.2
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "RAN OUT",
+     "col": "wreck",
+     "at": -0.5,
+     "until": "@p1349"
+    },
+    {
+     "type": "headline",
+     "text": "$1,349",
+     "col": "ember",
+     "at": "@p1349",
+     "until": [
+      "wait",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "SOLD OUT?",
+     "at": [
+      "wait",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 1,
+   "bg": "lav",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "cube_front",
+     "x": 540,
+     "y": 900,
+     "w": 600,
+     "seed": 0.6
+    },
+    {
+     "type": "ssd",
+     "x": 540,
+     "y": 520,
+     "s": 0.8,
+     "at": [
+      "@tb",
+      0,
+      -0.2
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "WAITLIST",
+     "at": [
+      "waitlist",
+      0,
+      -0.1
+     ],
+     "until": "@tb"
+    },
+    {
+     "type": "headline",
+     "text": "2 TB",
+     "col": "ember",
+     "at": "@tb"
+    }
+   ]
+  },
+  {
+   "line": 1,
+   "from": "more",
+   "xfade": true,
+   "bg": "lav",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "cube_front",
+     "x": 540,
+     "y": 900,
+     "w": 600,
+     "seed": 0.6,
+     "move": {
+      "at": [
+       "build",
+       0,
+       -0.1
+      ],
+      "dur": 0.5,
+      "w": 560
+     }
+    },
+    {
+     "type": "toggle",
+     "x": 540,
+     "y": 520,
+     "flipAt": [
+      "@oos",
+      0,
+      -0.05
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "LINE > UNITS",
+     "at": [
+      "line",
+      0,
+      -0.1
+     ],
+     "until": [
+      "@oos",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "OUT OF STOCK",
+     "col": "wreck",
+     "at": [
+      "@oos",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 2,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "cube_34",
+     "x": 540,
+     "y": 900,
+     "w": 620,
+     "seed": 1.1
+    },
+    {
+     "type": "ssd",
+     "x": 540,
+     "y": 520,
+     "s": 0.8,
+     "at": [
+      "@gb512",
+      0,
+      -0.2
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "GOOD NEWS",
+     "at": [
+      "good",
+      0,
+      -0.1
+     ],
+     "until": "@gb512"
+    },
+    {
+     "type": "headline",
+     "text": "512 GB",
+     "col": "ember",
+     "at": "@gb512",
+     "until": [
+      "@buy",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "BUY NOW",
+     "col": "ink",
+     "at": [
+      "@buy",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 2,
+   "from": "ten",
+   "xfade": true,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "cube_34",
+     "x": 330,
+     "y": 1050,
+     "w": 420,
+     "seed": 1.1
+    },
+    {
+     "type": "priceTag",
+     "x": 780,
+     "y": 540,
+     "text": "$1,049",
+     "at": [
+      "@p1049",
+      0,
+      0.2
+     ]
+    },
+    {
+     "type": "number",
+     "value": 1049,
+     "prefix": "$",
+     "y": 380,
+     "show": "@p1049",
+     "at": "@p1049",
+     "until": [
+      "@days",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "3\u20135 DAYS",
+     "col": "ink",
+     "at": [
+      "@days",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 3,
+   "bg": "sand",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "cube_front",
+     "x": 540,
+     "y": 840,
+     "w": 560,
+     "seed": 0.6
+    },
+    {
+     "type": "ruler",
+     "x": 540,
+     "y": 1180,
+     "w": 560,
+     "n": 6,
+     "at": [
+      "@six",
+      0,
+      -0.2
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "TINY",
+     "at": [
+      "tiny",
+      0,
+      -0.1
+     ],
+     "until": "@six"
+    },
+    {
+     "type": "headline",
+     "text": "6-INCH CUBE",
+     "col": "ember",
+     "at": "@six"
+    }
+   ]
+  },
+  {
+   "line": 3,
+   "from": "sixteen",
+   "xfade": true,
+   "bg": "lav",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "cube_tv",
+     "x": 540,
+     "y": 990,
+     "w": 500,
+     "seed": 2.0
+    },
+    {
+     "type": "ramStick",
+     "x": 540,
+     "y": 560,
+     "s": 0.6,
+     "n": 2,
+     "at": [
+      "@ram",
+      0,
+      -0.15
+     ]
+    },
+    {
+     "type": "number",
+     "value": 16,
+     "unit": "GB RAM",
+     "comma": false,
+     "y": 330,
+     "px": 120,
+     "col": "ink",
+     "show": [
+      "@ram",
+      0,
+      -0.45
+     ],
+     "at": [
+      "@ram",
+      0,
+      -0.45
+     ]
+    }
+   ]
+  },
+  {
+   "line": 3,
+   "from": "plus",
+   "xfade": true,
+   "bg": "lav",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "cube_tv",
+     "x": 540,
+     "y": 990,
+     "w": 500,
+     "seed": 2.0
+    },
+    {
+     "type": "chipDie",
+     "x": 540,
+     "y": 560,
+     "s": 0.6,
+     "mode": "gpu",
+     "at": 0.05,
+     "fillAt": "@vram"
+    },
+    {
+     "type": "headline",
+     "text": "+8 GB VRAM",
+     "col": "ember",
+     "at": "@vram"
+    }
+   ]
+  },
+  {
+   "line": 3,
+   "from": "valve",
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "clip",
+     "name": "led",
+     "x": 540,
+     "y": 1040,
+     "w": 960,
+     "at": 0.1
+    },
+    {
+     "type": "bars",
+     "base": 760,
+     "h": 240,
+     "items": [
+      {
+       "value": 1,
+       "label": "DECK",
+       "sub": "",
+       "col": "stone",
+       "at": 0.3
+      },
+      {
+       "value": 6,
+       "label": "6\u00d7",
+       "sub": "MACHINE",
+       "col": "mari",
+       "at": "@x6"
+      }
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "VALVE SAYS",
+     "at": 0.05,
+     "until": "@x6"
+    },
+    {
+     "type": "headline",
+     "text": "6\u00d7 POWER",
+     "col": "ember",
+     "at": "@x6",
+     "until": [
+      "deck",
+      0,
+      0.6
+     ]
+    }
+   ]
+  },
+  {
+   "line": 4,
+   "bg": "blush",
+   "real": true,
+   "shake": 0.32,
+   "layers": [
+    {
+     "type": "product",
+     "img": "cube_34",
+     "x": 540,
+     "y": 980,
+     "w": 560,
+     "ltOffset": 5,
+     "fade": {
+      "at": 0,
+      "to": 0.45
+     }
+    },
+    {
+     "type": "stamp",
+     "text": "THE CATCH",
+     "y": 600,
+     "px": 100,
+     "at": [
+      "@catch",
+      0,
+      -0.2
+     ],
+     "sfx": false
+    }
+   ]
+  },
+  {
+   "line": 4,
+   "from": "memory",
+   "bg": "blush",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "cube_front",
+     "x": 540,
+     "y": 1000,
+     "w": 500,
+     "seed": 0.6
+    },
+    {
+     "type": "ramStick",
+     "x": 540,
+     "y": 560,
+     "s": 0.7,
+     "n": 3,
+     "at": 0.05
+    },
+    {
+     "type": "headline",
+     "text": "RAM PRICES UP",
+     "col": "wreck",
+     "at": [
+      "prices",
+      0,
+      -0.2
+     ]
+    }
+   ]
+  },
+  {
+   "line": 4,
+   "from": "valve",
+   "xfade": true,
+   "bg": "blush",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "cube_front",
+     "x": 540,
+     "y": 1030,
+     "w": 460,
+     "seed": 0.6
+    },
+    {
+     "type": "priceTag",
+     "x": 540,
+     "y": 460,
+     "text": "$?",
+     "at": [
+      "price",
+      0,
+      -0.2
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "HOW MANY?",
+     "at": [
+      "how",
+      0,
+      -0.1
+     ],
+     "until": [
+      "price",
+      0,
+      -0.2
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "WHAT PRICE?",
+     "col": "wreck",
+     "at": [
+      "price",
+      0,
+      -0.2
+     ]
+    }
+   ]
+  },
+  {
+   "line": 5,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "cube_pingpong",
+     "x": 540,
+     "y": 1050,
+     "w": 400,
+     "seed": 1.7,
+     "id": "pp",
+     "hide": [
+      "unless",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "product",
+     "id": "c34",
+     "img": "cube_34",
+     "x": 540,
+     "y": 1060,
+     "w": 420,
+     "seed": 1.1,
+     "show": [
+      "unless",
+      0,
+      -0.1
+     ],
+     "ltOffset": 0
+    },
+    {
+     "type": "callout",
+     "of": "c34",
+     "u": 0.5,
+     "v": 0.5,
+     "r": 160,
+     "at": [
+      "tiny",
+      0,
+      -0.1
+     ],
+     "overlap": true,
+     "show": [
+      "tiny",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "wordmark",
+     "y": 520,
+     "score": 47,
+     "scoreAt": [
+      "@score",
+      0,
+      -0.1
+     ],
+     "snapAt": "@verdict"
+    },
+    {
+     "type": "headline",
+     "text": "WRECK",
+     "col": "wreck",
+     "at": "@verdict",
+     "until": [
+      "unless",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "WANT IT NOW?",
+     "at": [
+      "unless",
+      0,
+      -0.1
+     ],
+     "until": [
+      "tiny",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "TINY BOX, TODAY",
+     "col": "ember",
+     "at": [
+      "tiny",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 6,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "clip",
+     "name": "hero",
+     "x": 540,
+     "y": 760,
+     "w": 720,
+     "at": 0
+    },
+    {
+     "type": "priceTag",
+     "x": 560,
+     "y": 1110,
+     "text": "$1,049",
+     "at": 0.1
+    },
+    {
+     "type": "headline",
+     "text": "$1,049?",
+     "col": "ember",
+     "at": [
+      "@loop",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "endcard": true,
+   "bg": "paper",
+   "layers": [
+    {
+     "type": "wordmark",
+     "y": 900,
+     "snapAt": 0.7
+    }
+   ]
+  }
+ ]
+}
