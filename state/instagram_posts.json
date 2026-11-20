@@ -427,5 +427,16 @@
   "youtube": "https://youtube.com/shorts/5LGZJk7EOck",
   "permalink": "https://www.instagram.com/reel/Df9ooAYAUeC/",
   "status": "published 2026-11-20 ~5:55 PM IST (late: follow-up step was missed; posted by main session)"
+ },
+ {
+  "date": "2026-11-20",
+  "type": "reel_crosspost",
+  "category": "wearables",
+  "topic": "Honor Watch 6 Pro 5,500 nits, no ECG in UK/EU (YouTube Short wKX8fpAYt-o)",
+  "posted_by": "instagram session (autonomous)",
+  "ai_label": true,
+  "permalink": "https://www.instagram.com/reel/Df9uyBBgL9G/",
+  "mediaId": "18074952482788551",
+  "note": "custom cover not supported by vidiq_instagram_publish_reel"
  }
 ]
