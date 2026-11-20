@@ -256,6 +256,14 @@
    "saves": 1,
    "watched_pct": 34.6,
    "skip_rate": 46.9
+  },
+  "stats_2026-11-20": {
+   "plays": 1045,
+   "likes": 31,
+   "shares": 1,
+   "saves": 1,
+   "watched_pct": 33.9,
+   "skip_rate": 47.3
   }
  },
  {
@@ -291,7 +299,14 @@
   "posted_by": "instagram session (owner standing instruction: post directly)",
   "ai_label": true,
   "permalink": "https://www.instagram.com/reel/Df6jMh0mT18/",
-  "mediaId": "17996212356100156"
+  "mediaId": "17996212356100156",
+  "stats_2026-11-20": {
+   "plays": 718,
+   "likes": 15,
+   "saves": 3,
+   "watched_pct": 19.7,
+   "skip_rate": 42.6
+  }
  },
  {
   "date": "2026-11-19",
@@ -326,7 +341,13 @@
   "posted_by": "instagram session (owner standing instruction: post directly)",
   "ai_label": true,
   "permalink": "https://www.instagram.com/reel/Df67L3Lj9qm/",
-  "mediaId": "18238422031319744"
+  "mediaId": "18238422031319744",
+  "stats_2026-11-20": {
+   "plays": 128,
+   "likes": 0,
+   "watched_pct": 12.7,
+   "skip_rate": 61.1
+  }
  },
  {
   "date": "2026-11-19",
@@ -335,6 +356,15 @@
   "posted_by": "instagram session (owner standing instruction: post directly)",
   "ai_label": true,
   "permalink": "https://www.instagram.com/reel/Df7J7JKIVIo/",
-  "mediaId": "18016221318003984"
+  "mediaId": "18016221318003984",
+  "stats_2026-11-20": {
+   "plays": 1573,
+   "likes": 37,
+   "comments": 1,
+   "shares": 2,
+   "saves": 4,
+   "watched_pct": 25.5,
+   "skip_rate": 30.5
+  }
  }
 ]
