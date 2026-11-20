@@ -391,5 +391,31 @@
    "slot_time": "10:17",
    "caption_length": "medium"
   }
+ },
+ {
+  "date": "2026-11-20",
+  "slot": "13:43 IST",
+  "type": "single",
+  "topic": "Tesla pulls $41,990 Model Y AWD; cheapest AWD now $49,990 (+$8,000, +19%)",
+  "status": "draft, awaiting owner OK",
+  "postId": "72d0bddb-1e57-4b4c-b675-b1da0855c2e7",
+  "revision": "6e148875",
+  "slides": 1,
+  "category": "EVs & cars",
+  "sources": [
+   "https://www.kbb.com/car-news/tesla-drops-cheapest-awd-model-y-bumping-dual-motor-price-to-over-50000/",
+   "https://www.autoguide.com/auto/manufacturers/tesla-manufacturers/the-tesla-model-y-dual-motor-now-costs-a-lot-more-44642200",
+   "https://www.electrive.com/2026/11/16/price-jump-for-tesla-model-y-awd-base-trim-no-longer-available/"
+  ],
+  "images": "Tesla official (digitalassets.tesla.com)",
+  "test_vars": {
+   "format": "single (format mix)",
+   "cover_angle": "price jump",
+   "topic_type": "EV price",
+   "slide_count": 1,
+   "meme": false,
+   "slot_time": "13:43",
+   "caption_length": "medium"
+  }
  }
 ]
