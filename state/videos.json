@@ -208,12 +208,19 @@
   "slug": "sow012-google-assistant-nest-gemini",
   "title": "Google Just Set an END Date for Assistant on Nest \ud83d\ude33",
   "format": "short",
-  "status": "scripted",
+  "status": "scheduled",
   "slot": "1",
   "date": "2026-11-21",
   "scripted_at": "2026-11-21T00:35Z",
   "publish_at": "2026-11-21T07:30:00Z",
   "verdict": "SPEC 60",
-  "hypothesis": "'END date' / loss-aversion framing on a device millions already own (Nest speakers) vs new-product launches; tests whether owner-impact news beats price-shock titles."
+  "hypothesis": "'END date' / loss-aversion framing on a device millions already own (Nest speakers) vs new-product launches; tests whether owner-impact news beats price-shock titles.",
+  "id": "sSWTIJhSTXM",
+  "privacy": "private\u2192public 2026-11-21T07:30:00Z",
+  "uploaded_at": "2026-11-21T00:40Z",
+  "size_mb": 18.4,
+  "duration_s": 66.6,
+  "url": "https://youtube.com/shorts/sSWTIJhSTXM",
+  "comment": "pending (post after public)"
  }
 ]
