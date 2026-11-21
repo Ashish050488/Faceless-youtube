@@ -1,0 +1,898 @@
+[
+{
+"w": "Google",
+"start": 0.0,
+"end": 0.56,
+"line": 0,
+"brk": false
+},
+{
+"w": "Assistant",
+"start": 0.56,
+"end": 1.22,
+"line": 0,
+"brk": false
+},
+{
+"w": "just",
+"start": 1.22,
+"end": 1.72,
+"line": 0,
+"brk": false
+},
+{
+"w": "got",
+"start": 1.72,
+"end": 1.98,
+"line": 0,
+"brk": false
+},
+{
+"w": "an",
+"start": 1.98,
+"end": 2.14,
+"line": 0,
+"brk": false
+},
+{
+"w": "end",
+"start": 2.14,
+"end": 2.42,
+"line": 0,
+"brk": false
+},
+{
+"w": "date.",
+"start": 2.42,
+"end": 2.86,
+"line": 0,
+"brk": true
+},
+{
+"w": "On",
+"start": 3.58,
+"end": 3.6,
+"line": 0,
+"brk": false
+},
+{
+"w": "your",
+"start": 3.6,
+"end": 3.76,
+"line": 0,
+"brk": false
+},
+{
+"w": "Nest",
+"start": 3.76,
+"end": 3.98,
+"line": 0,
+"brk": false
+},
+{
+"w": "speaker.",
+"start": 3.98,
+"end": 4.52,
+"line": 0,
+"brk": true
+},
+{
+"w": "Wait,",
+"start": 5.38,
+"end": 5.6,
+"line": 0,
+"brk": true
+},
+{
+"w": "really?",
+"start": 5.8,
+"end": 6.02,
+"line": 0,
+"brk": true
+},
+{
+"w": "Yep.",
+"start": 6.86,
+"end": 7.18,
+"line": 1,
+"brk": true
+},
+{
+"w": "Google",
+"start": 8.2,
+"end": 8.2,
+"line": 1,
+"brk": false
+},
+{
+"w": "says",
+"start": 8.2,
+"end": 8.56,
+"line": 1,
+"brk": false
+},
+{
+"w": "it's",
+"start": 8.56,
+"end": 8.94,
+"line": 1,
+"brk": false
+},
+{
+"w": "retiring",
+"start": 8.94,
+"end": 9.38,
+"line": 1,
+"brk": false
+},
+{
+"w": "Assistant",
+"start": 9.38,
+"end": 10.04,
+"line": 1,
+"brk": false
+},
+{
+"w": "on",
+"start": 10.04,
+"end": 10.6,
+"line": 1,
+"brk": false
+},
+{
+"w": "every",
+"start": 10.6,
+"end": 11.02,
+"line": 1,
+"brk": false
+},
+{
+"w": "speaker",
+"start": 11.02,
+"end": 11.6,
+"line": 1,
+"brk": false
+},
+{
+"w": "and",
+"start": 11.6,
+"end": 12.06,
+"line": 1,
+"brk": false
+},
+{
+"w": "smart",
+"start": 12.06,
+"end": 12.4,
+"line": 1,
+"brk": false
+},
+{
+"w": "display.",
+"start": 12.4,
+"end": 12.96,
+"line": 1,
+"brk": true
+},
+{
+"w": "The",
+"start": 13.56,
+"end": 13.72,
+"line": 1,
+"brk": false
+},
+{
+"w": "date?",
+"start": 13.72,
+"end": 14.14,
+"line": 1,
+"brk": true
+},
+{
+"w": "August",
+"start": 15.2,
+"end": 15.2,
+"line": 1,
+"brk": false
+},
+{
+"w": "second,",
+"start": 15.71,
+"end": 16.22,
+"line": 1,
+"brk": true
+},
+{
+"w": "twenty",
+"start": 16.22,
+"end": 16.553,
+"line": 1,
+"brk": false
+},
+{
+"w": "twenty-seven.",
+"start": 16.553,
+"end": 17.22,
+"line": 1,
+"brk": true
+},
+{
+"w": "Here's",
+"start": 17.92,
+"end": 18.34,
+"line": 2,
+"brk": false
+},
+{
+"w": "what",
+"start": 18.34,
+"end": 18.48,
+"line": 2,
+"brk": false
+},
+{
+"w": "replaces",
+"start": 18.48,
+"end": 18.98,
+"line": 2,
+"brk": false
+},
+{
+"w": "it.",
+"start": 18.98,
+"end": 19.52,
+"line": 2,
+"brk": true
+},
+{
+"w": "Gemini",
+"start": 19.98,
+"end": 20.32,
+"line": 2,
+"brk": false
+},
+{
+"w": "for",
+"start": 20.32,
+"end": 20.72,
+"line": 2,
+"brk": false
+},
+{
+"w": "Home.",
+"start": 20.72,
+"end": 21.04,
+"line": 2,
+"brk": true
+},
+{
+"w": "You",
+"start": 21.68,
+"end": 21.88,
+"line": 2,
+"brk": false
+},
+{
+"w": "just",
+"start": 21.88,
+"end": 22.08,
+"line": 2,
+"brk": false
+},
+{
+"w": "talk",
+"start": 22.08,
+"end": 22.38,
+"line": 2,
+"brk": false
+},
+{
+"w": "normally,",
+"start": 22.38,
+"end": 22.92,
+"line": 2,
+"brk": true
+},
+{
+"w": "no",
+"start": 23.36,
+"end": 23.6,
+"line": 2,
+"brk": false
+},
+{
+"w": "special",
+"start": 23.6,
+"end": 24.08,
+"line": 2,
+"brk": false
+},
+{
+"w": "commands.",
+"start": 24.08,
+"end": 24.6,
+"line": 2,
+"brk": true
+},
+{
+"w": "Google",
+"start": 25.5,
+"end": 25.82,
+"line": 2,
+"brk": false
+},
+{
+"w": "says",
+"start": 25.82,
+"end": 26.18,
+"line": 2,
+"brk": false
+},
+{
+"w": "the",
+"start": 26.18,
+"end": 26.4,
+"line": 2,
+"brk": false
+},
+{
+"w": "upgrade's",
+"start": 26.4,
+"end": 27.2,
+"line": 2,
+"brk": false
+},
+{
+"w": "free,",
+"start": 27.2,
+"end": 27.54,
+"line": 2,
+"brk": true
+},
+{
+"w": "and",
+"start": 27.88,
+"end": 28.24,
+"line": 2,
+"brk": false
+},
+{
+"w": "every",
+"start": 28.24,
+"end": 28.68,
+"line": 2,
+"brk": false
+},
+{
+"w": "device",
+"start": 28.68,
+"end": 29.24,
+"line": 2,
+"brk": false
+},
+{
+"w": "supported",
+"start": 29.24,
+"end": 29.8,
+"line": 2,
+"brk": false
+},
+{
+"w": "today",
+"start": 29.8,
+"end": 30.36,
+"line": 2,
+"brk": false
+},
+{
+"w": "keeps",
+"start": 30.36,
+"end": 30.72,
+"line": 2,
+"brk": false
+},
+{
+"w": "working.",
+"start": 30.72,
+"end": 31.3,
+"line": 2,
+"brk": true
+},
+{
+"w": "Oh,",
+"start": 31.64,
+"end": 31.98,
+"line": 2,
+"brk": true
+},
+{
+"w": "and",
+"start": 31.98,
+"end": 32.32,
+"line": 2,
+"brk": false
+},
+{
+"w": "the",
+"start": 32.32,
+"end": 32.44,
+"line": 2,
+"brk": false
+},
+{
+"w": "Nest",
+"start": 32.44,
+"end": 32.7,
+"line": 2,
+"brk": false
+},
+{
+"w": "app?",
+"start": 32.7,
+"end": 33.08,
+"line": 2,
+"brk": true
+},
+{
+"w": "It",
+"start": 33.74,
+"end": 33.88,
+"line": 2,
+"brk": false
+},
+{
+"w": "shuts",
+"start": 33.88,
+"end": 34.2,
+"line": 2,
+"brk": false
+},
+{
+"w": "down",
+"start": 34.2,
+"end": 34.68,
+"line": 2,
+"brk": false
+},
+{
+"w": "on",
+"start": 34.68,
+"end": 34.9,
+"line": 2,
+"brk": false
+},
+{
+"w": "January",
+"start": 34.9,
+"end": 35.34,
+"line": 2,
+"brk": false
+},
+{
+"w": "twenty-fifth.",
+"start": 35.86,
+"end": 36.9,
+"line": 2,
+"brk": true
+},
+{
+"w": "Here's",
+"start": 36.9,
+"end": 37.2,
+"line": 3,
+"brk": false
+},
+{
+"w": "the",
+"start": 37.2,
+"end": 37.36,
+"line": 3,
+"brk": false
+},
+{
+"w": "catch.",
+"start": 37.36,
+"end": 37.68,
+"line": 3,
+"brk": true
+},
+{
+"w": "Once",
+"start": 38.46,
+"end": 38.66,
+"line": 3,
+"brk": false
+},
+{
+"w": "you",
+"start": 38.66,
+"end": 38.9,
+"line": 3,
+"brk": false
+},
+{
+"w": "switch,",
+"start": 38.9,
+"end": 39.2,
+"line": 3,
+"brk": true
+},
+{
+"w": "you",
+"start": 39.56,
+"end": 39.64,
+"line": 3,
+"brk": false
+},
+{
+"w": "can't",
+"start": 39.64,
+"end": 39.98,
+"line": 3,
+"brk": false
+},
+{
+"w": "switch",
+"start": 39.98,
+"end": 40.18,
+"line": 3,
+"brk": false
+},
+{
+"w": "back.",
+"start": 40.18,
+"end": 40.58,
+"line": 3,
+"brk": true
+},
+{
+"w": "The",
+"start": 41.22,
+"end": 41.36,
+"line": 3,
+"brk": false
+},
+{
+"w": "chatty",
+"start": 41.36,
+"end": 41.84,
+"line": 3,
+"brk": false
+},
+{
+"w": "Gemini",
+"start": 41.84,
+"end": 42.18,
+"line": 3,
+"brk": false
+},
+{
+"w": "Live",
+"start": 42.18,
+"end": 42.66,
+"line": 3,
+"brk": false
+},
+{
+"w": "needs",
+"start": 42.66,
+"end": 43.36,
+"line": 3,
+"brk": false
+},
+{
+"w": "a",
+"start": 43.36,
+"end": 43.58,
+"line": 3,
+"brk": false
+},
+{
+"w": "ten-dollar",
+"start": 43.58,
+"end": 44.0,
+"line": 3,
+"brk": false
+},
+{
+"w": "monthly",
+"start": 44.0,
+"end": 44.8,
+"line": 3,
+"brk": false
+},
+{
+"w": "plan.",
+"start": 44.8,
+"end": 45.36,
+"line": 3,
+"brk": true
+},
+{
+"w": "And",
+"start": 45.98,
+"end": 46.18,
+"line": 3,
+"brk": false
+},
+{
+"w": "the",
+"start": 46.18,
+"end": 46.32,
+"line": 3,
+"brk": false
+},
+{
+"w": "original",
+"start": 46.32,
+"end": 46.86,
+"line": 3,
+"brk": false
+},
+{
+"w": "Google",
+"start": 46.86,
+"end": 47.26,
+"line": 3,
+"brk": false
+},
+{
+"w": "Home",
+"start": 47.26,
+"end": 47.84,
+"line": 3,
+"brk": false
+},
+{
+"w": "doesn't",
+"start": 47.84,
+"end": 48.5,
+"line": 3,
+"brk": false
+},
+{
+"w": "get",
+"start": 48.5,
+"end": 48.64,
+"line": 3,
+"brk": false
+},
+{
+"w": "it",
+"start": 48.64,
+"end": 48.76,
+"line": 3,
+"brk": false
+},
+{
+"w": "at",
+"start": 48.76,
+"end": 48.88,
+"line": 3,
+"brk": false
+},
+{
+"w": "all.",
+"start": 48.88,
+"end": 49.22,
+"line": 3,
+"brk": true
+},
+{
+"w": "By",
+"start": 49.61,
+"end": 50.0,
+"line": 4,
+"brk": false
+},
+{
+"w": "our",
+"start": 50.0,
+"end": 50.18,
+"line": 4,
+"brk": false
+},
+{
+"w": "score?",
+"start": 50.18,
+"end": 50.54,
+"line": 4,
+"brk": true
+},
+{
+"w": "Sixty",
+"start": 51.4,
+"end": 51.76,
+"line": 4,
+"brk": false
+},
+{
+"w": "out",
+"start": 51.76,
+"end": 52.06,
+"line": 4,
+"brk": false
+},
+{
+"w": "of",
+"start": 52.06,
+"end": 52.26,
+"line": 4,
+"brk": false
+},
+{
+"w": "a",
+"start": 52.38,
+"end": 52.5,
+"line": 4,
+"brk": false
+},
+{
+"w": "hundred.",
+"start": 52.5,
+"end": 52.74,
+"line": 4,
+"brk": true
+},
+{
+"w": "Spec!",
+"start": 53.71,
+"end": 54.68,
+"line": 4,
+"brk": true
+},
+{
+"w": "If",
+"start": 54.68,
+"end": 54.84,
+"line": 4,
+"brk": false
+},
+{
+"w": "you",
+"start": 54.84,
+"end": 55.02,
+"line": 4,
+"brk": false
+},
+{
+"w": "want",
+"start": 55.02,
+"end": 55.3,
+"line": 4,
+"brk": false
+},
+{
+"w": "smarter",
+"start": 55.3,
+"end": 55.8,
+"line": 4,
+"brk": false
+},
+{
+"w": "answers.",
+"start": 55.8,
+"end": 56.48,
+"line": 4,
+"brk": true
+},
+{
+"w": "Not",
+"start": 57.09,
+"end": 57.42,
+"line": 4,
+"brk": false
+},
+{
+"w": "if",
+"start": 57.42,
+"end": 57.62,
+"line": 4,
+"brk": false
+},
+{
+"w": "you",
+"start": 57.62,
+"end": 57.8,
+"line": 4,
+"brk": false
+},
+{
+"w": "loved",
+"start": 57.8,
+"end": 58.16,
+"line": 4,
+"brk": false
+},
+{
+"w": "simple",
+"start": 58.16,
+"end": 58.64,
+"line": 4,
+"brk": false
+},
+{
+"w": "commands.",
+"start": 58.64,
+"end": 59.34,
+"line": 4,
+"brk": true
+},
+{
+"w": "Be",
+"start": 59.98,
+"end": 60.12,
+"line": 5,
+"brk": false
+},
+{
+"w": "honest.",
+"start": 60.12,
+"end": 60.56,
+"line": 5,
+"brk": true
+},
+{
+"w": "Would",
+"start": 61.36,
+"end": 61.48,
+"line": 5,
+"brk": false
+},
+{
+"w": "you",
+"start": 61.48,
+"end": 61.68,
+"line": 5,
+"brk": false
+},
+{
+"w": "keep",
+"start": 61.68,
+"end": 61.94,
+"line": 5,
+"brk": false
+},
+{
+"w": "the",
+"start": 61.94,
+"end": 62.16,
+"line": 5,
+"brk": false
+},
+{
+"w": "old",
+"start": 62.16,
+"end": 62.46,
+"line": 5,
+"brk": false
+},
+{
+"w": "Assistant",
+"start": 62.46,
+"end": 62.94,
+"line": 5,
+"brk": false
+},
+{
+"w": "if",
+"start": 62.94,
+"end": 63.36,
+"line": 5,
+"brk": false
+},
+{
+"w": "you",
+"start": 63.36,
+"end": 63.54,
+"line": 5,
+"brk": false
+},
+{
+"w": "could?",
+"start": 63.54,
+"end": 63.84,
+"line": 5,
+"brk": true
+}
+]
