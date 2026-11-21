@@ -1,0 +1,18 @@
+[
+ {"cue": "end", "line": 0, "word": "end"},
+ {"cue": "really", "line": 0, "word": "really"},
+ {"cue": "retire", "line": 1, "word": "retiring"},
+ {"cue": "aug", "line": 1, "word": "august"},
+ {"cue": "gemini", "line": 2, "word": "gemini"},
+ {"cue": "talk", "line": 2, "word": "talk"},
+ {"cue": "free", "line": 2, "word": "free"},
+ {"cue": "app", "line": 2, "word": "app"},
+ {"cue": "jan", "line": 2, "word": "january"},
+ {"cue": "catch", "line": 3, "word": "catch"},
+ {"cue": "back", "line": 3, "word": "back"},
+ {"cue": "ten", "line": 3, "word": "ten-dollar", "offset": -0.05},
+ {"cue": "og", "line": 3, "word": "doesn't"},
+ {"cue": "score", "line": 4, "word": "sixty"},
+ {"cue": "verdict", "line": 4, "word": "spec"},
+ {"cue": "loop", "line": 5, "word": "keep"}
+]

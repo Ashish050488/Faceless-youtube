@@ -1,0 +1,765 @@
+{
+ "slug": "sow012-google-assistant-nest-gemini",
+ "plan": "plan.json",
+ "thumb": {
+  "img": "mini_blue",
+  "thumbImg": "hub_clock",
+  "bg": "mari",
+  "tilt": -5,
+  "a": {
+   "words": "BYE BYE?",
+   "num": "AUG 2027",
+   "emotion": "x"
+  },
+  "b": {
+   "words": "NO WAY BACK?",
+   "num": "$10/MO",
+   "emotion": "arrow"
+  }
+ },
+ "scenes": [
+  {
+   "line": 0,
+   "bg": "mari",
+   "real": true,
+   "layers": [
+    {
+     "type": "poster",
+     "until": [
+      "@end",
+      0,
+      -0.1
+     ],
+     "overlap": true
+    },
+    {
+     "type": "product",
+     "img": "hub_clock",
+     "x": 540,
+     "y": 1000,
+     "w": 760,
+     "seed": 0.4,
+     "show": [
+      "@end",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "calendar",
+     "x": 540,
+     "y": 560,
+     "month": "AUG",
+     "year": "2027",
+     "show": [
+      "@end",
+      0,
+      -0.1
+     ],
+     "at": [
+      "@end",
+      0,
+      -0.05
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "END DATE",
+     "at": [
+      "@end",
+      0,
+      -0.1
+     ],
+     "col": "ink"
+    }
+   ]
+  },
+  {
+   "line": 0,
+   "from": "on",
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "mini_blue",
+     "x": 540,
+     "y": 900,
+     "w": 540,
+     "seed": 1.1
+    },
+    {
+     "type": "waves",
+     "x": 540,
+     "y": 520,
+     "at": 0.05
+    },
+    {
+     "type": "headline",
+     "text": "YOUR NEST",
+     "at": 0.05
+    }
+   ]
+  },
+  {
+   "line": 0,
+   "from": "wait",
+   "xfade": true,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "mini_blue",
+     "x": 540,
+     "y": 980,
+     "w": 540,
+     "seed": 1.1
+    },
+    {
+     "type": "questionStamp",
+     "x": 540,
+     "y": 560,
+     "s": 0.7,
+     "at": [
+      "@really",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "REALLY?",
+     "col": "ember",
+     "at": [
+      "@really",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 1,
+   "bg": "lav",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "spk_porcelain",
+     "x": 540,
+     "y": 930,
+     "w": 600,
+     "seed": 0.7
+    },
+    {
+     "type": "toggle",
+     "x": 540,
+     "y": 520,
+     "flipAt": [
+      "@retire",
+      0,
+      0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "RETIRING",
+     "col": "wreck",
+     "at": [
+      "@retire",
+      0,
+      -0.1
+     ],
+     "until": [
+      "every",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "EVERY SPEAKER",
+     "at": [
+      "every",
+      0,
+      -0.1
+     ]
+    }
+   ],
+   "xfade": true
+  },
+  {
+   "line": 1,
+   "from": "date",
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "hub_clock",
+     "x": 540,
+     "y": 1070,
+     "w": 560,
+     "seed": 0.4
+    },
+    {
+     "type": "calendar",
+     "x": 540,
+     "y": 600,
+     "month": "AUG",
+     "year": "2027",
+     "at": [
+      "@aug",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "THE DATE?",
+     "at": 0.05,
+     "until": [
+      "@aug",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "AUG 2, 2027",
+     "col": "ember",
+     "at": [
+      "@aug",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "number",
+     "value": 254,
+     "unit": "DAYS LEFT",
+     "comma": false,
+     "y": 830,
+     "px": 84,
+     "col": "ink",
+     "show": [
+      "august",
+      0,
+      0.2
+     ],
+     "at": [
+      "august",
+      0,
+      0.2
+     ]
+    }
+   ]
+  },
+  {
+   "line": 2,
+   "bg": "lav",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "hub_home",
+     "x": 540,
+     "y": 1020,
+     "w": 680,
+     "seed": 0.9
+    },
+    {
+     "type": "speechBubble",
+     "x": 540,
+     "y": 620,
+     "text": "GEMINI",
+     "w": 440,
+     "h": 170,
+     "at": [
+      "@gemini",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "REPLACED BY",
+     "at": [
+      "replaces",
+      0,
+      -0.2
+     ],
+     "until": [
+      "@gemini",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "GEMINI FOR HOME",
+     "col": "ember",
+     "at": [
+      "@gemini",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 2,
+   "from": "you",
+   "xfade": true,
+   "bg": "lav",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "spk_porcelain",
+     "x": 540,
+     "y": 1000,
+     "w": 560,
+     "seed": 0.7
+    },
+    {
+     "type": "speechBubble",
+     "x": 540,
+     "y": 560,
+     "wavy": true,
+     "w": 560,
+     "h": 200,
+     "at": [
+      "@talk",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "TALK NORMALLY",
+     "at": [
+      "@talk",
+      0,
+      -0.1
+     ],
+     "until": [
+      "no",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "NO COMMANDS",
+     "col": "ember",
+     "at": [
+      "no",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 2,
+   "from": "google",
+   "bg": "sand",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "spk_red",
+     "x": 540,
+     "y": 1010,
+     "w": 540,
+     "seed": 1.4
+    },
+    {
+     "type": "priceTag",
+     "x": 540,
+     "y": 400,
+     "text": "FREE",
+     "at": [
+      "@free",
+      0,
+      0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "UPGRADE",
+     "at": [
+      "upgrade's",
+      0,
+      -0.1
+     ],
+     "until": [
+      "every",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "STILL WORKS",
+     "at": [
+      "every",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 2,
+   "from": "oh",
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "hub_home",
+     "x": 540,
+     "y": 1060,
+     "w": 560,
+     "seed": 0.9
+    },
+    {
+     "type": "appTile",
+     "x": 540,
+     "y": 600,
+     "s": 0.8,
+     "label": "NEST APP",
+     "at": [
+      "@app",
+      0,
+      -0.15
+     ]
+    },
+    {
+     "type": "crossMark",
+     "x": 540,
+     "y": 580,
+     "s": 0.8,
+     "at": [
+      "shuts",
+      0,
+      -0.05
+     ],
+     "overlap": true
+    },
+    {
+     "type": "headline",
+     "text": "NEST APP?",
+     "at": [
+      "@app",
+      0,
+      -0.2
+     ],
+     "until": [
+      "@jan",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "JAN 25, 2027",
+     "col": "wreck",
+     "at": [
+      "@jan",
+      0,
+      -0.1
+     ]
+    }
+   ],
+   "xfade": true
+  },
+  {
+   "line": 3,
+   "bg": "blush",
+   "real": true,
+   "shake": 0.32,
+   "layers": [
+    {
+     "type": "product",
+     "img": "mini_blue",
+     "x": 540,
+     "y": 980,
+     "w": 480,
+     "ltOffset": 5,
+     "fade": {
+      "at": 0,
+      "to": 0.45
+     }
+    },
+    {
+     "type": "stamp",
+     "text": "THE CATCH",
+     "y": 600,
+     "px": 100,
+     "at": [
+      "@catch",
+      0,
+      -0.2
+     ],
+     "sfx": false
+    }
+   ]
+  },
+  {
+   "line": 3,
+   "from": "once",
+   "bg": "blush",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "hub_clock",
+     "x": 540,
+     "y": 1060,
+     "w": 600,
+     "seed": 0.4
+    },
+    {
+     "type": "toggle",
+     "x": 540,
+     "y": 540,
+     "flipAt": [
+      "switch",
+      0,
+      0.0
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "SWITCH ONCE",
+     "at": 0.05,
+     "until": [
+      "@back",
+      0,
+      -0.4
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "NO GOING BACK",
+     "col": "wreck",
+     "at": [
+      "@back",
+      0,
+      -0.4
+     ]
+    }
+   ]
+  },
+  {
+   "line": 3,
+   "from": "chatty",
+   "xfade": true,
+   "bg": "blush",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "spk_black",
+     "x": 540,
+     "y": 1010,
+     "w": 540,
+     "seed": 2.0
+    },
+    {
+     "type": "priceTag",
+     "x": 540,
+     "y": 440,
+     "text": "$10/MO",
+     "at": [
+      "@ten",
+      0,
+      0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "GEMINI LIVE",
+     "at": 0.05,
+     "until": "@ten"
+    },
+    {
+     "type": "headline",
+     "text": "$10 A MONTH",
+     "col": "ember",
+     "at": "@ten"
+    }
+   ]
+  },
+  {
+   "line": 3,
+   "from": "original",
+   "xfade": true,
+   "bg": "blush",
+   "real": false,
+   "layers": [
+    {
+     "type": "speechBubble",
+     "x": 540,
+     "y": 760,
+     "text": "GEMINI LIVE",
+     "w": 620,
+     "h": 200,
+     "at": 0.05
+    },
+    {
+     "type": "crossMark",
+     "x": 540,
+     "y": 760,
+     "s": 1.0,
+     "at": [
+      "@og",
+      0,
+      0
+     ],
+     "overlap": true
+    },
+    {
+     "type": "headline",
+     "text": "ORIGINAL HOME",
+     "at": 0.05,
+     "until": [
+      "@og",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "NOT AT ALL",
+     "col": "wreck",
+     "at": [
+      "@og",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 4,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "spk_porcelain",
+     "x": 540,
+     "y": 1070,
+     "w": 420,
+     "seed": 0.7
+    },
+    {
+     "type": "wordmark",
+     "y": 540,
+     "score": 60,
+     "scoreAt": [
+      "@score",
+      0,
+      -0.1
+     ],
+     "snapAt": "@verdict"
+    },
+    {
+     "type": "headline",
+     "text": "SPEC",
+     "col": "ember",
+     "at": "@verdict",
+     "until": [
+      "if",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "SMARTER",
+     "at": [
+      "if",
+      0,
+      -0.1
+     ],
+     "until": [
+      "not",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "COMMANDS? NO",
+     "col": "wreck",
+     "at": [
+      "not",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 5,
+   "bg": "mari",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "hub_clock",
+     "x": 540,
+     "y": 1000,
+     "w": 760,
+     "seed": 0.4
+    },
+    {
+     "type": "calendar",
+     "x": 540,
+     "y": 560,
+     "month": "AUG",
+     "year": "2027",
+     "at": 0.05
+    },
+    {
+     "type": "headline",
+     "text": "BE HONEST",
+     "at": 0.05,
+     "until": [
+      "@loop",
+      0,
+      -0.1
+     ],
+     "col": "ink"
+    },
+    {
+     "type": "headline",
+     "text": "KEEP OLD ONE?",
+     "at": [
+      "@loop",
+      0,
+      -0.1
+     ],
+     "col": "ink"
+    }
+   ]
+  },
+  {
+   "endcard": true,
+   "bg": "paper",
+   "layers": [
+    {
+     "type": "wordmark",
+     "y": 900,
+     "snapAt": 0.7
+    }
+   ]
+  }
+ ]
+}

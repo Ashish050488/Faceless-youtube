@@ -24,6 +24,7 @@ Every object is drawn once, saved here, and reused by every future video. Before
 | `text.js` | label, headline, counter, bigWord, stamp, wordmark, pill |
 | `motion.js` | easing/spring helpers (not objects) |
 | `compute.js` | chips and PC parts: chipDie, ramStick, fan, ssd, miniPc, consoleTower (gpuCard: not drawn yet) |
+| `ui.js` | interface pieces: speechBubble, appTile |
 | `emotion.js` | poster/scene emotion objects: crossMark, questionStamp, arrowPointer |
 | `media.js` | discs, game cases, downloads: disc, gameCase, dvdStack, downloadBar |
 | `ports.js` (add) | usbPort (A/C), audioJack, ethernetPort, hdmiPort |
@@ -71,4 +72,6 @@ Every object is drawn once, saved here, and reused by every future video. Before
 | questionStamp | emotion.js | round marigold "?" stamp | slams + tilt | open question, curiosity gap (poster emotion `q`) |
 | arrowPointer | emotion.js | fat curved red arrow, `angle` = direction | slides in | point at the catch (poster emotion `arrow`) |
 | poster | ../poster.js | §9 poster: huge product + 1–3 huge words + accent number + one emotion object | gentle tilt float | frame 1 (layer `poster`), cover.jpg, thumbnail.jpg (A/B) |
+| speechBubble | ui.js | rounded bubble + tail (`tail` left/right), `text` inside or `wavy` lines | pops in; wavy lines draw on | talking, voice assistants, quotes-free "says" |
+| appTile | ui.js | generic rounded app icon (house glyph, not a brand icon) + `label` | pops in | apps shutting down/moving, "the X app" |
 

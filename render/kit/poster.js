@@ -43,7 +43,7 @@ function draw(ctx, fmt, th, v, IMG, K, { lt = 9, bg = true } = {}) {
   const tilt = (th.tilt ?? -4) * Math.PI / 180 + 0.004 * Math.sin(lt * 1.1);
   // ---- product (whole, never cropped): cover ≥ 60 % height, thumb ≥ 55 % width (as far as the aspect allows)
   let pw, ph, cx, cy;
-  if (fmt === 'cover') { const maxW = W - 2 * 54, maxH = H * 0.64; ph = maxH; pw = ph * im.width / im.height; if (pw > maxW) { pw = maxW; ph = pw * im.height / im.width; } cx = W / 2; cy = H - 70 - ph / 2; }
+  if (fmt === 'cover') { const maxW = W - 2 * 54 - 90, maxH = H * 0.64; /* − room for the tilt */ ph = maxH; pw = ph * im.width / im.height; if (pw > maxW) { pw = maxW; ph = pw * im.height / im.width; } cx = W / 2; cy = H - 70 - ph / 2; }
   else { const maxW = W * 0.56, maxH = H - 60; pw = maxW; ph = pw * im.height / im.width; if (ph > maxH) { ph = maxH; pw = ph * im.width / im.height; } cx = W - 40 - pw / 2; cy = H / 2 + 10; }
   ctx.save(); ctx.translate(cx, cy); ctx.rotate(tilt); ctx.shadowColor = 'rgba(21,19,18,0.38)'; ctx.shadowBlur = fmt === 'cover' ? 70 : 40; ctx.shadowOffsetY = fmt === 'cover' ? 36 : 20;
   ctx.drawImage(im, -pw / 2, -ph / 2, pw, ph); ctx.restore();
@@ -57,7 +57,7 @@ function draw(ctx, fmt, th, v, IMG, K, { lt = 9, bg = true } = {}) {
     for (const line of f.lines) { strokeText(ctx, line, W / 2, y, ink, halo); y += lh; }
     M.wordsCap = Math.round(f.cap); y += 10 - lh + f.cap * 0.25;
   } else {
-    const colW = W - pw - 40 - 54 - 10, f = fitWords(ctx, p.words.toUpperCase(), Math.max(colW, 600), 190, 152, 2); font(ctx, f.px, 'logo'); const lh = f.cap * 1.2; y = 52 + f.cap;
+    const colW = W - pw - 40 - 54 - 10, f = fitWords(ctx, p.words.toUpperCase(), Math.max(colW, 720), 190, 152, 2); font(ctx, f.px, 'logo'); const lh = f.cap * 1.2; y = 52 + f.cap;
     for (const line of f.lines) { strokeText(ctx, line, 54, y, ink, halo); y += lh; }
     M.wordsCap = Math.round(f.cap); y += f.cap * 0.1 - lh + f.cap * 0.35;
   }
