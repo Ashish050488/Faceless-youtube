@@ -1,0 +1,184 @@
+{
+ "id": "sow012-google-assistant-nest-gemini",
+ "format": "short",
+ "export": "720x1280 H.264 CRF 24 maxrate 2M ≤20 MB (§13)",
+ "rules": "PRODUCTION_SPEC §12–§18; flat LIGHT backgrounds only — speaker shots F–I have black backgrounds: cut out (rembg) onto paper/lavender/blush, never show the dark frame. Whole real product; 1–3 words; 2-D objects next to the product; watermark below content; logo v5 end card; audio LOCKED (narrate.py + mix.sh). Length 50–58 s. No Google/Gemini/Assistant logos drawn by us (product photos as-is only); no Amazon/Apple products.",
+ "numbers_shown": [
+  "AUG 2, 2027",
+  "254 days",
+  "$0",
+  "JAN 25, 2027",
+  "$10/mo",
+  "$20/mo",
+  "2016 / 10+ years",
+  "60/100"
+ ],
+ "official_clips": "none — store pages not used for video loops (skip)",
+ "palette_for_this_video": "paper #FAF8F5 main; lavender #ECE8FB reveal/date beats; blush #FBE7E2 price + THE CATCH; ember accent for dates/numbers",
+ "assets": "assets_sources.md (A–I, Google Store official images, ≥1604 px)",
+ "new_objects": "speechBubble (text.js or emotion.js: rounded bubble + tail, text slot, pops) and appTile (generic rounded app square with label) — add both to render/kit/OBJECTS.md",
+ "scenes": [
+  {
+   "anchor": "Google Assistant just got an end date.",
+   "bg": "paper",
+   "image": "A Nest Hub hero, centred 70% width",
+   "object": "calendar page flips to 'AUG 2 2027' beside the Hub; small hourglass starts falling",
+   "text": "END DATE",
+   "sfx": "whoosh-up",
+   "n": 1,
+   "note": "frame 1 must read instantly: Hub + END DATE"
+  },
+  {
+   "anchor": "On your Nest speaker.",
+   "bg": "paper",
+   "image": "E (crop to the blue Nest Mini) left 40% + F porcelain speaker cut out right 40%",
+   "object": "waves object pulses out of both speakers, then freezes",
+   "text": "YOUR SPEAKER",
+   "sfx": "pop",
+   "n": 2
+  },
+  {
+   "anchor": "Wait, really?",
+   "bg": "paper",
+   "image": "E Nest Mini centred 55%",
+   "object": "questionStamp slams beside it",
+   "text": "REALLY?",
+   "sfx": "stamp",
+   "n": 3
+  },
+  {
+   "anchor": "Yep. Google says it's retiring Assistant on every speaker and smart display.",
+   "bg": "lavender",
+   "image": "D four speakers row (top) + A Hub (bottom), both ~45%",
+   "object": "toggle flips ON→OFF under each device one by one (stagger 0.15 s)",
+   "text": "EVERY SPEAKER",
+   "sfx": "click x4",
+   "n": 4,
+   "note": "hard cut in"
+  },
+  {
+   "anchor": "The date? August second, twenty twenty-seven.",
+   "bg": "lavender",
+   "image": "A Hub 50% top",
+   "object": "calendar big centre: 'AUG 2, 2027'; counter rolls '254 DAYS LEFT' underneath",
+   "text": "AUG 2, 2027",
+   "sfx": "page flip",
+   "n": 5,
+   "note": "254 = days from 21 Nov 2026 (computed, factsheet)"
+  },
+  {
+   "anchor": "Here's what replaces it. Gemini for Home.",
+   "bg": "paper",
+   "image": "B Hub on desk (home screen) 60%",
+   "object": "new object speechBubble (add to library: rounded bubble + tail, text inside) pops from the Hub with a sparkle, text 'Gemini for Home' — no Gemini logo",
+   "text": "GEMINI FOR HOME",
+   "sfx": "sparkle",
+   "n": 6,
+   "note": "hard cut"
+  },
+  {
+   "anchor": "You just talk normally, no special commands.",
+   "bg": "paper",
+   "image": "F porcelain speaker cut out, 55%",
+   "object": "speechBubble shows a long wavy sentence; an old rigid 'COMMAND' card gets slash",
+   "text": "TALK NORMALLY",
+   "sfx": "swipe",
+   "n": 7
+  },
+  {
+   "anchor": "Google says the upgrade's free,",
+   "bg": "blush",
+   "image": "D four speakers 60%",
+   "object": "priceTag swings in, value rolls to '$0'",
+   "text": "FREE · $0",
+   "sfx": "cash-pop",
+   "n": 8
+  },
+  {
+   "anchor": "and every device supported today keeps working.",
+   "bg": "blush",
+   "image": "D + A small row",
+   "object": "green tick pill on each device (pill object)",
+   "text": "STILL WORKS",
+   "sfx": "tick x3",
+   "n": 9
+  },
+  {
+   "anchor": "Oh, and the Nest app? It shuts down on January twenty-fifth.",
+   "bg": "paper",
+   "image": "B Hub 45% bottom",
+   "object": "generic rounded app tile labelled 'NEST APP' (draw, not Google's icon) → crossMark slams; calendar flips 'JAN 25, 2027'",
+   "text": "JAN 25, 2027",
+   "sfx": "slam",
+   "n": 10
+  },
+  {
+   "anchor": "Here's the catch. Once you switch, you can't switch back.",
+   "bg": "blush",
+   "image": "C Hub clock 55%",
+   "object": "toggle snaps to 'GEMINI', then lockScrews-style padlock clamps it; arrowPointer at the lock",
+   "text": "NO GOING BACK",
+   "sfx": "lock clunk",
+   "n": 11,
+   "note": "THE CATCH beat; hard cut in"
+  },
+  {
+   "anchor": "The chatty Gemini Live needs a ten-dollar monthly plan.",
+   "bg": "blush",
+   "image": "H green speaker cut out 55%",
+   "object": "priceTag '$10/MO' swings; small grey '$20/MO Advanced' label under it",
+   "text": "$10 / MONTH",
+   "sfx": "coin",
+   "n": 12
+  },
+  {
+   "anchor": "And the original Google Home doesn't get it at all.",
+   "bg": "blush",
+   "image": "no photo — draw a generic tall vase-style smart speaker (unbranded, labelled '2016') ",
+   "object": "crossMark over it; small counter '10+ YEARS' above",
+   "text": "2016 = NO LIVE",
+   "sfx": "thud",
+   "n": 13,
+   "note": "Google says first Home speaker launched 'more than ten years ago'"
+  },
+  {
+   "anchor": "By our score? Sixty out of a hundred.",
+   "bg": "paper",
+   "image": "A Hub 45%",
+   "object": "dialScale needle sweeps to 60/100, tick at 55 cut-off",
+   "text": "60/100",
+   "sfx": "needle sweep",
+   "n": 14
+  },
+  {
+   "anchor": "Spec!",
+   "bg": "paper",
+   "image": "D four speakers",
+   "object": "logo v5 wordmark, k snaps upright (SPEC)",
+   "text": "SPEC",
+   "sfx": "snap",
+   "n": 15
+  },
+  {
+   "anchor": "If you want smarter answers. Not if you loved simple commands.",
+   "bg": "paper",
+   "image": "B Hub",
+   "object": "two stickers: speechBubble '✓ SMARTER ANSWERS', toggle '✗ SIMPLE COMMANDS'",
+   "text": "FOR / NOT FOR",
+   "sfx": "pop",
+   "n": 16
+  },
+  {
+   "anchor": "Be honest. Would you keep the old Assistant if you could?",
+   "bg": "paper",
+   "image": "A Hub hero exactly as frame 1",
+   "object": "toggle wobbles between OLD and GEMINI; calendar 'AUG 2 2027' back as in frame 1 (seamless loop)",
+   "text": "OLD or GEMINI?",
+   "sfx": "riser tail",
+   "n": 17,
+   "note": "match frame 1"
+  }
+ ],
+ "thumbnail": "1280×720: A Nest Hub cut out right; 'AUG 2, 2027' huge (ember) left, small 'ASSISTANT ENDS' pill under it; hourglass emotion object; flat paper background; readable at 168×94",
+ "credits": "Product images: Google Store (official). Not affiliated with or endorsed by Google."
+}
