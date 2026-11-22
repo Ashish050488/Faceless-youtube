@@ -1,5 +1,18 @@
 # Learnings (newest first; only what still changes decisions — older notes are in git history)
 
+## 2026-11-22 — weekly analytics (state/analytics/2026-11-22.json; Analytics 17–21 Nov, videos ≥ 72 h old)
+- MEASURED: 139 subs; ~3,980 Shorts views (Data API, all 12 Shorts). Traffic: Shorts feed 72 %, YouTube search 25 %
+  (search is real for us → keep product names in titles). Views: India 293 = US 293, then UK 77, Indonesia 74, Germany 71.
+- MEASURED: 82–99 s Shorts with plain titles (n=2) held 30 % avg viewed / 150–319 views; 61–65 s Shorts with CAPS+emoji
+  (n=5) held 44 % / median 459 views. Avg seconds watched is the same (~27 s) → people leave at ~27 s whatever the length.
+- INFERRED: shorter wins on % viewed, but length and title style changed together, so neither is proven alone.
+  Best: "Apple Wants $999 for a NEW iPhone Duo Screen 😳" (697 views, 51 %, 2 subs).
+- MEASURED: no Short was actually 45–60 s — every one since sow005 ran 60–68 s. Changed WORKFLOW.md: ≤ 105 words, hard
+  cap 58 s. TEST NEXT: next 10 Shorts vs sow005–sow009 on % viewed and views.
+- Competitors (last 20 uploads, 3× median outliers): NVIDIA/GPU supply, GTA 6, iPhone Duo, "sold out" price stories, and
+  oddball humour (Venom "tractor headphones" 846K). Outlier lengths 16–171 s (median ~62 s) → length alone doesn't make hits;
+  the topic does. Techy or Not: median 8.5K, his outlier "Why Is This $60 Trackball Mouse Already Sold Out?" 254K.
+
 ## 2026-11-22
 - Long video was missed because the day was written inside task text ("Saturday from 5 Dec"). Fix: days live in the
   task timers (Shorts Mon–Sat, long video built Sat night → Sun 10:30 AM IST). Sunday = no Shorts, no Reels.

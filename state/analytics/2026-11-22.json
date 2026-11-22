@@ -1,0 +1,206 @@
+{
+ "checked_at": "2026-11-22T17:45Z",
+ "window": "2026-11-17..2026-11-21 (Analytics; data <72 h excluded)",
+ "channel": {
+  "subs": 139,
+  "subs_gained": 3,
+  "subs_lost": 1,
+  "analytics_views": 2150,
+  "watch_min": 425,
+  "shorts_views_lifetime_data_api": 3979
+ },
+ "traffic": {
+  "SHORTS": 1555,
+  "YT_SEARCH": 538,
+  "YT_OTHER_PAGE": 34,
+  "YT_CHANNEL": 11,
+  "NO_LINK_OTHER": 1
+ },
+ "country_top": {
+  "IN": 293,
+  "US": 293,
+  "GB": 77,
+  "ID": 74,
+  "DE": 71,
+  "IT": 61
+ },
+ "videos": {
+  "yNzzZfLxt30": {
+   "t": "Oppo Made a $135 Watch With a 3,000-Nit Screen",
+   "s": 99,
+   "views": 150,
+   "avd_s": 34,
+   "avp": 35.09,
+   "subs": 0
+  },
+  "_9_Eh4H2ruQ": {
+   "t": "Lenovo Made a 990 g Laptop That Claims 27 Hours",
+   "s": 82,
+   "views": 319,
+   "avd_s": 20,
+   "avp": 24.54,
+   "subs": 1
+  },
+  "UPfysee7JJw": {
+   "t": "Apple Made a $299 HomeView iFixit Could BARELY Open 😬",
+   "s": 61,
+   "views": 209,
+   "avd_s": 23,
+   "avp": 38.83,
+   "subs": 0
+  },
+  "UTvRnFY_jks": {
+   "t": "Apple Wants $999 for a NEW iPhone Duo Screen 😳",
+   "s": 62,
+   "views": 713,
+   "avd_s": 31,
+   "avp": 50.72,
+   "subs": 2
+  },
+  "oOFLfMecACE": {
+   "t": "Asus Put NVIDIA's RTX Spark in a $4,499 Box This TINY 😳",
+   "s": 65,
+   "views": 438,
+   "avd_s": 30,
+   "avp": 47.67,
+   "subs": 0
+  },
+  "MWwcVnpGqyM": {
+   "t": "Razer Wants $90 MORE to Save 2 Grams 😳",
+   "s": 62,
+   "views": 601,
+   "avd_s": 24,
+   "avp": 39.69,
+   "subs": 0
+  },
+  "YTg5MWCRWcM": {
+   "t": "GTA 6 Is OUT: $80, 212 GB and NO Disc 😳",
+   "s": 63,
+   "views": 459,
+   "avd_s": 28,
+   "avp": 44.66,
+   "subs": 0
+  },
+  "5LGZJk7EOck": {
+   "t": "Valve Just Ran OUT of Its $1,349 Steam Machine 😳",
+   "s": 61,
+   "views": 282,
+   "avd_s": 5,
+   "avp": 8.94,
+   "subs": 0
+  },
+  "wKX8fpAYt-o": {
+   "t": "Honor Just Made a 5,500-Nit Watch… With NO ECG 😳",
+   "s": 62,
+   "views": 238,
+   "avd_s": null,
+   "avp": null,
+   "subs": null
+  },
+  "sSWTIJhSTXM": {
+   "t": "Google Just Set an END Date for Assistant on Nest 😳",
+   "s": 67,
+   "views": 141,
+   "avd_s": null,
+   "avp": null,
+   "subs": null
+  },
+  "NEDjNq_JPVc": {
+   "t": "Casio's $43 Watch Costs 70% MORE in the US 😳",
+   "s": 61,
+   "views": 175,
+   "avd_s": null,
+   "avp": null,
+   "subs": null
+  },
+  "-DvxWCtWjTw": {
+   "t": "NVIDIA Just Put 50,000 Cores in ONE GPU 🤯",
+   "s": 68,
+   "views": 254,
+   "avd_s": null,
+   "avp": null,
+   "subs": null
+  },
+  "erp3FnYy8aQ": {
+   "t": "Apple Made Its FIRST Touchscreen Mac. Worth $2,899? 🤔",
+   "s": 568,
+   "views": 2,
+   "avd_s": null,
+   "avp": null,
+   "subs": null
+  }
+ },
+ "compare": {
+  "82-99s_plain_titles(n=2)": {
+   "avp_mean": 29.8,
+   "avd_mean_s": 27,
+   "views": [
+    150,
+    319
+   ]
+  },
+  "61-65s_CAPS+emoji(n=5)": {
+   "avp_mean": 44.3,
+   "avd_mean_s": 27.2,
+   "views_median": 459
+  },
+  "note": "length and title style changed together (confounded); no 45-60 s Short exists yet"
+ },
+ "competitors": {
+  "Techy or Not": {
+   "id": "UC5lOPAwhZ6buYsbWK257YJg",
+   "subs": 23200,
+   "median_views": 8535.0,
+   "median_len_s": 80.0,
+   "outliers_3x": [
+    "253729 | 74s | Why Is This $60 Trackball Mouse Already Sold Out?",
+    "77944 | 88s | Looks Like a Webcam, but It's a Mouse",
+    "37924 | 82s | A Mouse You Never Have to Move",
+    "25763 | 77s | Premium Wireless Earbuds for $539 - Is It Worth It?"
+   ]
+  },
+  "Neural Stack": {
+   "id": "UCToFxQ5_N2Rr-m5xbhcet6w",
+   "subs": 73500,
+   "median_views": 20519.0,
+   "median_len_s": 28.5,
+   "outliers_3x": [
+    "323211 | 54s | Inside NVIDIA’s Insane Blackwell NVLink Spine",
+    "139613 | 17s | iPhone Duo vs Galaxy Z Fold 8 Speed Test! 🤯🔥",
+    "128773 | 16s | Inside Elon Musk’s 100,000 Nvidia GPU Supercomputer 🔥"
+   ]
+  },
+  "Venom's Tech Shorts": {
+   "id": "UCPjTlVpRM98uyVKLDJKpRrQ",
+   "subs": 227000,
+   "median_views": 42986.0,
+   "median_len_s": 78.0,
+   "outliers_3x": [
+    "846182 | 27s | Best Headphones for Tractor Driving? 😂🎧",
+    "533242 | 46s | RTX 5090 Is DISAPPEARING… What’s Happening to GPU Supply? 😳",
+    "466115 | 171s | Jensen Huang QUITS NVIDIA… Is This the End of an AI Empire?",
+    "215686 | 78s | Can This Tiny Marshall Speaker Really Sound This GOOD?"
+   ]
+  },
+  "Techno Ruhez": {
+   "id": "UC8vlDm5xvbxOrCvdu9UNOiA",
+   "subs": 4330000,
+   "median_views": 264258.5,
+   "median_len_s": 114.5,
+   "outliers_3x": [
+    "1238964 | 103s | GTA 6 Gameplay : First Time In India 😭🔥",
+    "1043337 | 62s | How To Play GTA 6 Before Everyone #shorts"
+   ]
+  },
+  "MSquare Tech": {
+   "id": "UCejs-rXRR0Qnj8L-X28CDRA",
+   "subs": 71200,
+   "median_views": 96212.0,
+   "median_len_s": 40.5,
+   "outliers_3x": [
+    "1123926 | 50s | Top 10 Best Selling Phones in India #tech #technology #shorts",
+    "724348 | 30s | Get Rating on your looks by chatgpt #tech #technology #shorts"
+   ]
+  }
+ }
+}

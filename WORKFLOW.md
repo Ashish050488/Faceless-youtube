@@ -24,7 +24,10 @@ monetisation guidance regularly (state/policy_notes.md) and follow it; nothing r
      - Title: brand + "Just Made/Made" + surprising number or twist (his top 12 all follow this). Add ONE CAPS word
        and ONE emoji when it fits (competitor hits: "NVIDIA Built a Supercomputer With NO Wires?! 🤯"). The claim must be
        true and shown in the video — never misleading. ≤ 60 characters.
-     - Length: Shorts 45–60 s (100–130 words). Topic priority when news allows: NVIDIA/GPUs, Apple, AI hardware/robots,
+     - Length: Shorts 45–55 s = **≤ 105 written words** (numbers spelled out count). Hard cap: final video ≤ 58 s, else
+       cut a beat before upload. (Analytics 2026-11-22: every Short since sow005 ran 60–68 s, so the 45–60 s test never
+       ran. Hypothesis: ≤ 55 s lifts avg % viewed from ~44 % to ≥ 55 % and Shorts-feed views per Short; weekly review
+       compares the next 10 Shorts with sow005–sow009.) Topic priority when news allows: NVIDIA/GPUs, Apple, AI hardware/robots,
        "world's biggest/smallest/first", price shocks — all from big brands. Competitor data: state/competitor_watch/competitors.md.
    - Write script.md by SCRIPT_STYLE.md (conversational, you-language, contractions, emotion arc, reaction words,
      short punctuated lines — read it every time). Then:
