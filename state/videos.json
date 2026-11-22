@@ -250,7 +250,7 @@
   "slug": "sow014-nvidia-rubin-hpc",
   "title": "NVIDIA Just Put 50,000 Cores in ONE GPU 🤯",
   "format": "short",
-  "status": "uploaded",
+  "status": "live",
   "slot": "2",
   "date": "2026-11-22",
   "scripted_at": "2026-11-22T05:50Z",
@@ -258,8 +258,12 @@
   "verdict": "SPEC 55",
   "hypothesis": "Top-priority brand (NVIDIA, most-searched this week) + one huge number ('50,000 cores') vs Short 1's cheap Casio watch; tests whether a not-buyable data-centre GPU still pulls gamers via the RTX 5090 comparison.",
   "id": "-DvxWCtWjTw",
-  "privacy": "private",
+  "privacy": "private→public 2026-11-22T13:00:00Z",
   "uploaded_at": "2026-11-22T05:47:49Z",
-  "size_mb": 11.3
+  "size_mb": 11.3,
+  "url": "https://youtube.com/shorts/-DvxWCtWjTw",
+  "duration_s": 67.3,
+  "comment": "posted 13:06Z",
+  "reel": "requested 13:06Z"
  }
 ]
