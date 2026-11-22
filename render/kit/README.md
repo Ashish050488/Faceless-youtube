@@ -94,6 +94,14 @@ measure, map, screen. core.js loads them in that order.
 - **Worked example:** `examples/sow004.cues.json` plus `examples/sow004.plan.json` is sow004 re-laid out so that
   nothing touches. It passes `check.py`.
 
+## Long videos (1920×1080): `SOW_FMT=long`
+- `SOW_FMT=long render/kit/build.sh check|stills|video <slug> <work>` renders 1920×1080 (lib.js W/H), watermark top-left
+  x 48 y 40 h 56, side margin 96 px, top margin 40, no loop back to frame 1 (end card holds), export CRF 23 /
+  maxrate 6M / bufsize 12M, thumbnail only (no cover). Headlines: cap ≈ 6 % of 1080, `x`/`maxW` optional.
+- Kit objects are drawn for 1080 w: give them `s` ≈ 1.4–1.6. `battery` scales with `scale`, not `s`.
+- Chapter starts: a `chapterCard` layer (n, title) at 0.05 s, other layers `show` from ~1.95 s.
+- Worked example: scripts/sow015-apple-macbook-pro-proled/cues.kit.json (first long video).
+
 ## Poster = frame 1 = cover = thumbnail (PRODUCTION_SPEC §9)
 - `cues.thumb` drives all three. A = number-led (uploaded), B = object/twist-led (logged in qa.md).
   emotion: `x` crossMark · `q` questionStamp · `arrow` arrowPointer · `tag` priceTag holding the number.

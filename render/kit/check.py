@@ -42,6 +42,7 @@ def main():
         notes.append(f"warn s{w['scene']}: {w['issue']} {w.get('text', '')}")
     fs_nums = set(nums(open(fact, encoding="utf8").read()))
     for t in ck["onscreen_numbers"]:
+        if t.startswith("CHAPTER "): continue  # long-video chapter card index, not a fact
         miss = [n for n in nums(t) if not matches(n, fs_nums)]
         if miss:
             fails.append(f"number not in factsheet: '{t}' ({', '.join(miss)})")
@@ -67,8 +68,9 @@ def main():
         notes.append(f"loudness {lufs} LUFS, TP {tp} dBTP, {mb:.1f} MB")
         if not -16.5 <= lufs <= -13.5: fails.append(f"loudness {lufs} LUFS outside -15±1.5")
         if tp > -1.0: fails.append(f"true peak {tp} > -1 dBTP")
-        if mb >= 20: fails.append(f"size {mb:.1f} MB ≥ 20")
-        fw, fh = 90, 160  # motion numbers on a tiny grey copy
+        LONG = os.environ.get("SOW_FMT") == "long"  # long video 1920×1080: no 20 MB cap (Short rule), frame 160×90
+        if mb >= (2000 if LONG else 20): fails.append(f"size {mb:.1f} MB ≥ 20")
+        fw, fh = (160, 90) if LONG else (90, 160)  # motion numbers on a tiny grey copy
         raw = subprocess.run(["ffmpeg", "-v", "error", "-i", video, "-vf", f"scale={fw}:{fh},format=gray", "-f", "rawvideo", "-"],
                              capture_output=True).stdout
         import numpy as np
@@ -92,7 +94,7 @@ def main():
         if calm / fps > 2.5: notes.append(f"WARN longest calm hold {calm / fps:.2f} s > 2.5")
     pj = os.path.join(work, "poster.json")  # PRODUCTION_SPEC §9 phone test: cover at 180×320, thumbnail at 168×94
     if os.path.exists(pj):
-        for m in json.load(open(pj)):
+        for m in [m for m in json.load(open(pj)) if not (os.environ.get("SOW_FMT") == "long" and m["fmt"] == "cover")]:  # long: no cover
             k = 320 / 1920 if m["fmt"] == "cover" else 94 / 720
             for key in ("wordsCap", "numCap"):
                 if m.get(key) is not None and m[key] * k < 14:

@@ -4,7 +4,7 @@
 // cues.thumb: { "img": "cut_hero", "thumbImg": "cut_wide" (optional, wider asset for 16:9), "bg": "blush", "tilt": -4,
 //               "a": { "words": "SOLD OUT?", "num": "$1,349", "emotion": "x" },     // A = number-led
 //               "b": { "words": "TOO LATE?", "num": "$1,049", "emotion": "arrow" } } // B = object/twist-led
-//   emotion: x (crossMark) · q (questionStamp) · arrow (arrowPointer at the product) · tag (priceTag with the number)
+//   emotion: tap (fingerTap on the screen) · x (crossMark) · q (questionStamp) · arrow (arrowPointer at the product) · tag (priceTag with the number)
 //   old keys still work: { img, bg, big → num, word → words, tag → emotion "tag" }.
 // render.js draws the same cover composition as layer {"type": "poster"} in scene 0, so frame 1 = cover.
 const { createCanvas } = require('@napi-rs/canvas');
@@ -76,6 +76,7 @@ function draw(ctx, fmt, th, v, IMG, K, { lt = 9, bg = true } = {}) {
   if (p.emotion === 'x') K.crossMark(ctx, lt, 0);
   else if (p.emotion === 'arrow') K.arrowPointer(ctx, lt, 0, Math.PI * 1.22) // from the lower right, pointing back at the product;
   else if (p.emotion === 'tag') { ctx.scale(1.25, 1.25); K.priceTag(ctx, 0, -160, lt, -9, p.num || '?'); font(ctx, 110, 'head'); M.numCap = Math.round(capOf(ctx) * es * 1.25); }
+  else if (p.emotion === 'tap') { ctx.translate(-pw * 0.42, -ph * 0.05); K.fingerTap(ctx, lt, 0); }
   else K.questionStamp(ctx, lt, 0);
   ctx.restore();
   // our tiny mark

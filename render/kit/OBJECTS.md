@@ -76,4 +76,9 @@ Every object is drawn once, saved here, and reused by every future video. Before
 | appTile | ui.js | generic rounded app icon (house glyph, not a brand icon) + `label` | pops in | apps shutting down/moving, "the X app" |
 | coreGrid | compute.js | dark die with a grid of tiny core cells (`cols`×`rows`, `w`×`h`) | cells sweep-fill left→right from `fillAt` | core counts, "50,000 cores", parallelism |
 | gpuCard | compute.js | generic 2-slot graphics card: shroud, 2 spinning fans, bracket + ports, PCIe fingers, `label` under it | pops in, fans spin | consumer GPU comparisons (no brand imagery) |
-
+| miniLedStack | screen.js | display cross-section: glass → LCD (RGB filter cells) → mini-LED backlight in zones, labels on the right | layers rise bottom-up from `at`; LEDs light + rays at `litAt` | mini-LED / LCD explainers, blooming |
+| oledStack | screen.js | display cross-section: glass → (touch, `touch`) → 1–2 self-lit OLED pixel layers (`layers`) | `layer2At` drops a 2nd layer (tandem); `crackAt` cracks + peels the layers; `offAt` pixels off | OLED / tandem OLED, teardown damage |
+| starScreen | screen.js | screen with bezel showing one white star on black (`zones` grid) | `bloomAt` zone glows + halo (blooming); `offAt` pixel grid all off | contrast, blooming vs true black |
+| fingerTap | emotion.js | index finger tapping, marigold ripple rings (tip at x, y) | finger comes down, taps at `tapAt` | touch screens; poster emotion `tap` |
+| chapterCard | text.js | "CHAPTER n" pill + big title on a paper band | rises at `at`, holds `hold` s (1.5), slides away | long-video chapter starts |
+| scoreTable | measure.js | VERDICT.md table: rows label + bar + "score/max", optional TOTAL | each row slides in at its `at`, bar fills | verdict breakdown (long videos) |

@@ -29,5 +29,21 @@ function arrowPointer(ctx, lt, t0, angle = 0) {
   ctx.beginPath(); ctx.moveTo(150, 0); ctx.lineTo(30, -90); ctx.lineTo(50, 60); ctx.closePath(); ctx.fillStyle = C.wreck; ctx.fill(); ctx.lineJoin = 'round'; ctx.lineWidth = 12; ctx.strokeStyle = C.ink; ctx.stroke();
   ctx.restore();
 }
-Object.assign(K, { crossMark, questionStamp, arrowPointer });
+
+// fingerTap: an index finger comes down and taps; ripple rings spread from the fingertip (touch screens). Tip at (0,0).
+function fingerTap(ctx, lt, t0, { tapAt = null } = {}) {
+  if (lt < t0) return; const ta = tapAt ?? t0 + 0.3, p = easeOut(prog(lt, t0, ta)), press = lt >= ta ? Math.max(0, 1 - (lt - ta) / 0.18) : 0;
+  ctx.save(); ctx.globalAlpha = clamp((lt - t0) / 0.12);
+  for (let k = 0; k < 3; k++) { const q = ((lt - ta) * 0.9 - k * 0.3); if (lt < ta || q < 0) continue; const ph = q % 1.2; if (ph > 1) continue;
+    ctx.save(); ctx.globalAlpha *= 1 - ph; ctx.lineWidth = 10; ctx.strokeStyle = C.mari; ctx.beginPath(); ctx.ellipse(0, 0, 40 + ph * 150, (40 + ph * 150) * 0.42, 0, 0, 2 * Math.PI - 1e-4); ctx.stroke(); ctx.restore(); }
+  ctx.translate(lerp(60, 0, p), lerp(-140, 0, p) + press * 10); ctx.rotate(-0.42);
+  ctx.lineJoin = 'round'; ctx.lineWidth = 12; ctx.strokeStyle = C.ink;
+  ctx.beginPath(); ctx.moveTo(-36, 6); ctx.lineTo(-36, 240); ctx.quadraticCurveTo(-36, 300, 40, 320); ctx.lineTo(150, 320); ctx.quadraticCurveTo(190, 320, 190, 260); ctx.lineTo(190, 170);
+  ctx.quadraticCurveTo(190, 140, 160, 140); ctx.quadraticCurveTo(130, 140, 130, 165); ctx.quadraticCurveTo(130, 120, 95, 120); ctx.quadraticCurveTo(62, 120, 62, 150); ctx.quadraticCurveTo(62, 110, 30, 110);
+  ctx.quadraticCurveTo(36, 110, 36, 130); ctx.lineTo(36, 6); ctx.arc(0, 6, 36, 0, Math.PI, true); ctx.closePath(); ctx.fillStyle = '#FFD9B8'; ctx.fill(); ctx.stroke();
+  ctx.beginPath(); ctx.ellipse(0, 18, 20, 26, 0, Math.PI, 2 * Math.PI); ctx.lineTo(20, 40); ctx.lineTo(-20, 40); ctx.closePath(); ctx.fillStyle = '#FFF1E4'; ctx.fill(); ctx.lineWidth = 6; ctx.stroke();
+  ctx.restore();
+}
+
+Object.assign(K, { crossMark, questionStamp, arrowPointer, fingerTap });
 };

@@ -7,24 +7,24 @@ const { FPS, IMG, MAP } = env, FR = 1 / FPS;
 const { spr } = K;
 function label(ctx, text, x, y, px, col, { align = 'center', a = 1, unit = null } = {}) { // big label next to its part
   ctx.save(); ctx.globalAlpha *= a; font(ctx, px, 'head');
-  const room = align === 'center' ? 2 * Math.min(x - 54, 1026 - x) : align === 'right' ? x - 54 : 1026 - x; // side margin 54 px: shrink to fit
+  const room = align === 'center' ? 2 * Math.min(x - 54, W - 54 - x) : align === 'right' ? x - 54 : W - 54 - x; // side margin 54 px: shrink to fit
   while (px > 24 && ctx.measureText(text).width > room) { px -= 2; font(ctx, px, 'head'); }
   ctx.fillStyle = col; ctx.textBaseline = 'alphabetic'; ctx.textAlign = align; ctx.fillText(text, x, y); ctx.restore(); ctx.textAlign = 'left';
 }
-function headline(ctx, text, lt, dark, { t0 = 0.05, y = 300, acc = [], col = null, strike = -1, fit = true } = {}) { dark = false;
+function headline(ctx, text, lt, dark, { t0 = 0.05, y = 300, acc = [], col = null, strike = -1, fit = true, x: cx = W / 2, maxW = null } = {}) { dark = false;
   if (!text) return null;
   const ws = text.split(' ');
   let px;
   // owner 2026-11-18 (PRODUCTION_SPEC §2): cap height 4–5 % of 1920 (px 106–132), numbers up to 6 % (px 158), ≤ 80 % width
-  const MAXW = 864, big = /\d/.test(text) ? 158 : 132;
-  for (px = big; px > 106; px -= 2) { font(ctx, px, 'head'); if (ctx.measureText(text).width <= MAXW) break; }
+  const MAXW = maxW || (L.LONG ? 1300 : 864), big = L.LONG ? (/\d/.test(text) ? 104 : 88) : (/\d/.test(text) ? 158 : 132), minPx = L.LONG ? 66 : 106; // long: cap ≈ 6 % of 1080
+  for (px = big; px > minPx; px -= 2) { font(ctx, px, 'head'); if (ctx.measureText(text).width <= MAXW) break; }
   font(ctx, px, 'head');
   let rows = [ws];
   if (ctx.measureText(text).width > MAXW) { const mid = Math.ceil(ws.length / 2); rows = [ws.slice(0, mid), ws.slice(mid)]; }
-  while (px > 90 && Math.max(...rows.map(r => ctx.measureText(r.join(' ')).width)) > MAXW) { px -= 4; font(ctx, px, 'head'); } // every row fits
+  while (px > (L.LONG ? 56 : 90) && Math.max(...rows.map(r => ctx.measureText(r.join(' ')).width)) > MAXW) { px -= 4; font(ctx, px, 'head'); } // every row fits
   const lh = px * 0.92; let k = 0; const boxes = [];
   rows.forEach((r, ri) => {
-    const rowW = ctx.measureText(r.join(' ')).width; let x = 540 - rowW / 2;
+    const rowW = ctx.measureText(r.join(' ')).width; let x = cx - rowW / 2;
     r.forEach(wd => {
       const p = spr(lt - t0 - k * 0.07, 16, 0.55);      // overshoots ~1.02
       const blur = 6 * (1 - clamp(p));
@@ -85,5 +85,18 @@ function wordmark(ctx, cx, cy, px, tip, dark, a = 1) { dark = false; font(ctx, p
   ctx.save(); ctx.translate(x + kW, cy + 4 * tip); ctx.rotate(18 * tip * Math.PI / 180); ctx.fillStyle = dark ? C.paper : C.ink; ctx.fillText('k', -kW, 0); ctx.restore(); ctx.restore(); }
 
 function pill2(ctx, x, y, w, h, fill) { ctx.save(); ctx.shadowColor = 'rgba(21,19,18,0.18)'; ctx.shadowBlur = 24; ctx.shadowOffsetY = 8; rr(ctx, x, y, w, h, h / 2); ctx.fillStyle = fill; ctx.fill(); ctx.restore(); }
-Object.assign(K, { label, headline, counter, bigWord, stamp, wordmark, pill2 });
+
+// chapterCard (long videos): "CHAPTER n" + big title on a band; rises in at t0, holds `hold` s, then slides away
+function chapterCard(ctx, lt, t0, { n = 1, title = '', hold = 1.5, fill = C.ink, w = 1400 } = {}) {
+  if (lt < t0 || lt > t0 + hold + 0.3) return; const a = clamp(spr(lt - t0, 14, 0.6)), out = easeOut(prog(lt, t0 + hold, t0 + hold + 0.25));
+  ctx.save(); ctx.globalAlpha = clamp(a * 1.3) * (1 - out); ctx.translate(0, (1 - a) * 50 - out * 40);
+  font(ctx, 120, 'head'); let px = 120; while (ctx.measureText(title).width > w - 140 && px > 60) { px -= 4; font(ctx, px, 'head'); }
+  const bw = Math.max(ctx.measureText(title).width + 140, 600), bh = px * 1.15 + 150;
+  ctx.shadowColor = 'rgba(21,19,18,0.25)'; ctx.shadowBlur = 40; ctx.shadowOffsetY = 16; rr(ctx, -bw / 2, -bh / 2, bw, bh, 40); ctx.fillStyle = C.paper; ctx.fill(); ctx.shadowColor = 'transparent'; ctx.lineWidth = 10; ctx.strokeStyle = C.ink; ctx.stroke();
+  const pw = 330; rr(ctx, -pw / 2, -bh / 2 + 28, pw, 64, 32); ctx.fillStyle = C.mari; ctx.fill(); ctx.lineWidth = 6; ctx.stroke();
+  font(ctx, 42, 'head'); ctx.fillStyle = C.ink; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText('CHAPTER ' + n, 0, -bh / 2 + 62);
+  font(ctx, px, 'head'); ctx.textBaseline = 'alphabetic'; ctx.fillText(title, 0, bh / 2 - 46); ctx.textAlign = 'left'; ctx.restore();
+}
+
+Object.assign(K, { label, headline, counter, bigWord, stamp, wordmark, pill2, chapterCard });
 };

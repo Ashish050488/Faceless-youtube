@@ -37,8 +37,8 @@ function bars(ctx, cx, base, lt, items, Hmax = 520) { // to scale: heights propo
     ctx.save(); rr(ctx, x, base - h, bw, Math.max(1, h), 22); ctx.fillStyle = b.col || C.mari; ctx.fill(); ctx.strokeStyle = C.ink; ctx.lineWidth = 7; ctx.stroke();
     if (p > 0.95) { label(ctx, b.label, x + bw / 2, base - h - 24, 64, C.ink); if (b.sub) { font(ctx, 40, 'label'); ctx.fillStyle = C.ink; ctx.textAlign = 'center'; ctx.fillText(b.sub, x + bw / 2, base + 52); ctx.textAlign = 'left'; } } ctx.restore(); });
 }
-function calendar(ctx, cx, cy, lt, t0, mon, yr) { const p = easeInOut(prog(lt, t0, t0 + 0.4)); const draw = (m, y, sy) => { ctx.save(); ctx.translate(cx, cy); ctx.scale(1, Math.max(0.001, sy)); ctx.shadowColor = 'rgba(21,19,18,0.16)'; ctx.shadowBlur = 24; ctx.shadowOffsetY = 8; rr(ctx, -140, -120, 280, 240, 30); ctx.fillStyle = '#fff'; ctx.fill(); ctx.shadowColor = 'transparent'; ctx.save(); rr(ctx, -140, -120, 280, 240, 30); ctx.clip(); ctx.fillStyle = C.wreck; ctx.fillRect(-140, -120, 280, 64); ctx.restore(); ctx.strokeStyle = C.ink; ctx.lineWidth = 7; rr(ctx, -140, -120, 280, 240, 30); ctx.stroke(); font(ctx, 96, 'head'); ctx.fillStyle = C.ink; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(m, 0, 36); font(ctx, 36, 'bold'); ctx.fillStyle = '#fff'; ctx.fillText(y, 0, -88); ctx.restore(); ctx.textAlign = 'left'; };
-  if (p < 0.5) draw('NOV', '2026', 1 - p * 2); else draw(mon, yr, (p - 0.5) * 2); }
+function calendar(ctx, cx, cy, lt, t0, mon, yr, from = ['NOV', '2026']) { const p = easeInOut(prog(lt, t0, t0 + 0.4)); const draw = (m, y, sy) => { ctx.save(); ctx.translate(cx, cy); ctx.scale(1, Math.max(0.001, sy)); ctx.shadowColor = 'rgba(21,19,18,0.16)'; ctx.shadowBlur = 24; ctx.shadowOffsetY = 8; rr(ctx, -140, -120, 280, 240, 30); ctx.fillStyle = '#fff'; ctx.fill(); ctx.shadowColor = 'transparent'; ctx.save(); rr(ctx, -140, -120, 280, 240, 30); ctx.clip(); ctx.fillStyle = C.wreck; ctx.fillRect(-140, -120, 280, 64); ctx.restore(); ctx.strokeStyle = C.ink; ctx.lineWidth = 7; rr(ctx, -140, -120, 280, 240, 30); ctx.stroke(); font(ctx, 96, 'head'); ctx.fillStyle = C.ink; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(m, 0, 36); font(ctx, 36, 'bold'); ctx.fillStyle = '#fff'; ctx.fillText(y, 0, -88); ctx.restore(); ctx.textAlign = 'left'; };
+  if (p < 0.5) draw(from[0], from[1], 1 - p * 2); else draw(mon, yr, (p - 0.5) * 2); }
 
 function slider(ctx, cx, y, w, lt, t0, from, to) { const p = easeInOut(prog(lt, t0, t0 + 0.5)), v = lerp(from, to, p);
   ctx.save(); ctx.lineCap = 'round'; ctx.strokeStyle = '#D9D3CC'; ctx.lineWidth = 20; ctx.beginPath(); ctx.moveTo(cx - w / 2, y); ctx.lineTo(cx + w / 2, y); ctx.stroke();
@@ -76,5 +76,23 @@ function thermometer(ctx, lt, t0, level) { // bulb + tube; liquid rises then set
   for (let i = 0; i < 6; i++) { ctx.beginPath(); ctx.moveTo(38, -160 + i * 44); ctx.lineTo(62, -160 + i * 44); ctx.lineWidth = 5; ctx.strokeStyle = C.ink; ctx.stroke(); }
   ctx.restore();
 }
-Object.assign(K, { dialScale, clockRing, bars, calendar, slider , ruler, gauge, thermometer });
+
+// scoreTable (VERDICT.md): rows {label, score, max, at}; each row slides in at `at`, its bar fills score/max and the
+// "score/max" value lands at the end. w = total width; drawn from (0,0) top-centre, row height 92
+function scoreTable(ctx, lt, rows, { w = 1100, total = null, totalAt = null } = {}) {
+  const lw = w * 0.42, bw = w * 0.36, rh = 92;
+  rows.forEach((r, i) => { if (lt < r.at) return; const a = easeOut(prog(lt, r.at, r.at + 0.25)), f = easeOut(prog(lt, r.at + 0.15, r.at + 0.6)), y = i * rh;
+    ctx.save(); ctx.globalAlpha = a; ctx.translate((1 - a) * -40, 0);
+    font(ctx, 46, 'head'); ctx.fillStyle = C.ink; ctx.textAlign = 'left'; ctx.textBaseline = 'middle'; ctx.fillText(r.label, -w / 2, y + rh / 2);
+    rr(ctx, -w / 2 + lw, y + 22, bw, rh - 44, (rh - 44) / 2); ctx.fillStyle = '#EAE5DE'; ctx.fill();
+    if (f > 0) { rr(ctx, -w / 2 + lw, y + 22, Math.max(rh - 44, bw * f * r.score / r.max), rh - 44, (rh - 44) / 2); ctx.fillStyle = r.score / r.max >= 0.99 ? '#3DBE6B' : C.mari; ctx.fill(); }
+    rr(ctx, -w / 2 + lw, y + 22, bw, rh - 44, (rh - 44) / 2); ctx.lineWidth = 5; ctx.strokeStyle = C.ink; ctx.stroke();
+    if (f >= 1) { font(ctx, 52, 'head'); ctx.fillStyle = C.ember; ctx.textAlign = 'right'; ctx.fillText(`${r.score}/${r.max}`, w / 2, y + rh / 2); }
+    ctx.restore(); });
+  if (total !== null && totalAt !== null && lt >= totalAt) { const y = rows.length * rh + 20; ctx.save(); ctx.globalAlpha = easeOut(prog(lt, totalAt, totalAt + 0.25)); ctx.strokeStyle = C.ink; ctx.lineWidth = 6; ctx.beginPath(); ctx.moveTo(-w / 2, y); ctx.lineTo(w / 2, y); ctx.stroke();
+    font(ctx, 52, 'head'); ctx.fillStyle = C.ink; ctx.textAlign = 'left'; ctx.textBaseline = 'middle'; ctx.fillText('TOTAL', -w / 2, y + 50); ctx.fillStyle = C.ember; ctx.textAlign = 'right'; ctx.fillText(total, w / 2, y + 50); ctx.restore(); }
+  ctx.textAlign = 'left';
+}
+
+Object.assign(K, { dialScale, clockRing, bars, calendar, slider , ruler, gauge, thermometer, scoreTable });
 };

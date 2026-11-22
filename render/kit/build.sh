@@ -7,7 +7,10 @@
 #   render/kit/build.sh video <slug> <work>   # frames + bed + mix + export + cover + thumbnail + captions + sha256 + QA
 set -euo pipefail
 STEP=$1; SLUG=$2; W=$(realpath -m "$3"); R=$(cd "$(dirname "$0")/../.." && pwd); SD=$R/scripts/$SLUG; CUES=$SD/cues.kit.json
-PY=${PY:-python3}; mkdir -p "$W/assets" "$W/out"; cd "$R"
+PY=${PY:-python3}; ENC="-crf 19 -maxrate 8M -bufsize 16M"; SHAFILES="video.mp4 thumbnail.jpg cover.jpg captions.srt"
+# SOW_FMT=long: 1920×1080 long video (PRODUCTION_SPEC §6: CRF 23, maxrate 6 Mbps), thumbnail only (no cover / Reel)
+[ "${SOW_FMT:-}" = long ] && { ENC="-crf 23 -maxrate 6M -bufsize 12M"; SHAFILES="video.mp4 thumbnail.jpg captions.srt"; }
+mkdir -p "$W/assets" "$W/out"; cd "$R"
 case $STEP in
 voice)
   $PY audio/narrate.py "$SD/script.md" af_heart 0.795 "$W/voice.wav" 0.30 0.42 2>&1 | grep -vi warn | tail -1
@@ -41,10 +44,10 @@ PYEOF
   $PY -m audio.bed "$SLUG" "$W/timeline.json" "$W/events.json" "$W/sfx.json" "$W/bed.wav" --sections "$W/sections.json" >/dev/null
   bash audio/mix.sh "$W/voice_rt.wav" "$W/bed.wav" "$W/mix.mp3"
   ffmpeg -nostdin -y -loglevel error -i "$W/frames.mp4" -i "$W/mix.mp3" -map 0:v -map 1:a -af volume=-0.5dB \
-    -c:v libx264 -profile:v high -preset slow -tune animation -crf 19 -maxrate 8M -bufsize 16M -pix_fmt yuv420p -r 30 -c:a aac -b:a 160k -movflags +faststart "$W/out/video.mp4"
+    -c:v libx264 -profile:v high -preset slow -tune animation $ENC -pix_fmt yuv420p -r 30 -c:a aac -b:a 160k -movflags +faststart "$W/out/video.mp4"
   node render/kit/poster.js "$W" "$CUES" "$W/out" >/dev/null   # cover.jpg + thumbnail.jpg (A, upload) and *_b.jpg (B, logged) — §9
   $PY -m meta.captions "$SD/script.md" "$W/words.json" "$W/out/captions.srt" --offset 0 >/dev/null
   $PY render/kit/check.py "$W" "$SD/factsheet.md" "$W/out/video.mp4" | tee "$W/out/check.txt" || true
-  (cd "$W/out" && sha256sum video.mp4 thumbnail.jpg cover.jpg captions.srt $(ls thumbnail_b.jpg cover_b.jpg 2>/dev/null) > sha256.txt) ;;
+  (cd "$W/out" && sha256sum $SHAFILES $(ls thumbnail_b.jpg 2>/dev/null) $([ "${SOW_FMT:-}" = long ] || ls cover_b.jpg 2>/dev/null) > sha256.txt) ;;
 *) echo "unknown step $STEP"; exit 1 ;;
 esac

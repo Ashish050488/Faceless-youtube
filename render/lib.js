@@ -8,7 +8,8 @@ const C = {
   paper: '#FAF8F5', ink: '#151312', mari: '#FFB224', ember: '#C2410C', stone: '#8C847C', wreck: '#E5484D',
   inkSoft: '#221F1D', inkLine: '#2E2A27', paperSoft: '#EFEBE6', paperLine: '#E4DED7',
 };
-const W = 1080, H = 1920;
+const LONG = process.env.SOW_FMT === 'long'; // long video 1920×1080 (PRODUCTION_SPEC §6); default = Short 1080×1920
+const W = LONG ? 1920 : 1080, H = LONG ? 1080 : 1920;
 // safe frame (brand.md): x 60–880, y 270–1220
 const SAFE = { x0: 60, x1: 880, y0: 270, y1: 1220, titleY0: 270, titleY1: 560, heroY0: 560, heroY1: 1100, capY0: 1110, capY1: 1220 };
 
@@ -44,4 +45,4 @@ function fitPx(ctx, text, maxW, maxPx, minPx, kind = 'head') {
   return minPx;
 }
 
-module.exports = { C, W, H, SAFE, registerFonts, clamp, lerp, easeOut, easeInOut, spring, prog, rr, font, fitPx, loadImage };
+module.exports = { LONG, C, W, H, SAFE, registerFonts, clamp, lerp, easeOut, easeInOut, spring, prog, rr, font, fitPx, loadImage };

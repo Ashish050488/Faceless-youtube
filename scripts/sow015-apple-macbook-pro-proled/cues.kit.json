@@ -1,0 +1,6177 @@
+{
+"slug": "sow015-apple-macbook-pro-proled",
+"format": "long",
+"plan": "plan.json",
+"thumb": {
+"img": "cut_A",
+"bg": "mari",
+"tilt": -8,
+"a": {
+"words": "TOUCH IT?",
+"num": "$2,899",
+"emotion": "tap"
+},
+"b": {
+"words": "1ST TOUCH",
+"num": "+$900",
+"emotion": "q"
+}
+},
+"scenes": [
+{
+"line": 0,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 620,
+"y": 640,
+"w": 900,
+"id": "a"
+},
+{
+"type": "calendar",
+"x": 1450,
+"y": 600,
+"s": 1.782,
+"at": [
+"four",
+0,
+-0.2
+],
+"month": "2026",
+"year": "TOUCH",
+"from": [
+"1984",
+"NO TOUCH"
+]
+},
+{
+"type": "fingerTap",
+"x": 600,
+"y": 560,
+"s": 1.163,
+"at": [
+"once",
+0,
+-0.4
+],
+"overlap": true
+},
+{
+"type": "headline",
+"text": "NOT ONCE",
+"at": 4.29,
+"y": 64,
+"until": 6.63
+}
+]
+},
+{
+"line": 1,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 960,
+"y": 650,
+"w": 1150,
+"id": "a",
+"push": true
+},
+{
+"type": "fingerTap",
+"x": 960,
+"y": 560,
+"s": 1.24,
+"at": 0.1,
+"overlap": true
+},
+{
+"type": "headline",
+"text": "NOW YOU CAN",
+"at": 0.05,
+"y": 64,
+"acc": [
+"CAN"
+],
+"until": 2.48
+}
+],
+"xfade": true
+},
+{
+"line": 2,
+"bg": "lav",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_B",
+"x": 560,
+"y": 620,
+"w": 560
+},
+{
+"type": "pill",
+"x": 1380,
+"y": 470,
+"s": 1,
+"w": 624,
+"h": 115,
+"text": "14\" \u00b7 16\"",
+"px": 67,
+"fill": "paper",
+"col": "ink",
+"at": [
+"macbook",
+0,
+0
+]
+},
+{
+"type": "label",
+"text": "PROLED XDR",
+"x": 1380,
+"y": 700,
+"at": [
+"proled",
+0,
+0
+],
+"px": 110,
+"col": "ember"
+},
+{
+"type": "label",
+"text": "the real name",
+"x": 1380,
+"y": 800,
+"at": [
+"real",
+0,
+-0.2
+],
+"px": 60,
+"col": "ink"
+},
+{
+"type": "headline",
+"text": "PROLED XDR DISPLAY",
+"at": 2.31,
+"y": 64,
+"acc": [
+"PROLED"
+],
+"until": 6.11
+}
+]
+},
+{
+"line": 3,
+"bg": "lav",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "ph_C",
+"x": 1300,
+"y": 620,
+"w": 900,
+"card": true,
+"radius": 32
+},
+{
+"type": "questionStamp",
+"x": 480,
+"y": 520,
+"s": 1.395,
+"at": 0.15
+},
+{
+"type": "label",
+"text": "1st TOUCH MAC",
+"x": 480,
+"y": 820,
+"at": 0.5,
+"px": 74,
+"col": "ember"
+},
+{
+"type": "headline",
+"text": "FIRST TOUCH MAC",
+"at": 0.05,
+"y": 64,
+"acc": [
+"FIRST"
+],
+"until": 3.45
+},
+{
+"type": "headline",
+"text": "NEW OLED",
+"at": 3.45,
+"y": 64,
+"acc": [
+"OLED"
+],
+"until": 6.98
+}
+]
+},
+{
+"line": 4,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 470,
+"y": 640,
+"w": 720
+},
+{
+"type": "calendar",
+"x": 1080,
+"y": 600,
+"s": 1.395,
+"at": [
+"november",
+0,
+-0.2
+],
+"month": "NOV 6",
+"year": "2026",
+"from": [
+"OCT 28",
+"2026"
+]
+},
+{
+"type": "priceTag",
+"x": 1600,
+"y": 380,
+"s": 1.55,
+"text": "$2,899",
+"at": [
+"starts",
+0,
+0
+]
+},
+{
+"type": "headline",
+"text": "ON SALE NOV 6",
+"at": 1.11,
+"y": 64,
+"until": 2.91
+},
+{
+"type": "headline",
+"text": "FROM $2,899",
+"at": 2.91,
+"y": 64,
+"acc": [
+"$2,899"
+],
+"until": 6.32
+}
+]
+},
+{
+"line": 5,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 960,
+"y": 760,
+"w": 640
+},
+{
+"type": "pill",
+"x": 360,
+"y": 330,
+"s": 1,
+"w": 396,
+"h": 108,
+"text": "SCREEN",
+"px": 60,
+"fill": "mari",
+"col": "ink",
+"at": [
+"screen",
+0,
+0
+]
+},
+{
+"type": "pill",
+"x": 760,
+"y": 330,
+"s": 1,
+"w": 348,
+"h": 108,
+"text": "TOUCH",
+"px": 60,
+"fill": "mari",
+"col": "ink",
+"at": [
+"test",
+0,
+0
+]
+},
+{
+"type": "pill",
+"x": 1160,
+"y": 330,
+"s": 1,
+"w": 348,
+"h": 108,
+"text": "TESTS",
+"px": 60,
+"fill": "mari",
+"col": "ink",
+"at": [
+"numbers",
+0,
+0
+]
+},
+{
+"type": "pill",
+"x": 1560,
+"y": 330,
+"s": 1,
+"w": 360,
+"h": 108,
+"text": "INSIDE",
+"px": 60,
+"fill": "mari",
+"col": "ink",
+"at": [
+"inside",
+0,
+0
+]
+}
+],
+"xfade": true
+},
+{
+"line": 6,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 560,
+"y": 640,
+"w": 820
+},
+{
+"type": "scale",
+"x": 1400,
+"y": 640,
+"s": 1.472,
+"at": 0.1,
+"levelAt": [
+"wreck",
+0,
+0
+],
+"weight": ""
+},
+{
+"type": "headline",
+"text": "SPEC OR WRECK?",
+"at": 1.52,
+"y": 64,
+"acc": [
+"WRECK?"
+],
+"until": 4.2
+}
+]
+},
+{
+"line": 7,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 760,
+"y": 650,
+"w": 860,
+"push": true
+},
+{
+"type": "fingerTap",
+"x": 1440,
+"y": 700,
+"s": 0.93,
+"at": 0.2
+},
+{
+"type": "headline",
+"text": "LET'S GO",
+"at": 0.05,
+"y": 64,
+"until": 2.31
+}
+],
+"xfade": true
+},
+{
+"line": 8,
+"bg": "mint",
+"real": true,
+"layers": [
+{
+"type": "chapterCard",
+"n": 2,
+"title": "HOW TANDEM OLED WORKS",
+"x": 960,
+"y": 560,
+"at": 0.05,
+"hold": 1.6
+},
+{
+"type": "product",
+"img": "cut_G",
+"x": 760,
+"y": 630,
+"w": 1000,
+"show": 1.95
+},
+{
+"type": "callout",
+"x": 760,
+"y": 560,
+"s": 1,
+"r": 330,
+"at": 2.15,
+"overlap": true,
+"show": 1.95
+},
+{
+"type": "headline",
+"text": "THE SCREEN",
+"at": 1.95,
+"y": 64,
+"show": 1.95,
+"until": 5.75
+}
+]
+},
+{
+"line": 9,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_I",
+"x": 1600,
+"y": 800,
+"w": 330
+},
+{
+"type": "miniLedStack",
+"x": 700,
+"y": 560,
+"s": 1.0,
+"at": 0.3
+},
+{
+"type": "headline",
+"text": "MINI-LED",
+"at": 3.19,
+"y": 64,
+"acc": [
+"MINI-LED"
+],
+"until": 5.74
+}
+]
+},
+{
+"line": 10,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_I",
+"x": 1600,
+"y": 800,
+"w": 330
+},
+{
+"type": "miniLedStack",
+"x": 700,
+"y": 560,
+"s": 1.0,
+"at": 0.0,
+"litAt": [
+"light",
+0,
+0
+]
+},
+{
+"type": "label",
+"text": "1000s of LEDs in zones",
+"x": 700,
+"y": 900,
+"at": [
+"thousands",
+0,
+0
+],
+"px": 64,
+"col": "ember"
+},
+{
+"type": "headline",
+"text": "LIGHT BEHIND",
+"at": 0.55,
+"y": 64,
+"acc": [
+"LIGHT"
+],
+"until": 4.35
+}
+],
+"xfade": true
+},
+{
+"line": 11,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_I",
+"x": 1600,
+"y": 800,
+"w": 330
+},
+{
+"type": "miniLedStack",
+"x": 700,
+"y": 560,
+"s": 1.0,
+"at": 0.0,
+"litAt": 0.0
+},
+{
+"type": "arrowPointer",
+"x": 1370,
+"y": 430,
+"s": 0.775,
+"angle": 3.14,
+"at": [
+"filter",
+0,
+0
+]
+},
+{
+"type": "headline",
+"text": "PIXELS FILTER",
+"at": 1.75,
+"y": 64,
+"until": 3.82
+}
+]
+},
+{
+"line": 12,
+"bg": "cool",
+"real": true,
+"layers": [
+{
+"type": "starScreen",
+"x": 760,
+"y": 600,
+"s": 1.0,
+"at": 0.05,
+"zones": true,
+"bloomAt": [
+"glow",
+0,
+-0.1
+]
+},
+{
+"type": "product",
+"img": "cut_I",
+"x": 1600,
+"y": 640,
+"w": 420
+},
+{
+"type": "headline",
+"text": "STAR ON BLACK",
+"at": 0.05,
+"y": 64,
+"until": 3.85
+}
+]
+},
+{
+"line": 13,
+"bg": "cool",
+"real": true,
+"layers": [
+{
+"type": "starScreen",
+"x": 760,
+"y": 600,
+"s": 1.0,
+"at": -1,
+"zones": true,
+"bloomAt": -1
+},
+{
+"type": "callout",
+"x": 838,
+"y": 532,
+"s": 1,
+"r": 130,
+"at": [
+"blooming",
+0,
+-0.2
+],
+"col": "wreck",
+"overlap": true
+},
+{
+"type": "product",
+"img": "cut_I",
+"x": 1600,
+"y": 640,
+"w": 420
+},
+{
+"type": "headline",
+"text": "BLOOMING",
+"at": 0.99,
+"y": 64,
+"col": "wreck",
+"until": 3.46
+}
+],
+"xfade": true
+},
+{
+"line": 14,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_J",
+"x": 1580,
+"y": 760,
+"w": 420
+},
+{
+"type": "oledStack",
+"x": 760,
+"y": 560,
+"s": 1.0,
+"at": [
+"oled",
+0,
+-0.2
+]
+},
+{
+"type": "label",
+"text": "no backlight",
+"x": 760,
+"y": 900,
+"at": [
+"behind",
+0,
+0
+],
+"px": 64,
+"col": "ember"
+},
+{
+"type": "headline",
+"text": "OLED",
+"at": 0.43,
+"y": 64,
+"acc": [
+"OLED"
+],
+"until": 4.23
+}
+]
+},
+{
+"line": 15,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_J",
+"x": 1580,
+"y": 760,
+"w": 420
+},
+{
+"type": "oledStack",
+"x": 760,
+"y": 560,
+"s": 1.0,
+"at": -1
+},
+{
+"type": "sun",
+"x": 1200,
+"y": 970,
+"s": 1,
+"r": 56,
+"at": [
+"own",
+0,
+-0.1
+]
+},
+{
+"type": "headline",
+"text": "OWN LIGHT",
+"at": 1.89,
+"y": 64,
+"acc": [
+"LIGHT"
+],
+"until": 4.3
+}
+],
+"xfade": true
+},
+{
+"line": 16,
+"bg": "cool",
+"real": true,
+"layers": [
+{
+"type": "starScreen",
+"x": 760,
+"y": 600,
+"s": 1.0,
+"at": 0.05,
+"offAt": [
+"off",
+0,
+-0.1
+]
+},
+{
+"type": "toggle",
+"x": 1560,
+"y": 360,
+"s": 1.24,
+"flipAt": [
+"off",
+0,
+-0.1
+]
+},
+{
+"type": "product",
+"img": "cut_J",
+"x": 1580,
+"y": 760,
+"w": 420
+},
+{
+"type": "headline",
+"text": "OFF = BLACK",
+"at": 2.79,
+"y": 64,
+"acc": [
+"BLACK"
+],
+"until": 6.4
+}
+]
+},
+{
+"line": 17,
+"bg": "lav",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_J",
+"x": 1420,
+"y": 640,
+"w": 760
+},
+{
+"type": "oledStack",
+"x": 560,
+"y": 600,
+"s": 0.75,
+"at": 0.1,
+"layer2At": [
+"two",
+0,
+0
+]
+},
+{
+"type": "label",
+"text": "2 LAYERS",
+"x": 560,
+"y": 920,
+"at": [
+"two",
+0,
+-0.1
+],
+"px": 92,
+"col": "ember"
+},
+{
+"type": "headline",
+"text": "NOT ONE LAYER",
+"at": 2.05,
+"y": 64,
+"until": 5.27
+},
+{
+"type": "headline",
+"text": "TWO",
+"at": 5.27,
+"y": 64,
+"acc": [
+"TWO"
+],
+"until": 7.2
+}
+]
+},
+{
+"line": 18,
+"bg": "lav",
+"real": true,
+"layers": [
+{
+"type": "clip",
+"name": "v1a",
+"x": 1400,
+"y": 600,
+"w": 640,
+"at": 0.1
+},
+{
+"type": "oledStack",
+"x": 560,
+"y": 600,
+"s": 0.75,
+"at": -1,
+"layers": 2
+},
+{
+"type": "label",
+"text": "TANDEM OLED",
+"x": 560,
+"y": 860,
+"at": [
+"tandem",
+0,
+0
+],
+"px": 74,
+"col": "ember"
+},
+{
+"type": "headline",
+"text": "TANDEM OLED",
+"at": 1.59,
+"y": 64,
+"acc": [
+"TANDEM"
+],
+"until": 5.39
+}
+]
+},
+{
+"line": 19,
+"bg": "lav",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_J",
+"x": 1420,
+"y": 640,
+"w": 760
+},
+{
+"type": "sun",
+"x": 300,
+"y": 560,
+"s": 1,
+"r": 84,
+"at": [
+"share",
+0,
+-0.1
+],
+"growAt": {
+"at": [
+"brighter",
+0,
+0
+],
+"from": 0.4,
+"to": 1
+}
+},
+{
+"type": "sun",
+"x": 820,
+"y": 560,
+"s": 1,
+"r": 84,
+"at": [
+"share",
+0,
+0
+],
+"growAt": {
+"at": [
+"brighter",
+0,
+0
+],
+"from": 0.4,
+"to": 1
+}
+},
+{
+"type": "label",
+"text": "+",
+"x": 560,
+"y": 600,
+"at": [
+"share",
+0,
+0
+],
+"px": 110,
+"col": "ink"
+},
+{
+"type": "headline",
+"text": "SHARE THE WORK",
+"at": 2.05,
+"y": 64,
+"until": 3.69
+},
+{
+"type": "headline",
+"text": "BRIGHTER",
+"at": 3.69,
+"y": 64,
+"acc": [
+"BRIGHTER"
+],
+"until": 6.56
+}
+]
+},
+{
+"line": 20,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 560,
+"y": 640,
+"w": 820
+},
+{
+"type": "starScreen",
+"x": 1420,
+"y": 600,
+"s": 0.62,
+"at": 0.1,
+"offAt": 0.4
+},
+{
+"type": "crossMark",
+"x": 1420,
+"y": 600,
+"s": 0.775,
+"at": [
+"blooming",
+0,
+0
+],
+"overlap": true
+},
+{
+"type": "headline",
+"text": "NO BLOOMING",
+"at": 2.01,
+"y": 64,
+"acc": [
+"NO"
+],
+"until": 5.22
+}
+]
+},
+{
+"line": 21,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 960,
+"y": 660,
+"w": 1050,
+"push": true
+},
+{
+"type": "questionStamp",
+"x": 1650,
+"y": 420,
+"s": 0.93,
+"at": 0.1
+},
+{
+"type": "headline",
+"text": "THE NUMBER?",
+"at": 0.05,
+"y": 64,
+"until": 3.44
+}
+],
+"xfade": true
+},
+{
+"line": 22,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 520,
+"y": 660,
+"w": 760
+},
+{
+"type": "number",
+"value": 10000000,
+"x": 1360,
+"y": 560,
+"at": [
+"ten",
+0,
+-0.1
+],
+"px": 118,
+"unit": ":1"
+},
+{
+"type": "label",
+"text": "contrast (claim)",
+"x": 1360,
+"y": 700,
+"at": [
+"contrast",
+0,
+0
+],
+"px": 60,
+"col": "ink"
+},
+{
+"type": "headline",
+"text": "10,000,000:1",
+"at": 0.05,
+"y": 64,
+"acc": [
+"10,000,000:1"
+],
+"until": 3.85
+}
+]
+},
+{
+"line": 23,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 520,
+"y": 660,
+"w": 760
+},
+{
+"type": "reviewCard",
+"x": 1360,
+"y": 600,
+"s": 1.395,
+"at": [
+"notebookcheck",
+0,
+-0.1
+],
+"tickAt": [
+"infinite",
+0,
+0
+]
+},
+{
+"type": "label",
+"text": "\u221e : 1",
+"x": 1360,
+"y": 960,
+"at": [
+"infinite",
+0,
+0
+],
+"px": 110,
+"col": "ember"
+},
+{
+"type": "headline",
+"text": "MEASURED: \u221e:1",
+"at": 4.73,
+"y": 64,
+"acc": [
+"\u221e:1"
+],
+"until": 6.26
+}
+],
+"xfade": true
+},
+{
+"line": 24,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_H",
+"x": 560,
+"y": 640,
+"w": 860
+},
+{
+"type": "gauge",
+"x": 1420,
+"y": 640,
+"s": 1.55,
+"at": [
+"twenty",
+0,
+-0.5
+],
+"value": 120,
+"max": 120
+},
+{
+"type": "number",
+"value": 120,
+"x": 1420,
+"y": 760,
+"at": [
+"twenty",
+0,
+-0.1
+],
+"px": 100,
+"unit": "Hz",
+"comma": false,
+"overlap": true
+},
+{
+"type": "headline",
+"text": "120 Hz",
+"at": 2.35,
+"y": 64,
+"acc": [
+"120"
+],
+"until": 4.55
+},
+{
+"type": "headline",
+"text": "SMOOTH",
+"at": 4.55,
+"y": 64,
+"until": 8.35
+}
+]
+},
+{
+"line": 25,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_I",
+"x": 560,
+"y": 640,
+"w": 860
+},
+{
+"type": "pill",
+"x": 1420,
+"y": 480,
+"s": 1,
+"w": 360,
+"h": 120,
+"text": "P3",
+"px": 72,
+"fill": "mari",
+"col": "ink",
+"at": [
+"three",
+0,
+0
+]
+},
+{
+"type": "pill",
+"x": 1420,
+"y": 640,
+"s": 1,
+"w": 528,
+"h": 120,
+"text": "Adobe RGB",
+"px": 67,
+"fill": "paper",
+"col": "ink",
+"at": [
+"adobe",
+0,
+0
+]
+},
+{
+"type": "label",
+"text": "one preset",
+"x": 1420,
+"y": 820,
+"at": [
+"preset",
+0,
+0
+],
+"px": 69,
+"col": "ember"
+},
+{
+"type": "headline",
+"text": "P3 + ADOBE RGB",
+"at": 1.1,
+"y": 64,
+"until": 4.9
+}
+]
+},
+{
+"line": 26,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_I",
+"x": 560,
+"y": 640,
+"w": 860
+},
+{
+"type": "gauge",
+"x": 1420,
+"y": 640,
+"s": 1.55,
+"at": 0.05,
+"value": 98,
+"max": 100
+},
+{
+"type": "number",
+"value": 98,
+"x": 1420,
+"y": 760,
+"at": [
+"ninety",
+0,
+-0.1
+],
+"px": 100,
+"unit": "% P3",
+"comma": false,
+"overlap": true
+},
+{
+"type": "label",
+"text": "measured",
+"x": 1420,
+"y": 880,
+"at": [
+"measured",
+0,
+0
+],
+"px": 60,
+"col": "ink"
+},
+{
+"type": "headline",
+"text": "98% OF P3",
+"at": 1.29,
+"y": 64,
+"acc": [
+"98%"
+],
+"until": 4.98
+}
+],
+"xfade": true
+},
+{
+"line": 27,
+"bg": "mint",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 1500,
+"y": 700,
+"w": 560
+},
+{
+"type": "product",
+"img": "ph_K",
+"x": 680,
+"y": 600,
+"w": 900,
+"card": true,
+"radius": 32
+},
+{
+"type": "reviewCard",
+"x": 1500,
+"y": 380,
+"s": 0.775,
+"at": -1,
+"tickAt": [
+"serious",
+0,
+0
+]
+},
+{
+"type": "headline",
+"text": "PRO SCREEN",
+"at": 2.75,
+"y": 64,
+"acc": [
+"PRO"
+],
+"until": 5.38
+}
+]
+},
+{
+"line": 28,
+"bg": "blush",
+"real": true,
+"layers": [
+{
+"type": "chapterCard",
+"n": 3,
+"title": "TOUCH, FOR THE FIRST TIME",
+"x": 960,
+"y": 560,
+"at": 0.05,
+"hold": 1.6
+},
+{
+"type": "product",
+"img": "ph_E",
+"x": 760,
+"y": 610,
+"w": 980,
+"card": true,
+"radius": 32,
+"show": 1.95
+},
+{
+"type": "fingerTap",
+"x": 1500,
+"y": 660,
+"s": 0.93,
+"at": 2.05,
+"show": 1.95
+},
+{
+"type": "headline",
+"text": "TOUCH",
+"at": 1.95,
+"y": 64,
+"acc": [
+"TOUCH"
+],
+"show": 1.95,
+"until": 5.28
+}
+]
+},
+{
+"line": 29,
+"bg": "blush",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "ph_E",
+"x": 760,
+"y": 610,
+"w": 980,
+"card": true,
+"radius": 32,
+"push": true
+},
+{
+"type": "questionStamp",
+"x": 1580,
+"y": 600,
+"s": 1.163,
+"at": [
+"poke",
+0,
+-0.2
+]
+},
+{
+"type": "headline",
+"text": "WOULD YOU?",
+"at": 0.05,
+"y": 64,
+"acc": [
+"YOU?"
+],
+"until": 3.85
+}
+],
+"xfade": true
+},
+{
+"line": 30,
+"bg": "blush",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "ph_F",
+"x": 760,
+"y": 610,
+"w": 980,
+"card": true,
+"radius": 32
+},
+{
+"type": "fingerTap",
+"x": 1500,
+"y": 640,
+"s": 0.93,
+"at": 0.2
+},
+{
+"type": "headline",
+"text": "APPLE'S BETTING",
+"at": 0.05,
+"y": 64,
+"until": 3.24
+}
+],
+"xfade": true
+},
+{
+"line": 31,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "ph_F",
+"x": 600,
+"y": 610,
+"w": 880,
+"card": true,
+"radius": 32
+},
+{
+"type": "arrowPointer",
+"x": 1450,
+"y": 360,
+"s": 0.853,
+"angle": 1.57,
+"at": [
+"swipe",
+0,
+0
+]
+},
+{
+"type": "label",
+"text": "SWIPE",
+"x": 1660,
+"y": 380,
+"at": [
+"swipe",
+0,
+0
+],
+"px": 64,
+"col": "ink"
+},
+{
+"type": "arrowPointer",
+"x": 1340,
+"y": 620,
+"s": 0.651,
+"angle": 3.6,
+"at": [
+"pinch",
+0,
+0
+]
+},
+{
+"type": "arrowPointer",
+"x": 1560,
+"y": 620,
+"s": 0.651,
+"angle": 0.5,
+"at": [
+"pinch",
+0,
+0
+]
+},
+{
+"type": "label",
+"text": "PINCH",
+"x": 1450,
+"y": 760,
+"at": [
+"pinch",
+0,
+0
+],
+"px": 64,
+"col": "ink"
+},
+{
+"type": "fingerTap",
+"x": 1440,
+"y": 900,
+"s": 0.62,
+"at": [
+"drag",
+0,
+-0.1
+],
+"overlap": true
+},
+{
+"type": "label",
+"text": "DRAG",
+"x": 1660,
+"y": 960,
+"at": [
+"drag",
+0,
+0
+],
+"px": 64,
+"col": "ink"
+},
+{
+"type": "headline",
+"text": "SWIPE \u00b7 PINCH \u00b7 DRAG",
+"at": 0.31,
+"y": 64,
+"until": 4.11
+}
+]
+},
+{
+"line": 32,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_G",
+"x": 560,
+"y": 640,
+"w": 820
+},
+{
+"type": "fingerTap",
+"x": 520,
+"y": 580,
+"s": 0.93,
+"at": [
+"double",
+0,
+0
+],
+"overlap": true
+},
+{
+"type": "pill",
+"x": 1420,
+"y": 560,
+"s": 1,
+"w": 624,
+"h": 132,
+"text": "DOUBLE-TAP",
+"px": 72,
+"fill": "mari",
+"col": "ink",
+"at": [
+"double",
+0,
+0
+]
+},
+{
+"type": "label",
+"text": "fills the screen",
+"x": 1420,
+"y": 720,
+"at": [
+"fills",
+0,
+0
+],
+"px": 64,
+"col": "ember"
+},
+{
+"type": "headline",
+"text": "DOUBLE-TAP",
+"at": 0.05,
+"y": 64,
+"acc": [
+"DOUBLE-TAP"
+],
+"until": 3.85
+}
+]
+},
+{
+"line": 33,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_G",
+"x": 560,
+"y": 640,
+"w": 820
+},
+{
+"type": "arrowPointer",
+"x": 1420,
+"y": 560,
+"s": 0.93,
+"angle": 0,
+"at": [
+"flick",
+0,
+0
+]
+},
+{
+"type": "label",
+"text": "tiles to the side",
+"x": 1420,
+"y": 760,
+"at": [
+"tiles",
+0,
+0
+],
+"px": 64,
+"col": "ember"
+},
+{
+"type": "headline",
+"text": "FLICK",
+"at": 0.05,
+"y": 64,
+"acc": [
+"FLICK"
+],
+"until": 3.66
+}
+],
+"xfade": true
+},
+{
+"line": 34,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_H",
+"x": 560,
+"y": 640,
+"w": 820
+},
+{
+"type": "appTile",
+"x": 1150,
+"y": 600,
+"s": 0.853,
+"label": "Word",
+"at": [
+"word",
+0,
+0
+]
+},
+{
+"type": "appTile",
+"x": 1400,
+"y": 600,
+"s": 0.853,
+"label": "Zoom",
+"at": [
+"zoom",
+0,
+0
+]
+},
+{
+"type": "appTile",
+"x": 1650,
+"y": 600,
+"s": 0.853,
+"label": "Lightroom",
+"at": [
+"lightroom",
+0,
+0
+]
+},
+{
+"type": "headline",
+"text": "TUNED FOR FINGERS",
+"at": 0.91,
+"y": 64,
+"acc": [
+"FINGERS"
+],
+"until": 4.71
+}
+]
+},
+{
+"line": 35,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_B",
+"x": 600,
+"y": 620,
+"w": 600
+},
+{
+"type": "callout",
+"x": 650,
+"y": 835,
+"s": 1,
+"r": 110,
+"at": [
+"hinge",
+0,
+0
+],
+"overlap": true
+},
+{
+"type": "lockScrews",
+"x": 1420,
+"y": 600,
+"s": 1.395,
+"at": [
+"stability",
+0,
+-0.1
+]
+},
+{
+"type": "headline",
+"text": "NEW HINGE",
+"at": 1.51,
+"y": 64,
+"acc": [
+"HINGE"
+],
+"until": 5.31
+}
+]
+},
+{
+"line": 36,
+"bg": "lav",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 960,
+"y": 660,
+"w": 1000,
+"push": true
+},
+{
+"type": "questionStamp",
+"x": 1660,
+"y": 420,
+"s": 0.853,
+"at": 0.1
+},
+{
+"type": "headline",
+"text": "DOES IT WORK?",
+"at": 0.05,
+"y": 64,
+"until": 2.48
+}
+],
+"xfade": true
+},
+{
+"line": 37,
+"bg": "lav",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "ph_E",
+"x": 600,
+"y": 610,
+"w": 880,
+"card": true,
+"radius": 32
+},
+{
+"type": "reviewCard",
+"x": 1420,
+"y": 520,
+"s": 1.24,
+"at": [
+"macworld",
+0,
+-0.1
+],
+"tickAt": [
+"replace",
+0,
+0
+]
+},
+{
+"type": "label",
+"text": "Macworld",
+"x": 1420,
+"y": 820,
+"at": [
+"macworld",
+0,
+0
+],
+"px": 60,
+"col": "ink"
+},
+{
+"type": "label",
+"text": "\"can replace the trackpad\"",
+"x": 1420,
+"y": 920,
+"at": [
+"replace",
+0,
+-0.1
+],
+"px": 60,
+"col": "ink"
+},
+{
+"type": "headline",
+"text": "MACWORLD LOVED IT",
+"at": 0.05,
+"y": 64,
+"acc": [
+"LOVED"
+],
+"until": 3.85
+}
+]
+},
+{
+"line": 38,
+"bg": "lav",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "ph_E",
+"x": 470,
+"y": 610,
+"w": 700,
+"card": true,
+"radius": 32
+},
+{
+"type": "reviewCard",
+"x": 1360,
+"y": 520,
+"s": 1.24,
+"at": [
+"notebookcheck",
+0,
+-0.1
+]
+},
+{
+"type": "label",
+"text": "Notebookcheck",
+"x": 1360,
+"y": 820,
+"at": [
+"notebookcheck",
+0,
+0
+],
+"px": 60,
+"col": "ink"
+},
+{
+"type": "label",
+"text": "\"like any modern touchscreen\"",
+"x": 1360,
+"y": 920,
+"at": [
+"works",
+0,
+0
+],
+"px": 60,
+"col": "ink"
+},
+{
+"type": "headline",
+"text": "COOLER ON IT",
+"at": 0.85,
+"y": 64,
+"until": 4.65
+}
+],
+"xfade": true
+},
+{
+"line": 39,
+"bg": "lav",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "ph_E",
+"x": 600,
+"y": 610,
+"w": 880,
+"card": true,
+"radius": 32
+},
+{
+"type": "speechBubble",
+"x": 1420,
+"y": 560,
+"s": 1.116,
+"w": 560,
+"h": 220,
+"text": "\"GIMMICK\"",
+"at": [
+"gimmick",
+0,
+-0.3
+]
+},
+{
+"type": "headline",
+"text": "\"MORE OF A GIMMICK\"",
+"at": 1.73,
+"y": 64,
+"acc": [
+"GIMMICK\""
+],
+"until": 3.85
+}
+]
+},
+{
+"line": 40,
+"bg": "blush",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_B",
+"x": 600,
+"y": 620,
+"w": 600
+},
+{
+"type": "fingerTap",
+"x": 560,
+"y": 420,
+"s": 0.853,
+"at": [
+"touch",
+0,
+-0.2
+],
+"overlap": true
+},
+{
+"type": "waves",
+"x": 1420,
+"y": 600,
+"s": 1.55,
+"at": [
+"wobbles",
+0,
+0
+]
+},
+{
+"type": "headline",
+"text": "IT WOBBLES",
+"at": 1.7,
+"y": 64,
+"acc": [
+"WOBBLES"
+],
+"col": "wreck",
+"until": 5.37
+}
+]
+},
+{
+"line": 41,
+"bg": "blush",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "ph_C",
+"x": 500,
+"y": 610,
+"w": 760,
+"card": true,
+"radius": 32
+},
+{
+"type": "ecg",
+"x": 1330,
+"y": 600,
+"s": 0.558,
+"at": [
+"stabilization",
+0,
+-0.2
+]
+},
+{
+"type": "label",
+"text": "video calls",
+"x": 1420,
+"y": 820,
+"at": [
+"video",
+0,
+0
+],
+"px": 60,
+"col": "ink"
+},
+{
+"type": "headline",
+"text": "APPLE KNOWS",
+"at": 0.05,
+"y": 64,
+"until": 3.85
+},
+{
+"type": "headline",
+"text": "STABILIZED",
+"at": 5.13,
+"y": 64,
+"acc": [
+"STABILIZED"
+],
+"until": 8.93
+}
+]
+},
+{
+"line": 42,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 560,
+"y": 640,
+"w": 820
+},
+{
+"type": "toggle",
+"x": 1420,
+"y": 600,
+"s": 1.55,
+"flipAt": [
+"real",
+0,
+0
+]
+},
+{
+"type": "headline",
+"text": "REAL AND GOOD",
+"at": 1.97,
+"y": 64,
+"until": 4.22
+}
+]
+},
+{
+"line": 43,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 520,
+"y": 660,
+"w": 760
+},
+{
+"type": "bars",
+"x": 1360,
+"y": null,
+"s": 1,
+"base": 940,
+"h": 520,
+"items": [
+{
+"value": 10,
+"label": "SCREEN",
+"at": 0.1,
+"col": "mari"
+},
+{
+"value": 3,
+"label": "TOUCH",
+"at": [
+"bonus",
+0,
+0
+],
+"col": "paper"
+}
+]
+},
+{
+"type": "headline",
+"text": "A BONUS",
+"at": 1.23,
+"y": 64,
+"acc": [
+"BONUS"
+],
+"until": 5.03
+}
+],
+"xfade": true
+},
+{
+"line": 44,
+"bg": "mari",
+"real": true,
+"layers": [
+{
+"type": "chapterCard",
+"n": 4,
+"title": "2,000 NITS? THE FINE PRINT",
+"x": 960,
+"y": 560,
+"at": 0.05,
+"hold": 1.6
+},
+{
+"type": "product",
+"img": "ph_C",
+"x": 700,
+"y": 620,
+"w": 940,
+"card": true,
+"radius": 32,
+"show": 1.95
+},
+{
+"type": "sun",
+"x": 1480,
+"y": 600,
+"s": 1,
+"r": 119,
+"at": 2.05,
+"show": 1.95
+},
+{
+"type": "headline",
+"text": "BRIGHTNESS",
+"at": 1.95,
+"y": 64,
+"col": "ink",
+"show": 1.95,
+"until": 5.75
+}
+]
+},
+{
+"line": 45,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "ph_C",
+"x": 560,
+"y": 610,
+"w": 820,
+"card": true,
+"radius": 32
+},
+{
+"type": "speechBubble",
+"x": 1420,
+"y": 480,
+"s": 1.054,
+"w": 620,
+"h": 230,
+"text": "\"up to 2000 nits\"",
+"at": [
+"press",
+0,
+0
+]
+},
+{
+"type": "number",
+"value": 2000,
+"x": 1420,
+"y": 850,
+"at": [
+"two",
+0,
+-0.1
+],
+"px": 110,
+"unit": "nits"
+},
+{
+"type": "headline",
+"text": "PRESS RELEASE",
+"at": 0.29,
+"y": 64,
+"until": 3.0
+},
+{
+"type": "headline",
+"text": "HDR AND SDR",
+"at": 3.0,
+"y": 64,
+"until": 6.8
+}
+]
+},
+{
+"line": 46,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "ph_C",
+"x": 760,
+"y": 610,
+"w": 980,
+"card": true,
+"radius": 32
+},
+{
+"type": "questionStamp",
+"x": 1600,
+"y": 560,
+"s": 0.93,
+"at": 0.1
+},
+{
+"type": "headline",
+"text": "SOUNDS GREAT?",
+"at": 0.05,
+"y": 64,
+"until": 2.86
+}
+],
+"xfade": true
+},
+{
+"line": 47,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 520,
+"y": 660,
+"w": 720
+},
+{
+"type": "reviewCard",
+"x": 1420,
+"y": 560,
+"s": 1.472,
+"at": 0.05
+},
+{
+"type": "callout",
+"x": 1420,
+"y": 560,
+"s": 1,
+"r": 200,
+"at": [
+"careful",
+0,
+0
+],
+"overlap": true
+},
+{
+"type": "headline",
+"text": "THE SPEC PAGE",
+"at": 1.05,
+"y": 64,
+"acc": [
+"SPEC"
+],
+"until": 4.52
+}
+]
+},
+{
+"line": 48,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 520,
+"y": 660,
+"w": 720
+},
+{
+"type": "bars",
+"x": 1400,
+"y": null,
+"s": 1,
+"base": 930,
+"h": 520,
+"items": [
+{
+"value": 1000,
+"label": "1,000",
+"sub": "sustained",
+"at": [
+"thousand",
+0,
+0
+]
+},
+{
+"value": 2000,
+"label": "2,000",
+"sub": "peak HDR",
+"at": [
+"two",
+0,
+0
+],
+"col": "ember"
+}
+]
+},
+{
+"type": "headline",
+"text": "1,000 SUSTAINED",
+"at": 0.78,
+"y": 64,
+"acc": [
+"1,000"
+],
+"until": 3.89
+},
+{
+"type": "headline",
+"text": "2,000 PEAK (HDR)",
+"at": 3.89,
+"y": 64,
+"acc": [
+"2,000"
+],
+"until": 7.69
+}
+],
+"xfade": true
+},
+{
+"line": 50,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "ph_D",
+"x": 600,
+"y": 610,
+"w": 880,
+"card": true,
+"radius": 32
+},
+{
+"type": "sun",
+"x": 1300,
+"y": 420,
+"s": 1,
+"r": 84,
+"at": [
+"outdoors",
+0,
+-0.2
+]
+},
+{
+"type": "thermometer",
+"x": 1650,
+"y": 600,
+"s": 1.085,
+"at": [
+"footnote",
+0,
+-0.4
+],
+"level": 0.35
+},
+{
+"type": "label",
+"text": "< 25 \u00b0C",
+"x": 1600,
+"y": 920,
+"at": [
+"twenty",
+0,
+0
+],
+"px": 74,
+"col": "ember"
+},
+{
+"type": "headline",
+"text": "ONLY OUTDOORS",
+"at": 3.73,
+"y": 64,
+"acc": [
+"OUTDOORS"
+],
+"until": 7.05
+},
+{
+"type": "headline",
+"text": "UNDER 25 \u00b0C",
+"at": 7.05,
+"y": 64,
+"acc": [
+"25"
+],
+"until": 10.18
+}
+]
+},
+{
+"line": 52,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 960,
+"y": 660,
+"w": 1000
+},
+{
+"type": "questionStamp",
+"x": 1660,
+"y": 420,
+"s": 0.853,
+"at": 0.1
+},
+{
+"type": "headline",
+"text": "THE LAB?",
+"at": 0.05,
+"y": 64,
+"until": 2.86
+}
+],
+"xfade": true
+},
+{
+"line": 53,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 520,
+"y": 660,
+"w": 760
+},
+{
+"type": "gauge",
+"x": 1400,
+"y": 600,
+"s": 1.55,
+"at": [
+"measured",
+0,
+-0.1
+],
+"value": 2085,
+"max": 2200,
+"mark": 2000
+},
+{
+"type": "number",
+"value": 2085,
+"x": 1400,
+"y": 740,
+"at": [
+"two",
+0,
+-0.1
+],
+"px": 96,
+"unit": "nits"
+},
+{
+"type": "label",
+"text": "Notebookcheck, HDR peak",
+"x": 1400,
+"y": 880,
+"at": [
+"peak",
+0,
+0
+],
+"px": 60,
+"col": "ink"
+},
+{
+"type": "headline",
+"text": "2,085 NITS",
+"at": 3.37,
+"y": 64,
+"acc": [
+"2,085"
+],
+"until": 7.17
+}
+],
+"xfade": true
+},
+{
+"line": 54,
+"bg": "mint",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 520,
+"y": 660,
+"w": 760
+},
+{
+"type": "reviewCard",
+"x": 1400,
+"y": 560,
+"s": 1.395,
+"at": 0.05,
+"tickAt": [
+"holds",
+0,
+0
+]
+},
+{
+"type": "headline",
+"text": "IT HOLDS UP",
+"at": 2.43,
+"y": 64,
+"acc": [
+"HOLDS"
+],
+"until": 5.92
+}
+]
+},
+{
+"line": 55,
+"bg": "blush",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 960,
+"y": 660,
+"w": 1000
+},
+{
+"type": "questionStamp",
+"x": 1660,
+"y": 420,
+"s": 0.775,
+"at": 0.1
+},
+{
+"type": "headline",
+"text": "DESKTOP? DIFFERENT",
+"at": 0.05,
+"y": 64,
+"until": 3.85
+}
+],
+"xfade": true
+},
+{
+"line": 56,
+"bg": "blush",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 480,
+"y": 660,
+"w": 700
+},
+{
+"type": "bars",
+"x": 1340,
+"y": null,
+"s": 1,
+"base": 960,
+"h": 560,
+"items": [
+{
+"value": 600,
+"label": "600",
+"sub": "sensor off",
+"at": [
+"six",
+0,
+0
+]
+},
+{
+"value": 1025,
+"label": "1,025",
+"sub": "sensor on",
+"at": 99,
+"col": "mari"
+},
+{
+"value": 2000,
+"label": "2,000",
+"sub": "claim",
+"at": 99,
+"col": "paper"
+}
+]
+},
+{
+"type": "headline",
+"text": "600 NITS",
+"at": 2.65,
+"y": 64,
+"acc": [
+"600"
+],
+"until": 5.42
+}
+],
+"xfade": true
+},
+{
+"line": 57,
+"bg": "blush",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 480,
+"y": 660,
+"w": 700
+},
+{
+"type": "bars",
+"x": 1340,
+"y": null,
+"s": 1,
+"base": 960,
+"h": 560,
+"items": [
+{
+"value": 600,
+"label": "600",
+"sub": "sensor off",
+"at": -1
+},
+{
+"value": 1025,
+"label": "1,025",
+"sub": "sensor on",
+"at": [
+"thousand",
+0,
+0
+],
+"col": "mari"
+},
+{
+"value": 2000,
+"label": "2,000",
+"sub": "claim",
+"at": [
+"twenty",
+0,
+0
+],
+"col": "paper"
+}
+]
+},
+{
+"type": "headline",
+"text": "~1,025 WITH SENSOR",
+"at": 2.84,
+"y": 64,
+"acc": [
+"~1,025"
+],
+"until": 5.92
+}
+]
+},
+{
+"line": 58,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_G",
+"x": 760,
+"y": 640,
+"w": 980
+},
+{
+"type": "questionStamp",
+"x": 1640,
+"y": 560,
+"s": 0.775,
+"at": 0.1
+},
+{
+"type": "headline",
+"text": "BOTTOM LINE?",
+"at": 0.05,
+"y": 64,
+"until": 2.86
+}
+],
+"xfade": true
+},
+{
+"line": 59,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_G",
+"x": 560,
+"y": 640,
+"w": 820
+},
+{
+"type": "sun",
+"x": 1420,
+"y": 470,
+"s": 1,
+"r": 91,
+"at": [
+"sun",
+0,
+-0.1
+]
+},
+{
+"type": "pill",
+"x": 1420,
+"y": 860,
+"s": 1,
+"w": 504,
+"h": 120,
+"text": "HDR VIDEO",
+"px": 65,
+"fill": "mari",
+"col": "ink",
+"at": [
+"video",
+0,
+-0.1
+],
+"y2": 0
+},
+{
+"type": "headline",
+"text": "THE BIG NUMBER IS REAL",
+"at": 0.25,
+"y": 64,
+"acc": [
+"REAL"
+],
+"until": 2.77
+},
+{
+"type": "headline",
+"text": "HDR OR SUN",
+"at": 2.77,
+"y": 64,
+"until": 6.57
+}
+],
+"xfade": true
+},
+{
+"line": 60,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_P",
+"x": 560,
+"y": 640,
+"w": 820
+},
+{
+"type": "crossMark",
+"x": 1420,
+"y": 600,
+"s": 0.93,
+"at": [
+"spreadsheet",
+0,
+-0.1
+]
+},
+{
+"type": "headline",
+"text": "NOT IN EXCEL",
+"at": 0.05,
+"y": 64,
+"acc": [
+"NOT"
+],
+"until": 3.04
+}
+]
+},
+{
+"line": 61,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "chapterCard",
+"n": 5,
+"title": "BATTERY: 24 HOURS?",
+"x": 960,
+"y": 560,
+"at": 0.05,
+"hold": 1.6
+},
+{
+"type": "product",
+"img": "cut_A",
+"x": 640,
+"y": 640,
+"w": 900,
+"show": 1.95
+},
+{
+"type": "battery",
+"x": 1440,
+"y": 600,
+"s": 1.55,
+"scale": 0.75,
+"at": 2.05,
+"segs": 7,
+"max": 7,
+"show": 1.95
+},
+{
+"type": "number",
+"value": 24,
+"x": 1440,
+"y": 900,
+"at": [
+"twenty",
+0,
+-0.1
+],
+"px": 90,
+"unit": "h",
+"comma": false,
+"col": "ink",
+"show": 1.95
+},
+{
+"type": "headline",
+"text": "UP TO 24 HOURS",
+"at": 3.49,
+"y": 64,
+"acc": [
+"24"
+],
+"show": 1.95,
+"until": 6.32
+}
+]
+},
+{
+"line": 62,
+"bg": "mint",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 560,
+"y": 640,
+"w": 820
+},
+{
+"type": "chipDie",
+"x": 1420,
+"y": 540,
+"s": 1.085,
+"at": [
+"m5",
+0,
+-0.2
+]
+},
+{
+"type": "label",
+"text": "16\" \u00b7 M5 PRO \u00b7 streaming",
+"x": 1420,
+"y": 900,
+"at": [
+"streaming",
+0,
+-0.3
+],
+"px": 60,
+"col": "ink"
+},
+{
+"type": "headline",
+"text": "16-INCH, M5 PRO",
+"at": 1.21,
+"y": 64,
+"until": 5.01
+}
+]
+},
+{
+"line": 63,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 960,
+"y": 660,
+"w": 1000
+},
+{
+"type": "reviewCard",
+"x": 1660,
+"y": 520,
+"s": 0.853,
+"at": [
+"fine",
+0,
+-0.2
+]
+},
+{
+"type": "headline",
+"text": "FINE PRINT TOO",
+"at": 1.89,
+"y": 64,
+"acc": [
+"FINE"
+],
+"until": 4.8
+}
+],
+"xfade": true
+},
+{
+"line": 64,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_B",
+"x": 520,
+"y": 620,
+"w": 520
+},
+{
+"type": "calendar",
+"x": 1360,
+"y": 560,
+"s": 1.55,
+"at": [
+"september",
+0,
+-0.2
+],
+"month": "SEPT",
+"year": "2026",
+"from": [
+"TEST",
+"PRE"
+]
+},
+{
+"type": "label",
+"text": "pre-production",
+"x": 1360,
+"y": 860,
+"at": [
+"pre",
+0,
+0
+],
+"px": 60,
+"col": "ember"
+},
+{
+"type": "headline",
+"text": "SEPT TESTS",
+"at": 2.77,
+"y": 64,
+"until": 5.18
+}
+]
+},
+{
+"line": 65,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_B",
+"x": 520,
+"y": 620,
+"w": 520
+},
+{
+"type": "slider",
+"x": 1360,
+"y": 480,
+"s": 1,
+"w": 620,
+"at": [
+"eight",
+0,
+-0.1
+],
+"from": 0.9,
+"to": 0.5
+},
+{
+"type": "label",
+"text": "8 clicks up",
+"x": 1360,
+"y": 600,
+"at": [
+"eight",
+0,
+0
+],
+"px": 60,
+"col": "ember"
+},
+{
+"type": "toggle",
+"x": 1360,
+"y": 820,
+"s": 1.395,
+"flipAt": [
+"off",
+0,
+0
+]
+},
+{
+"type": "label",
+"text": "keyboard light off",
+"x": 1360,
+"y": 960,
+"at": [
+"off",
+0,
+0
+],
+"px": 60,
+"col": "ink"
+},
+{
+"type": "headline",
+"text": "8 CLICKS",
+"at": 1.07,
+"y": 64,
+"acc": [
+"8"
+],
+"until": 4.87
+}
+],
+"xfade": true
+},
+{
+"line": 66,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 960,
+"y": 660,
+"w": 1000,
+"push": true
+},
+{
+"type": "questionStamp",
+"x": 1660,
+"y": 420,
+"s": 0.775,
+"at": 0.1
+},
+{
+"type": "headline",
+"text": "REAL LIFE?",
+"at": 0.05,
+"y": 64,
+"until": 3.4
+}
+],
+"xfade": true
+},
+{
+"line": 67,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 520,
+"y": 660,
+"w": 760
+},
+{
+"type": "clock",
+"x": 1400,
+"y": 560,
+"s": 1,
+"r": 170,
+"at": [
+"looped",
+0,
+-0.1
+],
+"hours": 24
+},
+{
+"type": "label",
+"text": "Macworld \u00b7 16\" M5 Max",
+"x": 1400,
+"y": 860,
+"at": [
+"macworld",
+0,
+0
+],
+"px": 60,
+"col": "ink"
+},
+{
+"type": "headline",
+"text": "VIDEO LOOP",
+"at": 0.23,
+"y": 64,
+"until": 4.03
+}
+],
+"xfade": true
+},
+{
+"line": 68,
+"bg": "mint",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 520,
+"y": 660,
+"w": 760
+},
+{
+"type": "bars",
+"x": 1400,
+"y": null,
+"s": 1,
+"base": 940,
+"h": 560,
+"items": [
+{
+"value": 22,
+"label": "22 h",
+"sub": "Apple",
+"at": [
+"twenty",
+0,
+-0.5
+],
+"col": "paper"
+},
+{
+"value": 24,
+"label": "~24 h",
+"sub": "measured",
+"at": [
+"twenty",
+0,
+0
+]
+}
+]
+},
+{
+"type": "headline",
+"text": "~24 h AT 150 NITS",
+"at": 1.22,
+"y": 64,
+"acc": [
+"~24"
+],
+"until": 5.02
+}
+]
+},
+{
+"line": 69,
+"bg": "mint",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 520,
+"y": 660,
+"w": 760
+},
+{
+"type": "bars",
+"x": 1400,
+"y": null,
+"s": 1,
+"base": 940,
+"h": 560,
+"items": [
+{
+"value": 22,
+"label": "22 h",
+"sub": "Apple",
+"at": -1,
+"col": "paper"
+},
+{
+"value": 24,
+"label": "~24 h",
+"sub": "measured",
+"at": -1
+}
+]
+},
+{
+"type": "reviewCard",
+"x": 1720,
+"y": 330,
+"s": 0.542,
+"at": [
+"beat",
+0,
+-0.2
+],
+"tickAt": [
+"beat",
+0,
+0
+]
+},
+{
+"type": "headline",
+"text": "BEAT THE CLAIM",
+"at": 3.63,
+"y": 64,
+"acc": [
+"BEAT"
+],
+"until": 6.19
+}
+],
+"xfade": true
+},
+{
+"line": 70,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_I",
+"x": 560,
+"y": 640,
+"w": 820
+},
+{
+"type": "reviewCard",
+"x": 1420,
+"y": 600,
+"s": 1.395,
+"at": 0.05
+},
+{
+"type": "label",
+"text": "Notebookcheck \u00b7 14\"",
+"x": 1420,
+"y": 900,
+"at": 0.2,
+"px": 60,
+"col": "ink"
+},
+{
+"type": "headline",
+"text": "THE 14-INCH",
+"at": 0.05,
+"y": 64,
+"until": 3.85
+}
+]
+},
+{
+"line": 71,
+"bg": "mint",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_I",
+"x": 520,
+"y": 660,
+"w": 760
+},
+{
+"type": "bars",
+"x": 1400,
+"y": null,
+"s": 1,
+"base": 940,
+"h": 560,
+"items": [
+{
+"value": 14,
+"label": "14 h",
+"sub": "Apple",
+"at": [
+"sixteen",
+0,
+-0.3
+],
+"col": "paper"
+},
+{
+"value": 16.62,
+"label": "16:37",
+"sub": "Wi-Fi",
+"at": [
+"sixteen",
+0,
+0
+]
+}
+]
+},
+{
+"type": "headline",
+"text": "16 h 37 min",
+"at": 3.61,
+"y": 64,
+"acc": [
+"16"
+],
+"until": 7.41
+}
+]
+},
+{
+"line": 72,
+"bg": "mint",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_I",
+"x": 520,
+"y": 660,
+"w": 760
+},
+{
+"type": "bars",
+"x": 1400,
+"y": null,
+"s": 1,
+"base": 940,
+"h": 560,
+"items": [
+{
+"value": 14,
+"label": "14 h",
+"sub": "Apple",
+"at": -1,
+"col": "paper"
+},
+{
+"value": 16.62,
+"label": "16:37",
+"sub": "Wi-Fi",
+"at": -1
+}
+]
+},
+{
+"type": "reviewCard",
+"x": 1720,
+"y": 330,
+"s": 0.542,
+"at": [
+"beaten",
+0,
+-0.2
+],
+"tickAt": [
+"beaten",
+0,
+0
+]
+},
+{
+"type": "headline",
+"text": "BEATEN AGAIN",
+"at": 3.35,
+"y": 64,
+"acc": [
+"BEATEN"
+],
+"until": 5.88
+}
+],
+"xfade": true
+},
+{
+"line": 73,
+"bg": "blush",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_I",
+"x": 520,
+"y": 660,
+"w": 760
+},
+{
+"type": "bars",
+"x": 1400,
+"y": null,
+"s": 1,
+"base": 940,
+"h": 560,
+"items": [
+{
+"value": 22,
+"label": "22 h",
+"sub": "Apple",
+"at": 0.1,
+"col": "paper"
+},
+{
+"value": 19.35,
+"label": "19:21",
+"sub": "video",
+"at": [
+"nineteen",
+0,
+0
+],
+"col": "mari"
+}
+]
+},
+{
+"type": "headline",
+"text": "19 h 21 min",
+"at": 1.07,
+"y": 64,
+"acc": [
+"19"
+],
+"until": 4.48
+}
+]
+},
+{
+"line": 74,
+"bg": "blush",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_I",
+"x": 520,
+"y": 660,
+"w": 760
+},
+{
+"type": "bars",
+"x": 1400,
+"y": null,
+"s": 1,
+"base": 940,
+"h": 560,
+"items": [
+{
+"value": 22,
+"label": "22 h",
+"sub": "Apple",
+"at": -1,
+"col": "paper"
+},
+{
+"value": 19.35,
+"label": "19:21",
+"sub": "video",
+"at": -1,
+"col": "mari"
+}
+]
+},
+{
+"type": "headline",
+"text": "A BIT SHORT",
+"at": 4.03,
+"y": 64,
+"acc": [
+"SHORT"
+],
+"until": 7.08
+}
+],
+"xfade": true
+},
+{
+"line": 75,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 480,
+"y": 680,
+"w": 640
+},
+{
+"type": "battery",
+"x": 1400,
+"y": 420,
+"s": 1.55,
+"scale": 0.6,
+"at": [
+"battery",
+0,
+-0.2
+],
+"segs": 7,
+"max": 7
+},
+{
+"type": "battery",
+"x": 1400,
+"y": 760,
+"s": 1.55,
+"scale": 0.6,
+"at": [
+"hundred",
+0,
+-0.3
+],
+"segs": 7,
+"max": 7
+},
+{
+"type": "label",
+"text": "MINI-LED",
+"x": 1400,
+"y": 330,
+"at": [
+"mini",
+0,
+-0.2
+],
+"px": 60,
+"col": "ink"
+},
+{
+"type": "label",
+"text": "OLED",
+"x": 1400,
+"y": 670,
+"at": [
+"hundred",
+0,
+-0.2
+],
+"px": 60,
+"col": "ink"
+},
+{
+"type": "label",
+"text": "=",
+"x": 1780,
+"y": 640,
+"at": [
+"like",
+0,
+0
+],
+"px": 126,
+"col": "ink"
+},
+{
+"type": "headline",
+"text": "~100 Wh, SAME SIZE",
+"at": 3.92,
+"y": 64,
+"acc": [
+"~100"
+],
+"until": 7.72
+}
+]
+},
+{
+"line": 76,
+"bg": "mint",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 860,
+"y": 600,
+"w": 960,
+"push": true
+},
+{
+"type": "battery",
+"x": 1640,
+"y": 860,
+"s": 1.55,
+"scale": 0.4,
+"at": 0.1,
+"segs": 7,
+"max": 7
+},
+{
+"type": "headline",
+"text": "JUST EFFICIENT",
+"at": 1.91,
+"y": 64,
+"acc": [
+"EFFICIENT"
+],
+"until": 5.04
+}
+]
+},
+{
+"line": 77,
+"bg": "lav",
+"real": true,
+"layers": [
+{
+"type": "chapterCard",
+"n": 6,
+"title": "LIGHTER, THINNER, NOT M6",
+"x": 960,
+"y": 560,
+"at": 0.05,
+"hold": 1.6
+},
+{
+"type": "product",
+"img": "cut_B",
+"x": 620,
+"y": 620,
+"w": 560,
+"show": 1.95
+},
+{
+"type": "scale",
+"x": 1400,
+"y": 640,
+"s": 1.395,
+"at": 2.05,
+"levelAt": 2.55,
+"weight": "",
+"show": 1.95
+},
+{
+"type": "headline",
+"text": "THE BODY",
+"at": 1.95,
+"y": 64,
+"show": 1.95,
+"until": 4.8
+}
+]
+},
+{
+"line": 78,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_B",
+"x": 560,
+"y": 620,
+"w": 520
+},
+{
+"type": "scale",
+"x": 1400,
+"y": 640,
+"s": 1.395,
+"at": 0.05,
+"levelAt": [
+"kilos",
+0,
+-0.3
+],
+"weight": "1.38"
+},
+{
+"type": "number",
+"value": 1.38,
+"x": 1400,
+"y": 960,
+"at": [
+"one",
+0,
+-0.1
+],
+"px": 88,
+"unit": "kg",
+"dec": 2
+},
+{
+"type": "headline",
+"text": "1.38 kg",
+"at": 1.77,
+"y": 64,
+"acc": [
+"1.38"
+],
+"until": 5.34
+}
+]
+},
+{
+"line": 79,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_B",
+"x": 560,
+"y": 620,
+"w": 520
+},
+{
+"type": "priceTag",
+"x": 1400,
+"y": 380,
+"s": 1.55,
+"text": "-\u00bd lb",
+"at": [
+"half",
+0,
+-0.2
+]
+},
+{
+"type": "headline",
+"text": "HALF A POUND LESS",
+"at": 1.05,
+"y": 64,
+"until": 4.18
+}
+],
+"xfade": true
+},
+{
+"line": 80,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_B",
+"x": 560,
+"y": 620,
+"w": 520
+},
+{
+"type": "scale",
+"x": 1400,
+"y": 640,
+"s": 1.395,
+"at": 0.05,
+"levelAt": [
+"kilos",
+0,
+-0.3
+],
+"weight": "1.82"
+},
+{
+"type": "number",
+"value": 1.82,
+"x": 1400,
+"y": 960,
+"at": [
+"one",
+0,
+-0.1
+],
+"px": 88,
+"unit": "kg",
+"dec": 2
+},
+{
+"type": "headline",
+"text": "1.82 kg",
+"at": 1.99,
+"y": 64,
+"acc": [
+"1.82"
+],
+"until": 5.36
+},
+{
+"type": "headline",
+"text": "0.7 lb LIGHTER",
+"at": 5.36,
+"y": 64,
+"acc": [
+"0.7"
+],
+"until": 8.34
+}
+]
+},
+{
+"line": 81,
+"bg": "lav",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_B",
+"x": 560,
+"y": 620,
+"w": 520
+},
+{
+"type": "ruler",
+"x": 1400,
+"y": 600,
+"s": 0.93,
+"at": [
+"thinner",
+0,
+-0.2
+],
+"w": 600,
+"n": 10
+},
+{
+"type": "label",
+"text": "up to ~1 mm",
+"x": 1400,
+"y": 840,
+"at": [
+"thinner",
+0,
+0
+],
+"px": 74,
+"col": "ember"
+},
+{
+"type": "headline",
+"text": "~1 mm THINNER",
+"at": 0.23,
+"y": 64,
+"acc": [
+"THINNER"
+],
+"until": 4.03
+}
+]
+},
+{
+"line": 82,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 520,
+"y": 660,
+"w": 720
+},
+{
+"type": "chipDie",
+"x": 1300,
+"y": 600,
+"s": 1.163,
+"at": [
+"m6",
+0,
+-0.4
+]
+},
+{
+"type": "label",
+"text": "M6",
+"x": 1300,
+"y": 930,
+"at": [
+"m6",
+0,
+-0.3
+],
+"px": 74,
+"col": "ink"
+},
+{
+"type": "crossMark",
+"x": 1300,
+"y": 600,
+"s": 0.853,
+"at": [
+"don",
+0,
+0
+],
+"overlap": true
+},
+{
+"type": "headline",
+"text": "NOT M6",
+"at": 2.97,
+"y": 64,
+"acc": [
+"M6"
+],
+"until": 5.74
+}
+]
+},
+{
+"line": 83,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 520,
+"y": 660,
+"w": 720
+},
+{
+"type": "chipDie",
+"x": 1200,
+"y": 560,
+"s": 0.853,
+"at": [
+"pro",
+0,
+-0.2
+]
+},
+{
+"type": "label",
+"text": "M5 PRO",
+"x": 1200,
+"y": 880,
+"at": [
+"pro",
+0,
+-0.1
+],
+"px": 60,
+"col": "ember"
+},
+{
+"type": "chipDie",
+"x": 1620,
+"y": 560,
+"s": 0.853,
+"at": [
+"max",
+0,
+-0.2
+]
+},
+{
+"type": "label",
+"text": "M5 MAX",
+"x": 1620,
+"y": 880,
+"at": [
+"max",
+0,
+-0.1
+],
+"px": 60,
+"col": "ember"
+},
+{
+"type": "headline",
+"text": "M5 PRO + M5 MAX",
+"at": 0.05,
+"y": 64,
+"acc": [
+"M5"
+],
+"until": 3.85
+}
+],
+"xfade": true
+},
+{
+"line": 84,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "ph_Z",
+"x": 620,
+"y": 600,
+"w": 860,
+"card": true,
+"radius": 32
+},
+{
+"type": "label",
+"text": "M6 \u00b7 MINI-LED",
+"x": 1460,
+"y": 560,
+"at": [
+"m6",
+0,
+0
+],
+"px": 74,
+"col": "ember"
+},
+{
+"type": "miniLedStack",
+"x": 1460,
+"y": 800,
+"s": 0.4,
+"at": [
+"mini",
+0,
+-0.2
+],
+"labels": false
+},
+{
+"type": "headline",
+"text": "M6 KEEPS MINI-LED",
+"at": 0.27,
+"y": 64,
+"acc": [
+"MINI-LED"
+],
+"until": 4.07
+}
+]
+},
+{
+"line": 85,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "ph_L",
+"x": 640,
+"y": 600,
+"w": 940,
+"card": true,
+"radius": 32
+},
+{
+"type": "usbPort",
+"x": 1280,
+"y": 480,
+"s": 0.93,
+"at": [
+"three",
+0,
+-0.1
+],
+"crossAt": 99
+},
+{
+"type": "label",
+"text": "3\u00d7 TB5",
+"x": 1280,
+"y": 680,
+"at": [
+"three",
+0,
+0
+],
+"px": 64,
+"col": "ember"
+},
+{
+"type": "pill",
+"x": 1690,
+"y": 480,
+"s": 1,
+"w": 264,
+"h": 115,
+"text": "HDMI",
+"px": 58,
+"fill": "mari",
+"col": "ink",
+"at": [
+"h",
+0,
+-0.1
+]
+},
+{
+"type": "headline",
+"text": "3\u00d7 THUNDERBOLT 5",
+"at": 1.93,
+"y": 64,
+"acc": [
+"3\u00d7"
+],
+"until": 4.16
+},
+{
+"type": "headline",
+"text": "+ HDMI",
+"at": 4.16,
+"y": 64,
+"until": 6.5
+}
+]
+},
+{
+"line": 86,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "ph_L",
+"x": 640,
+"y": 600,
+"w": 940,
+"card": true,
+"radius": 32
+},
+{
+"type": "pill",
+"x": 1440,
+"y": 400,
+"s": 1,
+"w": 360,
+"h": 115,
+"text": "SD CARD",
+"px": 55,
+"fill": "paper",
+"col": "ink",
+"at": [
+"s",
+0,
+0
+]
+},
+{
+"type": "pill",
+"x": 1440,
+"y": 560,
+"s": 1,
+"w": 360,
+"h": 115,
+"text": "MAGSAFE",
+"px": 55,
+"fill": "paper",
+"col": "ink",
+"at": [
+"magsafe",
+0,
+0
+]
+},
+{
+"type": "audioJack",
+"x": 1440,
+"y": 780,
+"s": 0.93,
+"at": [
+"headphone",
+0,
+0
+],
+"crossAt": 99
+},
+{
+"type": "headline",
+"text": "SD \u00b7 MAGSAFE \u00b7 JACK",
+"at": 0.7,
+"y": 64,
+"until": 4.5
+}
+],
+"xfade": true
+},
+{
+"line": 87,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_B",
+"x": 560,
+"y": 620,
+"w": 520
+},
+{
+"type": "sun",
+"x": 1230,
+"y": 500,
+"s": 1,
+"r": 42,
+"at": [
+"four",
+0,
+0
+]
+},
+{
+"type": "sun",
+"x": 1490,
+"y": 500,
+"s": 1,
+"r": 42,
+"at": [
+"four",
+0,
+0.1
+]
+},
+{
+"type": "sun",
+"x": 1230,
+"y": 760,
+"s": 1,
+"r": 42,
+"at": [
+"four",
+0,
+0.2
+]
+},
+{
+"type": "sun",
+"x": 1490,
+"y": 760,
+"s": 1,
+"r": 42,
+"at": [
+"four",
+0,
+0.3
+]
+},
+{
+"type": "label",
+"text": "glowing logo is back",
+"x": 1360,
+"y": 920,
+"at": [
+"glowing",
+0,
+0
+],
+"px": 60,
+"col": "ink"
+},
+{
+"type": "headline",
+"text": "4 LEDs",
+"at": 5.57,
+"y": 64,
+"acc": [
+"4"
+],
+"until": 9.06
+}
+]
+},
+{
+"line": 88,
+"bg": "mint",
+"real": true,
+"layers": [
+{
+"type": "chapterCard",
+"n": 7,
+"title": "WHAT iFIXIT FOUND INSIDE",
+"x": 960,
+"y": 560,
+"at": 0.05,
+"hold": 1.6
+},
+{
+"type": "product",
+"img": "cut_A",
+"x": 640,
+"y": 640,
+"w": 900,
+"show": 1.95
+},
+{
+"type": "lockScrews",
+"x": 1500,
+"y": 600,
+"s": 1.395,
+"at": 2.05,
+"show": 1.95
+},
+{
+"type": "headline",
+"text": "CAN YOU FIX IT?",
+"at": 1.95,
+"y": 64,
+"show": 1.95,
+"until": 2.86
+}
+]
+},
+{
+"line": 89,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 520,
+"y": 660,
+"w": 760
+},
+{
+"type": "gauge",
+"x": 1400,
+"y": 620,
+"s": 1.55,
+"at": [
+"five",
+0,
+-0.3
+],
+"value": 5,
+"max": 10
+},
+{
+"type": "number",
+"value": 5,
+"x": 1400,
+"y": 760,
+"at": [
+"five",
+0,
+-0.1
+],
+"px": 110,
+"unit": "/10",
+"comma": false,
+"overlap": true
+},
+{
+"type": "headline",
+"text": "5 OUT OF 10",
+"at": 2.27,
+"y": 64,
+"acc": [
+"5"
+],
+"until": 4.88
+}
+]
+},
+{
+"line": 90,
+"bg": "mint",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 520,
+"y": 660,
+"w": 760
+},
+{
+"type": "bars",
+"x": 1400,
+"y": null,
+"s": 1,
+"base": 940,
+"h": 520,
+"items": [
+{
+"value": 4,
+"label": "4/10",
+"sub": "M5 MBP",
+"at": [
+"four",
+0,
+-0.4
+],
+"col": "paper"
+},
+{
+"value": 5,
+"label": "5/10",
+"sub": "PROLED",
+"at": 0.1
+}
+]
+},
+{
+"type": "headline",
+"text": "+1 POINT",
+"at": 0.79,
+"y": 64,
+"acc": [
+"+1"
+],
+"until": 4.59
+}
+]
+},
+{
+"line": 91,
+"bg": "mint",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 520,
+"y": 660,
+"w": 760
+},
+{
+"type": "lockScrews",
+"x": 1400,
+"y": 600,
+"s": 1.395,
+"at": [
+"touch",
+0,
+-0.2
+]
+},
+{
+"type": "headline",
+"text": "TOUCH ID: EASIER",
+"at": 0,
+"y": 64,
+"acc": [
+"EASIER"
+],
+"until": 3.8
+}
+],
+"xfade": true
+},
+{
+"line": 92,
+"bg": "blush",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 960,
+"y": 640,
+"w": 1000,
+"dim": {
+"at": 0.1,
+"to": 0.65
+}
+},
+{
+"type": "stamp",
+"text": "THE CATCH",
+"x": 960,
+"y": 600,
+"at": [
+"catch",
+0,
+-0.1
+],
+"px": 120,
+"overlap": true
+}
+],
+"shake": [
+"catch",
+0,
+0.12
+]
+},
+{
+"line": 93,
+"bg": "blush",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 370,
+"y": 660,
+"w": 540
+},
+{
+"type": "oledStack",
+"x": 1180,
+"y": 560,
+"s": 0.9,
+"at": 0.05,
+"layers": 1,
+"touch": true,
+"crackAt": [
+"destroyed",
+0,
+-0.1
+]
+},
+{
+"type": "headline",
+"text": "PANEL DESTROYED",
+"at": 3.59,
+"y": 64,
+"col": "wreck",
+"until": 5.9
+}
+],
+"xfade": true
+},
+{
+"line": 94,
+"bg": "blush",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 370,
+"y": 660,
+"w": 540
+},
+{
+"type": "oledStack",
+"x": 1180,
+"y": 560,
+"s": 0.9,
+"at": -1,
+"layers": 1,
+"touch": true,
+"crackAt": -1
+},
+{
+"type": "label",
+"text": "glass came away",
+"x": 1240,
+"y": 900,
+"at": [
+"glass",
+0,
+0
+],
+"px": 60,
+"col": "ink"
+},
+{
+"type": "headline",
+"text": "LAYERS CRACKED",
+"at": 3.23,
+"y": 64,
+"col": "wreck",
+"until": 5.54
+}
+]
+},
+{
+"line": 95,
+"bg": "blush",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_B",
+"x": 560,
+"y": 620,
+"w": 520
+},
+{
+"type": "arrowPointer",
+"x": 1300,
+"y": 520,
+"s": 0.93,
+"angle": 0,
+"at": [
+"whole",
+0,
+-0.2
+]
+},
+{
+"type": "arrowPointer",
+"x": 1520,
+"y": 720,
+"s": 0.93,
+"angle": 3.14,
+"at": [
+"whole",
+0,
+0
+]
+},
+{
+"type": "label",
+"text": "new lid",
+"x": 1420,
+"y": 920,
+"at": [
+"lid",
+0,
+0
+],
+"px": 69,
+"col": "ink"
+},
+{
+"type": "headline",
+"text": "REPLACE THE LID",
+"at": 3.57,
+"y": 64,
+"acc": [
+"LID"
+],
+"until": 5.82
+}
+]
+},
+{
+"line": 96,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 480,
+"y": 660,
+"w": 680
+},
+{
+"type": "ramStick",
+"x": 1380,
+"y": 560,
+"s": 1.24,
+"at": [
+"memory",
+0,
+-0.2
+],
+"n": 2
+},
+{
+"type": "crossMark",
+"x": 1700,
+"y": 820,
+"s": 0.542,
+"at": [
+"add",
+0,
+0
+]
+},
+{
+"type": "headline",
+"text": "SOLDERED",
+"at": 1.01,
+"y": 64,
+"acc": [
+"SOLDERED"
+],
+"until": 4.72
+}
+]
+},
+{
+"line": 97,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 480,
+"y": 660,
+"w": 680
+},
+{
+"type": "calendar",
+"x": 1380,
+"y": 580,
+"s": 1.55,
+"at": [
+"twenty",
+0,
+-0.4
+],
+"month": "2027",
+"year": "RULES",
+"from": [
+"2026",
+"RULES"
+]
+},
+{
+"type": "headline",
+"text": "TOUGHER IN 2027",
+"at": 5.23,
+"y": 64,
+"acc": [
+"2027"
+],
+"until": 8.28
+}
+],
+"xfade": true
+},
+{
+"line": 98,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 480,
+"y": 660,
+"w": 680
+},
+{
+"type": "gauge",
+"x": 1400,
+"y": 620,
+"s": 1.55,
+"at": 0.05,
+"value": 4,
+"max": 10
+},
+{
+"type": "label",
+"text": "4/10",
+"x": 1400,
+"y": 800,
+"at": [
+"four",
+0,
+-0.1
+],
+"px": 126,
+"col": "ember"
+},
+{
+"type": "headline",
+"text": "WOULD SCORE 4",
+"at": 2.45,
+"y": 64,
+"acc": [
+"4"
+],
+"until": 4.48
+}
+]
+},
+{
+"line": 99,
+"bg": "mari",
+"real": true,
+"layers": [
+{
+"type": "chapterCard",
+"n": 8,
+"title": "THE PRICE CATCH",
+"x": 960,
+"y": 560,
+"at": 0.05,
+"hold": 1.6
+},
+{
+"type": "product",
+"img": "cut_A",
+"x": 960,
+"y": 660,
+"w": 1050,
+"show": 1.95
+},
+{
+"type": "headline",
+"text": "THE MONEY",
+"at": 1.95,
+"y": 64,
+"col": "ink",
+"show": 1.95,
+"until": 2.62
+}
+]
+},
+{
+"line": 100,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 430,
+"y": 660,
+"w": 620
+},
+{
+"type": "priceTag",
+"x": 1060,
+"y": 330,
+"s": 1.395,
+"text": "$2,899",
+"at": [
+"twenty",
+0,
+-0.2
+]
+},
+{
+"type": "label",
+"text": "14\"",
+"x": 1060,
+"y": 860,
+"at": [
+"fourteen",
+0,
+0
+],
+"px": 60,
+"col": "ink"
+},
+{
+"type": "priceTag",
+"x": 1520,
+"y": 330,
+"s": 1.395,
+"text": "$3,399",
+"at": [
+"thirty",
+0,
+-0.2
+]
+},
+{
+"type": "label",
+"text": "16\"",
+"x": 1520,
+"y": 860,
+"at": [
+"sixteen",
+0,
+0
+],
+"px": 60,
+"col": "ink"
+},
+{
+"type": "headline",
+"text": "FROM $2,899",
+"at": 1.33,
+"y": 64,
+"acc": [
+"$2,899"
+],
+"until": 4.67
+},
+{
+"type": "headline",
+"text": "$3,399",
+"at": 4.67,
+"y": 64,
+"acc": [
+"$3,399"
+],
+"until": 7.58
+}
+]
+},
+{
+"line": 101,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 430,
+"y": 660,
+"w": 620
+},
+{
+"type": "priceTag",
+"x": 1060,
+"y": 330,
+"s": 1.395,
+"text": "$4,499",
+"at": [
+"forty",
+0,
+-0.2
+]
+},
+{
+"type": "label",
+"text": "14\" M5 Max",
+"x": 1060,
+"y": 860,
+"at": [
+"forty",
+0,
+0
+],
+"px": 60,
+"col": "ink"
+},
+{
+"type": "priceTag",
+"x": 1520,
+"y": 330,
+"s": 1.395,
+"text": "$4,799",
+"at": [
+"forty",
+1,
+-0.2
+]
+},
+{
+"type": "label",
+"text": "16\" M5 Max",
+"x": 1520,
+"y": 860,
+"at": [
+"forty",
+1,
+0
+],
+"px": 60,
+"col": "ink"
+},
+{
+"type": "headline",
+"text": "M5 MAX: $4,499",
+"at": 2.23,
+"y": 64,
+"acc": [
+"$4,499"
+],
+"until": 3.93
+},
+{
+"type": "headline",
+"text": "$4,799",
+"at": 3.93,
+"y": 64,
+"acc": [
+"$4,799"
+],
+"until": 6.94
+}
+],
+"xfade": true
+},
+{
+"line": 102,
+"bg": "blush",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 960,
+"y": 660,
+"w": 1000,
+"push": true
+},
+{
+"type": "questionStamp",
+"x": 1660,
+"y": 420,
+"s": 0.775,
+"at": 0.1
+},
+{
+"type": "headline",
+"text": "THE PART THAT STINGS",
+"at": 1.11,
+"y": 64,
+"acc": [
+"STINGS"
+],
+"until": 3.7
+}
+],
+"xfade": true
+},
+{
+"line": 103,
+"bg": "blush",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "ph_Z",
+"x": 560,
+"y": 600,
+"w": 780,
+"card": true,
+"radius": 32
+},
+{
+"type": "priceTag",
+"x": 1420,
+"y": 330,
+"s": 1.55,
+"text": "$1,999",
+"at": [
+"nineteen",
+0,
+-0.2
+]
+},
+{
+"type": "label",
+"text": "M6 \u00b7 14\"",
+"x": 1420,
+"y": 880,
+"at": [
+"m6",
+0,
+0
+],
+"px": 64,
+"col": "ink"
+},
+{
+"type": "headline",
+"text": "M6 FROM $1,999",
+"at": 4.67,
+"y": 64,
+"acc": [
+"$1,999"
+],
+"until": 7.46
+}
+]
+},
+{
+"line": 104,
+"bg": "blush",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "ph_Z",
+"x": 420,
+"y": 600,
+"w": 600,
+"card": true,
+"radius": 32
+},
+{
+"type": "product",
+"img": "cut_A",
+"x": 1500,
+"y": 640,
+"w": 640
+},
+{
+"type": "number",
+"value": 900,
+"x": 960,
+"y": 520,
+"at": [
+"nine",
+0,
+-0.1
+],
+"px": 110,
+"prefix": "+$"
+},
+{
+"type": "label",
+"text": "$1,999 \u2192 $2,899",
+"x": 960,
+"y": 700,
+"at": [
+"nine",
+0,
+0
+],
+"px": 60,
+"col": "ink"
+},
+{
+"type": "headline",
+"text": "+$900",
+"at": 2.81,
+"y": 64,
+"acc": [
+"+$900"
+],
+"until": 6.61
+}
+],
+"xfade": true
+},
+{
+"line": 105,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 330,
+"y": 660,
+"w": 440
+},
+{
+"type": "chipDie",
+"x": 760,
+"y": 580,
+"s": 0.698,
+"at": [
+"pro",
+0,
+-0.2
+]
+},
+{
+"type": "label",
+"text": "PRO",
+"x": 760,
+"y": 860,
+"at": [
+"pro",
+0,
+0
+],
+"px": 60,
+"col": "ember"
+},
+{
+"type": "ssd",
+"x": 1190,
+"y": 580,
+"s": 0.62,
+"at": [
+"terabyte",
+0,
+-0.2
+]
+},
+{
+"type": "label",
+"text": "1 TB",
+"x": 1190,
+"y": 860,
+"at": [
+"terabyte",
+0,
+0
+],
+"px": 60,
+"col": "ember"
+},
+{
+"type": "starScreen",
+"x": 1640,
+"y": 600,
+"s": 0.26,
+"at": [
+"screen",
+0,
+-0.2
+],
+"offAt": 0
+},
+{
+"type": "label",
+"text": "OLED",
+"x": 1640,
+"y": 800,
+"at": [
+"screen",
+0,
+0
+],
+"px": 60,
+"col": "ember"
+},
+{
+"type": "headline",
+"text": "TO BE FAIR",
+"at": 0.05,
+"y": 64,
+"until": 3.85
+}
+]
+},
+{
+"line": 106,
+"bg": "blush",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 480,
+"y": 660,
+"w": 680
+},
+{
+"type": "number",
+"value": 900,
+"x": 1380,
+"y": 620,
+"at": 0.05,
+"px": 150,
+"prefix": "$"
+},
+{
+"type": "headline",
+"text": "STILL $900",
+"at": 2.05,
+"y": 64,
+"acc": [
+"$900"
+],
+"until": 5.16
+}
+]
+},
+{
+"line": 107,
+"bg": "blush",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 960,
+"y": 660,
+"w": 1000,
+"push": true
+},
+{
+"type": "questionStamp",
+"x": 1660,
+"y": 420,
+"s": 0.775,
+"at": 0.1
+},
+{
+"type": "headline",
+"text": "WORTH $900?",
+"at": 0.05,
+"y": 64,
+"acc": [
+"$900?"
+],
+"until": 3.06
+}
+],
+"xfade": true
+},
+{
+"line": 108,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "chapterCard",
+"n": 9,
+"title": "VERDICT: SPEC OR WRECK?",
+"x": 960,
+"y": 560,
+"at": 0.05,
+"hold": 1.6
+},
+{
+"type": "product",
+"img": "cut_A",
+"x": 1500,
+"y": 700,
+"w": 640,
+"show": 1.95
+},
+{
+"type": "reviewCard",
+"x": 560,
+"y": 600,
+"s": 1.395,
+"at": 2.05,
+"show": 1.95
+},
+{
+"type": "headline",
+"text": "THE SCORE",
+"at": 1.95,
+"y": 64,
+"show": 1.95,
+"until": 5.75
+}
+]
+},
+{
+"line": 109,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "scoreTable",
+"x": 800,
+"y": 300,
+"s": 1.08,
+"rows": [
+{
+"label": "Price vs rivals",
+"score": 12.5,
+"max": 25,
+"at": [
+"twelve",
+0,
+-0.1
+]
+}
+],
+"w": 1100
+},
+{
+"type": "product",
+"img": "cut_A",
+"x": 1620,
+"y": 860,
+"w": 360
+},
+{
+"type": "headline",
+"text": "12.5/25",
+"at": 6.23,
+"y": 64,
+"acc": [
+"12.5/25"
+],
+"until": 8.94
+}
+],
+"xfade": true
+},
+{
+"line": 110,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "scoreTable",
+"x": 800,
+"y": 300,
+"s": 1.08,
+"rows": [
+{
+"label": "Price vs rivals",
+"score": 12.5,
+"max": 25,
+"at": -1
+},
+{
+"label": "Headline claims",
+"score": 20,
+"max": 20,
+"at": [
+"full",
+0,
+-0.1
+]
+}
+],
+"w": 1100
+},
+{
+"type": "product",
+"img": "cut_A",
+"x": 1620,
+"y": 860,
+"w": 360
+},
+{
+"type": "headline",
+"text": "20/20",
+"at": 6.09,
+"y": 64,
+"acc": [
+"20/20"
+],
+"until": 8.32
+}
+]
+},
+{
+"line": 111,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "scoreTable",
+"x": 800,
+"y": 300,
+"s": 1.08,
+"rows": [
+{
+"label": "Price vs rivals",
+"score": 12.5,
+"max": 25,
+"at": -1
+},
+{
+"label": "Headline claims",
+"score": 20,
+"max": 20,
+"at": -1
+},
+{
+"label": "New / best",
+"score": 8,
+"max": 15,
+"at": [
+"eight",
+0,
+-0.1
+]
+}
+],
+"w": 1100
+},
+{
+"type": "product",
+"img": "cut_A",
+"x": 1620,
+"y": 860,
+"w": 360
+},
+{
+"type": "headline",
+"text": "8/15",
+"at": 7.11,
+"y": 64,
+"acc": [
+"8/15"
+],
+"until": 9.81
+}
+],
+"xfade": true
+},
+{
+"line": 112,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "scoreTable",
+"x": 800,
+"y": 300,
+"s": 1.08,
+"rows": [
+{
+"label": "Price vs rivals",
+"score": 12.5,
+"max": 25,
+"at": -1
+},
+{
+"label": "Headline claims",
+"score": 20,
+"max": 20,
+"at": -1
+},
+{
+"label": "New / best",
+"score": 8,
+"max": 15,
+"at": -1
+},
+{
+"label": "Repair",
+"score": 8,
+"max": 15,
+"at": [
+"eight",
+0,
+-0.1
+]
+}
+],
+"w": 1100
+},
+{
+"type": "product",
+"img": "cut_A",
+"x": 1620,
+"y": 860,
+"w": 360
+},
+{
+"type": "headline",
+"text": "8/15",
+"at": 3.2,
+"y": 64,
+"acc": [
+"8/15"
+],
+"until": 5.31
+}
+]
+},
+{
+"line": 113,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "scoreTable",
+"x": 800,
+"y": 300,
+"s": 1.08,
+"rows": [
+{
+"label": "Price vs rivals",
+"score": 12.5,
+"max": 25,
+"at": -1
+},
+{
+"label": "Headline claims",
+"score": 20,
+"max": 20,
+"at": -1
+},
+{
+"label": "New / best",
+"score": 8,
+"max": 15,
+"at": -1
+},
+{
+"label": "Repair",
+"score": 8,
+"max": 15,
+"at": -1
+},
+{
+"label": "The catch",
+"score": 8,
+"max": 15,
+"at": [
+"eight",
+0,
+-0.1
+]
+}
+],
+"w": 1100
+},
+{
+"type": "product",
+"img": "cut_A",
+"x": 1620,
+"y": 860,
+"w": 360
+},
+{
+"type": "headline",
+"text": "8/15",
+"at": 5.73,
+"y": 64,
+"acc": [
+"8/15"
+],
+"until": 7.86
+}
+],
+"xfade": true
+},
+{
+"line": 114,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "scoreTable",
+"x": 800,
+"y": 300,
+"s": 1.08,
+"rows": [
+{
+"label": "Price vs rivals",
+"score": 12.5,
+"max": 25,
+"at": -1
+},
+{
+"label": "Headline claims",
+"score": 20,
+"max": 20,
+"at": -1
+},
+{
+"label": "New / best",
+"score": 8,
+"max": 15,
+"at": -1
+},
+{
+"label": "Repair",
+"score": 8,
+"max": 15,
+"at": -1
+},
+{
+"label": "The catch",
+"score": 8,
+"max": 15,
+"at": -1
+},
+{
+"label": "Can you buy it",
+"score": 10,
+"max": 10,
+"at": [
+"ten",
+0,
+-0.1
+]
+}
+],
+"w": 1100
+},
+{
+"type": "product",
+"img": "cut_A",
+"x": 1620,
+"y": 860,
+"w": 360
+},
+{
+"type": "headline",
+"text": "10/10",
+"at": 3.53,
+"y": 64,
+"acc": [
+"10/10"
+],
+"until": 5.62
+}
+]
+},
+{
+"line": 115,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "scoreTable",
+"x": 800,
+"y": 300,
+"s": 1.08,
+"rows": [
+{
+"label": "Price vs rivals",
+"score": 12.5,
+"max": 25,
+"at": -1
+},
+{
+"label": "Headline claims",
+"score": 20,
+"max": 20,
+"at": -1
+},
+{
+"label": "New / best",
+"score": 8,
+"max": 15,
+"at": -1
+},
+{
+"label": "Repair",
+"score": 8,
+"max": 15,
+"at": -1
+},
+{
+"label": "The catch",
+"score": 8,
+"max": 15,
+"at": -1
+},
+{
+"label": "Can you buy it",
+"score": 10,
+"max": 10,
+"at": -1
+}
+],
+"w": 1100,
+"total": "66.5",
+"totalAt": [
+"sixty",
+0,
+-0.1
+]
+},
+{
+"type": "product",
+"img": "cut_A",
+"x": 1620,
+"y": 860,
+"w": 360
+},
+{
+"type": "label",
+"text": "67",
+"x": 1620,
+"y": 520,
+"at": [
+"round",
+0,
+0.3
+],
+"px": 161,
+"col": "ember"
+},
+{
+"type": "headline",
+"text": "66.5 \u2192 67",
+"at": 0.51,
+"y": 64,
+"acc": [
+"67"
+],
+"until": 4.31
+}
+],
+"xfade": true
+},
+{
+"line": 116,
+"bg": "mint",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_A",
+"x": 560,
+"y": 660,
+"w": 820
+},
+{
+"type": "wordmark",
+"x": 1400,
+"y": 520,
+"px": 96,
+"snapAt": [
+"spec",
+0,
+0
+],
+"score": 67,
+"scoreAt": 0.1
+}
+]
+},
+{
+"line": 117,
+"bg": "mint",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "cut_I",
+"x": 560,
+"y": 640,
+"w": 820
+},
+{
+"type": "pill",
+"x": 1420,
+"y": 520,
+"s": 1,
+"w": 768,
+"h": 132,
+"text": "PHOTO / VIDEO",
+"px": 62,
+"fill": "mari",
+"col": "ink",
+"at": [
+"photos",
+0,
+0
+]
+},
+{
+"type": "pill",
+"x": 1420,
+"y": 700,
+"s": 1,
+"w": 768,
+"h": 132,
+"text": "LOTS OF HDR",
+"px": 62,
+"fill": "mari",
+"col": "ink",
+"at": [
+"h",
+0,
+0
+]
+},
+{
+"type": "headline",
+"text": "FOR CREATORS",
+"at": 0.05,
+"y": 64,
+"acc": [
+"CREATORS"
+],
+"until": 3.85
+}
+]
+},
+{
+"line": 118,
+"bg": "blush",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "ph_Z",
+"x": 560,
+"y": 600,
+"w": 780,
+"card": true,
+"radius": 32
+},
+{
+"type": "pill",
+"x": 1420,
+"y": 520,
+"s": 1,
+"w": 768,
+"h": 132,
+"text": "JUST A FAST MAC?",
+"px": 60,
+"fill": "paper",
+"col": "ink",
+"at": 0.2
+},
+{
+"type": "label",
+"text": "M6 saves $900",
+"x": 1420,
+"y": 760,
+"at": [
+"m6",
+0,
+0
+],
+"px": 74,
+"col": "ember"
+},
+{
+"type": "headline",
+"text": "NOT FOR YOU IF\u2026",
+"at": 0.05,
+"y": 64,
+"until": 3.85
+}
+]
+},
+{
+"line": 119,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "ph_E",
+"x": 600,
+"y": 610,
+"w": 880,
+"card": true,
+"radius": 32
+},
+{
+"type": "fingerTap",
+"x": 1440,
+"y": 640,
+"s": 1.085,
+"at": [
+"touch",
+0,
+-0.3
+]
+},
+{
+"type": "headline",
+"text": "WOULD YOU TOUCH IT?",
+"at": 1.79,
+"y": 64,
+"acc": [
+"TOUCH"
+],
+"until": 5.34
+}
+]
+},
+{
+"line": 120,
+"bg": "paper",
+"real": true,
+"layers": [
+{
+"type": "product",
+"img": "ph_E",
+"x": 600,
+"y": 610,
+"w": 880,
+"card": true,
+"radius": 32
+},
+{
+"type": "speechBubble",
+"x": 1400,
+"y": 600,
+"s": 1.163,
+"w": 560,
+"h": 220,
+"wavy": true,
+"at": 0.1
+},
+{
+"type": "headline",
+"text": "TELL ME BELOW",
+"at": 0.05,
+"y": 64,
+"until": 2.49
+}
+],
+"xfade": true
+},
+{
+"endcard": true,
+"bg": "paper",
+"layers": [
+{
+"type": "wordmark",
+"x": 960,
+"y": 420,
+"px": 110,
+"snapAt": 0.6,
+"score": 67
+}
+]
+}
+]
+}
