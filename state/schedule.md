@@ -2,14 +2,17 @@
 
 | Day type | YouTube | Instagram |
 |---|---|---|
-| **Short day**: every day until Fri 4 Dec; from 5 Dec Sun–Fri | **2 Shorts**: 1:00 PM IST (07:30 UTC) and 6:30 PM IST (13:00 UTC) | **2 image posts** (10:17, 13:43 IST) + **both Shorts as Reels** right after each goes public |
-| **Long-video day**: Saturdays from 5 Dec 2026 | **1 long video (6–10 min)** at 6:30 PM IST (13:00 UTC), **no Shorts** | **3 image posts** (10:17, 13:43, 16:43 IST), no Reel |
+| **Short day**: Mon–Sat | **2 Shorts**: 1:00 PM IST (07:30 UTC) and 6:30 PM IST (13:00 UTC) | **2 image posts** (10:17, 13:43 IST) + **both Shorts as Reels** right after each goes public |
+| **Long-video day**: Sundays from 29 Nov 2026 | **1 long video (6–10 min)** at 6:30 PM IST (13:00 UTC), **no Shorts** | **3 image posts** (10:17, 13:43, 16:43 IST), no Reel |
+
+## One-off (owner 2026-11-22)
+- **Mon 23 Nov:** the first long video goes live at 6:30 PM IST (13:00 UTC) instead of Short 2 (Short 1 at 1:00 PM still runs).
 
 ## Automatic runs (each a fresh chat)
 | UTC | Job |
 |---|---|
-| 00:17 | Short 1: script → video chat → upload for 07:30 UTC (1:00 PM IST) → Reel via Instagram session (stops on long-video days) |
-| 05:17 | Short 2: same, upload for 13:00 UTC (6:30 PM IST); on long-video days this run makes the long video instead |
+| 00:17 | Short 1: script → video chat → upload for 07:30 UTC (1:00 PM IST) → Reel via Instagram session (stops on Sundays) |
+| 05:17 | Short 2: same, upload for 13:00 UTC (6:30 PM IST); on long-video days (Sundays) this run makes the long video instead; it also stops if a long video is already scheduled for today |
 | Sun 17:41 | Weekly YouTube analysis |
 Instagram image slots + its weekly review: the Instagram session's own scheduled tasks.
 
@@ -18,8 +21,8 @@ India are ~12–3 PM IST (Collabpals) and the evening (DemandSage 5–8 PM; Flux
 study: 8–11 PM IST, regular videos). 1:00 PM and 6:30 PM are the best of those inside the owner's window. Re-test with
 our own Analytics once the YouTube Analytics API is enabled on the Google Cloud project.
 
-Why Saturday (decided 2026-11-17, a starting guess, *inferred*): a 6–10 min video needs a longer viewing session, which
-people have more of at the weekend; Saturday 6:30 PM IST, and the
+Why Sunday (owner 2026-11-22: "change the schedule to Sunday"; first long video published Mon 23 Nov 6:30 PM IST as a catch-up): a 6–10 min video needs a longer viewing session, which
+people have more of at the weekend; Sunday 6:30 PM IST, and the
 video then has the whole weekend to collect views. After 4 long videos, compare with our own Analytics ("When your
 viewers are on YouTube") and move the day if the data says so.
 
