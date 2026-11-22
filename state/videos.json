@@ -234,5 +234,17 @@
   "publish_at": "2026-11-22T07:30:00Z",
   "verdict": "SPEC 64",
   "hypothesis": "Price-gap / 'you pay more here' framing on a cheap, iconic brand (Casio) vs gadget launches; tests a low-price nostalgia product after gaming/smart-home Shorts."
+ },
+ {
+  "slug": "sow014-nvidia-rubin-hpc",
+  "title": "NVIDIA Just Put 50,000 Cores in ONE GPU 🤯",
+  "format": "short",
+  "status": "scripted",
+  "slot": "2",
+  "date": "2026-11-22",
+  "scripted_at": "2026-11-22T05:50Z",
+  "publish_at": "2026-11-22T13:00:00Z",
+  "verdict": "SPEC 55",
+  "hypothesis": "Top-priority brand (NVIDIA, most-searched this week) + one huge number ('50,000 cores') vs Short 1's cheap Casio watch; tests whether a not-buyable data-centre GPU still pulls gamers via the RTX 5090 comparison."
  }
 ]

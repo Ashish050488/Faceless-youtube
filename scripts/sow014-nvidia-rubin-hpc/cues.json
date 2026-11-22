@@ -1,0 +1,159 @@
+{
+ "id": "sow014-nvidia-rubin-hpc",
+ "format": "short",
+ "export": "720x1280 H.264 CRF 24 maxrate 2M ≤20 MB (§13)",
+ "rules": "PRODUCTION_SPEC §12–§18; flat LIGHT backgrounds only — image A has a black studio background: cut the chip out (rembg) onto paper/lavender/blush/mint, never show the dark frame. Whole real product; 1–3 words; 2-D objects next to the product; watermark below content; logo v5 end card; audio LOCKED (narrate.py + mix.sh). Length 50–58 s.",
+ "numbers_shown": [
+  "50,000+",
+  "SC26 / NOV 16 2026",
+  "21,760",
+  "2.3×",
+  "2028",
+  "55/100"
+ ],
+ "official_clips": "none — NVIDIA blog has no downloadable video; no YouTube/promo clips (reused-content rule)",
+ "palette_for_this_video": "paper #FAF8F5 main; lavender #ECE8FB name/record beats; mint for science; blush #FBE7E2 not-for-gaming + THE CATCH; ember accent for numbers; NVIDIA-green only as a thin accent on the chip label, never as background",
+ "assets": "assets_sources.md (A, C — NVIDIA official, 1920×1080)",
+ "new_objects": "coreGrid (compute.js: grid of tiny squares that fills in order, optional counter) and gpuCard (compute.js: flat 2-slot graphics-card silhouette with fans + label slot) — add both to render/kit/OBJECTS.md",
+ "scenes": [
+  {
+   "n": 1,
+   "anchor": "NVIDIA just put fifty thousand CUDA cores on one GPU.",
+   "bg": "paper",
+   "image": "A Rubin HPC chip (cut out from black bg, rembg), centred 70% width",
+   "object": "coreGrid (NEW): tiny square grid fills the chip's die area while a counter rolls 0 → 50,000+",
+   "text": "50,000+ CORES",
+   "sfx": "whoosh-up",
+   "note": "frame 1 must read instantly: chip + 50,000+"
+  },
+  {
+   "n": 2,
+   "anchor": "Wait. Fifty thousand?",
+   "bg": "paper",
+   "image": "A Rubin HPC chip (cut out from black bg, rembg), slight push-in 105%",
+   "object": "questionStamp pops top-right; counter holds at 50,000+",
+   "text": "50,000?!",
+   "sfx": "pop"
+  },
+  {
+   "n": 3,
+   "anchor": "It's called Rubin H P C.",
+   "bg": "lavender",
+   "image": "A Rubin HPC chip (cut out from black bg, rembg), left 55% width",
+   "object": "name label on a leader line from the chip: 'RUBIN HPC'; small 'VERA RUBIN PLATFORM' pill under it",
+   "text": "RUBIN HPC",
+   "sfx": "swipe"
+  },
+  {
+   "n": 4,
+   "anchor": "NVIDIA showed it at S C twenty-six, the big supercomputing conference.",
+   "bg": "lavender",
+   "image": "A Rubin HPC chip (cut out from black bg, rembg), small 40% bottom-right",
+   "object": "calendar page flips to 'NOV 16 2026' with an 'SC26' badge",
+   "text": "SC26",
+   "sfx": "page flip"
+  },
+  {
+   "n": 5,
+   "anchor": "And no, it's not for your gaming PC.",
+   "bg": "blush",
+   "image": "A Rubin HPC chip (cut out from black bg, rembg), right 45%",
+   "object": "consoleTower (or miniPc) gaming-PC silhouette with a slash across it",
+   "text": "NOT FOR GAMING",
+   "sfx": "buzz"
+  },
+  {
+   "n": 6,
+   "anchor": "Your R T X fifty-ninety has about twenty-two thousand cores.",
+   "bg": "paper",
+   "image": "none (no RTX photo — 2-D only)",
+   "object": "gpuCard (NEW): flat 2-slot graphics-card silhouette labelled 'RTX 5090'; bars: one bar '21,760' fills",
+   "text": "21,760 CORES",
+   "sfx": "tick-tick"
+  },
+  {
+   "n": 7,
+   "anchor": "This has more than double that.",
+   "bg": "paper",
+   "image": "A Rubin HPC chip (cut out from black bg, rembg), right 45%",
+   "object": "bars: second bar '50,000+' grows to 2.3× the first; '2.3×' badge pops between them",
+   "text": "2.3×",
+   "sfx": "riser"
+  },
+  {
+   "n": 8,
+   "anchor": "NVIDIA calls it a record.",
+   "bg": "lavender",
+   "image": "A Rubin HPC chip (cut out from black bg, rembg), centred 60%",
+   "object": "reviewCard used as a 'RECORD' badge stamped onto the chip corner",
+   "text": "RECORD",
+   "sfx": "stamp"
+  },
+  {
+   "n": 9,
+   "anchor": "It's built for science, like climate models and engineering simulations.",
+   "bg": "mint",
+   "image": "C collage — crop molecule + lattice tiles only (no EHT tile)",
+   "object": "globe spins with small cloud/temperature icons (climate) + bars for 'simulation' load",
+   "text": "SCIENCE",
+   "sfx": "soft whoosh"
+  },
+  {
+   "n": 10,
+   "anchor": "Sounds great, right? Here's the catch.",
+   "bg": "blush",
+   "image": "A Rubin HPC chip (cut out from black bg, rembg), centred 55%, desaturate 30%",
+   "object": "crossMark draws in beside the chip",
+   "text": "THE CATCH",
+   "sfx": "record scratch"
+  },
+  {
+   "n": 11,
+   "anchor": "There's no price. No memory size. No power figure.",
+   "bg": "blush",
+   "image": "A Rubin HPC chip (cut out from black bg, rembg), left 45%",
+   "object": "three cards flip in a column: priceTag '$ ???', ramStick '? GB', battery/gauge '? W' — each gets a slash",
+   "text": "NO PRICE · ? GB · ? W",
+   "sfx": "tick x3"
+  },
+  {
+   "n": 12,
+   "anchor": "And you'll wait until twenty twenty-eight.",
+   "bg": "blush",
+   "image": "A Rubin HPC chip (cut out from black bg, rembg), small 35%",
+   "object": "hourglass falls next to calendar flipping 2026 → 2027 → 2028",
+   "text": "2028",
+   "sfx": "clock tick"
+  },
+  {
+   "n": 13,
+   "anchor": "By our score? Fifty-five out of a hundred.",
+   "bg": "paper",
+   "image": "A Rubin HPC chip (cut out from black bg, rembg), left 45%",
+   "object": "gauge needle sweeps to 55 (cut-off line at 55 marked)",
+   "text": "SPEC SCORE 55",
+   "sfx": "gauge whir"
+  },
+  {
+   "n": 14,
+   "anchor": "Spec! Just barely. For science labs, not gamers.",
+   "bg": "paper",
+   "image": "A Rubin HPC chip (cut out from black bg, rembg), centred",
+   "object": "logo v5 end card: k snaps upright; 'SPEC 55' + small 'FOR SCIENCE LABS' pill",
+   "text": "SPEC — LABS",
+   "sfx": "snap"
+  },
+  {
+   "n": 15,
+   "anchor": "Be honest. Would you wait till twenty twenty-eight for fifty thousand cores?",
+   "bg": "paper",
+   "image": "A Rubin HPC chip (cut out from black bg, rembg) exactly as frame 1",
+   "object": "coreGrid full + counter 50,000+ as frame 1; small '2028?' pill (seamless loop)",
+   "text": "WAIT TILL 2028?",
+   "sfx": "riser tail",
+   "note": "match frame 1"
+  }
+ ],
+ "thumbnail": "1280×720: A Rubin HPC chip cut out right; '50,000' huge (ember) left with small 'CORES · ONE GPU' pill under it; emotion object: small gpuCard 'RTX 5090' looking tiny next to the chip (scale contrast); flat paper background; readable at 168×94",
+ "credits": "Product images: NVIDIA (official blog/press). Not affiliated with or endorsed by NVIDIA."
+}
