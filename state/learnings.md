@@ -1,5 +1,9 @@
 # Learnings (newest first; only what still changes decisions — older notes are in git history)
 
+## 2026-11-22
+- Long video was missed because the day was written inside task text ("Saturday from 5 Dec"). Fix: days live in the
+  task timers (Shorts Mon–Sat, long video built Sat night → Sun 10:30 AM IST). Sunday = no Shorts, no Reels.
+
 ## 2026-11-20
 - A scheduled (publishAt) Short went public but its script chat never ran the 'comment + Reel' follow-up. Added a
   safety-net task in the Instagram chat at 1:45 PM and 6:45 PM IST that cross-posts any public Short missing on Instagram.

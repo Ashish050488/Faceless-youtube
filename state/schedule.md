@@ -5,6 +5,8 @@
 | **Short day**: Mon–Sat | **2 Shorts**: 1:00 PM IST (07:30 UTC) and 6:30 PM IST (13:00 UTC) | **2 image posts** (10:17, 13:43 IST) + **both Shorts as Reels** right after each goes public |
 | **Long-video day**: every Sunday from 29 Nov 2026 | **1 long video (6–10 min)** at **10:30 AM IST (05:00 UTC)**, **no Shorts** | **3 image posts** (10:17, 13:43, 16:43 IST), no Reel |
 
+**HARD RULE (owner 2026-11-22): on the long-video day (Sunday) there are NO Shorts and NO Reels — only the long video + Instagram image posts. Never break this.**
+
 ## One-off (owner 2026-11-22)
 - **Sun 22 Nov:** the first long video is built tonight and goes public as soon as it is ready (before midnight IST). Mon 23 Nov = normal 2 Shorts.
 
