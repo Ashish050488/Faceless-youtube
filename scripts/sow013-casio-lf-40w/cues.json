@@ -1,0 +1,172 @@
+{
+ "id": "sow013-casio-lf-40w",
+ "format": "short",
+ "export": "720x1280 H.264 CRF 24 maxrate 2M ≤20 MB (§13)",
+ "rules": "PRODUCTION_SPEC §12–§18; flat LIGHT backgrounds; Casio images are cut-outs/photos — cut out (rembg) where background isn't flat light. Whole real product; 1–3 words; 2-D objects next to the product; watermark below content; logo v5 end card; audio LOCKED (narrate.py + mix.sh). Length 50–58 s. No Casio logo drawn; no real banknotes.",
+ "numbers_shown": [
+  "+70%",
+  "$42.95",
+  "¥4,400",
+  "≈$25",
+  "10s / 1s",
+  "8.6 mm",
+  "23 g",
+  "5 alarms",
+  "~3 years",
+  "64/100"
+ ],
+ "official_clips": "none — casio.com blocked for automation; no promo video use",
+ "palette_for_this_video": "paper #FAF8F5 main; lavender #ECE8FB display beats; sky for specs; blush #FBE7E2 THE CATCH; mint reveal; ember accent for prices",
+ "assets": "assets_sources.md (A–G, Casio press images, ≥1600 px)",
+ "new_objects": "none expected — reuse priceTag, bars, slider, calipers, scale, battery, calendar, globe/worldMap, waterDrop, crossMark, gauge/dialScale, questionStamp, clockRing (render/kit/OBJECTS.md); if a swimmer icon is needed, add it to the library",
+ "scenes": [
+  {
+   "n": 1,
+   "anchor": "Casio's new watch costs almost seventy percent more in the US.",
+   "bg": "paper",
+   "image": "A black LF-40W cut out, centred 62% width",
+   "object": "two priceTags either side: left 'US $42.95' (ember), right 'JAPAN ¥4,400' (muted); a counter 0→70% pops above",
+   "text": "+70%",
+   "sfx": "whoosh-up",
+   "note": "frame 1 must read instantly: watch + +70%"
+  },
+  {
+   "n": 2,
+   "anchor": "Wait, seventy?",
+   "bg": "paper",
+   "image": "A hold, slight zoom 1.05",
+   "object": "questionStamp slams onto the +70% counter",
+   "text": "WAIT, 70?",
+   "sfx": "boing"
+  },
+  {
+   "n": 3,
+   "anchor": "Meet the Casio L F forty W.",
+   "bg": "mint",
+   "image": "A centred 55%",
+   "object": "globe/worldMap mini: pin drops on USA; generic store card (ui appTile 'US STORE') slides in",
+   "text": "LF-40W",
+   "sfx": "pop"
+  },
+  {
+   "n": 4,
+   "anchor": "Forty-two ninety-five, in black, blue or beige.",
+   "bg": "paper",
+   "image": "A, B, C side by side (each 30% width), slide in left→right staggered",
+   "object": "priceTag '$42.95' swings under the middle watch",
+   "text": "$42.95",
+   "sfx": "tick x3"
+  },
+  {
+   "n": 5,
+   "anchor": "Now look at the face. Three rows of bars, like a tiny music mixer!",
+   "bg": "lavender",
+   "image": "D display close-up, centred 80%, slow push-in",
+   "object": "bars: 3 rows of generic slider/equalizer bars drawn beside the watch, animating",
+   "text": "3 ROWS",
+   "sfx": "slide"
+  },
+  {
+   "n": 6,
+   "anchor": "Here's the wild part. Those bars count your seconds. Tens in the middle, ones at the bottom.",
+   "bg": "lavender",
+   "image": "D crop on the lower two bar rows, 85%",
+   "object": "bars: middle row fills in 10-s steps, bottom row in 1-s steps, labels '10s' and '1s'; clockRing ticking",
+   "text": "10s · 1s",
+   "sfx": "tick-tick"
+  },
+  {
+   "n": 7,
+   "anchor": "It's eight point six millimeters thin.",
+   "bg": "paper",
+   "image": "A rotated side-on is not available → use A small (40%) with calipers object",
+   "object": "calipers close on a side-profile silhouette of the case reading '8.6 mm'",
+   "text": "8.6 mm",
+   "sfx": "click"
+  },
+  {
+   "n": 8,
+   "anchor": "Twenty-three grams.",
+   "bg": "paper",
+   "image": "C beige centred 45%",
+   "object": "scale: watch drops on a kitchen scale, display counts to '23 g'",
+   "text": "23 g",
+   "sfx": "thud"
+  },
+  {
+   "n": 9,
+   "anchor": "Five alarms,",
+   "bg": "sky",
+   "image": "E amber backlight, 55%",
+   "object": "counter '5' with bell icon, five bells pop in a row",
+   "text": "5 ALARMS",
+   "sfx": "ding"
+  },
+  {
+   "n": 10,
+   "anchor": "and about three years of battery.",
+   "bg": "sky",
+   "image": "E hold",
+   "object": "battery object fills; calendar flips '3 YEARS'",
+   "text": "~3 YRS",
+   "sfx": "charge-up"
+  },
+  {
+   "n": 11,
+   "anchor": "Here's the catch. In Japan, you'd pay forty-four hundred yen.",
+   "bg": "blush",
+   "image": "A centred 50%",
+   "object": "worldMap/globe pans to Japan; priceTag '¥4,400' drops",
+   "text": "¥4,400",
+   "sfx": "record-scratch"
+  },
+  {
+   "n": 12,
+   "anchor": "That's about twenty-five dollars, before tax.",
+   "bg": "blush",
+   "image": "A hold",
+   "object": "two priceTags side by side: '$42.95 US' vs '≈$25 JP (pre-tax)'; slash through the gap; gauge needle to '+70%'",
+   "text": "≈ $25",
+   "sfx": "whoosh-down"
+  },
+  {
+   "n": 13,
+   "anchor": "And no swimming with it.",
+   "bg": "blush",
+   "image": "F blue on wrist, 60%",
+   "object": "waterDrop splashes bounce off; crossMark over a generic swimmer icon",
+   "text": "NO SWIM",
+   "sfx": "splash"
+  },
+  {
+   "n": 14,
+   "anchor": "By our score? Sixty-four out of a hundred. Spec!",
+   "bg": "paper",
+   "image": "A centred 50%",
+   "object": "dialScale/gauge sweeps to 64; k snaps upright (SPEC)",
+   "text": "SPEC 64",
+   "sfx": "verdict-up"
+  },
+  {
+   "n": 15,
+   "anchor": "If you want a fun, cheap watch.",
+   "bg": "paper",
+   "image": "G beige on wrist, 55%",
+   "object": "pill ✓ FUN & CHEAP pops; small ✗ SWIM pill fades in under it",
+   "text": "FUN & CHEAP",
+   "sfx": "pop"
+  },
+  {
+   "n": 16,
+   "anchor": "Be honest. Would you pay forty-three dollars for this?",
+   "bg": "paper",
+   "image": "A centred 62% exactly as frame 1",
+   "object": "priceTag '$42.95' and '¥4,400' back as in frame 1; questionStamp '?'",
+   "text": "$43?",
+   "sfx": "riser tail",
+   "note": "match frame 1 (seamless loop)"
+  }
+ ],
+ "thumbnail": "1280×720: black LF-40W (A) cut out right; '+70%' HUGE (ember) left, small pill 'US vs JAPAN' under it; emotion object: shocked emoji/eyes beside the price; flat paper background; readable at 168×94",
+ "credits": "Product images: Casio (press images). Not affiliated with or endorsed by Casio."
+}
