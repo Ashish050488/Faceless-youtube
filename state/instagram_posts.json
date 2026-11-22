@@ -488,5 +488,31 @@
   "youtube": "https://youtube.com/shorts/NEDjNq_JPVc",
   "permalink": "https://www.instagram.com/reel/DgCSTjBEoIS/",
   "mediaId": "18002618508017839"
+ },
+ {
+  "date": "2026-11-22",
+  "slot": "13:43 IST",
+  "type": "single",
+  "category": "chips & prices",
+  "topic": "Memory price surge: Gartner forecasts RAM+SSD +130% by end-2026, PCs +17%, phones +13%",
+  "status": "published 2026-11-22",
+  "postId": "53d1b5d4-61e5-462c-9ffc-8c421f9a3f5a",
+  "permalink": "https://www.instagram.com/p/DgCWkd_lXTp/",
+  "slides": 1,
+  "sources": [
+   "https://www.gartner.com/en/newsroom/press-releases/2026-02-26-gartner-says-surging-memory-costs-will-reduce-global-pc-and-smartphone-shipments-in-2026",
+   "https://www.tomsguide.com/computing/brace-yourself-pcs-laptops-and-phones-may-jump-in-price-as-early-as-december-thanks-to-a-500-percent-ram-ssd-surge",
+   "https://www.techradar.com/pro/why-is-ram-so-expensive-right-now-its-more-complicated-than-you-think"
+  ],
+  "images": "SK hynix newsroom (HBM4)",
+  "test_vars": {
+   "format": "single",
+   "cover_angle": "price warning / you-impact",
+   "topic_type": "chips & prices",
+   "slide_count": 1,
+   "meme": false,
+   "slot_time": "13:43",
+   "caption_length": "medium"
+  }
  }
 ]
