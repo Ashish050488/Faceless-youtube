@@ -438,5 +438,44 @@
   "permalink": "https://www.instagram.com/reel/Df9uyBBgL9G/",
   "mediaId": "18074952482788551",
   "note": "custom cover not supported by vidiq_instagram_publish_reel"
+ },
+ {
+  "date": "2026-11-21",
+  "type": "reel_crosspost",
+  "category": "smart home",
+  "topic": "Google Assistant on Nest ends 2 Aug 2027; Nest app ends 25 Jan 2027 (YouTube Short sSWTIJhSTXM, sow012)",
+  "posted_by": "instagram session (safety net, posted late on 22 Nov after session restart)",
+  "ai_label": true,
+  "youtube": "https://youtube.com/shorts/sSWTIJhSTXM",
+  "permalink": "https://www.instagram.com/reel/DgB-9ekDS9p/",
+  "mediaId": "18105777665054573"
+ },
+ {
+  "date": "2026-11-22",
+  "slot": "10:17 IST",
+  "type": "carousel",
+  "category": "space",
+  "topic": "SpaceX Starship Flight 15: ship caught by tower arms from orbit for the first time; booster exploded in Gulf",
+  "status": "published 2026-11-22",
+  "postId": "534d2313-801a-44d4-bc8f-c1a1ef3a6a72",
+  "permalink": "https://www.instagram.com/p/DgB_Tk6DSxq/",
+  "slides": 6,
+  "sources": [
+   "https://www.space.com/news/live/spacex-starship-flight-15-live-updates-nov-14-2026-starship-first-double-landing-attempt",
+   "https://cbsaustin.com/news/nation-world/spacex-catches-starship-after-orbit-in-historic-first-as-booster-explodes-over-gulf",
+   "https://www.ibtimes.co.uk/spacex-starship-ship-42-first-tower-catch-1832419",
+   "https://www.bloomberg.com/news/articles/2026-11-13/spacex-aims-for-novel-double-landing-with-starship-test-flight"
+  ],
+  "images": "NASA images-api (HLS concept, ISS photo, nose cones)",
+  "test_vars": {
+   "format": "carousel (daily)",
+   "cover_angle": "spectacle/first ever",
+   "topic_type": "space",
+   "slide_count": 6,
+   "meme": true,
+   "slot_time": "10:17 (posted ~10:45)",
+   "caption_length": "medium"
+  },
+  "note": "21 Nov slots 1+2 missed: session worker restarted; no posts that day"
  }
 ]
