@@ -477,5 +477,16 @@
    "caption_length": "medium"
   },
   "note": "21 Nov slots 1+2 missed: session worker restarted; no posts that day"
+ },
+ {
+  "date": "2026-11-22",
+  "type": "reel_crosspost",
+  "category": "wearables",
+  "topic": "Casio LF-40W costs ~70% more in US than Japan (YouTube Short NEDjNq_JPVc)",
+  "posted_by": "instagram session (autonomous)",
+  "ai_label": true,
+  "youtube": "https://youtube.com/shorts/NEDjNq_JPVc",
+  "permalink": "https://www.instagram.com/reel/DgCSTjBEoIS/",
+  "mediaId": "18002618508017839"
  }
 ]
