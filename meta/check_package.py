@@ -24,10 +24,12 @@ def check(slug):
     if not 10 <= len(tags) <= 25: bad.append(f"{len(tags)} tags (want ~15–21)")
     if n > 500: bad.append(f"tags {n} chars (YouTube max 500)")
     if m.get("madeForKids") is not False: bad.append("madeForKids must be false")
-    if m.get("format") == "short":
+    fmt = m.get("format")
+    if fmt in ("short", "long"):
+        lo, hi, label = (90, 150, "Shorts: 100–130") if fmt == "short" else (900, 1500, "long: 900–1,500")
         words = len(re.findall(r"[A-Za-z0-9$']+", "\n".join(l for l in (d / "script.md").read_text().splitlines()
                                                              if l.strip() and not l.startswith(("#", "[")))))
-        if not 90 <= words <= 150: bad.append(f"script {words} words (Shorts: 100–130)")
+        if not lo <= words <= hi: bad.append(f"script {words} words ({label})")
         txt = "\n".join(l for l in (d / "script.md").read_text().splitlines() if l.strip() and not l.startswith(("#", "[")))
         sents = [x for x in re.split(r"(?<=[.?!…])\s+", txt) if x.strip()]
         you = len(re.findall(r"\b(you|your|you'd|you're|you'll)\b", txt, re.I))
