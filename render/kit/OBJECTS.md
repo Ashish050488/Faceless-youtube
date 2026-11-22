@@ -23,7 +23,7 @@ Every object is drawn once, saved here, and reused by every future video. Before
 | `product.js` | product cut-out + shadows |
 | `text.js` | label, headline, counter, bigWord, stamp, wordmark, pill |
 | `motion.js` | easing/spring helpers (not objects) |
-| `compute.js` | chips and PC parts: chipDie, ramStick, fan, ssd, miniPc, consoleTower (gpuCard: not drawn yet) |
+| `compute.js` | chips and PC parts: chipDie, ramStick, fan, ssd, miniPc, consoleTower coreGrid, gpuCard |
 | `ui.js` | interface pieces: speechBubble, appTile |
 | `emotion.js` | poster/scene emotion objects: crossMark, questionStamp, arrowPointer |
 | `media.js` | discs, game cases, downloads: disc, gameCase, dvdStack, downloadBar |
@@ -74,4 +74,6 @@ Every object is drawn once, saved here, and reused by every future video. Before
 | poster | ../poster.js | §9 poster: huge product + 1–3 huge words + accent number + one emotion object | gentle tilt float | frame 1 (layer `poster`), cover.jpg, thumbnail.jpg (A/B) |
 | speechBubble | ui.js | rounded bubble + tail (`tail` left/right), `text` inside or `wavy` lines | pops in; wavy lines draw on | talking, voice assistants, quotes-free "says" |
 | appTile | ui.js | generic rounded app icon (house glyph, not a brand icon) + `label` | pops in | apps shutting down/moving, "the X app" |
+| coreGrid | compute.js | dark die with a grid of tiny core cells (`cols`×`rows`, `w`×`h`) | cells sweep-fill left→right from `fillAt` | core counts, "50,000 cores", parallelism |
+| gpuCard | compute.js | generic 2-slot graphics card: shroud, 2 spinning fans, bracket + ports, PCIe fingers, `label` under it | pops in, fans spin | consumer GPU comparisons (no brand imagery) |
 

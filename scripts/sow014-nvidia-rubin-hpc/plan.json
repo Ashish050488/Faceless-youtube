@@ -1,0 +1,19 @@
+[
+ {"cue": "fifty", "line": 0, "word": "fifty", "offset": -0.05},
+ {"cue": "wait", "line": 0, "word": "wait"},
+ {"cue": "rubin", "line": 1, "word": "rubin"},
+ {"cue": "sc26", "line": 1, "word": "twenty-six", "offset": -0.4},
+ {"cue": "gaming", "line": 1, "word": "gaming"},
+ {"cue": "rtx", "line": 2, "word": "fifty-ninety", "offset": -0.3},
+ {"cue": "double", "line": 2, "word": "double"},
+ {"cue": "record", "line": 2, "word": "record"},
+ {"cue": "science", "line": 2, "word": "science"},
+ {"cue": "catch", "line": 3, "word": "catch"},
+ {"cue": "price", "line": 3, "word": "price"},
+ {"cue": "mem", "line": 3, "word": "memory"},
+ {"cue": "power", "line": 3, "word": "power"},
+ {"cue": "y2028", "line": 3, "word": "twenty", "offset": -0.05},
+ {"cue": "score", "line": 4, "word": "fifty-five"},
+ {"cue": "verdict", "line": 4, "word": "spec"},
+ {"cue": "loop", "line": 5, "word": "wait"}
+]

@@ -63,7 +63,7 @@ const SFX_DEFAULT = { connector: [['at', 'pop', 0.4], ['flipAt', 'thud', 0.8]], 
   playIcon: [['at', 'pop', 0.4]], motionLines: [['at', 'swish', 0.5]], slider: [['at', 'down', 0.5]], headline: [], label: [], product: [], clip: [],
   chipDie: [['fillAt', 'blip', 0.45]], ramStick: [['at', 'clunk', 0.5]], fan: [['at', 'whoosh', 0.35]], gauge: [['at', 'tick', 0.5]], usbPort: [['at', 'pop', 0.4], ['crossAt', 'scratch', 0.6]], audioJack: [['at', 'pop', 0.4], ['crossAt', 'scratch', 0.6]],
   ruler: [['at', 'swish', 0.4]], reviewCard: [['at', 'pop', 0.35], ['tickAt', 'tick', 0.6]], thermometer: [['at', 'blip', 0.35]], miniPc: [['at', 'pop', 0.4]], slash: [['at', 'swish', 0.6]],
-  consoleTower: [['at', 'pop', 0.4]], ssd: [['at', 'swish', 0.45]], crossMark: [['at', 'thud', 0.7]], speechBubble: [['at', 'pop', 0.45]], appTile: [['at', 'pop', 0.4]], questionStamp: [['at', 'thud', 0.7]], arrowPointer: [['at', 'swish', 0.5]], poster: [], disc: [['at', 'pop', 0.35]], gameCase: [['at', 'thud', 0.5], ['openAt', 'click', 0.7]], dvdStack: [['at', 'zip', 0.5]], downloadBar: [['fillAt', 'zip', 0.5]] };
+  consoleTower: [['at', 'pop', 0.4]], ssd: [['at', 'swish', 0.45]], coreGrid: [['fillAt', 'zip', 0.5]], gpuCard: [['at', 'pop', 0.4]], crossMark: [['at', 'thud', 0.7]], speechBubble: [['at', 'pop', 0.45]], appTile: [['at', 'pop', 0.4]], questionStamp: [['at', 'thud', 0.7]], arrowPointer: [['at', 'swish', 0.5]], poster: [], disc: [['at', 'pop', 0.35]], gameCase: [['at', 'thud', 0.5], ['openAt', 'click', 0.7]], dvdStack: [['at', 'zip', 0.5]], downloadBar: [['fillAt', 'zip', 0.5]] };
 const DRAWERS = {
   product(ctx, l, lt, sc, R) {
     const im = IMG[l.img]; if (!im) throw new Error('missing asset ' + l.img);
@@ -140,6 +140,8 @@ const DRAWERS = {
   miniPc(ctx, l, lt, sc) { sc_(ctx, l, () => K.miniPc(ctx, lt, tref(sc, l.at, 0.05))); },
   slash(ctx, l, lt, sc) { sc_(ctx, l, () => K.slash(ctx, lt, tref(sc, l.at), l.len || 300)); },
   consoleTower(ctx, l, lt, sc) { sc_(ctx, l, () => K.consoleTower(ctx, lt, tref(sc, l.at, 0.05), !!l.dark)); },
+  coreGrid(ctx, l, lt, sc) { sc_(ctx, l, () => K.coreGrid(ctx, lt, tref(sc, l.at, 0.05), tref(sc, l.fillAt ?? l.at, 0.2), { cols: l.cols, rows: l.rows, w: l.w, h: l.h })); },
+  gpuCard(ctx, l, lt, sc) { sc_(ctx, l, () => K.gpuCard(ctx, lt, tref(sc, l.at, 0.05), { label: l.label || '' })); },
   ssd(ctx, l, lt, sc) { sc_(ctx, l, () => K.ssd(ctx, lt, tref(sc, l.at, 0.05))); },
   disc(ctx, l, lt, sc) { sc_(ctx, l, () => K.disc(ctx, lt, tref(sc, l.at, 0.05), l.r || 130)); },
   gameCase(ctx, l, lt, sc) { sc_(ctx, l, () => K.gameCase(ctx, lt, tref(sc, l.at, 0.05), l.openAt !== undefined ? tref(sc, l.openAt) : 1e9, l.cover ? IMG[l.cover] : null)); },

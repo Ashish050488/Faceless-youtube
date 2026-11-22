@@ -78,5 +78,27 @@ function ssd(ctx, lt, t0) { // M.2 2280 SSD: green PCB, controller + 2 flash chi
   ctx.beginPath(); ctx.arc(300, 0, 22, Math.PI / 2, Math.PI * 1.5); ctx.fillStyle = C.paper; ctx.fill(); ctx.lineWidth = 5; ctx.strokeStyle = C.ink; ctx.stroke();
   ctx.restore();
 }
-Object.assign(K, { chipDie, ramStick, fan, miniPc, consoleTower, ssd });
+function coreGrid(ctx, lt, t0, fillAt, { cols = 40, rows = 24, w = 520, h = 320, col = C.mari } = {}) { // tiny core cells sweep-fill left→right from fillAt
+  if (lt < t0) return; const a = clamp((lt - t0) / 0.2), cw = w / cols, ch = h / rows;
+  ctx.save(); ctx.globalAlpha = a; box(ctx, -w / 2 - 14, -h / 2 - 14, w + 28, h + 28, 14, C.inkSoft, 7);
+  for (let i = 0; i < cols; i++) { const on = lt > fillAt + (i / cols) * 0.8 + ((i * 7919) % 13) * 0.004;
+    for (let j = 0; j < rows; j++) { ctx.fillStyle = on ? ((i + j * 3) % 11 ? col : C.paper) : C.inkLine; ctx.fillRect(-w / 2 + i * cw + 1, -h / 2 + j * ch + 1, cw - 2, ch - 2); } }
+  ctx.restore();
+}
+function gpuCard(ctx, lt, t0, { label = '' } = {}) { // generic 2-slot graphics card (side view): shroud, 2 fans, bracket with ports, PCIe fingers
+  const f = pop(lt, t0); if (!f) return;
+  ctx.save(); ctx.scale(f, f);
+  box(ctx, -300, -110, 40, 230, 6, C.stone, 6);                                   // bracket
+  for (let i = 0; i < 3; i++) box(ctx, -293, -80 + i * 55, 26, 34, 4, C.ink, 0);    // ports
+  box(ctx, -260, -120, 560, 220, 24, C.inkSoft, 8);                               // shroud
+  for (const x of [-120, 150]) { ctx.save(); ctx.translate(x, -10); ctx.rotate(lt * 4);
+    ctx.beginPath(); ctx.arc(0, 0, 82, 0, 2 * Math.PI - 1e-4); ctx.fillStyle = C.inkLine; ctx.fill(); ctx.lineWidth = 6; ctx.strokeStyle = C.stone; ctx.stroke();
+    for (let b = 0; b < 9; b++) { ctx.rotate(2 * Math.PI / 9); ctx.beginPath(); ctx.moveTo(14, 0); ctx.quadraticCurveTo(50, -18, 76, 6); ctx.lineWidth = 9; ctx.strokeStyle = C.stone; ctx.stroke(); }
+    ctx.beginPath(); ctx.arc(0, 0, 18, 0, 2 * Math.PI - 1e-4); ctx.fillStyle = C.stone; ctx.fill(); ctx.restore(); }
+  box(ctx, -150, 100, 300, 26, 4, C.mari, 5);                                     // PCIe fingers
+  ctx.fillStyle = C.ink; for (let i = 0; i < 24; i++) ctx.fillRect(-142 + i * 12.2, 104, 3, 18);
+  if (label) { font(ctx, 60, 'head'); ctx.fillStyle = C.ink; ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic'; ctx.fillText(label, 20, 200); }
+  ctx.restore();
+}
+Object.assign(K, { chipDie, ramStick, fan, miniPc, consoleTower, ssd, coreGrid, gpuCard });
 };

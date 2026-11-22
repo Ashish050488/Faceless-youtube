@@ -1,0 +1,786 @@
+{
+ "slug": "sow014-nvidia-rubin-hpc",
+ "plan": "plan.json",
+ "thumb": {
+  "img": "chip",
+  "bg": "blush",
+  "tilt": -5,
+  "a": {
+   "words": "WAIT TILL",
+   "num": "2028",
+   "emotion": "q"
+  },
+  "b": {
+   "words": "NOT FOR YOU?",
+   "num": "50,000",
+   "emotion": "x"
+  }
+ },
+ "scenes": [
+  {
+   "line": 0,
+   "bg": "blush",
+   "real": true,
+   "layers": [
+    {
+     "type": "poster",
+     "until": [
+      "@fifty",
+      0,
+      -0.1
+     ],
+     "overlap": true
+    },
+    {
+     "type": "product",
+     "id": "p",
+     "img": "chip",
+     "x": 540,
+     "y": 950,
+     "w": 700,
+     "seed": 0.4,
+     "show": [
+      "@fifty",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "coreGrid",
+     "x": 540,
+     "y": 900,
+     "w": 460,
+     "h": 170,
+     "show": [
+      "@fifty",
+      0,
+      -0.1
+     ],
+     "at": [
+      "@fifty",
+      0,
+      -0.1
+     ],
+     "fillAt": "@fifty",
+     "overlap": true
+    },
+    {
+     "type": "number",
+     "value": 50000,
+     "unit": "CORES",
+     "y": 330,
+     "px": 130,
+     "col": "ink",
+     "show": "@fifty",
+     "at": "@fifty",
+     "until": [
+      "one",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "questionStamp",
+     "x": 870,
+     "y": 560,
+     "s": 0.55,
+     "at": [
+      "@wait",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "ON ONE GPU",
+     "col": "ember",
+     "at": [
+      "one",
+      0,
+      -0.1
+     ],
+     "until": [
+      "@wait",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "WAIT\u2026",
+     "at": [
+      "@wait",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 1,
+   "bg": "lav",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "chip",
+     "x": 540,
+     "y": 960,
+     "w": 640,
+     "seed": 0.4
+    },
+    {
+     "type": "callout",
+     "x": 540,
+     "y": 960,
+     "r": 260,
+     "at": [
+      "@rubin",
+      0,
+      -0.1
+     ],
+     "overlap": true
+    },
+    {
+     "type": "headline",
+     "text": "RUBIN HPC",
+     "col": "ember",
+     "at": [
+      "@rubin",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 1,
+   "from": "nvidia",
+   "xfade": true,
+   "bg": "lav",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "chip",
+     "x": 540,
+     "y": 1040,
+     "w": 560,
+     "seed": 0.4
+    },
+    {
+     "type": "calendar",
+     "x": 540,
+     "y": 600,
+     "month": "NOV",
+     "year": "2026",
+     "at": [
+      "showed",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "SHOWN AT SC26",
+     "at": [
+      "@sc26",
+      0,
+      -0.1
+     ],
+     "until": [
+      "supercomputing",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "SUPERCOMPUTING",
+     "at": [
+      "supercomputing",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 1,
+   "from": "and",
+   "bg": "blush",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "chip",
+     "x": 540,
+     "y": 1040,
+     "w": 560,
+     "seed": 0.4
+    },
+    {
+     "type": "miniPc",
+     "x": 540,
+     "y": 600,
+     "s": 0.8,
+     "at": 0.05
+    },
+    {
+     "type": "slash",
+     "x": 540,
+     "y": 600,
+     "len": 460,
+     "at": [
+      "@gaming",
+      0,
+      0
+     ],
+     "overlap": true
+    },
+    {
+     "type": "headline",
+     "text": "NOT FOR GAMING",
+     "col": "wreck",
+     "at": [
+      "not",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 2,
+   "bg": "paper",
+   "real": false,
+   "layers": [
+    {
+     "type": "gpuCard",
+     "x": 540,
+     "y": 540,
+     "s": 0.7,
+     "label": "RTX 5090",
+     "at": [
+      "@rtx",
+      0,
+      0
+     ]
+    },
+    {
+     "type": "bars",
+     "base": 1200,
+     "h": 400,
+     "items": [
+      {
+       "value": 21760,
+       "label": "21,760",
+       "sub": "RTX 5090",
+       "col": "stone",
+       "at": [
+        "cores",
+        0,
+        -0.1
+       ]
+      },
+      {
+       "value": 50000,
+       "label": "50,000+",
+       "sub": "RUBIN HPC",
+       "col": "mari",
+       "at": [
+        "@double",
+        0,
+        -0.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "WILD PART",
+     "at": [
+      "wild",
+      0,
+      -0.1
+     ],
+     "until": [
+      "@rtx",
+      0,
+      0
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "RTX 5090",
+     "at": [
+      "@rtx",
+      0,
+      0
+     ],
+     "until": [
+      "twenty-two",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "21,760 CORES",
+     "at": [
+      "twenty-two",
+      0,
+      -0.1
+     ],
+     "until": [
+      "@double",
+      0,
+      -0.3
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "MORE THAN 2\u00d7",
+     "col": "ember",
+     "at": [
+      "@double",
+      0,
+      -0.3
+     ]
+    }
+   ]
+  },
+  {
+   "line": 2,
+   "from": "nvidia",
+   "bg": "sand",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "chip",
+     "x": 540,
+     "y": 980,
+     "w": 620,
+     "seed": 0.4
+    },
+    {
+     "type": "reviewCard",
+     "x": 540,
+     "y": 560,
+     "s": 0.6,
+     "at": 0.05,
+     "tickAt": [
+      "@record",
+      0,
+      0
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "A RECORD",
+     "col": "ember",
+     "at": [
+      "@record",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 2,
+   "from": "it's",
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "sci_lattice",
+     "card": true,
+     "x": 290,
+     "y": 990,
+     "w": 440,
+     "seed": 1.1
+    },
+    {
+     "type": "product",
+     "img": "sci_molecule",
+     "card": true,
+     "x": 790,
+     "y": 990,
+     "w": 440,
+     "seed": 2.3
+    },
+    {
+     "type": "thermometer",
+     "x": 540,
+     "y": 650,
+     "s": 0.6,
+     "at": [
+      "climate",
+      0,
+      -0.1
+     ],
+     "level": 0.6
+    },
+    {
+     "type": "headline",
+     "text": "FOR SCIENCE",
+     "col": "ember",
+     "at": [
+      "@science",
+      0,
+      -0.1
+     ],
+     "until": [
+      "climate",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "CLIMATE MODELS",
+     "at": [
+      "climate",
+      0,
+      -0.1
+     ],
+     "until": [
+      "engineering",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "SIMULATIONS",
+     "at": [
+      "engineering",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 3,
+   "bg": "blush",
+   "real": true,
+   "shake": 0.32,
+   "layers": [
+    {
+     "type": "product",
+     "img": "chip",
+     "x": 540,
+     "y": 980,
+     "w": 560,
+     "ltOffset": 5,
+     "fade": {
+      "at": 0,
+      "to": 0.45
+     }
+    },
+    {
+     "type": "headline",
+     "text": "SOUNDS GREAT?",
+     "at": 0.05,
+     "until": [
+      "@catch",
+      0,
+      -0.4
+     ]
+    },
+    {
+     "type": "stamp",
+     "text": "THE CATCH",
+     "y": 600,
+     "px": 100,
+     "at": [
+      "@catch",
+      0,
+      -0.2
+     ],
+     "sfx": false
+    }
+   ]
+  },
+  {
+   "line": 3,
+   "from": "there's",
+   "bg": "blush",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "chip",
+     "x": 540,
+     "y": 1040,
+     "w": 500,
+     "seed": 0.4
+    },
+    {
+     "type": "pill",
+     "text": "$ ?",
+     "x": 250,
+     "y": 660,
+     "w": 220,
+     "h": 100,
+     "at": [
+      "@price",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "ramStick",
+     "x": 540,
+     "y": 640,
+     "s": 0.4,
+     "n": 2,
+     "at": [
+      "@mem",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "gauge",
+     "x": 850,
+     "y": 660,
+     "s": 0.45,
+     "value": 0,
+     "max": 100,
+     "at": [
+      "@power",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "NO PRICE",
+     "col": "wreck",
+     "at": [
+      "@price",
+      0,
+      -0.1
+     ],
+     "until": [
+      "@mem",
+      0,
+      -0.15
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "NO MEMORY SIZE",
+     "col": "wreck",
+     "at": [
+      "@mem",
+      0,
+      -0.15
+     ],
+     "until": [
+      "@power",
+      0,
+      -0.15
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "NO POWER FIGURE",
+     "col": "wreck",
+     "at": [
+      "@power",
+      0,
+      -0.15
+     ]
+    }
+   ]
+  },
+  {
+   "line": 3,
+   "from": "and",
+   "xfade": true,
+   "bg": "blush",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "chip",
+     "x": 540,
+     "y": 1090,
+     "w": 400,
+     "seed": 0.4
+    },
+    {
+     "type": "hourglass",
+     "x": 540,
+     "y": 690,
+     "at": 0.05,
+     "flipAt": [
+      "@y2028",
+      0,
+      0
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "WAIT TILL 2028",
+     "col": "ember",
+     "at": [
+      "@y2028",
+      0,
+      -0.2
+     ]
+    }
+   ]
+  },
+  {
+   "line": 4,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "chip",
+     "x": 540,
+     "y": 1060,
+     "w": 440,
+     "seed": 0.4
+    },
+    {
+     "type": "wordmark",
+     "y": 500,
+     "score": 55,
+     "scoreAt": [
+      "@score",
+      0,
+      -0.1
+     ],
+     "snapAt": "@verdict"
+    },
+    {
+     "type": "headline",
+     "text": "SPEC",
+     "col": "ember",
+     "at": "@verdict",
+     "until": [
+      "just",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "JUST BARELY",
+     "at": [
+      "just",
+      0,
+      -0.1
+     ],
+     "until": [
+      "for",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "SCIENCE LABS",
+     "at": [
+      "for",
+      0,
+      -0.1
+     ],
+     "until": [
+      "not",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "NOT GAMERS",
+     "col": "wreck",
+     "at": [
+      "not",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 5,
+   "bg": "blush",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "chip",
+     "x": 540,
+     "y": 950,
+     "w": 700,
+     "seed": 0.4,
+     "move": {
+      "at": [
+       "cores",
+       0,
+       -0.1
+      ],
+      "dur": 0.5,
+      "w": 760
+     }
+    },
+    {
+     "type": "coreGrid",
+     "x": 540,
+     "y": 900,
+     "w": 460,
+     "h": 170,
+     "at": 0.05,
+     "fillAt": [
+      "fifty",
+      0,
+      0
+     ],
+     "overlap": true
+    },
+    {
+     "type": "headline",
+     "text": "BE HONEST",
+     "at": 0.05,
+     "until": [
+      "@loop",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "WAIT TILL 2028?",
+     "col": "ember",
+     "at": [
+      "@loop",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "endcard": true,
+   "bg": "paper",
+   "layers": [
+    {
+     "type": "wordmark",
+     "y": 900,
+     "snapAt": 0.7
+    }
+   ]
+  }
+ ]
+}
