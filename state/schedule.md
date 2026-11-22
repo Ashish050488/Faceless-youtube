@@ -3,7 +3,7 @@
 | Day type | YouTube | Instagram |
 |---|---|---|
 | **Short day**: Mon–Sat | **2 Shorts**: 1:00 PM IST (07:30 UTC) and 6:30 PM IST (13:00 UTC) | **2 image posts** (10:17, 13:43 IST) + **both Shorts as Reels** right after each goes public |
-| **Long-video day**: every Sunday from 29 Nov 2026 | **1 long video (6–10 min)** at **10:30 AM IST (05:00 UTC)**, **no Shorts** | **3 image posts** (10:17, 13:43, 16:43 IST), no Reel |
+| **Long-video day**: every Sunday from 29 Nov 2026 | **1 long video (6–10 min)**: work starts 7:47 AM IST (after the weekly limit reset), **public right away when ready**, **no Shorts** | **3 image posts** (10:17, 13:43, 16:43 IST), no Reel |
 
 **HARD RULE (owner 2026-11-22): on the long-video day (Sunday) there are NO Shorts and NO Reels — only the long video + Instagram image posts. Never break this.**
 
@@ -15,7 +15,7 @@
 |---|---|
 | 00:17 | Short 1: script → video chat → upload for 07:30 UTC (1:00 PM IST) → Reel via Instagram session (skips Sundays) |
 | 05:17 | Short 2: same, upload for 13:00 UTC (6:30 PM IST) (skips Sundays) |
-| Sat 14:17 | Long video: script → video chat (1920×1080) → upload with publishAt **Sunday 05:00 UTC (10:30 AM IST)** (built overnight, after Saturday's Short 2 is live) |
+| Sun 02:17 | Long video (7:47 AM IST): script → video chat (1920×1080) → public right away when ready (owner: start after the 7:30 AM weekly limit reset) |
 | Sun 17:41 | Weekly YouTube analysis |
 Instagram image slots + its weekly review: the Instagram session's own scheduled tasks.
 
@@ -25,8 +25,8 @@ study: 8–11 PM IST, regular videos). 1:00 PM and 6:30 PM are the best of those
 our own Analytics once the YouTube Analytics API is enabled on the Google Cloud project.
 
 Why Sunday (owner 2026-11-22: "Sunday morning"; first long video released Sun 22 Nov as a catch-up): a 6–10 min video needs a longer viewing session, which
-people have more of at the weekend; Sunday 10:30 AM IST (owner: Sunday morning) gives the
-video the whole Sunday to collect views. After 4 long videos, compare with our own Analytics ("When your
+people have more of at the weekend; Starting Sunday 7:47 AM IST (after the weekly usage-limit reset, owner) and publishing when ready gives the
+video most of Sunday to collect views. After 4 long videos, compare with our own Analytics ("When your
 viewers are on YouTube") and move the day if the data says so.
 
 Long-video rule: if long videos can't beat 5K views in 7 days for 4 weeks running, drop back to Shorts-only.

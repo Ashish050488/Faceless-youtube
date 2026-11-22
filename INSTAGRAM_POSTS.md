@@ -28,7 +28,7 @@ the script session cross-posts YouTube Shorts as Reels. Full plan, slot routine 
 ## Volume and timing (owner 2026-11-17, confirmed twice in the Instagram chat — overrides the earlier 1–2/day)
 - From 18 Nov 2026 (owner): **Short days** (Mon–Sat) = **2 image posts**
   (10:17, 13:43 IST) + **2 Reels** (the day's 2 YouTube Shorts, when the script session sends the links).
-  **Long-video days** (every Sunday from 29 Nov 2026; long video goes live 10:30 AM IST) = **3 image posts** (10:17, 13:43, 16:43 IST), no Reel.
+  **Long-video days** (every Sunday from 29 Nov 2026; long video built from 7:47 AM IST, public when ready) = **3 image posts** (10:17, 13:43, 16:43 IST), no Reel.
 - TOPIC VARIETY (owner 2026-11-20, hard rule): every slot, list 8–10 candidate stories from many sources (Techmeme, The Verge, Engadget, TechCrunch, GSMArena, Gadgets 360, 91mobiles, Beebom, Electrek, Space.com, Tom's Hardware, Google Trends…); rotate categories (phones, laptops, AI, chips, gaming, EVs, space, social apps, India tech, security, wearables, weird gadgets, deals) — never the same category twice in a row; never the same company/story within 3 days (Reels included); prefer less-covered stories with a surprising price/conflict angle. Details: state/instagram_plan.md → TOPIC VARIETY.
 - Format mix (owner 2026-11-18): first image slot of the day = 1 carousel (hottest story); other image slots = single-image posts. Details: state/instagram_plan.md → FORMAT MIX.
 - SUNDAY HARD RULE (owner 2026-11-22): on Sundays post NO Reels at all (no cross-posts, no safety-net Reels), only the 3 image posts. Never cross-post a long video as a Reel; only YouTube videos ≤3 min are Shorts.
