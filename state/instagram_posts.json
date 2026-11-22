@@ -514,5 +514,16 @@
    "slot_time": "13:43",
    "caption_length": "medium"
   }
+ },
+ {
+  "date": "2026-11-22",
+  "type": "reel_crosspost",
+  "category": "chips",
+  "topic": "NVIDIA Rubin HPC GPU: 50,000+ CUDA cores, for science not gaming (YouTube Short -DvxWCtWjTw)",
+  "posted_by": "instagram session (autonomous)",
+  "ai_label": true,
+  "youtube": "https://youtube.com/shorts/-DvxWCtWjTw",
+  "permalink": "https://www.instagram.com/reel/DgC4DEFDl4b/",
+  "mediaId": "18141329164726927"
  }
 ]
