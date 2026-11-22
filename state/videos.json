@@ -227,13 +227,21 @@
   "slug": "sow013-casio-lf-40w",
   "title": "Casio's $43 Watch Costs 70% MORE in the US 😳",
   "format": "short",
-  "status": "scripted",
+  "status": "scheduled",
   "slot": "1",
   "date": "2026-11-22",
   "scripted_at": "2026-11-22T05:55Z",
   "publish_at": "2026-11-22T07:30:00Z",
   "verdict": "SPEC 64",
-  "hypothesis": "Price-gap / 'you pay more here' framing on a cheap, iconic brand (Casio) vs gadget launches; tests a low-price nostalgia product after gaming/smart-home Shorts."
+  "hypothesis": "Price-gap / 'you pay more here' framing on a cheap, iconic brand (Casio) vs gadget launches; tests a low-price nostalgia product after gaming/smart-home Shorts.",
+  "id": "NEDjNq_JPVc",
+  "privacy": "private→public 2026-11-22T07:30:00Z",
+  "uploaded_at": "2026-11-22T05:38Z",
+  "size_mb": 15.2,
+  "duration_s": 60.6,
+  "url": "https://youtube.com/shorts/NEDjNq_JPVc",
+  "thumbnail": "poster A (IN JAPAN? $25)",
+  "comment": "pending (post after public)"
  },
  {
   "slug": "sow014-nvidia-rubin-hpc",
