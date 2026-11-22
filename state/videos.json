@@ -271,14 +271,22 @@
   "title": "Apple Made Its FIRST Touchscreen Mac. Worth $2,899? \ud83e\udd14",
   "brand": "Apple",
   "format": "long",
-  "status": "building",
+  "status": "live",
   "slot": "long",
   "date": "2026-11-22",
   "scripted_at": "2026-11-22T14:25Z",
-  "publish_at": "public on arrival (owner: release today)",
   "verdict": "SPEC 66.5 (shown 67)",
   "hypothesis": "First long video: top-priority brand (Apple) + the most-reviewed launch of the month (first touch Mac) in our explainer format; tests watch time on a 9-10 min 'how it works + claims vs lab tests' video.",
   "builder": "session_01L2u12EjdZHQNXvFj9XVGPi (EnFp7 unreachable)",
-  "reel": "none (long video)"
+  "reel": "none (long video)",
+  "id": "erp3FnYy8aQ",
+  "privacy": "public",
+  "uploaded_at": "2026-11-22T16:19:57Z",
+  "size_mb": 93.6,
+  "url": "https://youtube.com/watch?v=erp3FnYy8aQ",
+  "duration_s": 567.6,
+  "comment": "posted 16:20Z (pin by hand in Studio; API cannot pin)",
+  "handoff_sha": "d0ab4dd",
+  "published": "public on upload 2026-11-22T16:19:57Z"
  }
 ]

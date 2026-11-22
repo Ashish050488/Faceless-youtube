@@ -52,7 +52,7 @@ Sources (key):
 | Display panel destroyed when separated; OLED and touch layers cracked | MOi | RE |
 | Soldered memory; iFixit 2027 rubric → 4/10 | IT | 9 (search summary) |
 | On sale in US (and India page live with offers) | A1 | A4 |
-| On-screen "1984" (script line 1): Macintosh introduced Jan 1984, no Mac had a touchscreen until now | Apple Newsroom "Mac at 40" (Jan 2024) | A1 ("Touch for the first time on Mac") |
+| On-screen "1984" (script line 1): Macintosh introduced Jan 1984, no Mac had a touchscreen until now | Computer History Museum, launched 24 Jan 1984: https://computerhistory.org/?p=28411 | MacRumors "The Mac Turns 40": https://www.macrumors.com/2024/01/23/apple-macintosh-turns-40/ ; no touch before: A1 ("Touch for the first time on Mac") — confirmed by script session |
 
 Explainer lines (general, how the tech works): mini-LED = LED backlight in zones behind LCD pixels (can bloom);
 OLED = each pixel emits its own light, off = black. Apple's own wording used for tandem ("two self-illuminating pixel
