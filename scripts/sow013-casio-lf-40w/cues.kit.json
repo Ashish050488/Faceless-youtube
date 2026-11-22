@@ -1,0 +1,666 @@
+{
+ "slug": "sow013-casio-lf-40w",
+ "plan": "plan.json",
+ "thumb": {
+  "img": "lf_black",
+  "bg": "blush",
+  "tilt": -5,
+  "a": {
+   "words": "IN JAPAN?",
+   "num": "$25",
+   "emotion": "arrow"
+  },
+  "b": {
+   "words": "WHY MORE?",
+   "num": "+70%",
+   "emotion": "q"
+  },
+  "thumbImg": "lf_trio"
+ },
+ "scenes": [
+  {
+   "line": 0,
+   "bg": "blush",
+   "real": true,
+   "layers": [
+    {
+     "type": "poster",
+     "until": [
+      "@seventy",
+      0,
+      -0.1
+     ],
+     "overlap": true
+    },
+    {
+     "type": "product",
+     "id": "p",
+     "img": "lf_black",
+     "x": 450,
+     "y": 950,
+     "w": 360,
+     "seed": 0.4,
+     "show": [
+      "@seventy",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "number",
+     "value": 70,
+     "unit": "% MORE",
+     "comma": false,
+     "y": 330,
+     "px": 130,
+     "col": "ink",
+     "show": "@seventy",
+     "at": "@seventy"
+    },
+    {
+     "type": "questionStamp",
+     "x": 830,
+     "y": 620,
+     "s": 0.6,
+     "at": [
+      "@wait",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 1,
+   "bg": "lav",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "lf_blue",
+     "x": 220,
+     "y": 920,
+     "w": 270,
+     "seed": 1.0,
+     "show": [
+      "@colors",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "product",
+     "img": "lf_black",
+     "x": 540,
+     "y": 920,
+     "w": 290,
+     "seed": 0.4,
+     "move": {
+      "at": [
+       "@price",
+       0,
+       -0.1
+      ],
+      "dur": 0.4,
+      "w": 320
+     }
+    },
+    {
+     "type": "product",
+     "img": "lf_beige",
+     "x": 860,
+     "y": 920,
+     "w": 270,
+     "seed": 1.7,
+     "show": [
+      "blue",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "LF-40W",
+     "at": [
+      "casio",
+      0,
+      -0.1
+     ],
+     "until": "@price"
+    },
+    {
+     "type": "number",
+     "value": 42.95,
+     "dec": 2,
+     "prefix": "$",
+     "y": 360,
+     "show": "@price",
+     "at": "@price",
+     "until": [
+      "@colors",
+      0,
+      0.25
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "3 COLOURS",
+     "col": "ember",
+     "at": [
+      "@colors",
+      0,
+      0.25
+     ]
+    }
+   ]
+  },
+  {
+   "line": 1,
+   "from": "now",
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "display_card",
+     "card": true,
+     "x": 540,
+     "y": 880,
+     "w": 680,
+     "seed": 0.5,
+     "move": {
+      "at": [
+       "@rows",
+       0,
+       -0.1
+      ],
+      "dur": 0.5,
+      "w": 740
+     }
+    },
+    {
+     "type": "headline",
+     "text": "LOOK AT THE FACE",
+     "at": 0.05,
+     "until": [
+      "@rows",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "3 ROWS OF BARS",
+     "col": "ember",
+     "at": [
+      "@rows",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "waves",
+     "x": 540,
+     "y": 450,
+     "at": [
+      "mixer",
+      0,
+      -0.2
+     ]
+    }
+   ]
+  },
+  {
+   "line": 2,
+   "bg": "lav",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "id": "p",
+     "img": "lf_black",
+     "x": 540,
+     "y": 1000,
+     "w": 300,
+     "seed": 0.4
+    },
+    {
+     "type": "loupe",
+     "of": "p",
+     "img": "lf_black",
+     "u": 0.5,
+     "v": 0.57,
+     "zoom": 0.3,
+     "x": 540,
+     "y": 560,
+     "r": 140,
+     "at": [
+      "@count",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "WILD PART",
+     "at": [
+      "wild",
+      0,
+      -0.1
+     ],
+     "until": [
+      "@count",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "SECONDS",
+     "at": [
+      "@count",
+      0,
+      -0.1
+     ],
+     "until": [
+      "@tens",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "TENS + ONES",
+     "col": "ember",
+     "at": [
+      "@tens",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 2,
+   "from": "it's",
+   "xfade": true,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "lf_beige",
+     "x": 540,
+     "y": 1010,
+     "w": 290,
+     "seed": 1.7
+    },
+    {
+     "type": "calipers",
+     "xL": 380,
+     "xR": 700,
+     "y": 690,
+     "at": [
+      "@thin",
+      0,
+      -0.2
+     ]
+    },
+    {
+     "type": "number",
+     "value": 8.6,
+     "dec": 1,
+     "unit": "mm",
+     "comma": false,
+     "y": 300,
+     "px": 130,
+     "col": "ink",
+     "show": "@thin",
+     "at": "@thin"
+    }
+   ]
+  },
+  {
+   "line": 2,
+   "from": "twenty-three",
+   "xfade": true,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "id": "p",
+     "img": "lf_beige",
+     "x": 540,
+     "y": 900,
+     "w": 300,
+     "seed": 1.7
+    },
+    {
+     "type": "dialScale",
+     "under": "p",
+     "w": 560,
+     "at": 0.05,
+     "value": 23,
+     "kg": 100
+    },
+    {
+     "type": "number",
+     "value": 23,
+     "unit": "g",
+     "comma": false,
+     "y": 330,
+     "px": 130,
+     "col": "ink",
+     "show": "@grams",
+     "at": "@grams"
+    }
+   ]
+  },
+  {
+   "line": 2,
+   "from": "five",
+   "bg": "sand",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "lf_led",
+     "x": 540,
+     "y": 980,
+     "w": 340,
+     "seed": 2.1
+    },
+    {
+     "type": "battery",
+     "x": 540,
+     "y": 540,
+     "scale": 0.75,
+     "segs": 7,
+     "at": [
+      "@batt",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "5 ALARMS",
+     "at": [
+      "@alarms",
+      0,
+      -0.1
+     ],
+     "until": [
+      "@batt",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "3 YEARS",
+     "col": "ember",
+     "at": [
+      "@batt",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 3,
+   "bg": "blush",
+   "real": true,
+   "shake": 0.32,
+   "layers": [
+    {
+     "type": "product",
+     "img": "lf_black",
+     "x": 540,
+     "y": 960,
+     "w": 340,
+     "ltOffset": 5,
+     "fade": {
+      "at": 0,
+      "to": 0.45
+     }
+    },
+    {
+     "type": "stamp",
+     "text": "THE CATCH",
+     "y": 560,
+     "px": 100,
+     "at": [
+      "@catch",
+      0,
+      -0.2
+     ],
+     "sfx": false
+    }
+   ]
+  },
+  {
+   "line": 3,
+   "from": "in",
+   "bg": "blush",
+   "real": false,
+   "layers": [
+    {
+     "type": "bars",
+     "base": 1180,
+     "h": 520,
+     "items": [
+      {
+       "value": 42.95,
+       "label": "$42.95",
+       "sub": "US",
+       "col": "wreck",
+       "at": 0.1
+      },
+      {
+       "value": 25,
+       "label": "$25",
+       "sub": "JAPAN",
+       "col": "mari",
+       "at": [
+        "@usd25",
+        0,
+        -0.1
+       ]
+      }
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "\u00a54,400",
+     "col": "ember",
+     "at": [
+      "@yen",
+      0,
+      -0.1
+     ],
+     "until": [
+      "@usd25",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "ABOUT $25",
+     "col": "ember",
+     "at": [
+      "@usd25",
+      0,
+      -0.1
+     ],
+     "until": [
+      "before",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "BEFORE TAX",
+     "at": [
+      "before",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 3,
+   "from": "and",
+   "xfade": true,
+   "bg": "blush",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "lf_blue",
+     "x": 540,
+     "y": 980,
+     "w": 340,
+     "seed": 1.0
+    },
+    {
+     "type": "waterDrop",
+     "x": 540,
+     "y": 540,
+     "at": 0.05
+    },
+    {
+     "type": "slash",
+     "x": 540,
+     "y": 540,
+     "len": 300,
+     "at": [
+      "@swim",
+      0,
+      0
+     ],
+     "overlap": true
+    },
+    {
+     "type": "headline",
+     "text": "NO SWIMMING",
+     "col": "wreck",
+     "at": [
+      "no",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 4,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "wrist_card",
+     "card": true,
+     "x": 540,
+     "y": 1060,
+     "w": 380,
+     "seed": 0.8
+    },
+    {
+     "type": "wordmark",
+     "y": 520,
+     "score": 64,
+     "scoreAt": [
+      "@score",
+      0,
+      -0.1
+     ],
+     "snapAt": "@verdict"
+    },
+    {
+     "type": "headline",
+     "text": "SPEC",
+     "col": "ember",
+     "at": "@verdict",
+     "until": [
+      "if",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "FUN + CHEAP",
+     "at": [
+      "if",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 5,
+   "bg": "blush",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "lf_black",
+     "x": 450,
+     "y": 950,
+     "w": 360,
+     "seed": 0.4
+    },
+    {
+     "type": "questionStamp",
+     "x": 830,
+     "y": 620,
+     "s": 0.6,
+     "at": [
+      "@loop",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "BE HONEST",
+     "at": 0.05,
+     "until": [
+      "@loop",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "$43 FOR THIS?",
+     "col": "ember",
+     "at": [
+      "@loop",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "endcard": true,
+   "bg": "paper",
+   "layers": [
+    {
+     "type": "wordmark",
+     "y": 900,
+     "snapAt": 0.7
+    }
+   ]
+  }
+ ]
+}

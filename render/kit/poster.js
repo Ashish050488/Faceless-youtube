@@ -53,7 +53,7 @@ function draw(ctx, fmt, th, v, IMG, K, { lt = 9, bg = true } = {}) {
   const ink = darkBg ? C.ink : C.ink;
   let y;
   if (fmt === 'cover') {
-    const f = fitWords(ctx, p.words.toUpperCase(), W - 2 * 54, 340, 318); font(ctx, f.px, 'logo'); const lh = f.cap * 1.18; y = 186 + f.cap;
+    const f = fitWords(ctx, p.words.toUpperCase(), W - 2 * 54 - 44, 340, 318); /* − halo stroke */ font(ctx, f.px, 'logo'); const lh = f.cap * 1.18; y = 186 + f.cap;
     for (const line of f.lines) { strokeText(ctx, line, W / 2, y, ink, halo); y += lh; }
     M.wordsCap = Math.round(f.cap); y += 10 - lh + f.cap * 0.25;
   } else {
@@ -71,7 +71,7 @@ function draw(ctx, fmt, th, v, IMG, K, { lt = 9, bg = true } = {}) {
     M.numCap = Math.round(cap);
   }
   // ---- ONE emotion object
-  const ex = Math.min(W - 54 - (fmt === 'cover' ? 150 : 95), cx + pw * (fmt === 'cover' ? 0.36 : 0.30)), ey = cy + ph * (fmt === 'cover' ? 0.18 : 0.02), es = fmt === 'cover' ? 1.0 : 0.62;
+  const ex = Math.min(W - 54 - (fmt === 'cover' ? 175 : 110), cx + pw * (fmt === 'cover' ? 0.36 : 0.30)), ey = cy + ph * (fmt === 'cover' ? 0.18 : 0.02), es = fmt === 'cover' ? 1.0 : 0.62;
   ctx.save(); ctx.translate(ex, ey); ctx.scale(es, es);
   if (p.emotion === 'x') K.crossMark(ctx, lt, 0);
   else if (p.emotion === 'arrow') K.arrowPointer(ctx, lt, 0, Math.PI * 1.22) // from the lower right, pointing back at the product;

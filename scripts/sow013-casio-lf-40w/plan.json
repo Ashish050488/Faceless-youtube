@@ -1,0 +1,20 @@
+[
+ {"cue": "seventy", "line": 0, "word": "seventy", "offset": -0.05},
+ {"cue": "wait", "line": 0, "word": "wait"},
+ {"cue": "price", "line": 1, "word": "forty-two", "offset": -0.05},
+ {"cue": "colors", "line": 1, "word": "black"},
+ {"cue": "rows", "line": 1, "word": "three"},
+ {"cue": "count", "line": 2, "word": "count"},
+ {"cue": "tens", "line": 2, "word": "tens"},
+ {"cue": "thin", "line": 2, "word": "eight", "offset": -0.05},
+ {"cue": "grams", "line": 2, "word": "twenty-three", "offset": -0.05},
+ {"cue": "alarms", "line": 2, "word": "five"},
+ {"cue": "batt", "line": 2, "word": "three", "offset": -0.05},
+ {"cue": "catch", "line": 3, "word": "catch"},
+ {"cue": "yen", "line": 3, "word": "forty-four", "offset": -0.05},
+ {"cue": "usd25", "line": 3, "word": "twenty-five", "offset": -0.05},
+ {"cue": "swim", "line": 3, "word": "swimming"},
+ {"cue": "score", "line": 4, "word": "sixty-four"},
+ {"cue": "verdict", "line": 4, "word": "spec"},
+ {"cue": "loop", "line": 5, "word": "forty-three"}
+]
