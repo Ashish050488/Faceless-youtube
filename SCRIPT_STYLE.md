@@ -29,6 +29,10 @@ Read before writing script.md. The voice engine (Kokoro) reads exactly what we w
 9. **No hype words that overclaim** (YouTube "misleading" policy + our honesty rule): no "insane", "game-changer",
    "you won't believe", "destroyed", "killer". Emotion comes from the real fact, not from adjectives.
 10. **Read it out loud test:** if a sentence needs a breath in the middle, split it.
+11. **Verdict = full, clear sentences (owner 2026-11-23).** Say the score, then the verdict as its own sentence:
+    "It's a spec." or "It's a wreck." Then who it's for, as a full sentence. Never a fragment like
+    "Spec, if photos matter more than precise finding." — the viewer feels lost.
+    Good: "Sixty-eight out of a hundred. It's a spec. Grab it if photos matter more to you than finding keys to the inch."
 
 ## Reaction / emotion word bank (pick 3–5 per Short, never the same opener twice in a row)
 - Surprise / awe: Wait. · Okay, so… · Honestly? · Here's the wild part. · Get this. · No joke. · That's tiny. · That's a lot.

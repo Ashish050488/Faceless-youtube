@@ -38,6 +38,9 @@ def check(slug):
         if you < 3: warn.append(f"style: only {you} 'you/your' (want ≥ 3, SCRIPT_STYLE.md #1)")
         if contr < 3: warn.append(f"style: only {contr} contractions (want ≥ 3, #2)")
         if txt.count("?") < 2: warn.append("style: fewer than 2 questions to the viewer (#1/#4)")
+        m = re.search(r"\[VERDICT\](.*?)(\n\[|\Z)", (d / "script.md").read_text(), re.S)
+        if not m or not re.search(r"\b(it's|it is|that's)\s+(a\s+)?(spec|wreck)\b\s*[.!]", m.group(1), re.I):
+            bad.append("script [VERDICT] needs a full sentence \"It's a spec.\" / \"It's a wreck.\" (SCRIPT_STYLE #11)")
         if long_: warn.append(f"style: {len(long_)} sentence(s) over 14 words (#3): " + long_[0][:60])
     f = (d / "factsheet.md").read_text()
     if not re.search(r"VERDICT.*?\b\d{1,3}(\.\d)?\b.*?(SPEC|WRECK)", f, re.S | re.I):
