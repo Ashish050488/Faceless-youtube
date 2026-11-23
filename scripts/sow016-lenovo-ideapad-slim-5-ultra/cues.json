@@ -1,0 +1,145 @@
+{
+ "id": "sow016-lenovo-ideapad-slim-5-ultra",
+ "format": "short",
+ "export": "720x1280 H.264 CRF 24 maxrate 2M ≤20 MB (§13)",
+ "rules": "PRODUCTION_SPEC §12–§18; flat LIGHT backgrounds; PSREF images are on white — cut out (rembg) for coloured backgrounds. Whole real product; 1–3 words; 2-D objects next to the product; watermark below content; logo v5 end card; audio LOCKED (narrate.py + mix.sh). Length 45–55 s, HARD CAP 58 s (WORKFLOW). No Lenovo logo drawn; don't name a colour as 'US colour' (not confirmed).",
+ "numbers_shown": [
+  "30 h",
+  "$1,149",
+  "2.3 lb",
+  "14\" OLED",
+  "65 Wh",
+  "8 GB",
+  "16 GB",
+  "150 nits",
+  "18.4 h",
+  "51/100"
+ ],
+ "official_clips": "none — lenovo.com blocks automation; no promo video use",
+ "palette_for_this_video": "paper #FAF8F5 main; sky for specs; lavender for the screen beat; blush #FBE7E2 THE CATCH; mint reveal; ember accent for prices/8 GB",
+ "assets": "assets_sources.md (A–G, Lenovo PSREF images, 2000×2000 JPEG)",
+ "new_objects": "none expected — reuse clockRing, priceTag, globe, scale, oledStack/screenPath, battery, ramStick, sun, playIcon, dialScale, questionStamp, crossMark (render/kit/OBJECTS.md)",
+ "scenes": [
+  {
+   "n": 1,
+   "anchor": "Lenovo's new laptop claims thirty hours of battery!",
+   "bg": "paper",
+   "image": "A (front, screen on, blue) cut out, centred 70% width",
+   "object": "clockRing sweeps 0→30 h beside the laptop; small 'claimed' pill under it",
+   "text": "30 HOURS",
+   "sfx": "whoosh-up",
+   "note": "frame 1 must read instantly: laptop + 30 HOURS"
+  },
+  {
+   "n": 2,
+   "anchor": "Wait, thirty?",
+   "bg": "paper",
+   "image": "A hold, zoom 1.05",
+   "object": "questionStamp slams onto the 30 h ring",
+   "text": "WAIT, 30?",
+   "sfx": "boing"
+  },
+  {
+   "n": 3,
+   "anchor": "Meet the IdeaPad Slim 5 Ultra.",
+   "bg": "mint",
+   "image": "B (front mirror) centred 65%",
+   "object": "globe mini spins, pin drops on USA",
+   "text": "SLIM 5 ULTRA",
+   "sfx": "pop"
+  },
+  {
+   "n": 4,
+   "anchor": "It just landed in the US, for eleven forty-nine.",
+   "bg": "paper",
+   "image": "A 55%, left",
+   "object": "priceTag '$1,149' swings in on the right, value rolls up",
+   "text": "$1,149",
+   "sfx": "tick-roll"
+  },
+  {
+   "n": 5,
+   "anchor": "Here's the wild part. It weighs two point three pounds.",
+   "bg": "sky",
+   "image": "E (opened flat 180°) 75% — shows how thin/light",
+   "object": "scale: laptop silhouette on one pan, weight text '2.3 lb' (1.06 kg small under); levels",
+   "text": "2.3 LB",
+   "sfx": "thud-soft"
+  },
+  {
+   "n": 6,
+   "anchor": "You get a fourteen-inch OLED screen,",
+   "bg": "lavender",
+   "image": "A crop on screen, slow push-in 85%",
+   "object": "oledStack cross-section rises beside it (layers=1), label 14\" 1920×1200",
+   "text": "14\" OLED",
+   "sfx": "slide"
+  },
+  {
+   "n": 7,
+   "anchor": "and a sixty-five watt-hour battery.",
+   "bg": "sky",
+   "image": "D (side profile) 70%",
+   "object": "battery fills to '65 Wh'",
+   "text": "65 Wh",
+   "sfx": "charge-up"
+  },
+  {
+   "n": 8,
+   "anchor": "Here's the catch. The US model only comes with eight gigs of RAM.",
+   "bg": "blush",
+   "image": "C (keyboard top-down) 55% top",
+   "object": "ramStick n=1 drops in, label '8 GB' (ember); flag pill 'US'",
+   "text": "ONLY 8 GB",
+   "sfx": "bass-hit"
+  },
+  {
+   "n": 9,
+   "anchor": "Other countries can get sixteen.",
+   "bg": "blush",
+   "image": "C 45%",
+   "object": "second ramStick drops next to it labelled '16 GB' (muted) with globe mini; US stick stays at 1",
+   "text": "16 GB ELSEWHERE",
+   "sfx": "pop"
+  },
+  {
+   "n": 10,
+   "anchor": "And those thirty hours? That's video playback, at low brightness.",
+   "bg": "paper",
+   "image": "A 50%",
+   "object": "playIcon on the screen + sun with short rays '150 nits'; clockRing 30 h gets a fine-print pill: 'MobileMark 30 @250 nits: 18.4 h'",
+   "text": "VIDEO @150 NITS",
+   "sfx": "record-scratch"
+  },
+  {
+   "n": 11,
+   "anchor": "By our score? Fifty-one out of a hundred.",
+   "bg": "paper",
+   "image": "F (rear, grey) 50%",
+   "object": "dialScale needle sweeps to 51 (cut-off mark at 55)",
+   "text": "51/100",
+   "sfx": "drum-roll"
+  },
+  {
+   "n": 12,
+   "anchor": "Wreck, unless battery is all you need.",
+   "bg": "paper",
+   "image": "F 50%",
+   "object": "k falls (WRECK end-card motion); small pill '✓ battery' fades in",
+   "text": "WRECK",
+   "sfx": "fall-thud"
+  },
+  {
+   "n": 13,
+   "anchor": "Be honest. Would you pay eleven fifty for eight gigs?",
+   "bg": "paper",
+   "image": "A centred 70% exactly as frame 1",
+   "object": "priceTag '$1,149' + ramStick '8 GB' side by side; questionStamp '?'",
+   "text": "$1,149 FOR 8 GB?",
+   "sfx": "riser tail",
+   "note": "match frame 1 (seamless loop)"
+  }
+ ],
+ "thumbnail": "1280×720: A cut out right (60% height); left: '8 GB' HUGE (ember) with small pill '$1,149' under it — complements the title's '30-hour' (title = claim, thumb = catch); emotion object: grimace emoji 😬 beside '8 GB'; flat paper background; readable at 168×94",
+ "credits": "Product images: Lenovo (PSREF product images). Not affiliated with or endorsed by Lenovo."
+}
