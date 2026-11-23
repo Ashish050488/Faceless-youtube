@@ -35,7 +35,7 @@ Every object is drawn once, saved here, and reused by every future video. Before
 | sun | objects.js | sun with rays | rays grow | brightness, nits |
 | priceTag | objects.js | tag with string + hole | swings, value rolls | price |
 | calipers | objects.js | calipers with scale | jaw slides | thickness, mm |
-| scale | objects.js | balance scale (`weight` = text on the weight, default "25"; "" for none) | tips, levels at `levelAt` | weight, g/kg, "X for Y" trade-offs |
+| scale | objects.js | balance scale (`weight` = text on the weight, default "25"; "" for none; `s` = size) | tips, levels at `levelAt` | weight, g/kg, "X for Y" trade-offs |
 | waterDrop | objects.js | drop + ripples | ripples | water rating |
 | waves | objects.js | sound waves | bars move | audio |
 | dialScale | measure.js | dial | needle | speed, %, scores |

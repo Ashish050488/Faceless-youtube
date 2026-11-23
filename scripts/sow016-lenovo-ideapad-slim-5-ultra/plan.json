@@ -1,0 +1,18 @@
+[
+ {"cue": "thirty", "line": 0, "word": "thirty", "offset": -0.05},
+ {"cue": "wait", "line": 0, "word": "wait"},
+ {"cue": "meet", "line": 1, "word": "meet"},
+ {"cue": "us", "line": 1, "word": "us"},
+ {"cue": "price", "line": 1, "word": "eleven", "offset": -0.1},
+ {"cue": "weighs", "line": 2, "word": "weighs"},
+ {"cue": "oled", "line": 2, "word": "fourteen", "offset": -0.1},
+ {"cue": "wh", "line": 2, "word": "sixty-five", "offset": -0.1},
+ {"cue": "catch", "line": 3, "word": "catch"},
+ {"cue": "eight", "line": 3, "word": "eight", "offset": -0.1},
+ {"cue": "sixteen", "line": 3, "word": "sixteen", "offset": -0.1},
+ {"cue": "video", "line": 3, "word": "video"},
+ {"cue": "low", "line": 3, "word": "low"},
+ {"cue": "score", "line": 4, "word": "fifty-one"},
+ {"cue": "verdict", "line": 4, "word": "wreck"},
+ {"cue": "loop", "line": 5, "word": "eleven", "offset": -0.1}
+]
