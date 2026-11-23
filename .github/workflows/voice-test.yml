@@ -1,6 +1,8 @@
-# TEST ONLY (owner 2026-11-23): compare Chatterbox (MIT, free) with the locked Kokoro voice. Manual run with a slug.
-# Output: workflow artifact "voice-test-<slug>" (kokoro.wav, chatterbox_A_own_voice.wav, chatterbox_B_our_voice.wav, report.txt).
-# Does NOT touch main or the daily voice job.
+# TEST ONLY (owner 2026-11-23): find a more natural FEMALE voice than locked Kokoro. Manual run with a slug.
+# Job 1 (design): Qwen3-TTS VoiceDesign (Apache 2.0) invents a new synthetic female voice from a text description
+#                 -> ~15 s reference wav (no real person's voice is copied).
+# Job 2 (test):   Chatterbox (MIT) reads the script cloning (a) that designed voice, (b) our Kokoro voice.
+# Output: artifact "voice-test-<slug>". Does NOT touch main or the daily voice job.
 name: voice-test
 on:
   workflow_dispatch:
@@ -9,11 +11,44 @@ on:
 permissions:
   contents: read
 jobs:
-  test:
+  design:
     runs-on: ubuntu-24.04
-    timeout-minutes: 120
+    timeout-minutes: 90
+    steps:
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - name: Install Qwen3-TTS (CPU)
+        timeout-minutes: 25
+        run: |
+          P="--timeout 60 --retries 5 --progress-bar off --disable-pip-version-check"
+          pip install $P --extra-index-url https://download.pytorch.org/whl/cpu torch qwen-tts soundfile | grep -E "Successfully|ERROR" || true
+          pip show qwen-tts | grep -i ^version
+      - name: Design the female voice
+        timeout-minutes: 60
+        run: |
+          mkdir -p ref && python - <<'EOF'
+          import time, torch, soundfile as sf
+          from qwen_tts import Qwen3TTSModel
+          t = time.time()
+          m = Qwen3TTSModel.from_pretrained("Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign", device_map="cpu", dtype=torch.float32)
+          text = ("Okay, so here's the thing. This tiny tag can hold your photos, and honestly? I didn't see that coming. "
+                  "But wait, is it actually worth it? Let's find out, because the price might surprise you!")
+          instruct = ("Female, late twenties, warm and bright American English. A friendly tech reviewer talking to a friend: "
+                      "natural and conversational, lively pitch movement, a light smile in the voice, clear diction, medium pace.")
+          wavs, sr = m.generate_voice_design(text=text, language="English", instruct=instruct)
+          sf.write("ref/designed_female.wav", wavs[0], sr)
+          print(f"designed voice: {len(wavs[0])/sr:.1f}s, {time.time()-t:.0f}s to make")
+          EOF
+      - uses: actions/upload-artifact@v4
+        with: {name: designed-voice, path: ref, retention-days: 14}
+  test:
+    needs: design
+    runs-on: ubuntu-24.04
+    timeout-minutes: 150
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: {name: designed-voice, path: "${{ runner.temp }}/ref"}
       - uses: actions/setup-python@v5
         with: {python-version: "3.11"}
       - name: Install Chatterbox (CPU)
@@ -21,18 +56,19 @@ jobs:
         run: |
           P="--timeout 60 --retries 5 --progress-bar off --disable-pip-version-check"
           pip install $P --extra-index-url https://download.pytorch.org/whl/cpu chatterbox-tts librosa soundfile | grep -E "Successfully|ERROR" || true
-          python -c "import torch, chatterbox; print('torch', torch.__version__)"; pip show chatterbox-tts | grep -i ^version
+          pip show chatterbox-tts | grep -i ^version
       - name: Make the samples
-        timeout-minutes: 90
+        timeout-minutes: 120
         run: |
-          S=${{ github.event.inputs.slug }}; O=$RUNNER_TEMP/out; mkdir -p $O
+          S=${{ github.event.inputs.slug }}; O=$RUNNER_TEMP/out; R=$RUNNER_TEMP/ref; mkdir -p $O
+          cp $R/designed_female.wav $O/0_designed_female_reference.wav
           git fetch -q origin handoff/$S-voice && git show FETCH_HEAD:voice.wav > $O/kokoro.wav
           python - <<EOF
-          import soundfile as sf; a, sr = sf.read("$O/kokoro.wav"); sf.write("$O/prompt.wav", a[int(sr*0.2):int(sr*10.2)], sr)
+          import soundfile as sf; a, sr = sf.read("$O/kokoro.wav"); sf.write("$R/kokoro_ref.wav", a[int(sr*0.2):int(sr*12.2)], sr)
           EOF
-          { echo "slug $S"; nproc; } > $O/report.txt
-          python audio/narrate_chatterbox.py scripts/$S/script.md $O/chatterbox_A_own_voice.wav - 0.6 0.4 | tee -a $O/report.txt
-          python audio/narrate_chatterbox.py scripts/$S/script.md $O/chatterbox_B_our_voice.wav $O/prompt.wav 0.6 0.4 | tee -a $O/report.txt
-          rm $O/prompt.wav
+          echo "slug $S" > $O/report.txt
+          python audio/narrate_chatterbox.py scripts/$S/script.md $O/C1_designed_female.wav $R/designed_female.wav 0.6 0.4 | tee -a $O/report.txt
+          python audio/narrate_chatterbox.py scripts/$S/script.md $O/C2_designed_female_lively.wav $R/designed_female.wav 0.8 0.3 | tee -a $O/report.txt
+          python audio/narrate_chatterbox.py scripts/$S/script.md $O/B2_our_voice_lively.wav $R/kokoro_ref.wav 0.8 0.3 | tee -a $O/report.txt
       - uses: actions/upload-artifact@v4
         with: {name: "voice-test-${{ github.event.inputs.slug }}", path: "${{ runner.temp }}/out", retention-days: 14}
