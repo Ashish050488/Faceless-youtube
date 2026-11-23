@@ -426,7 +426,12 @@
   "topic": "Valve Steam Machine 2TB out of stock (YouTube Short sow010)",
   "youtube": "https://youtube.com/shorts/5LGZJk7EOck",
   "permalink": "https://www.instagram.com/reel/Df9ooAYAUeC/",
-  "status": "published 2026-11-20 ~5:55 PM IST (late: follow-up step was missed; posted by main session)"
+  "status": "published 2026-11-20 ~5:55 PM IST (late: follow-up step was missed; posted by main session)",
+  "stats_2026-11-23": {
+   "plays": 190,
+   "likes": 3,
+   "skip_rate": 53.9
+  }
  },
  {
   "date": "2026-11-20",
@@ -437,7 +442,11 @@
   "ai_label": true,
   "permalink": "https://www.instagram.com/reel/Df9uyBBgL9G/",
   "mediaId": "18074952482788551",
-  "note": "custom cover not supported by vidiq_instagram_publish_reel"
+  "note": "custom cover not supported by vidiq_instagram_publish_reel",
+  "stats_2026-11-23": {
+   "plays": 119,
+   "skip_rate": 49.1
+  }
  },
  {
   "date": "2026-11-21",
@@ -448,7 +457,15 @@
   "ai_label": true,
   "youtube": "https://youtube.com/shorts/sSWTIJhSTXM",
   "permalink": "https://www.instagram.com/reel/DgB-9ekDS9p/",
-  "mediaId": "18105777665054573"
+  "mediaId": "18105777665054573",
+  "stats_2026-11-23": {
+   "plays": 1256,
+   "likes": 28,
+   "shares": 3,
+   "saves": 5,
+   "watched_pct": 28.4,
+   "skip_rate": 44.0
+  }
  },
  {
   "date": "2026-11-22",
@@ -487,7 +504,13 @@
   "ai_label": true,
   "youtube": "https://youtube.com/shorts/NEDjNq_JPVc",
   "permalink": "https://www.instagram.com/reel/DgCSTjBEoIS/",
-  "mediaId": "18002618508017839"
+  "mediaId": "18002618508017839",
+  "stats_2026-11-23": {
+   "plays": 292,
+   "likes": 3,
+   "saves": 1,
+   "skip_rate": 46.7
+  }
  },
  {
   "date": "2026-11-22",
@@ -524,6 +547,39 @@
   "ai_label": true,
   "youtube": "https://youtube.com/shorts/-DvxWCtWjTw",
   "permalink": "https://www.instagram.com/reel/DgC4DEFDl4b/",
-  "mediaId": "18141329164726927"
+  "mediaId": "18141329164726927",
+  "stats_2026-11-23": {
+   "plays": 490,
+   "likes": 6,
+   "saves": 1,
+   "watched_pct": 13.7,
+   "skip_rate": 55.6
+  }
+ },
+ {
+  "date": "2026-11-23",
+  "slot": "10:17 IST",
+  "type": "carousel",
+  "category": "AI apps & prices",
+  "topic": "Every AI subscription price: Google AI Plus $4.99 to Claude Ultra $200 / Google AI Ultra 20x $199.99",
+  "status": "published 2026-11-23",
+  "postId": "920347a2-5fca-4d8a-9555-a748a8ba6405",
+  "permalink": "https://www.instagram.com/p/DgEkCfXDW3G/",
+  "slides": 6,
+  "sources": [
+   "https://claude.com/pricing",
+   "https://gemini.google/subscriptions/",
+   "https://www.notebookcheck.net/ChatGPT-vs-Gemini-vs-Claude-What-AI-subscriptions-cost-now.1439605.0.html"
+  ],
+  "images": "Company logos (Wikimedia Commons / Anthropic press kit)",
+  "test_vars": {
+   "format": "carousel (daily)",
+   "cover_angle": "price ladder / save-worthy",
+   "topic_type": "AI apps & prices",
+   "slide_count": 6,
+   "meme": false,
+   "slot_time": "10:17",
+   "caption_length": "medium"
+  }
  }
 ]
