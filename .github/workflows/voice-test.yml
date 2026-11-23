@@ -1,0 +1,38 @@
+# TEST ONLY (owner 2026-11-23): compare Chatterbox (MIT, free) with the locked Kokoro voice. Manual run with a slug.
+# Output: workflow artifact "voice-test-<slug>" (kokoro.wav, chatterbox_A_own_voice.wav, chatterbox_B_our_voice.wav, report.txt).
+# Does NOT touch main or the daily voice job.
+name: voice-test
+on:
+  workflow_dispatch:
+    inputs:
+      slug: {description: "scripts/<slug> (its handoff/<slug>-voice branch must exist)", required: true}
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - name: Install Chatterbox (CPU)
+        timeout-minutes: 25
+        run: |
+          P="--timeout 60 --retries 5 --progress-bar off --disable-pip-version-check"
+          pip install $P --extra-index-url https://download.pytorch.org/whl/cpu chatterbox-tts librosa soundfile | grep -E "Successfully|ERROR" || true
+          python -c "import torch, chatterbox; print('torch', torch.__version__)"; pip show chatterbox-tts | grep -i ^version
+      - name: Make the samples
+        timeout-minutes: 90
+        run: |
+          S=${{ github.event.inputs.slug }}; O=$RUNNER_TEMP/out; mkdir -p $O
+          git fetch -q origin handoff/$S-voice && git show FETCH_HEAD:voice.wav > $O/kokoro.wav
+          python - <<EOF
+          import soundfile as sf; a, sr = sf.read("$O/kokoro.wav"); sf.write("$O/prompt.wav", a[int(sr*0.2):int(sr*10.2)], sr)
+          EOF
+          { echo "slug $S"; nproc; } > $O/report.txt
+          python audio/narrate_chatterbox.py scripts/$S/script.md $O/chatterbox_A_own_voice.wav - 0.6 0.4 | tee -a $O/report.txt
+          python audio/narrate_chatterbox.py scripts/$S/script.md $O/chatterbox_B_our_voice.wav $O/prompt.wav 0.6 0.4 | tee -a $O/report.txt
+          rm $O/prompt.wav
+      - uses: actions/upload-artifact@v4
+        with: {name: "voice-test-${{ github.event.inputs.slug }}", path: "${{ runner.temp }}/out", retention-days: 14}
