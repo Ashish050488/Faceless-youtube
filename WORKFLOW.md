@@ -46,7 +46,7 @@ monetisation guidance regularly (state/policy_notes.md) and follow it; nothing r
    - Write shotlist.md: (A) real images/clips the script session found itself (direct URLs from page code),
      (B) a "PLEASE GET" list for the owner — anything blocked for automation (Kickstarter, logins, bot checks),
      with exact file names. Owner drops those into Drive › 01_scripts › <slug> › assets/.
-   - Message the video chat with the slug (it starts with A and adds B when it arrives).
+   - Start a FRESH video-builder session (create_session, full build order in its prompt; never message an existing chat). It builds A, adds B when it arrives.
 2. **Video session**
    - Sources real visuals itself (official press/campaign images, product pages; own motion graphics).
      No clips from YouTube/social/brand promo videos (reused-content policy, channel-wide penalty).

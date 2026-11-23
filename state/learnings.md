@@ -13,6 +13,11 @@
   oddball humour (Venom "tractor headphones" 846K). Outlier lengths 16–171 s (median ~62 s) → length alone doesn't make hits;
   the topic does. Techy or Not: median 8.5K, his outlier "Why Is This $60 Trackball Mouse Already Sold Out?" 254K.
 
+## 2026-11-23
+- Short 2 was lost: its build order went by message to an existing video chat, which refused it (orders from other
+  chats are not trusted). Fix: each script job starts a fresh builder with create_session, order in the first prompt;
+  if no handoff message arrives, the script job checks the handoff branch itself.
+
 ## 2026-11-22
 - Long video was missed because the day was written inside task text ("Saturday from 5 Dec"). Fix: days live in the
   task timers (Shorts Mon–Sat, long video built Sunday from 7:47 AM IST, public when ready). Sunday = no Shorts, no Reels.
