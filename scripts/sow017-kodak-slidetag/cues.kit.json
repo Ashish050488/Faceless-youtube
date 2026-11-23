@@ -1,0 +1,810 @@
+{
+ "slug": "sow017-kodak-slidetag",
+ "plan": "plan.json",
+ "thumb": {
+  "img": "A",
+  "bg": "blush",
+  "tilt": -6,
+  "a": {
+   "words": "FINDS KEYS",
+   "num": "$35",
+   "emotion": "arrow"
+  },
+  "b": {
+   "words": "BLIND BOX",
+   "num": "$35",
+   "emotion": "q"
+  }
+ },
+ "scenes": [
+  {
+   "line": 0,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "poster",
+     "until": [
+      "@keychain",
+      0,
+      -0.05
+     ],
+     "overlap": true
+    },
+    {
+     "type": "product",
+     "img": "A",
+     "x": 540,
+     "y": 860,
+     "w": 600,
+     "seed": 0.4,
+     "id": "p",
+     "show": [
+      "@keychain",
+      0,
+      -0.05
+     ]
+    },
+    {
+     "type": "keyRing",
+     "x": 540,
+     "y": 1480,
+     "s": 1.0,
+     "at": [
+      "@keychain",
+      0,
+      -0.05
+     ],
+     "show": [
+      "@keychain",
+      0,
+      -0.05
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "PHOTO KEYCHAIN",
+     "at": [
+      "@keychain",
+      0,
+      -0.05
+     ],
+     "col": "ember"
+    }
+   ]
+  },
+  {
+   "line": 0,
+   "from": "and",
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "A",
+     "x": 540,
+     "y": 840,
+     "w": 600,
+     "seed": 0.4
+    },
+    {
+     "type": "trackerPing",
+     "x": 540,
+     "y": 1810,
+     "s": 1.1,
+     "at": [
+      "@finds",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "AND?",
+     "at": 0.05,
+     "until": [
+      "@finds",
+      0,
+      -0.05
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "FINDS KEYS",
+     "at": [
+      "@finds",
+      0,
+      -0.05
+     ],
+     "col": "ember"
+    }
+   ],
+   "xfade": true
+  },
+  {
+   "line": 1,
+   "bg": "mint",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "A",
+     "x": 540,
+     "y": 850,
+     "w": 560,
+     "seed": 0.4
+    },
+    {
+     "type": "product",
+     "img": "D",
+     "x": 160,
+     "y": 1500,
+     "w": 190,
+     "seed": 0.4,
+     "ltOffset": 0
+    },
+    {
+     "type": "product",
+     "img": "E",
+     "x": 393,
+     "y": 1500,
+     "w": 190,
+     "seed": 0.4,
+     "ltOffset": 1
+    },
+    {
+     "type": "product",
+     "img": "G",
+     "x": 627,
+     "y": 1500,
+     "w": 190,
+     "seed": 0.4,
+     "ltOffset": 2
+    },
+    {
+     "type": "product",
+     "img": "H",
+     "x": 860,
+     "y": 1500,
+     "w": 190,
+     "seed": 0.4,
+     "ltOffset": 3
+    },
+    {
+     "type": "pill",
+     "text": "8 + 1 DESIGNS",
+     "x": 540,
+     "y": 1760,
+     "w": 520,
+     "h": 96,
+     "at": [
+      "slidetag",
+      0,
+      0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "SLIDETAG",
+     "at": [
+      "@meet",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 1,
+   "from": "it",
+   "xfade": true,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "I",
+     "x": 540,
+     "y": 860,
+     "w": 560,
+     "seed": 0.4
+    },
+    {
+     "type": "filmSlide",
+     "x": 640,
+     "y": 1560,
+     "s": 1.2,
+     "at": 0.05,
+     "beamAt": [
+      "@slide",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "LOOKS LIKE",
+     "at": 0.05,
+     "until": [
+      "@slide",
+      0,
+      -0.05
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "FILM SLIDE",
+     "at": [
+      "@slide",
+      0,
+      -0.05
+     ]
+    }
+   ]
+  },
+  {
+   "line": 1,
+   "from": "and",
+   "xfade": true,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "A",
+     "x": 540,
+     "y": 820,
+     "w": 560,
+     "seed": 0.4
+    },
+    {
+     "type": "priceTag",
+     "x": 540,
+     "y": 1230,
+     "text": "$34.99",
+     "at": [
+      "@price",
+      0,
+      -0.2
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "$34.99",
+     "at": [
+      "@price",
+      0,
+      -0.2
+     ],
+     "col": "ember"
+    }
+   ]
+  },
+  {
+   "line": 2,
+   "bg": "sky",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "A",
+     "x": 540,
+     "y": 800,
+     "w": 560,
+     "seed": 0.4,
+     "push": true
+    },
+    {
+     "type": "label",
+     "text": "1.54\"",
+     "x": 330,
+     "y": 1215,
+     "px": 64,
+     "at": [
+      "@eink",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "label",
+     "text": "6 COLOURS",
+     "x": 720,
+     "y": 1215,
+     "px": 56,
+     "at": [
+      "@eink",
+      0,
+      0.3
+     ],
+     "col": "ink"
+    },
+    {
+     "type": "photoStack",
+     "x": 540,
+     "y": 1500,
+     "n": 12,
+     "at": [
+      "@twelve",
+      0,
+      -0.1
+     ],
+     "s": 1.4
+    },
+    {
+     "type": "number",
+     "value": 12,
+     "x": 540,
+     "y": 1760,
+     "px": 140,
+     "at": [
+      "@twelve",
+      0,
+      -0.1
+     ],
+     "col": "ember"
+    },
+    {
+     "type": "headline",
+     "text": "GET THIS",
+     "at": 0.05,
+     "until": [
+      "@eink",
+      0,
+      -0.05
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "COLOR E INK",
+     "at": [
+      "@eink",
+      0,
+      -0.05
+     ],
+     "until": [
+      "@twelve",
+      0,
+      -0.05
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "12 PHOTOS",
+     "at": [
+      "@twelve",
+      0,
+      -0.05
+     ],
+     "col": "ember"
+    }
+   ]
+  },
+  {
+   "line": 2,
+   "from": "it",
+   "xfade": true,
+   "bg": "lav",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "B",
+     "x": 540,
+     "y": 800,
+     "w": 420,
+     "seed": 0.4
+    },
+    {
+     "type": "pill",
+     "text": "FIND MY",
+     "x": 540,
+     "y": 1400,
+     "w": 460,
+     "h": 96,
+     "at": [
+      "@findmy",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "pill",
+     "text": "FIND HUB",
+     "x": 540,
+     "y": 1530,
+     "w": 460,
+     "h": 96,
+     "at": [
+      "@findhub",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "label",
+     "text": "UP TO 30 m",
+     "x": 540,
+     "y": 1730,
+     "px": 64,
+     "col": "ember",
+     "at": [
+      "@findhub",
+      0,
+      0.4
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "FIND MY",
+     "at": [
+      "@findmy",
+      0,
+      -0.05
+     ],
+     "until": [
+      "@findhub",
+      0,
+      -0.05
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "+ FIND HUB",
+     "at": [
+      "@findhub",
+      0,
+      -0.05
+     ]
+    }
+   ]
+  },
+  {
+   "line": 2,
+   "from": "battery",
+   "bg": "sky",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "C",
+     "x": 540,
+     "y": 720,
+     "w": 480,
+     "seed": 0.4
+    },
+    {
+     "type": "coinCell",
+     "x": 520,
+     "y": 1560,
+     "s": 1.2,
+     "at": [
+      "@swap",
+      0,
+      -0.3
+     ],
+     "swapAt": "@cell",
+     "label": "CR2032"
+    },
+    {
+     "type": "headline",
+     "text": "BATTERY DEAD?",
+     "at": 0.05,
+     "until": [
+      "@swap",
+      0,
+      -0.05
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "SWAP IT",
+     "at": [
+      "@swap",
+      0,
+      -0.05
+     ],
+     "col": "ember"
+    }
+   ],
+   "xfade": true
+  },
+  {
+   "line": 3,
+   "bg": "blush",
+   "real": true,
+   "shake": [
+    "@catch",
+    0,
+    -0.2
+   ],
+   "layers": [
+    {
+     "type": "product",
+     "img": "J",
+     "x": 540,
+     "y": 1250,
+     "w": 380,
+     "seed": 0.4,
+     "ltOffset": 5,
+     "fade": {
+      "at": 0,
+      "to": 0.45
+     }
+    },
+    {
+     "type": "stamp",
+     "text": "THE CATCH",
+     "y": 700,
+     "px": 110,
+     "at": [
+      "@catch",
+      0,
+      -0.2
+     ],
+     "sfx": false
+    }
+   ]
+  },
+  {
+   "line": 3,
+   "from": "it's",
+   "xfade": true,
+   "bg": "blush",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "J",
+     "x": 540,
+     "y": 820,
+     "w": 480,
+     "seed": 0.4
+    },
+    {
+     "type": "questionStamp",
+     "x": 540,
+     "y": 1500,
+     "s": 0.8,
+     "at": [
+      "@blind",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "BLIND BOX",
+     "at": [
+      "@blind",
+      0,
+      -0.05
+     ],
+     "until": [
+      "so",
+      0,
+      -0.05
+     ],
+     "col": "wreck"
+    },
+    {
+     "type": "headline",
+     "text": "CAN'T PICK",
+     "at": [
+      "so",
+      0,
+      -0.05
+     ]
+    }
+   ]
+  },
+  {
+   "line": 3,
+   "from": "and",
+   "bg": "blush",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "A",
+     "x": 320,
+     "y": 820,
+     "w": 440,
+     "seed": 0.4
+    },
+    {
+     "type": "trackerDisc",
+     "x": 760,
+     "y": 820,
+     "s": 1.15,
+     "at": [
+      "@airtag",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "label",
+     "text": "AIRTAG",
+     "x": 760,
+     "y": 1060,
+     "px": 56,
+     "col": "ink",
+     "at": [
+      "@airtag",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "pill",
+     "text": "UWB",
+     "x": 320,
+     "y": 1180,
+     "w": 240,
+     "h": 90,
+     "at": [
+      "@uwb",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "crossMark",
+     "x": 490,
+     "y": 1180,
+     "s": 0.35,
+     "at": [
+      "@uwb",
+      0,
+      0.25
+     ],
+     "overlap": true
+    },
+    {
+     "type": "pill",
+     "text": "UWB",
+     "x": 760,
+     "y": 1180,
+     "w": 240,
+     "h": 90,
+     "at": [
+      "@airtag",
+      0,
+      0.3
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "NO UWB",
+     "at": [
+      "@uwb",
+      0,
+      -0.05
+     ],
+     "col": "wreck"
+    }
+   ]
+  },
+  {
+   "line": 4,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "A",
+     "x": 520,
+     "y": 1230,
+     "w": 420,
+     "seed": 0.4
+    },
+    {
+     "type": "wordmark",
+     "y": 560,
+     "score": 68,
+     "scoreAt": [
+      "@score",
+      0,
+      -0.1
+     ],
+     "snapAt": "@verdict",
+     "px": 125
+    },
+    {
+     "type": "headline",
+     "text": "SPEC",
+     "at": [
+      "@verdict",
+      0,
+      -0.1
+     ],
+     "until": [
+      "photos",
+      0,
+      -0.1
+     ],
+     "col": "ember"
+    },
+    {
+     "type": "headline",
+     "text": "FOR PHOTOS",
+     "at": [
+      "photos",
+      0,
+      -0.1
+     ]
+    }
+   ]
+  },
+  {
+   "line": 5,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "A",
+     "x": 540,
+     "y": 780,
+     "w": 560,
+     "seed": 0.4
+    },
+    {
+     "type": "priceTag",
+     "x": 330,
+     "y": 1300,
+     "text": "$35",
+     "at": [
+      "@loop",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "questionStamp",
+     "x": 790,
+     "y": 1560,
+     "s": 0.6,
+     "at": [
+      "mystery",
+      0,
+      -0.1
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "BE HONEST",
+     "at": 0.05,
+     "until": [
+      "@loop",
+      0,
+      -0.15
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "$35 GAMBLE?",
+     "at": [
+      "@loop",
+      0,
+      -0.15
+     ],
+     "col": "ember"
+    }
+   ]
+  },
+  {
+   "endcard": true,
+   "bg": "paper",
+   "layers": [
+    {
+     "type": "wordmark",
+     "y": 900,
+     "score": 68,
+     "snapAt": 0.7
+    }
+   ]
+  }
+ ]
+}

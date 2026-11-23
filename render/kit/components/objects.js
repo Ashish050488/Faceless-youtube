@@ -26,7 +26,7 @@ function priceTag(ctx, ax, ay, lt, t0, text, { dark = true } = {}) { dark = fals
   ctx.beginPath(); ctx.moveTo(-50, 0); ctx.lineTo(50, 0); ctx.lineTo(w / 2, 60); ctx.lineTo(w / 2, h); ctx.lineTo(-w / 2, h); ctx.lineTo(-w / 2, 60); ctx.closePath();
   ctx.fillStyle = C.mari; ctx.fill(); ctx.shadowColor = 'transparent'; ctx.lineWidth = 8; ctx.strokeStyle = C.ink; ctx.stroke();
   ctx.beginPath(); ctx.arc(0, 26, 12, 0, 7); ctx.fillStyle = dark ? C.ink : C.paper; ctx.fill(); ctx.stroke();
-  font(ctx, 110, 'head'); ctx.fillStyle = C.ink; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(text, 0, 128); ctx.textAlign = 'left';
+  font(ctx, 110, 'head'); const tw = ctx.measureText(text).width; if (tw > w - 50) font(ctx, Math.floor(110 * (w - 50) / tw), 'head'); ctx.fillStyle = C.ink; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(text, 0, 128); ctx.textAlign = 'left';
   ctx.restore();
 }
 function calipers(ctx, xL, xR, y, lt, t0, dark) { dark = false; // jaws slide in and clamp the edge

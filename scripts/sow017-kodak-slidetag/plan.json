@@ -1,0 +1,20 @@
+[
+ {"cue": "keychain", "line": 0, "word": "keychain", "offset": -0.1},
+ {"cue": "finds", "line": 0, "word": "finds", "offset": -0.1},
+ {"cue": "meet", "line": 1, "word": "meet"},
+ {"cue": "slide", "line": 1, "word": "film", "offset": -0.1},
+ {"cue": "price", "line": 1, "word": "thirty-five", "offset": -0.1},
+ {"cue": "eink", "line": 2, "word": "color", "offset": -0.1},
+ {"cue": "twelve", "line": 2, "word": "twelve", "offset": -0.1},
+ {"cue": "findmy", "line": 2, "word": "find", "nth": 0, "offset": -0.1},
+ {"cue": "findhub", "line": 2, "word": "find", "nth": 1, "offset": -0.1},
+ {"cue": "swap", "line": 2, "word": "swap", "offset": -0.1},
+ {"cue": "cell", "line": 2, "word": "cell", "offset": 0.2},
+ {"cue": "catch", "line": 3, "word": "catch"},
+ {"cue": "blind", "line": 3, "word": "blind", "offset": -0.1},
+ {"cue": "uwb", "line": 3, "word": "ultra-wideband", "offset": -0.1},
+ {"cue": "airtag", "line": 3, "word": "airtag", "offset": -0.1},
+ {"cue": "score", "line": 4, "word": "sixty-eight"},
+ {"cue": "verdict", "line": 4, "word": "spec"},
+ {"cue": "loop", "line": 5, "word": "thirty-five", "offset": -0.1}
+]

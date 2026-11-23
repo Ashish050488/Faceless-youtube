@@ -27,6 +27,7 @@ Every object is drawn once, saved here, and reused by every future video. Before
 | `ui.js` | interface pieces: speechBubble, appTile |
 | `emotion.js` | poster/scene emotion objects: crossMark, questionStamp, arrowPointer |
 | `media.js` | discs, game cases, downloads: disc, gameCase, dvdStack, downloadBar |
+| `tracker.js` | keychains and item trackers: keyRing, trackerPing, filmSlide, coinCell, trackerDisc, photoStack |
 | `ports.js` (add) | usbPort (A/C), audioJack, ethernetPort, hdmiPort |
 
 ## Index (one row per object — keep it updated)
@@ -82,3 +83,9 @@ Every object is drawn once, saved here, and reused by every future video. Before
 | fingerTap | emotion.js | index finger tapping, marigold ripple rings (tip at x, y) | finger comes down, taps at `tapAt` | touch screens; poster emotion `tap` |
 | chapterCard | text.js | "CHAPTER n" pill + big title on a paper band | rises at `at`, holds `hold` s (1.5), slides away | long-video chapter starts |
 | scoreTable | measure.js | VERDICT.md table: rows label + bar + "score/max", optional TOTAL | each row slides in at its `at`, bar fills | verdict breakdown (long videos) |
+| keyRing | tracker.js | split key ring + 2 chain links + a key (`s` ≈ 1, ~555 px tall) | drops in, key swings and settles | keychains, "finds your keys" |
+| trackerPing | tracker.js | map pin (tip at x, y) + 3 radar rings looping round the tip | pin drops in from 200 px above | item trackers, Find My / Find Hub, "locate" |
+| filmSlide | tracker.js | 35 mm cardboard slide mount with amber film window + sheen | pops in; `beamAt` = projector appears left (x −380) + light cone | film/retro looks, slides, photos |
+| coinCell | tracker.js | battery socket, coin cell with "+" and `label` (e.g. CR2032), twist cover with slot | cover twists open at `at`+0.25 and lifts; old cell slides out, new drops in at `swapAt` | replaceable coin-cell batteries |
+| trackerDisc | tracker.js | generic round tracker (metal rim, white face, no logo), r 140 | pops in, floats | rival tracker without its image (label it with text) |
+| photoStack | tracker.js | `n` mini photo cards fanned into a pile | cards land one by one (0.07 s apart) | photo counts, galleries, storage in photos |

@@ -64,7 +64,7 @@ const SFX_DEFAULT = { connector: [['at', 'pop', 0.4], ['flipAt', 'thud', 0.8]], 
   playIcon: [['at', 'pop', 0.4]], motionLines: [['at', 'swish', 0.5]], slider: [['at', 'down', 0.5]], headline: [], label: [], product: [], clip: [],
   chipDie: [['fillAt', 'blip', 0.45]], ramStick: [['at', 'clunk', 0.5]], fan: [['at', 'whoosh', 0.35]], gauge: [['at', 'tick', 0.5]], usbPort: [['at', 'pop', 0.4], ['crossAt', 'scratch', 0.6]], audioJack: [['at', 'pop', 0.4], ['crossAt', 'scratch', 0.6]],
   ruler: [['at', 'swish', 0.4]], reviewCard: [['at', 'pop', 0.35], ['tickAt', 'tick', 0.6]], thermometer: [['at', 'blip', 0.35]], miniPc: [['at', 'pop', 0.4]], slash: [['at', 'swish', 0.6]],
-  consoleTower: [['at', 'pop', 0.4]], ssd: [['at', 'swish', 0.45]], coreGrid: [['fillAt', 'zip', 0.5]], gpuCard: [['at', 'pop', 0.4]], crossMark: [['at', 'thud', 0.7]], speechBubble: [['at', 'pop', 0.45]], appTile: [['at', 'pop', 0.4]], questionStamp: [['at', 'thud', 0.7]], arrowPointer: [['at', 'swish', 0.5]], poster: [], disc: [['at', 'pop', 0.35]], gameCase: [['at', 'thud', 0.5], ['openAt', 'click', 0.7]], dvdStack: [['at', 'zip', 0.5]], downloadBar: [['fillAt', 'zip', 0.5]] };
+  consoleTower: [['at', 'pop', 0.4]], ssd: [['at', 'swish', 0.45]], coreGrid: [['fillAt', 'zip', 0.5]], gpuCard: [['at', 'pop', 0.4]], crossMark: [['at', 'thud', 0.7]], keyRing: [['at', 'swing', 0.5]], trackerPing: [['at', 'pin', 0.5]], filmSlide: [['at', 'pop', 0.4], ['beamAt', 'click', 0.6]], coinCell: [['at+0.25', 'click', 0.6], ['swapAt', 'clunk', 0.6]], trackerDisc: [['at', 'pop', 0.4]], photoStack: [['at', 'zip', 0.5]], speechBubble: [['at', 'pop', 0.45]], appTile: [['at', 'pop', 0.4]], questionStamp: [['at', 'thud', 0.7]], arrowPointer: [['at', 'swish', 0.5]], poster: [], disc: [['at', 'pop', 0.35]], gameCase: [['at', 'thud', 0.5], ['openAt', 'click', 0.7]], dvdStack: [['at', 'zip', 0.5]], downloadBar: [['fillAt', 'zip', 0.5]] };
 Object.assign(SFX_DEFAULT, { miniLedStack: [['at', 'whoosh', 0.35], ['litAt', 'shimmer', 0.35]], oledStack: [['at', 'whoosh', 0.35], ['layer2At', 'clunk', 0.6], ['crackAt', 'thud', 0.8]], starScreen: [['at', 'pop', 0.35], ['bloomAt', 'shimmer', 0.35], ['offAt', 'switch', 0.5]], fingerTap: [['at+0.3', 'tick', 0.5]], chapterCard: [['at', 'whoosh', 0.5]], scoreTable: [['rows', 'blip', 0.4]] });
 const DRAWERS = {
   product(ctx, l, lt, sc, R) {
@@ -162,6 +162,12 @@ const DRAWERS = {
   fingerTap(ctx, l, lt, sc) { sc_(ctx, l, () => K.fingerTap(ctx, lt, tref(sc, l.at, 0.05), { tapAt: l.tapAt !== undefined ? tref(sc, l.tapAt) : null })); },
   chapterCard(ctx, l, lt, sc) { sc_(ctx, l, () => K.chapterCard(ctx, lt, tref(sc, l.at, 0), { n: l.n, title: l.title, hold: l.hold ?? 1.5 })); },
   scoreTable(ctx, l, lt, sc) { sc_(ctx, l, () => K.scoreTable(ctx, lt, l.rows.map(r => ({ ...r, at: tref(sc, r.at) })), { w: l.w || 1100, total: l.total ?? null, totalAt: l.totalAt !== undefined ? tref(sc, l.totalAt) : null })); },
+  keyRing(ctx, l, lt, sc) { sc_(ctx, l, () => K.keyRing(ctx, lt, tref(sc, l.at, 0.05))); },
+  trackerPing(ctx, l, lt, sc) { sc_(ctx, l, () => K.trackerPing(ctx, lt, tref(sc, l.at, 0.05))); },
+  filmSlide(ctx, l, lt, sc) { sc_(ctx, l, () => K.filmSlide(ctx, lt, tref(sc, l.at, 0.05), { beamAt: l.beamAt !== undefined ? tref(sc, l.beamAt) : null })); },
+  coinCell(ctx, l, lt, sc) { sc_(ctx, l, () => K.coinCell(ctx, lt, tref(sc, l.at, 0.05), { swapAt: l.swapAt !== undefined ? tref(sc, l.swapAt) : null, label: l.label || '' })); },
+  trackerDisc(ctx, l, lt, sc) { sc_(ctx, l, () => K.trackerDisc(ctx, lt, tref(sc, l.at, 0.05))); },
+  photoStack(ctx, l, lt, sc) { sc_(ctx, l, () => K.photoStack(ctx, lt, tref(sc, l.at, 0.05), { n: l.n || 12 })); },
   crossMark(ctx, l, lt, sc) { sc_(ctx, l, () => K.crossMark(ctx, lt, tref(sc, l.at, 0.05))); },
   questionStamp(ctx, l, lt, sc) { sc_(ctx, l, () => K.questionStamp(ctx, lt, tref(sc, l.at, 0.05))); },
   arrowPointer(ctx, l, lt, sc) { sc_(ctx, l, () => K.arrowPointer(ctx, lt, tref(sc, l.at, 0.05), l.angle || 0)); },
