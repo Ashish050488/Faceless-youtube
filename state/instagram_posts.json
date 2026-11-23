@@ -592,5 +592,31 @@
   "youtube": "https://youtube.com/shorts/P-lI6dJUx68",
   "permalink": "https://www.instagram.com/reel/DgE3FfEDDZH/",
   "mediaId": "18609023293070295"
+ },
+ {
+  "date": "2026-11-23",
+  "slot": "13:43 IST",
+  "type": "single",
+  "category": "security",
+  "topic": "Rakuten Securities breach: up to 15.7M accounts via test server holding real customer data",
+  "status": "published 2026-11-23",
+  "postId": "f7cd6f53-ddfe-4d1a-80a3-4cf0e3819b94",
+  "permalink": "https://www.instagram.com/p/DgE7l4lFqlU/",
+  "slides": 1,
+  "sources": [
+   "https://www.japantimes.co.jp/business/2026/11/19/companies/rakuten-securities-data-breach/",
+   "https://www.scworld.com/brief/rakuten-securities-data-breach-impacts-millions-of-customers",
+   "https://itnerd.blog/2026/11/19/rakuten-securities-breach-exposes-15-7-million-accounts/"
+  ],
+  "images": "Rakuten logo (Wikimedia Commons)",
+  "test_vars": {
+   "format": "single",
+   "cover_angle": "scandal/number",
+   "topic_type": "security",
+   "slide_count": 1,
+   "meme": false,
+   "slot_time": "13:43",
+   "caption_length": "medium"
+  }
  }
 ]
