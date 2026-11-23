@@ -1,0 +1,143 @@
+{
+ "id": "sow017-kodak-slidetag",
+ "format": "short",
+ "export": "720x1280 H.264 CRF 24 maxrate 2M ≤20 MB (§13)",
+ "rules": "PRODUCTION_SPEC §12–§18; flat LIGHT backgrounds; store images are on white — cut out (rembg). Whole real product; 1–3 words; 2-D objects next to the product; watermark below content; logo v5 end card; audio LOCKED (narrate.py + mix.sh). Length 45–55 s, HARD CAP 58 s. Draw no Kodak, Apple or Google logos (text names only). Don't call any colour 'secret'.",
+ "numbers_shown": [
+  "$34.99",
+  "1.54\"",
+  "6 colours",
+  "12 photos",
+  "30 m",
+  "CR2032",
+  "8 + 1 designs",
+  "68/100"
+ ],
+ "official_clips": "none — the official store page has no product video; no promo video use",
+ "palette_for_this_video": "paper #FAF8F5 main; mint reveal; sky for specs; lavender for tracking; blush #FBE7E2 THE CATCH; Kodak-like marigold accent for prices",
+ "assets": "assets_sources.md (A–L, official Kodak/Reto store images, 4500×4500 JPEG)",
+ "new_objects": "keyRing, trackerPing (pin + radar rings), filmSlide (35 mm slide mount + projector beam), coinCell (twist cover + cell swap) — add each to render/kit/OBJECTS.md. Reuse priceTag, screen, ruler, counter, toggle, waves, questionStamp, crossMark, scoreTable.",
+ "scenes": [
+  {
+   "n": 1,
+   "anchor": "Kodak just made a keychain that shows your photos.",
+   "bg": "paper",
+   "image": "A cut out, centred 60% width, slight swing like hanging from a key ring",
+   "object": "new keyRing (metal ring + chain) above the tag; photo on screen fades in like E Ink refresh (flash black/white then colour)",
+   "text": "PHOTO KEYCHAIN",
+   "sfx": "whoosh-up",
+   "note": "frame 1 must read instantly: tag + PHOTO KEYCHAIN"
+  },
+  {
+   "n": 2,
+   "anchor": "And finds your keys!",
+   "bg": "paper",
+   "image": "A hold 55%, left",
+   "object": "new trackerPing: map pin with expanding radar rings on the right; small key icon under the pin",
+   "text": "FINDS KEYS",
+   "sfx": "ping"
+  },
+  {
+   "n": 3,
+   "anchor": "Meet the Kodak SlideTag.",
+   "bg": "mint",
+   "image": "D, E, F, G, H fan out in a row (each 22% width), A in front centred",
+   "object": "none extra — the row of real designs is the object (product row)",
+   "text": "SLIDETAG",
+   "sfx": "pop"
+  },
+  {
+   "n": 4,
+   "anchor": "It looks like an old film slide,",
+   "bg": "paper",
+   "image": "I (white Kodachrome) 55% right",
+   "object": "new filmSlide: classic 35 mm cardboard slide mount + light beam from a projector on the left; morph outline onto I",
+   "text": "FILM SLIDE",
+   "sfx": "projector-click"
+  },
+  {
+   "n": 5,
+   "anchor": "and it's thirty-five dollars.",
+   "bg": "paper",
+   "image": "A 55% left",
+   "object": "priceTag '$34.99' swings in right, value rolls up",
+   "text": "$34.99",
+   "sfx": "tick-roll"
+  },
+  {
+   "n": 6,
+   "anchor": "Get this. A tiny color E Ink screen holds twelve photos.",
+   "bg": "sky",
+   "image": "A crop on screen, slow push-in 80%",
+   "object": "screen object: 6 ink dots (6 colours) above; ruler '1.54\"' along the screen edge; counter 1→12 photos stacking as mini cards",
+   "text": "12 PHOTOS",
+   "sfx": "slide"
+  },
+  {
+   "n": 7,
+   "anchor": "It works with Apple Find My, and Google Find Hub.",
+   "bg": "lavender",
+   "image": "B angled 50% centre",
+   "object": "two generic toggle pills 'Find My' ✓ and 'Find Hub' ✓ (text only, no Apple/Google logos); waves out of the tag; label '30 m' range arc",
+   "text": "FIND MY + FIND HUB",
+   "sfx": "double-ding"
+  },
+  {
+   "n": 8,
+   "anchor": "Battery dead? You swap the coin cell yourself.",
+   "bg": "sky",
+   "image": "C (back, battery cover) 60%",
+   "object": "new coinCell: cover twists open (counter-clockwise), coin cell lifts out and a new one drops in; small 'CR2032' label",
+   "text": "SWAP IT",
+   "sfx": "click-twist"
+  },
+  {
+   "n": 9,
+   "anchor": "Here's the catch. It's a blind box, so you don't pick the design.",
+   "bg": "blush",
+   "image": "J (closed blind box) 50% centre, then K small bottom",
+   "object": "questionStamp '?' slams on the box; the 8 design tiles shuffle behind it like dice",
+   "text": "BLIND BOX",
+   "sfx": "bass-hit"
+  },
+  {
+   "n": 10,
+   "anchor": "And there's no ultra-wideband, unlike AirTag.",
+   "bg": "blush",
+   "image": "A 40% left",
+   "object": "generic round tracker disc (no Apple logo, label 'AirTag' as text) right with a direction arrow; crossMark over 'UWB' under the SlideTag",
+   "text": "NO UWB",
+   "sfx": "buzz-wrong"
+  },
+  {
+   "n": 11,
+   "anchor": "By our score? Sixty-eight out of a hundred.",
+   "bg": "paper",
+   "image": "A 45% right",
+   "object": "scoreTable bars fill to 68 (criteria 12/20/8/10/8/10)",
+   "text": "68/100",
+   "sfx": "tick-roll"
+  },
+  {
+   "n": 12,
+   "anchor": "Spec, if photos matter more than precise finding.",
+   "bg": "paper",
+   "image": "A 50%",
+   "object": "k snaps upright (SPEC end-card motion); pill '✓ photos'",
+   "text": "SPEC",
+   "sfx": "snap-up"
+  },
+  {
+   "n": 13,
+   "anchor": "Be honest. Would you gamble thirty-five bucks on a mystery box?",
+   "bg": "paper",
+   "image": "A centred 60% exactly as frame 1 + J small behind",
+   "object": "priceTag '$34.99' + questionStamp '?' on the blind box",
+   "text": "$35 MYSTERY?",
+   "sfx": "riser tail",
+   "note": "match frame 1 (seamless loop)"
+  }
+ ],
+ "thumbnail": "1280×720: A cut out right (65% height) hanging from a keyRing; left: 'FINDS KEYS' HUGE (marigold) with small pill '$35' under it — complements the title (title = photo keychain, thumb = tracker twist); emotion object: 🤯 beside it; flat paper background; readable at 168×94",
+ "credits": "Product images: Kodak / Reto (official store). Kodak is a trademark of Eastman Kodak Company, used under licence by Reto. Not affiliated with or endorsed by Kodak, Reto, Apple or Google."
+}
