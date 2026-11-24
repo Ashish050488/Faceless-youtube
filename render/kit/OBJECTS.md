@@ -28,7 +28,7 @@ Every object is drawn once, saved here, and reused by every future video. Before
 | `emotion.js` | poster/scene emotion objects: crossMark, questionStamp, arrowPointer |
 | `media.js` | discs, game cases, downloads: disc, gameCase, dvdStack, downloadBar |
 | `tracker.js` | keychains and item trackers: keyRing, trackerPing, filmSlide, coinCell, trackerDisc, photoStack |
-| `display.js` | refresh rate + resolution: frameStrip, pixelGrid, monitorOutline |
+| `display.js` | refresh rate + resolution: frameStrip, pixelGrid, monitorOutline, phoneOutline |
 | `ports.js` (add) | usbPort (A/C), audioJack, ethernetPort, hdmiPort |
 
 ## Index (one row per object — keep it updated)
@@ -93,3 +93,4 @@ Every object is drawn once, saved here, and reused by every future video. Before
 | frameStrip | display.js | film strip (sprocket holes) of frame cells scrolling left, each stamped `label`; `w`, `n` cells | scroll speed ∝ `hz` (0.32 px/s per Hz) | refresh rate, frame time, fps |
 | pixelGrid | display.js | two same-size grids: 4×4 vs 2×2 pixels with RGB subpixels, `labels` under each; `size`, `gap` | pixels fill in sequence; `quarterAt` rings one big pixel + dashed lines = 4 small | resolution modes, "a quarter of the pixels", 4K vs 1080p |
 | monitorOutline | display.js | generic unbranded flat monitor (bezel, screen sweep, neck, base, LED), `label` under it; `w` | pops in, light sweep | rival monitor without its image (name as text only) |
+| phoneOutline | display.js | generic unbranded slab phone (punch-hole, side buttons, screen sweep), `size` text on screen, `label` under it; `h` | pops in, light sweep | rival/older phone without its image (name as text only), screen-size compare |

@@ -1,0 +1,117 @@
+{
+ "slug": "sow019-motorola-edge-70-neo",
+ "plan": "plan.json",
+ "thumb": {"img": "R3", "thumbImg": "R6", "bg": "paper", "tilt": -5,
+  "a": {"words": "WORTH IT?", "num": "₹34,999", "emotion": "q"},
+  "b": {"words": "OLD CHIP?", "num": "6.8\"", "emotion": "arrow"}},
+ "scenes": [
+  {"line": 0, "bg": "paper", "real": true, "layers": [
+   {"type": "poster", "until": "@small", "overlap": true},
+   {"type": "product", "img": "R3", "x": 540, "y": 960, "w": 220, "seed": 0.4, "show": "@small", "move": {"at": "@huge", "dur": 0.45, "w": 360, "y": 960}},
+   {"type": "ruler", "x": 540, "y": 1640, "w": 640, "n": 17, "at": "@huge", "show": "@huge"},
+   {"type": "headline", "text": "SMALL PHONE", "at": "@small", "until": "@huge"},
+   {"type": "headline", "text": "HUGE", "at": "@huge", "col": "ember"}
+  ]},
+  {"line": 0, "from": "seven", "bg": "paper", "real": true, "layers": [
+   {"type": "product", "img": "B", "card": true, "x": 540, "y": 860, "w": 940, "seed": 0.4, "push": true},
+   {"type": "battery", "x": 520, "y": 1520, "scale": 0.9, "segs": 7, "max": 7, "at": "@mah"},
+   {"type": "number", "value": 7000, "unit": " mAh", "x": 540, "y": 420, "px": 150, "at": "@mah", "col": "ember"}
+  ]},
+  {"line": 1, "xfade": true, "bg": "mint", "real": true, "layers": [
+   {"type": "product", "img": "A", "card": true, "x": 540, "y": 900, "w": 900, "seed": 0.4, "push": true},
+   {"type": "pill", "text": "NEW IN INDIA", "x": 540, "y": 1500, "w": 560, "h": 110, "at": 0.4},
+   {"type": "headline", "text": "EDGE 70 NEO", "at": "@meet"}
+  ]},
+  {"line": 1, "from": "the", "bg": "paper", "real": true, "layers": [
+   {"type": "phoneOutline", "x": 290, "y": 860, "h": 600, "size": "6.36\"", "label": "OLD NEO", "at": 0.1},
+   {"type": "product", "img": "R1", "x": 770, "y": 860, "w": 300, "seed": 0.4, "show": "@inch"},
+   {"type": "label", "text": "6.8\"", "x": 770, "y": 1300, "px": 96, "at": ["@inch", 0, 0.2]},
+   {"type": "ruler", "x": 540, "y": 1560, "w": 760, "n": 17, "at": ["@inch", 0, 0.1], "show": ["@inch", 0, 0.1]},
+   {"type": "headline", "text": "THE OLD NEO", "at": 0.05, "until": "@compact"},
+   {"type": "headline", "text": "WAS COMPACT", "at": "@compact", "until": "@inch"},
+   {"type": "headline", "text": "6.8 INCHES", "at": "@inch", "col": "ember"}
+  ]},
+  {"line": 2, "bg": "sky", "real": true, "layers": [
+   {"type": "product", "img": "D", "card": true, "x": 540, "y": 850, "w": 900, "seed": 0.4, "push": true},
+   {"type": "sun", "x": 540, "y": 1520, "r": 70, "at": 0.1, "growAt": {"at": "@nits", "from": 0.35, "to": 1}},
+   {"type": "headline", "text": "GET THIS", "at": 0.05, "until": "@nits"},
+   {"type": "number", "value": 5200, "unit": " nits", "x": 540, "y": 420, "px": 150, "at": "@nits", "show": "@nits", "col": "ember"}
+  ]},
+  {"line": 2, "from": "motorola", "xfade": true, "bg": "paper", "real": true, "layers": [
+   {"type": "product", "img": "F", "card": true, "x": 540, "y": 800, "w": 900, "seed": 0.4},
+   {"type": "battery", "x": 360, "y": 1450, "scale": 0.6, "segs": 4, "max": 8, "at": "@fifty"},
+   {"type": "clock", "x": 840, "y": 1450, "r": 100, "hours": 13.5, "at": "@min27"},
+   {"type": "pill", "text": "45W", "x": 540, "y": 1700, "w": 240, "h": 100, "at": ["@min27", 0, 0.3]},
+   {"type": "headline", "text": "MOTOROLA SAYS", "at": 0.05, "until": "@fifty"},
+   {"type": "headline", "text": "50% IN 27 MIN", "at": "@fifty", "col": "ember"}
+  ]},
+  {"line": 2, "from": "and", "xfade": true, "bg": "paper", "real": true, "layers": [
+   {"type": "product", "img": "R2", "x": 320, "y": 1000, "w": 300, "seed": 0.4},
+   {"type": "hourglass", "x": 780, "y": 960, "at": 0.05, "flipAt": "@h53"},
+   {"type": "label", "text": "MOTOROLA'S CLAIM", "x": 780, "y": 1215, "px": 48, "col": "ink", "at": ["@h53", 0, 0.3]},
+   {"type": "headline", "text": "IT CLAIMS", "at": 0.05, "until": "@h53"},
+   {"type": "number", "value": 53, "unit": " hrs*", "x": 540, "y": 420, "px": 150, "at": "@h53", "show": "@h53", "col": "ember"}
+  ]},
+  {"line": 3, "bg": "blush", "real": true, "shake": ["@catch", 0, -0.2], "layers": [
+   {"type": "product", "img": "R3", "x": 540, "y": 1320, "w": 200, "seed": 0.4, "ltOffset": 5, "fade": {"at": 0, "to": 0.45}},
+   {"type": "stamp", "text": "THE CATCH", "y": 700, "px": 110, "at": ["@catch", 0, -0.2], "sfx": false}
+  ]},
+  {"line": 3, "from": "even", "xfade": true, "bg": "blush", "real": true, "layers": [
+   {"type": "product", "img": "R3", "x": 300, "y": 960, "w": 240, "seed": 0.4},
+   {"type": "priceTag", "x": 740, "y": 900, "text": "₹34,999", "at": "@rupees"},
+   {"type": "label", "text": "WITH OFFERS", "x": 740, "y": 1420, "px": 56, "col": "ink", "at": 0.3},
+   {"type": "headline", "text": "EVEN WITH OFFERS", "at": 0.05, "until": "@rupees"},
+   {"type": "headline", "text": "₹34,999", "at": "@rupees", "col": "ember"}
+  ]},
+  {"line": 3, "from": "motorola's", "bg": "paper", "real": true, "layers": [
+   {"type": "product", "img": "R3", "x": 290, "y": 880, "w": 210, "seed": 0.4},
+   {"type": "pill", "text": "₹34,999", "x": 290, "y": 1450, "w": 360, "h": 100, "at": 0.2},
+   {"type": "phoneOutline", "x": 790, "y": 830, "h": 600, "label": "EDGE 70 FUSION", "at": "@fusion"},
+   {"type": "pill", "text": "₹30,999", "x": 790, "y": 1450, "w": 360, "h": 100, "fill": "ember", "col": "paper", "at": "@less"},
+   {"type": "headline", "text": "ITS OWN SIBLING", "at": 0.05, "until": "@less"},
+   {"type": "headline", "text": "COSTS LESS", "at": "@less", "col": "ember"}
+  ]},
+  {"line": 3, "from": "it's", "xfade": true, "bg": "paper", "real": true, "layers": [
+   {"type": "product", "img": "C", "card": true, "x": 540, "y": 620, "w": 760, "seed": 0.4},
+   {"type": "pill", "text": "NEWER CHIP", "x": 540, "y": 900, "w": 640, "h": 104, "at": "@chip"},
+   {"type": "pill", "text": "68W vs 45W", "x": 540, "y": 1030, "w": 640, "h": 104, "at": "@faster"},
+   {"type": "pill", "text": "+ ULTRAWIDE", "x": 540, "y": 1160, "w": 640, "h": 104, "at": "@ultra"},
+   {"type": "chipDie", "x": 540, "y": 1580, "s": 0.55, "at": 0.1, "fillAt": "@chip"},
+   {"type": "headline", "text": "FUSION GETS", "at": 0.05}
+  ]},
+  {"line": 4, "bg": "paper", "real": true, "layers": [
+   {"type": "scoreTable", "x": 540, "y": 480, "w": 940, "total": "51/100", "totalAt": "@score", "rows": [
+    {"label": "PRICE", "score": 8, "max": 25, "at": 0.2},
+    {"label": "CLAIM", "score": 20, "max": 20, "at": 0.35},
+    {"label": "NEW", "score": 0, "max": 15, "at": 0.5},
+    {"label": "LASTS", "score": 10, "max": 15, "at": 0.65},
+    {"label": "CATCH", "score": 8, "max": 15, "at": 0.8},
+    {"label": "BUY", "score": 5, "max": 10, "at": 0.95}]},
+   {"type": "product", "img": "R3", "x": 540, "y": 1560, "w": 170, "seed": 0.4},
+   {"type": "headline", "text": "OUR SCORE", "at": 0.05, "until": "@score"},
+   {"type": "headline", "text": "51/100", "at": "@score", "col": "ember"}
+  ]},
+  {"line": 4, "from": "it's", "xfade": true, "bg": "paper", "real": true, "layers": [
+   {"type": "wordmark", "y": 560, "score": 51, "scoreAt": 0.1, "snapAt": ["@verdict", 0, -0.05], "px": 125},
+   {"type": "product", "img": "R3", "x": 540, "y": 1440, "w": 170, "seed": 0.4},
+   {"type": "headline", "text": "WRECK", "at": "@verdict", "col": "wreck", "y": 260}
+  ]},
+  {"line": 4, "from": "want", "xfade": true, "bg": "blush", "real": true, "layers": [
+   {"type": "product", "img": "R3", "x": 290, "y": 900, "w": 210, "seed": 0.4},
+   {"type": "phoneOutline", "x": 790, "y": 850, "h": 600, "label": "EDGE 70 FUSION", "at": 0.1},
+   {"type": "arrowPointer", "x": 760, "y": 1460, "angle": -1.2, "at": "@fusion2"},
+   {"type": "headline", "text": "WANT THE BATTERY?", "at": 0.05, "until": "@better"},
+   {"type": "headline", "text": "GET THE FUSION", "at": "@better", "col": "ember"}
+  ]},
+  {"line": 5, "bg": "paper", "real": true, "layers": [
+   {"type": "product", "img": "R6", "x": 540, "y": 900, "w": 560, "seed": 0.4},
+   {"type": "battery", "x": 300, "y": 1580, "scale": 0.55, "segs": 7, "max": 7, "at": "@loop"},
+   {"type": "chipDie", "x": 820, "y": 1580, "s": 0.45, "at": ["@loop", 0, 0.3], "fillAt": ["@loop", 0, 0.5]},
+   {"type": "headline", "text": "BE HONEST", "at": 0.05, "until": "@loop"},
+   {"type": "headline", "text": "BATTERY OR BRAINS?", "at": "@loop", "col": "ember"}
+  ]},
+  {"endcard": true, "bg": "paper", "layers": [
+   {"type": "wordmark", "y": 900, "score": 51, "snapAt": 0.7}
+  ]}
+ ]
+}

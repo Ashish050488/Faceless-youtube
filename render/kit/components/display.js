@@ -1,7 +1,8 @@
 // kit component group 'display': refresh rate + resolution explainers. Drawn around (0,0) at 1080 scale;
 // render.js places them with x, y, s. frameStrip (film strip of frames scrolling at a speed set by `hz`, each cell
 // stamped with `label`), pixelGrid (high-res grid vs low-res grid of the same area: 1 big pixel = 4 small, RGB
-// subpixels, "¼" badge), monitorOutline (generic unbranded flat monitor on a stand, `label` under it).
+// subpixels, "¼" badge), monitorOutline (generic unbranded flat monitor on a stand, `label` under it),
+// phoneOutline (generic unbranded slab phone: punch-hole, side buttons, `size` text on screen, `label` under it).
 const L = require('../../lib');
 const { C, clamp, lerp, easeOut, prog, rr, font } = L;
 module.exports = (K) => {
@@ -60,5 +61,22 @@ function monitorOutline(ctx, lt, t0, { w = 420, label = '' } = {}) { // screen c
   if (label) txt(ctx, label, 0, h / 2 + 210, 52, C.ink, fadeIn(lt, t0 + 0.1, 0.25));
 }
 
-Object.assign(K, { frameStrip, pixelGrid, monitorOutline });
+function phoneOutline(ctx, lt, t0, { h = 560, label = '', size = '' } = {}) { // generic unbranded slab phone, centre (0,0); `size` (e.g. 6.36") inside the screen, `label` under it
+  const f = K.pop(lt, t0); if (!f) return; const w = h * 0.46, r = w * 0.16;
+  ctx.save(); ctx.globalAlpha = fadeIn(lt, t0); ctx.scale(f, f); ctx.lineJoin = 'round';
+  ctx.shadowColor = 'rgba(21,19,18,0.16)'; ctx.shadowBlur = 30; ctx.shadowOffsetY = 12;
+  rr(ctx, -w / 2, -h / 2, w, h, r); ctx.fillStyle = '#2B2826'; ctx.fill(); ctx.shadowColor = 'transparent';
+  ctx.lineWidth = 8; ctx.strokeStyle = C.ink; ctx.stroke(); // body
+  for (const [yy, hh] of [[-h * 0.28, h * 0.09], [-h * 0.14, h * 0.13]]) { rr(ctx, w / 2 - 2, yy, 9, hh, 4); ctx.fillStyle = '#8C847C'; ctx.fill(); } // side buttons
+  ctx.save(); rr(ctx, -w / 2 + 14, -h / 2 + 14, w - 28, h - 28, r * 0.72); ctx.clip(); ctx.fillStyle = '#4A4F5A'; ctx.fillRect(-w / 2, -h / 2, w, h); // screen
+  const sw = ((lt - t0) * 0.45) % 1.8 - 0.4; ctx.fillStyle = 'rgba(255,255,255,0.15)'; ctx.beginPath(); ctx.moveTo(-w / 2 + sw * w, -h / 2); ctx.lineTo(-w / 2 + sw * w + 70, -h / 2); ctx.lineTo(-w / 2 + sw * w - 50, h / 2); ctx.lineTo(-w / 2 + sw * w - 120, h / 2); ctx.closePath(); ctx.fill(); // light sweep
+  ctx.restore();
+  ctx.beginPath(); ctx.arc(0, -h / 2 + 36, 9, 0, 2 * Math.PI - 1e-4); ctx.fillStyle = C.ink; ctx.fill(); ctx.lineWidth = 3; ctx.strokeStyle = '#8C847C'; ctx.stroke(); // punch-hole camera
+  rr(ctx, -w * 0.18, h / 2 - 34, w * 0.36, 8, 4); ctx.fillStyle = 'rgba(255,255,255,0.55)'; ctx.fill(); // home bar
+  if (size) txt(ctx, size, 0, 22, Math.round(w * 0.3), C.paper, fadeIn(lt, t0 + 0.15, 0.25));
+  ctx.restore();
+  if (label) txt(ctx, label, 0, h / 2 * f + 80, 52, C.ink, fadeIn(lt, t0 + 0.1, 0.25));
+}
+
+Object.assign(K, { frameStrip, pixelGrid, monitorOutline, phoneOutline });
 };
