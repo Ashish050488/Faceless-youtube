@@ -656,5 +656,32 @@
   "youtube": "https://youtube.com/shorts/S-LxHWtfdVU",
   "permalink": "https://www.instagram.com/reel/DgHb9g6Cf6K/",
   "mediaId": "18110838953271435"
+ },
+ {
+  "date": "2026-11-24",
+  "slot": "13:43 IST",
+  "type": "single",
+  "category": "AI startups & money",
+  "topic": "Mistral AI valued at €21B+ (Sept €3B Series D, Samsung-led); Deutsche Telekom fund invests €100M",
+  "status": "published 2026-11-24",
+  "postId": "5dc96519-6cba-4ffa-9ad2-9e4d40928e11",
+  "permalink": "https://www.instagram.com/p/DgHgVnSFoTe/",
+  "slides": 1,
+  "sources": [
+   "https://www.telekom.com/en/newsroom/latest-updates/media-information/2026/11/deutsche-telekom-advances-sovereign-ai-in-germany",
+   "https://techcrunch.com/2026/09/08/mistral-raises-e3b-as-sovereign-ai-becomes-big-business/",
+   "https://www.euronews.com/2026/09/08/mistral-ai-raises-record-3-billion-in-samsung-led-funding-round",
+   "https://www.orrick.com/en/News/2026/09/Orrick-Advises-Mistral-in-its-3B-Series-D-at-21B-Post-Money-Valuation"
+  ],
+  "images": "Mistral + Telekom logos (Wikimedia Commons)",
+  "test_vars": {
+   "format": "single",
+   "cover_angle": "valuation + David vs Goliath",
+   "topic_type": "AI money",
+   "slide_count": 1,
+   "meme": false,
+   "slot_time": "13:43",
+   "caption_length": "medium"
+  }
  }
 ]
