@@ -7,6 +7,8 @@
 
 **HARD RULE (owner 2026-11-22): on the long-video day (Sunday) there are NO Shorts and NO Reels — only the long video + Instagram image posts. Never break this.**
 
+**Slot rule (owner 2026-11-24):** every Short entry in state/videos.json has `for_date` = the day it was made for. A Short that misses its slot and goes out the next day at 05:00 UTC keeps its old `for_date` and gets `carried_over: true`; it never fills that next day's slot 1 or 2. Slot guards check `for_date` (else the date of `scripted_at`), never the publish date.
+
 ## One-off (owner 2026-11-22)
 - **Sun 22 Nov:** the first long video is built tonight and goes public as soon as it is ready (before midnight IST). Mon 23 Nov = normal 2 Shorts.
 
