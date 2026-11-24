@@ -69,7 +69,7 @@ Benchmark for Shorts = Techy or Not (measured: state/competitor_watch/). Long vi
   Runs only on GitHub Actions (voice.yml). Guard: Whisper match < 0.80 → retry seed 23 → fallback Kokoro
   (`audio/narrate.py <script.md> af_heart 0.795 out.wav 0.30 0.42`); `voice_engine.txt` in the handoff says which.
 - Mix: `audio/mix.sh voice.wav bed.wav out.mp3` (bed −11 dB + sidechain, −14 LUFS, TP −1, keeps full tail).
-- Verify: `audio/measure_timing.py file` → articulation 168–180 wpm, sentence gap 0.60–0.75 s, tail ≥ 2 s, last words present.
+- Verify: `audio/measure_timing.py file` → articulation ~185–205 wpm (Chatterbox ×1.09; Kokoro fallback 168–180), sentence gap 0.55–0.75 s, tail ≥ 2 s, last words present.
 - Script for the ear: short sentences, contractions, one natural reaction per beat, numbers as spoken. **100–130 words per Short (45–60 s)** — owner 2026-11-17, competitor data: fastest-growing faceless channel ≈ 43 s.
 - Pronunciation: Chatterbox ignores config/pronunciations.json (that is Kokoro-only). If a brand name is hard to say, write it
   the way it sounds in script.md (e.g. "Ny-kon" only if the plain spelling gets misread) and keep the real spelling in metadata.
