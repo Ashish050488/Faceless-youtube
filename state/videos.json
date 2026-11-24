@@ -353,17 +353,21 @@
   "reel_requested": "2026-11-24T07:37Z"
  },
  {
-  "id": null,
+  "id": "CLJz7lvXSuU",
   "slug": "sow019-motorola-edge-70-neo",
   "title": "Motorola Just Made the Neo HUGE… So Why Pay More? 😬",
   "format": "short",
-  "status": "scripted",
+  "status": "scheduled",
   "slot": "2",
   "date": "2026-11-24",
   "for_date": "2026-11-24",
   "scripted_at": "2026-11-24T08:09Z",
   "publish_at": "2026-11-24T13:00:00Z",
   "verdict": "WRECK 51",
-  "hypothesis": "Rides the '7,000mAh phones' trend (525K-view 'What's the catch?' video, 1.35M Galaxy A19 7000mAh) with India's #2-country audience on launch day; tests whether a price-vs-own-sibling catch (India rupee pricing) lifts comments vs spec-only catches (sow018)."
+  "hypothesis": "Rides the '7,000mAh phones' trend (525K-view 'What's the catch?' video, 1.35M Galaxy A19 7000mAh) with India's #2-country audience on launch day; tests whether a price-vs-own-sibling catch (India rupee pricing) lifts comments vs spec-only catches (sow018).",
+  "privacy": "private",
+  "uploaded_at": "2026-11-24T08:31:23Z",
+  "size_mb": 9.2,
+  "handoff_commit": "5c3c0ce"
  }
 ]
