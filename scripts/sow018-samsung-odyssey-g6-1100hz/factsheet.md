@@ -40,4 +40,5 @@ Left out: macOS doesn't support Dual Mode (Samsung footnote only); DP 2.1 + 2× 
 | 4 | Lasts / fixable | Monitor: no iFixit score, no battery, no update/spare-part data → half points | 7.5 |
 | 5 | The catch | Headline number needs fine print (720p only) → moderate | 8 |
 | 6 | Can people buy it | No price, no date, no market named | 0 |
+| | Max points per row (VERDICT.md): 25 · 20 · 15 · 15 · 15 · 10 | | |
 | | **Total** | | **42 → WRECK** — for now; wait for a price unless you play shooters competitively |

@@ -1,0 +1,22 @@
+[
+ {"cue": "monitor", "line": 0, "word": "monitor", "offset": -0.1},
+ {"cue": "hz1", "line": 0, "word": "eleven", "offset": -0.1, "sfx": "whoosh"},
+ {"cue": "what", "line": 0, "word": "wait", "offset": -0.05},
+ {"cue": "meet", "line": 1, "word": "meet"},
+ {"cue": "inch", "line": 1, "word": "twenty-seven", "offset": -0.1},
+ {"cue": "hz2", "line": 2, "word": "eleven", "offset": -0.1},
+ {"cue": "under", "line": 2, "word": "under", "offset": -0.1},
+ {"cue": "switch", "line": 2, "word": "switch", "offset": -0.1},
+ {"cue": "six", "line": 2, "word": "six", "offset": -0.1},
+ {"cue": "catch", "line": 3, "word": "catch"},
+ {"cue": "p720", "line": 3, "word": "seven-twenty", "offset": -0.1},
+ {"cue": "quarter", "line": 3, "word": "quarter", "offset": -0.1},
+ {"cue": "lg", "line": 3, "word": "lg", "offset": -0.1},
+ {"cue": "oc", "line": 3, "word": "overclocked", "offset": -0.1},
+ {"cue": "price", "line": 3, "word": "price", "offset": -0.1},
+ {"cue": "score", "line": 4, "word": "forty-two"},
+ {"cue": "verdict", "line": 4, "word": "wreck"},
+ {"cue": "wait", "line": 4, "word": "wait", "offset": -0.1},
+ {"cue": "unless", "line": 4, "word": "unless", "offset": -0.1},
+ {"cue": "loop", "line": 5, "word": "sharpness", "offset": -0.1}
+]

@@ -28,6 +28,7 @@ Every object is drawn once, saved here, and reused by every future video. Before
 | `emotion.js` | poster/scene emotion objects: crossMark, questionStamp, arrowPointer |
 | `media.js` | discs, game cases, downloads: disc, gameCase, dvdStack, downloadBar |
 | `tracker.js` | keychains and item trackers: keyRing, trackerPing, filmSlide, coinCell, trackerDisc, photoStack |
+| `display.js` | refresh rate + resolution: frameStrip, pixelGrid, monitorOutline |
 | `ports.js` (add) | usbPort (A/C), audioJack, ethernetPort, hdmiPort |
 
 ## Index (one row per object — keep it updated)
@@ -89,3 +90,6 @@ Every object is drawn once, saved here, and reused by every future video. Before
 | coinCell | tracker.js | battery socket, coin cell with "+" and `label` (e.g. CR2032), twist cover with slot | cover twists open at `at`+0.25 and lifts; old cell slides out, new drops in at `swapAt` | replaceable coin-cell batteries |
 | trackerDisc | tracker.js | generic round tracker (metal rim, white face, no logo), r 140 | pops in, floats | rival tracker without its image (label it with text) |
 | photoStack | tracker.js | `n` mini photo cards fanned into a pile | cards land one by one (0.07 s apart) | photo counts, galleries, storage in photos |
+| frameStrip | display.js | film strip (sprocket holes) of frame cells scrolling left, each stamped `label`; `w`, `n` cells | scroll speed ∝ `hz` (0.32 px/s per Hz) | refresh rate, frame time, fps |
+| pixelGrid | display.js | two same-size grids: 4×4 vs 2×2 pixels with RGB subpixels, `labels` under each; `size`, `gap` | pixels fill in sequence; `quarterAt` rings one big pixel + dashed lines = 4 small | resolution modes, "a quarter of the pixels", 4K vs 1080p |
+| monitorOutline | display.js | generic unbranded flat monitor (bezel, screen sweep, neck, base, LED), `label` under it; `w` | pops in, light sweep | rival monitor without its image (name as text only) |

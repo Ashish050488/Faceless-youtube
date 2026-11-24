@@ -1,0 +1,120 @@
+{
+ "slug": "sow018-samsung-odyssey-g6-1100hz",
+ "plan": "plan.json",
+ "thumb": {"img": "E", "thumbImg": "J", "bg": "paper", "tilt": -5,
+  "a": {"words": "BUT 720p?", "num": "1,100Hz", "emotion": "q"},
+  "b": {"words": "720p ONLY", "num": "1,100Hz", "emotion": "x"}},
+ "scenes": [
+  {"line": 0, "bg": "paper", "real": true, "layers": [
+   {"type": "poster", "until": "@monitor", "overlap": true},
+   {"type": "product", "img": "J", "x": 540, "y": 830, "w": 780, "seed": 0.4, "push": true, "show": "@monitor"},
+   {"type": "gauge", "x": 540, "y": 1560, "s": 1.1, "value": 1100, "max": 1100, "at": "@hz1", "show": "@monitor"},
+   {"type": "headline", "text": "NEW MONITOR", "at": "@monitor", "until": "@hz1"},
+   {"type": "number", "value": 1100, "unit": "Hz", "x": 540, "y": 400, "px": 150, "at": "@hz1", "col": "ember"}
+  ]},
+  {"line": 0, "from": "wait", "bg": "paper", "real": true, "layers": [
+   {"type": "product", "img": "J", "x": 540, "y": 800, "w": 640, "seed": 0.4},
+   {"type": "questionStamp", "x": 540, "y": 1520, "s": 0.85, "at": 0.1},
+   {"type": "headline", "text": "WAIT, WHAT?", "at": 0.05, "col": "ember"}
+  ]},
+  {"line": 1, "bg": "mint", "real": true, "layers": [
+   {"type": "product", "img": "B", "x": 540, "y": 770, "w": 640, "seed": 0.4},
+   {"type": "ruler", "x": 540, "y": 1185, "w": 520, "n": 27, "at": "@inch", "show": "@inch"},
+   {"type": "label", "text": "27\"", "x": 540, "y": 1370, "px": 96, "at": ["@inch", 0, 0.2]},
+   {"type": "product", "img": "C", "x": 300, "y": 1640, "w": 300, "seed": 0.4, "ltOffset": 1},
+   {"type": "product", "img": "I", "x": 780, "y": 1640, "w": 130, "seed": 0.4, "ltOffset": 2},
+   {"type": "headline", "text": "ODYSSEY G6", "at": "@meet", "until": "@inch"},
+   {"type": "headline", "text": "27 INCH", "at": "@inch", "col": "ember"}
+  ]},
+  {"line": 2, "bg": "sky", "real": true, "layers": [
+   {"type": "product", "img": "C", "x": 540, "y": 800, "w": 620, "seed": 0.4, "push": true},
+   {"type": "frameStrip", "x": 540, "y": 1560, "w": 900, "hz": 1100, "label": "0.91 ms", "at": "@hz2"},
+   {"type": "headline", "text": "GET THIS", "at": 0.05, "until": "@hz2"},
+   {"type": "headline", "text": "1,100Hz", "at": "@hz2", "col": "ember"}
+  ]},
+  {"line": 2, "from": "each", "xfade": true, "bg": "sky", "real": true, "layers": [
+   {"type": "clip", "name": "L", "x": 540, "y": 820, "w": 900, "at": 0, "hide": 2.0},
+   {"type": "product", "img": "C", "x": 540, "y": 820, "w": 560, "seed": 0.4, "show": 2.0},
+   {"type": "frameStrip", "x": 540, "y": 1560, "w": 900, "hz": 1100, "label": "0.91 ms", "at": -1},
+   {"type": "headline", "text": "EACH FRAME", "at": 0.05, "until": "@under"},
+   {"type": "headline", "text": "UNDER 1 ms", "at": "@under", "col": "ember"}
+  ]},
+  {"line": 2, "from": "want", "bg": "mint", "real": true, "layers": [
+   {"type": "product", "img": "F", "x": 540, "y": 800, "w": 760, "seed": 0.4, "hide": "@switch"},
+   {"type": "clip", "name": "K", "x": 540, "y": 800, "w": 920, "at": "@switch", "show": "@switch", "hide": ["@switch", 0, 3.0]},
+   {"type": "product", "img": "F", "x": 540, "y": 800, "w": 760, "seed": 0.4, "show": ["@switch", 0, 3.0]},
+   {"type": "label", "text": "HD 1,100Hz", "x": 240, "y": 1480, "px": 56, "col": "ink", "at": 0.3},
+   {"type": "toggle", "x": 540, "y": 1462, "flipAt": "@six"},
+   {"type": "label", "text": "QHD 600Hz", "x": 830, "y": 1480, "px": 56, "col": "ink", "at": "@six"},
+   {"type": "label", "text": "2560×1440", "x": 540, "y": 1680, "px": 64, "col": "ink", "at": ["@six", 0, 0.3]},
+   {"type": "headline", "text": "WANT SHARPER?", "at": 0.05, "until": "@switch"},
+   {"type": "headline", "text": "SWITCH TO QHD", "at": "@switch", "until": "@six"},
+   {"type": "headline", "text": "STILL 600Hz", "at": "@six", "col": "ember"}
+  ]},
+  {"line": 3, "bg": "blush", "real": true, "shake": ["@catch", 0, -0.2], "layers": [
+   {"type": "product", "img": "A", "x": 540, "y": 1290, "w": 420, "seed": 0.4, "ltOffset": 5, "fade": {"at": 0, "to": 0.45}},
+   {"type": "stamp", "text": "THE CATCH", "y": 700, "px": 110, "at": ["@catch", 0, -0.2], "sfx": false}
+  ]},
+  {"line": 3, "from": "eleven", "xfade": true, "bg": "blush", "real": true, "layers": [
+   {"type": "product", "img": "A", "x": 540, "y": 760, "w": 660, "seed": 0.4},
+   {"type": "label", "text": "1280×720", "x": 540, "y": 1210, "px": 80, "col": "ember", "at": "@p720"},
+   {"type": "pill", "text": "QHD", "x": 480, "y": 1480, "w": 260, "h": 100, "at": 0.3},
+   {"type": "crossMark", "x": 680, "y": 1480, "s": 0.4, "at": "@p720", "overlap": true},
+   {"type": "headline", "text": "1,100Hz ONLY…", "at": 0.05, "until": "@p720"},
+   {"type": "headline", "text": "AT 720p", "at": "@p720", "col": "wreck"}
+  ]},
+  {"line": 3, "from": "that's", "bg": "blush", "real": false, "layers": [
+   {"type": "pixelGrid", "x": 540, "y": 900, "size": 360, "gap": 110, "at": 0.05, "quarterAt": "@quarter", "labels": ["QHD 3,686,400", "720p 921,600"]},
+   {"type": "headline", "text": "A QUARTER", "at": "@quarter", "col": "wreck"},
+   {"type": "headline", "text": "THE PIXELS", "at": 0.05, "until": "@quarter"}
+  ]},
+  {"line": 3, "from": "and", "xfade": true, "bg": "paper", "real": true, "layers": [
+   {"type": "product", "img": "B", "x": 290, "y": 820, "w": 420, "seed": 0.4},
+   {"type": "monitorOutline", "x": 790, "y": 740, "w": 380, "label": "LG 25G590B", "at": "@lg"},
+   {"type": "pill", "text": "1,000Hz", "x": 540, "y": 1450, "w": 440, "h": 100, "at": ["@lg", 0, 0.4]},
+   {"type": "pill", "text": "1,100Hz O/C", "x": 540, "y": 1600, "w": 560, "h": 100, "at": "@oc"},
+   {"type": "headline", "text": "AND LG?", "at": 0.05, "until": "@oc"},
+   {"type": "headline", "text": "LG: 1,100 O/C", "at": "@oc", "col": "ember"}
+  ]},
+  {"line": 3, "from": "price", "xfade": true, "bg": "blush", "real": true, "layers": [
+   {"type": "product", "img": "J", "x": 540, "y": 760, "w": 620, "seed": 0.4},
+   {"type": "priceTag", "x": 400, "y": 1180, "text": "$???", "at": 0.1},
+   {"type": "questionStamp", "x": 780, "y": 1560, "s": 0.55, "at": "said"},
+   {"type": "headline", "text": "NO PRICE", "at": 0.05, "col": "wreck"}
+  ]},
+  {"line": 4, "bg": "paper", "real": true, "layers": [
+   {"type": "scoreTable", "x": 540, "y": 520, "w": 940, "total": "42/100", "totalAt": "@score", "rows": [
+    {"label": "PRICE", "score": 12.5, "max": 25, "at": 0.2},
+    {"label": "CLAIM", "score": 6, "max": 20, "at": 0.35},
+    {"label": "NEW", "score": 8, "max": 15, "at": 0.5},
+    {"label": "LASTS", "score": 7.5, "max": 15, "at": 0.65},
+    {"label": "CATCH", "score": 8, "max": 15, "at": 0.8},
+    {"label": "BUY", "score": 0, "max": 10, "at": 0.95}]},
+   {"type": "product", "img": "J", "x": 540, "y": 1560, "w": 440, "seed": 0.4},
+   {"type": "headline", "text": "OUR SCORE", "at": 0.05, "until": "@score"},
+   {"type": "headline", "text": "42/100", "at": "@score", "col": "ember"}
+  ]},
+  {"line": 4, "from": "it's", "xfade": true, "bg": "paper", "real": true, "layers": [
+   {"type": "wordmark", "y": 560, "score": 42, "scoreAt": 0.1, "snapAt": ["@verdict", 0, -0.05], "px": 125},
+   {"type": "product", "img": "J", "x": 540, "y": 1420, "w": 480, "seed": 0.4},
+   {"type": "headline", "text": "WRECK", "at": "@verdict", "until": "for", "col": "wreck", "y": 260},
+   {"type": "headline", "text": "FOR NOW", "at": "for", "y": 260}
+  ]},
+  {"line": 4, "from": "wait", "xfade": true, "bg": "lav", "real": true, "layers": [
+   {"type": "product", "img": "J", "x": 540, "y": 800, "w": 620, "seed": 0.4},
+   {"type": "hourglass", "x": 300, "y": 1500, "at": 0.05, "flipAt": 0.6},
+   {"type": "pill", "text": "PRO FPS", "x": 720, "y": 1520, "w": 380, "h": 100, "at": "@unless"},
+   {"type": "headline", "text": "WAIT FOR PRICE", "at": 0.05, "until": "@unless"},
+   {"type": "headline", "text": "UNLESS PRO", "at": "@unless", "col": "ember"}
+  ]},
+  {"line": 5, "bg": "paper", "real": true, "layers": [
+   {"type": "product", "img": "J", "x": 540, "y": 830, "w": 780, "seed": 0.4},
+   {"type": "scale", "x": 540, "y": 1560, "s": 0.9, "at": 0.1, "levelAt": "speed", "weight": ""},
+   {"type": "headline", "text": "BE HONEST", "at": 0.05, "until": "@loop"},
+   {"type": "headline", "text": "SHARP OR FAST?", "at": "@loop", "col": "ember"}
+  ]},
+  {"endcard": true, "bg": "paper", "layers": [
+   {"type": "wordmark", "y": 900, "score": 42, "snapAt": 0.7}
+  ]}
+ ]
+}

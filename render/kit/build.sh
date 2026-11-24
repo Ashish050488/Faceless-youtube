@@ -7,7 +7,8 @@
 #   render/kit/build.sh video <slug> <work>   # frames + bed + mix + export + cover + thumbnail + captions + sha256 + QA
 set -euo pipefail
 STEP=$1; SLUG=$2; W=$(realpath -m "$3"); R=$(cd "$(dirname "$0")/../.." && pwd); SD=$R/scripts/$SLUG; CUES=$SD/cues.kit.json
-PY=${PY:-python3}; ENC="-crf 19 -maxrate 8M -bufsize 16M"; SHAFILES="video.mp4 thumbnail.jpg cover.jpg captions.srt"
+# SOW_ENC overrides the encoder flags, e.g. "-crf 19 -maxrate 3M -bufsize 6M" when detailed art busts the 20 MB cap (sow018).
+PY=${PY:-python3}; ENC=${SOW_ENC:-"-crf 19 -maxrate 8M -bufsize 16M"}; SHAFILES="video.mp4 thumbnail.jpg cover.jpg captions.srt"
 # SOW_FMT=long: 1920×1080 long video (PRODUCTION_SPEC §6: CRF 23, maxrate 6 Mbps), thumbnail only (no cover / Reel)
 [ "${SOW_FMT:-}" = long ] && { ENC="-crf 23 -maxrate 6M -bufsize 12M"; SHAFILES="video.mp4 thumbnail.jpg captions.srt"; }
 mkdir -p "$W/assets" "$W/out"; cd "$R"
