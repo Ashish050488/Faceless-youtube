@@ -618,5 +618,32 @@
    "slot_time": "13:43",
    "caption_length": "medium"
   }
+ },
+ {
+  "date": "2026-11-24",
+  "slot": "10:17 IST",
+  "type": "carousel",
+  "category": "gaming",
+  "topic": "GTA 6: $3.79B by end of day one, 32.5M copies pre-release (Take-Two); catch: includes pre-orders",
+  "status": "published 2026-11-24",
+  "postId": "ba770e66-7be7-4567-b12e-b9fca4c51306",
+  "permalink": "https://www.instagram.com/p/DgHIscrjUHF/",
+  "slides": 6,
+  "sources": [
+   "https://www.gamespot.com/articles/gta-6-hit-32-5-million-copies-sold-and-almost-4-billion-on-day-one/",
+   "https://www.videogamer.com/news/gta-6-breaks-entertainment-record-day-one-sales/",
+   "https://maketecheasier.com/gta-6-day-one-sales-record/"
+  ],
+  "images": "Rockstar Games official artwork",
+  "test_vars": {
+   "format": "carousel (daily)",
+   "cover_angle": "record number",
+   "topic_type": "gaming money",
+   "slide_count": 6,
+   "meme": true,
+   "slot_time": "10:17",
+   "caption_length": "medium"
+  },
+  "note": "Skipped bigger story (Nvidia reinstates Jensen Huang, 23 Nov) due to 3-day company rule (Nvidia Reel 22 Nov)"
  }
 ]
