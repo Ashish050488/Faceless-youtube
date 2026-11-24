@@ -1,6 +1,7 @@
-"""TEST ONLY (owner 2026-11-23): Chatterbox (Resemble AI, MIT licence) narration to compare with locked Kokoro.
+"""LOCKED VOICE (owner 2026-11-24): Chatterbox (Resemble AI, MIT licence) cloning audio/voices/our_voice_ref.wav,
+exaggeration 0.6, cfg 0.4, seed 11, then sped up x1.09 (ffmpeg atempo) in .github/workflows/voice.yml.
 Same script parsing + sentence gaps as narrate.py. Usage:
-  narrate_chatterbox.py <script.md> <out.wav> [voice_prompt.wav|-] [exaggeration] [cfg_weight]
+  narrate_chatterbox.py <script.md> <out.wav> [voice_prompt.wav|-] [exaggeration] [cfg_weight] [seed]
 voice_prompt '-' = Chatterbox's built-in voice; a wav = copy that voice (we use our own Kokoro output).
 """
 import re, sys, time, numpy as np, soundfile as sf, librosa, torch
@@ -14,7 +15,7 @@ GAP_LO, GAP_HI = 0.30, 0.42
 lines = [l.strip() for l in open(src).read().split("\n")
          if l.strip() and not l.startswith(("#", "[", "v3", "Facts", "Pauses", "~"))]
 sentences = [s for l in lines for s in re.split(r"(?<=[.?!])\s+(?=[A-Z])", l)]
-torch.manual_seed(11)
+torch.manual_seed(int(sys.argv[6]) if len(sys.argv) > 6 else 11)
 model = ChatterboxTTS.from_pretrained(device="cpu")
 SR = model.sr
 rng = np.random.default_rng(11)

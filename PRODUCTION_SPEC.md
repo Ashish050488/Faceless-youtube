@@ -62,12 +62,17 @@ Benchmark for Shorts = Techy or Not (measured: state/competitor_watch/). Long vi
 - THE CATCH (40–60 % in): wreck-red stamp slam, thud, riser before it. Verdict: logo v5 k upright (SPEC) / falls (WRECK).
 - SFX on every visual event; music drop 0.5 s before the verdict.
 
-## 5. Audio — LOCKED (owner 2026-11-17: "sounds perfect, lock the audio")
-- Kokoro af_heart 0.795: `audio/narrate.py <script.md> af_heart 0.795 out.wav 0.30 0.42` (applies config/pronunciations.json).
+## 5. Audio — LOCKED (owner 2026-11-24: "I like it, lock it in")
+- Voice = Chatterbox (Resemble AI, MIT, free) cloning `audio/voices/our_voice_ref.wav` (10 s of our old Kokoro voice, so
+  the channel sounds the same, only more natural): `audio/narrate_chatterbox.py <script.md> raw.wav
+  audio/voices/our_voice_ref.wav 0.6 0.4 11`, then `ffmpeg -af atempo=1.09` (owner: 49 s → 45 s felt right).
+  Runs only on GitHub Actions (voice.yml). Guard: Whisper match < 0.80 → retry seed 23 → fallback Kokoro
+  (`audio/narrate.py <script.md> af_heart 0.795 out.wav 0.30 0.42`); `voice_engine.txt` in the handoff says which.
 - Mix: `audio/mix.sh voice.wav bed.wav out.mp3` (bed −11 dB + sidechain, −14 LUFS, TP −1, keeps full tail).
 - Verify: `audio/measure_timing.py file` → articulation 168–180 wpm, sentence gap 0.60–0.75 s, tail ≥ 2 s, last words present.
 - Script for the ear: short sentences, contractions, one natural reaction per beat, numbers as spoken. **100–130 words per Short (45–60 s)** — owner 2026-11-17, competitor data: fastest-growing faceless channel ≈ 43 s.
-- Only change: add new words to config/pronunciations.json (print phonemes for every brand/term first).
+- Pronunciation: Chatterbox ignores config/pronunciations.json (that is Kokoro-only). If a brand name is hard to say, write it
+  the way it sounds in script.md (e.g. "Ny-kon" only if the plain spelling gets misread) and keep the real spelling in metadata.
 
 ## 6. Export
 - Shorts 1080×1920 (owner 2026-11-17: 720p looked blurry next to the benchmark), frames rendered natively at 1080×1920

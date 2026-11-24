@@ -13,6 +13,10 @@
   oddball humour (Venom "tractor headphones" 846K). Outlier lengths 16–171 s (median ~62 s) → length alone doesn't make hits;
   the topic does. Techy or Not: median 8.5K, his outlier "Why Is This $60 Trackball Mouse Already Sold Out?" 254K.
 
+## 2026-11-24
+- Voice switched to Chatterbox cloning our Kokoro voice (+9 % speed). Cloning copies the reference's flatness: a
+  synthetic reference sounds less natural than Chatterbox's own voice. Chatterbox can skip words → Whisper guard in voice.yml.
+
 ## 2026-11-23
 - Short 2 was lost: its build order went by message to an existing video chat, which refused it (orders from other
   chats are not trusted). Fix: each script job starts a fresh builder with create_session, order in the first prompt;

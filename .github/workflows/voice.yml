@@ -1,7 +1,10 @@
 # Narration on GitHub Actions (owner 2026-11-18: "move just audio for now").
 # Trigger: a push to main that adds/changes scripts/<slug>/script.md, or a manual run with a slug.
 # Output: orphan branch handoff/<slug>-voice with voice.wav, words.json, voice_seconds.txt, timing.txt.
-# Locked settings (PRODUCTION_SPEC §5): Kokoro af_heart 0.795, gaps 0.30/0.42, config/pronunciations.json.
+# Locked voice (owner 2026-11-24, PRODUCTION_SPEC §5): Chatterbox (MIT) cloning audio/voices/our_voice_ref.wav,
+# exaggeration 0.6, cfg 0.4, seed 11, gaps 0.30/0.42, then ffmpeg atempo 1.09 (owner: "a little faster").
+# Missing-word guard: Whisper direct match < 0.80 -> retry with seed 23 -> else fall back to Kokoro af_heart 0.795
+# (voice_engine.txt in the handoff says which engine made it).
 name: voice
 on:
   push:
@@ -16,7 +19,7 @@ concurrency: {group: voice, cancel-in-progress: false}
 jobs:
   voice:
     runs-on: ubuntu-24.04
-    timeout-minutes: 40
+    timeout-minutes: 150
     steps:
       - uses: actions/checkout@v4
         with: {fetch-depth: 2}
@@ -28,13 +31,24 @@ jobs:
           echo "list=$S" >> "$GITHUB_OUTPUT"; echo "slugs: $S"
       - uses: actions/setup-python@v5
         if: steps.slugs.outputs.list != ''
+        with: {python-version: "3.11"}
+      - name: Install Chatterbox in its own venv (CPU)
+        if: steps.slugs.outputs.list != ''
+        timeout-minutes: 25
+        run: |
+          python -m venv /tmp/cb
+          /tmp/cb/bin/pip install --timeout 60 --retries 5 --progress-bar off --disable-pip-version-check \
+            --extra-index-url https://download.pytorch.org/whl/cpu chatterbox-tts librosa soundfile | grep -E "Successfully|ERROR" || true
+          /tmp/cb/bin/pip show chatterbox-tts | grep -i ^version || echo "::warning::Chatterbox install failed; Kokoro fallback will be used"
+      - uses: actions/setup-python@v5
+        if: steps.slugs.outputs.list != ''
         with: {python-version: "3.12", cache: pip, cache-dependency-path: .github/workflows/voice.yml}
       - name: Cache models (Kokoro, spaCy, Whisper)
         if: steps.slugs.outputs.list != ''
         uses: actions/cache@v4
         with:
           path: ~/.cache/huggingface
-          key: models-v1
+          key: models-v2
       # apt on ubuntu-24.04 runners can stall 20+ min retrying azure.archive.ubuntu.com (actions/runner-images#14594)
       # or hang after a mid-download abort (Nov 2026). Bounded timeouts + retries, fallback to archive.ubuntu.com.
       - name: Install system tools (espeak-ng, ffmpeg)
@@ -62,14 +76,28 @@ jobs:
           pip install $P "kokoro==0.9.4" "misaki[en]==0.9.4" "spacy==3.8.18" "faster-whisper==1.2.1" "numpy==2.5.5" soundfile librosa num2words scipy | grep -E "Successfully|ERROR" || true
           python -c "import torch, kokoro, misaki, faster_whisper; print('python stack OK, torch', torch.__version__)"
       - name: Narrate and push
-        timeout-minutes: 15
+        timeout-minutes: 120
         if: steps.slugs.outputs.list != ''
         run: |
           git config user.name "voice-bot"; git config user.email "voice-bot@users.noreply.github.com"
           for SLUG in ${{ steps.slugs.outputs.list }}; do
             O=$RUNNER_TEMP/$SLUG; mkdir -p "$O"
-            python audio/narrate.py "scripts/$SLUG/script.md" af_heart 0.795 "$O/voice.wav" 0.30 0.42 2>&1 | grep -vi warn | tail -2
-            python -m meta.align_words "scripts/$SLUG/script.md" "$O/voice.wav" "$O/words.json" 2>&1 | grep -vi warn | tail -1
+            ENGINE=""
+            for SEED in 11 23; do
+              [ -x /tmp/cb/bin/python ] || break
+              /tmp/cb/bin/python audio/narrate_chatterbox.py "scripts/$SLUG/script.md" "$O/raw.wav" audio/voices/our_voice_ref.wav 0.6 0.4 $SEED 2>&1 | grep -vi warn | tail -1 || continue
+              ffmpeg -v error -y -i "$O/raw.wav" -af "atempo=1.09" "$O/voice.wav" || continue
+              R=$(python -m meta.align_words "scripts/$SLUG/script.md" "$O/voice.wav" "$O/words.json" 2>/dev/null | tail -1 | python -c "import sys,json; print(json.loads(sys.stdin.read())['direct_match_ratio'])" || echo 0)
+              echo "chatterbox seed $SEED: direct_match_ratio $R"
+              if python -c "import sys; sys.exit(0 if float('$R') >= 0.80 else 1)"; then ENGINE="chatterbox seed $SEED x1.09 (match $R)"; break; fi
+            done
+            if [ -z "$ENGINE" ]; then
+              echo "::warning::$SLUG: Chatterbox missing words or failed -> Kokoro fallback"
+              python audio/narrate.py "scripts/$SLUG/script.md" af_heart 0.795 "$O/voice.wav" 0.30 0.42 2>&1 | grep -vi warn | tail -2
+              python -m meta.align_words "scripts/$SLUG/script.md" "$O/voice.wav" "$O/words.json" 2>&1 | grep -vi warn | tail -1
+              ENGINE="kokoro af_heart 0.795 (fallback)"
+            fi
+            rm -f "$O/raw.wav"; echo "$ENGINE" > "$O/voice_engine.txt"; cat "$O/voice_engine.txt"
             ffprobe -v error -show_entries format=duration -of csv=p=0 "$O/voice.wav" > "$O/voice_seconds.txt"
             python audio/measure_timing.py "$O/voice.wav" > "$O/timing.txt" 2>/dev/null || true
             cat "$O/voice_seconds.txt" "$O/timing.txt"

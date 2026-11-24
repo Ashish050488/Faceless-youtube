@@ -5,3 +5,6 @@ spacy==3.8.18
 faster-whisper==1.2.1
 numpy==2.5.5
 # torch 2.15.0+cpu from https://download.pytorch.org/whl/cpu
+
+# 2026-11-24 LOCKED: chatterbox-tts (latest on PyPI at run time, CPU) in venv /tmp/cb, Python 3.11; ref audio/voices/our_voice_ref.wav; exag 0.6 cfg 0.4 seed 11; atempo 1.09
+# Kokoro stack above = fallback + Whisper alignment

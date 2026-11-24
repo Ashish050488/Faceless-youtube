@@ -72,7 +72,7 @@ big files from Drive, so finished videos travel by git:
 
 ## Voice on GitHub Actions (owner 2026-11-18)
 - Every push of scripts/<slug>/script.md to main runs .github/workflows/voice.yml (free on public repos, Python 3.11,
-  cached models) → branch handoff/<slug>-voice. The video session fetches it instead of running Kokoro itself.
+  cached models) → branch handoff/<slug>-voice. The video session fetches it instead of making the voice itself (Chatterbox, ~10 min per Short incl. install; long video ~1 h).
 - After the video is published, delete handoff/<slug>-voice too (owner deletes branches on GitHub).
 
 ## Instagram (owner 2026-11-17)
