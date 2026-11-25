@@ -1,0 +1,125 @@
+[
+ {
+  "cue": "price",
+  "line": 0,
+  "word": "six",
+  "offset": -0.1,
+  "sfx": "tick"
+ },
+ {
+  "cue": "just",
+  "line": 0,
+  "word": "just",
+  "offset": -0.05
+ },
+ {
+  "cue": "meet",
+  "line": 1,
+  "word": "meet",
+  "offset": -0.05
+ },
+ {
+  "cue": "chip",
+  "line": 1,
+  "word": "nvidia",
+  "offset": -0.05,
+  "sfx": "whoosh"
+ },
+ {
+  "cue": "peta",
+  "line": 2,
+  "word": "petaflop",
+  "offset": -0.1
+ },
+ {
+  "cue": "mem",
+  "line": 2,
+  "word": "hundred",
+  "offset": -0.1
+ },
+ {
+  "cue": "cores",
+  "line": 2,
+  "word": "twenty",
+  "offset": -0.05,
+  "nth": 1
+ },
+ {
+  "cue": "vents",
+  "line": 2,
+  "word": "thousand",
+  "offset": -0.1
+ },
+ {
+  "cue": "says",
+  "line": 2,
+  "word": "says",
+  "offset": -0.05
+ },
+ {
+  "cue": "huge",
+  "line": 2,
+  "word": "huge",
+  "offset": -0.05
+ },
+ {
+  "cue": "desk",
+  "line": 2,
+  "word": "desk",
+  "offset": -0.1
+ },
+ {
+  "cue": "catch",
+  "line": 3,
+  "word": "catch",
+  "offset": -0.05
+ },
+ {
+  "cue": "asus",
+  "line": 3,
+  "word": "asus",
+  "offset": -0.05
+ },
+ {
+  "cue": "forty",
+  "line": 3,
+  "word": "forty",
+  "offset": -0.1
+ },
+ {
+  "cue": "half",
+  "line": 3,
+  "word": "half",
+  "offset": -0.05
+ },
+ {
+  "cue": "one",
+  "line": 3,
+  "word": "one",
+  "offset": -0.05
+ },
+ {
+  "cue": "score",
+  "line": 4,
+  "word": "fifty",
+  "offset": -0.1
+ },
+ {
+  "cue": "spec",
+  "line": 4,
+  "word": "spec",
+  "offset": -0.05
+ },
+ {
+  "cue": "grab",
+  "line": 4,
+  "word": "grab",
+  "offset": -0.05
+ },
+ {
+  "cue": "loop",
+  "line": 5,
+  "word": "six",
+  "offset": -0.1
+ }
+]

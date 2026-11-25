@@ -30,6 +30,7 @@ Every object is drawn once, saved here, and reused by every future video. Before
 | `tracker.js` | keychains and item trackers: keyRing, trackerPing, filmSlide, coinCell, trackerDisc, photoStack |
 | `display.js` | refresh rate + resolution: frameStrip, pixelGrid, monitorOutline, phoneOutline |
 | `outdoor.js` | watches, lights, mountains: watchOutline, lightBeam, mountainSunrise |
+| `ai.js` | AI hardware explainers: ventGrid, paramCloud |
 | `ports.js` (add) | usbPort (A/C), audioJack, ethernetPort, hdmiPort |
 
 ## Index (one row per object — keep it updated)
@@ -98,3 +99,5 @@ Every object is drawn once, saved here, and reused by every future video. Before
 | watchOutline | outdoor.js | generic unbranded round watch: case, bezel with 60 ticks, 4 buttons, strap stubs, `screen` text, `label` under it; `size` = case Ø | pops in, light sweep on the screen | rival/older watch without its image (name as text only) |
 | lightBeam | outdoor.js | small LED + warm marigold cone (3 nested cones, alpha < 0.5 so it never counts as an overlap); `angle` rad (0 = right), `len`, `spread`, `level` 1–3 | switches on at `at`; `steps` [times] raise the level; `flickerAt` blinks off once | flashlights, torches, headlights, projectors |
 | mountainSunrise | outdoor.js | flat 3-peak ridge with snow caps, sun behind (ridge base centred at x, y; `w`) | `riseAt` + `dur`: sun rises, peaks go dark → dawn | outdoor/expedition gear, early starts, "before sunrise" |
+| ventGrid | ai.js | dark perforated plate: `cols`×`rows` rounded holes (`size` px square), bevel, `label` under it | pops in; rows light up bottom→top with a marigold glow from `litAt` over `dur`, then a light sweep | vents, airflow, cooling, speaker grilles, perforated cases |
+| paramCloud | ai.js | cluster of `n` nodes + links (radius `r`), every 5th node ember, `label` under it | grows outward from the centre over `dur`; nodes breathe | AI model size, parameters, neural nets |

@@ -37,6 +37,7 @@ keyboard sold separately" (Microsoft footnote only), DGX Spark "nearly $7,000" (
 | 5 | The catch | One configuration only, $1,500 over the same-chip Asus entry model (which has half the memory) = moderate | 8 |
 | 6 | Can people buy it | Orderable in the US on Microsoft.com, shipping November (same scoring as sow007) | 10 |
 | | **Total** | 58 | **58 SPEC** |
+Max points per criterion (VERDICT.md): 25 · 20 · 15 · 15 · 15 · 10 (shown as n/25 … n/10 on the score table).
 Who for: spec if you build/run AI apps at your desk every day; if you only need the chip, the Asus is cheaper (by our score — opinion).
 
 ## Sources (links)

@@ -54,7 +54,7 @@ measure, map, screen. core.js loads them in that order.
                 "shake": 0.32, "sfx": [{"at": t, "kind": "whoosh", "gain": 0.4}], "layers": [ ... ] },
               { "endcard": true, "bg": "paper", "layers": [{"type": "wordmark", "y": 900, "snapAt": 0.7}] } ] }
 ```
-- A scene starts at the first word of script line `line`, or at word `from` inside that line. It ends where the
+- A scene starts at the first word of script line `line`, or at word `from` inside that line (`["word", nth]` skips nth earlier matches). It ends where the
   next scene starts. Scene 0 starts at 0. The end card starts 0.3 s after the last word. The last 0.35 s loops
   back to frame 1.
 - `bg`: paper · cool · lav · blush · sand, or a hex value. Never black.
