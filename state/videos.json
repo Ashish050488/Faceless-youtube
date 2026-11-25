@@ -400,7 +400,7 @@
   "slug": "sow021-microsoft-surface-rtx-spark-dev-box",
   "title": "Microsoft Just Made a $6,000 Box With NVIDIA INSIDE 😳",
   "format": "short",
-  "status": "uploaded",
+  "status": "live",
   "slot": "2",
   "date": "2026-11-25",
   "for_date": "2026-11-25",
@@ -409,8 +409,10 @@
   "verdict": "SPEC 58",
   "hypothesis": "Priority topic (Nvidia/AI hardware + price shock): RTX Spark videos are hot (1.2–1.8M views on recent RTX Spark/DGX Spark videos, 'surface laptop ultra' tag top-3). Tests whether a big-brand price-shock title + 104-word script keeps the Short ≤ 55 s and beats sow007 (same chip, Asus) on views and avg % viewed.",
   "id": "vSlljbBhURU",
-  "privacy": "private",
+  "privacy": "private→public 2026-11-25T13:00:00Z",
   "uploaded_at": "2026-11-25T05:45:55Z",
-  "size_mb": 8.4
+  "size_mb": 8.4,
+  "comment": "posted 2026-11-25T13:08Z",
+  "reel": "requested from Instagram session 2026-11-25T13:08Z"
  }
 ]
