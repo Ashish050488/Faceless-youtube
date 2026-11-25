@@ -1,0 +1,28 @@
+{
+ "id": "sow020-coros-vertix-4",
+ "format": "short",
+ "export": "PRODUCTION_SPEC §6 (1080×1920, ≤ 20 MB)",
+ "rules": "PRODUCTION_SPEC §1/§3/§9; flat LIGHT backgrounds; product cut out; 1–3 words on screen; a detailed 2-D object in every shot; watermark below content; logo end card; audio LOCKED. Length 45–55 s, HARD CAP 58 s. Draw no COROS or Garmin logos (text names only). Never say/show 'first COROS watch with a flashlight' — only 'first VERTIX'.",
+ "numbers_shown": ["1.47\"", "3,500 nits", "14% thinner", "13.8 mm", "30 days", "$799", "+$100", "$699 (2S)", "118 h → 105 h", "2027", "55/100"],
+ "official_clips": "none (COROS page uses frame sequences, no MP4) — stills with motion only",
+ "palette_for_this_video": "paper main; sky for the numbers; marigold for the flashlight beam / nits; blush for THE CATCH; mint for SPEC",
+ "assets": "assets_sources.md (A–H official COROS images)",
+ "new_objects": "watchOutline (generic round unbranded watch: bezel ring, 4 buttons, strap stubs; `label` under it; `screen` text inside), lightBeam (cone of warm light from a point, 3 brightness steps `level` 1–3 with soft falloff; reuse later for torches/headlights/projectors), mountainSunrise (flat 3-peak ridge with sun rising behind, `t` 0–1 = dark→dawn) — add each to render/kit/OBJECTS.md. Reuse: sun (nits), calipers (thickness), battery or calendar (30 days), priceTag, bars, clockRing, calendar, questionStamp, scoreTable, pill, counter.",
+ "scenes": [
+  {"n": 1, "anchor": "Coros just put a flashlight in its expedition watch!", "bg": "paper", "image": "A cut out centred 75% width, slight push-in", "object": "new lightBeam fires from the watch's right edge (level 3, marigold) across the frame; small new mountainSunrise silhouette at the bottom, dark", "text": "FLASHLIGHT WATCH", "sfx": "click + whoosh", "note": "frame 1 = poster A: watch + beam + 'FLASHLIGHT' huge, readable instantly"},
+  {"n": 2, "anchor": "Wait, a real one?", "bg": "paper", "image": "A holds 60%", "object": "questionStamp '?' slams beside the beam; beam flickers off/on once", "text": "A REAL ONE?", "sfx": "record-scratch"},
+  {"n": 3, "anchor": "Yep. Meet the Vertix four.", "bg": "sky", "image": "E cut out (black) 70% centre, A slides in small right (two colours)", "object": "new watchOutline ghost behind E with label 'VERTIX 4'; pill '2 colours'", "text": "VERTIX 4", "sfx": "pop"},
+  {"n": 4, "anchor": "It's the first Vertix with a built-in light.", "bg": "paper", "image": "C (gloved hands, beam on) masked in a rounded card 85% width", "object": "lightBeam steps level 1→2→3 with tick marks '1 2 3'; small pill 'first VERTIX'", "text": "BUILT-IN LIGHT", "sfx": "3 soft clicks"},
+  {"n": 5, "anchor": "Get this. A one-point-four-seven inch screen, at thirty-five hundred nits.", "bg": "sky", "image": "A 55% left", "object": "ruler across the watch face labelled '1.47\"'; sun with rays growing, counter rolls 0→3,500 'nits'", "text": "3,500 NITS", "sfx": "rise"},
+  {"n": 6, "anchor": "It's fourteen percent thinner,", "bg": "paper", "image": "E side-ish 50% right", "object": "calipers close on the case and read '13.8 mm'; pill '−14% vs Vertix 2S'", "text": "14% THINNER", "sfx": "slide"},
+  {"n": 7, "anchor": "with up to thirty days of battery.", "bg": "mint", "image": "D (wrist on mountain) masked card 80% width", "object": "calendar flips 1→30 while battery icon stays full; small footnote pill 'up to · always-on off'", "text": "30 DAYS", "sfx": "page flips"},
+  {"n": 8, "anchor": "Here's the catch. You'd pay eight hundred dollars, a hundred more than the Vertix two S.", "bg": "blush", "image": "A 45% right", "object": "two priceTags: '$699 · Vertix 2S' (grey) and '$799 · Vertix 4' (red) drop in; '+$100' arrow between them", "text": "+$100", "sfx": "cash-register ding"},
+  {"n": 9, "anchor": "GPS drops from one-eighteen to one-oh-five hours.", "bg": "blush", "image": "G macro (crown) 40% top-right", "object": "bars: 'Vertix 2S 118 h' vs 'Vertix 4 105 h' (shrinks), clockRing small; label 'standard GPS'", "text": "118 → 105 H", "sfx": "down-blip"},
+  {"n": 10, "anchor": "Satellite maps? Not until twenty twenty-seven.", "bg": "blush", "image": "A (map on screen) 55% centre", "object": "calendar page lands on '2027' with pill 'satellite maps'; hourglass small", "text": "MAPS: 2027", "sfx": "thud"},
+  {"n": 11, "anchor": "By our score? Fifty-five out of a hundred.", "bg": "paper", "image": "A 40% right", "object": "scoreTable bars fill: price 15/25, claim 12/20, new 8/15, lasts 7/15, catch 8/15, buy 5/10 → TOTAL 55", "text": "55/100", "sfx": "tick-roll"},
+  {"n": 12, "anchor": "It's a spec. Just barely. Grab it if you climb before sunrise.", "bg": "mint", "image": "B (climber, light on) masked card 80%", "object": "k snaps upright (SPEC end-card motion) but wobbles once ('just barely'); mountainSunrise t 0→1 behind; pill '✓ pre-dawn climbers'", "text": "SPEC (BARELY)", "sfx": "snap + small wobble"},
+  {"n": 13, "anchor": "Would you pay eight hundred for a flashlight watch?", "bg": "paper", "image": "A centred 75% exactly as frame 1", "object": "scale tips between '$799' and lightBeam icon; ends on the frame-1 layout (beam on)", "text": "WORTH $799?", "sfx": "riser tail", "note": "match frame 1 (seamless loop)"}
+ ],
+ "thumbnail": "1280×720: A cut out right (75% height) with lightBeam firing left across the frame (marigold); left: '$799' HUGE with small pill 'FLASHLIGHT' under it — complements the title (title says flashlight, thumb shows the price); emotion object: questionStamp '?' beside the price; flat paper background; readable at 168×94. Poster B: '30 DAYS' + calendar + E (black).",
+ "credits": "Product images: COROS (official product page). Not affiliated with or endorsed by COROS or Garmin."
+}
