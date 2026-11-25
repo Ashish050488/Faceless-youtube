@@ -1,4 +1,4 @@
-# sow021 — Microsoft Surface RTX Spark Dev Box — factsheet (checked 25 Nov 2026, 05:40 UTC)
+# sow021 — Microsoft Surface RTX Spark Dev Box — factsheet (checked 25 Nov 2026, 05:25 UTC)
 News: Notebookcheck (25 Nov 2026, 01:03 UTC) reports Microsoft has released the Surface RTX Spark Dev Box, listed on the
 Microsoft Store (US) at $5,999.99, one configuration (128 GB / 2 TB). Preorders opened 7 Oct 2026 with shipping "in
 November" (Engadget, XDA). Brand mix: today's Short 1 was COROS (Chinese) → this one is an international brand (Microsoft + Nvidia).
