@@ -1,0 +1,116 @@
+[
+ {
+  "cue": "flash",
+  "line": 0,
+  "word": "flashlight",
+  "offset": -0.1,
+  "sfx": "whoosh"
+ },
+ {
+  "cue": "real",
+  "line": 0,
+  "word": "real",
+  "offset": -0.05
+ },
+ {
+  "cue": "meet",
+  "line": 1,
+  "word": "meet",
+  "offset": -0.05
+ },
+ {
+  "cue": "built",
+  "line": 1,
+  "word": "built-in",
+  "offset": -0.1
+ },
+ {
+  "cue": "inch",
+  "line": 2,
+  "word": "one-point",
+  "offset": -0.1
+ },
+ {
+  "cue": "nits",
+  "line": 2,
+  "word": "at",
+  "offset": 0.0
+ },
+ {
+  "cue": "thin",
+  "line": 2,
+  "word": "fourteen",
+  "offset": -0.1
+ },
+ {
+  "cue": "days",
+  "line": 2,
+  "word": "thirty",
+  "nth": 1,
+  "offset": -0.1
+ },
+ {
+  "cue": "catch",
+  "line": 3,
+  "word": "catch"
+ },
+ {
+  "cue": "dollars",
+  "line": 3,
+  "word": "eight",
+  "offset": -0.1
+ },
+ {
+  "cue": "more",
+  "line": 3,
+  "word": "hundred",
+  "nth": 1,
+  "offset": -0.15
+ },
+ {
+  "cue": "gps",
+  "line": 3,
+  "word": "gps",
+  "offset": -0.1
+ },
+ {
+  "cue": "drop",
+  "line": 3,
+  "word": "one-oh-five",
+  "offset": -0.1
+ },
+ {
+  "cue": "not",
+  "line": 3,
+  "word": "not",
+  "offset": -0.1
+ },
+ {
+  "cue": "score",
+  "line": 4,
+  "word": "fifty-five"
+ },
+ {
+  "cue": "spec",
+  "line": 4,
+  "word": "spec"
+ },
+ {
+  "cue": "barely",
+  "line": 4,
+  "word": "just",
+  "offset": -0.05
+ },
+ {
+  "cue": "sunrise",
+  "line": 4,
+  "word": "climb",
+  "offset": -0.1
+ },
+ {
+  "cue": "loop",
+  "line": 5,
+  "word": "flashlight",
+  "offset": -0.1
+ }
+]

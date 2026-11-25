@@ -1,0 +1,767 @@
+{
+ "slug": "sow020-coros-vertix-4",
+ "plan": "plan.json",
+ "thumb": {
+  "img": "SIDE",
+  "thumbImg": "M",
+  "bg": "paper",
+  "tilt": -5,
+  "a": {
+   "words": "WORTH IT?",
+   "num": "$799",
+   "emotion": "q"
+  },
+  "b": {
+   "words": "MAPS IN 2027?",
+   "num": "30 days",
+   "emotion": "arrow"
+  }
+ },
+ "scenes": [
+  {
+   "line": 0,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "poster",
+     "until": "@flash",
+     "overlap": true
+    },
+    {
+     "type": "product",
+     "id": "w",
+     "img": "SIDE",
+     "x": 560,
+     "y": 960,
+     "w": 560,
+     "seed": 0.4,
+     "push": true,
+     "show": "@flash"
+    },
+    {
+     "type": "lightBeam",
+     "x": 418,
+     "y": 905,
+     "angle": 3.3,
+     "len": 360,
+     "level": 3,
+     "at": "@flash",
+     "show": "@flash",
+     "overlap": true
+    },
+    {
+     "type": "mountainSunrise",
+     "x": 540,
+     "y": 1810,
+     "w": 720,
+     "at": "@flash",
+     "show": "@flash"
+    },
+    {
+     "type": "headline",
+     "text": "FLASHLIGHT WATCH",
+     "at": "@flash"
+    }
+   ]
+  },
+  {
+   "line": 0,
+   "from": "wait",
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "SIDE",
+     "x": 560,
+     "y": 930,
+     "w": 480,
+     "seed": 0.4
+    },
+    {
+     "type": "lightBeam",
+     "x": 438,
+     "y": 885,
+     "angle": 3.3,
+     "len": 340,
+     "level": 3,
+     "at": 0,
+     "flickerAt": "@real",
+     "overlap": true
+    },
+    {
+     "type": "questionStamp",
+     "x": 540,
+     "y": 1640,
+     "s": 0.8,
+     "at": "@real"
+    },
+    {
+     "type": "headline",
+     "text": "WAIT...",
+     "at": 0.05,
+     "until": "@real"
+    },
+    {
+     "type": "headline",
+     "text": "A REAL ONE?",
+     "at": "@real",
+     "col": "ember"
+    }
+   ],
+   "xfade": true
+  },
+  {
+   "line": 1,
+   "bg": "sky",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "K",
+     "x": 330,
+     "y": 960,
+     "w": 380,
+     "seed": 0.3
+    },
+    {
+     "type": "product",
+     "img": "M",
+     "x": 750,
+     "y": 960,
+     "w": 380,
+     "seed": 0.6,
+     "show": [
+      "@meet",
+      0,
+      0.25
+     ]
+    },
+    {
+     "type": "pill",
+     "text": "EXPEDITION GPS",
+     "x": 540,
+     "y": 1610,
+     "w": 640,
+     "h": 110,
+     "at": [
+      "@meet",
+      0,
+      0.4
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "YEP.",
+     "at": 0.05,
+     "until": "@meet"
+    },
+    {
+     "type": "headline",
+     "text": "VERTIX 4",
+     "at": "@meet",
+     "col": "ember"
+    }
+   ]
+  },
+  {
+   "line": 1,
+   "from": "it's",
+   "xfade": true,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "C",
+     "card": true,
+     "x": 540,
+     "y": 820,
+     "w": 940,
+     "seed": 0.4,
+     "push": true
+    },
+    {
+     "type": "lightBeam",
+     "x": 300,
+     "y": 1500,
+     "angle": 0,
+     "len": 560,
+     "level": 3,
+     "at": "@built"
+    },
+    {
+     "type": "pill",
+     "text": "FIRST VERTIX",
+     "x": 540,
+     "y": 1700,
+     "w": 560,
+     "h": 104,
+     "at": 0.3
+    },
+    {
+     "type": "headline",
+     "text": "THE FIRST VERTIX",
+     "at": 0.05,
+     "until": "@built"
+    },
+    {
+     "type": "headline",
+     "text": "BUILT-IN LIGHT",
+     "at": "@built",
+     "col": "ember"
+    }
+   ]
+  },
+  {
+   "line": 2,
+   "bg": "sky",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "id": "m",
+     "img": "M",
+     "x": 540,
+     "y": 960,
+     "w": 440,
+     "seed": 0.4
+    },
+    {
+     "type": "callout",
+     "of": "m",
+     "u": 0.5,
+     "v": 0.5,
+     "r": 190,
+     "at": "@inch",
+     "col": "mari"
+    },
+    {
+     "type": "sun",
+     "x": 540,
+     "y": 1640,
+     "r": 60,
+     "at": 0.1,
+     "growAt": {
+      "at": "@nits",
+      "from": 0.3,
+      "to": 1
+     }
+    },
+    {
+     "type": "headline",
+     "text": "GET THIS",
+     "at": 0.05,
+     "until": "@inch"
+    },
+    {
+     "type": "number",
+     "value": 1.47,
+     "dec": 2,
+     "unit": "\"",
+     "x": 540,
+     "y": 420,
+     "px": 150,
+     "at": "@inch",
+     "show": "@inch",
+     "until": "@nits",
+     "col": "ember"
+    },
+    {
+     "type": "number",
+     "value": 3500,
+     "unit": " nits",
+     "x": 540,
+     "y": 420,
+     "px": 150,
+     "at": "@nits",
+     "show": "@nits",
+     "col": "ember"
+    }
+   ]
+  },
+  {
+   "line": 2,
+   "from": "it's",
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "SIDE",
+     "x": 540,
+     "y": 1140,
+     "w": 460,
+     "seed": 0.4
+    },
+    {
+     "type": "calipers",
+     "xL": 375,
+     "xR": 560,
+     "y": 790,
+     "at": 0.15
+    },
+    {
+     "type": "label",
+     "text": "13.8 mm",
+     "x": 540,
+     "y": 1650,
+     "px": 64,
+     "at": 0.6
+    },
+    {
+     "type": "headline",
+     "text": "14% THINNER",
+     "at": "@thin",
+     "col": "ember"
+    }
+   ],
+   "xfade": true
+  },
+  {
+   "line": 2,
+   "from": "with",
+   "xfade": true,
+   "bg": "mint",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "D",
+     "card": true,
+     "x": 540,
+     "y": 820,
+     "w": 940,
+     "seed": 0.4,
+     "push": true
+    },
+    {
+     "type": "battery",
+     "x": 540,
+     "y": 1580,
+     "scale": 0.75,
+     "segs": 7,
+     "max": 7,
+     "at": 0.1
+    },
+    {
+     "type": "headline",
+     "text": "UP TO",
+     "at": 0.05,
+     "until": "@days"
+    },
+    {
+     "type": "number",
+     "value": 30,
+     "unit": " days",
+     "x": 540,
+     "y": 420,
+     "px": 150,
+     "at": "@days",
+     "show": "@days",
+     "col": "ember"
+    }
+   ]
+  },
+  {
+   "line": 3,
+   "bg": "blush",
+   "real": true,
+   "shake": [
+    "@catch",
+    0,
+    -0.2
+   ],
+   "layers": [
+    {
+     "type": "product",
+     "img": "M",
+     "x": 540,
+     "y": 1340,
+     "w": 300,
+     "seed": 0.4,
+     "ltOffset": 5,
+     "fade": {
+      "at": 0,
+      "to": 0.45
+     }
+    },
+    {
+     "type": "stamp",
+     "text": "THE CATCH",
+     "y": 680,
+     "px": 110,
+     "at": [
+      "@catch",
+      0,
+      -0.2
+     ],
+     "sfx": false
+    }
+   ]
+  },
+  {
+   "line": 3,
+   "from": "you'd",
+   "xfade": true,
+   "bg": "blush",
+   "real": true,
+   "layers": [
+    {
+     "type": "watchOutline",
+     "x": 290,
+     "y": 860,
+     "size": 300,
+     "label": "VERTIX 2S",
+     "at": 0.1
+    },
+    {
+     "type": "pill",
+     "text": "$699",
+     "x": 290,
+     "y": 1400,
+     "w": 300,
+     "h": 100,
+     "at": [
+      "@more",
+      0,
+      0.1
+     ]
+    },
+    {
+     "type": "product",
+     "img": "M",
+     "x": 790,
+     "y": 860,
+     "w": 300,
+     "seed": 0.4
+    },
+    {
+     "type": "pill",
+     "text": "$799",
+     "x": 790,
+     "y": 1400,
+     "w": 300,
+     "h": 100,
+     "fill": "ember",
+     "col": "paper",
+     "at": "@dollars"
+    },
+    {
+     "type": "headline",
+     "text": "$799",
+     "at": "@dollars",
+     "until": "@more",
+     "col": "ember"
+    },
+    {
+     "type": "headline",
+     "text": "+$100",
+     "at": "@more",
+     "col": "wreck"
+    }
+   ]
+  },
+  {
+   "line": 3,
+   "from": "gps",
+   "bg": "blush",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "K",
+     "x": 540,
+     "y": 690,
+     "w": 230,
+     "seed": 0.4
+    },
+    {
+     "type": "bars",
+     "base": 1640,
+     "h": 480,
+     "items": [
+      {
+       "value": 118,
+       "label": "118 h",
+       "sub": "VERTIX 2S",
+       "col": "stone",
+       "at": 0.15
+      },
+      {
+       "value": 105,
+       "label": "105 h",
+       "sub": "VERTIX 4",
+       "col": "wreck",
+       "at": "@drop"
+      }
+     ]
+    },
+    {
+     "type": "headline",
+     "text": "GPS HOURS",
+     "at": 0.05,
+     "until": "@drop"
+    },
+    {
+     "type": "headline",
+     "text": "118 → 105 H",
+     "at": "@drop",
+     "col": "ember"
+    }
+   ],
+   "xfade": true
+  },
+  {
+   "line": 3,
+   "from": "satellite",
+   "xfade": true,
+   "bg": "blush",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "A",
+     "card": true,
+     "x": 540,
+     "y": 890,
+     "w": 800,
+     "seed": 0.4,
+     "push": true
+    },
+    {
+     "type": "calendar",
+     "x": 540,
+     "y": 1590,
+     "at": "@not",
+     "month": "2027",
+     "year": "SAT MAPS"
+    },
+    {
+     "type": "headline",
+     "text": "SATELLITE MAPS?",
+     "at": 0.05,
+     "until": "@not"
+    },
+    {
+     "type": "headline",
+     "text": "NOT TILL 2027",
+     "at": "@not",
+     "col": "wreck"
+    }
+   ]
+  },
+  {
+   "line": 4,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "scoreTable",
+     "x": 540,
+     "y": 480,
+     "w": 940,
+     "total": "55/100",
+     "totalAt": "@score",
+     "rows": [
+      {
+       "label": "PRICE",
+       "score": 15,
+       "max": 25,
+       "at": 0.2
+      },
+      {
+       "label": "CLAIM",
+       "score": 12,
+       "max": 20,
+       "at": 0.35
+      },
+      {
+       "label": "NEW",
+       "score": 8,
+       "max": 15,
+       "at": 0.5
+      },
+      {
+       "label": "LASTS",
+       "score": 7,
+       "max": 15,
+       "at": 0.65
+      },
+      {
+       "label": "CATCH",
+       "score": 8,
+       "max": 15,
+       "at": 0.8
+      },
+      {
+       "label": "BUY",
+       "score": 5,
+       "max": 10,
+       "at": 0.95
+      }
+     ]
+    },
+    {
+     "type": "product",
+     "img": "S",
+     "x": 540,
+     "y": 1580,
+     "w": 240,
+     "seed": 0.4
+    },
+    {
+     "type": "headline",
+     "text": "OUR SCORE",
+     "at": 0.05,
+     "until": "@score"
+    },
+    {
+     "type": "headline",
+     "text": "55/100",
+     "at": "@score",
+     "col": "ember"
+    }
+   ]
+  },
+  {
+   "line": 4,
+   "from": "it's",
+   "xfade": true,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "wordmark",
+     "y": 560,
+     "score": 55,
+     "scoreAt": 0.1,
+     "snapAt": [
+      "@spec",
+      0,
+      -0.05
+     ],
+     "px": 125
+    },
+    {
+     "type": "product",
+     "img": "M",
+     "x": 540,
+     "y": 1470,
+     "w": 230,
+     "seed": 0.4
+    },
+    {
+     "type": "headline",
+     "text": "SPEC",
+     "at": "@spec",
+     "until": "@barely",
+     "col": "ember",
+     "y": 260
+    },
+    {
+     "type": "headline",
+     "text": "JUST BARELY",
+     "at": "@barely",
+     "col": "ember",
+     "y": 260
+    }
+   ]
+  },
+  {
+   "line": 4,
+   "from": "grab",
+   "bg": "mint",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "B",
+     "card": true,
+     "x": 540,
+     "y": 920,
+     "w": 860,
+     "seed": 0.4,
+     "push": true
+    },
+    {
+     "type": "mountainSunrise",
+     "x": 540,
+     "y": 1800,
+     "w": 640,
+     "at": 0.05,
+     "riseAt": "@sunrise",
+     "dur": 1.2
+    },
+    {
+     "type": "headline",
+     "text": "PRE-DAWN CLIMBS",
+     "at": 0.05,
+     "col": "ember"
+    }
+   ]
+  },
+  {
+   "line": 5,
+   "bg": "paper",
+   "real": true,
+   "layers": [
+    {
+     "type": "product",
+     "img": "SIDE",
+     "x": 560,
+     "y": 940,
+     "w": 520,
+     "seed": 0.4
+    },
+    {
+     "type": "lightBeam",
+     "x": 427,
+     "y": 890,
+     "angle": 3.3,
+     "len": 350,
+     "level": 3,
+     "at": "@loop",
+     "overlap": true
+    },
+    {
+     "type": "pill",
+     "text": "$799",
+     "x": 540,
+     "y": 1640,
+     "w": 320,
+     "h": 110,
+     "fill": "ember",
+     "col": "paper",
+     "at": 0.2
+    },
+    {
+     "type": "headline",
+     "text": "BE HONEST",
+     "at": 0.05,
+     "until": "@loop"
+    },
+    {
+     "type": "headline",
+     "text": "WORTH $799?",
+     "at": "@loop",
+     "col": "ember"
+    }
+   ],
+   "xfade": true
+  },
+  {
+   "endcard": true,
+   "bg": "paper",
+   "layers": [
+    {
+     "type": "wordmark",
+     "y": 900,
+     "score": 55,
+     "snapAt": 0.7
+    }
+   ]
+  }
+ ]
+}

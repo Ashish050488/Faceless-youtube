@@ -29,6 +29,7 @@ Every object is drawn once, saved here, and reused by every future video. Before
 | `media.js` | discs, game cases, downloads: disc, gameCase, dvdStack, downloadBar |
 | `tracker.js` | keychains and item trackers: keyRing, trackerPing, filmSlide, coinCell, trackerDisc, photoStack |
 | `display.js` | refresh rate + resolution: frameStrip, pixelGrid, monitorOutline, phoneOutline |
+| `outdoor.js` | watches, lights, mountains: watchOutline, lightBeam, mountainSunrise |
 | `ports.js` (add) | usbPort (A/C), audioJack, ethernetPort, hdmiPort |
 
 ## Index (one row per object — keep it updated)
@@ -94,3 +95,6 @@ Every object is drawn once, saved here, and reused by every future video. Before
 | pixelGrid | display.js | two same-size grids: 4×4 vs 2×2 pixels with RGB subpixels, `labels` under each; `size`, `gap` | pixels fill in sequence; `quarterAt` rings one big pixel + dashed lines = 4 small | resolution modes, "a quarter of the pixels", 4K vs 1080p |
 | monitorOutline | display.js | generic unbranded flat monitor (bezel, screen sweep, neck, base, LED), `label` under it; `w` | pops in, light sweep | rival monitor without its image (name as text only) |
 | phoneOutline | display.js | generic unbranded slab phone (punch-hole, side buttons, screen sweep), `size` text on screen, `label` under it; `h` | pops in, light sweep | rival/older phone without its image (name as text only), screen-size compare |
+| watchOutline | outdoor.js | generic unbranded round watch: case, bezel with 60 ticks, 4 buttons, strap stubs, `screen` text, `label` under it; `size` = case Ø | pops in, light sweep on the screen | rival/older watch without its image (name as text only) |
+| lightBeam | outdoor.js | small LED + warm marigold cone (3 nested cones, alpha < 0.5 so it never counts as an overlap); `angle` rad (0 = right), `len`, `spread`, `level` 1–3 | switches on at `at`; `steps` [times] raise the level; `flickerAt` blinks off once | flashlights, torches, headlights, projectors |
+| mountainSunrise | outdoor.js | flat 3-peak ridge with snow caps, sun behind (ridge base centred at x, y; `w`) | `riseAt` + `dur`: sun rises, peaks go dark → dawn | outdoor/expedition gear, early starts, "before sunrise" |
