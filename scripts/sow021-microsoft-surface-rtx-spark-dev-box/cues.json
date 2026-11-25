@@ -1,0 +1,166 @@
+{
+ "id": "sow021-microsoft-surface-rtx-spark-dev-box",
+ "format": "short",
+ "export": "PRODUCTION_SPEC §6 (1080×1920, ≤ 20 MB)",
+ "rules": "PRODUCTION_SPEC §1/§3/§9; flat LIGHT backgrounds; product cut out; 1–3 words on screen; a detailed 2-D object in every shot; watermark below content; logo end card; audio LOCKED. Length 45–55 s, HARD CAP 58 s. Draw no Microsoft, Nvidia or Asus logos (text names only; crop the RTX Spark badge out of A). '1,000 vents' always with 'Microsoft says'. Whenever the Asus price is shown, show '64 GB' with it (half the memory).",
+ "numbers_shown": [
+  "$5,999.99",
+  "1 PFLOP (1,000 TFLOPS)",
+  "128 GB",
+  "20 cores",
+  "6,144 CUDA cores",
+  "1,000 vents",
+  "100 W",
+  "120B parameters",
+  "$4,499 (Asus, 64 GB)",
+  "+$1,500",
+  "64 vs 128 GB",
+  "2 TB",
+  "58/100"
+ ],
+ "official_clips": "Microsoft device page MP4s (assets_sources.md): Petaflop slide1 (mobile), AI-Compute slide3 (mobile) — ≤ 3 s each, muted, ≤ 20 % total",
+ "palette_for_this_video": "paper main; sky for the numbers; blush for THE CATCH; mint for SPEC",
+ "assets": "assets_sources.md (A–G official Microsoft images + clips)",
+ "new_objects": "ventGrid (square grid of rounded holes, `lit` rows 0–1 light up with a glow, `count` label; reuse for speaker grilles/vents), paramCloud (cluster of nodes+links that grows with `t`, `label` under it; reuse for AI model size / neural nets) — add each to render/kit/OBJECTS.md. Reuse: priceTag, questionStamp, miniPc, chipDie, gauge, counter, ramStick, coreGrid, gpuCard, thermometer, monitorOutline, scale, pill, crossMark, scoreTable.",
+ "scenes": [
+  {
+   "n": 1,
+   "anchor": "Microsoft wants six thousand dollars… for a box.",
+   "bg": "paper",
+   "image": "A cut out (badge cropped) centred 80% width, slow push-in",
+   "object": "priceTag swings in above the box, value rolls 0→'$5,999.99'",
+   "text": "$6,000 BOX",
+   "sfx": "cash-register ding",
+   "note": "frame 1 = poster A: box + '$6,000' huge, readable instantly"
+  },
+  {
+   "n": 2,
+   "anchor": "Wait, just a box?",
+   "bg": "paper",
+   "image": "A holds 65%",
+   "object": "questionStamp '?' slams beside the box; new ventGrid lines flicker on its top surface",
+   "text": "JUST A BOX?",
+   "sfx": "record-scratch"
+  },
+  {
+   "n": 3,
+   "anchor": "Meet the Surface RTX Spark Dev Box,",
+   "bg": "sky",
+   "image": "D (on a desk under a monitor) masked rounded card 85% width",
+   "object": "miniPc ghost outline traces the box edge; label 'Surface RTX Spark Dev Box'",
+   "text": "DEV BOX",
+   "sfx": "pop"
+  },
+  {
+   "n": 4,
+   "anchor": "with Nvidia's RTX Spark chip.",
+   "bg": "paper",
+   "image": "F (hand holding chip) small insert ≤ 40% width top-right; A small bottom-left",
+   "object": "chipDie zooms from the box into centre, label 'RTX Spark N1X'",
+   "text": "RTX SPARK",
+   "sfx": "whoosh"
+  },
+  {
+   "n": 5,
+   "anchor": "Get this. Up to one petaflop of AI compute.",
+   "bg": "sky",
+   "image": "official clip MSFT-A-Petaflop-MOBILE-slide1 (≤ 3 s, muted) then A 50% right",
+   "object": "gauge needle sweeps to max; counter '1,000 TFLOPS' = '1 PFLOP'; pill 'up to · FP4'",
+   "text": "1 PETAFLOP",
+   "sfx": "rise"
+  },
+  {
+   "n": 6,
+   "anchor": "A hundred twenty-eight gigs of memory.",
+   "bg": "paper",
+   "image": "A 45% left",
+   "object": "ramStick ×4 slide in and stack, label '128 GB unified'",
+   "text": "128 GB",
+   "sfx": "4 clicks"
+  },
+  {
+   "n": 7,
+   "anchor": "Twenty CPU cores.",
+   "bg": "paper",
+   "image": "E (ports side) 50% bottom",
+   "object": "coreGrid lights 20 squares one by one; small gpuCard tag '6,144 CUDA cores'",
+   "text": "20 CORES",
+   "sfx": "tick-run"
+  },
+  {
+   "n": 8,
+   "anchor": "A thousand air vents, says Microsoft.",
+   "bg": "paper",
+   "image": "G (vertical honeycomb grid) full-bleed, slow pan up; then B corner detail",
+   "object": "new ventGrid: holes light up row by row while counter rolls 0→1,000; pill 'Microsoft says'; small thermometer '100 W'",
+   "text": "1,000 VENTS",
+   "sfx": "air whoosh"
+  },
+  {
+   "n": 9,
+   "anchor": "Huge AI models, on your desk!",
+   "bg": "sky",
+   "image": "D lifestyle full width card",
+   "object": "new paramCloud (dots/nodes cluster) grows above the box, label '120B+ parameters'; monitorOutline frame",
+   "text": "120B MODELS",
+   "sfx": "bloom"
+  },
+  {
+   "n": 10,
+   "anchor": "Here's the catch. Asus sells the same chip for forty-five hundred.",
+   "bg": "blush",
+   "image": "A 45% right",
+   "object": "two miniPc outlines on a scale: left 'Asus GR1X $4,499' (text only, no logo), right 'Surface $5,999.99'; scale tips; pill 'same chip'",
+   "text": "$1,500 MORE",
+   "sfx": "thud"
+  },
+  {
+   "n": 11,
+   "anchor": "Sure, with half the memory.",
+   "bg": "blush",
+   "image": "A 40% right",
+   "object": "ramStick pair under Asus = '64 GB' vs four under Surface = '128 GB'",
+   "text": "64 vs 128 GB",
+   "sfx": "pop"
+  },
+  {
+   "n": 12,
+   "anchor": "And Microsoft's box? One version only.",
+   "bg": "blush",
+   "image": "A 55% centre",
+   "object": "pill row '128 GB · 2 TB' with crossMark over greyed alternatives '64 GB' '4 TB'",
+   "text": "ONE VERSION",
+   "sfx": "buzz"
+  },
+  {
+   "n": 13,
+   "anchor": "By our score? Fifty-eight out of a hundred.",
+   "bg": "paper",
+   "image": "A 40% right",
+   "object": "scoreTable bars fill: price 12.5/25, claim 12/20, new 8/15, lasts 7.5/15, catch 8/15, buy 10/10 → TOTAL 58",
+   "text": "58/100",
+   "sfx": "tick-roll"
+  },
+  {
+   "n": 14,
+   "anchor": "It's a spec. Grab it if you build AI apps all day.",
+   "bg": "mint",
+   "image": "D masked card 80%",
+   "object": "k snaps upright (SPEC end-card motion); pill '✓ AI builders'",
+   "text": "SPEC",
+   "sfx": "snap"
+  },
+  {
+   "n": 15,
+   "anchor": "Would you pay six grand for a box?",
+   "bg": "paper",
+   "image": "A centred 80% exactly as frame 1",
+   "object": "priceTag '$5,999.99' swings back in; questionStamp; ends on the frame-1 layout",
+   "text": "WORTH $6,000?",
+   "sfx": "riser tail",
+   "note": "match frame 1 (seamless loop)"
+  }
+ ],
+ "thumbnail": "1280×720: A cut out right (75% height, badge cropped); left: 'WORTH $6K?' HUGE (title says the price + Nvidia, thumb asks the question); emotion object: questionStamp '?' beside the price; small pill 'NVIDIA INSIDE'; flat paper background; readable at 168×94. Poster B: '1,000 VENTS' + ventGrid + C (honeycomb).",
+ "credits": "Product images: Microsoft (official product page). Not affiliated with or endorsed by Microsoft, Nvidia or Asus."
+}

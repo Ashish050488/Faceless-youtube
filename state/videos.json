@@ -22,7 +22,7 @@
   "size_mb": 5.1,
   "publish_at": null,
   "url": "https://youtube.com/shorts/yNzzZfLxt30",
-  "qa": "script-session QA pass 2026-11-17: centred 0.493, flat bg, 97.5% real product, counters roll 0.33 s/hold \u22651.26 s, 5.1 MB 720p; video-session self-score 26/30",
+  "qa": "script-session QA pass 2026-11-17: centred 0.493, flat bg, 97.5% real product, counters roll 0.33 s/hold ≥1.26 s, 5.1 MB 720p; video-session self-score 26/30",
   "published_at": "2026-11-17T07:1xZ (owner asked to publish immediately)",
   "comment_id": "UgwDguG_LI7MbLBZC594AaABAg",
   "instagram": {
@@ -60,7 +60,7 @@
  },
  {
   "slug": "sow005-apple-homeview-teardown",
-  "title": "Apple Made a $299 HomeView iFixit Could BARELY Open \ud83d\ude2c",
+  "title": "Apple Made a $299 HomeView iFixit Could BARELY Open 😬",
   "format": "short",
   "status": "live",
   "slot": "2",
@@ -80,7 +80,7 @@
  {
   "id": "UTvRnFY_jks",
   "slug": "sow006-iphone-duo-999-screen",
-  "title": "Apple Wants $999 for a NEW iPhone Duo Screen \ud83d\ude33",
+  "title": "Apple Wants $999 for a NEW iPhone Duo Screen 😳",
   "format": "short",
   "status": "live",
   "slot": "1",
@@ -99,7 +99,7 @@
  },
  {
   "slug": "sow007-asus-proart-gr1x",
-  "title": "Asus Put NVIDIA's RTX Spark in a $4,499 Box This TINY \ud83d\ude33",
+  "title": "Asus Put NVIDIA's RTX Spark in a $4,499 Box This TINY 😳",
   "format": "short",
   "status": "live",
   "slot": "1",
@@ -121,7 +121,7 @@
  },
  {
   "slug": "sow008-razer-carbon-fiber-mice",
-  "title": "Razer Wants $90 MORE to Save 2 Grams \ud83d\ude33",
+  "title": "Razer Wants $90 MORE to Save 2 Grams 😳",
   "format": "short",
   "status": "live",
   "slot": "2",
@@ -142,7 +142,7 @@
  },
  {
   "slug": "sow009-gta-6-launch",
-  "title": "GTA 6 Is OUT: $80, 212 GB and NO Disc \ud83d\ude33",
+  "title": "GTA 6 Is OUT: $80, 212 GB and NO Disc 😳",
   "format": "short",
   "status": "live",
   "slot": "extra",
@@ -164,7 +164,7 @@
  },
  {
   "slug": "sow010-valve-steam-machine-out-of-stock",
-  "title": "Valve Just Ran OUT of Its $1,349 Steam Machine \ud83d\ude33",
+  "title": "Valve Just Ran OUT of Its $1,349 Steam Machine 😳",
   "format": "short",
   "status": "scheduled",
   "slot": "1",
@@ -174,7 +174,7 @@
   "verdict": "WRECK 47",
   "hypothesis": "Scarcity/'ran out' title on a big gaming-hardware brand; tests 'out of stock' vs price-shock framing.",
   "id": "5LGZJk7EOck",
-  "privacy": "private\u2192public 2026-11-20T07:30:00Z",
+  "privacy": "private→public 2026-11-20T07:30:00Z",
   "uploaded_at": "2026-11-20T00:53Z",
   "size_mb": 4.5,
   "duration_s": 60.4,
@@ -183,7 +183,7 @@
  },
  {
   "slug": "sow011-honor-watch-6-pro",
-  "title": "Honor Just Made a 5,500-Nit Watch\u2026 With NO ECG \ud83d\ude33",
+  "title": "Honor Just Made a 5,500-Nit Watch… With NO ECG 😳",
   "format": "short",
   "status": "live",
   "slot": "2",
@@ -206,7 +206,7 @@
  },
  {
   "slug": "sow012-google-assistant-nest-gemini",
-  "title": "Google Just Set an END Date for Assistant on Nest \ud83d\ude33",
+  "title": "Google Just Set an END Date for Assistant on Nest 😳",
   "format": "short",
   "status": "scheduled",
   "slot": "1",
@@ -216,7 +216,7 @@
   "verdict": "SPEC 60",
   "hypothesis": "'END date' / loss-aversion framing on a device millions already own (Nest speakers) vs new-product launches; tests whether owner-impact news beats price-shock titles.",
   "id": "sSWTIJhSTXM",
-  "privacy": "private\u2192public 2026-11-21T07:30:00Z",
+  "privacy": "private→public 2026-11-21T07:30:00Z",
   "uploaded_at": "2026-11-21T00:40Z",
   "size_mb": 18.4,
   "duration_s": 66.6,
@@ -225,7 +225,7 @@
  },
  {
   "slug": "sow013-casio-lf-40w",
-  "title": "Casio's $43 Watch Costs 70% MORE in the US \ud83d\ude33",
+  "title": "Casio's $43 Watch Costs 70% MORE in the US 😳",
   "format": "short",
   "status": "live",
   "slot": "1",
@@ -248,7 +248,7 @@
  },
  {
   "slug": "sow014-nvidia-rubin-hpc",
-  "title": "NVIDIA Just Put 50,000 Cores in ONE GPU \ud83e\udd2f",
+  "title": "NVIDIA Just Put 50,000 Cores in ONE GPU 🤯",
   "format": "short",
   "status": "live",
   "slot": "2",
@@ -258,7 +258,7 @@
   "verdict": "SPEC 55",
   "hypothesis": "Top-priority brand (NVIDIA, most-searched this week) + one huge number ('50,000 cores') vs Short 1's cheap Casio watch; tests whether a not-buyable data-centre GPU still pulls gamers via the RTX 5090 comparison.",
   "id": "-DvxWCtWjTw",
-  "privacy": "private\u2192public 2026-11-22T13:00:00Z",
+  "privacy": "private→public 2026-11-22T13:00:00Z",
   "uploaded_at": "2026-11-22T05:47:49Z",
   "size_mb": 11.3,
   "url": "https://youtube.com/shorts/-DvxWCtWjTw",
@@ -268,7 +268,7 @@
  },
  {
   "slug": "sow015-apple-macbook-pro-proled",
-  "title": "Apple Made Its FIRST Touchscreen Mac. Worth $2,899? \ud83e\udd14",
+  "title": "Apple Made Its FIRST Touchscreen Mac. Worth $2,899? 🤔",
   "brand": "Apple",
   "format": "long",
   "status": "live",
@@ -291,7 +291,7 @@
  },
  {
   "slug": "sow016-lenovo-ideapad-slim-5-ultra",
-  "title": "Lenovo's \"30-Hour\" Laptop Has ONLY 8GB RAM \ud83d\ude2c",
+  "title": "Lenovo's \"30-Hour\" Laptop Has ONLY 8GB RAM 😬",
   "format": "short",
   "status": "live",
   "slot": "1",
@@ -299,7 +299,7 @@
   "scripted_at": "2026-11-23T00:25Z",
   "publish_at": "2026-11-23T07:30:00Z",
   "verdict": "WRECK 51",
-  "hypothesis": "First Short under the \u2264105-word / \u226455 s cap (analytics 2026-11-22): tests whether a shorter Short lifts avg % viewed above ~44 %. Also: 'big claim vs fine-print catch' on a mainstream laptop brand.",
+  "hypothesis": "First Short under the ≤105-word / ≤55 s cap (analytics 2026-11-22): tests whether a shorter Short lifts avg % viewed above ~44 %. Also: 'big claim vs fine-print catch' on a mainstream laptop brand.",
   "id": "P-lI6dJUx68",
   "privacy": "public",
   "uploaded_at": "2026-11-23T00:36:00Z",
@@ -315,7 +315,7 @@
  },
  {
   "slug": "sow017-kodak-slidetag",
-  "title": "Kodak Just Made a Photo Keychain That's a TRACKER \ud83e\udd2f",
+  "title": "Kodak Just Made a Photo Keychain That's a TRACKER 🤯",
   "format": "short",
   "status": "live",
   "slot": "2",
@@ -323,7 +323,7 @@
   "scripted_at": "2026-11-23T05:35Z",
   "publish_at": "2026-11-24T05:00:00Z",
   "verdict": "SPEC 68",
-  "hypothesis": "Second Short under the \u2264105-word / \u226455 s cap; rides the Kodak Charmera keychain trend (693K-view Short in 4 weeks) with a cheap, fun impulse-buy product \u2014 tests whether a low-price lifestyle gadget beats spec-heavy laptops on avg % viewed.",
+  "hypothesis": "Second Short under the ≤105-word / ≤55 s cap; rides the Kodak Charmera keychain trend (693K-view Short in 4 weeks) with a cheap, fun impulse-buy product — tests whether a low-price lifestyle gadget beats spec-heavy laptops on avg % viewed.",
   "id": "6mRvSikAR7M",
   "privacy": "public",
   "uploaded_at": "2026-11-23T15:01:50Z",
@@ -334,7 +334,7 @@
  },
  {
   "slug": "sow018-samsung-odyssey-g6-1100hz",
-  "title": "Samsung Just Made a 1,100Hz Monitor\u2026 at 720p?! \ud83d\ude2c",
+  "title": "Samsung Just Made a 1,100Hz Monitor… at 720p?! 😬",
   "format": "short",
   "status": "live",
   "slot": "1",
@@ -355,7 +355,7 @@
  {
   "id": "CLJz7lvXSuU",
   "slug": "sow019-motorola-edge-70-neo",
-  "title": "Motorola Just Made the Neo HUGE\u2026 So Why Pay More? \ud83d\ude2c",
+  "title": "Motorola Just Made the Neo HUGE… So Why Pay More? 😬",
   "format": "short",
   "status": "live",
   "slot": "2",
@@ -377,7 +377,7 @@
  },
  {
   "slug": "sow020-coros-vertix-4",
-  "title": "COROS Just Put a FLASHLIGHT in a $799 Watch \ud83d\udd26",
+  "title": "COROS Just Put a FLASHLIGHT in a $799 Watch 🔦",
   "format": "short",
   "status": "uploaded",
   "slot": "1",
@@ -386,10 +386,23 @@
   "scripted_at": "2026-11-25T00:26Z",
   "publish_at": "2026-11-25T07:30:00Z",
   "verdict": "SPEC 55",
-  "hypothesis": "Outdoor/GPS-watch topic (hot: Fenix 9 launch videos 0.2\u20131.27M, 'Garmin vs Coros' 391K) with a single visual hook (flashlight) and a clear price catch; tests whether a wearable topic + 105-word script keeps the Short \u2264 55 s and lifts avg % viewed vs sow018/sow019.",
+  "hypothesis": "Outdoor/GPS-watch topic (hot: Fenix 9 launch videos 0.2–1.27M, 'Garmin vs Coros' 391K) with a single visual hook (flashlight) and a clear price catch; tests whether a wearable topic + 105-word script keeps the Short ≤ 55 s and lifts avg % viewed vs sow018/sow019.",
   "id": "ZMOgRSxODpE",
   "privacy": "private",
   "uploaded_at": "2026-11-25T00:59:24Z",
   "size_mb": 9.0
+ },
+ {
+  "slug": "sow021-microsoft-surface-rtx-spark-dev-box",
+  "title": "Microsoft Just Made a $6,000 Box With NVIDIA INSIDE 😳",
+  "format": "short",
+  "status": "scripted",
+  "slot": "2",
+  "date": "2026-11-25",
+  "for_date": "2026-11-25",
+  "scripted_at": "2026-11-25T05:45Z",
+  "publish_at": "2026-11-25T13:00:00Z",
+  "verdict": "SPEC 58",
+  "hypothesis": "Priority topic (Nvidia/AI hardware + price shock): RTX Spark videos are hot (1.2–1.8M views on recent RTX Spark/DGX Spark videos, 'surface laptop ultra' tag top-3). Tests whether a big-brand price-shock title + 104-word script keeps the Short ≤ 55 s and beats sow007 (same chip, Asus) on views and avg % viewed."
  }
 ]
