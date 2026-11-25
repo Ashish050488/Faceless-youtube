@@ -742,5 +742,31 @@
   "youtube": "https://youtube.com/shorts/ZMOgRSxODpE",
   "permalink": "https://www.instagram.com/reel/DgKAz75TdgJ/",
   "mediaId": "18140364541725198"
+ },
+ {
+  "date": "2026-11-25",
+  "slot": "13:43 IST",
+  "type": "single",
+  "category": "policy & regulation",
+  "topic": "Trump: 'tremendous tax' on US companies building data centers abroad (20 Nov); no rate/law yet",
+  "status": "published 2026-11-25",
+  "postId": "eb162fdc-2104-44b9-be58-29ee35d62925",
+  "permalink": "https://www.instagram.com/p/DgKFIu6Fi-z/",
+  "slides": 1,
+  "sources": [
+   "https://www.cnbc.com/2026/11/20/trump-data-centers-ai-companies-tax.html",
+   "https://thehill.com/homenews/administration/6233765-trump-threatens-data-center-tax-overseas/",
+   "https://www.newsweek.com/trump-tax-us-data-centers-overseas-12748825"
+  ],
+  "images": "Official presidential portrait (public domain, Wikimedia Commons)",
+  "test_vars": {
+   "format": "single",
+   "cover_angle": "quote + face",
+   "topic_type": "policy",
+   "slide_count": 1,
+   "meme": false,
+   "slot_time": "13:43",
+   "caption_length": "medium"
+  }
  }
 ]
