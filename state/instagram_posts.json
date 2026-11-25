@@ -705,5 +705,31 @@
   "youtube": "https://youtube.com/shorts/CLJz7lvXSuU",
   "permalink": "https://www.instagram.com/reel/DgIB-XeCobr/",
   "mediaId": "18194358139421268"
+ },
+ {
+  "date": "2026-11-25",
+  "slot": "10:17 IST",
+  "type": "carousel",
+  "category": "people & companies (CEO drama)",
+  "topic": "Nvidia board reinstates Jensen Huang as CEO (23 Nov), days after saying it wouldn't; probe still ongoing",
+  "status": "published 2026-11-25",
+  "postId": "389ceabf-093d-4a0b-b92a-509c5895dfa8",
+  "permalink": "https://www.instagram.com/p/DgJtaF2jdIf/",
+  "slides": 6,
+  "sources": [
+   "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm",
+   "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html",
+   "https://www.abc.net.au/news/2026-11-24/nvidia-ceo-jensen-huang-reinstated/107419102"
+  ],
+  "images": "NVIDIA newsroom",
+  "test_vars": {
+   "format": "carousel (daily)",
+   "cover_angle": "drama reversal + face",
+   "topic_type": "people+money",
+   "slide_count": 6,
+   "meme": true,
+   "slot_time": "10:17",
+   "caption_length": "medium"
+  }
  }
 ]
