@@ -1,4 +1,4 @@
-# sow023 — Fossil × Marvel Avengers: Doomsday watches — factsheet (checked 26 Nov 2026, ~05:40 UTC)
+# sow023 — Fossil × Marvel Avengers: Doomsday watches — factsheet (checked 26 Nov 2026, ~05:20 UTC)
 News: wider launch today, 26 Nov 2026, via Fossil's website and selected stores (Notebookcheck, 25 Nov 23:06 CET ≈ 22:06 UTC,
 ~7 h before scripting). Japan sale started 18 Nov. Trend: Avengers: Doomsday final trailer 54.9M views in 3 days (YouTube API);
 film in theaters 18 Dec (India 17 Dec).
