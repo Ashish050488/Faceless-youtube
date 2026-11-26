@@ -1,0 +1,154 @@
+{
+ "id": "sow022-motorola-signature-27",
+ "format": "short",
+ "export": "PRODUCTION_SPEC §6 (1080×1920, ≤ 20 MB)",
+ "rules": "PRODUCTION_SPEC §1/§3/§9; flat LIGHT backgrounds; product cut out; 1–3 words on screen; a detailed 2-D object in every shot; watermark below content; logo end card; audio LOCKED. Length 45–55 s, HARD CAP 58 s. Draw no Motorola/Snapdragon/B&O logos (text names only). '12,000 nits' always with pill 'Motorola says · peak'. EU prices always with the country names and '12/512 GB, same phone'.",
+ "numbers_shown": [
+  "$1,599.99",
+  "7,000 mAh",
+  "200 MP",
+  "3x optical",
+  "12,000 nits",
+  "7 years",
+  "€1,899 (DE)",
+  "€1,399 (IT)",
+  "€500 gap (36%)",
+  "58/100"
+ ],
+ "official_clips": "optional: motorola.com PDP camera_01 HLS (assets_sources.md) ≤ 3 s muted; else stills only",
+ "palette_for_this_video": "paper main; sky for the numbers; blush for THE CATCH; mint for SPEC",
+ "assets": "assets_sources.md (A–K official Motorola images)",
+ "new_objects": "euroMap (simplified 2-country silhouettes DE/IT side by side with price flags that drop in; reuse for any regional price gap) — add to render/kit/OBJECTS.md if missing. Reuse: priceTag, questionStamp, phoneOutline, battery, counter, lensStack/zoom ring, sunGauge or gauge, calendar, scale, pill, crossMark, scoreTable.",
+ "scenes": [
+  {
+   "n": 1,
+   "anchor": "Motorola wants sixteen hundred dollars… for a phone.",
+   "bg": "paper",
+   "image": "A cut out centred 80% width, slow push-in",
+   "object": "priceTag swings in, value rolls 0→'$1,599.99'",
+   "text": "$1,600 PHONE",
+   "sfx": "cash-register ding",
+   "note": "frame 1 = poster A: phone + '$1,600' huge"
+  },
+  {
+   "n": 2,
+   "anchor": "Wait, Motorola?",
+   "bg": "paper",
+   "image": "A holds 65%",
+   "object": "questionStamp '?' slams beside the phone",
+   "text": "MOTOROLA?",
+   "sfx": "record-scratch"
+  },
+  {
+   "n": 3,
+   "anchor": "Meet the Signature 27.",
+   "bg": "sky",
+   "image": "B (front 3/4) masked rounded card 85% width",
+   "object": "phoneOutline traces the edge; label 'Signature 27 · 12/512 GB'",
+   "text": "SIGNATURE 27",
+   "sfx": "pop"
+  },
+  {
+   "n": 4,
+   "anchor": "You can buy it in the US today.",
+   "bg": "paper",
+   "image": "C (hands) 70% card",
+   "object": "calendar page flips to 'NOV 26'; pill 'US · unlocked'",
+   "text": "ON SALE TODAY",
+   "sfx": "whoosh"
+  },
+  {
+   "n": 5,
+   "anchor": "Get this. A seven thousand milliamp-hour battery.",
+   "bg": "sky",
+   "image": "J small bottom-left 40%",
+   "object": "battery fills 0→100% while counter rolls 0→'7,000 mAh'; pill '+35% vs last gen'",
+   "text": "7,000 mAh",
+   "sfx": "rise"
+  },
+  {
+   "n": 6,
+   "anchor": "A two-hundred-megapixel zoom camera.",
+   "bg": "paper",
+   "image": "D (exploded lens) 75% then E zoom frames 01→04 as a 1.5 s zoom-in card",
+   "object": "lensStack rings slide apart; counter '200 MP'; pill '3x optical'",
+   "text": "200 MP ZOOM",
+   "sfx": "shutter"
+  },
+  {
+   "n": 7,
+   "anchor": "Twelve thousand nits of peak brightness, says Motorola.",
+   "bg": "sky",
+   "image": "F (screens) full-width card",
+   "object": "gauge/sun dial sweeps to max, counter '12,000 nits'; pill 'Motorola says · peak'",
+   "text": "12,000 NITS",
+   "sfx": "bloom"
+  },
+  {
+   "n": 8,
+   "anchor": "And seven years of Android updates!",
+   "bg": "paper",
+   "image": "B 45% right",
+   "object": "calendar stack flips 2026→2033 (7 pages), counter '7 years'",
+   "text": "7 YEARS",
+   "sfx": "tick-run"
+  },
+  {
+   "n": 9,
+   "anchor": "Here's the catch. In Germany, it's eighteen ninety-nine euros.",
+   "bg": "blush",
+   "image": "A 40% right",
+   "object": "new euroMap: Germany silhouette with priceTag '€1,899' (text 'Germany')",
+   "text": "€1,899",
+   "sfx": "thud"
+  },
+  {
+   "n": 10,
+   "anchor": "In Italy? Thirteen ninety-nine.",
+   "bg": "blush",
+   "image": "A 40% right",
+   "object": "euroMap: Italy silhouette drops in with priceTag '€1,399'",
+   "text": "€1,399",
+   "sfx": "pop"
+  },
+  {
+   "n": 11,
+   "anchor": "Same phone, five hundred euros apart.",
+   "bg": "blush",
+   "image": "two copies of A side by side 35% each",
+   "object": "scale tips toward Germany; pill '12/512 GB · same phone'; counter '€500 (36%)'",
+   "text": "€500 GAP",
+   "sfx": "buzz"
+  },
+  {
+   "n": 12,
+   "anchor": "By our score? Fifty-eight out of a hundred.",
+   "bg": "paper",
+   "image": "A 40% right",
+   "object": "scoreTable bars fill: price 12.5/25, claim 12/20, new 8/15, lasts 7.5/15, catch 8/15, buy 10/10 → TOTAL 58",
+   "text": "58/100",
+   "sfx": "tick-roll"
+  },
+  {
+   "n": 13,
+   "anchor": "It's a spec. Grab it if battery life matters most to you.",
+   "bg": "mint",
+   "image": "G (water jets) masked card 80%",
+   "object": "k snaps upright (SPEC end-card motion); battery icon full; pill '✓ battery first'",
+   "text": "SPEC",
+   "sfx": "snap"
+  },
+  {
+   "n": 14,
+   "anchor": "Would you pay sixteen hundred for a Motorola?",
+   "bg": "paper",
+   "image": "A centred 80% exactly as frame 1",
+   "object": "priceTag '$1,599.99' swings back in; questionStamp; ends on the frame-1 layout",
+   "text": "WORTH $1,600?",
+   "sfx": "riser tail",
+   "note": "match frame 1 (seamless loop)"
+  }
+ ],
+ "thumbnail": "1280×720: A cut out right (75% height); left: 'WORTH IT?' HUGE (title says the $1,600, thumb asks the question) + small pill '€500 GAP'; emotion object: questionStamp '?'; flat paper background; readable at 168×94. Poster B: '7,000 mAh' HUGE + battery object + J (black).",
+ "credits": "Product images: Motorola (official product page). Not affiliated with or endorsed by Motorola, Lenovo or Qualcomm."
+}
