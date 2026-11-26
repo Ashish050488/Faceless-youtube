@@ -833,5 +833,21 @@
    "hook": "big number",
    "images": "logo only, text slides"
   }
+ },
+ {
+  "date": "2026-11-26",
+  "slot": null,
+  "type": "reel_crosspost",
+  "category": "phones",
+  "topic": "Motorola Signature 27 $1,599.99, 7,000 mAh, €1,899 DE vs €1,399 IT (YouTube Short JHKZhK-UlvM)",
+  "status": "published",
+  "mediaId": "18198173701399151",
+  "permalink": "https://www.instagram.com/reel/DgMlel2Bty2/",
+  "sources": [
+   "Motorola press release",
+   "9to5Google",
+   "GSMArena",
+   "Notebookcheck"
+  ]
  }
 ]
