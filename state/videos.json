@@ -419,7 +419,7 @@
   "slug": "sow022-motorola-signature-27",
   "title": "Motorola Just Made a $1,600 Phone. Wait, MOTOROLA? 😳",
   "format": "short",
-  "status": "uploaded (scheduled)",
+  "status": "live",
   "slot": "1",
   "date": "2026-11-26",
   "for_date": "2026-11-26",
@@ -433,7 +433,9 @@
   "uploaded_at": "2026-11-26T00:42Z",
   "size_mb": 13.6,
   "seconds": 48.37,
-  "handoff_commit": "941fc43"
+  "handoff_commit": "941fc43",
+  "comment": "posted 2026-11-26T07:36Z",
+  "reel": "requested from Instagram session 2026-11-26T07:37Z"
  },
  {
   "slug": "sow023-fossil-avengers-doomsday-watches",
