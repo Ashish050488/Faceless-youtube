@@ -434,5 +434,17 @@
   "size_mb": 13.6,
   "seconds": 48.37,
   "handoff_commit": "941fc43"
+ },
+ {
+  "slug": "sow023-fossil-avengers-doomsday-watches",
+  "slot": "2",
+  "for_date": "2026-11-26",
+  "scripted_at": "2026-11-26T05:50Z",
+  "status": "scripted",
+  "title": "Fossil Just Made a Watch for Doctor DOOM 😈",
+  "topic": "Fossil × Marvel Avengers: Doomsday watches ($325, wider launch 26 Nov)",
+  "verdict": "SPEC 68",
+  "publish_at": "2026-11-26T13:00:00Z",
+  "format": "short"
  }
 ]

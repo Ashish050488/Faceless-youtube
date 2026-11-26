@@ -1,0 +1,152 @@
+{
+ "id": "sow023-fossil-avengers-doomsday-watches",
+ "format": "short",
+ "export": "PRODUCTION_SPEC §6 (1080×1920, ≤ 20 MB)",
+ "rules": "PRODUCTION_SPEC §1/§3/§9; flat LIGHT backgrounds; product cut out (white-bg Fossil images cut out cleanly); 1–3 words on screen; a detailed 2-D object in every shot; watermark below content; logo end card; audio LOCKED. Length 45–55 s, HARD CAP 58 s. Draw NO Marvel, Avengers, X-Men or Fossil logos/characters (text names only; logos appear only as printed on the official product photos). No movie footage, posters or trailer frames. Gambit spin always with pill 'Fossil says'.",
+ "numbers_shown": [
+  "4 watches",
+  "Nov 26",
+  "44 mm",
+  "46 mm",
+  "$325",
+  "UK £329",
+  "Dec 18",
+  "68/100"
+ ],
+ "official_clips": "none (fossil.com product pages have stills only)",
+ "palette_for_this_video": "paper main; sky for the numbers; blush for THE CATCH; mint for SPEC",
+ "assets": "assets_sources.md (A–J official Fossil images, 3000×3000)",
+ "new_objects": "none required. Reuse: watchOutline, questionStamp, poster, calendar, counter, calipers, ruler, clockRing, priceTag, arrowPointer, scoreTable.",
+ "scenes": [
+  {
+   "n": 1,
+   "anchor": "Fossil just made a watch… for Doctor Doom.",
+   "bg": "paper",
+   "image": "A cut out centred 80% width, slow push-in",
+   "object": "watchOutline traces the case; small pill 'Fossil × Marvel' (text only)",
+   "text": "DOOM'S WATCH",
+   "sfx": "deep boom",
+   "note": "frame 1 = poster A: Doom watch + '$325' huge"
+  },
+  {
+   "n": 2,
+   "anchor": "Wait, the villain?",
+   "bg": "paper",
+   "image": "A holds 65%, slight tilt",
+   "object": "questionStamp '?' slams beside the watch",
+   "text": "THE VILLAIN?",
+   "sfx": "record-scratch"
+  },
+  {
+   "n": 3,
+   "anchor": "Meet the Avengers: Doomsday collection.",
+   "bg": "sky",
+   "image": "A, B, C, D cut out in a 2×2 grid, each pops in",
+   "object": "poster card 'AVENGERS: DOOMSDAY · IN THEATERS DEC 18' (plain text, no Marvel logo drawn)",
+   "text": "4 WATCHES",
+   "sfx": "pop ×4"
+  },
+  {
+   "n": 4,
+   "anchor": "Four limited watches, and you can buy them today.",
+   "bg": "paper",
+   "image": "G (open collector box) 75% card",
+   "object": "calendar page flips to 'NOV 26'; counter 0→4",
+   "text": "ON SALE TODAY",
+   "sfx": "whoosh"
+  },
+  {
+   "n": 5,
+   "anchor": "Get this. Doom, Thor, Gambit, and Mister Fantastic.",
+   "bg": "sky",
+   "image": "A→B→C→D quick cuts, each cut out 70% (0.6 s each)",
+   "object": "nameplate pill per watch: 'DOCTOR DOOM' / 'THOR' / 'GAMBIT' / 'MR. FANTASTIC'",
+   "text": "(names on pills)",
+   "sfx": "tick per cut"
+  },
+  {
+   "n": 6,
+   "anchor": "Forty-four millimetres,",
+   "bg": "sky",
+   "image": "A front 60%",
+   "object": "calipers close on the case, readout rolls to '44 mm'",
+   "text": "44 mm",
+   "sfx": "click"
+  },
+  {
+   "n": 7,
+   "anchor": "and Mister Fantastic's forty-six.",
+   "bg": "sky",
+   "image": "D front 60%, I (side) inset",
+   "object": "calipers widen to '46 mm'; ruler under both cases for scale",
+   "text": "46 mm",
+   "sfx": "click"
+  },
+  {
+   "n": 8,
+   "anchor": "Fossil says a flick of your wrist makes Gambit's dial spin!",
+   "bg": "lavender (or paper if no lavender token)",
+   "image": "C cut out 75%, small wrist-flick rotation (±8°)",
+   "object": "clockRing spins around the dial with motion trail; pill 'Fossil says'",
+   "text": "FLICK = SPIN",
+   "sfx": "card shuffle whoosh"
+  },
+  {
+   "n": 9,
+   "anchor": "Each one's three twenty-five.",
+   "bg": "paper",
+   "image": "A,B,C,D in a row 40% each",
+   "object": "priceTag swings in, rolls 0→'$325'; small pill 'UK £329'",
+   "text": "$325 EACH",
+   "sfx": "cash-register ding"
+  },
+  {
+   "n": 10,
+   "anchor": "Here's the catch. They're numbered, \"limited\"…",
+   "bg": "blush",
+   "image": "E (Doom caseback) 75% card, zoom on the numbering area",
+   "object": "arrowPointer to the caseback numbering; label 'LIMITED EDITION'",
+   "text": "LIMITED…",
+   "sfx": "low hit"
+  },
+  {
+   "n": 11,
+   "anchor": "but Fossil won't say how many.",
+   "bg": "blush",
+   "image": "E holds, desaturated 30%",
+   "object": "counter spins wildly then lands on '???'; questionStamp",
+   "text": "HOW MANY?",
+   "sfx": "buzzer soft"
+  },
+  {
+   "n": 12,
+   "anchor": "By our score? Sixty-eight out of a hundred.",
+   "bg": "paper",
+   "image": "none (graphic only) or A small corner",
+   "object": "scoreTable fills 6 rows (25·10·8·7.5·8·10) → '68/100'",
+   "text": "68/100",
+   "sfx": "tick-tick-ding"
+  },
+  {
+   "n": 13,
+   "anchor": "It's a spec. Grab one if you want Marvel on your wrist before the movie.",
+   "bg": "mint",
+   "image": "A on wrist-angle 80% masked card",
+   "object": "k snaps upright (SPEC end-card motion); calendar 'DEC 18' small; pill '✓ before the movie'",
+   "text": "SPEC",
+   "sfx": "snap"
+  },
+  {
+   "n": 14,
+   "anchor": "Be honest. Which hero would you wear?",
+   "bg": "paper",
+   "image": "A centred 80% exactly as frame 1, B/C/D peek in as small tiles",
+   "object": "questionStamp; ends on the frame-1 layout",
+   "text": "WHICH ONE?",
+   "sfx": "riser tail",
+   "note": "match frame 1 (seamless loop)"
+  }
+ ],
+ "thumbnail": "1280×720: A cut out right (80% height); left: 'VILLAIN WATCH' HUGE (title says Doctor Doom, thumb adds the twist) + small pill '$325'; emotion object: questionStamp '?'; flat paper background; readable at 168×94. Poster B: '$325' HUGE + 4 watches A–D in a row + pill 'LIMITED?'.",
+ "credits": "Product images: Fossil (official product pages). Not affiliated with or endorsed by Fossil, Marvel or Disney."
+}
