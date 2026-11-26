@@ -591,7 +591,12 @@
   "ai_label": true,
   "youtube": "https://youtube.com/shorts/P-lI6dJUx68",
   "permalink": "https://www.instagram.com/reel/DgE3FfEDDZH/",
-  "mediaId": "18609023293070295"
+  "mediaId": "18609023293070295",
+  "stats_2026-11-26": {
+   "plays": 232,
+   "likes": 2,
+   "avg_watched_pct": 16.0
+  }
  },
  {
   "date": "2026-11-23",
@@ -655,7 +660,12 @@
   "ai_label": true,
   "youtube": "https://youtube.com/shorts/S-LxHWtfdVU",
   "permalink": "https://www.instagram.com/reel/DgHb9g6Cf6K/",
-  "mediaId": "18110838953271435"
+  "mediaId": "18110838953271435",
+  "stats_2026-11-26": {
+   "plays": 740,
+   "likes": 20,
+   "avg_watched_pct": 20.4
+  }
  },
  {
   "date": "2026-11-24",
@@ -693,7 +703,12 @@
   "ai_label": true,
   "youtube": "https://youtube.com/shorts/6mRvSikAR7M",
   "permalink": "https://www.instagram.com/reel/DgHgvlTD1PP/",
-  "mediaId": "18426436537152030"
+  "mediaId": "18426436537152030",
+  "stats_2026-11-26": {
+   "plays": 123,
+   "likes": 0,
+   "avg_watched_pct": 12.9
+  }
  },
  {
   "date": "2026-11-24",
@@ -704,7 +719,12 @@
   "ai_label": true,
   "youtube": "https://youtube.com/shorts/CLJz7lvXSuU",
   "permalink": "https://www.instagram.com/reel/DgIB-XeCobr/",
-  "mediaId": "18194358139421268"
+  "mediaId": "18194358139421268",
+  "stats_2026-11-26": {
+   "plays": 117,
+   "likes": 1,
+   "avg_watched_pct": 7.4
+  }
  },
  {
   "date": "2026-11-25",
@@ -741,7 +761,12 @@
   "ai_label": true,
   "youtube": "https://youtube.com/shorts/ZMOgRSxODpE",
   "permalink": "https://www.instagram.com/reel/DgKAz75TdgJ/",
-  "mediaId": "18140364541725198"
+  "mediaId": "18140364541725198",
+  "stats_2026-11-26": {
+   "plays": 253,
+   "likes": 4,
+   "avg_watched_pct": 23.4
+  }
  },
  {
   "date": "2026-11-25",
@@ -778,6 +803,35 @@
   "ai_label": true,
   "youtube": "https://youtube.com/shorts/vSlljbBhURU",
   "permalink": "https://www.instagram.com/reel/DgKmxJ5xcsW/",
-  "mediaId": "18116574065135601"
+  "mediaId": "18116574065135601",
+  "stats_2026-11-26": {
+   "plays": 130,
+   "likes": 2,
+   "avg_watched_pct": 24.3
+  }
+ },
+ {
+  "date": "2026-11-26",
+  "slot": "10:17 IST",
+  "type": "carousel",
+  "category": "shopping & deals",
+  "topic": "Black Friday by the numbers: $12.9B online (+9.2%), peak discounts electronics 30%/toys 29%/TVs-computers-apparel 23%, $807M BNPL, AI traffic +130% (Adobe forecast)",
+  "status": "published",
+  "postId": "0aa7bf4d-b6f1-41e9-a39e-577f449fe7f9",
+  "permalink": "https://www.instagram.com/p/DgMSo0Glt7d/",
+  "sources": [
+   "https://news.adobe.com/news/2026/09/adobe-us-holiday-shopping-season-to-hit-record",
+   "https://www.retailtouchpoints.com/news/adobe-forecasts-record-275.1-billion-in-u.s.-holiday-online-sales/621583/",
+   "https://www.retaildive.com/news/holiday-season-ecommerce-sales-growth-2026/831121/",
+   "https://talkbusiness.net/2026/10/online-holiday-sales-expected-to-top-275-billion-in-2026/"
+  ],
+  "images": [
+   "Adobe logo (Wikimedia Commons)"
+  ],
+  "test_vars": {
+   "slides": 7,
+   "hook": "big number",
+   "images": "logo only, text slides"
+  }
  }
 ]
