@@ -440,12 +440,18 @@
   "slot": "2",
   "for_date": "2026-11-26",
   "scripted_at": "2026-11-26T05:22Z",
-  "status": "scripted",
+  "status": "uploaded (scheduled)",
   "title": "Fossil Just Made a Watch for Doctor DOOM 😈",
   "topic": "Fossil × Marvel Avengers: Doomsday watches ($325, wider launch 26 Nov)",
   "verdict": "SPEC 68",
   "publish_at": "2026-11-26T13:00:00Z",
   "format": "short",
-  "builder_session": "session_01L2u12GHBdbzviNKSfkzdJ8"
+  "builder_session": "session_01L2u12GHBdbzviNKSfkzdJ8",
+  "id": "FErSflIZbvE",
+  "privacy": "private→public 2026-11-26T13:00:00Z",
+  "uploaded_at": "2026-11-26T05:47Z",
+  "size_mb": 17.3,
+  "seconds": 45.3,
+  "handoff_commit": "eb943c5"
  }
 ]
