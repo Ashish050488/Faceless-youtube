@@ -1,0 +1,116 @@
+{
+ "slug": "sow023-fossil-avengers-doomsday-watches",
+ "plan": "plan.json",
+ "thumb": {"img": "A", "bg": "paper", "tilt": -6,
+  "a": {"words": "VILLAIN WATCH", "num": "$325", "emotion": "q"},
+  "b": {"words": "LIMITED?", "num": "$325", "emotion": "arrow"}},
+ "scenes": [
+  {"line": 0, "bg": "paper", "real": true, "layers": [
+   {"type": "poster", "until": "@watch", "overlap": true},
+   {"type": "product", "img": "A", "x": 540, "y": 960, "w": 640, "seed": 0.4, "push": true, "show": "@watch"},
+   {"type": "pill", "text": "FOSSIL × MARVEL", "x": 540, "y": 1720, "w": 620, "h": 100, "at": ["@watch", 0, 0.2]},
+   {"type": "headline", "text": "A NEW WATCH", "at": "@watch", "until": "@doom"},
+   {"type": "headline", "text": "DOOM'S WATCH", "at": "@doom", "col": "ember"}
+  ]},
+  {"line": 0, "from": "wait", "xfade": true, "bg": "paper", "real": true, "layers": [
+   {"type": "product", "img": "A", "x": 540, "y": 900, "w": 560, "seed": 0.5},
+   {"type": "questionStamp", "x": 540, "y": 1640, "s": 0.8, "at": "@wait"},
+   {"type": "headline", "text": "THE VILLAIN?", "at": "@wait", "col": "ember"}
+  ]},
+  {"line": 1, "bg": "sky", "real": true, "layers": [
+   {"type": "product", "img": "A", "x": 167, "y": 900, "w": 215, "seed": 0.2, "show": 0.05},
+   {"type": "product", "img": "B", "x": 416, "y": 900, "w": 215, "seed": 0.4, "show": 0.25},
+   {"type": "product", "img": "C", "x": 664, "y": 900, "w": 215, "seed": 0.6, "show": 0.45},
+   {"type": "product", "img": "D", "x": 913, "y": 900, "w": 215, "seed": 0.8, "show": 0.65},
+   {"type": "calendar", "x": 540, "y": 1480, "month": "18", "year": "DEC 2026", "from": ["26", "NOV 2026"], "at": "doomsday"},
+   {"type": "label", "text": "THE MOVIE", "x": 540, "y": 1700, "px": 56, "col": "ink", "at": ["doomsday", 0, 0.3]},
+   {"type": "headline", "text": "DOOMSDAY SET", "at": "@meet"}
+  ]},
+  {"line": 1, "from": "four", "xfade": true, "bg": "paper", "real": true, "layers": [
+   {"type": "product", "img": "G", "card": true, "x": 540, "y": 780, "w": 880, "seed": 0.4, "push": true},
+   {"type": "calendar", "x": 540, "y": 1430, "month": "26", "year": "NOV 2026", "from": ["25", "NOV 2026"], "at": "@today"},
+   {"type": "headline", "text": "4 WATCHES", "at": 0.05, "until": "@today", "col": "ember"},
+   {"type": "headline", "text": "ON SALE TODAY", "at": "@today"}
+  ]},
+  {"line": 2, "bg": "sky", "real": true, "layers": [
+   {"type": "product", "img": "A", "x": 540, "y": 1000, "w": 560, "seed": 0.4, "show": 0, "hide": "@n_thor"},
+   {"type": "product", "img": "B", "x": 540, "y": 1000, "w": 560, "seed": 0.5, "show": "@n_thor", "hide": "@n_gambit"},
+   {"type": "product", "img": "C", "x": 540, "y": 1000, "w": 560, "seed": 0.6, "show": "@n_gambit", "hide": "@n_mister"},
+   {"type": "product", "img": "D", "x": 540, "y": 1000, "w": 560, "seed": 0.7, "show": "@n_mister"},
+   {"type": "headline", "text": "GET THIS", "at": 0.05, "until": "@n_doom"},
+   {"type": "headline", "text": "DOCTOR DOOM", "at": "@n_doom", "until": "@n_thor"},
+   {"type": "headline", "text": "THOR", "at": "@n_thor", "until": "@n_gambit"},
+   {"type": "headline", "text": "GAMBIT", "at": "@n_gambit", "until": "@n_mister"},
+   {"type": "headline", "text": "MR. FANTASTIC", "at": "@n_mister"}
+  ]},
+  {"line": 2, "from": "forty-four", "xfade": true, "bg": "paper", "real": true, "layers": [
+   {"type": "product", "img": "A", "x": 540, "y": 1020, "w": 600, "seed": 0.4},
+   {"type": "calipers", "xL": 244, "xR": 800, "y": 1012, "at": 0.05, "overlap": true},
+   {"type": "number", "value": 44, "unit": " mm", "x": 540, "y": 330, "px": 150, "at": 0.05, "col": "ember"}
+  ]},
+  {"line": 2, "from": ["mister", 1], "xfade": true, "bg": "sky", "real": true, "layers": [
+   {"type": "product", "img": "D", "x": 540, "y": 1000, "w": 600, "seed": 0.4},
+   {"type": "calipers", "xL": 246, "xR": 830, "y": 993, "at": 0.05, "overlap": true},
+   {"type": "pill", "text": "THE BIGGEST", "x": 540, "y": 1700, "w": 520, "h": 100, "at": ["@mm46", 0, 0.4]},
+   {"type": "number", "value": 46, "unit": " mm", "x": 540, "y": 330, "px": 150, "at": 0.1, "col": "ember"}
+  ]},
+  {"line": 2, "from": "fossil", "bg": "lav", "real": true, "layers": [
+   {"type": "product", "img": "C", "x": 540, "y": 790, "w": 470, "seed": 0.6, "push": true},
+   {"type": "rotorSpin", "x": 540, "y": 1450, "r": 180, "at": 0.1, "spinAt": "@flick"},
+   {"type": "pill", "text": "FOSSIL SAYS", "x": 540, "y": 1760, "w": 500, "h": 96, "at": "@says"},
+   {"type": "headline", "text": "FLICK TO SPIN", "at": 0.05, "y": 260}
+  ]},
+  {"line": 2, "from": "each", "xfade": true, "bg": "paper", "real": true, "layers": [
+   {"type": "product", "img": "A", "x": 167, "y": 780, "w": 215, "seed": 0.2},
+   {"type": "product", "img": "B", "x": 416, "y": 780, "w": 215, "seed": 0.4},
+   {"type": "product", "img": "C", "x": 664, "y": 780, "w": 215, "seed": 0.6},
+   {"type": "product", "img": "D", "x": 913, "y": 780, "w": 215, "seed": 0.8},
+   {"type": "priceTag", "x": 540, "y": 1400, "text": "$325", "at": "@price"},
+   {"type": "label", "text": "UK £329", "x": 540, "y": 1800, "px": 56, "col": "ink", "at": ["@price", 0, 0.5]},
+   {"type": "headline", "text": "$325 EACH", "at": "@price", "col": "ember"}
+  ]},
+  {"line": 3, "bg": "blush", "real": true, "shake": ["@catch", 0, -0.2], "layers": [
+   {"type": "product", "img": "E", "x": 540, "y": 1250, "w": 520, "seed": 0.4, "ltOffset": 5, "fade": {"at": 0, "to": 0.45}},
+   {"type": "stamp", "text": "THE CATCH", "y": 560, "px": 110, "at": ["@catch", 0, -0.2], "sfx": false}
+  ]},
+  {"line": 3, "from": "they're", "xfade": true, "bg": "blush", "real": true, "layers": [
+   {"type": "product", "img": "E", "id": "back", "x": 540, "y": 1000, "w": 600, "seed": 0.4, "push": true},
+   {"type": "callout", "of": "back", "u": 0.5, "v": 0.56, "r": 150, "at": ["@numbered", 0, 0.2]},
+   {"type": "headline", "text": "NUMBERED", "at": "@numbered", "until": "@limited"},
+   {"type": "headline", "text": "\"LIMITED\"", "at": "@limited", "col": "wreck"}
+  ]},
+  {"line": 3, "from": "but", "xfade": true, "bg": "blush", "real": true, "layers": [
+   {"type": "product", "img": "E", "x": 540, "y": 840, "w": 400, "seed": 0.4},
+   {"type": "serialPlate", "x": 540, "y": 1560, "w": 720, "at": 0.05, "scrambleAt": ["@how", 0, -0.2], "dur": 0.9},
+   {"type": "headline", "text": "HOW MANY?", "at": "@how", "col": "wreck"}
+  ]},
+  {"line": 4, "bg": "paper", "real": true, "layers": [
+   {"type": "scoreTable", "x": 540, "y": 480, "w": 940, "total": "68/100", "totalAt": "@score", "rows": [
+    {"label": "PRICE", "score": 25, "max": 25, "at": 0.2},
+    {"label": "CLAIM", "score": 10, "max": 20, "at": 0.35},
+    {"label": "NEW", "score": 8, "max": 15, "at": 0.5},
+    {"label": "LASTS", "score": 7.5, "max": 15, "at": 0.65},
+    {"label": "CATCH", "score": 8, "max": 15, "at": 0.8},
+    {"label": "BUY", "score": 10, "max": 10, "at": 0.95}]},
+   {"type": "product", "img": "A", "x": 540, "y": 1560, "w": 330, "seed": 0.4},
+   {"type": "headline", "text": "OUR SCORE", "at": 0.05, "until": "@score"},
+   {"type": "headline", "text": "68/100", "at": "@score", "col": "ember"}
+  ]},
+  {"line": 4, "from": "it's", "xfade": true, "bg": "mint", "real": true, "layers": [
+   {"type": "wordmark", "y": 560, "score": 68, "scoreAt": 0.1, "snapAt": ["@spec", 0, -0.05], "px": 125},
+   {"type": "calendar", "x": 540, "y": 1110, "month": "18", "year": "DEC 2026", "from": ["26", "NOV 2026"], "at": "@movie"},
+   {"type": "product", "img": "A", "x": 540, "y": 1610, "w": 300, "seed": 0.4},
+   {"type": "headline", "text": "SPEC", "at": "@spec", "until": "@movie", "col": "ember", "y": 260},
+   {"type": "headline", "text": "BEFORE THE MOVIE", "at": "@movie", "y": 260}
+  ]},
+  {"line": 5, "bg": "paper", "real": true, "layers": [
+   {"type": "product", "img": "A", "x": 540, "y": 960, "w": 640, "seed": 0.4},
+   {"type": "questionStamp", "x": 540, "y": 1720, "s": 0.7, "at": ["@loop", 0, 0.3]},
+   {"type": "headline", "text": "BE HONEST", "at": 0.05, "until": "@loop"},
+   {"type": "headline", "text": "WHICH HERO?", "at": "@loop", "col": "ember"}
+  ]},
+  {"endcard": true, "bg": "paper", "layers": [
+   {"type": "wordmark", "y": 900, "score": 68, "snapAt": 0.7}
+  ]}
+ ]
+}

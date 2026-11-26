@@ -29,7 +29,7 @@ Every object is drawn once, saved here, and reused by every future video. Before
 | `media.js` | discs, game cases, downloads: disc, gameCase, dvdStack, downloadBar |
 | `tracker.js` | keychains and item trackers: keyRing, trackerPing, filmSlide, coinCell, trackerDisc, photoStack |
 | `display.js` | refresh rate + resolution: frameStrip, pixelGrid, monitorOutline, phoneOutline |
-| `outdoor.js` | watches, lights, mountains: watchOutline, lightBeam, mountainSunrise |
+| `outdoor.js` | watches, lights, mountains: watchOutline, lightBeam, mountainSunrise, rotorSpin, serialPlate |
 | `ai.js` | AI hardware explainers: ventGrid, paramCloud |
 | `ports.js` (add) | usbPort (A/C), audioJack, ethernetPort, hdmiPort |
 
@@ -102,3 +102,5 @@ Every object is drawn once, saved here, and reused by every future video. Before
 | mountainSunrise | outdoor.js | flat 3-peak ridge with snow caps, sun behind (ridge base centred at x, y; `w`) | `riseAt` + `dur`: sun rises, peaks go dark → dawn | outdoor/expedition gear, early starts, "before sunrise" |
 | ventGrid | ai.js | dark perforated plate: `cols`×`rows` rounded holes (`size` px square), bevel, `label` under it | pops in; rows light up bottom→top with a marigold glow from `litAt` over `dur`, then a light sweep | vents, airflow, cooling, speaker grilles, perforated cases |
 | paramCloud | ai.js | cluster of `n` nodes + links (radius `r`), every 5th node ember, `label` under it | grows outward from the centre over `dur`; nodes breathe | AI model size, parameters, neural nets |
+| rotorSpin | outdoor.js | watch movement from the back: case ring, plate with perlage + jewels, marigold half-moon rotor (`r`), `label` under it | pops in; at `spinAt` a flick arrow draws on and the rotor spins fast then settles, marigold motion trail | automatic movements, "flick to spin", self-winding, rotating dials |
+| serialPlate | outdoor.js | brushed caseback plate with 4 screws, `label` ("LIMITED EDITION"), "No. `num` /" + edition total (`w`) | grey slots until `scrambleAt`, slots spin blank for `dur`, land on `total` ("???" in wreck red) — never shows invented digits | numbered/limited editions, undisclosed counts, serial numbers |

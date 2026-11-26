@@ -2,7 +2,8 @@
 // with x, y, s. watchOutline (generic round unbranded watch: bezel ring with ticks, 4 buttons, strap stubs, `screen`
 // text inside, `label` under it), lightBeam (warm cone of light from a small LED at (0,0), pointing at `angle`,
 // brightness `level` 1–3 with soft falloff; translucent so it never counts as an overlap), mountainSunrise (flat
-// 3-peak ridge with snow caps; sun rises behind it from `riseAt`, peaks go dark → dawn).
+// 3-peak ridge with snow caps; sun rises behind it from `riseAt`, peaks go dark → dawn), rotorSpin (watch movement
+// with half-moon rotor; flick arc + spin from `spinAt`), serialPlate (engraved "No. ___ / ???" plate; total scrambles).
 const L = require('../../lib');
 const { C, clamp, lerp, easeOut, easeInOut, prog, rr, font } = L;
 module.exports = (K) => {
@@ -61,5 +62,44 @@ function mountainSunrise(ctx, lt, t0, { w = 900, riseAt = null, dur = 1.4 } = {}
   ctx.restore();
 }
 
-Object.assign(K, { watchOutline, lightBeam, mountainSunrise });
+function rotorSpin(ctx, lt, t0, { r = 200, spinAt = null, label = '' } = {}) { // watch movement seen from the back: plate, jewels, half-moon rotor; flick arc + spin from `spinAt`
+  const f = K.pop(lt, t0); if (!f) return;
+  const sp = spinAt === null ? 0 : clamp((lt - spinAt) / 0.25), dt = spinAt === null ? 0 : Math.max(0, lt - spinAt);
+  const ang = -0.4 + (spinAt === null ? 0 : 7 * (1 - Math.exp(-dt / 0.9)) * Math.PI * 2 / 7 * 3.2) + Math.sin(lt * 1.3) * 0.04; // fast spin that settles
+  ctx.save(); ctx.globalAlpha = fadeIn(lt, t0); ctx.scale(f, f); ctx.lineJoin = 'round'; ctx.lineCap = 'round';
+  ctx.shadowColor = 'rgba(21,19,18,0.18)'; ctx.shadowBlur = 26; ctx.shadowOffsetY = 10;
+  ctx.beginPath(); ctx.arc(0, 0, r, 0, 2 * Math.PI - 1e-4); ctx.fillStyle = '#CFC8C0'; ctx.fill(); ctx.shadowColor = 'transparent'; ctx.lineWidth = 8; ctx.strokeStyle = C.ink; ctx.stroke(); // case ring
+  ctx.beginPath(); ctx.arc(0, 0, r * 0.84, 0, 2 * Math.PI - 1e-4); ctx.fillStyle = '#E9E4DE'; ctx.fill(); ctx.lineWidth = 5; ctx.stroke(); // movement plate
+  for (let k = 0; k < 6; k++) { const a = k / 6 * 2 * Math.PI + 0.3; ctx.beginPath(); ctx.arc(Math.cos(a) * r * 0.62, Math.sin(a) * r * 0.62, r * 0.045, 0, 2 * Math.PI - 1e-4); ctx.fillStyle = C.wreck; ctx.fill(); ctx.lineWidth = 3; ctx.stroke(); } // jewels
+  for (let k = 0; k < 7; k++) { ctx.beginPath(); ctx.arc(0, 0, r * (0.2 + k * 0.09), 0, 2 * Math.PI - 1e-4); ctx.lineWidth = 2; ctx.strokeStyle = 'rgba(21,19,18,0.12)'; ctx.stroke(); } // perlage rings
+  if (sp > 0) for (let k = 1; k <= 3; k++) { ctx.beginPath(); ctx.arc(0, 0, r * 0.66, ang + Math.PI - k * 0.35, ang + 2 * Math.PI - k * 0.35); ctx.lineWidth = r * 0.28; ctx.strokeStyle = 'rgba(255,178,36,' + (0.32 / k * sp).toFixed(3) + ')'; ctx.stroke(); } // motion trail (alpha < 0.5)
+  ctx.save(); ctx.rotate(ang); ctx.beginPath(); ctx.arc(0, 0, r * 0.8, Math.PI, 2 * Math.PI); ctx.arc(0, 0, r * 0.52, 2 * Math.PI, Math.PI, true); ctx.closePath(); ctx.fillStyle = C.mari; ctx.fill(); ctx.lineWidth = 6; ctx.strokeStyle = C.ink; ctx.stroke(); // rotor weight
+  ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(0, -r * 0.52); ctx.lineWidth = r * 0.12; ctx.stroke(); ctx.restore();
+  ctx.beginPath(); ctx.arc(0, 0, r * 0.1, 0, 2 * Math.PI - 1e-4); ctx.fillStyle = C.ink; ctx.fill(); // hub
+  if (spinAt !== null && lt >= spinAt - 0.3) { const a = easeOut(prog(lt, spinAt - 0.3, spinAt + 0.2)); ctx.beginPath(); ctx.arc(0, 0, r * 1.16, -Math.PI * 0.85, -Math.PI * 0.85 + a * Math.PI * 0.7); ctx.lineWidth = 12; ctx.strokeStyle = C.ink; ctx.stroke(); // flick arc + head
+    if (a > 0.95) { const e = -Math.PI * 0.85 + Math.PI * 0.7, hx = Math.cos(e) * r * 1.16, hy = Math.sin(e) * r * 1.16; ctx.save(); ctx.translate(hx, hy); ctx.rotate(e + Math.PI / 2); ctx.beginPath(); ctx.moveTo(18, 0); ctx.lineTo(-22, -20); ctx.lineTo(-22, 20); ctx.closePath(); ctx.fillStyle = C.ink; ctx.fill(); ctx.restore(); } }
+  ctx.restore();
+  if (label) txt(ctx, label, 0, r * f + 90, 52, C.ink, fadeIn(lt, t0 + 0.1, 0.25));
+}
+
+function serialPlate(ctx, lt, t0, { w = 700, num = '___', total = '???', scrambleAt = null, dur = 1.2, label = 'LIMITED EDITION' } = {}) { // engraved caseback plate "No. ___ / ???"; the total digits scramble from `scrambleAt` and land on `total`
+  const f = K.pop(lt, t0); if (!f) return; const h = w * 0.42;
+  ctx.save(); ctx.globalAlpha = fadeIn(lt, t0); ctx.scale(f, f); ctx.lineJoin = 'round';
+  ctx.shadowColor = 'rgba(21,19,18,0.2)'; ctx.shadowBlur = 26; ctx.shadowOffsetY = 10;
+  rr(ctx, -w / 2, -h / 2, w, h, 34); ctx.fillStyle = '#D9D3CC'; ctx.fill(); ctx.shadowColor = 'transparent'; ctx.lineWidth = 8; ctx.strokeStyle = C.ink; ctx.stroke();
+  for (let k = 0; k < 14; k++) { const y = -h / 2 + 18 + k * (h - 36) / 13; ctx.beginPath(); ctx.moveTo(-w / 2 + 20, y); ctx.lineTo(w / 2 - 20, y); ctx.lineWidth = 2; ctx.strokeStyle = 'rgba(255,255,255,0.35)'; ctx.stroke(); } // brushed metal
+  for (const [sx, sy] of [[-1, -1], [1, -1], [-1, 1], [1, 1]]) { ctx.beginPath(); ctx.arc(sx * (w / 2 - 34), sy * (h / 2 - 34), 11, 0, 2 * Math.PI - 1e-4); ctx.fillStyle = '#8C847C'; ctx.fill(); ctx.lineWidth = 4; ctx.strokeStyle = C.ink; ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(sx * (w / 2 - 34) - 7, sy * (h / 2 - 34)); ctx.lineTo(sx * (w / 2 - 34) + 7, sy * (h / 2 - 34)); ctx.lineWidth = 3; ctx.stroke(); } // screws
+  txt(ctx, label, 0, -h * 0.17, Math.round(h * 0.15), '#5C5650');
+  const done = scrambleAt === null || lt >= scrambleAt + dur, spin = scrambleAt !== null && lt >= scrambleAt && !done; // no invented digits: slots spin as blank blur, then land on `total`
+  font(ctx, Math.round(h * 0.3), 'head'); ctx.textAlign = 'right'; ctx.fillStyle = C.ink; ctx.fillText('No. ' + num + ' /', w * 0.08, h * 0.27);
+  const sx = w * 0.12, cw = h * 0.2;
+  if (scrambleAt !== null && lt < scrambleAt) { for (let i = 0; i < 3; i++) { ctx.fillStyle = '#8C847C'; rr(ctx, sx + i * cw * 1.1, h * 0.05, cw, h * 0.26, 8); ctx.fill(); } }
+  else if (spin) { for (let i = 0; i < 3; i++) { ctx.save(); rr(ctx, sx + i * cw * 1.1, h * 0.0, cw, h * 0.34, 8); ctx.fillStyle = '#B9B2AA'; ctx.fill(); ctx.clip(); const o = ((lt - scrambleAt) * 900 + i * 40) % (h * 0.34);
+      for (let k = -1; k < 3; k++) { ctx.fillStyle = 'rgba(21,19,18,0.45)'; ctx.fillRect(sx + i * cw * 1.1 + 6, o + k * h * 0.17 - 4, cw - 12, 8); } ctx.restore(); } }
+  else { ctx.textAlign = 'left'; ctx.fillStyle = scrambleAt !== null ? C.wreck : C.ink; ctx.fillText(total, sx, h * 0.27); }
+  ctx.restore();
+}
+
+Object.assign(K, { watchOutline, lightBeam, mountainSunrise, rotorSpin, serialPlate });
 };

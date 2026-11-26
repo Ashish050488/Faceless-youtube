@@ -38,6 +38,7 @@ skipped: misaki not installed here; voice.yml uses Chatterbox). "Mister Fantasti
 | 5 | The catch | "Limited" + numbered, but total undisclosed → big claim needs fine print → moderate | 8 |
 | 6 | Can people buy it | On sale US (Fossil US $325), UK (£329), Japan; wider launch today → on sale now | 10 |
 | | **Total** | | **68.5 → 68 SPEC** |
+On screen (VERDICT.md maxima 25/20/15/15/15/10): 25/25 · 10/20 · 8/15 · 7.5/15 · 8/15 · 10/10 · total 68/100.
 Who for: Marvel fans who want one before 18 Dec; watch buyers wanting specs (sapphire, solar) look elsewhere (opinion, by our score).
 
 ## Sources (links)
