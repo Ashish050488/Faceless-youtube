@@ -1,0 +1,104 @@
+{
+ "slug": "sow022-motorola-signature-27",
+ "plan": "plan.json",
+ "thumb": {"img": "G2", "thumbImg": "A", "bg": "paper", "tilt": -5,
+  "a": {"words": "WORTH IT?", "num": "$1,600", "emotion": "q"},
+  "b": {"words": "SAME PHONE?", "num": "€500", "emotion": "arrow"}},
+ "scenes": [
+  {"line": 0, "bg": "paper", "real": true, "layers": [
+   {"type": "poster", "until": "@wants", "overlap": true},
+   {"type": "product", "img": "A", "id": "hero", "x": 540, "y": 860, "w": 900, "seed": 0.4, "push": true, "show": "@wants"},
+   {"type": "priceTag", "x": 540, "y": 1330, "text": "$1,599.99", "at": "@dollars", "show": "@wants"},
+   {"type": "headline", "text": "MOTOROLA WANTS", "at": "@wants", "until": "@sixteen"},
+   {"type": "headline", "text": "$1,600", "at": "@sixteen", "col": "ember"}
+  ]},
+  {"line": 0, "from": "wait", "xfade": true, "bg": "paper", "real": true, "layers": [
+   {"type": "product", "img": "A", "x": 540, "y": 820, "w": 820, "seed": 0.4},
+   {"type": "questionStamp", "x": 540, "y": 1480, "at": "@wait"},
+   {"type": "headline", "text": "MOTOROLA?", "at": "@wait", "col": "ember"}
+  ]},
+  {"line": 1, "bg": "sky", "real": true, "layers": [
+   {"type": "product", "img": "B", "card": true, "x": 540, "y": 820, "w": 940, "seed": 0.4, "push": true},
+   {"type": "phoneOutline", "x": 540, "y": 1560, "h": 380, "size": "6.8\"", "at": ["@meet", 0, 0.3]},
+   {"type": "headline", "text": "SIGNATURE 27", "at": "@meet"}
+  ]},
+  {"line": 1, "from": "you", "xfade": true, "bg": "paper", "real": true, "layers": [
+   {"type": "product", "img": "C", "card": true, "x": 540, "y": 780, "w": 900, "seed": 0.4},
+   {"type": "calendar", "x": 540, "y": 1430, "month": "26", "year": "NOV 2026", "from": ["25", "NOV 2026"], "at": "@today"},
+   {"type": "pill", "text": "US · UNLOCKED", "x": 540, "y": 1720, "w": 620, "h": 104, "at": "@us"},
+   {"type": "headline", "text": "ON SALE TODAY", "at": 0.05, "col": "ember"}
+  ]},
+  {"line": 2, "bg": "sky", "real": true, "layers": [
+   {"type": "product", "img": "J", "x": 540, "y": 820, "w": 560, "seed": 0.4},
+   {"type": "battery", "x": 540, "y": 1470, "scale": 0.85, "segs": 7, "max": 7, "at": "@mah"},
+   {"type": "pill", "text": "+35% VS LAST GEN", "x": 540, "y": 1730, "w": 640, "h": 100, "at": ["@mah", 0, 0.6]},
+   {"type": "headline", "text": "GET THIS", "at": 0.05, "until": "@mah"},
+   {"type": "number", "value": 7000, "unit": " mAh", "x": 540, "y": 330, "px": 150, "at": "@mah", "show": "@mah", "col": "ember"}
+  ]},
+  {"line": 2, "from": ["a", 1], "xfade": true, "bg": "sky", "real": true, "layers": [
+   {"type": "product", "img": "D", "id": "lens", "card": true, "x": 540, "y": 780, "w": 940, "seed": 0.4, "push": true},
+   {"type": "callout", "of": "lens", "u": 0.255, "v": 0.22, "r": 120, "at": ["@mp", 0, 0.2]},
+   {"type": "product", "img": "E4", "card": true, "x": 540, "y": 1520, "w": 620, "seed": 0.6, "show": "@zoom"},
+   {"type": "pill", "text": "3X OPTICAL", "x": 540, "y": 1800, "w": 460, "h": 100, "at": ["@zoom", 0, 0.3]},
+   {"type": "number", "value": 200, "unit": " MP", "x": 540, "y": 330, "px": 150, "at": "@mp", "col": "ember"}
+  ]},
+  {"line": 2, "from": "twelve", "bg": "paper", "real": true, "layers": [
+   {"type": "product", "img": "F", "card": true, "x": 540, "y": 760, "w": 940, "seed": 0.4, "push": true},
+   {"type": "sun", "x": 540, "y": 1380, "r": 70, "at": 0.1, "growAt": {"at": "@nits", "from": 0.35, "to": 1}},
+   {"type": "pill", "text": "MOTOROLA SAYS · PEAK", "x": 540, "y": 1700, "w": 800, "h": 100, "at": "@says"},
+   {"type": "number", "value": 12000, "unit": " nits", "x": 540, "y": 330, "px": 150, "at": "@nits", "col": "ember"}
+  ]},
+  {"line": 2, "from": "and", "xfade": true, "bg": "paper", "real": true, "layers": [
+   {"type": "product", "img": "G2", "x": 300, "y": 960, "w": 330, "seed": 0.4},
+   {"type": "calendar", "x": 760, "y": 900, "month": "+7", "year": "YEARS", "from": ["2026", "NOW"], "at": "@years"},
+   {"type": "label", "text": "OS UPDATES", "x": 760, "y": 1120, "px": 56, "col": "ink", "at": ["@years", 0, 0.3]},
+   {"type": "number", "value": 7, "unit": " YEARS", "x": 540, "y": 330, "px": 150, "at": "@years", "col": "ember"}
+  ]},
+  {"line": 3, "bg": "blush", "real": true, "shake": ["@catch", 0, -0.2], "layers": [
+   {"type": "product", "img": "A", "x": 540, "y": 1300, "w": 560, "seed": 0.4, "ltOffset": 5, "fade": {"at": 0, "to": 0.45}},
+   {"type": "stamp", "text": "THE CATCH", "y": 700, "px": 110, "at": ["@catch", 0, -0.2], "sfx": false}
+  ]},
+  {"line": 3, "from": "in", "xfade": true, "bg": "blush", "real": true, "layers": [
+   {"type": "countryShape", "iso": "DEU", "x": 440, "y": 760, "h": 440, "label": "GERMANY", "price": "€1,899", "priceAt": "@eur1899", "at": 0.05},
+   {"type": "countryShape", "iso": "ITA", "x": 640, "y": 1420, "h": 460, "label": "ITALY", "price": "€1,399", "priceAt": "@eur1399", "side": -1, "at": "@italy"},
+   {"type": "headline", "text": "IN GERMANY", "at": 0.05, "until": "@italy"},
+   {"type": "headline", "text": "IN ITALY", "at": "@italy"}
+  ]},
+  {"line": 3, "from": "same", "bg": "blush", "real": true, "layers": [
+   {"type": "product", "img": "G2", "x": 540, "y": 780, "w": 270, "seed": 0.4},
+   {"type": "pill", "text": "SAME 12/512 GB", "x": 540, "y": 1170, "w": 600, "h": 100, "at": 0.15},
+   {"type": "scale", "x": 540, "y": 1500, "weight": "€", "at": 0.05, "levelAt": 9, "sfx": false},
+   {"type": "label", "text": "36% MORE IN GERMANY", "x": 540, "y": 1800, "px": 56, "col": "ink", "at": ["@apart", 0, 0.2]},
+   {"type": "number", "value": 500, "prefix": "€", "unit": " GAP", "x": 540, "y": 330, "px": 150, "at": "@gap", "col": "wreck"}
+  ]},
+  {"line": 4, "bg": "paper", "real": true, "layers": [
+   {"type": "scoreTable", "x": 540, "y": 480, "w": 940, "total": "58/100", "totalAt": "@score", "rows": [
+    {"label": "PRICE", "score": 12.5, "max": 25, "at": 0.2},
+    {"label": "CLAIM", "score": 12, "max": 20, "at": 0.35},
+    {"label": "NEW", "score": 8, "max": 15, "at": 0.5},
+    {"label": "LASTS", "score": 7.5, "max": 15, "at": 0.65},
+    {"label": "CATCH", "score": 8, "max": 15, "at": 0.8},
+    {"label": "BUY", "score": 10, "max": 10, "at": 0.95}]},
+   {"type": "product", "img": "A", "x": 540, "y": 1600, "w": 420, "seed": 0.4},
+   {"type": "headline", "text": "OUR SCORE", "at": 0.05, "until": "@score"},
+   {"type": "headline", "text": "58/100", "at": "@score", "col": "ember"}
+  ]},
+  {"line": 4, "from": "it's", "xfade": true, "bg": "mint", "real": true, "layers": [
+   {"type": "wordmark", "y": 560, "score": 58, "scoreAt": 0.1, "snapAt": ["@spec", 0, -0.05], "px": 125},
+   {"type": "battery", "x": 540, "y": 1130, "scale": 0.5, "segs": 7, "max": 7, "at": "@battery"},
+   {"type": "product", "img": "G", "card": true, "x": 540, "y": 1620, "w": 760, "seed": 0.4},
+   {"type": "headline", "text": "SPEC", "at": "@spec", "until": "@battery", "col": "ember", "y": 260},
+   {"type": "headline", "text": "BATTERY FIRST", "at": "@battery", "y": 260}
+  ]},
+  {"line": 5, "bg": "paper", "real": true, "layers": [
+   {"type": "product", "img": "A", "x": 540, "y": 860, "w": 900, "seed": 0.4},
+   {"type": "priceTag", "x": 540, "y": 1330, "text": "$1,599.99", "at": "@loop"},
+   {"type": "questionStamp", "x": 860, "y": 1560, "s": 0.7, "at": ["@loop", 0, 0.4]},
+   {"type": "headline", "text": "WOULD YOU PAY", "at": 0.05, "until": "@loop"},
+   {"type": "headline", "text": "$1,600?", "at": "@loop", "col": "ember"}
+  ]},
+  {"endcard": true, "bg": "paper", "layers": [
+   {"type": "wordmark", "y": 900, "score": 58, "snapAt": 0.7}
+  ]}
+ ]
+}

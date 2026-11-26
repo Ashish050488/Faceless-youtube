@@ -19,7 +19,7 @@ Every object is drawn once, saved here, and reused by every future video. Before
 | `health.js` | battery, toggle, ecg (pulse), globe, hourglass, pulseFlame, zoneBar, colourDots |
 | `repair.js` | internals/repair: connector, speaker, cable, usbc, lockScrews |
 | `screen.js` | displays: screenPath, motionLines, screenDim, playIcon, loupe |
-| `map.js` | worldMap (Natural Earth) |
+| `map.js` | worldMap (Natural Earth), countryShape |
 | `product.js` | product cut-out + shadows |
 | `text.js` | label, headline, counter, bigWord, stamp, wordmark, pill |
 | `motion.js` | easing/spring helpers (not objects) |
@@ -55,6 +55,7 @@ Every object is drawn once, saved here, and reused by every future video. Before
 | connector / speaker / cable / usbc / lockScrews | repair.js | internals | enter/pop | teardowns, repair |
 | screenPath / motionLines / screenDim / playIcon / loupe | screen.js | screen parts | — | displays, zoom |
 | worldMap | map.js | real map, country filled, pin | pin drops | launch regions |
+| countryShape | map.js | one country's real Natural Earth 1:50m outline (`iso`, `h` tall, marigold fill, ink edge, light sweep), `label` under it; needs assets/countries.json from `render/tools/make_countries.py <ne50> <out> DEU ITA …` | springs in; flag pole + pennant with `price` drops in at `priceAt` (`side` 1 right / −1 left) | regional price gaps, "in Germany vs Italy", country launches |
 | counter / headline / bigWord / stamp / pill / label / wordmark | text.js | text elements | roll / reveal | numbers, words |
 | chipDie | compute.js | CPU package with pins, die cells | cells fill one by one (`fillAt`); `mode: "gpu"` = dense core field | cores, chips, NPU |
 | ramStick | compute.js | RAM sticks (PCB, chips, gold contacts) | `n` sticks drop in and stack | memory, GB |

@@ -45,10 +45,10 @@ function tref(sc, at, dflt = 0) {
 }
 
 // ---------- assets ----------
-const IMG = {}, CLIPS = {}; let MAP = null;
+const IMG = {}, CLIPS = {}; let MAP = null, COUNTRIES = null;
 async function loadAssets() {
   const d = path.join(work, 'assets');
-  for (const f of fs.readdirSync(d)) { if (/\.(png|jpg)$/.test(f)) IMG[f.replace(/\.\w+$/, '')] = await L.loadImage(path.join(d, f)); if (f.endsWith('.json') && f.startsWith('map')) MAP = JSON.parse(fs.readFileSync(path.join(d, f))); }
+  for (const f of fs.readdirSync(d)) { if (/\.(png|jpg)$/.test(f)) IMG[f.replace(/\.\w+$/, '')] = await L.loadImage(path.join(d, f)); if (f.endsWith('.json') && f.startsWith('map')) MAP = JSON.parse(fs.readFileSync(path.join(d, f))); if (f === 'countries.json') COUNTRIES = JSON.parse(fs.readFileSync(path.join(d, f))); }
   const cd = path.join(work, 'clips'); // official product-page clips: <work>/clips/<name>/NNN.jpg at 30 fps (≤ 3 s, muted; PRODUCTION_SPEC §1)
   if (fs.existsSync(cd)) for (const n of fs.readdirSync(cd)) { CLIPS[n] = []; for (const f of fs.readdirSync(path.join(cd, n)).sort()) if (/\.(jpg|png)$/.test(f)) CLIPS[n].push(await L.loadImage(path.join(cd, n, f))); }
   IMG.wm_light = await L.loadImage(path.join(work, 'wm_light.png')); IMG.wm_dark = await L.loadImage(path.join(work, 'wm_dark.png'));
@@ -65,7 +65,7 @@ const SFX_DEFAULT = { connector: [['at', 'pop', 0.4], ['flipAt', 'thud', 0.8]], 
   chipDie: [['fillAt', 'blip', 0.45]], ramStick: [['at', 'clunk', 0.5]], fan: [['at', 'whoosh', 0.35]], gauge: [['at', 'tick', 0.5]], usbPort: [['at', 'pop', 0.4], ['crossAt', 'scratch', 0.6]], audioJack: [['at', 'pop', 0.4], ['crossAt', 'scratch', 0.6]],
   ruler: [['at', 'swish', 0.4]], reviewCard: [['at', 'pop', 0.35], ['tickAt', 'tick', 0.6]], thermometer: [['at', 'blip', 0.35]], miniPc: [['at', 'pop', 0.4]], slash: [['at', 'swish', 0.6]],
   consoleTower: [['at', 'pop', 0.4]], ssd: [['at', 'swish', 0.45]], coreGrid: [['fillAt', 'zip', 0.5]], gpuCard: [['at', 'pop', 0.4]], crossMark: [['at', 'thud', 0.7]], keyRing: [['at', 'swing', 0.5]], trackerPing: [['at', 'pin', 0.5]], filmSlide: [['at', 'pop', 0.4], ['beamAt', 'click', 0.6]], coinCell: [['at+0.25', 'click', 0.6], ['swapAt', 'clunk', 0.6]], trackerDisc: [['at', 'pop', 0.4]], photoStack: [['at', 'zip', 0.5]], speechBubble: [['at', 'pop', 0.45]], appTile: [['at', 'pop', 0.4]], questionStamp: [['at', 'thud', 0.7]], arrowPointer: [['at', 'swish', 0.5]], poster: [], disc: [['at', 'pop', 0.35]], gameCase: [['at', 'thud', 0.5], ['openAt', 'click', 0.7]], dvdStack: [['at', 'zip', 0.5]], downloadBar: [['fillAt', 'zip', 0.5]] };
-Object.assign(SFX_DEFAULT, { ventGrid: [['at', 'pop', 0.4], ['litAt', 'whoosh', 0.4]], paramCloud: [['at', 'shimmer', 0.4]] });
+Object.assign(SFX_DEFAULT, { countryShape: [['at', 'pop', 0.45], ['priceAt', 'pin', 0.6]], ventGrid: [['at', 'pop', 0.4], ['litAt', 'whoosh', 0.4]], paramCloud: [['at', 'shimmer', 0.4]] });
 Object.assign(SFX_DEFAULT, { miniLedStack: [['at', 'whoosh', 0.35], ['litAt', 'shimmer', 0.35]], oledStack: [['at', 'whoosh', 0.35], ['layer2At', 'clunk', 0.6], ['crackAt', 'thud', 0.8]], starScreen: [['at', 'pop', 0.35], ['bloomAt', 'shimmer', 0.35], ['offAt', 'switch', 0.5]], fingerTap: [['at+0.3', 'tick', 0.5]], chapterCard: [['at', 'whoosh', 0.5]], scoreTable: [['rows', 'blip', 0.4]], frameStrip: [['at', 'zip', 0.45]], pixelGrid: [['at', 'blip', 0.4], ['quarterAt', 'pop', 0.5]], monitorOutline: [['at', 'pop', 0.4]], phoneOutline: [['at', 'pop', 0.4]], watchOutline: [['at', 'pop', 0.4]], lightBeam: [['at', 'click', 0.6]], mountainSunrise: [['at', 'whoosh', 0.3], ['riseAt', 'shimmer', 0.4]] });
 const DRAWERS = {
   product(ctx, l, lt, sc, R) {
@@ -102,6 +102,7 @@ const DRAWERS = {
   dialScale(ctx, l, lt, sc, R) { const top = l.under ? R[l.under].y0 + R[l.under].h + (l.gap ?? 8) : l.top; K.dialScale(ctx, l.x ?? CX, top, l.w || 720, lt, tref(sc, l.at, 0), l.value, { kg: l.kg || 1000 }); },
   sun(ctx, l, lt, sc) { const t0 = tref(sc, l.at, 0.05); let g = l.grow ?? 1; if (l.growAt) { const ta = tref(sc, l.growAt.at); g = lt < ta ? (l.growAt.from ?? 0.3) : lerp(l.growAt.from ?? 0.3, l.growAt.to ?? 1, easeOut(prog(lt, ta, ta + 0.35))); } K.sun(ctx, l.x, l.y, l.r || 44, lt, t0, g); },
   map(ctx, l, lt, sc) { if (!MAP) throw new Error('map layer needs assets/map*.json (kit/make_map.py)'); K.worldMap(ctx, l.x ?? CX, l.y ?? 770, l.w || 900, lt, tref(sc, l.at, 0), (l.pins || []).map(p => tref(sc, p))); },
+  countryShape(ctx, l, lt, sc) { sc_(ctx, l, () => K.countryShape(ctx, lt, tref(sc, l.at, 0.05), { iso: l.iso, h: l.h || 520, fill: l.fill ? col(l.fill) : C.mari, label: l.label || '', price: l.price || '', priceAt: l.priceAt !== undefined ? tref(sc, l.priceAt) : null, side: l.side || 1 })); },
   bars(ctx, l, lt, sc) { K.bars(ctx, l.x ?? CX, l.base, lt, l.items.map(b => ({ ...b, col: col(b.col || 'mari'), t0: tref(sc, b.at, 0.1) })), l.h || 520); },
   stamp(ctx, l, lt, sc) { const t0 = tref(sc, l.at, 0.1); K.stamp(ctx, l.text, l.x ?? CX, l.y ?? 600, prog(lt, t0, t0 + 0.22), col(l.col || 'wreck'), l.px || 112); if (l.flash !== false && !CHECK && lt >= t0 + 0.22 && lt < t0 + 0.22 + FR) { ctx.fillStyle = 'rgba(255,255,255,0.6)'; ctx.fillRect(0, 0, W, H); } },
   clock(ctx, l, lt, sc) { K.clockRing(ctx, l.x, l.y, l.r || 86, lt, tref(sc, l.at, 0), l.hours); },
@@ -288,7 +289,7 @@ function overlaps(s, t) {
   return out;
 }
 async function main() {
-  await loadAssets(); K = makeKit({ FPS, IMG, MAP, words, SCR: cues.screen });
+  await loadAssets(); K = makeKit({ FPS, IMG, MAP, COUNTRIES, words, SCR: cues.screen });
   const cv = createCanvas(W, H), ctx = cv.getContext('2d'); instrument(ctx);
   fs.writeFileSync(path.join(work, 'timeline.json'), JSON.stringify(S.map(s => ({ i: s.i, line: s.line ?? -1, start: +s.start.toFixed(2), end: +s.end.toFixed(2), bg: s.bg, real: !!s.real, xfade: !!s.xfade, endcard: !!s.endcard })), null, 1));
   fs.writeFileSync(path.join(work, 'cues.json'), JSON.stringify(CUE, null, 1));
