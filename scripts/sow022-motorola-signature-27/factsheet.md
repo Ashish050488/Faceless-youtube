@@ -1,4 +1,4 @@
-# sow022 — Motorola Signature 27 — factsheet (checked 26 Nov 2026, ~01:00 UTC)
+# sow022 — Motorola Signature 27 — factsheet (checked 26 Nov 2026, ~00:25 UTC)
 News: US retail sales start today, 26 Nov 2026 (Motorola press release, 5 Nov: "on-sale … November 26, MSRP $1,599.99").
 Last 12 h: 9to5Google hands-on (25 Nov, ~22:10 UTC), GSMArena EU pre-order/price listings (25 Nov), Notebookcheck EU price gap
 (25 Nov), Android Authority US delivery slip (25 Nov). Hottest Signature 27 Shorts: 2.2M / 1.9M views (YouTube API).

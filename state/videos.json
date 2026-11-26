@@ -423,9 +423,10 @@
   "slot": "1",
   "date": "2026-11-26",
   "for_date": "2026-11-26",
-  "scripted_at": "2026-11-26T01:05Z",
+  "scripted_at": "2026-11-26T00:25Z",
   "publish_at": "2026-11-26T07:30:00Z",
   "verdict": "SPEC 58",
-  "hypothesis": "Hot topic (Signature 27 Shorts at 1.9–2.2M views; US sales start today) + price-shock title mirroring the hook. Tests whether a 97-word script keeps the Short ≤ 55 s and beats sow019 (Motorola Edge 70 Neo) on views and avg % viewed."
+  "hypothesis": "Hot topic (Signature 27 Shorts at 1.9–2.2M views; US sales start today) + price-shock title mirroring the hook. Tests whether a 97-word script keeps the Short ≤ 55 s and beats sow019 (Motorola Edge 70 Neo) on views and avg % viewed.",
+  "builder_session": "session_01L2u12CgQmghnXh1Z7wfQ1n"
  }
 ]
