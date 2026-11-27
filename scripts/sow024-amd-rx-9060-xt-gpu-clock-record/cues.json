@@ -1,0 +1,145 @@
+{
+ "id": "sow024-amd-rx-9060-xt-gpu-clock-record",
+ "format": "short",
+ "export": "PRODUCTION_SPEC §6 (1080×1920, ≤ 20 MB)",
+ "rules": "PRODUCTION_SPEC §1/§3/§9; flat LIGHT backgrounds; product cut out (ASUS PNGs have alpha); 1–3 words on screen; a detailed 2-D object in every shot; watermark below content; logo end card; audio LOCKED. Length 45–55 s, HARD CAP 58 s. Draw no AMD/Radeon/ASUS/NVIDIA logos (text names only). '4,837 MHz' / 'world record' always with pill 'AMD says' or 'claimed'. Never show the record as a gaming speed.",
+ "numbers_shown": [
+  "$299",
+  "4.8 GHz",
+  "4,837 MHz",
+  "4,789 MHz",
+  "+48 MHz",
+  "163 MHz to 5 GHz",
+  "3,130 MHz boost",
+  "16 GB",
+  "$349",
+  "61/100"
+ ],
+ "official_clips": "none (press stills only)",
+ "palette_for_this_video": "paper main; sky for the numbers; blush for THE CATCH; mint for SPEC",
+ "assets": "assets_sources.md (A–E official ASUS press images, 2400 px)",
+ "new_objects": "ln2Pot (copper LN2 pot sitting on a GPU die with pouring vapour curls + frost rim; reuse for any extreme-overclock / cooling story) — add to render/kit/OBJECTS.md. Reuse: priceTag, gauge, counter, questionStamp, gpuCard, speechBubble, chipDie, bars, ruler, thermometer, scoreTable, ramStick, pill.",
+ "scenes": [
+  {
+   "n": 1,
+   "anchor": "A three-hundred-dollar graphics card…",
+   "bg": "paper",
+   "image": "D (Dual 8 GB) cut out centred 85% width, slow push-in",
+   "object": "priceTag swings in, value rolls 0→'$299'",
+   "text": "$300 GPU",
+   "sfx": "cash-register ding",
+   "note": "frame 1 = poster A: card + '4.8 GHz' gauge peeking"
+  },
+  {
+   "n": 2,
+   "anchor": "just hit four point eight gigahertz.",
+   "bg": "paper",
+   "image": "D holds 70%, shifts up",
+   "object": "gauge needle whips past 3.1 into red zone, counter '4.8 GHz'",
+   "text": "4.8 GHz",
+   "sfx": "whoosh-rise"
+  },
+  {
+   "n": 3,
+   "anchor": "Wait, what?",
+   "bg": "paper",
+   "image": "D holds",
+   "object": "questionStamp '?' slams beside the card",
+   "text": "WAIT, WHAT?",
+   "sfx": "record-scratch"
+  },
+  {
+   "n": 4,
+   "anchor": "Meet AMD's Radeon RX ninety-sixty XT.",
+   "bg": "sky",
+   "image": "A (TUF 16 GB) rounded card 85% width",
+   "object": "gpuCard outline traces the shroud; label 'Radeon RX 9060 XT · 8/16 GB' (text only, no AMD/ASUS logos drawn)",
+   "text": "RX 9060 XT",
+   "sfx": "pop"
+  },
+  {
+   "n": 5,
+   "anchor": "AMD's graphics boss says it's a new world record.",
+   "bg": "paper",
+   "image": "A holds 65% left",
+   "object": "speechBubble from a simple 'AMD exec' silhouette: 'WORLD RECORD!'; pill 'AMD says'",
+   "text": "WORLD RECORD?",
+   "sfx": "stamp"
+  },
+  {
+   "n": 6,
+   "anchor": "Get this. Four thousand eight hundred thirty-seven megahertz.",
+   "bg": "sky",
+   "image": "B (Prime 16 GB) 60% bottom",
+   "object": "counter rolls 0→'4,837 MHz' huge; chipDie glows behind",
+   "text": "4,837 MHz",
+   "sfx": "tick-roll"
+  },
+  {
+   "n": 7,
+   "anchor": "That beats the old record by forty-eight.",
+   "bg": "sky",
+   "image": "B holds",
+   "object": "bars: '4,789' vs '4,837', gap labelled '+48 MHz'",
+   "text": "+48 MHz",
+   "sfx": "ding"
+  },
+  {
+   "n": 8,
+   "anchor": "And it's just a hundred sixty-three shy of five gigahertz!",
+   "bg": "paper",
+   "image": "B small 40% corner",
+   "object": "ruler/progress bar 0→5,000 MHz, fill stops at 4,837, gap '163 MHz' flashes, finish flag at '5 GHz'",
+   "text": "163 MHz TO 5 GHz",
+   "sfx": "riser"
+  },
+  {
+   "n": 9,
+   "anchor": "Here's the catch. It ran on liquid nitrogen.",
+   "bg": "blush",
+   "image": "A 55% right, slight tilt",
+   "object": "NEW object ln2Pot: copper pot on the die, vapour curls pour over the card; thermometer drops to the floor",
+   "text": "LIQUID NITROGEN",
+   "sfx": "hiss"
+  },
+  {
+   "n": 10,
+   "anchor": "The card you'd buy boosts to about three point one.",
+   "bg": "blush",
+   "image": "C (Prime 8 GB) 60%",
+   "object": "gauge: two needles — '3,130 MHz · official boost' (green) vs '4,837 · LN2' (red); pill 'AMD spec'",
+   "text": "3.1 GHz AT HOME",
+   "sfx": "thud"
+  },
+  {
+   "n": 11,
+   "anchor": "By our score? Sixty-one out of a hundred.",
+   "bg": "paper",
+   "image": "A small 35% top",
+   "object": "scoreTable 6 rows fill (15·12·8·7.5·8·10) → counter '61/100'",
+   "text": "61/100",
+   "sfx": "tick x6"
+  },
+  {
+   "n": 12,
+   "anchor": "It's a spec. Grab it if you want sixteen gigs for three forty-nine.",
+   "bg": "mint",
+   "image": "A masked card 80%",
+   "object": "k snaps upright (SPEC end-card motion); ramStick '16 GB' + priceTag '$349'; pill '✓ 16 GB under $400'",
+   "text": "SPEC",
+   "sfx": "snap"
+  },
+  {
+   "n": 13,
+   "anchor": "Would you pour liquid nitrogen on your GPU?",
+   "bg": "paper",
+   "image": "D centred 85% exactly as frame 1",
+   "object": "ln2Pot vapour drifts in over the card; questionStamp; ends on the frame-1 layout",
+   "text": "WOULD YOU?",
+   "sfx": "riser tail",
+   "note": "match frame 1 (seamless loop)"
+  }
+ ],
+ "thumbnail": "1280×720: A (TUF) cut out right (75% height) with ln2Pot vapour pouring over it; left: 'ON ICE?!' HUGE (title says 4.8 GHz, thumb shows the catch) + small pill '4,837 MHz'; emotion object: thermometer frozen at the bottom; flat paper background; readable at 168×94. Poster B: '4.8 GHz' HUGE + gauge in the red + D (Dual 8 GB).",
+ "credits": "Product images: ASUS (press kit). Not affiliated with or endorsed by AMD, ASUS, NVIDIA or Intel."
+}

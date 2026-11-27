@@ -457,5 +457,18 @@
   "handoff_commit": "eb943c5",
   "comment_posted": "2026-11-26T13:08Z",
   "reel_requested": "2026-11-26T13:08Z"
+ },
+ {
+  "slug": "sow024-amd-rx-9060-xt-gpu-clock-record",
+  "title": "AMD Just Pushed a $300 GPU to 4.8 GHz?! 🤯",
+  "format": "short",
+  "status": "scripted",
+  "slot": "1",
+  "date": "2026-11-27",
+  "for_date": "2026-11-27",
+  "scripted_at": "2026-11-27T01:00Z",
+  "publish_at": "2026-11-27T07:30:00Z",
+  "verdict": "SPEC 61",
+  "hypothesis": "First GPU/AMD Short (topic priority #1; 'FASTEST GPU in EACH ERA!' at 1.1M views) with a 'world's fastest' number in the title. Tests whether a GPU record story beats sow018 (Samsung 1,100 Hz monitor, a similar 'crazy number' title) on views and avg % viewed, at ~99 words."
  }
 ]
