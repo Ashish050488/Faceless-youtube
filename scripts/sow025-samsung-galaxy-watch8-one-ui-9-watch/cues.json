@@ -1,0 +1,170 @@
+{
+ "id": "sow025-samsung-galaxy-watch8-one-ui-9-watch",
+ "format": "short",
+ "export": "PRODUCTION_SPEC §6 (1080×1920, ≤ 20 MB)",
+ "rules": "PRODUCTION_SPEC §1/§3/§9; flat LIGHT backgrounds; product cut out (Samsung white-bg stills); 1–3 words on screen; a detailed 2-D object in every shot; watermark below content; logo end card; audio LOCKED. Length 45–55 s, HARD CAP 58 s. Draw no Samsung/Galaxy logos (text names only). No medical claims on screen: only Samsung's feature names; never show sleep apnea as a diagnosis. '$199.99' always with pill 'Black Friday'. The '87' heart score is Samsung's own example (label 'example').",
+ "numbers_shown": [
+  "6 features",
+  "5 readings",
+  "2025",
+  "3 nights",
+  "Watch4",
+  "$299.99",
+  "$199.99",
+  "$379.99",
+  "71/100"
+ ],
+ "official_clips": "none (press stills only)",
+ "palette_for_this_video": "paper main; sky for the features; blush for THE CATCH; mint for SPEC",
+ "assets": "assets_sources.md (A–F official Samsung press images 3000–7087 px; G small inset only)",
+ "new_objects": "sleepMoon (crescent moon with Zz and a row of rising colour dots for overnight readings; reuse for any sleep/overnight-tracking story) — add to render/kit/OBJECTS.md. Reuse: ecg, calendar, questionStamp, watchOutline, downloadBar, counter, gauge, colourDots, zoneBar, bars, priceTag, worldMap, crossMark, appTile, toggle, scoreTable, speechBubble, slash, pill.",
+ "scenes": [
+  {
+   "n": 1,
+   "anchor": "Samsung's newest health features…",
+   "bg": "paper",
+   "image": "A (Watch8 silver) cut out centred 80% width, slow push-in",
+   "object": "ecg pulse line draws across the watch face, heart icon beats",
+   "text": "NEW HEALTH",
+   "sfx": "heartbeat-blip",
+   "note": "frame 1 = poster A: watch + '6 FEATURES' pill peeking"
+  },
+  {
+   "n": 2,
+   "anchor": "just landed on last year's watch.",
+   "bg": "paper",
+   "image": "A holds 70%, shifts up",
+   "object": "calendar flips 2026 → 2025 under the watch, pill 'last year's'",
+   "text": "LAST YEAR'S",
+   "sfx": "page-flip"
+  },
+  {
+   "n": 3,
+   "anchor": "Wait, really?",
+   "bg": "paper",
+   "image": "A holds",
+   "object": "questionStamp '?' slams beside the watch",
+   "text": "WAIT, REALLY?",
+   "sfx": "record-scratch"
+  },
+  {
+   "n": 4,
+   "anchor": "Meet the Galaxy Watch eight.",
+   "bg": "sky",
+   "image": "B (Watch8 graphite) rounded card 80% width",
+   "object": "watchOutline traces the case; label 'Galaxy Watch8 · 2025' (text only, no Samsung logo drawn)",
+   "text": "GALAXY WATCH8",
+   "sfx": "pop"
+  },
+  {
+   "n": 5,
+   "anchor": "One UI nine Watch gives it six Watch nine features.",
+   "bg": "sky",
+   "image": "B shrinks left 45%; right: F (Watch9) 45%",
+   "object": "downloadBar fills 0→100% 'One UI 9 Watch' arrow from Watch9 to Watch8; counter '6' pops",
+   "text": "6 FEATURES",
+   "sfx": "whoosh"
+  },
+  {
+   "n": 6,
+   "anchor": "Get this. Heart Health Score.",
+   "bg": "sky",
+   "image": "A small top-right 30%",
+   "object": "gauge ring fills to 87 'Heart Health Score' (Samsung's own example score, label 'example')",
+   "text": "HEART SCORE",
+   "sfx": "tick-roll"
+  },
+  {
+   "n": 7,
+   "anchor": "Vitals, with five overnight readings.",
+   "bg": "sky",
+   "image": "G inset small (Vitals screen) bottom 35%",
+   "object": "sleepMoon NEW: crescent moon + 5 colourDots rising one by one labelled HR · temp · SpO2 · … (only HR, skin temp, blood oxygen named; others blank dots)",
+   "text": "5 READINGS",
+   "sfx": "pop x5"
+  },
+  {
+   "n": 8,
+   "anchor": "Daily Cardio Load, Fitness Index,",
+   "bg": "sky",
+   "image": "A holds small",
+   "object": "zoneBar slides to 'balanced'; bars grow for 'Fitness Index'",
+   "text": "CARDIO + FITNESS",
+   "sfx": "whoosh-rise"
+  },
+  {
+   "n": 9,
+   "anchor": "smarter sleep coaching, upgraded sleep apnea.",
+   "bg": "paper",
+   "image": "C (angle) 60%",
+   "object": "sleepMoon with Zz; calendar marks '3 nights / 2 weeks'; small pill 'back to Watch4'",
+   "text": "SLEEP",
+   "sfx": "soft-chime"
+  },
+  {
+   "n": 10,
+   "anchor": "And this week? It's from two hundred dollars.",
+   "bg": "paper",
+   "image": "A 60% left",
+   "object": "priceTag swings in, rolls '$299.99' → strike → '$199.99'; pill 'Black Friday · 40 mm'",
+   "text": "$199.99",
+   "sfx": "cash-register ding"
+  },
+  {
+   "n": 11,
+   "anchor": "The Watch nine? Three eighty.",
+   "bg": "paper",
+   "image": "F (Watch9) 60% right, A small left",
+   "object": "second priceTag '$379.99'; bars compare $199.99 vs $379.99",
+   "text": "$379.99",
+   "sfx": "thud"
+  },
+  {
+   "n": 12,
+   "anchor": "Here's the catch. Features vary by region.",
+   "bg": "blush",
+   "image": "A greyed 50%",
+   "object": "worldMap with some regions dimmed + crossMark; pill 'Samsung: may vary'",
+   "text": "THE CATCH",
+   "sfx": "buzzer-soft"
+  },
+  {
+   "n": 13,
+   "anchor": "You'll need app updates for some, too.",
+   "bg": "blush",
+   "image": "A holds",
+   "object": "appTile 'Samsung Health' with downloadBar; toggle flips",
+   "text": "APP UPDATES",
+   "sfx": "click"
+  },
+  {
+   "n": 14,
+   "anchor": "By our score? Seventy-one out of a hundred. It's a spec.",
+   "bg": "mint",
+   "image": "A 50% top",
+   "object": "scoreTable 25/25 · 12/20 · 8/15 · 7.5/15 · 8/15 · 10/10 → total counter '71/100'; k snaps upright",
+   "text": "SPEC 71",
+   "sfx": "stamp"
+  },
+  {
+   "n": 15,
+   "anchor": "Grab it if you want new health tricks without Watch nine money.",
+   "bg": "mint",
+   "image": "A + F side by side, F slides out",
+   "object": "priceTag '$379.99' gets slash",
+   "text": "SPEC",
+   "sfx": "swoosh"
+  },
+  {
+   "n": 16,
+   "anchor": "Would you still buy the Watch nine?",
+   "bg": "paper",
+   "image": "F (Watch9) centred 70%",
+   "object": "questionStamp '?' + speechBubble 'Watch9?'; logo end card 'SPEC SCORE 71'",
+   "text": "WATCH9?",
+   "sfx": "pop"
+  }
+ ],
+ "thumbnail": "1280×720: A (Watch8 silver) cut out right (75% height) with a big green upgrade arrow into it from a small Watch9 outline; left: 'FREE UPGRADE?' HUGE (title says 6 new features, thumb asks the question) + small pill '$199.99 Black Friday'; emotion object: ecg heart pulse on the watch face; flat paper background; readable at 168×94. Poster B: '6 NEW' HUGE + B (graphite) + calendar '2025'.",
+ "credits": "Product images: Samsung (press kit). Not affiliated with or endorsed by Samsung, Google or Apple."
+}
