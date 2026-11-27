@@ -37,6 +37,7 @@ Pronunciation: AMD (A-M-D letters), Radeon ("RAY-dee-on"), RX, XT, gigahertz, me
 | 5 | The catch | 8 GB card shares the same "RX 9060 XT" name for $50 less; the record speed needs liquid nitrogen → moderate | 8 |
 | 6 | Can people buy it | On sale in US/EU/India now (partner cards) | 10 |
 | | **Total** | | **60.5 → 61 SPEC** |
+On screen (VERDICT.md maxima 25/20/15/15/15/10): 15/25 · 12/20 · 8/15 · 7.5/15 · 8/15 · 10/10 · total 61/100.
 Who for: gamers who want 16 GB of VRAM under $400. Not for: anyone expecting record clocks at home (by our score — opinion).
 
 ## Sources (links)

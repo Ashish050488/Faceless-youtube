@@ -2,8 +2,8 @@
  "slug": "sow024-amd-rx-9060-xt-gpu-clock-record",
  "plan": "plan.json",
  "thumb": {"img": "A", "bg": "paper", "tilt": -6,
-  "a": {"words": "ON ICE?!", "num": "4,837 MHz", "emotion": "q"},
-  "b": {"words": "A $300 CARD?", "num": "4.8 GHz", "emotion": "arrow"}},
+  "a": {"words": "ON ICE?!", "num": "4.8 GHz", "emotion": "q"},
+  "b": {"words": "NEEDS LN2?", "num": "$299", "emotion": "arrow"}},
  "scenes": [
   {"line": 0, "bg": "paper", "real": true, "layers": [
    {"type": "poster", "until": "@card", "overlap": true},
@@ -30,7 +30,8 @@
    {"type": "product", "img": "A", "x": 540, "y": 1180, "w": 560, "seed": 0.4},
    {"type": "speechBubble", "x": 540, "y": 640, "w": 640, "h": 210, "text": "WORLD RECORD!", "tail": "left", "at": "@says"},
    {"type": "pill", "text": "AMD SAYS", "x": 540, "y": 1700, "w": 420, "h": 96, "at": ["@says", 0, 0.2]},
-   {"type": "headline", "text": "WORLD RECORD?", "at": 0.05, "y": 300}
+   {"type": "headline", "text": "AMD'S BOSS", "at": 0.05, "until": "@says"},
+   {"type": "headline", "text": "WORLD RECORD?", "at": "@says", "col": "ember"}
   ]},
   {"line": 2, "bg": "sky", "real": true, "layers": [
    {"type": "product", "img": "B", "x": 540, "y": 1080, "w": 640, "seed": 0.5, "push": true},
@@ -47,8 +48,8 @@
   ]},
   {"line": 2, "from": "and", "bg": "paper", "real": true, "layers": [
    {"type": "product", "img": "B", "x": 540, "y": 760, "w": 520, "seed": 0.5},
-   {"type": "downloadBar", "x": 540, "y": 1330, "w": 760, "at": 0.05, "fillAt": 0.15, "to": 0.967},
-   {"type": "label", "text": "163 MHz SHORT", "x": 540, "y": 1560, "px": 64, "col": "wreck", "at": "@n163"},
+   {"type": "downloadBar", "x": 540, "y": 1170, "w": 760, "at": 0.05, "fillAt": 0.15, "to": 0.967},
+   {"type": "label", "text": "163 MHz SHORT", "x": 540, "y": 1420, "px": 64, "col": "wreck", "at": "@n163"},
    {"type": "headline", "text": "5 GHz", "at": "@five", "col": "ember"},
    {"type": "headline", "text": "SO CLOSE", "at": 0.05, "until": "@five"}
   ]},
@@ -57,16 +58,16 @@
    {"type": "stamp", "text": "THE CATCH", "y": 560, "px": 110, "at": ["@catch", 0, -0.2], "sfx": false}
   ]},
   {"line": 3, "from": "it", "xfade": true, "bg": "blush", "real": true, "layers": [
-   {"type": "ln2Pot", "x": 540, "y": 1020, "s": 0.85, "at": 0.05, "pourAt": "@liquid"},
+   {"type": "ln2Pot", "x": 540, "y": 980, "s": 1.0, "at": 0.05, "pourAt": "@liquid"},
    {"type": "product", "img": "A", "x": 540, "y": 1670, "w": 340, "seed": 0.4},
    {"type": "headline", "text": "LIQUID NITROGEN", "at": "@liquid", "col": "wreck", "y": 260}
   ]},
-  {"line": 3, "from": "the", "xfade": true, "bg": "blush", "real": true, "layers": [
+  {"line": 3, "from": ["the", 1], "xfade": true, "bg": "blush", "real": true, "layers": [
    {"type": "product", "img": "C", "x": 540, "y": 800, "w": 560, "seed": 0.6},
    {"type": "gauge", "x": 540, "y": 1500, "value": 3.13, "max": 5, "mark": 4.837, "at": "@buy"},
    {"type": "pill", "text": "AMD SPEC", "x": 540, "y": 1700, "w": 400, "h": 96, "at": ["@boost", 0, 0.2]},
    {"type": "headline", "text": "3,130 MHz", "at": "@boost", "col": "ember"},
-   {"type": "headline", "text": "AT HOME", "at": 0.05, "until": "@boost"}
+   {"type": "headline", "text": "AT HOME", "at": "@buy", "until": "@boost"}
   ]},
   {"line": 4, "bg": "paper", "real": true, "layers": [
    {"type": "scoreTable", "x": 540, "y": 480, "w": 940, "total": "61/100", "totalAt": "@score", "rows": [
