@@ -16,7 +16,7 @@ Every object is drawn once, saved here, and reused by every future video. Before
 |---|---|
 | `objects.js` | everyday measures: sun (brightness), priceTag, calipers, scale, waterDrop, waves |
 | `measure.js` | dials and charts: dialScale, clockRing, bars, calendar, slider |
-| `health.js` | battery, toggle, ecg (pulse), globe, hourglass, pulseFlame, zoneBar, colourDots |
+| `health.js` | battery, toggle, ecg (pulse), globe, hourglass, pulseFlame, zoneBar, colourDots, sleepMoon |
 | `repair.js` | internals/repair: connector, speaker, cable, usbc, lockScrews |
 | `screen.js` | displays: screenPath, motionLines, screenDim, playIcon, loupe |
 | `map.js` | worldMap (Natural Earth), countryShape |
@@ -53,6 +53,7 @@ Every object is drawn once, saved here, and reused by every future video. Before
 | ecg | health.js | pulse line | draws | heart rate, health |
 | globe | health.js | simple globe | spins | worldwide |
 | hourglass | health.js | hourglass | sand falls | waiting, delays |
+| sleepMoon | health.js | marigold crescent moon (rocks) + drifting Zz + twinkling stars over a dashed night baseline; `n` reading dots on stems with optional `labels` ('' = none), `gap` px apart (~760 wide at n 5) | springs in at `at`; dots rise one by one from `dotsAt` (0.14 s apart) | sleep tracking, overnight readings, bedtime, "while you sleep" |
 | connector / speaker / cable / usbc / lockScrews | repair.js | internals | enter/pop | teardowns, repair |
 | screenPath / motionLines / screenDim / playIcon / loupe | screen.js | screen parts | — | displays, zoom |
 | worldMap | map.js | real map, country filled, pin | pin drops | launch regions |

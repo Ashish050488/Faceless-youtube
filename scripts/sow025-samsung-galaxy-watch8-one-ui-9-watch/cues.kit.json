@@ -1,0 +1,124 @@
+{
+ "slug": "sow025-samsung-galaxy-watch8-one-ui-9-watch",
+ "plan": "plan.json",
+ "thumb": {"img": "A", "thumbImg": "C", "bg": "paper", "tilt": -6,
+  "a": {"words": "2025 WATCH?", "num": "$199.99", "emotion": "arrow"},
+  "b": {"words": "WATCH9 TRICKS", "num": "6", "emotion": "q"}},
+ "scenes": [
+  {"line": 0, "bg": "paper", "real": true, "layers": [
+   {"type": "poster", "until": "@card", "overlap": true},
+   {"type": "product", "img": "A", "x": 540, "y": 940, "w": 500, "seed": 0.4, "push": true, "show": "@card"},
+   {"type": "ecg", "x": 540, "y": 1640, "at": ["@card", 0, 0.2]},
+   {"type": "headline", "text": "NEW HEALTH", "at": "@card"}
+  ]},
+  {"line": 0, "from": "just", "xfade": true, "bg": "paper", "real": true, "layers": [
+   {"type": "product", "img": "A", "x": 540, "y": 800, "w": 420, "seed": 0.5},
+   {"type": "calendar", "x": 540, "y": 1540, "s": 1.5, "month": "JUL", "year": "2025", "from": ["NOV", "2026"], "at": "@landed"},
+   {"type": "headline", "text": "LAST YEAR'S", "at": "@landed", "col": "ember"}
+  ]},
+  {"line": 0, "from": "wait", "bg": "paper", "real": true, "shake": ["@wait", 0, 0.05], "layers": [
+   {"type": "product", "img": "A", "x": 540, "y": 880, "w": 480, "seed": 0.5},
+   {"type": "questionStamp", "x": 540, "y": 1640, "s": 0.8, "at": "@wait"},
+   {"type": "headline", "text": "WAIT, REALLY?", "at": "@wait", "col": "ember"}
+  ]},
+  {"line": 1, "bg": "sky", "real": true, "layers": [
+   {"type": "product", "img": "B", "x": 540, "y": 900, "w": 500, "seed": 0.3, "push": true},
+   {"type": "pill", "text": "JULY 2025", "x": 540, "y": 1660, "w": 480, "h": 100, "at": "@eight"},
+   {"type": "headline", "text": "GALAXY WATCH8", "at": "@meet"}
+  ]},
+  {"line": 1, "from": "one", "xfade": true, "bg": "sky", "real": true, "layers": [
+   {"type": "product", "img": "F", "card": true, "x": 540, "y": 650, "w": 380, "seed": 0.5},
+   {"type": "downloadBar", "x": 540, "y": 1040, "w": 700, "at": 0.05, "fillAt": 0.2, "to": 1},
+   {"type": "label", "text": "ONE UI 9 WATCH", "x": 540, "y": 1190, "px": 56, "col": "ink", "at": 0.1},
+   {"type": "product", "img": "B", "x": 540, "y": 1570, "w": 290, "seed": 0.6},
+   {"type": "headline", "text": "WATCH9 → 8", "at": 0.05, "until": "@six"},
+   {"type": "headline", "text": "6 FEATURES", "at": "@six", "col": "ember"}
+  ]},
+  {"line": 2, "bg": "sky", "real": true, "layers": [
+   {"type": "product", "img": "A", "x": 540, "y": 820, "w": 440, "seed": 0.5, "push": true},
+   {"type": "gauge", "x": 540, "y": 1560, "value": 8, "max": 10, "at": "@heart"},
+   {"type": "headline", "text": "GET THIS", "at": 0.05, "until": "@heart"},
+   {"type": "headline", "text": "HEART SCORE", "at": "@heart", "col": "ember"}
+  ]},
+  {"line": 2, "from": "vitals", "xfade": true, "bg": "sky", "real": true, "layers": [
+   {"type": "sleepMoon", "x": 540, "y": 900, "at": 0.05, "dotsAt": "@five", "labels": ["HEART", "", "TEMP", "", "OXYGEN"]},
+   {"type": "product", "img": "A", "x": 540, "y": 1600, "w": 270, "seed": 0.4},
+   {"type": "headline", "text": "VITALS", "at": 0.05, "until": "@five"},
+   {"type": "headline", "text": "5 READINGS", "at": "@five", "col": "ember"}
+  ]},
+  {"line": 2, "from": "daily", "xfade": true, "bg": "sky", "real": true, "layers": [
+   {"type": "product", "img": "D", "x": 540, "y": 820, "w": 560, "seed": 0.5},
+   {"type": "zoneBar", "x": 540, "y": 1460, "at": 0.1},
+   {"type": "headline", "text": "CARDIO LOAD", "at": 0.05, "until": "@fitness"},
+   {"type": "headline", "text": "FITNESS INDEX", "at": "@fitness", "col": "ember"}
+  ]},
+  {"line": 2, "from": "smarter", "bg": "paper", "real": true, "layers": [
+   {"type": "product", "img": "C", "x": 540, "y": 760, "w": 540, "seed": 0.5, "push": true},
+   {"type": "sleepMoon", "x": 540, "y": 1440, "s": 0.7, "n": 3, "at": 0.05, "dotsAt": 0.4},
+   {"type": "pill", "text": "3 NIGHTS / 2 WEEKS", "x": 540, "y": 1770, "w": 700, "h": 96, "px": 56, "at": 0.6},
+   {"type": "headline", "text": "SLEEP COACHING", "at": 0.05, "until": "@apnea"},
+   {"type": "headline", "text": "SLEEP APNEA", "at": "@apnea", "col": "ember"}
+  ]},
+  {"line": 2, "from": "and", "xfade": true, "bg": "paper", "real": true, "layers": [
+   {"type": "product", "img": "A", "x": 540, "y": 770, "w": 420, "seed": 0.4},
+   {"type": "priceTag", "x": 540, "y": 1340, "text": "$199.99", "at": "@two"},
+   {"type": "pill", "text": "BLACK FRIDAY", "x": 540, "y": 1810, "w": 520, "h": 96, "at": ["@two", 0, 0.25]},
+   {"type": "headline", "text": "$299.99", "at": 0.05, "until": "@two", "strike": ["@two", 0, -0.45]},
+   {"type": "headline", "text": "$199.99", "at": "@two", "col": "ember"}
+  ]},
+  {"line": 2, "from": "the", "xfade": true, "bg": "paper", "real": true, "layers": [
+   {"type": "product", "img": "F", "card": true, "x": 540, "y": 690, "w": 400, "seed": 0.5},
+   {"type": "bars", "base": 1720, "h": 480, "items": [
+    {"value": 199.99, "label": "$199.99", "sub": "WATCH8", "col": "mari", "at": 0.05},
+    {"value": 379.99, "label": "$379.99", "sub": "WATCH9", "col": "stone", "at": "@eighty"}]},
+   {"type": "headline", "text": "WATCH9?", "at": 0.05, "until": "@eighty"},
+   {"type": "headline", "text": "$379.99", "at": "@eighty", "col": "ember"}
+  ]},
+  {"line": 3, "bg": "blush", "real": true, "shake": ["@catch", 0, -0.2], "layers": [
+   {"type": "product", "img": "A", "x": 540, "y": 1150, "w": 430, "seed": 0.4, "ltOffset": 5, "fade": {"at": 0, "to": 0.45}},
+   {"type": "stamp", "text": "THE CATCH", "y": 560, "px": 110, "at": ["@catch", 0, -0.2], "sfx": false}
+  ]},
+  {"line": 3, "from": "features", "xfade": true, "bg": "blush", "real": true, "layers": [
+   {"type": "map", "x": 540, "y": 780, "w": 900, "at": 0.05},
+   {"type": "product", "img": "A", "x": 540, "y": 1420, "w": 230, "seed": 0.4},
+   {"type": "pill", "text": "MAY VARY", "x": 540, "y": 1770, "w": 440, "h": 96, "at": ["@region", 0, 0.2]},
+   {"type": "headline", "text": "BY REGION", "at": "@region", "col": "wreck"}
+  ]},
+  {"line": 3, "from": "you'll", "xfade": true, "bg": "blush", "real": true, "layers": [
+   {"type": "appTile", "x": 540, "y": 640, "label": "HEALTH APP", "at": 0.05},
+   {"type": "downloadBar", "x": 540, "y": 1060, "w": 700, "at": 0.1, "fillAt": "@app", "to": 1},
+   {"type": "toggle", "x": 540, "y": 1290, "flipAt": ["@app", 0, 0.9]},
+   {"type": "product", "img": "A", "x": 540, "y": 1660, "w": 220, "seed": 0.4},
+   {"type": "headline", "text": "APP UPDATES", "at": "@app", "col": "wreck"}
+  ]},
+  {"line": 4, "bg": "paper", "real": true, "layers": [
+   {"type": "scoreTable", "x": 540, "y": 480, "w": 940, "total": "71/100", "totalAt": "@score", "rows": [
+    {"label": "PRICE", "score": 25, "max": 25, "at": 0.2},
+    {"label": "CLAIM", "score": 12, "max": 20, "at": 0.35},
+    {"label": "NEW", "score": 8, "max": 15, "at": 0.5},
+    {"label": "LASTS", "score": 7.5, "max": 15, "at": 0.65},
+    {"label": "CATCH", "score": 8, "max": 15, "at": 0.8},
+    {"label": "BUY", "score": 10, "max": 10, "at": 0.95}]},
+   {"type": "product", "img": "A", "x": 540, "y": 1580, "w": 290, "seed": 0.4},
+   {"type": "headline", "text": "OUR SCORE", "at": 0.05, "until": "@score"},
+   {"type": "headline", "text": "71/100", "at": "@score", "col": "ember"}
+  ]},
+  {"line": 4, "from": "it's", "bg": "mint", "real": true, "layers": [
+   {"type": "wordmark", "y": 560, "score": 71, "scoreAt": 0.1, "snapAt": ["@spec", 0, -0.05], "px": 125},
+   {"type": "priceTag", "x": 540, "y": 990, "text": "$379.99", "at": "@grab"},
+   {"type": "slash", "x": 540, "y": 990, "len": 380, "at": "@money", "overlap": true},
+   {"type": "product", "img": "A", "x": 540, "y": 1670, "w": 230, "seed": 0.4},
+   {"type": "headline", "text": "SPEC", "at": "@spec", "until": "@grab", "col": "ember", "y": 260},
+   {"type": "headline", "text": "HEALTH TRICKS", "at": "@grab", "until": "@money", "y": 260},
+   {"type": "headline", "text": "SKIP $379.99", "at": "@money", "col": "wreck", "y": 260}
+  ]},
+  {"line": 5, "xfade": true, "bg": "mint", "real": true, "layers": [
+   {"type": "product", "img": "F", "card": true, "x": 540, "y": 880, "w": 600, "seed": 0.4},
+   {"type": "questionStamp", "x": 540, "y": 1600, "s": 0.7, "at": ["@loop", 0, 0.3]},
+   {"type": "headline", "text": "WATCH9?", "at": 0.05, "col": "ember"}
+  ]},
+  {"endcard": true, "bg": "paper", "layers": [
+   {"type": "wordmark", "y": 900, "score": 71, "snapAt": 0.7}
+  ]}
+ ]
+}

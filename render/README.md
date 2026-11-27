@@ -51,6 +51,9 @@ Work dir: `$W = <scratchpad>/<slug>`. Delete the previous video's work dir first
   2. The product page's own image CDN.
   3. Press articles that embed the brand's press images.
   4. PSREF / spec-sheet PDFs: render the pages with pymupdf at 3×, then cut out.
+  - Samsung: the samsungmobilepress `file-download/url` POST is blocked for us (permission classifier, sow025).
+    Use the samsung.com/us **buy** page gallery instead: `images.samsung.com/is/image/samsung/p6pim/us/…/gallery/…`
+    + `?$ORIGIN_PNG$` = native 1600×1200 studio shots on white (bigger presets are only upscales).
 - **Blocked sites:** Gizmochina and VideoCardz return 403 to us. Some CDNs (e.g. cenyavto) need
   `-H "Referer: <article url>"`. Send a normal browser User-Agent; never send personal details.
 - **Check image size before picking a topic.** Pick only products with at least 3 distinct whole, text-free shots of

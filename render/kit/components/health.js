@@ -1,4 +1,4 @@
-// kit component group 'health': pulseFlame, zoneBar, colourDots, battery, toggle, ecg, globe, hourglass. Loaded by core.js; shared helpers come from K.
+// kit component group 'health': sleepMoon, pulseFlame, zoneBar, colourDots, battery, toggle, ecg, globe, hourglass. Loaded by core.js; shared helpers come from K.
 const { createCanvas } = require('@napi-rs/canvas');
 const L = require('../../lib');
 const { C, W, H, clamp, lerp, easeOut, easeInOut, prog, rr, font } = L;
@@ -46,5 +46,30 @@ function hourglass(ctx, cx, cy, lt, t0, tFlip, dark) { dark = false; const p = p
   if (lt > t0 + DRAW) { const sand = clamp((lt - tFlip) / 2.5); ctx.fillStyle = C.mari; ctx.beginPath(); ctx.moveTo(-70, 150 - 0); ctx.lineTo(70, 150); ctx.lineTo(0, 150 - 70 * (1 - sand)); ctx.closePath(); ctx.fill(); ctx.beginPath(); ctx.moveTo(-60 * sand, -150 + 60 * (1 - sand)); ctx.lineTo(60 * sand, -150 + 60 * (1 - sand)); ctx.lineTo(0, -60); ctx.closePath(); ctx.fill(); }
   ctx.restore();
 }
-Object.assign(K, { pulseFlame, zoneBar, colourDots, battery, toggle, ecg, globe, hourglass });
+// sleepMoon: crescent moon + floating Zz over a night baseline; `n` reading dots rise one by one from `dotsAt`
+// (0.14 s apart) on stems of different heights, optional `labels` under the dots ('' = unlabelled). Centre (0,0), ~760 wide.
+function sleepMoon(ctx, lt, t0, { n = 5, dotsAt = 1e9, labels = [], gap = 170 } = {}) {
+  const e = spr(lt - t0, 14); if (e <= 0) return;
+  ctx.save(); ctx.lineJoin = 'round'; ctx.lineCap = 'round';
+  // moon (marigold crescent = big disc minus offset disc), gentle rock
+  ctx.save(); ctx.translate(0, -190); ctx.scale(e, e); ctx.rotate(0.06 * Math.sin(lt * 1.4));
+  ctx.beginPath(); ctx.arc(0, 0, 120, 0, Math.PI * 2 - 1e-4); ctx.arc(52, -38, 102, Math.PI * 2 - 1e-4, 0, true); ctx.closePath();
+  ctx.fillStyle = C.mari; ctx.fill('evenodd'); ctx.strokeStyle = C.ink; ctx.lineWidth = 9; ctx.stroke();
+  ctx.beginPath(); ctx.arc(-58, 30, 12, 0, 7); ctx.arc(-30, 74, 8, 0, 7); ctx.fillStyle = '#E09A1A'; ctx.fill(); ctx.restore();
+  // Zz drifting up-right, looping every 1.6 s
+  for (let k = 0; k < 2; k++) { const ph = ((lt - t0) * 0.62 + k * 0.5) % 1, a = clamp(e) * Math.sin(ph * Math.PI);
+    ctx.save(); ctx.globalAlpha = a; ctx.translate(150 + ph * 70 + k * 40, -250 - ph * 90 - k * 30); const z = k ? 30 : 44;
+    ctx.beginPath(); ctx.moveTo(-z / 2, -z / 2); ctx.lineTo(z / 2, -z / 2); ctx.lineTo(-z / 2, z / 2); ctx.lineTo(z / 2, z / 2); ctx.strokeStyle = C.ink; ctx.lineWidth = k ? 7 : 9; ctx.stroke(); ctx.restore(); }
+  // night baseline (dashed) + stars
+  const w = gap * (n - 1) + 160; ctx.save(); ctx.globalAlpha = clamp(e); ctx.setLineDash([18, 16]); ctx.beginPath(); ctx.moveTo(-w / 2, 150); ctx.lineTo(w / 2, 150); ctx.strokeStyle = '#C9C1B8'; ctx.lineWidth = 6; ctx.stroke(); ctx.restore();
+  for (const [sx, sy] of [[-300, -260], [-210, -140], [290, -120]]) { const tw = 0.6 + 0.4 * Math.sin(lt * 3 + sx); ctx.save(); ctx.globalAlpha = clamp(e) * tw; ctx.translate(sx, sy); ctx.beginPath(); for (let i = 0; i < 8; i++) { const r = i % 2 ? 6 : 16, a = i * Math.PI / 4; ctx.lineTo(Math.cos(a) * r, Math.sin(a) * r); } ctx.closePath(); ctx.fillStyle = C.ink; ctx.fill(); ctx.restore(); }
+  // reading dots rise on stems
+  const hs = [90, 60, 110, 75, 95];
+  for (let i = 0; i < n; i++) { const ti = dotsAt + i * 0.14, d = spr(lt - ti, 16); if (d <= 0) continue; const x = -gap * (n - 1) / 2 + i * gap, h = hs[i % 5] * clamp(d, 0, 1.1);
+    ctx.beginPath(); ctx.moveTo(x, 150); ctx.lineTo(x, 150 - h); ctx.strokeStyle = C.ink; ctx.lineWidth = 8; ctx.stroke();
+    ctx.save(); ctx.translate(x, 150 - h); const f = pop(lt, ti) || 1; ctx.scale(f, f); ctx.beginPath(); ctx.arc(0, 0, 30, 0, 7); ctx.fillStyle = i % 2 ? C.ember : C.mari; ctx.fill(); ctx.strokeStyle = C.ink; ctx.lineWidth = 7; ctx.stroke(); ctx.restore();
+    if (labels[i]) { ctx.save(); ctx.globalAlpha = clamp(d * 1.5); font(ctx, 48, 'head'); ctx.fillStyle = C.ink; ctx.textAlign = 'center'; ctx.fillText(labels[i], x, 230); ctx.restore(); } }
+  ctx.restore();
+}
+Object.assign(K, { sleepMoon, pulseFlame, zoneBar, colourDots, battery, toggle, ecg, globe, hourglass });
 };
