@@ -1007,5 +1007,28 @@
    "Notebookcheck",
    "AMD"
   ]
+ },
+ {
+  "date": "2026-11-27",
+  "slot": "13:43 IST",
+  "type": "single",
+  "category": "space",
+  "topic": "ESA Hera first close-ups: DART left a stadium-sized crater on Dimorphos, now tumbling; 13 km approach in December",
+  "status": "published",
+  "postId": "80d27a2d-2892-4bba-88c9-f2bed0f0030c",
+  "permalink": "https://www.instagram.com/p/DgPOwbsoe_x/",
+  "sources": [
+   "https://www.esa.int/articles/about-us/directorates/operations/space-safety/hera/hera-reveals-stadium-sized-asteroid-crater-left-after-spacecraft-impact",
+   "https://www.cnn.com/2026/11/25/science/hera-mission-dimorphos-asteroid-arrival-images",
+   "https://www.popsci.com/science/dart-mission-hera-asteroid-photos/",
+   "https://www.abc.net.au/news/2026-11-26/new-photos-of-struck-asteroid-dimorphos/107428078"
+  ],
+  "images": [
+   "ESA Hera AFC image 402769 (official)"
+  ],
+  "test_vars": {
+   "hook": "curiosity/before-after",
+   "image": "official space photo"
+  }
  }
 ]
