@@ -1030,5 +1030,20 @@
    "hook": "curiosity/before-after",
    "image": "official space photo"
   }
+ },
+ {
+  "date": "2026-11-27",
+  "slot": null,
+  "type": "reel_crosspost",
+  "category": "wearables",
+  "topic": "Samsung One UI 9 Watch brings 6 Watch9 health features to Galaxy Watch8; Watch8 $199.99 vs Watch9 $379.99 (YouTube Short Nyv_Z6-ICXU)",
+  "status": "published",
+  "mediaId": "18484971673114697",
+  "permalink": "https://www.instagram.com/reel/DgPwLo5JWcN/",
+  "sources": [
+   "Samsung Mobile Press",
+   "Android Authority",
+   "Samsung US"
+  ]
  }
 ]
