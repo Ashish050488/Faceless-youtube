@@ -1,0 +1,99 @@
+{
+ "slug": "sow024-amd-rx-9060-xt-gpu-clock-record",
+ "plan": "plan.json",
+ "thumb": {"img": "A", "bg": "paper", "tilt": -6,
+  "a": {"words": "ON ICE?!", "num": "4,837 MHz", "emotion": "q"},
+  "b": {"words": "A $300 CARD?", "num": "4.8 GHz", "emotion": "arrow"}},
+ "scenes": [
+  {"line": 0, "bg": "paper", "real": true, "layers": [
+   {"type": "poster", "until": "@card", "overlap": true},
+   {"type": "product", "img": "D", "x": 540, "y": 900, "w": 700, "seed": 0.4, "push": true, "show": "@card"},
+   {"type": "priceTag", "x": 540, "y": 1540, "text": "$299", "at": ["@card", 0, 0.15]},
+   {"type": "headline", "text": "GRAPHICS CARD", "at": "@card"}
+  ]},
+  {"line": 0, "from": "just", "xfade": true, "bg": "paper", "real": true, "layers": [
+   {"type": "product", "img": "D", "x": 540, "y": 820, "w": 560, "seed": 0.5},
+   {"type": "gauge", "x": 540, "y": 1520, "value": 4.837, "max": 5, "mark": 3.13, "at": "@hit", "col": "wreck"},
+   {"type": "number", "value": 4.8, "dec": 1, "unit": " GHz", "x": 540, "y": 330, "px": 150, "at": "@hit", "col": "ember"}
+  ]},
+  {"line": 0, "from": "wait", "bg": "paper", "real": true, "shake": ["@wait", 0, 0.05], "layers": [
+   {"type": "product", "img": "D", "x": 540, "y": 900, "w": 620, "seed": 0.5},
+   {"type": "questionStamp", "x": 540, "y": 1640, "s": 0.8, "at": "@wait"},
+   {"type": "headline", "text": "WAIT, WHAT?", "at": "@wait", "col": "ember"}
+  ]},
+  {"line": 1, "bg": "sky", "real": true, "layers": [
+   {"type": "product", "img": "A", "x": 540, "y": 900, "w": 720, "seed": 0.3, "push": true},
+   {"type": "pill", "text": "8 GB OR 16 GB", "x": 540, "y": 1640, "w": 600, "h": 100, "at": ["radeon", 0, 0.1]},
+   {"type": "headline", "text": "RX 9060 XT", "at": "@meet"}
+  ]},
+  {"line": 1, "from": ["amd's", 1], "xfade": true, "bg": "paper", "real": true, "layers": [
+   {"type": "product", "img": "A", "x": 540, "y": 1180, "w": 560, "seed": 0.4},
+   {"type": "speechBubble", "x": 540, "y": 640, "w": 640, "h": 210, "text": "WORLD RECORD!", "tail": "left", "at": "@says"},
+   {"type": "pill", "text": "AMD SAYS", "x": 540, "y": 1700, "w": 420, "h": 96, "at": ["@says", 0, 0.2]},
+   {"type": "headline", "text": "WORLD RECORD?", "at": 0.05, "y": 300}
+  ]},
+  {"line": 2, "bg": "sky", "real": true, "layers": [
+   {"type": "product", "img": "B", "x": 540, "y": 1080, "w": 640, "seed": 0.5, "push": true},
+   {"type": "number", "value": 4837, "comma": true, "unit": " MHz", "x": 540, "y": 360, "px": 150, "at": "@n4837", "col": "ember"},
+   {"type": "pill", "text": "CLAIMED", "x": 540, "y": 1700, "w": 380, "h": 96, "at": ["@n4837", 0, 0.3]},
+   {"type": "headline", "text": "GET THIS", "at": 0.05, "until": "@n4837", "y": 560}
+  ]},
+  {"line": 2, "from": "that", "xfade": true, "bg": "sky", "real": true, "layers": [
+   {"type": "bars", "base": 1180, "h": 460, "items": [
+    {"value": 4789, "label": "4,789", "sub": "OLD", "col": "stone", "at": 0.05},
+    {"value": 4837, "label": "4,837", "sub": "NEW", "col": "mari", "at": "@n48"}]},
+   {"type": "product", "img": "B", "x": 540, "y": 1600, "w": 400, "seed": 0.5},
+   {"type": "headline", "text": "+48 MHz", "at": "@n48", "col": "ember"}
+  ]},
+  {"line": 2, "from": "and", "bg": "paper", "real": true, "layers": [
+   {"type": "product", "img": "B", "x": 540, "y": 760, "w": 520, "seed": 0.5},
+   {"type": "downloadBar", "x": 540, "y": 1330, "w": 760, "at": 0.05, "fillAt": 0.15, "to": 0.967},
+   {"type": "label", "text": "163 MHz SHORT", "x": 540, "y": 1560, "px": 64, "col": "wreck", "at": "@n163"},
+   {"type": "headline", "text": "5 GHz", "at": "@five", "col": "ember"},
+   {"type": "headline", "text": "SO CLOSE", "at": 0.05, "until": "@five"}
+  ]},
+  {"line": 3, "bg": "blush", "real": true, "shake": ["@catch", 0, -0.2], "layers": [
+   {"type": "product", "img": "A", "x": 540, "y": 1250, "w": 560, "seed": 0.4, "ltOffset": 5, "fade": {"at": 0, "to": 0.45}},
+   {"type": "stamp", "text": "THE CATCH", "y": 560, "px": 110, "at": ["@catch", 0, -0.2], "sfx": false}
+  ]},
+  {"line": 3, "from": "it", "xfade": true, "bg": "blush", "real": true, "layers": [
+   {"type": "ln2Pot", "x": 540, "y": 1020, "s": 0.85, "at": 0.05, "pourAt": "@liquid"},
+   {"type": "product", "img": "A", "x": 540, "y": 1670, "w": 340, "seed": 0.4},
+   {"type": "headline", "text": "LIQUID NITROGEN", "at": "@liquid", "col": "wreck", "y": 260}
+  ]},
+  {"line": 3, "from": "the", "xfade": true, "bg": "blush", "real": true, "layers": [
+   {"type": "product", "img": "C", "x": 540, "y": 800, "w": 560, "seed": 0.6},
+   {"type": "gauge", "x": 540, "y": 1500, "value": 3.13, "max": 5, "mark": 4.837, "at": "@buy"},
+   {"type": "pill", "text": "AMD SPEC", "x": 540, "y": 1700, "w": 400, "h": 96, "at": ["@boost", 0, 0.2]},
+   {"type": "headline", "text": "3,130 MHz", "at": "@boost", "col": "ember"},
+   {"type": "headline", "text": "AT HOME", "at": 0.05, "until": "@boost"}
+  ]},
+  {"line": 4, "bg": "paper", "real": true, "layers": [
+   {"type": "scoreTable", "x": 540, "y": 480, "w": 940, "total": "61/100", "totalAt": "@score", "rows": [
+    {"label": "PRICE", "score": 15, "max": 25, "at": 0.2},
+    {"label": "CLAIM", "score": 12, "max": 20, "at": 0.35},
+    {"label": "NEW", "score": 8, "max": 15, "at": 0.5},
+    {"label": "LASTS", "score": 7.5, "max": 15, "at": 0.65},
+    {"label": "CATCH", "score": 8, "max": 15, "at": 0.8},
+    {"label": "BUY", "score": 10, "max": 10, "at": 0.95}]},
+   {"type": "product", "img": "A", "x": 540, "y": 1560, "w": 330, "seed": 0.4},
+   {"type": "headline", "text": "OUR SCORE", "at": 0.05, "until": "@score"},
+   {"type": "headline", "text": "61/100", "at": "@score", "col": "ember"}
+  ]},
+  {"line": 4, "from": "it's", "xfade": true, "bg": "mint", "real": true, "layers": [
+   {"type": "wordmark", "y": 560, "score": 61, "scoreAt": 0.1, "snapAt": ["@spec", 0, -0.05], "px": 125},
+   {"type": "priceTag", "x": 540, "y": 1080, "text": "$349", "at": "@price"},
+   {"type": "product", "img": "A", "x": 540, "y": 1610, "w": 300, "seed": 0.4},
+   {"type": "headline", "text": "SPEC", "at": "@spec", "until": "@gigs", "col": "ember", "y": 260},
+   {"type": "headline", "text": "16 GB", "at": "@gigs", "y": 260}
+  ]},
+  {"line": 5, "bg": "paper", "real": true, "layers": [
+   {"type": "product", "img": "D", "x": 540, "y": 900, "w": 700, "seed": 0.4},
+   {"type": "questionStamp", "x": 540, "y": 1640, "s": 0.7, "at": ["@loop", 0, 0.4]},
+   {"type": "headline", "text": "WOULD YOU?", "at": 0.05, "col": "ember"}
+  ]},
+  {"endcard": true, "bg": "paper", "layers": [
+   {"type": "wordmark", "y": 900, "score": 61, "snapAt": 0.7}
+  ]}
+ ]
+}
