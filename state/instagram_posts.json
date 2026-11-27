@@ -992,5 +992,20 @@
    "hook": "record/worst",
    "cover": "official chart"
   }
+ },
+ {
+  "date": "2026-11-27",
+  "slot": null,
+  "type": "reel_crosspost",
+  "category": "PC/GPUs",
+  "topic": "AMD Radeon RX 9060 XT 4,837 MHz LN2 world record (AMD claim), $299/$349 (YouTube Short Wv9A2-fmPQA)",
+  "status": "published",
+  "mediaId": "18206764378332379",
+  "permalink": "https://www.instagram.com/reel/DgPKO0WRfc6/",
+  "sources": [
+   "KitGuru",
+   "Notebookcheck",
+   "AMD"
+  ]
  }
 ]
