@@ -138,6 +138,7 @@ Reference that works: @indiainlast24hr (5M followers) post Dfqzov4Ddj8, Jensen H
   the account needs consistent posting before differences mean anything (judge after ~10 posts per variant).
 
 ### Findings
+- 2026-11-27 (media insights): ALL image posts and carousels 24–26 Nov have ~3 views / reach 2 each (BF carousel 3, Huawei single 4), while Reels from the same days got 121–1,440 views (Motorola Signature 1,440, Samsung 744, Fossil 570). Image posts are effectively not distributed; Reels are the only format reaching non-followers.
 - 2026-11-26: Samsung 1,100Hz@720p Reel 740 plays/20 likes (spec-catch hook wins again); Surface $6k box 130, Motorola Neo 117 (7% watched, weak hook). Followers 61.
 - 2026-11-23 (insights): Google Nest end-date Reel 1,256 plays, 28 likes, 3 shares, 5 saves, skip 44 % (2nd best ever). NVIDIA Rubin 490, Casio 292, Honor 119, Valve 190. Inferred: "you're losing something you own" / price-vs-benefit hooks beat pure-spec hooks. Followers 61.
 - 2026-11-20 (insights): Razer carbon-mouse Reel = new best: 1,573 plays, 37 likes, 2 shares, 4 saves, skip 30.5 %. Asus mini PC 718 plays / 3 saves; HomeView now 1,045. GTA 6 Reel only 128 (skip 61 %) despite huge search heat: crowded topic, every account posted it. Inferred: a price-vs-tiny-benefit hook ("$90 more to save 2 grams") wins; avoid topics everyone covers on launch day. Followers 56 → 60.

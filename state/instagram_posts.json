@@ -665,6 +665,13 @@
    "plays": 740,
    "likes": 20,
    "avg_watched_pct": 20.4
+  },
+  "stats_2026-11-27": {
+   "views": 744,
+   "reach": 647,
+   "likes": 20,
+   "shares": 4,
+   "saved": 2
   }
  },
  {
@@ -692,6 +699,13 @@
    "meme": false,
    "slot_time": "13:43",
    "caption_length": "medium"
+  },
+  "stats_2026-11-27": {
+   "views": 3,
+   "reach": 2,
+   "likes": 0,
+   "shares": 0,
+   "saved": 0
   }
  },
  {
@@ -708,6 +722,13 @@
    "plays": 123,
    "likes": 0,
    "avg_watched_pct": 12.9
+  },
+  "stats_2026-11-27": {
+   "views": 128,
+   "reach": 112,
+   "likes": 0,
+   "shares": 2,
+   "saved": 0
   }
  },
  {
@@ -724,6 +745,13 @@
    "plays": 117,
    "likes": 1,
    "avg_watched_pct": 7.4
+  },
+  "stats_2026-11-27": {
+   "views": 121,
+   "reach": 105,
+   "likes": 1,
+   "shares": 0,
+   "saved": 0
   }
  },
  {
@@ -750,6 +778,13 @@
    "meme": true,
    "slot_time": "10:17",
    "caption_length": "medium"
+  },
+  "stats_2026-11-27": {
+   "views": 3,
+   "reach": 2,
+   "likes": 1,
+   "shares": 0,
+   "saved": 0
   }
  },
  {
@@ -766,6 +801,13 @@
    "plays": 253,
    "likes": 4,
    "avg_watched_pct": 23.4
+  },
+  "stats_2026-11-27": {
+   "views": 294,
+   "reach": 277,
+   "likes": 4,
+   "shares": 1,
+   "saved": 1
   }
  },
  {
@@ -792,6 +834,13 @@
    "meme": false,
    "slot_time": "13:43",
    "caption_length": "medium"
+  },
+  "stats_2026-11-27": {
+   "views": 3,
+   "reach": 2,
+   "likes": 0,
+   "shares": 0,
+   "saved": 0
   }
  },
  {
@@ -808,6 +857,13 @@
    "plays": 130,
    "likes": 2,
    "avg_watched_pct": 24.3
+  },
+  "stats_2026-11-27": {
+   "views": 134,
+   "reach": 121,
+   "likes": 2,
+   "shares": 0,
+   "saved": 0
   }
  },
  {
@@ -832,6 +888,13 @@
    "slides": 7,
    "hook": "big number",
    "images": "logo only, text slides"
+  },
+  "stats_2026-11-27": {
+   "views": 3,
+   "reach": 2,
+   "likes": 0,
+   "shares": 0,
+   "saved": 0
   }
  },
  {
@@ -848,7 +911,14 @@
    "9to5Google",
    "GSMArena",
    "Notebookcheck"
-  ]
+  ],
+  "stats_2026-11-27": {
+   "views": 1440,
+   "reach": 1228,
+   "likes": 27,
+   "shares": 2,
+   "saved": 4
+  }
  },
  {
   "date": "2026-11-26",
@@ -870,6 +940,13 @@
   "test_vars": {
    "hook": "verdict/conflict",
    "image": "logo"
+  },
+  "stats_2026-11-27": {
+   "views": 4,
+   "reach": 2,
+   "likes": 0,
+   "shares": 0,
+   "saved": 0
   }
  },
  {
@@ -884,6 +961,36 @@
   "sources": [
    "Fossil product pages",
    "Notebookcheck"
-  ]
+  ],
+  "stats_2026-11-27": {
+   "views": 570,
+   "reach": 475,
+   "likes": 17,
+   "shares": 9,
+   "saved": 1
+  }
+ },
+ {
+  "date": "2026-11-27",
+  "slot": "10:17 IST",
+  "type": "carousel",
+  "category": "phones & market",
+  "topic": "Smartphones' worst year on record: Counterpoint forecasts ~14% shipment drop in 2026 (1.25B to ~1.08B) due to AI-driven memory costs; rebound 2028",
+  "status": "published",
+  "postId": "47ba4de1-64fa-41eb-8b74-cd16fea9216d",
+  "permalink": "https://www.instagram.com/p/DgO3PsogHUL/",
+  "sources": [
+   "https://counterpointresearch.com/en/insights/global-smartphone-shipments-to-fall-6-in-before-memory-led-rebound-in",
+   "https://www.thenationalnews.com/future/technology/2026/08/23/smartphone-shipments-set-for-record-14-drop-in-2026-as-chip-costs-soar/",
+   "https://www.developingtelecoms.com/telecom-technology/telecom-devices-platforms/20954-global-smartphone-shipments-fall-20-as-memory-costs-push-up-prices.html"
+  ],
+  "images": [
+   "Counterpoint official forecast chart"
+  ],
+  "test_vars": {
+   "slides": 6,
+   "hook": "record/worst",
+   "cover": "official chart"
+  }
  }
 ]
