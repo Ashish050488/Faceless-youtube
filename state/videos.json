@@ -462,7 +462,7 @@
   "slug": "sow024-amd-rx-9060-xt-gpu-clock-record",
   "title": "AMD Just Pushed a $300 GPU to 4.8 GHz?! 🤯",
   "format": "short",
-  "status": "uploaded",
+  "status": "live",
   "slot": "1",
   "date": "2026-11-27",
   "for_date": "2026-11-27",
@@ -476,7 +476,9 @@
   "size_mb": 14.0,
   "builder_session": "session_01L2u12De2vQp7NM8DXx1nnD",
   "seconds": 48.4,
-  "handoff_commit": "26e8987"
+  "handoff_commit": "26e8987",
+  "comment": "posted 2026-11-27T07:36Z",
+  "reel": "requested from Instagram session 2026-11-27T07:37Z"
  },
  {
   "slug": "sow025-samsung-galaxy-watch8-one-ui-9-watch",
