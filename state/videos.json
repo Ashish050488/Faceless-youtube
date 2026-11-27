@@ -482,7 +482,7 @@
   "slug": "sow025-samsung-galaxy-watch8-one-ui-9-watch",
   "title": "Samsung Just Gave Last Year's Watch 6 NEW Health Features 😳",
   "format": "short",
-  "status": "scripted",
+  "status": "uploaded",
   "slot": "2",
   "date": "2026-11-27",
   "for_date": "2026-11-27",
@@ -490,6 +490,13 @@
   "publish_at": "2026-11-27T13:00:00Z",
   "verdict": "SPEC 71",
   "hypothesis": "First 'free upgrade for an older device' Short (Samsung, big installed base; 'One UI 9' videos pull 0.6–2.9M views via the API). Tests whether an owner-relevant update story beats new-product Shorts on avg % viewed and Shorts-feed views, at 105 words.",
-  "builder_session": "session_01L2u12F4BWqd7AQ2DcV4Pw3"
+  "builder_session": "session_01L2u12F4BWqd7AQ2DcV4Pw3",
+  "id": "Nyv_Z6-ICXU",
+  "privacy": "private→public 2026-11-27T13:00:00Z",
+  "uploaded_at": "2026-11-27T05:50Z",
+  "size_mb": 5.7,
+  "seconds": 49.9,
+  "handoff_commit": "1b69cd8",
+  "pinned_comment_posted": false
  }
 ]
