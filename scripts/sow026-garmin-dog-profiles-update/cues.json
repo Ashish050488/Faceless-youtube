@@ -1,0 +1,158 @@
+{
+ "id": "sow026-garmin-dog-profiles-update",
+ "format": "short",
+ "export": "PRODUCTION_SPEC §6 (1080×1920, ≤ 20 MB)",
+ "rules": "PRODUCTION_SPEC §1/§3/§9; flat LIGHT backgrounds; product cut out from Garmin newsroom stills; 1–3 words on screen; a detailed 2-D object in every shot; watermark below content; logo end card; audio LOCKED. Length 45–55 s, HARD CAP 58 s. Draw no Garmin logo (text names only). Do NOT use images from Garmin's dealer PDF. The dog never wears a device on screen (the feature only tags the dog). Activity values like 'Walk · 3.2 km' carry the label 'example'.",
+ "numbers_shown": [
+  "9 features",
+  "24 models / 20+",
+  "$249.99",
+  "May 2026",
+  "Q4 2026",
+  "58/100"
+ ],
+ "official_clips": "none (press stills only)",
+ "palette_for_this_video": "paper main; sky for the update; mint for Run with Dog + SPEC; blush for THE CATCH",
+ "assets": "assets_sources.md (A, B official Garmin newsroom images 2200×1450; C small inset only)",
+ "new_objects": "dogBuddy (flat 2-D dog side view: trot cycle, head tilt, leash line, paw-print trail; reuse for any pet/dog-tech story) — add to render/kit/OBJECTS.md. Reuse: watchOutline, questionStamp, downloadBar, appTile, counter, arrowPointer, priceTag, bars, trackerPing, crossMark, calendar, scoreTable, speechBubble, pill.",
+ "scenes": [
+  {
+   "n": 1,
+   "anchor": "Your Garmin can now log your dog's runs.",
+   "bg": "paper",
+   "image": "A (Forerunner 70/170 press image, 2200×1450): crop the two watches, cut out, centred 80% width, slow push-in",
+   "object": "dogBuddy NEW: 2-D dog trots in beside the watch on a leash line from the strap, paw prints stamp across the bottom",
+   "text": "DOG RUNS",
+   "sfx": "pop + paw-tap x3",
+   "note": "frame 1 = poster A: watch + dog + 'DOG MODE' pill peeking"
+  },
+  {
+   "n": 2,
+   "anchor": "Wait, your dog's?",
+   "bg": "paper",
+   "image": "A holds 70%",
+   "object": "questionStamp '?' slams above the dog; dog tilts head",
+   "text": "WAIT, DOG?",
+   "sfx": "record-scratch"
+  },
+  {
+   "n": 3,
+   "anchor": "Garmin's newest watch update adds dog profiles.",
+   "bg": "sky",
+   "image": "A shrinks to 45% top-right",
+   "object": "downloadBar fills 0→100% 'Q4 2026 update'; appTile 'Dog profile' with dog face icon pops in (text 'Garmin Connect' as text only, no Garmin logo drawn)",
+   "text": "DOG PROFILES",
+   "sfx": "whoosh"
+  },
+  {
+   "n": 4,
+   "anchor": "You tag your dog on your walks and runs.",
+   "bg": "sky",
+   "image": "A holds small",
+   "object": "dogBuddy walks along a route line; a tag pill '+ dog' snaps onto the activity card 'Walk · 3.2 km' (label 'example')",
+   "text": "TAG YOUR DOG",
+   "sfx": "click"
+  },
+  {
+   "n": 5,
+   "anchor": "Get this. Nine new features.",
+   "bg": "sky",
+   "image": "B (Venu 4 hero, 2200×1450) rounded card 70% width",
+   "object": "counter rolls 0→9; 9 small appTiles light up one by one (dog, map, recovery, messenger, group ride, pin drop, coach, data field, locate)",
+   "text": "9 FEATURES",
+   "sfx": "tick-roll"
+  },
+  {
+   "n": 6,
+   "anchor": "Over twenty watches.",
+   "bg": "paper",
+   "image": "A + B small, side by side",
+   "object": "watchOutline x24 grid pops in row by row (generic, unbranded) with counter '24 models'; pill 'fēnix · Forerunner · Venu · Instinct'",
+   "text": "20+ WATCHES",
+   "sfx": "pop cascade"
+  },
+  {
+   "n": 7,
+   "anchor": "There's even a Run with Dog mode, and dog badges!",
+   "bg": "mint",
+   "image": "A 40% left",
+   "object": "watch screen text 'Run with Dog' (watchOutline screen), dogBuddy runs; badge medal with paw drops in with a shine",
+   "text": "RUN WITH DOG",
+   "sfx": "ding"
+  },
+  {
+   "n": 8,
+   "anchor": "The cheapest watch on the list?",
+   "bg": "paper",
+   "image": "A full, white Forerunner centred 60%",
+   "object": "arrowPointer points at the white Forerunner; label 'Forerunner 70'",
+   "text": "CHEAPEST?",
+   "sfx": "whoosh"
+  },
+  {
+   "n": 9,
+   "anchor": "The Forerunner seventy, at two forty-nine.",
+   "bg": "paper",
+   "image": "A holds 60%",
+   "object": "priceTag swings in '$249.99'; small pill 'US · since May 2026'; calendar chip 'May 2026'",
+   "text": "$249.99",
+   "sfx": "cash-register ding"
+  },
+  {
+   "n": 10,
+   "anchor": "Here's the catch. It doesn't track the dog itself.",
+   "bg": "blush",
+   "image": "A greyed 50%",
+   "object": "trackerPing on the dog + crossMark over it; pill 'no tracker on the dog'",
+   "text": "THE CATCH",
+   "sfx": "buzzer-soft"
+  },
+  {
+   "n": 11,
+   "anchor": "It just tags your dog on your workout.",
+   "bg": "blush",
+   "image": "A holds",
+   "object": "activity card with '+ dog' tag (same as shot 4), dog icon as a sticker on the card",
+   "text": "JUST A TAG",
+   "sfx": "click"
+  },
+  {
+   "n": 12,
+   "anchor": "And it'll take weeks to reach every watch.",
+   "bg": "blush",
+   "image": "B 45%",
+   "object": "calendar flips through weeks; downloadBar stalls at 40% then creeps; pill 'Garmin: over the coming weeks'",
+   "text": "WEEKS",
+   "sfx": "clock-tick"
+  },
+  {
+   "n": 13,
+   "anchor": "By our score? Fifty-eight out of a hundred. It's a spec.",
+   "bg": "mint",
+   "image": "A 50% top",
+   "object": "scoreTable 12.5/25 · 12/20 · 8/15 · 7.5/15 · 8/15 · 10/10 → total counter '58/100'; k snaps upright",
+   "text": "SPEC 58",
+   "sfx": "stamp"
+  },
+  {
+   "n": 14,
+   "anchor": "Grab it if your dog is your running buddy.",
+   "bg": "mint",
+   "image": "A holds",
+   "object": "dogBuddy and a runner silhouette run side by side along a route line, paw prints + shoe prints",
+   "text": "RUN BUDDY",
+   "sfx": "swoosh"
+  },
+  {
+   "n": 15,
+   "anchor": "Would you tag your dog on every run?",
+   "bg": "paper",
+   "image": "A centred 70%",
+   "object": "questionStamp '?' + speechBubble '+ dog?'; logo end card 'SPEC SCORE 58'",
+   "text": "TAG YOUR DOG?",
+   "sfx": "pop"
+  }
+ ],
+ "thumbnail": "1280×720: A (white Forerunner) cut out right (75% height) with dogBuddy sitting next to it, a '+ DOG' tag stuck on the watch screen; left: 'DOG MODE' HUGE (title says Garmin logs your dog's runs; thumb names the feature) + small pill '$249.99'; emotion object: dog with head tilt + '?'; flat paper background; readable at 168×94. Poster B: '9 NEW' HUGE + B (Venu 4) + paw prints.",
+ "credits": "Product images: Garmin (newsroom). Not affiliated with or endorsed by Garmin."
+}

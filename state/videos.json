@@ -501,5 +501,18 @@
   "handoff_commit": "1b69cd8",
   "pinned_comment_posted": true,
   "reel_requested": "2026-11-27T13:07Z"
+ },
+ {
+  "slug": "sow026-garmin-dog-profiles-update",
+  "title": "Garmin Just Made Your Watch Log Your DOG's Runs 🐶",
+  "format": "short",
+  "status": "scripted",
+  "slot": "1",
+  "date": "2026-11-28",
+  "for_date": "2026-11-28",
+  "scripted_at": "2026-11-28T00:40Z",
+  "publish_at": "2026-11-28T07:30:00Z",
+  "verdict": "SPEC 58",
+  "hypothesis": "First pet-angle Short (Garmin dog profiles). Tests whether an everyday/pet hook beats spec-heavy Shorts on avg % viewed and Shorts-feed views at ~95 words; compare with sow025 (owner-update angle, health)."
  }
 ]
