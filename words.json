@@ -1,0 +1,772 @@
+[
+{
+"w": "Your",
+"start": 0.0,
+"end": 0.4,
+"line": 0,
+"brk": false
+},
+{
+"w": "Garmin",
+"start": 0.4,
+"end": 0.76,
+"line": 0,
+"brk": false
+},
+{
+"w": "can",
+"start": 0.76,
+"end": 1.04,
+"line": 0,
+"brk": false
+},
+{
+"w": "now",
+"start": 1.04,
+"end": 1.34,
+"line": 0,
+"brk": false
+},
+{
+"w": "log",
+"start": 1.34,
+"end": 1.68,
+"line": 0,
+"brk": false
+},
+{
+"w": "your",
+"start": 1.68,
+"end": 1.94,
+"line": 0,
+"brk": false
+},
+{
+"w": "dog's",
+"start": 1.94,
+"end": 2.32,
+"line": 0,
+"brk": false
+},
+{
+"w": "runs.",
+"start": 2.32,
+"end": 2.58,
+"line": 0,
+"brk": true
+},
+{
+"w": "Wait,",
+"start": 3.22,
+"end": 3.34,
+"line": 0,
+"brk": true
+},
+{
+"w": "your",
+"start": 3.76,
+"end": 3.88,
+"line": 0,
+"brk": false
+},
+{
+"w": "dog's?",
+"start": 3.88,
+"end": 4.16,
+"line": 0,
+"brk": true
+},
+{
+"w": "Garmin's",
+"start": 4.92,
+"end": 5.36,
+"line": 1,
+"brk": false
+},
+{
+"w": "newest",
+"start": 5.36,
+"end": 5.74,
+"line": 1,
+"brk": false
+},
+{
+"w": "watch",
+"start": 5.74,
+"end": 6.1,
+"line": 1,
+"brk": false
+},
+{
+"w": "update",
+"start": 6.1,
+"end": 6.52,
+"line": 1,
+"brk": false
+},
+{
+"w": "adds",
+"start": 6.52,
+"end": 6.9,
+"line": 1,
+"brk": false
+},
+{
+"w": "dog",
+"start": 6.9,
+"end": 7.3,
+"line": 1,
+"brk": false
+},
+{
+"w": "profiles.",
+"start": 7.3,
+"end": 7.9,
+"line": 1,
+"brk": true
+},
+{
+"w": "You",
+"start": 8.7,
+"end": 8.72,
+"line": 1,
+"brk": false
+},
+{
+"w": "tag",
+"start": 8.72,
+"end": 9.08,
+"line": 1,
+"brk": false
+},
+{
+"w": "your",
+"start": 9.08,
+"end": 9.3,
+"line": 1,
+"brk": false
+},
+{
+"w": "dog",
+"start": 9.3,
+"end": 9.62,
+"line": 1,
+"brk": false
+},
+{
+"w": "on",
+"start": 9.62,
+"end": 9.78,
+"line": 1,
+"brk": false
+},
+{
+"w": "your",
+"start": 9.78,
+"end": 9.96,
+"line": 1,
+"brk": false
+},
+{
+"w": "walks",
+"start": 9.96,
+"end": 10.28,
+"line": 1,
+"brk": false
+},
+{
+"w": "and",
+"start": 10.28,
+"end": 10.56,
+"line": 1,
+"brk": false
+},
+{
+"w": "runs.",
+"start": 10.56,
+"end": 11.0,
+"line": 1,
+"brk": true
+},
+{
+"w": "Get",
+"start": 11.6,
+"end": 11.7,
+"line": 2,
+"brk": false
+},
+{
+"w": "this.",
+"start": 11.7,
+"end": 12.1,
+"line": 2,
+"brk": true
+},
+{
+"w": "Nine",
+"start": 12.86,
+"end": 12.98,
+"line": 2,
+"brk": false
+},
+{
+"w": "new",
+"start": 12.98,
+"end": 13.32,
+"line": 2,
+"brk": false
+},
+{
+"w": "features.",
+"start": 13.32,
+"end": 13.86,
+"line": 2,
+"brk": true
+},
+{
+"w": "Over",
+"start": 14.685,
+"end": 15.51,
+"line": 2,
+"brk": false
+},
+{
+"w": "twenty",
+"start": 15.51,
+"end": 16.335,
+"line": 2,
+"brk": false
+},
+{
+"w": "watches.",
+"start": 16.335,
+"end": 17.16,
+"line": 2,
+"brk": true
+},
+{
+"w": "There's",
+"start": 17.16,
+"end": 17.3,
+"line": 2,
+"brk": false
+},
+{
+"w": "even",
+"start": 17.3,
+"end": 17.46,
+"line": 2,
+"brk": false
+},
+{
+"w": "a",
+"start": 17.46,
+"end": 17.6,
+"line": 2,
+"brk": false
+},
+{
+"w": "Run",
+"start": 17.6,
+"end": 17.76,
+"line": 2,
+"brk": false
+},
+{
+"w": "with",
+"start": 17.76,
+"end": 17.96,
+"line": 2,
+"brk": false
+},
+{
+"w": "Dog",
+"start": 17.96,
+"end": 18.28,
+"line": 2,
+"brk": false
+},
+{
+"w": "mode,",
+"start": 18.28,
+"end": 18.54,
+"line": 2,
+"brk": true
+},
+{
+"w": "and",
+"start": 18.54,
+"end": 18.86,
+"line": 2,
+"brk": false
+},
+{
+"w": "dog",
+"start": 18.86,
+"end": 19.12,
+"line": 2,
+"brk": false
+},
+{
+"w": "badges!",
+"start": 19.12,
+"end": 19.5,
+"line": 2,
+"brk": true
+},
+{
+"w": "The",
+"start": 20.12,
+"end": 20.26,
+"line": 2,
+"brk": false
+},
+{
+"w": "cheapest",
+"start": 20.26,
+"end": 20.6,
+"line": 2,
+"brk": false
+},
+{
+"w": "watch",
+"start": 20.6,
+"end": 21.04,
+"line": 2,
+"brk": false
+},
+{
+"w": "on",
+"start": 21.04,
+"end": 21.22,
+"line": 2,
+"brk": false
+},
+{
+"w": "the",
+"start": 21.22,
+"end": 21.36,
+"line": 2,
+"brk": false
+},
+{
+"w": "list?",
+"start": 21.36,
+"end": 21.64,
+"line": 2,
+"brk": true
+},
+{
+"w": "The",
+"start": 22.24,
+"end": 22.44,
+"line": 2,
+"brk": false
+},
+{
+"w": "Forerunner",
+"start": 22.62,
+"end": 22.8,
+"line": 2,
+"brk": false
+},
+{
+"w": "seventy,",
+"start": 22.8,
+"end": 23.24,
+"line": 2,
+"brk": true
+},
+{
+"w": "at",
+"start": 23.24,
+"end": 23.66,
+"line": 2,
+"brk": false
+},
+{
+"w": "two",
+"start": 23.66,
+"end": 23.747,
+"line": 2,
+"brk": false
+},
+{
+"w": "forty-nine.",
+"start": 23.92,
+"end": 24.093,
+"line": 2,
+"brk": true
+},
+{
+"w": "Here's",
+"start": 24.94,
+"end": 25.36,
+"line": 3,
+"brk": false
+},
+{
+"w": "the",
+"start": 25.36,
+"end": 25.46,
+"line": 3,
+"brk": false
+},
+{
+"w": "catch.",
+"start": 25.46,
+"end": 25.7,
+"line": 3,
+"brk": true
+},
+{
+"w": "It",
+"start": 26.42,
+"end": 26.56,
+"line": 3,
+"brk": false
+},
+{
+"w": "doesn't",
+"start": 26.56,
+"end": 26.96,
+"line": 3,
+"brk": false
+},
+{
+"w": "track",
+"start": 26.96,
+"end": 27.22,
+"line": 3,
+"brk": false
+},
+{
+"w": "the",
+"start": 27.22,
+"end": 27.42,
+"line": 3,
+"brk": false
+},
+{
+"w": "dog",
+"start": 27.42,
+"end": 27.7,
+"line": 3,
+"brk": false
+},
+{
+"w": "itself.",
+"start": 27.7,
+"end": 28.1,
+"line": 3,
+"brk": true
+},
+{
+"w": "It",
+"start": 28.64,
+"end": 28.9,
+"line": 3,
+"brk": false
+},
+{
+"w": "just",
+"start": 28.9,
+"end": 29.14,
+"line": 3,
+"brk": false
+},
+{
+"w": "tags",
+"start": 29.14,
+"end": 29.54,
+"line": 3,
+"brk": false
+},
+{
+"w": "your",
+"start": 29.54,
+"end": 29.76,
+"line": 3,
+"brk": false
+},
+{
+"w": "dog",
+"start": 29.76,
+"end": 29.96,
+"line": 3,
+"brk": false
+},
+{
+"w": "on",
+"start": 29.96,
+"end": 30.14,
+"line": 3,
+"brk": false
+},
+{
+"w": "your",
+"start": 30.14,
+"end": 30.28,
+"line": 3,
+"brk": false
+},
+{
+"w": "workout.",
+"start": 30.28,
+"end": 30.64,
+"line": 3,
+"brk": true
+},
+{
+"w": "And",
+"start": 31.34,
+"end": 31.44,
+"line": 3,
+"brk": false
+},
+{
+"w": "it'll",
+"start": 31.44,
+"end": 31.7,
+"line": 3,
+"brk": false
+},
+{
+"w": "take",
+"start": 31.7,
+"end": 31.88,
+"line": 3,
+"brk": false
+},
+{
+"w": "weeks",
+"start": 31.88,
+"end": 32.3,
+"line": 3,
+"brk": false
+},
+{
+"w": "to",
+"start": 32.3,
+"end": 32.64,
+"line": 3,
+"brk": false
+},
+{
+"w": "reach",
+"start": 32.64,
+"end": 32.86,
+"line": 3,
+"brk": false
+},
+{
+"w": "every",
+"start": 32.86,
+"end": 33.3,
+"line": 3,
+"brk": false
+},
+{
+"w": "watch.",
+"start": 33.3,
+"end": 33.7,
+"line": 3,
+"brk": true
+},
+{
+"w": "By",
+"start": 34.34,
+"end": 34.46,
+"line": 4,
+"brk": false
+},
+{
+"w": "our",
+"start": 34.46,
+"end": 34.6,
+"line": 4,
+"brk": false
+},
+{
+"w": "score?",
+"start": 34.6,
+"end": 34.94,
+"line": 4,
+"brk": true
+},
+{
+"w": "Fifty-eight",
+"start": 35.5,
+"end": 35.92,
+"line": 4,
+"brk": false
+},
+{
+"w": "out",
+"start": 35.92,
+"end": 36.58,
+"line": 4,
+"brk": false
+},
+{
+"w": "of",
+"start": 36.58,
+"end": 36.72,
+"line": 4,
+"brk": false
+},
+{
+"w": "a",
+"start": 36.795,
+"end": 36.875,
+"line": 4,
+"brk": false
+},
+{
+"w": "hundred.",
+"start": 36.87,
+"end": 37.02,
+"line": 4,
+"brk": true
+},
+{
+"w": "It's",
+"start": 37.66,
+"end": 37.94,
+"line": 4,
+"brk": false
+},
+{
+"w": "a",
+"start": 37.94,
+"end": 38.04,
+"line": 4,
+"brk": false
+},
+{
+"w": "spec.",
+"start": 38.04,
+"end": 38.22,
+"line": 4,
+"brk": true
+},
+{
+"w": "Grab",
+"start": 39.1,
+"end": 39.1,
+"line": 4,
+"brk": false
+},
+{
+"w": "it",
+"start": 39.1,
+"end": 39.28,
+"line": 4,
+"brk": false
+},
+{
+"w": "if",
+"start": 39.28,
+"end": 39.44,
+"line": 4,
+"brk": false
+},
+{
+"w": "your",
+"start": 39.44,
+"end": 39.56,
+"line": 4,
+"brk": false
+},
+{
+"w": "dog",
+"start": 39.56,
+"end": 39.82,
+"line": 4,
+"brk": false
+},
+{
+"w": "is",
+"start": 39.82,
+"end": 39.98,
+"line": 4,
+"brk": false
+},
+{
+"w": "your",
+"start": 39.98,
+"end": 40.14,
+"line": 4,
+"brk": false
+},
+{
+"w": "running",
+"start": 40.14,
+"end": 40.36,
+"line": 4,
+"brk": false
+},
+{
+"w": "buddy.",
+"start": 40.36,
+"end": 40.6,
+"line": 4,
+"brk": true
+},
+{
+"w": "Would",
+"start": 41.2,
+"end": 41.32,
+"line": 5,
+"brk": false
+},
+{
+"w": "you",
+"start": 41.32,
+"end": 41.5,
+"line": 5,
+"brk": false
+},
+{
+"w": "tag",
+"start": 41.5,
+"end": 41.76,
+"line": 5,
+"brk": false
+},
+{
+"w": "your",
+"start": 41.76,
+"end": 41.94,
+"line": 5,
+"brk": false
+},
+{
+"w": "dog",
+"start": 41.94,
+"end": 42.22,
+"line": 5,
+"brk": false
+},
+{
+"w": "on",
+"start": 42.22,
+"end": 42.38,
+"line": 5,
+"brk": false
+},
+{
+"w": "every",
+"start": 42.38,
+"end": 42.66,
+"line": 5,
+"brk": false
+},
+{
+"w": "run?",
+"start": 42.66,
+"end": 42.94,
+"line": 5,
+"brk": true
+}
+]

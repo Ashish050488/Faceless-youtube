@@ -1,0 +1,1 @@
+{'articulation_wpm': 219, 'overall_wpm': 152, 'sentence_gap': [0.6, 0.64, 0.76], 'comma_gap': [0.24, 0.28, 0.35], 'last_words': 'your dog on every run?', 'tail': np.float64(2.5)}
